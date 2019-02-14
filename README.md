@@ -3,7 +3,8 @@
 
 ---
 
-
+<hr>
+<hr>
 <hr>
 <h2 id="projet-génie-logiciel-kitbox">Projet Génie Logiciel KitBox</h2>
 <h2 id="uml">Trello</h2>
@@ -17,6 +18,3 @@
 <h2 id="uml">Remarque</h2>
 <p>Retrouver les questions et réponse au client <em><a href="https://hevinci-my.sharepoint.com/:w:/g/personal/16067_ecam_be/EThGBBxl5PlJmHgBpJx4b_ABF_3N4tV2FJA5hLxSXDJphQ?e=NSSHxt">ici</a></em></p>
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNzg4NDAxM119
--->
