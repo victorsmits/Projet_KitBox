@@ -1,12 +1,11 @@
-<hr>
-<hr>
-<hr>
-<h2 id="projet-génie-logiciel-kitbox">Projet Génie Logiciel KitBox</h2>
+<h1 id="projet-génie-logiciel-kitbox">Projet Génie Logiciel KitBox</h1></a></em></p>
 <h2 id="uml">Trello</h2>
 <p># Projet Génie Logiciel KitBox
 
 ## Trello
-Retrouver le Trello  <em><a href=" https://trello.com/b/Q06IKRiS/kitbox"> ici</a></em></p>
+
+</h2>
+<p>Retrouver le Trello  <em><a href=" href="https://trello.com/b/Q06IKRiS/kitbox">ici</a></em></p>
 <h2 id="uml">UML</h2>
 <p>Retrouver les UML  <em><a href="https://www.lucidchart.com/documents/edit/3f319f5e-adf3-4739-9055-04416310f2f8/0">ici</a></em></p>
 <h2 id="uml">Glossaire</h2>
@@ -17,5 +16,5 @@ Retrouver le Trello  <em><a href=" https://trello.com/b/Q06IKRiS/kitbox"> ici</a
 <p>Retrouver les questions et réponse au client <em><a href="https://hevinci-my.sharepoint.com/:w:/g/personal/16067_ecam_be/EThGBBxl5PlJmHgBpJx4b_ABF_3N4tV2FJA5hLxSXDJphQ?e=NSSHxt">ici</a></em></p>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDQ5NjMwNSwtNDY2NzU5MTg1XX0=
+eyJoaXN0b3J5IjpbMzA5OTEzMTk2LC00NjY3NTkxODVdfQ==
 -->
