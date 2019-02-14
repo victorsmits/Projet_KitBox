@@ -3,7 +3,7 @@
 
 ---
 
-<hr>
+
 <hr>
 <h2 id="projet-génie-logiciel-kitbox">Projet Génie Logiciel KitBox</h2>
 <h2 id="uml">Trello</h2>
@@ -13,10 +13,10 @@
 <h2 id="uml">Glossaire</h2>
 <p>Retrouver le glossaire  <em><a href="https://hevinci-my.sharepoint.com/:w:/r/personal/16067_ecam_be/_layouts/15/Doc.aspx?sourcedoc=%7Ba384e814-dc46-4eff-bf2f-76aeffb7aaba%7D&amp;action=default&amp;gad=362">ici</a></em></p>
 <h2 id="uml">Question pour le Client</h2>
-<p>Retrouver les remarques de chaque debut de séance  <em><a href="">ici</a></em></p>
+<p>Retrouver les remarques de chaque debut de séance  <em><a href="https://hevinci-my.sharepoint.com/:w:/g/personal/16067_ecam_be/EXbViFh_tYxNl0zo98m_lQMBm7DHxjnOm8bLilKYW9LqyA?e=o0jhRE">ici</a></em></p>
 <h2 id="uml">Remarque</h2>
-<p>Retrouver les remarques de chaque debut de seance  <em><a href="https://hevinci-my.sharepoint.com/:w:/g/personal/16067_ecam_be/EThGBBxl5PlJmHgBpJx4b_ABF_3N4tV2FJA5hLxSXDJphQ?e=NSSHxt">ici</a></em></p>
+<p>Retrouver les questions et réponse au client <em><a href="https://hevinci-my.sharepoint.com/:w:/g/personal/16067_ecam_be/EThGBBxl5PlJmHgBpJx4b_ABF_3N4tV2FJA5hLxSXDJphQ?e=NSSHxt">ici</a></em></p>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ4MTkyOTAwXX0=
+eyJoaXN0b3J5IjpbMjAyNzg4NDAxM119
 -->
