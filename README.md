@@ -1,8 +1,3 @@
----
-
-
----
-
 <hr>
 <hr>
 <h2 id="projet-génie-logiciel-kitbox">Projet Génie Logiciel KitBox</h2>
