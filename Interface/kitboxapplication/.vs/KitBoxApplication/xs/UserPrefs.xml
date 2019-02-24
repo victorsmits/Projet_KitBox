@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{863984FA-F7A1-4B6D-94F4-1A6FDC7ACD88}|Default">
+  <MonoDevelop.Ide.ItemProperties.KitBoxApplication PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxApplication/Program.cs">
+    <Files>
+      <File FileName="KitBoxApplication/Program.cs" Line="23" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="KitBoxApplication" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
