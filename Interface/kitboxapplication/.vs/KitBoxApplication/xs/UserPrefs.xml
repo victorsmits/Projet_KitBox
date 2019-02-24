@@ -5,9 +5,13 @@
       <File FileName="KitBoxApplication/Program.cs" Line="23" Column="1" />
     </Files>
     <Pads>
-      <Pad Id="ClassPad">
+      <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="KitBoxApplication" expanded="True" selected="True" />
+          <Node name="KitBoxApplication" expanded="True">
+            <Node name="KitBoxApplication" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
