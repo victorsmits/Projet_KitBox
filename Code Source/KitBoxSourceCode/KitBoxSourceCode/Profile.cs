@@ -14,19 +14,10 @@ namespace KitBoxSourceCode
             Email = mail;
         }
 
-        public string GetEmail()
-        {
-            return GetEmail();
-        }
+        public string GetEmail => Email;
 
-        public string GetLastName()
-        {
-            return GetLastName();
-        }
+        public string GetLastName => LastName;
 
-        public string GetFirstName()
-        {
-            return GetFirstName();
-        }
+        public string GetFirstName => FirstName;
     }
 }
