@@ -5,6 +5,8 @@ namespace KitBoxSourceCode
     public class Cabinet
     {
         private List<StorageBox> StorageBoxes;
+        private int CabinetPrice = 0;
+
 
         public Cabinet()
         {
@@ -13,6 +15,21 @@ namespace KitBoxSourceCode
         public void AddStorageBox(StorageBox storage)
         {
             StorageBoxes.Add(storage);
+            CabinetPrice += storage.GetPrice();
         }
+
+        public int GetCabinetPrice
+        {
+            get
+            {
+                return CabinetPrice;
+            }
+        }
+
+        public int GetNumber()
+        {
+            return StorageBoxes.Count;
+        }
+
     }
 }
