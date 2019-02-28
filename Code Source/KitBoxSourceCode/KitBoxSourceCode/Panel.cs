@@ -7,8 +7,10 @@ namespace KitBoxSourceCode
         private int Height;
         private int Price;
 
-        public Panel()
+        public Panel(int len, int height)
         {
+            Lenght = len;
+            Height = height;
         }
 
         public int GetLenght() => Lenght;
