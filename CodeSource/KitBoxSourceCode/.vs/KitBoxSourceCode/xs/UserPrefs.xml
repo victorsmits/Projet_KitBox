@@ -1,15 +1,14 @@
-﻿<Properties StartupConfiguration="{530905E3-D372-46FA-9434-CC18A725A47E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Beam.cs">
+﻿<Properties StartupConfiguration="{331E9B0F-CC1E-49DC-8AA6-2575B9275295}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Program.cs">
     <Files>
       <File FileName="KitBoxSourceCode/Program.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Beam.cs" Line="16" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="KitBoxSourceCode" expanded="True">
             <Node name="KitBoxSourceCode" expanded="True">
-              <Node name="Angle.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
