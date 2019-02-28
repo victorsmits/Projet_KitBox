@@ -4,6 +4,7 @@ namespace KitBoxSourceCode
     public class DoorBeam
     {
         private int Lenght;
+        private int Price;
 
         public DoorBeam(int Len)
         {
@@ -11,5 +12,6 @@ namespace KitBoxSourceCode
         }
 
         public int GetLenght => Lenght;
+        public int GetPrice => Price;
     }
 }

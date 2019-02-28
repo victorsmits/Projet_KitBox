@@ -50,6 +50,7 @@
     <Compile Include="DoubleDoors.cs" />
     <Compile Include="Materials.cs" />
     <Compile Include="BoxColor.cs" />
+    <Compile Include="Compoment.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

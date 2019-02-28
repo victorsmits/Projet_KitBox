@@ -4,11 +4,8 @@ namespace KitBoxSourceCode
 {
     public class Box : StorageBox
     {
-        private List<Panel> Panels;
-        private List<Angle> Angles;
-        private List<Cleat> Cleats;
-        private List<Beam> Beams;
-        private List<DoorBeam> DoorBeams;
+        private List<Compoment> Compoments;
+        private int Price = 0;
 
         public Box()
         {
@@ -16,12 +13,18 @@ namespace KitBoxSourceCode
 
         public int GetPrice()
         {
-
+            Compoments.ForEach(AddPrice);
+            return Price;
         }
 
         public void GetDetails()
         {
 
+        }
+
+        private void AddPrice(Compoment elem)
+        {
+            Price += elem.GetPrice();
         }
     }
 }

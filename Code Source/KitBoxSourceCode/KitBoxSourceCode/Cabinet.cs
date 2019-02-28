@@ -18,18 +18,14 @@ namespace KitBoxSourceCode
             CabinetPrice += storage.GetPrice();
         }
 
-        public int GetCabinetPrice
-        {
-            get
-            {
-                return CabinetPrice;
-            }
-        }
+        public int GetCabinetPrice => CabinetPrice;
 
         public int GetNumber()
         {
             return StorageBoxes.Count;
         }
+
+
 
     }
 }
