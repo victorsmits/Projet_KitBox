@@ -44,8 +44,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBoxSubscribe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.homePage1 = new KitBoxApplication.HomePage();
             this.creation1 = new KitBoxApplication.Creation();
+            this.homePage1 = new KitBoxApplication.HomePage();
             this.SidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,7 +66,7 @@
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(392, 1327);
+            this.SidePanel.Size = new System.Drawing.Size(392, 992);
             this.SidePanel.TabIndex = 0;
             // 
             // panel2
@@ -182,7 +182,7 @@
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(392, 0);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(2238, 137);
+            this.HeaderPanel.Size = new System.Drawing.Size(1496, 137);
             this.HeaderPanel.TabIndex = 1;
             // 
             // KitBoxHeader
@@ -193,7 +193,7 @@
             this.KitBoxHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KitBoxHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
             this.KitBoxHeader.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.KitBoxHeader.Location = new System.Drawing.Point(949, 36);
+            this.KitBoxHeader.Location = new System.Drawing.Point(578, 36);
             this.KitBoxHeader.Name = "KitBoxHeader";
             this.KitBoxHeader.Size = new System.Drawing.Size(209, 69);
             this.KitBoxHeader.TabIndex = 0;
@@ -206,9 +206,9 @@
             this.panel1.Controls.Add(this.textBoxSubscribe);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(392, 1202);
+            this.panel1.Location = new System.Drawing.Point(392, 867);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2238, 125);
+            this.panel1.Size = new System.Drawing.Size(1496, 125);
             this.panel1.TabIndex = 4;
             // 
             // button2
@@ -219,7 +219,7 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(75)))), ((int)(((byte)(19)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1537, 35);
+            this.button2.Location = new System.Drawing.Point(1166, 35);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 64);
             this.button2.TabIndex = 2;
@@ -229,7 +229,7 @@
             // textBoxSubscribe
             // 
             this.textBoxSubscribe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxSubscribe.Location = new System.Drawing.Point(1146, 49);
+            this.textBoxSubscribe.Location = new System.Drawing.Point(775, 49);
             this.textBoxSubscribe.Name = "textBoxSubscribe";
             this.textBoxSubscribe.Size = new System.Drawing.Size(371, 38);
             this.textBoxSubscribe.TabIndex = 1;
@@ -244,42 +244,42 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(710, 49);
+            this.label1.Location = new System.Drawing.Point(339, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(370, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Subscribe NewsLetter";
+            // 
+            // creation1
+            // 
+            this.creation1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.creation1.Location = new System.Drawing.Point(392, 137);
+            this.creation1.Name = "creation1";
+            this.creation1.Size = new System.Drawing.Size(1496, 732);
+            this.creation1.TabIndex = 5;
+            this.creation1.Visible = false;
             // 
             // homePage1
             // 
             this.homePage1.Dock = System.Windows.Forms.DockStyle.Top;
             this.homePage1.Location = new System.Drawing.Point(392, 137);
             this.homePage1.Name = "homePage1";
-            this.homePage1.Size = new System.Drawing.Size(2238, 1055);
-            this.homePage1.TabIndex = 5;
-            // 
-            // creation1
-            // 
-            this.creation1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.creation1.Location = new System.Drawing.Point(392, 1192);
-            this.creation1.Name = "creation1";
-            this.creation1.Size = new System.Drawing.Size(2238, 10);
-            this.creation1.TabIndex = 6;
-            this.creation1.Visible = false;
+            this.homePage1.Size = new System.Drawing.Size(1496, 732);
+            this.homePage1.TabIndex = 6;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2630, 1327);
-            this.Controls.Add(this.creation1);
+            this.ClientSize = new System.Drawing.Size(1888, 992);
             this.Controls.Add(this.homePage1);
+            this.Controls.Add(this.creation1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.SidePanel);
             this.ForeColor = System.Drawing.SystemColors.Control;
-            this.MinimumSize = new System.Drawing.Size(2662, 1415);
+            this.MinimumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "Dashboard";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -311,8 +311,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
-        private HomePage homePage1;
         private Creation creation1;
+        private HomePage homePage1;
     }
 }
 
