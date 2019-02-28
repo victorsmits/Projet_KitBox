@@ -3,8 +3,8 @@ namespace KitBoxSourceCode
 {
 	public class DoorBeam : Compoment
 	{
-		private int Lenght;
-		private int Price;
+		private readonly int Lenght;
+		private readonly int Price;
 
 		public DoorBeam(int Len)
 		{

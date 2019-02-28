@@ -3,9 +3,9 @@ namespace KitBoxSourceCode
 {
 	public class Panel : Compoment
 	{
-		private int Lenght;
-		private int Height;
-		private int Price;
+		private readonly int Lenght;
+		private readonly int Height;
+		private readonly int Price;
 
 		public Panel(int len, int height)
 		{

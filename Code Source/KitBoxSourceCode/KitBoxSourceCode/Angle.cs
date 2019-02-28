@@ -3,8 +3,8 @@ namespace KitBoxSourceCode
 {
 	public class Angle
 	{
-		private int Lenght;
-		private int Price;
+		private readonly int Lenght;
+		private readonly int Price;
 
 		public Angle(int Len)
 		{
