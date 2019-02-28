@@ -29,6 +29,11 @@ namespace KitBoxSourceCode
 			return Price;
 		}
 
+		public int GetHeight()
+		{
+			return Height;
+		}
+
 		public List<Compoment> GetCompoments => Compoments;
 
 		public void GetDetails()
