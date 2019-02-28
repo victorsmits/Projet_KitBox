@@ -93,10 +93,10 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Location = new System.Drawing.Point(1129, 506);
+            this.panel2.Location = new System.Drawing.Point(766, 282);
             this.panel2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1066, 465);
+            this.panel2.Size = new System.Drawing.Size(709, 443);
             this.panel2.TabIndex = 19;
             this.panel2.Visible = false;
             // 
@@ -104,10 +104,10 @@
             // 
             this.button6.AutoSize = true;
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(671, 401);
+            this.button6.Location = new System.Drawing.Point(395, 387);
             this.button6.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(385, 55);
+            this.button6.Size = new System.Drawing.Size(280, 55);
             this.button6.TabIndex = 12;
             this.button6.Text = "Ajouter au panier";
             this.button6.UseVisualStyleBackColor = true;
@@ -236,7 +236,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(35, 83);
+            this.label12.Location = new System.Drawing.Point(31, 79);
             this.label12.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(284, 32);
@@ -272,10 +272,10 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(41, 506);
+            this.panel1.Location = new System.Drawing.Point(18, 281);
             this.panel1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 465);
+            this.panel1.Size = new System.Drawing.Size(732, 442);
             this.panel1.TabIndex = 18;
             this.panel1.Visible = false;
             // 
@@ -283,13 +283,14 @@
             // 
             this.button2.AutoSize = true;
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(652, 401);
+            this.button2.Location = new System.Drawing.Point(399, 378);
             this.button2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(378, 55);
+            this.button2.Size = new System.Drawing.Size(278, 55);
             this.button2.TabIndex = 12;
             this.button2.Text = "Ajouter au panier";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox2
             // 
@@ -440,7 +441,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(633, 84);
+            this.label1.Location = new System.Drawing.Point(485, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(427, 42);
@@ -451,10 +452,10 @@
             // 
             this.standartCreation.Appearance = System.Windows.Forms.Appearance.Button;
             this.standartCreation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.standartCreation.Location = new System.Drawing.Point(1222, 162);
+            this.standartCreation.Location = new System.Drawing.Point(940, 119);
             this.standartCreation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.standartCreation.Name = "standartCreation";
-            this.standartCreation.Size = new System.Drawing.Size(339, 238);
+            this.standartCreation.Size = new System.Drawing.Size(339, 154);
             this.standartCreation.TabIndex = 16;
             this.standartCreation.Text = "Création à partir de dimensions standarts";
             this.standartCreation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -465,10 +466,10 @@
             // 
             this.completeCreation.Appearance = System.Windows.Forms.Appearance.Button;
             this.completeCreation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.completeCreation.Location = new System.Drawing.Point(219, 162);
+            this.completeCreation.Location = new System.Drawing.Point(193, 119);
             this.completeCreation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.completeCreation.Name = "completeCreation";
-            this.completeCreation.Size = new System.Drawing.Size(339, 238);
+            this.completeCreation.Size = new System.Drawing.Size(339, 154);
             this.completeCreation.TabIndex = 15;
             this.completeCreation.Text = "Création complète";
             this.completeCreation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -486,7 +487,7 @@
             this.Controls.Add(this.standartCreation);
             this.Controls.Add(this.completeCreation);
             this.Name = "Creation";
-            this.Size = new System.Drawing.Size(2238, 1055);
+            this.Size = new System.Drawing.Size(1496, 732);
             this.Load += new System.EventHandler(this.Creation_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
