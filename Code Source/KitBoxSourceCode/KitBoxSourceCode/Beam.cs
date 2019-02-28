@@ -3,8 +3,13 @@ namespace KitBoxSourceCode
 {
     public class Beam
     {
-        public Beam()
+        private int Lenght;
+
+        public Beam(int Len)
         {
+            Lenght = Len;
         }
+
+        public int GetLenght => Lenght;
     }
 }

@@ -3,8 +3,13 @@ namespace KitBoxSourceCode
 {
     public class Cleat
     {
-        public Cleat()
+        private int Lenght;
+
+        public Cleat(int Len)
         {
+            Lenght = Len;
         }
+
+        public int GetLenght => Lenght;
     }
 }
