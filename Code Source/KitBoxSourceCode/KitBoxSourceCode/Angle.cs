@@ -1,7 +1,7 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public class Angle
+    public class Angle : Compoment
     {
         private int Lenght;
         private int Price;
@@ -11,8 +11,8 @@ namespace KitBoxSourceCode
             Lenght = Len;
         }
 
-        public int GetLenght => Lenght;
-        public int GetPrice => Price;
+        public int GetLenght() => Lenght;
+        public int GetPrice() => Price;
 
     }
 }

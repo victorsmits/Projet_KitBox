@@ -16,9 +16,9 @@ namespace KitBoxSourceCode
             Height = height;
             Depth = depth;
 
-            AddPanel(len, height, depth);
-
-
+            AddAngle(height);
+            AddBeam(len);
+            AddBeam(height);
         }
 
         public int GetPrice()
@@ -46,6 +46,24 @@ namespace KitBoxSourceCode
 
             Compoments.Add(new Panel(z, x));
             Compoments.Add(new Panel(z, x));
+        }
+
+        private void AddAngle(int height)
+        {
+            int i = 0;
+            while (i < 4)
+            {
+                Compoments.Add(new Angle(height));
+            }
+        }
+
+        private void AddBeam(int len)
+        {
+            int i = 0;
+            while (i < 4)
+            {
+                Compoments.Add(new Beam(len));
+            }
         }
     }
 }
