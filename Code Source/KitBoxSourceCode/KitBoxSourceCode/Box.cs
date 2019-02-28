@@ -12,13 +12,15 @@ namespace KitBoxSourceCode
 
         public Box(int len, int height, int depth)
         {
+            Compoments = new List<Compoment>();
             Lenght = len;
             Height = height;
             Depth = depth;
 
-            AddAngle(height);
-            AddBeam(len, height);
-            AddDoorBeam(height);
+            AddPanel(len, height, depth);
+            AddCleat(height);
+            AddBeam(len, depth);
+            AddDoorBeam(len);
         }
 
         public int GetPrice()
@@ -26,6 +28,8 @@ namespace KitBoxSourceCode
             Compoments.ForEach(AddPrice);
             return Price;
         }
+
+        public List<Compoment> GetCompoments => Compoments;
 
         public void GetDetails()
         {
@@ -48,12 +52,13 @@ namespace KitBoxSourceCode
             Compoments.Add(new Panel(z, x));
         }
 
-        private void AddAngle(int height)
+        private void AddCleat(int height)
         {
             int i = 0;
             while (i < 4)
             {
-                Compoments.Add(new Angle(height));
+                Compoments.Add(new Cleat(height));
+                i++;
             }
         }
 
@@ -63,12 +68,14 @@ namespace KitBoxSourceCode
             while (i < 4)
             {
                 Compoments.Add(new Beam(len));
+                i++;
             }
 
             int j = 0;
             while (j < 2)
             {
                 Compoments.Add(new Beam(height));
+                j++;
             }
         }
 
@@ -78,6 +85,7 @@ namespace KitBoxSourceCode
             while (j < 2)
             {
                 Compoments.Add(new DoorBeam(height));
+                j++;
             }
         }
     }

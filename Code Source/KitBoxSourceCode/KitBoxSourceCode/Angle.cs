@@ -1,7 +1,7 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public class Angle : Compoment
+    public class Angle
     {
         private int Lenght;
         private int Price;

@@ -6,7 +6,8 @@ namespace KitBoxSourceCode
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Box box = new Box(10, 5, 20);
+            Console.WriteLine(box.GetCompoments.Count);
         }
     }
 }
