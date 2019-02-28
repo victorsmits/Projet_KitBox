@@ -17,8 +17,8 @@ namespace KitBoxSourceCode
             Depth = depth;
 
             AddAngle(height);
-            AddBeam(len);
-            AddBeam(height);
+            AddBeam(len, height);
+            AddDoorBeam(height);
         }
 
         public int GetPrice()
@@ -57,12 +57,27 @@ namespace KitBoxSourceCode
             }
         }
 
-        private void AddBeam(int len)
+        private void AddBeam(int len, int height)
         {
             int i = 0;
             while (i < 4)
             {
                 Compoments.Add(new Beam(len));
+            }
+
+            int j = 0;
+            while (j < 2)
+            {
+                Compoments.Add(new Beam(height));
+            }
+        }
+
+        private void AddDoorBeam(int height)
+        {
+            int j = 0;
+            while (j < 2)
+            {
+                Compoments.Add(new DoorBeam(height));
             }
         }
     }
