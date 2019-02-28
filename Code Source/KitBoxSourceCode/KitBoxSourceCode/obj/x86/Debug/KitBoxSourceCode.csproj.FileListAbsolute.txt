@@ -1,0 +1,6 @@
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Code Source/KitBoxSourceCode/KitBoxSourceCode/obj/x86/Debug/KitBoxSourceCode.csprojAssemblyReference.cache
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Code Source/KitBoxSourceCode/KitBoxSourceCode/obj/x86/Debug/KitBoxSourceCode.csproj.CoreCompileInputs.cache
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Code Source/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.exe
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Code Source/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Code Source/KitBoxSourceCode/KitBoxSourceCode/obj/x86/Debug/KitBoxSourceCode.exe
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Code Source/KitBoxSourceCode/KitBoxSourceCode/obj/x86/Debug/KitBoxSourceCode.pdb

@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{530905E3-D372-46FA-9434-CC18A725A47E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Cabinet.cs">
+    <Files>
+      <File FileName="KitBoxSourceCode/Box.cs" Line="34" Column="18" />
+      <File FileName="KitBoxSourceCode/Panel.cs" Line="22" Column="1" />
+      <File FileName="KitBoxSourceCode/DoorBeam.cs" Line="6" Column="26" />
+      <File FileName="KitBoxSourceCode/Angle.cs" Line="6" Column="27" />
+      <File FileName="KitBoxSourceCode/Cleat.cs" Line="6" Column="25" />
+      <File FileName="KitBoxSourceCode/DoubleDoors.cs" Line="9" Column="26" />
+      <File FileName="KitBoxSourceCode/Program.cs" Line="14" Column="1" />
+      <File FileName="KitBoxSourceCode/BoxColor.cs" Line="17" Column="1" />
+      <File FileName="KitBoxSourceCode/CleatColor.cs" Line="7" Column="3" />
+      <File FileName="KitBoxSourceCode/Cabinet.cs" Line="42" Column="3" />
+      <File FileName="KitBoxSourceCode/Cart.cs" Line="24" Column="1" />
+      <File FileName="KitBoxSourceCode/Compoment.cs" Line="4" Column="24" />
+      <File FileName="KitBoxSourceCode/Materials.cs" Line="1" Column="1" />
+      <File FileName="KitBoxSourceCode/Profile.cs" Line="28" Column="1" />
+      <File FileName="KitBoxSourceCode/StorageBox.cs" Line="8" Column="19" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="KitBoxSourceCode" expanded="True">
+            <Node name="KitBoxSourceCode" expanded="True">
+              <Node name="Cabinet.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.KitBoxSourceCode PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
