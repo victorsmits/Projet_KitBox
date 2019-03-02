@@ -1,10 +1,10 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public class Beam : Compoment
+    public class Beam : ICompoment
     {
-        private int Lenght;
-        private int Price;
+        private readonly int Lenght;
+        private readonly int Price;
 
         public Beam(int Len)
         {

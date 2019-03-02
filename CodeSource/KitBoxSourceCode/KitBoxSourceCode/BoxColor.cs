@@ -2,15 +2,37 @@
 using System.Drawing;
 namespace KitBoxSourceCode
 {
-	public class BoxColor : BoxDecorator
-	{
-		private readonly Color wallColor;
+    public class BoxColor : BoxDecorator
+    {
+        private readonly string wallColor;
+        private int Price;
 
-		public BoxColor(Color color)
-		{
-			wallColor = color;
-		}
+        public BoxColor(string color)
+        {
+            wallColor = color;
+            Price = 12;
+            //SetPrice();
+        }
 
-		public Color GetWallColor => wallColor;
-	}
+        public string GetWallColor => wallColor;
+
+        public override void GetDetails()
+        {
+            base.GetDetails();
+            Console.WriteLine("red");
+        }
+
+
+        public override int GetPrice()
+        {
+            //base.GetPrice();
+            return Price;
+        }
+
+        private void SetPrice()
+        {
+            Price = 12;
+            //TODO ole db fct color
+        }
+    }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-	public class Panel : Compoment
+	public class Panel : ICompoment
 	{
 		private readonly int Lenght;
 		private readonly int Height;
