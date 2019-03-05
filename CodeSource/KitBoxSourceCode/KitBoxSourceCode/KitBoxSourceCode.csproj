@@ -39,7 +39,7 @@
     <Compile Include="Cart.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Cabinet.cs" />
-    <Compile Include="StorageBox.cs" />
+    <Compile Include="IStorageBox.cs" />
     <Compile Include="Box.cs" />
     <Compile Include="Angle.cs" />
     <Compile Include="Cleat.cs" />
@@ -50,6 +50,8 @@
     <Compile Include="DoubleDoors.cs" />
     <Compile Include="Materials.cs" />
     <Compile Include="BoxColor.cs" />
+    <Compile Include="Compoment.cs" />
+    <Compile Include="Knop.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

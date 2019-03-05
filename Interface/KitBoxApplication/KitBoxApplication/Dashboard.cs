@@ -55,8 +55,14 @@ namespace KitBoxApplication
             
         }
 
+<<<<<<< HEAD
         private void homePage2_Load(object sender, EventArgs e)
         {
+||||||| merged common ancestors
+=======
+        //test
+
+>>>>>>> b7a123e7cb02b5d0b85b3596c3da068c6151955a
 
         }
     }
