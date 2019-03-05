@@ -1,7 +1,7 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-	public class Cleat : Compoment
+	public class Cleat : ICompoment
 	{
 		private readonly int Lenght;
 		private readonly int Price;

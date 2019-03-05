@@ -1,7 +1,7 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-	public class DoorBeam : Compoment
+	public class DoorBeam : ICompoment
 	{
 		private readonly int Lenght;
 		private readonly int Price;

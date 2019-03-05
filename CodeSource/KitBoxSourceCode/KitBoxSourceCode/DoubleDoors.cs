@@ -3,31 +3,44 @@ using System.Drawing;
 using System.Collections.Generic;
 namespace KitBoxSourceCode
 {
-	public class DoubleDoors : BoxDecorator
-	{
-		private readonly List<Knop> knops;
-		private readonly int Price;
+    public class DoubleDoors : BoxDecorator
+    {
+        private readonly List<Knop> knops;
+        private int Price;
 
-		public int GetPrice => Price;
+        public string Materials { get; }
+        public string DoorColor { get; }
 
-		public DoubleDoors(Color color, Materials mat)
-		{
-			DoorColor = color;
-			Materials = mat;
-			knops = new List<Knop> {
-				new Knop(),
-				new Knop()
-			};
+        public DoubleDoors(string color, string mat)
+        {
+            DoorColor = color;
+            Price = 20;
+            Materials = mat;
+            knops = new List<Knop> {
+                new Knop(),
+                new Knop()
+            };
 
-			SetPrice();
-		}
+            //SetPrice();
+        }
 
-		public Materials Materials { get; }
-		public Color DoorColor { get; }
+        private void SetPrice()
+        {
+            Price = 20;
+            //TODO ole db fct color et mat
+        }
 
-		private void SetPrice()
-		{
-			//TODO
-		}
-	}
+        public override void GetDetails()
+        {
+            base.GetDetails();
+            Console.WriteLine("Materials");
+        }
+
+        public override int GetPrice()
+        {
+            //base.GetPrice();
+            return Price;
+        }
+
+    }
 }
