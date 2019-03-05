@@ -1,9 +1,13 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{530905E3-D372-46FA-9434-CC18A725A47E}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Cabinet.cs">
     <Files>
-      <File FileName="KitBoxSourceCode/Beam.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Knop.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Cabinet.cs" Line="1" Column="1" />
+      <File FileName="KitBoxSourceCode/Program.cs" Line="21" Column="59" />
+      <File FileName="KitBoxSourceCode/Cabinet.cs" Line="47" Column="36" />
+      <File FileName="KitBoxSourceCode/IStorageBox.cs" Line="8" Column="24" />
+      <File FileName="KitBoxSourceCode/Box.cs" Line="42" Column="45" />
+      <File FileName="KitBoxSourceCode/BoxDecorator.cs" Line="26" Column="10" />
+      <File FileName="KitBoxSourceCode/DoubleDoors.cs" Line="41" Column="31" />
+      <File FileName="KitBoxSourceCode/BoxColor.cs" Line="28" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,9 +19,12 @@
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.KitBoxSourceCode FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.KitBoxSourceCode PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
