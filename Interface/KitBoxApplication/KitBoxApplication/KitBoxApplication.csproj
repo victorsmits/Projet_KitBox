@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoxStandard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BoxStandard.Designer.cs">
+      <DependentUpon>BoxStandard.cs</DependentUpon>
+    </Compile>
     <Compile Include="CartPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BoxStandard.resx">
+      <DependentUpon>BoxStandard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CartPage.resx">
       <DependentUpon>CartPage.cs</DependentUpon>
     </EmbeddedResource>

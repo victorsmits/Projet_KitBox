@@ -24,31 +24,46 @@ namespace KitBoxApplication
 
         private void completeCreationAppear(object sender, EventArgs e)
         {
-            if (panel1.Visible == true)
+            if (boxStandard1.Visible == true)
             {
-                panel1.Visible = false;
+                boxStandard1.Visible = false;
             }
             else
             {
-                panel1.Visible = true;
+                boxStandard1.Visible = true;
                 standartCreation.Checked = false;
             }
         }
 
         private void standartCreationAppear(object sender, EventArgs e)
         {
-            if (panel2.Visible == true)
+            if (boxStandard2.Visible == true)
             {
-                panel2.Visible = false;
+                boxStandard2.Visible = false;
             }
             else
             {
-                panel2.Visible = true;
+                boxStandard2.Visible = true;
                 completeCreation.Checked = false;
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
