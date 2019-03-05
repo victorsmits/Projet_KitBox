@@ -18,6 +18,8 @@ namespace KitBoxSourceCode
             db.AddBoxDecorator(box);
             bc.AddBoxDecorator(db);
 
+            //TODO check if a class "floor" is a good idea
+
             cabinet.AddStorageBox(box);
             cabinet.AddStorageBox(db);
             cabinet.AddStorageBox(bc);
