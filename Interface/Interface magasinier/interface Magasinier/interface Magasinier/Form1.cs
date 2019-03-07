@@ -16,20 +16,21 @@ namespace interface_Magasinier
         public Form1()
         {
             InitializeComponent();
+   
         }
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
         OleDbConnection cn = new OleDbConnection();  // cn for connection
         OleDbDataReader dr;
-
         private void Form1_Load(object sender, EventArgs e) //Connection to the DB and loading the data into the box
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=D:\Bureau\kitbox\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             Loaddata();
-
         }
 
-        private void dosomething(String q)//the command to do a sql instruction named q
+
+
+        private void SqlRequest(String q)//the command to do a sql instruction named q
         {
             try
             {
@@ -72,8 +73,8 @@ namespace interface_Magasinier
                         listBox3.Items.Add(dr[2].ToString());
                         listBox4.Items.Add(dr[4].ToString());
                         listBox5.Items.Add(dr[6].ToString());
-                        listBox6.Items.Add(dr[12].ToString());
-                        listBox7.Items.Add(dr[13].ToString());
+                        listBox6.Items.Add(dr[11].ToString());
+                        listBox7.Items.Add(dr[12].ToString());
                     }
                 }
                 dr.Close();
@@ -86,15 +87,46 @@ namespace interface_Magasinier
             }
 
         }
+        private void listBox2_Click(object sender, EventArgs e)
+        {
+            ListBox l = sender as ListBox;
+            if (l.SelectedIndex != -1)
+            {
+                listBox1.SelectedIndex = l.SelectedIndex;
+                listBox2.SelectedIndex = l.SelectedIndex;
+                listBox3.SelectedIndex = l.SelectedIndex;
+                listBox4.SelectedIndex = l.SelectedIndex;
+                listBox5.SelectedIndex = l.SelectedIndex;
+                listBox6.SelectedIndex = l.SelectedIndex;
+                listBox7.SelectedIndex = l.SelectedIndex;
+
+                textBox1.Text = listBox2.SelectedItem.ToString();
+                textBox3.Text = listBox2.SelectedItem.ToString();
+                textBox2.Text = listBox3.SelectedItem.ToString();
+                textBox4.Text = listBox4.SelectedItem.ToString();
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
                 if (textBox2.Text != "" & listBox1.SelectedIndex != -1)
                 {
-                    string q = "update Piece set référence='" + textBox2.Text.ToString() + "' where PK_Piece=" + listBox1.SelectedItem.ToString();
-                    dosomething(q);
+                    string q = "update Piece set Enstock='" + textBox2.Text.ToString() + "' where PK_Piece=" + listBox1.SelectedItem.ToString();
+                    SqlRequest(q);
                     textBox2.Text = "";
                 }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox4.Text != "" & listBox1.SelectedIndex != -1)
+            {
+                string q = "update Piece set PrixClient=" + textBox4.Text.ToString() + " where PK_Piece=" + listBox1.SelectedItem.ToString();
+                SqlRequest(q);
+                textBox4.Text = "";
+            }
+        }
+
+       
     }
 }
