@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoxCreationScratch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BoxCreationScratch.Designer.cs">
+      <DependentUpon>BoxCreationScratch.cs</DependentUpon>
+    </Compile>
     <Compile Include="BoxStandard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -64,6 +70,12 @@
     <Compile Include="Creation.Designer.cs">
       <DependentUpon>Creation.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreationExplanation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreationExplanation.Designer.cs">
+      <DependentUpon>CreationExplanation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BoxCreationScratch.resx">
+      <DependentUpon>BoxCreationScratch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BoxStandard.resx">
       <DependentUpon>BoxStandard.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Creation.resx">
       <DependentUpon>Creation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreationExplanation.resx">
+      <DependentUpon>CreationExplanation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

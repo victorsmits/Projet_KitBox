@@ -24,14 +24,16 @@ namespace KitBoxApplication
 
         private void completeCreationAppear(object sender, EventArgs e)
         {
-            if (boxStandard1.Visible == true)
+            if (boxCreationScratch1.Visible == true)
             {
-                boxStandard1.Visible = false;
+                boxCreationScratch1.Visible = false;
+                creationExplanation1.Visible = true;
             }
             else
             {
-                boxStandard1.Visible = true;
+                boxCreationScratch1.Visible = true;
                 standartCreation.Checked = false;
+                creationExplanation1.Visible = false;
             }
         }
 
@@ -40,11 +42,13 @@ namespace KitBoxApplication
             if (boxStandard2.Visible == true)
             {
                 boxStandard2.Visible = false;
+                creationExplanation1.Visible = true;
             }
             else
             {
                 boxStandard2.Visible = true;
                 completeCreation.Checked = false;
+                creationExplanation1.Visible = false;            
             }
         }
 

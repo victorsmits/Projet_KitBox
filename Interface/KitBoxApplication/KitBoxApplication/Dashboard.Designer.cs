@@ -316,15 +316,12 @@
         private System.Windows.Forms.TextBox textBoxSubscribe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel2;
-        private HomePage homePage1;
+        private System.Windows.Forms.Panel panel2;       
         private System.Windows.Forms.Button buttonAbout;
         private System.Windows.Forms.Button buttonCart;
         private System.Windows.Forms.Button buttonCreation;
         private System.Windows.Forms.Button buttonDash;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private HomePage homePage2;
-        private Creation creation1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;        
         private Creation creation2;
         private HomePage homePage3;
     }

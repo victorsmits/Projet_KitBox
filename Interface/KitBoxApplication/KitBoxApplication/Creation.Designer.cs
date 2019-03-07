@@ -32,8 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.standartCreation = new System.Windows.Forms.CheckBox();
             this.completeCreation = new System.Windows.Forms.CheckBox();
-            this.boxStandard1 = new KitBoxApplication.BoxStandard();
             this.boxStandard2 = new KitBoxApplication.BoxStandard();
+            this.boxCreationScratch1 = new KitBoxApplication.BoxCreationScratch();
+            this.creationExplanation1 = new KitBoxApplication.CreationExplanation();
             this.SuspendLayout();
             // 
             // label14
@@ -87,34 +88,40 @@
             this.completeCreation.UseVisualStyleBackColor = true;
             this.completeCreation.CheckedChanged += new System.EventHandler(this.completeCreationAppear);
             // 
-            // boxStandard1
-            // 
-            this.boxStandard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.boxStandard1.Font = new System.Drawing.Font("Century Gothic", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxStandard1.Location = new System.Drawing.Point(514, 286);
-            this.boxStandard1.MinimumSize = new System.Drawing.Size(416, 0);
-            this.boxStandard1.Name = "boxStandard1";
-            this.boxStandard1.Size = new System.Drawing.Size(2416, 1407);
-            this.boxStandard1.TabIndex = 21;
-            this.boxStandard1.Visible = false;
-            // 
             // boxStandard2
             // 
             this.boxStandard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.boxStandard2.Font = new System.Drawing.Font("Century Gothic", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxStandard2.Location = new System.Drawing.Point(514, 286);
+            this.boxStandard2.Location = new System.Drawing.Point(520, 286);
             this.boxStandard2.MinimumSize = new System.Drawing.Size(416, 0);
             this.boxStandard2.Name = "boxStandard2";
             this.boxStandard2.Size = new System.Drawing.Size(2416, 1407);
             this.boxStandard2.TabIndex = 22;
             this.boxStandard2.Visible = false;
             // 
+            // boxCreationScratch1
+            // 
+            this.boxCreationScratch1.Location = new System.Drawing.Point(520, 286);
+            this.boxCreationScratch1.Name = "boxCreationScratch1";
+            this.boxCreationScratch1.Size = new System.Drawing.Size(2416, 1407);
+            this.boxCreationScratch1.TabIndex = 23;
+            this.boxCreationScratch1.Visible = false;
+            // 
+            // creationExplanation1
+            // 
+            this.creationExplanation1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.creationExplanation1.Location = new System.Drawing.Point(921, 286);
+            this.creationExplanation1.Name = "creationExplanation1";
+            this.creationExplanation1.Size = new System.Drawing.Size(1400, 1000);
+            this.creationExplanation1.TabIndex = 24;
+            // 
             // Creation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.creationExplanation1);
+            this.Controls.Add(this.boxCreationScratch1);
             this.Controls.Add(this.boxStandard2);
-            this.Controls.Add(this.boxStandard1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.standartCreation);
@@ -133,7 +140,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox standartCreation;
         private System.Windows.Forms.CheckBox completeCreation;
-        private BoxStandard boxStandard1;
         private BoxStandard boxStandard2;
+        private BoxCreationScratch boxCreationScratch1;
+        private CreationExplanation creationExplanation1;
     }
 }
