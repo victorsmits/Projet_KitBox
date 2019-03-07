@@ -42,7 +42,7 @@
             this.slidePic.Image = ((System.Drawing.Image)(resources.GetObject("slidePic.Image")));
             this.slidePic.Location = new System.Drawing.Point(0, 0);
             this.slidePic.Name = "slidePic";
-            this.slidePic.Size = new System.Drawing.Size(1496, 732);
+            this.slidePic.Size = new System.Drawing.Size(3416, 1200);
             this.slidePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.slidePic.TabIndex = 4;
             this.slidePic.TabStop = false;
@@ -51,7 +51,7 @@
             // timerSlider
             // 
             this.timerSlider.Enabled = true;
-            this.timerSlider.Interval = 2000;
+            this.timerSlider.Interval = 5000;
             this.timerSlider.Tick += new System.EventHandler(this.timerSlider_Tick);
             // 
             // HomePage
@@ -60,7 +60,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.slidePic);
             this.Name = "HomePage";
-            this.Size = new System.Drawing.Size(1496, 732);
+            this.Size = new System.Drawing.Size(3416, 1722);
             ((System.ComponentModel.ISupportInitialize)(this.slidePic)).EndInit();
             this.ResumeLayout(false);
 

@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Properties.Resources.resources
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.GenerateResource.cache
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.HomePage.resources
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Dashboard.resources
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Creation.resources
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxStandard.resources
 C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources
 C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Creation.resources
 C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Dashboard.resources
@@ -21,48 +11,18 @@ C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_
 C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
 C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
 C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
-||||||| merged common ancestors
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Properties.Resources.resources
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.GenerateResource.cache
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.HomePage.resources
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Dashboard.resources
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache
-C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Creation.resources
-=======
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/bin/Debug/KitBoxApplication.exe.config
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/bin/Debug/KitBoxApplication.exe
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/bin/Debug/KitBoxApplication.pdb
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.Properties.Resources.resources
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.csproj.GenerateResource.cache
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.csproj.CoreCompileInputs.cache
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.exe
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.pdb
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.HomePage.resources
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.CartPage.resources
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.Dashboard.resources
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.csprojAssemblyReference.cache
-C:/Users/Harold/Dropbox/BA3/Q2/projet informatique/projet genie logiciel/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.Creation.resources
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/bin/Debug/KitBoxApplication.exe.config
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/bin/Debug/KitBoxApplication.exe
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/bin/Debug/KitBoxApplication.pdb
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.csprojAssemblyReference.cache
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.CartPage.resources
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.Creation.resources
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.Dashboard.resources
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.HomePage.resources
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.Properties.Resources.resources
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.csproj.GenerateResource.cache
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.csproj.CoreCompileInputs.cache
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.exe
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Interface/KitBoxApplication/KitBoxApplication/obj/Debug/KitBoxApplication.pdb
->>>>>>> f38050b2b121b889eaf1b42c4fd5068d0ad4cc6f
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxStandard.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Creation.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Dashboard.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.HomePage.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Properties.Resources.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.GenerateResource.cache
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxCreationScratch.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationExplanation.resources

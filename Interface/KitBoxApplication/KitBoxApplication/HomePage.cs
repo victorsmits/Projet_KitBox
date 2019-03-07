@@ -27,7 +27,7 @@ namespace KitBoxApplication
 
         private void LoadNextImage()
         {
-            if (imageNumber == 4)
+            if (imageNumber == 6)
             {
                 imageNumber = 1;
             }

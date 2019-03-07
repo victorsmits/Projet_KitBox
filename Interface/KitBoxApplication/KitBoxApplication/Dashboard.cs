@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KitBoxApplication
@@ -18,8 +10,6 @@ namespace KitBoxApplication
         public Dashboard()
         {
             InitializeComponent();
-
-            
         }
 
         private void TreeView_SelectedItemChanged(object sender, EventArgs e)
@@ -37,24 +27,19 @@ namespace KitBoxApplication
             if (textBoxSubscribe.Text.Length == 0)
             {
                 textBoxSubscribe.Text = "example@mail.com";
-            }
-           
+            }          
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            homePage1.Visible = true;
-            creation1.Visible = false;
+            homePage3.Visible = true;
+            creation2.Visible = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ButtonCreation_Click(object sender, EventArgs e)
         {
-            homePage1.Visible = false;
-            creation1.Visible = true;
-        }
-
-        //test
-
-
+            homePage3.Visible = false;
+            creation2.Visible = true;
+        }    
     }
 }
