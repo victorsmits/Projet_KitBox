@@ -28,25 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label14 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.standartCreation = new System.Windows.Forms.CheckBox();
             this.completeCreation = new System.Windows.Forms.CheckBox();
-            this.boxStandard2 = new KitBoxApplication.BoxStandard();
-            this.boxCreationScratch1 = new KitBoxApplication.BoxCreationScratch();
             this.creationExplanation1 = new KitBoxApplication.CreationExplanation();
+            this.boxCreationScratch1 = new KitBoxApplication.BoxCreationScratch();
+            this.boxStandard2 = new KitBoxApplication.BoxStandard();
             this.SuspendLayout();
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(2780, 163);
-            this.label14.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(95, 32);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "Bilan :";
             // 
             // label1
             // 
@@ -88,6 +76,22 @@
             this.completeCreation.UseVisualStyleBackColor = true;
             this.completeCreation.CheckedChanged += new System.EventHandler(this.completeCreationAppear);
             // 
+            // creationExplanation1
+            // 
+            this.creationExplanation1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.creationExplanation1.Location = new System.Drawing.Point(921, 286);
+            this.creationExplanation1.Name = "creationExplanation1";
+            this.creationExplanation1.Size = new System.Drawing.Size(1400, 1000);
+            this.creationExplanation1.TabIndex = 24;
+            // 
+            // boxCreationScratch1
+            // 
+            this.boxCreationScratch1.Location = new System.Drawing.Point(520, 286);
+            this.boxCreationScratch1.Name = "boxCreationScratch1";
+            this.boxCreationScratch1.Size = new System.Drawing.Size(2416, 1407);
+            this.boxCreationScratch1.TabIndex = 23;
+            this.boxCreationScratch1.Visible = false;
+            // 
             // boxStandard2
             // 
             this.boxStandard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
@@ -99,22 +103,6 @@
             this.boxStandard2.TabIndex = 22;
             this.boxStandard2.Visible = false;
             // 
-            // boxCreationScratch1
-            // 
-            this.boxCreationScratch1.Location = new System.Drawing.Point(520, 286);
-            this.boxCreationScratch1.Name = "boxCreationScratch1";
-            this.boxCreationScratch1.Size = new System.Drawing.Size(2416, 1407);
-            this.boxCreationScratch1.TabIndex = 23;
-            this.boxCreationScratch1.Visible = false;
-            // 
-            // creationExplanation1
-            // 
-            this.creationExplanation1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.creationExplanation1.Location = new System.Drawing.Point(921, 286);
-            this.creationExplanation1.Name = "creationExplanation1";
-            this.creationExplanation1.Size = new System.Drawing.Size(1400, 1000);
-            this.creationExplanation1.TabIndex = 24;
-            // 
             // Creation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -122,21 +110,17 @@
             this.Controls.Add(this.creationExplanation1);
             this.Controls.Add(this.boxCreationScratch1);
             this.Controls.Add(this.boxStandard2);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.standartCreation);
             this.Controls.Add(this.completeCreation);
             this.Name = "Creation";
             this.Size = new System.Drawing.Size(3416, 1722);
-            this.Load += new System.EventHandler(this.Creation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox standartCreation;
         private System.Windows.Forms.CheckBox completeCreation;
