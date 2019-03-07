@@ -96,5 +96,7 @@ namespace interface_Magasinier
                     textBox2.Text = "";
                 }
         }
+
+        
     }
 }
