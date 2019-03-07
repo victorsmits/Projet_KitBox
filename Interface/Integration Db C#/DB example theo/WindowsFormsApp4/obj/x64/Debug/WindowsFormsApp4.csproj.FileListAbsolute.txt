@@ -1,0 +1,11 @@
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\x64\Debug\testing.accdb
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\x64\Debug\WindowsFormsApp4.exe.config
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\x64\Debug\WindowsFormsApp4.exe
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\x64\Debug\WindowsFormsApp4.pdb
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\x64\Debug\WindowsFormsApp4.Form1.resources
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\x64\Debug\WindowsFormsApp4.Properties.Resources.resources
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\x64\Debug\WindowsFormsApp4.csproj.GenerateResource.cache
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\x64\Debug\WindowsFormsApp4.csproj.CoreCompileInputs.cache
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\x64\Debug\WindowsFormsApp4.exe
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\x64\Debug\WindowsFormsApp4.pdb
+C:\Users\dtheo\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\x64\Debug\WindowsFormsApp4.csprojAssemblyReference.cache
