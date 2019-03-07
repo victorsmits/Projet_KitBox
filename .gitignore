@@ -1,3 +1,4 @@
 
 *.xml
 CodeSource/KitBoxSourceCode/.vs/KitBoxSourceCode/xs/UserPrefs.xml
+*.user
