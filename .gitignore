@@ -1,3 +1,6 @@
 
 *.xml
 CodeSource/KitBoxSourceCode/.vs/KitBoxSourceCode/xs/UserPrefs.xml
+*.user
+Interface/kitboxapplication/KitBoxApplication/obj/Debug/.DS_Store
+Interface/kitboxapplication/.vs/KitBoxApplication/.DS_Store

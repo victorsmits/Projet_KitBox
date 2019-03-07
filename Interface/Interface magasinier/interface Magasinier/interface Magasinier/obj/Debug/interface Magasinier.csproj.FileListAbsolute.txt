@@ -8,3 +8,13 @@ C:\Users\dtheo\source\repos\interface Magasinier\interface Magasinier\obj\Debug\
 C:\Users\dtheo\source\repos\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.csproj.CoreCompileInputs.cache
 C:\Users\dtheo\source\repos\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.exe
 C:\Users\dtheo\source\repos\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.pdb
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\Debug\interface Magasinier.exe.config
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\Debug\interface Magasinier.exe
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\Debug\interface Magasinier.pdb
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.csprojAssemblyReference.cache
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface_Magasinier.Form1.resources
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface_Magasinier.Properties.Resources.resources
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.csproj.GenerateResource.cache
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.csproj.CoreCompileInputs.cache
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.exe
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.pdb
