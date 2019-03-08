@@ -16,5 +16,10 @@ namespace interface_Magasinier
         {
             InitializeComponent();
         }
+
+        private void finishButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

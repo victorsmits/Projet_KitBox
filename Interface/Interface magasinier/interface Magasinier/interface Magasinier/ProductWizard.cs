@@ -19,7 +19,9 @@ namespace interface_Magasinier
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
+            Control form = this.Parent; //Choose the container in which it is (in our case the Tab "Add a product")
+            Control test = form.GetChildAtPoint(new Point(36, 85)); //Get a child located in 36, 85
+            
             
         }
     }

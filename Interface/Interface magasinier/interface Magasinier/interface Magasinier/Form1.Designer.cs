@@ -283,6 +283,7 @@
             // 
             // AddingProduct
             // 
+            this.AddingProduct.BackColor = System.Drawing.Color.Transparent;
             this.AddingProduct.Controls.Add(this.supplierWizard1);
             this.AddingProduct.Controls.Add(this.productWizard1);
             this.AddingProduct.Controls.Add(this.AddingProductLabel);
@@ -292,7 +293,6 @@
             this.AddingProduct.Size = new System.Drawing.Size(1492, 724);
             this.AddingProduct.TabIndex = 1;
             this.AddingProduct.Text = "Add a product";
-            this.AddingProduct.UseVisualStyleBackColor = true;
             // 
             // supplierWizard1
             // 
