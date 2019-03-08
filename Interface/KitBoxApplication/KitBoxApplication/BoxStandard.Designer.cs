@@ -63,9 +63,9 @@
             this.panelColorChoiceAll = new System.Windows.Forms.Panel();
             this.panelColorBoxIfN1 = new System.Windows.Forms.Panel();
             this.panelColorBoxIf1 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelYesNoIf1 = new System.Windows.Forms.Panel();
             this.radioButtonYesIf1 = new System.Windows.Forms.RadioButton();
-            this.radioButtonNoif1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoIf1 = new System.Windows.Forms.RadioButton();
             this.comboBoxColorIf1 = new System.Windows.Forms.ComboBox();
             this.panelDoorMaterial = new System.Windows.Forms.Panel();
             this.comboBoxDoorMatIf1 = new System.Windows.Forms.ComboBox();
@@ -127,7 +127,7 @@
             this.comboBoxDoorMatBox1 = new System.Windows.Forms.ComboBox();
             this.labelDoorMatBox1 = new System.Windows.Forms.Label();
             this.labelYesNoIf2 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
+            this.panelYesNoIf2 = new System.Windows.Forms.Panel();
             this.radioButtonYesIf2 = new System.Windows.Forms.RadioButton();
             this.radioButtonNoIf2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
@@ -135,7 +135,7 @@
             this.panelColorChoiceAll.SuspendLayout();
             this.panelColorBoxIfN1.SuspendLayout();
             this.panelColorBoxIf1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelYesNoIf1.SuspendLayout();
             this.panelDoorMaterial.SuspendLayout();
             this.panelYesNoBox7.SuspendLayout();
             this.panelDoorChoiceBox7.SuspendLayout();
@@ -153,7 +153,7 @@
             this.panelDoorChoiceBox2.SuspendLayout();
             this.panelYesNoBox1.SuspendLayout();
             this.panelDoorChoiceBox1.SuspendLayout();
-            this.panel19.SuspendLayout();
+            this.panelYesNoIf2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label13
@@ -593,7 +593,7 @@
             // panelColorBoxIf1
             // 
             this.panelColorBoxIf1.Controls.Add(this.labelDoorYesNoIf1);
-            this.panelColorBoxIf1.Controls.Add(this.panel1);
+            this.panelColorBoxIf1.Controls.Add(this.panelYesNoIf1);
             this.panelColorBoxIf1.Controls.Add(this.comboBoxColorIf1);
             this.panelColorBoxIf1.Controls.Add(this.panelDoorMaterial);
             this.panelColorBoxIf1.Controls.Add(this.labelColorBoxIf1);
@@ -602,14 +602,14 @@
             this.panelColorBoxIf1.Size = new System.Drawing.Size(529, 112);
             this.panelColorBoxIf1.TabIndex = 51;
             // 
-            // panel1
+            // panelYesNoIf1
             // 
-            this.panel1.Controls.Add(this.radioButtonYesIf1);
-            this.panel1.Controls.Add(this.radioButtonNoif1);
-            this.panel1.Location = new System.Drawing.Point(82, 50);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(149, 30);
-            this.panel1.TabIndex = 55;
+            this.panelYesNoIf1.Controls.Add(this.radioButtonYesIf1);
+            this.panelYesNoIf1.Controls.Add(this.radioButtonNoIf1);
+            this.panelYesNoIf1.Location = new System.Drawing.Point(82, 50);
+            this.panelYesNoIf1.Name = "panelYesNoIf1";
+            this.panelYesNoIf1.Size = new System.Drawing.Size(149, 30);
+            this.panelYesNoIf1.TabIndex = 55;
             // 
             // radioButtonYesIf1
             // 
@@ -621,21 +621,21 @@
             this.radioButtonYesIf1.TabIndex = 53;
             this.radioButtonYesIf1.Text = "Yes";
             this.radioButtonYesIf1.UseVisualStyleBackColor = true;
-            this.radioButtonYesIf1.CheckedChanged += new System.EventHandler(this.radioButtons_CheckedChanged);
+            this.radioButtonYesIf1.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf1_CheckedChanged);
             // 
             // radioButtonNoif1
             // 
-            this.radioButtonNoif1.AutoSize = true;
-            this.radioButtonNoif1.Checked = true;
-            this.radioButtonNoif1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButtonNoif1.Location = new System.Drawing.Point(55, 4);
-            this.radioButtonNoif1.Name = "radioButtonNoif1";
-            this.radioButtonNoif1.Size = new System.Drawing.Size(91, 38);
-            this.radioButtonNoif1.TabIndex = 54;
-            this.radioButtonNoif1.TabStop = true;
-            this.radioButtonNoif1.Text = "No";
-            this.radioButtonNoif1.UseVisualStyleBackColor = true;
-            this.radioButtonNoif1.CheckedChanged += new System.EventHandler(this.radioButtons_CheckedChanged);
+            this.radioButtonNoIf1.AutoSize = true;
+            this.radioButtonNoIf1.Checked = true;
+            this.radioButtonNoIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoIf1.Location = new System.Drawing.Point(55, 4);
+            this.radioButtonNoIf1.Name = "radioButtonNoif1";
+            this.radioButtonNoIf1.Size = new System.Drawing.Size(91, 38);
+            this.radioButtonNoIf1.TabIndex = 54;
+            this.radioButtonNoIf1.TabStop = true;
+            this.radioButtonNoIf1.Text = "No";
+            this.radioButtonNoIf1.UseVisualStyleBackColor = true;
+            this.radioButtonNoIf1.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf1_CheckedChanged);
             // 
             // comboBoxColorIf1
             // 
@@ -1158,7 +1158,7 @@
             // 
             this.panelDoorChoiceMultiple.Controls.Add(this.panelDoorChoicesM);
             this.panelDoorChoiceMultiple.Controls.Add(this.labelYesNoIf2);
-            this.panelDoorChoiceMultiple.Controls.Add(this.panel19);
+            this.panelDoorChoiceMultiple.Controls.Add(this.panelYesNoIf2);
             this.panelDoorChoiceMultiple.Location = new System.Drawing.Point(19, 350);
             this.panelDoorChoiceMultiple.Name = "panelDoorChoiceMultiple";
             this.panelDoorChoiceMultiple.Size = new System.Drawing.Size(606, 285);
@@ -1368,14 +1368,14 @@
             this.labelYesNoIf2.TabIndex = 20;
             this.labelYesNoIf2.Text = "Door";
             // 
-            // panel19
+            // panelYesNoIf2
             // 
-            this.panel19.Controls.Add(this.radioButtonYesIf2);
-            this.panel19.Controls.Add(this.radioButtonNoIf2);
-            this.panel19.Location = new System.Drawing.Point(82, 1);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(149, 30);
-            this.panel19.TabIndex = 55;
+            this.panelYesNoIf2.Controls.Add(this.radioButtonYesIf2);
+            this.panelYesNoIf2.Controls.Add(this.radioButtonNoIf2);
+            this.panelYesNoIf2.Location = new System.Drawing.Point(82, 1);
+            this.panelYesNoIf2.Name = "panelYesNoIf2";
+            this.panelYesNoIf2.Size = new System.Drawing.Size(149, 30);
+            this.panelYesNoIf2.TabIndex = 55;
             // 
             // radioButtonYesIf2
             // 
@@ -1387,6 +1387,7 @@
             this.radioButtonYesIf2.TabIndex = 53;
             this.radioButtonYesIf2.Text = "Yes";
             this.radioButtonYesIf2.UseVisualStyleBackColor = true;
+            this.radioButtonYesIf2.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf2_CheckedChanged);
             // 
             // radioButtonNoIf2
             // 
@@ -1436,8 +1437,8 @@
             this.panelColorBoxIfN1.PerformLayout();
             this.panelColorBoxIf1.ResumeLayout(false);
             this.panelColorBoxIf1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelYesNoIf1.ResumeLayout(false);
+            this.panelYesNoIf1.PerformLayout();
             this.panelDoorMaterial.ResumeLayout(false);
             this.panelDoorMaterial.PerformLayout();
             this.panelYesNoBox7.ResumeLayout(false);
@@ -1472,8 +1473,8 @@
             this.panelYesNoBox1.PerformLayout();
             this.panelDoorChoiceBox1.ResumeLayout(false);
             this.panelDoorChoiceBox1.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
+            this.panelYesNoIf2.ResumeLayout(false);
+            this.panelYesNoIf2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1518,8 +1519,8 @@
         private System.Windows.Forms.ComboBox comboBoxColorIf1;
         private System.Windows.Forms.Label labelColorBoxIf1;
         private System.Windows.Forms.RadioButton radioButtonYesIf1;
-        private System.Windows.Forms.RadioButton radioButtonNoif1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton radioButtonNoIf1;
+        private System.Windows.Forms.Panel panelYesNoIf1;
         private System.Windows.Forms.Label labelWidth;
         private System.Windows.Forms.Label labelDepth;
         private System.Windows.Forms.ComboBox comboBoxWidth;
@@ -1576,7 +1577,7 @@
         private System.Windows.Forms.Label labelDoorMatBox1;
         private System.Windows.Forms.Panel panelDoorChoiceMultiple;
         private System.Windows.Forms.Label labelYesNoIf2;
-        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panelYesNoIf2;
         private System.Windows.Forms.RadioButton radioButtonYesIf2;
         private System.Windows.Forms.RadioButton radioButtonNoIf2;
         private System.Windows.Forms.Panel panelDoorMaterial;
