@@ -127,6 +127,25 @@ namespace interface_Magasinier
             }
         }
 
-       
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ListBox l = sender as ListBox;
+            if (l.SelectedIndex != -1)
+            {
+                listBox1.SelectedIndex = l.SelectedIndex;
+                listBox2.SelectedIndex = l.SelectedIndex;
+                listBox3.SelectedIndex = l.SelectedIndex;
+                listBox4.SelectedIndex = l.SelectedIndex;
+                listBox5.SelectedIndex = l.SelectedIndex;
+                listBox6.SelectedIndex = l.SelectedIndex;
+                listBox7.SelectedIndex = l.SelectedIndex;
+
+                textBox1.Text = listBox2.SelectedItem.ToString();
+                textBox3.Text = listBox2.SelectedItem.ToString();
+                textBox2.Text = listBox3.SelectedItem.ToString();
+                textBox4.Text = listBox4.SelectedItem.ToString();
+            }
+
+        }
     }
 }
