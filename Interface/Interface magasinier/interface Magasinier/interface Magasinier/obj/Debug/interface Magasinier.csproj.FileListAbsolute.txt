@@ -33,7 +33,6 @@ C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\int
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\Debug\interface Magasinier.exe.config
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\Debug\interface Magasinier.exe
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\Debug\interface Magasinier.pdb
-C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.csprojAssemblyReference.cache
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface_Magasinier.Form1.resources
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface_Magasinier.ProductWizard.resources
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface_Magasinier.Properties.Resources.resources
@@ -42,3 +41,4 @@ C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\i
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.csproj.CoreCompileInputs.cache
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.exe
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.pdb
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\Debug\interface Magasinier.csprojAssemblyReference.cache

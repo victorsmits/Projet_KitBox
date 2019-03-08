@@ -296,10 +296,11 @@
             // 
             // supplierWizard1
             // 
-            this.supplierWizard1.Location = new System.Drawing.Point(36, 85);
+            this.supplierWizard1.Location = new System.Drawing.Point(35, 85);
             this.supplierWizard1.Name = "supplierWizard1";
             this.supplierWizard1.Size = new System.Drawing.Size(324, 183);
             this.supplierWizard1.TabIndex = 2;
+            this.supplierWizard1.Visible = false;
             // 
             // productWizard1
             // 
