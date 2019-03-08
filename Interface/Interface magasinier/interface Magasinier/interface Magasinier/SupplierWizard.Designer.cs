@@ -94,6 +94,9 @@
             // SupplierList
             // 
             this.SupplierList.FormattingEnabled = true;
+            this.SupplierList.Items.AddRange(new object[] {
+            "test1",
+            "test2"});
             this.SupplierList.Location = new System.Drawing.Point(113, 35);
             this.SupplierList.Name = "SupplierList";
             this.SupplierList.Size = new System.Drawing.Size(121, 21);

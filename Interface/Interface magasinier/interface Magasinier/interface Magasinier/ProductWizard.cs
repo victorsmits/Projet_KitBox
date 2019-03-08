@@ -39,10 +39,25 @@ namespace interface_Magasinier
                 Control supplier = form.Controls[0];    //Gets the first item of the list of controler (here SupplierWizard)
                 this.Visible = false;   //Makes this wizard invisible
                 supplier.Visible = true;    //Makes the supplier wizard appear
+
+                //Reset of every box
+                referenceTextBox.Text = "";
+                InitialStockNum.Value = 0;
+                MinimumStockNum.Value = 0;
+                clientPriceTextBox.Text = "";
+                numberPerBoxNum.Value = 0;
+                DimensionsTextBox.Text = "";
+                divisionTextBox.Text = "";
+                HeigthTextBox.Text = "";
+                depthTextBox.Text = "";
+                widthTextBox.Text = "";
+                codeTextBox.Text = "";
+                colorTextBox.Text = "";
+
             }
             else
             {
-                MessageBox.Show("Veuillez entrer tous les champs manquants");
+                MessageBox.Show("Enter all the missing information");
             }
             
 

@@ -157,7 +157,7 @@
             this.InitialStockNum.Location = new System.Drawing.Point(101, 59);
             this.InitialStockNum.Name = "InitialStockNum";
             this.InitialStockNum.Size = new System.Drawing.Size(58, 20);
-            this.InitialStockNum.TabIndex = 8;
+            this.InitialStockNum.TabIndex = 7;
             // 
             // widthTextBox
             // 
@@ -187,7 +187,7 @@
             this.clientPriceTextBox.Location = new System.Drawing.Point(101, 117);
             this.clientPriceTextBox.Name = "clientPriceTextBox";
             this.clientPriceTextBox.Size = new System.Drawing.Size(100, 20);
-            this.clientPriceTextBox.TabIndex = 10;
+            this.clientPriceTextBox.TabIndex = 9;
             // 
             // HeigthTextBox
             // 
@@ -242,7 +242,7 @@
             this.numberPerBoxNum.Location = new System.Drawing.Point(161, 147);
             this.numberPerBoxNum.Name = "numberPerBoxNum";
             this.numberPerBoxNum.Size = new System.Drawing.Size(58, 20);
-            this.numberPerBoxNum.TabIndex = 21;
+            this.numberPerBoxNum.TabIndex = 10;
             // 
             // divisionLabel
             // 
@@ -258,7 +258,7 @@
             this.MinimumStockNum.Location = new System.Drawing.Point(101, 85);
             this.MinimumStockNum.Name = "MinimumStockNum";
             this.MinimumStockNum.Size = new System.Drawing.Size(58, 20);
-            this.MinimumStockNum.TabIndex = 20;
+            this.MinimumStockNum.TabIndex = 8;
             // 
             // depthLabel
             // 
