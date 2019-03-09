@@ -16,5 +16,11 @@ namespace KitBoxApplication
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TabPage test = new TabPage { Text = "test"};
+            tabControl1.Controls.Add(test);
+        }
     }
 }
