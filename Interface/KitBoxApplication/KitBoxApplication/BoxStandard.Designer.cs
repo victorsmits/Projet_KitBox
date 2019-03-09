@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoxStandard));
-            this.label13 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.labelQuantityBox = new System.Windows.Forms.Label();
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.labelHeight = new System.Windows.Forms.Label();
             this.comboBoxHeight = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelHelp = new System.Windows.Forms.Label();
+            this.labelExplanation = new System.Windows.Forms.Label();
             this.labelDoorYesNoIf1 = new System.Windows.Forms.Label();
             this.labelColorS1 = new System.Windows.Forms.Label();
             this.labelColorS2 = new System.Windows.Forms.Label();
@@ -77,36 +77,36 @@
             this.comboBoxDepth = new System.Windows.Forms.ComboBox();
             this.labelDoorBox7 = new System.Windows.Forms.Label();
             this.panelYesNoBox7 = new System.Windows.Forms.Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYesBox7 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoBox7 = new System.Windows.Forms.RadioButton();
             this.panelDoorChoiceBox7 = new System.Windows.Forms.Panel();
             this.comboBoxDoorMatBox7 = new System.Windows.Forms.ComboBox();
             this.labelDoorMatBox7 = new System.Windows.Forms.Label();
             this.labelDoorBox6 = new System.Windows.Forms.Label();
             this.panelYesNoBox6 = new System.Windows.Forms.Panel();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYesBox6 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoBox6 = new System.Windows.Forms.RadioButton();
             this.panelDoorChoiceBox6 = new System.Windows.Forms.Panel();
             this.comboBoxDoorMatBox6 = new System.Windows.Forms.ComboBox();
             this.labelDoorMatBox6 = new System.Windows.Forms.Label();
             this.labelDoorBox5 = new System.Windows.Forms.Label();
             this.panelYesNoBox5 = new System.Windows.Forms.Panel();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYesBox5 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoBox5 = new System.Windows.Forms.RadioButton();
             this.panelDoorChoiceBox5 = new System.Windows.Forms.Panel();
             this.comboBoxDoorMatBox5 = new System.Windows.Forms.ComboBox();
             this.labelDoorMatBox5 = new System.Windows.Forms.Label();
             this.labelDoorBox4 = new System.Windows.Forms.Label();
-            this.panelYesNoColorBox4 = new System.Windows.Forms.Panel();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.panelYesNoBox4 = new System.Windows.Forms.Panel();
+            this.radioButtonYesBox4 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoBox4 = new System.Windows.Forms.RadioButton();
             this.panelDoorChoiceBox4 = new System.Windows.Forms.Panel();
             this.comboBoxDoorMatBox4 = new System.Windows.Forms.ComboBox();
             this.labelDoorMatBox4 = new System.Windows.Forms.Label();
             this.labelDoorBox3 = new System.Windows.Forms.Label();
             this.panelYesNoBox3 = new System.Windows.Forms.Panel();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYesBox3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoBox3 = new System.Windows.Forms.RadioButton();
             this.panelDoorChoiceBox3 = new System.Windows.Forms.Panel();
             this.comboBoxDoorMatBox3 = new System.Windows.Forms.ComboBox();
             this.labelDoorMatBox3 = new System.Windows.Forms.Label();
@@ -114,15 +114,15 @@
             this.panelDoorChoicesM = new System.Windows.Forms.Panel();
             this.labelDoorBox2 = new System.Windows.Forms.Label();
             this.panelYesNoBox2 = new System.Windows.Forms.Panel();
-            this.radioButton17 = new System.Windows.Forms.RadioButton();
-            this.radioButton18 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYesBox2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoBox2 = new System.Windows.Forms.RadioButton();
             this.labelDoorBox1 = new System.Windows.Forms.Label();
             this.panelDoorChoiceBox2 = new System.Windows.Forms.Panel();
             this.comboBoxDoorMatBox2 = new System.Windows.Forms.ComboBox();
             this.labelDoorMatBox2 = new System.Windows.Forms.Label();
             this.panelYesNoBox1 = new System.Windows.Forms.Panel();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYesBox1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoBox1 = new System.Windows.Forms.RadioButton();
             this.panelDoorChoiceBox1 = new System.Windows.Forms.Panel();
             this.comboBoxDoorMatBox1 = new System.Windows.Forms.ComboBox();
             this.labelDoorMatBox1 = new System.Windows.Forms.Label();
@@ -143,7 +143,7 @@
             this.panelDoorChoiceBox6.SuspendLayout();
             this.panelYesNoBox5.SuspendLayout();
             this.panelDoorChoiceBox5.SuspendLayout();
-            this.panelYesNoColorBox4.SuspendLayout();
+            this.panelYesNoBox4.SuspendLayout();
             this.panelDoorChoiceBox4.SuspendLayout();
             this.panelYesNoBox3.SuspendLayout();
             this.panelDoorChoiceBox3.SuspendLayout();
@@ -156,20 +156,20 @@
             this.panelYesNoIf2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label13
+            // labelTitle
             // 
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 14.1F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(2416, 43);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Construction Cabinet";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 14.1F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelTitle.Location = new System.Drawing.Point(0, 0);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(2416, 43);
+            this.labelTitle.TabIndex = 1;
+            this.labelTitle.Text = "Construction Cabinet";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelQuantityBox
             // 
@@ -238,29 +238,29 @@
             this.comboBoxHeight.Size = new System.Drawing.Size(191, 41);
             this.comboBoxHeight.TabIndex = 17;
             // 
-            // label1
+            // labelHelp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(713, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 47);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Help";
+            this.labelHelp.AutoSize = true;
+            this.labelHelp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.labelHelp.Location = new System.Drawing.Point(734, 98);
+            this.labelHelp.Name = "labelHelp";
+            this.labelHelp.Size = new System.Drawing.Size(109, 47);
+            this.labelHelp.TabIndex = 18;
+            this.labelHelp.Text = "Help";
             // 
-            // label2
+            // labelExplanation
             // 
-            this.label2.AllowDrop = true;
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(646, 143);
-            this.label2.MaximumSize = new System.Drawing.Size(250, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(246, 512);
-            this.label2.TabIndex = 19;
-            this.label2.Text = resources.GetString("label2.Text");
+            this.labelExplanation.AllowDrop = true;
+            this.labelExplanation.AutoSize = true;
+            this.labelExplanation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelExplanation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelExplanation.Location = new System.Drawing.Point(646, 143);
+            this.labelExplanation.MaximumSize = new System.Drawing.Size(250, 0);
+            this.labelExplanation.Name = "labelExplanation";
+            this.labelExplanation.Size = new System.Drawing.Size(246, 512);
+            this.labelExplanation.TabIndex = 19;
+            this.labelExplanation.Text = resources.GetString("labelExplanation.Text");
             // 
             // labelDoorYesNoIf1
             // 
@@ -291,7 +291,7 @@
             this.labelColorS2.AutoSize = true;
             this.labelColorS2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelColorS2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelColorS2.Location = new System.Drawing.Point(8, 44);
+            this.labelColorS2.Location = new System.Drawing.Point(8, 29);
             this.labelColorS2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS2.Name = "labelColorS2";
             this.labelColorS2.Size = new System.Drawing.Size(200, 40);
@@ -309,18 +309,20 @@
             this.labelColorS4.Size = new System.Drawing.Size(200, 40);
             this.labelColorS4.TabIndex = 23;
             this.labelColorS4.Text = "Color Box 4";
+            this.labelColorS4.Visible = false;
             // 
             // labelColorS3
             // 
             this.labelColorS3.AutoSize = true;
             this.labelColorS3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelColorS3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelColorS3.Location = new System.Drawing.Point(8, 84);
+            this.labelColorS3.Location = new System.Drawing.Point(8, 54);
             this.labelColorS3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS3.Name = "labelColorS3";
             this.labelColorS3.Size = new System.Drawing.Size(200, 40);
             this.labelColorS3.TabIndex = 24;
             this.labelColorS3.Text = "Color Box 3";
+            this.labelColorS3.Visible = false;
             // 
             // labelColorS7
             // 
@@ -333,30 +335,33 @@
             this.labelColorS7.Size = new System.Drawing.Size(200, 40);
             this.labelColorS7.TabIndex = 25;
             this.labelColorS7.Text = "Color Box 7";
+            this.labelColorS7.Visible = false;
             // 
             // labelColorS6
             // 
             this.labelColorS6.AutoSize = true;
             this.labelColorS6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelColorS6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelColorS6.Location = new System.Drawing.Point(213, 84);
+            this.labelColorS6.Location = new System.Drawing.Point(213, 54);
             this.labelColorS6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS6.Name = "labelColorS6";
             this.labelColorS6.Size = new System.Drawing.Size(200, 40);
             this.labelColorS6.TabIndex = 26;
             this.labelColorS6.Text = "Color Box 6";
+            this.labelColorS6.Visible = false;
             // 
             // labelColorS5
             // 
             this.labelColorS5.AutoSize = true;
             this.labelColorS5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelColorS5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelColorS5.Location = new System.Drawing.Point(213, 44);
+            this.labelColorS5.Location = new System.Drawing.Point(213, 29);
             this.labelColorS5.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS5.Name = "labelColorS5";
             this.labelColorS5.Size = new System.Drawing.Size(200, 40);
             this.labelColorS5.TabIndex = 27;
             this.labelColorS5.Text = "Color Box 5";
+            this.labelColorS5.Visible = false;
             // 
             // comboBoxColorS1
             // 
@@ -376,11 +381,12 @@
             this.comboBoxColorS6.Items.AddRange(new object[] {
             "Brun",
             "Blanc"});
-            this.comboBoxColorS6.Location = new System.Drawing.Point(310, 83);
+            this.comboBoxColorS6.Location = new System.Drawing.Point(310, 53);
             this.comboBoxColorS6.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxColorS6.Name = "comboBoxColorS6";
             this.comboBoxColorS6.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS6.TabIndex = 29;
+            this.comboBoxColorS6.Visible = false;
             // 
             // comboBoxColorS5
             // 
@@ -388,11 +394,12 @@
             this.comboBoxColorS5.Items.AddRange(new object[] {
             "Brun",
             "Blanc"});
-            this.comboBoxColorS5.Location = new System.Drawing.Point(310, 43);
+            this.comboBoxColorS5.Location = new System.Drawing.Point(310, 28);
             this.comboBoxColorS5.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxColorS5.Name = "comboBoxColorS5";
             this.comboBoxColorS5.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS5.TabIndex = 30;
+            this.comboBoxColorS5.Visible = false;
             // 
             // comboBoxColorS4
             // 
@@ -405,6 +412,7 @@
             this.comboBoxColorS4.Name = "comboBoxColorS4";
             this.comboBoxColorS4.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS4.TabIndex = 31;
+            this.comboBoxColorS4.Visible = false;
             // 
             // comboBoxColorS3
             // 
@@ -412,11 +420,12 @@
             this.comboBoxColorS3.Items.AddRange(new object[] {
             "Brun",
             "Blanc"});
-            this.comboBoxColorS3.Location = new System.Drawing.Point(105, 83);
+            this.comboBoxColorS3.Location = new System.Drawing.Point(105, 53);
             this.comboBoxColorS3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxColorS3.Name = "comboBoxColorS3";
             this.comboBoxColorS3.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS3.TabIndex = 32;
+            this.comboBoxColorS3.Visible = false;
             // 
             // comboBoxColorS2
             // 
@@ -424,7 +433,7 @@
             this.comboBoxColorS2.Items.AddRange(new object[] {
             "Brun",
             "Blanc"});
-            this.comboBoxColorS2.Location = new System.Drawing.Point(105, 43);
+            this.comboBoxColorS2.Location = new System.Drawing.Point(105, 28);
             this.comboBoxColorS2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxColorS2.Name = "comboBoxColorS2";
             this.comboBoxColorS2.Size = new System.Drawing.Size(100, 41);
@@ -441,6 +450,7 @@
             this.comboBoxColorS7.Name = "comboBoxColorS7";
             this.comboBoxColorS7.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS7.TabIndex = 34;
+            this.comboBoxColorS7.Visible = false;
             // 
             // labelColorQuestions
             // 
@@ -563,7 +573,7 @@
             this.panelColorChoice.Controls.Add(this.comboBoxColorS7);
             this.panelColorChoice.Location = new System.Drawing.Point(16, 35);
             this.panelColorChoice.Name = "panelColorChoice";
-            this.panelColorChoice.Size = new System.Drawing.Size(614, 124);
+            this.panelColorChoice.Size = new System.Drawing.Size(614, 97);
             this.panelColorChoice.TabIndex = 48;
             this.panelColorChoice.Visible = false;
             // 
@@ -586,7 +596,7 @@
             this.panelColorBoxIfN1.Controls.Add(this.panelColorChoice);
             this.panelColorBoxIfN1.Location = new System.Drawing.Point(3, 186);
             this.panelColorBoxIfN1.Name = "panelColorBoxIfN1";
-            this.panelColorBoxIfN1.Size = new System.Drawing.Size(637, 159);
+            this.panelColorBoxIfN1.Size = new System.Drawing.Size(637, 125);
             this.panelColorBoxIfN1.TabIndex = 50;
             this.panelColorBoxIfN1.Visible = false;
             // 
@@ -623,13 +633,13 @@
             this.radioButtonYesIf1.UseVisualStyleBackColor = true;
             this.radioButtonYesIf1.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf1_CheckedChanged);
             // 
-            // radioButtonNoif1
+            // radioButtonNoIf1
             // 
             this.radioButtonNoIf1.AutoSize = true;
             this.radioButtonNoIf1.Checked = true;
             this.radioButtonNoIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.radioButtonNoIf1.Location = new System.Drawing.Point(55, 4);
-            this.radioButtonNoIf1.Name = "radioButtonNoif1";
+            this.radioButtonNoIf1.Name = "radioButtonNoIf1";
             this.radioButtonNoIf1.Size = new System.Drawing.Size(91, 38);
             this.radioButtonNoIf1.TabIndex = 54;
             this.radioButtonNoIf1.TabStop = true;
@@ -754,51 +764,55 @@
             this.labelDoorBox7.AutoSize = true;
             this.labelDoorBox7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorBox7.Location = new System.Drawing.Point(8, 174);
+            this.labelDoorBox7.Location = new System.Drawing.Point(8, 166);
             this.labelDoorBox7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox7.Name = "labelDoorBox7";
             this.labelDoorBox7.Size = new System.Drawing.Size(191, 40);
             this.labelDoorBox7.TabIndex = 20;
             this.labelDoorBox7.Text = "Door Box 7";
+            this.labelDoorBox7.Visible = false;
             // 
             // panelYesNoBox7
             // 
-            this.panelYesNoBox7.Controls.Add(this.radioButton3);
-            this.panelYesNoBox7.Controls.Add(this.radioButton4);
-            this.panelYesNoBox7.Location = new System.Drawing.Point(111, 171);
+            this.panelYesNoBox7.Controls.Add(this.radioButtonYesBox7);
+            this.panelYesNoBox7.Controls.Add(this.radioButtonNoBox7);
+            this.panelYesNoBox7.Location = new System.Drawing.Point(111, 163);
             this.panelYesNoBox7.Name = "panelYesNoBox7";
             this.panelYesNoBox7.Size = new System.Drawing.Size(150, 30);
             this.panelYesNoBox7.TabIndex = 55;
+            this.panelYesNoBox7.Visible = false;
             // 
-            // radioButton3
+            // radioButtonYesBox7
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton3.Location = new System.Drawing.Point(3, 4);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(99, 38);
-            this.radioButton3.TabIndex = 53;
-            this.radioButton3.Text = "Yes";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox7.AutoSize = true;
+            this.radioButtonYesBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonYesBox7.Location = new System.Drawing.Point(3, 4);
+            this.radioButtonYesBox7.Name = "radioButtonYesBox7";
+            this.radioButtonYesBox7.Size = new System.Drawing.Size(99, 38);
+            this.radioButtonYesBox7.TabIndex = 53;
+            this.radioButtonYesBox7.Text = "Yes";
+            this.radioButtonYesBox7.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox7.CheckedChanged += new System.EventHandler(this.radioButtonBox7_CheckedChanged);
             // 
-            // radioButton4
+            // radioButtonNoBox7
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Checked = true;
-            this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton4.Location = new System.Drawing.Point(55, 4);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(91, 38);
-            this.radioButton4.TabIndex = 54;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "No";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox7.AutoSize = true;
+            this.radioButtonNoBox7.Checked = true;
+            this.radioButtonNoBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox7.Location = new System.Drawing.Point(55, 4);
+            this.radioButtonNoBox7.Name = "radioButtonNoBox7";
+            this.radioButtonNoBox7.Size = new System.Drawing.Size(91, 38);
+            this.radioButtonNoBox7.TabIndex = 54;
+            this.radioButtonNoBox7.TabStop = true;
+            this.radioButtonNoBox7.Text = "No";
+            this.radioButtonNoBox7.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox7.CheckedChanged += new System.EventHandler(this.radioButtonBox7_CheckedChanged);
             // 
             // panelDoorChoiceBox7
             // 
             this.panelDoorChoiceBox7.Controls.Add(this.comboBoxDoorMatBox7);
             this.panelDoorChoiceBox7.Controls.Add(this.labelDoorMatBox7);
-            this.panelDoorChoiceBox7.Location = new System.Drawing.Point(267, 174);
+            this.panelDoorChoiceBox7.Location = new System.Drawing.Point(267, 162);
             this.panelDoorChoiceBox7.Name = "panelDoorChoiceBox7";
             this.panelDoorChoiceBox7.Size = new System.Drawing.Size(283, 59);
             this.panelDoorChoiceBox7.TabIndex = 52;
@@ -812,7 +826,7 @@
             "Blanc",
             "Galvinisé",
             "Noir"});
-            this.comboBoxDoorMatBox7.Location = new System.Drawing.Point(166, 7);
+            this.comboBoxDoorMatBox7.Location = new System.Drawing.Point(126, 4);
             this.comboBoxDoorMatBox7.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxDoorMatBox7.Name = "comboBoxDoorMatBox7";
             this.comboBoxDoorMatBox7.Size = new System.Drawing.Size(100, 41);
@@ -823,7 +837,7 @@
             this.labelDoorMatBox7.AutoSize = true;
             this.labelDoorMatBox7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorMatBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorMatBox7.Location = new System.Drawing.Point(10, 8);
+            this.labelDoorMatBox7.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox7.Name = "labelDoorMatBox7";
             this.labelDoorMatBox7.Size = new System.Drawing.Size(238, 40);
@@ -835,51 +849,55 @@
             this.labelDoorBox6.AutoSize = true;
             this.labelDoorBox6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorBox6.Location = new System.Drawing.Point(8, 145);
+            this.labelDoorBox6.Location = new System.Drawing.Point(8, 139);
             this.labelDoorBox6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox6.Name = "labelDoorBox6";
             this.labelDoorBox6.Size = new System.Drawing.Size(191, 40);
             this.labelDoorBox6.TabIndex = 20;
             this.labelDoorBox6.Text = "Door Box 6";
+            this.labelDoorBox6.Visible = false;
             // 
             // panelYesNoBox6
             // 
-            this.panelYesNoBox6.Controls.Add(this.radioButton5);
-            this.panelYesNoBox6.Controls.Add(this.radioButton6);
-            this.panelYesNoBox6.Location = new System.Drawing.Point(111, 142);
+            this.panelYesNoBox6.Controls.Add(this.radioButtonYesBox6);
+            this.panelYesNoBox6.Controls.Add(this.radioButtonNoBox6);
+            this.panelYesNoBox6.Location = new System.Drawing.Point(111, 136);
             this.panelYesNoBox6.Name = "panelYesNoBox6";
             this.panelYesNoBox6.Size = new System.Drawing.Size(150, 30);
             this.panelYesNoBox6.TabIndex = 55;
+            this.panelYesNoBox6.Visible = false;
             // 
-            // radioButton5
+            // radioButtonYesBox6
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton5.Location = new System.Drawing.Point(3, 4);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(99, 38);
-            this.radioButton5.TabIndex = 53;
-            this.radioButton5.Text = "Yes";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox6.AutoSize = true;
+            this.radioButtonYesBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonYesBox6.Location = new System.Drawing.Point(3, 4);
+            this.radioButtonYesBox6.Name = "radioButtonYesBox6";
+            this.radioButtonYesBox6.Size = new System.Drawing.Size(99, 38);
+            this.radioButtonYesBox6.TabIndex = 53;
+            this.radioButtonYesBox6.Text = "Yes";
+            this.radioButtonYesBox6.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox6.CheckedChanged += new System.EventHandler(this.radioButtonBox6_CheckedChanged);
             // 
-            // radioButton6
+            // radioButtonNoBox6
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Checked = true;
-            this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton6.Location = new System.Drawing.Point(55, 4);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(91, 38);
-            this.radioButton6.TabIndex = 54;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "No";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox6.AutoSize = true;
+            this.radioButtonNoBox6.Checked = true;
+            this.radioButtonNoBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox6.Location = new System.Drawing.Point(55, 4);
+            this.radioButtonNoBox6.Name = "radioButtonNoBox6";
+            this.radioButtonNoBox6.Size = new System.Drawing.Size(91, 38);
+            this.radioButtonNoBox6.TabIndex = 54;
+            this.radioButtonNoBox6.TabStop = true;
+            this.radioButtonNoBox6.Text = "No";
+            this.radioButtonNoBox6.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox6.CheckedChanged += new System.EventHandler(this.radioButtonBox6_CheckedChanged);
             // 
             // panelDoorChoiceBox6
             // 
             this.panelDoorChoiceBox6.Controls.Add(this.comboBoxDoorMatBox6);
             this.panelDoorChoiceBox6.Controls.Add(this.labelDoorMatBox6);
-            this.panelDoorChoiceBox6.Location = new System.Drawing.Point(267, 145);
+            this.panelDoorChoiceBox6.Location = new System.Drawing.Point(267, 135);
             this.panelDoorChoiceBox6.Name = "panelDoorChoiceBox6";
             this.panelDoorChoiceBox6.Size = new System.Drawing.Size(283, 59);
             this.panelDoorChoiceBox6.TabIndex = 52;
@@ -893,7 +911,7 @@
             "Blanc",
             "Galvinisé",
             "Noir"});
-            this.comboBoxDoorMatBox6.Location = new System.Drawing.Point(166, 7);
+            this.comboBoxDoorMatBox6.Location = new System.Drawing.Point(126, 4);
             this.comboBoxDoorMatBox6.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxDoorMatBox6.Name = "comboBoxDoorMatBox6";
             this.comboBoxDoorMatBox6.Size = new System.Drawing.Size(100, 41);
@@ -904,7 +922,7 @@
             this.labelDoorMatBox6.AutoSize = true;
             this.labelDoorMatBox6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorMatBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorMatBox6.Location = new System.Drawing.Point(10, 8);
+            this.labelDoorMatBox6.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox6.Name = "labelDoorMatBox6";
             this.labelDoorMatBox6.Size = new System.Drawing.Size(238, 40);
@@ -916,51 +934,55 @@
             this.labelDoorBox5.AutoSize = true;
             this.labelDoorBox5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorBox5.Location = new System.Drawing.Point(8, 116);
+            this.labelDoorBox5.Location = new System.Drawing.Point(8, 112);
             this.labelDoorBox5.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox5.Name = "labelDoorBox5";
             this.labelDoorBox5.Size = new System.Drawing.Size(191, 40);
             this.labelDoorBox5.TabIndex = 20;
             this.labelDoorBox5.Text = "Door Box 5";
+            this.labelDoorBox5.Visible = false;
             // 
             // panelYesNoBox5
             // 
-            this.panelYesNoBox5.Controls.Add(this.radioButton7);
-            this.panelYesNoBox5.Controls.Add(this.radioButton8);
-            this.panelYesNoBox5.Location = new System.Drawing.Point(111, 113);
+            this.panelYesNoBox5.Controls.Add(this.radioButtonYesBox5);
+            this.panelYesNoBox5.Controls.Add(this.radioButtonNoBox5);
+            this.panelYesNoBox5.Location = new System.Drawing.Point(111, 109);
             this.panelYesNoBox5.Name = "panelYesNoBox5";
             this.panelYesNoBox5.Size = new System.Drawing.Size(150, 30);
             this.panelYesNoBox5.TabIndex = 55;
+            this.panelYesNoBox5.Visible = false;
             // 
-            // radioButton7
+            // radioButtonYesBox5
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton7.Location = new System.Drawing.Point(3, 4);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(99, 38);
-            this.radioButton7.TabIndex = 53;
-            this.radioButton7.Text = "Yes";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox5.AutoSize = true;
+            this.radioButtonYesBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonYesBox5.Location = new System.Drawing.Point(3, 4);
+            this.radioButtonYesBox5.Name = "radioButtonYesBox5";
+            this.radioButtonYesBox5.Size = new System.Drawing.Size(99, 38);
+            this.radioButtonYesBox5.TabIndex = 53;
+            this.radioButtonYesBox5.Text = "Yes";
+            this.radioButtonYesBox5.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox5.CheckedChanged += new System.EventHandler(this.radioButtonBox5_CheckedChanged);
             // 
-            // radioButton8
+            // radioButtonNoBox5
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Checked = true;
-            this.radioButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton8.Location = new System.Drawing.Point(55, 4);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(91, 38);
-            this.radioButton8.TabIndex = 54;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "No";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox5.AutoSize = true;
+            this.radioButtonNoBox5.Checked = true;
+            this.radioButtonNoBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox5.Location = new System.Drawing.Point(55, 4);
+            this.radioButtonNoBox5.Name = "radioButtonNoBox5";
+            this.radioButtonNoBox5.Size = new System.Drawing.Size(91, 38);
+            this.radioButtonNoBox5.TabIndex = 54;
+            this.radioButtonNoBox5.TabStop = true;
+            this.radioButtonNoBox5.Text = "No";
+            this.radioButtonNoBox5.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox5.CheckedChanged += new System.EventHandler(this.radioButtonBox5_CheckedChanged);
             // 
             // panelDoorChoiceBox5
             // 
             this.panelDoorChoiceBox5.Controls.Add(this.comboBoxDoorMatBox5);
             this.panelDoorChoiceBox5.Controls.Add(this.labelDoorMatBox5);
-            this.panelDoorChoiceBox5.Location = new System.Drawing.Point(267, 116);
+            this.panelDoorChoiceBox5.Location = new System.Drawing.Point(267, 108);
             this.panelDoorChoiceBox5.Name = "panelDoorChoiceBox5";
             this.panelDoorChoiceBox5.Size = new System.Drawing.Size(283, 59);
             this.panelDoorChoiceBox5.TabIndex = 52;
@@ -974,7 +996,7 @@
             "Blanc",
             "Galvinisé",
             "Noir"});
-            this.comboBoxDoorMatBox5.Location = new System.Drawing.Point(166, 7);
+            this.comboBoxDoorMatBox5.Location = new System.Drawing.Point(126, 4);
             this.comboBoxDoorMatBox5.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxDoorMatBox5.Name = "comboBoxDoorMatBox5";
             this.comboBoxDoorMatBox5.Size = new System.Drawing.Size(100, 41);
@@ -985,7 +1007,7 @@
             this.labelDoorMatBox5.AutoSize = true;
             this.labelDoorMatBox5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorMatBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorMatBox5.Location = new System.Drawing.Point(10, 8);
+            this.labelDoorMatBox5.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox5.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox5.Name = "labelDoorMatBox5";
             this.labelDoorMatBox5.Size = new System.Drawing.Size(238, 40);
@@ -997,51 +1019,55 @@
             this.labelDoorBox4.AutoSize = true;
             this.labelDoorBox4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorBox4.Location = new System.Drawing.Point(8, 87);
+            this.labelDoorBox4.Location = new System.Drawing.Point(8, 85);
             this.labelDoorBox4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox4.Name = "labelDoorBox4";
             this.labelDoorBox4.Size = new System.Drawing.Size(191, 40);
             this.labelDoorBox4.TabIndex = 20;
             this.labelDoorBox4.Text = "Door Box 4";
+            this.labelDoorBox4.Visible = false;
             // 
-            // panelYesNoColorBox4
+            // panelYesNoBox4
             // 
-            this.panelYesNoColorBox4.Controls.Add(this.radioButton9);
-            this.panelYesNoColorBox4.Controls.Add(this.radioButton10);
-            this.panelYesNoColorBox4.Location = new System.Drawing.Point(111, 84);
-            this.panelYesNoColorBox4.Name = "panelYesNoColorBox4";
-            this.panelYesNoColorBox4.Size = new System.Drawing.Size(150, 30);
-            this.panelYesNoColorBox4.TabIndex = 55;
+            this.panelYesNoBox4.Controls.Add(this.radioButtonYesBox4);
+            this.panelYesNoBox4.Controls.Add(this.radioButtonNoBox4);
+            this.panelYesNoBox4.Location = new System.Drawing.Point(111, 82);
+            this.panelYesNoBox4.Name = "panelYesNoBox4";
+            this.panelYesNoBox4.Size = new System.Drawing.Size(150, 30);
+            this.panelYesNoBox4.TabIndex = 55;
+            this.panelYesNoBox4.Visible = false;
             // 
-            // radioButton9
+            // radioButtonYesBox4
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton9.Location = new System.Drawing.Point(3, 4);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(99, 38);
-            this.radioButton9.TabIndex = 53;
-            this.radioButton9.Text = "Yes";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox4.AutoSize = true;
+            this.radioButtonYesBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonYesBox4.Location = new System.Drawing.Point(3, 4);
+            this.radioButtonYesBox4.Name = "radioButtonYesBox4";
+            this.radioButtonYesBox4.Size = new System.Drawing.Size(99, 38);
+            this.radioButtonYesBox4.TabIndex = 53;
+            this.radioButtonYesBox4.Text = "Yes";
+            this.radioButtonYesBox4.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox4.CheckedChanged += new System.EventHandler(this.radioButtonBox4_CheckedChanged);
             // 
-            // radioButton10
+            // radioButtonNoBox4
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Checked = true;
-            this.radioButton10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton10.Location = new System.Drawing.Point(55, 4);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(91, 38);
-            this.radioButton10.TabIndex = 54;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "No";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox4.AutoSize = true;
+            this.radioButtonNoBox4.Checked = true;
+            this.radioButtonNoBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox4.Location = new System.Drawing.Point(55, 4);
+            this.radioButtonNoBox4.Name = "radioButtonNoBox4";
+            this.radioButtonNoBox4.Size = new System.Drawing.Size(91, 38);
+            this.radioButtonNoBox4.TabIndex = 54;
+            this.radioButtonNoBox4.TabStop = true;
+            this.radioButtonNoBox4.Text = "No";
+            this.radioButtonNoBox4.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox4.CheckedChanged += new System.EventHandler(this.radioButtonBox4_CheckedChanged);
             // 
             // panelDoorChoiceBox4
             // 
             this.panelDoorChoiceBox4.Controls.Add(this.comboBoxDoorMatBox4);
             this.panelDoorChoiceBox4.Controls.Add(this.labelDoorMatBox4);
-            this.panelDoorChoiceBox4.Location = new System.Drawing.Point(267, 87);
+            this.panelDoorChoiceBox4.Location = new System.Drawing.Point(267, 81);
             this.panelDoorChoiceBox4.Name = "panelDoorChoiceBox4";
             this.panelDoorChoiceBox4.Size = new System.Drawing.Size(283, 59);
             this.panelDoorChoiceBox4.TabIndex = 52;
@@ -1055,7 +1081,7 @@
             "Blanc",
             "Galvinisé",
             "Noir"});
-            this.comboBoxDoorMatBox4.Location = new System.Drawing.Point(166, 7);
+            this.comboBoxDoorMatBox4.Location = new System.Drawing.Point(126, 4);
             this.comboBoxDoorMatBox4.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxDoorMatBox4.Name = "comboBoxDoorMatBox4";
             this.comboBoxDoorMatBox4.Size = new System.Drawing.Size(100, 41);
@@ -1066,7 +1092,7 @@
             this.labelDoorMatBox4.AutoSize = true;
             this.labelDoorMatBox4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorMatBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorMatBox4.Location = new System.Drawing.Point(10, 8);
+            this.labelDoorMatBox4.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox4.Name = "labelDoorMatBox4";
             this.labelDoorMatBox4.Size = new System.Drawing.Size(238, 40);
@@ -1084,45 +1110,49 @@
             this.labelDoorBox3.Size = new System.Drawing.Size(191, 40);
             this.labelDoorBox3.TabIndex = 20;
             this.labelDoorBox3.Text = "Door Box 3";
+            this.labelDoorBox3.Visible = false;
             // 
             // panelYesNoBox3
             // 
-            this.panelYesNoBox3.Controls.Add(this.radioButton11);
-            this.panelYesNoBox3.Controls.Add(this.radioButton12);
+            this.panelYesNoBox3.Controls.Add(this.radioButtonYesBox3);
+            this.panelYesNoBox3.Controls.Add(this.radioButtonNoBox3);
             this.panelYesNoBox3.Location = new System.Drawing.Point(111, 55);
             this.panelYesNoBox3.Name = "panelYesNoBox3";
             this.panelYesNoBox3.Size = new System.Drawing.Size(150, 30);
             this.panelYesNoBox3.TabIndex = 55;
+            this.panelYesNoBox3.Visible = false;
             // 
-            // radioButton11
+            // radioButtonYesBox3
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton11.Location = new System.Drawing.Point(3, 4);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(99, 38);
-            this.radioButton11.TabIndex = 53;
-            this.radioButton11.Text = "Yes";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox3.AutoSize = true;
+            this.radioButtonYesBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonYesBox3.Location = new System.Drawing.Point(3, 4);
+            this.radioButtonYesBox3.Name = "radioButtonYesBox3";
+            this.radioButtonYesBox3.Size = new System.Drawing.Size(99, 38);
+            this.radioButtonYesBox3.TabIndex = 53;
+            this.radioButtonYesBox3.Text = "Yes";
+            this.radioButtonYesBox3.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox3.CheckedChanged += new System.EventHandler(this.radioButtonBox3_CheckedChanged);
             // 
-            // radioButton12
+            // radioButtonNoBox3
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Checked = true;
-            this.radioButton12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton12.Location = new System.Drawing.Point(55, 4);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(91, 38);
-            this.radioButton12.TabIndex = 54;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "No";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox3.AutoSize = true;
+            this.radioButtonNoBox3.Checked = true;
+            this.radioButtonNoBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox3.Location = new System.Drawing.Point(55, 4);
+            this.radioButtonNoBox3.Name = "radioButtonNoBox3";
+            this.radioButtonNoBox3.Size = new System.Drawing.Size(91, 38);
+            this.radioButtonNoBox3.TabIndex = 54;
+            this.radioButtonNoBox3.TabStop = true;
+            this.radioButtonNoBox3.Text = "No";
+            this.radioButtonNoBox3.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox3.CheckedChanged += new System.EventHandler(this.radioButtonBox3_CheckedChanged);
             // 
             // panelDoorChoiceBox3
             // 
             this.panelDoorChoiceBox3.Controls.Add(this.comboBoxDoorMatBox3);
             this.panelDoorChoiceBox3.Controls.Add(this.labelDoorMatBox3);
-            this.panelDoorChoiceBox3.Location = new System.Drawing.Point(267, 58);
+            this.panelDoorChoiceBox3.Location = new System.Drawing.Point(267, 54);
             this.panelDoorChoiceBox3.Name = "panelDoorChoiceBox3";
             this.panelDoorChoiceBox3.Size = new System.Drawing.Size(283, 59);
             this.panelDoorChoiceBox3.TabIndex = 52;
@@ -1136,7 +1166,7 @@
             "Blanc",
             "Galvinisé",
             "Noir"});
-            this.comboBoxDoorMatBox3.Location = new System.Drawing.Point(166, 7);
+            this.comboBoxDoorMatBox3.Location = new System.Drawing.Point(126, 4);
             this.comboBoxDoorMatBox3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxDoorMatBox3.Name = "comboBoxDoorMatBox3";
             this.comboBoxDoorMatBox3.Size = new System.Drawing.Size(100, 41);
@@ -1147,7 +1177,7 @@
             this.labelDoorMatBox3.AutoSize = true;
             this.labelDoorMatBox3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorMatBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorMatBox3.Location = new System.Drawing.Point(10, 8);
+            this.labelDoorMatBox3.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox3.Name = "labelDoorMatBox3";
             this.labelDoorMatBox3.Size = new System.Drawing.Size(238, 40);
@@ -1159,9 +1189,9 @@
             this.panelDoorChoiceMultiple.Controls.Add(this.panelDoorChoicesM);
             this.panelDoorChoiceMultiple.Controls.Add(this.labelYesNoIf2);
             this.panelDoorChoiceMultiple.Controls.Add(this.panelYesNoIf2);
-            this.panelDoorChoiceMultiple.Location = new System.Drawing.Point(19, 350);
+            this.panelDoorChoiceMultiple.Location = new System.Drawing.Point(19, 320);
             this.panelDoorChoiceMultiple.Name = "panelDoorChoiceMultiple";
-            this.panelDoorChoiceMultiple.Size = new System.Drawing.Size(606, 285);
+            this.panelDoorChoiceMultiple.Size = new System.Drawing.Size(606, 272);
             this.panelDoorChoiceMultiple.TabIndex = 61;
             this.panelDoorChoiceMultiple.Visible = false;
             // 
@@ -1177,7 +1207,7 @@
             this.panelDoorChoicesM.Controls.Add(this.panelYesNoBox5);
             this.panelDoorChoicesM.Controls.Add(this.labelDoorBox4);
             this.panelDoorChoicesM.Controls.Add(this.panelDoorChoiceBox5);
-            this.panelDoorChoicesM.Controls.Add(this.panelYesNoColorBox4);
+            this.panelDoorChoicesM.Controls.Add(this.panelYesNoBox4);
             this.panelDoorChoicesM.Controls.Add(this.labelDoorBox3);
             this.panelDoorChoicesM.Controls.Add(this.panelDoorChoiceBox4);
             this.panelDoorChoicesM.Controls.Add(this.panelYesNoBox3);
@@ -1190,7 +1220,7 @@
             this.panelDoorChoicesM.Controls.Add(this.panelDoorChoiceBox1);
             this.panelDoorChoicesM.Location = new System.Drawing.Point(0, 40);
             this.panelDoorChoicesM.Name = "panelDoorChoicesM";
-            this.panelDoorChoicesM.Size = new System.Drawing.Size(586, 238);
+            this.panelDoorChoicesM.Size = new System.Drawing.Size(586, 227);
             this.panelDoorChoicesM.TabIndex = 62;
             this.panelDoorChoicesM.Visible = false;
             // 
@@ -1199,7 +1229,7 @@
             this.labelDoorBox2.AutoSize = true;
             this.labelDoorBox2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorBox2.Location = new System.Drawing.Point(8, 29);
+            this.labelDoorBox2.Location = new System.Drawing.Point(8, 31);
             this.labelDoorBox2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox2.Name = "labelDoorBox2";
             this.labelDoorBox2.Size = new System.Drawing.Size(191, 40);
@@ -1208,36 +1238,38 @@
             // 
             // panelYesNoBox2
             // 
-            this.panelYesNoBox2.Controls.Add(this.radioButton17);
-            this.panelYesNoBox2.Controls.Add(this.radioButton18);
-            this.panelYesNoBox2.Location = new System.Drawing.Point(111, 26);
+            this.panelYesNoBox2.Controls.Add(this.radioButtonYesBox2);
+            this.panelYesNoBox2.Controls.Add(this.radioButtonNoBox2);
+            this.panelYesNoBox2.Location = new System.Drawing.Point(111, 28);
             this.panelYesNoBox2.Name = "panelYesNoBox2";
             this.panelYesNoBox2.Size = new System.Drawing.Size(150, 30);
             this.panelYesNoBox2.TabIndex = 55;
             // 
-            // radioButton17
+            // radioButtonYesBox2
             // 
-            this.radioButton17.AutoSize = true;
-            this.radioButton17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton17.Location = new System.Drawing.Point(3, 4);
-            this.radioButton17.Name = "radioButton17";
-            this.radioButton17.Size = new System.Drawing.Size(99, 38);
-            this.radioButton17.TabIndex = 53;
-            this.radioButton17.Text = "Yes";
-            this.radioButton17.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox2.AutoSize = true;
+            this.radioButtonYesBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonYesBox2.Location = new System.Drawing.Point(3, 4);
+            this.radioButtonYesBox2.Name = "radioButtonYesBox2";
+            this.radioButtonYesBox2.Size = new System.Drawing.Size(99, 38);
+            this.radioButtonYesBox2.TabIndex = 53;
+            this.radioButtonYesBox2.Text = "Yes";
+            this.radioButtonYesBox2.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox2.CheckedChanged += new System.EventHandler(this.radioButtonBox2_CheckedChanged);
             // 
-            // radioButton18
+            // radioButtonNoBox2
             // 
-            this.radioButton18.AutoSize = true;
-            this.radioButton18.Checked = true;
-            this.radioButton18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton18.Location = new System.Drawing.Point(55, 4);
-            this.radioButton18.Name = "radioButton18";
-            this.radioButton18.Size = new System.Drawing.Size(91, 38);
-            this.radioButton18.TabIndex = 54;
-            this.radioButton18.TabStop = true;
-            this.radioButton18.Text = "No";
-            this.radioButton18.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox2.AutoSize = true;
+            this.radioButtonNoBox2.Checked = true;
+            this.radioButtonNoBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox2.Location = new System.Drawing.Point(55, 4);
+            this.radioButtonNoBox2.Name = "radioButtonNoBox2";
+            this.radioButtonNoBox2.Size = new System.Drawing.Size(91, 38);
+            this.radioButtonNoBox2.TabIndex = 54;
+            this.radioButtonNoBox2.TabStop = true;
+            this.radioButtonNoBox2.Text = "No";
+            this.radioButtonNoBox2.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox2.CheckedChanged += new System.EventHandler(this.radioButtonBox2_CheckedChanged);
             // 
             // labelDoorBox1
             // 
@@ -1255,7 +1287,7 @@
             // 
             this.panelDoorChoiceBox2.Controls.Add(this.comboBoxDoorMatBox2);
             this.panelDoorChoiceBox2.Controls.Add(this.labelDoorMatBox2);
-            this.panelDoorChoiceBox2.Location = new System.Drawing.Point(267, 29);
+            this.panelDoorChoiceBox2.Location = new System.Drawing.Point(267, 27);
             this.panelDoorChoiceBox2.Name = "panelDoorChoiceBox2";
             this.panelDoorChoiceBox2.Size = new System.Drawing.Size(283, 59);
             this.panelDoorChoiceBox2.TabIndex = 52;
@@ -1269,7 +1301,7 @@
             "Blanc",
             "Galvinisé",
             "Noir"});
-            this.comboBoxDoorMatBox2.Location = new System.Drawing.Point(166, 7);
+            this.comboBoxDoorMatBox2.Location = new System.Drawing.Point(126, 4);
             this.comboBoxDoorMatBox2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxDoorMatBox2.Name = "comboBoxDoorMatBox2";
             this.comboBoxDoorMatBox2.Size = new System.Drawing.Size(100, 41);
@@ -1280,7 +1312,7 @@
             this.labelDoorMatBox2.AutoSize = true;
             this.labelDoorMatBox2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorMatBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorMatBox2.Location = new System.Drawing.Point(10, 8);
+            this.labelDoorMatBox2.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox2.Name = "labelDoorMatBox2";
             this.labelDoorMatBox2.Size = new System.Drawing.Size(238, 40);
@@ -1289,42 +1321,44 @@
             // 
             // panelYesNoBox1
             // 
-            this.panelYesNoBox1.Controls.Add(this.radioButton15);
-            this.panelYesNoBox1.Controls.Add(this.radioButton16);
+            this.panelYesNoBox1.Controls.Add(this.radioButtonYesBox1);
+            this.panelYesNoBox1.Controls.Add(this.radioButtonNoBox1);
             this.panelYesNoBox1.Location = new System.Drawing.Point(111, 1);
             this.panelYesNoBox1.Name = "panelYesNoBox1";
             this.panelYesNoBox1.Size = new System.Drawing.Size(150, 30);
             this.panelYesNoBox1.TabIndex = 55;
             // 
-            // radioButton15
+            // radioButtonYesBox1
             // 
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton15.Location = new System.Drawing.Point(3, 4);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(99, 38);
-            this.radioButton15.TabIndex = 53;
-            this.radioButton15.Text = "Yes";
-            this.radioButton15.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox1.AutoSize = true;
+            this.radioButtonYesBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonYesBox1.Location = new System.Drawing.Point(3, 4);
+            this.radioButtonYesBox1.Name = "radioButtonYesBox1";
+            this.radioButtonYesBox1.Size = new System.Drawing.Size(99, 38);
+            this.radioButtonYesBox1.TabIndex = 53;
+            this.radioButtonYesBox1.Text = "Yes";
+            this.radioButtonYesBox1.UseVisualStyleBackColor = true;
+            this.radioButtonYesBox1.CheckedChanged += new System.EventHandler(this.radioButtonBox1_CheckedChanged);
             // 
-            // radioButton16
+            // radioButtonNoBox1
             // 
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Checked = true;
-            this.radioButton16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.radioButton16.Location = new System.Drawing.Point(55, 4);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(91, 38);
-            this.radioButton16.TabIndex = 54;
-            this.radioButton16.TabStop = true;
-            this.radioButton16.Text = "No";
-            this.radioButton16.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox1.AutoSize = true;
+            this.radioButtonNoBox1.Checked = true;
+            this.radioButtonNoBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox1.Location = new System.Drawing.Point(55, 4);
+            this.radioButtonNoBox1.Name = "radioButtonNoBox1";
+            this.radioButtonNoBox1.Size = new System.Drawing.Size(91, 38);
+            this.radioButtonNoBox1.TabIndex = 54;
+            this.radioButtonNoBox1.TabStop = true;
+            this.radioButtonNoBox1.Text = "No";
+            this.radioButtonNoBox1.UseVisualStyleBackColor = true;
+            this.radioButtonNoBox1.CheckedChanged += new System.EventHandler(this.radioButtonBox1_CheckedChanged);
             // 
             // panelDoorChoiceBox1
             // 
             this.panelDoorChoiceBox1.Controls.Add(this.comboBoxDoorMatBox1);
             this.panelDoorChoiceBox1.Controls.Add(this.labelDoorMatBox1);
-            this.panelDoorChoiceBox1.Location = new System.Drawing.Point(267, 4);
+            this.panelDoorChoiceBox1.Location = new System.Drawing.Point(267, 0);
             this.panelDoorChoiceBox1.Name = "panelDoorChoiceBox1";
             this.panelDoorChoiceBox1.Size = new System.Drawing.Size(283, 42);
             this.panelDoorChoiceBox1.TabIndex = 52;
@@ -1338,7 +1372,7 @@
             "Blanc",
             "Galvinisé",
             "Noir"});
-            this.comboBoxDoorMatBox1.Location = new System.Drawing.Point(166, 7);
+            this.comboBoxDoorMatBox1.Location = new System.Drawing.Point(126, 4);
             this.comboBoxDoorMatBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxDoorMatBox1.Name = "comboBoxDoorMatBox1";
             this.comboBoxDoorMatBox1.Size = new System.Drawing.Size(100, 41);
@@ -1349,7 +1383,7 @@
             this.labelDoorMatBox1.AutoSize = true;
             this.labelDoorMatBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoorMatBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDoorMatBox1.Location = new System.Drawing.Point(10, 8);
+            this.labelDoorMatBox1.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox1.Name = "labelDoorMatBox1";
             this.labelDoorMatBox1.Size = new System.Drawing.Size(238, 40);
@@ -1401,6 +1435,7 @@
             this.radioButtonNoIf2.TabStop = true;
             this.radioButtonNoIf2.Text = "No";
             this.radioButtonNoIf2.UseVisualStyleBackColor = true;
+            this.radioButtonNoIf2.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf2_CheckedChanged);
             // 
             // BoxStandard
             // 
@@ -1417,13 +1452,13 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBoxColorAngles);
             this.Controls.Add(this.labelColorAngles);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelExplanation);
+            this.Controls.Add(this.labelHelp);
             this.Controls.Add(this.comboBoxHeight);
             this.Controls.Add(this.labelHeight);
             this.Controls.Add(this.numericUpDownQuantity);
             this.Controls.Add(this.labelQuantityBox);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.labelTitle);
             this.Font = new System.Drawing.Font("Century Gothic", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimumSize = new System.Drawing.Size(416, 0);
             this.Name = "BoxStandard";
@@ -1453,8 +1488,8 @@
             this.panelYesNoBox5.PerformLayout();
             this.panelDoorChoiceBox5.ResumeLayout(false);
             this.panelDoorChoiceBox5.PerformLayout();
-            this.panelYesNoColorBox4.ResumeLayout(false);
-            this.panelYesNoColorBox4.PerformLayout();
+            this.panelYesNoBox4.ResumeLayout(false);
+            this.panelYesNoBox4.PerformLayout();
             this.panelDoorChoiceBox4.ResumeLayout(false);
             this.panelDoorChoiceBox4.PerformLayout();
             this.panelYesNoBox3.ResumeLayout(false);
@@ -1482,13 +1517,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelQuantityBox;
         private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
         private System.Windows.Forms.Label labelHeight;
         private System.Windows.Forms.ComboBox comboBoxHeight;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelHelp;
+        private System.Windows.Forms.Label labelExplanation;
         private System.Windows.Forms.Label labelDoorYesNoIf1;
         private System.Windows.Forms.Label labelColorS1;
         private System.Windows.Forms.Label labelColorS2;
@@ -1528,50 +1563,50 @@
         private System.Windows.Forms.Panel panelDoorChoicesM;
         private System.Windows.Forms.Label labelDoorBox7;
         private System.Windows.Forms.Panel panelYesNoBox7;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButtonYesBox7;
+        private System.Windows.Forms.RadioButton radioButtonNoBox7;
         private System.Windows.Forms.Label labelDoorBox6;
         private System.Windows.Forms.Panel panelDoorChoiceBox7;
         private System.Windows.Forms.ComboBox comboBoxDoorMatBox7;
         private System.Windows.Forms.Label labelDoorMatBox7;
         private System.Windows.Forms.Panel panelYesNoBox6;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButtonYesBox6;
+        private System.Windows.Forms.RadioButton radioButtonNoBox6;
         private System.Windows.Forms.Label labelDoorBox5;
         private System.Windows.Forms.Panel panelDoorChoiceBox6;
         private System.Windows.Forms.ComboBox comboBoxDoorMatBox6;
         private System.Windows.Forms.Label labelDoorMatBox6;
         private System.Windows.Forms.Panel panelYesNoBox5;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButtonYesBox5;
+        private System.Windows.Forms.RadioButton radioButtonNoBox5;
         private System.Windows.Forms.Label labelDoorBox4;
         private System.Windows.Forms.Panel panelDoorChoiceBox5;
         private System.Windows.Forms.ComboBox comboBoxDoorMatBox5;
         private System.Windows.Forms.Label labelDoorMatBox5;
-        private System.Windows.Forms.Panel panelYesNoColorBox4;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.Panel panelYesNoBox4;
+        private System.Windows.Forms.RadioButton radioButtonYesBox4;
+        private System.Windows.Forms.RadioButton radioButtonNoBox4;
         private System.Windows.Forms.Label labelDoorBox3;
         private System.Windows.Forms.Panel panelDoorChoiceBox4;
         private System.Windows.Forms.ComboBox comboBoxDoorMatBox4;
         private System.Windows.Forms.Label labelDoorMatBox4;
         private System.Windows.Forms.Panel panelYesNoBox3;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton radioButtonYesBox3;
+        private System.Windows.Forms.RadioButton radioButtonNoBox3;
         private System.Windows.Forms.Label labelDoorBox2;
         private System.Windows.Forms.Panel panelDoorChoiceBox3;
         private System.Windows.Forms.ComboBox comboBoxDoorMatBox3;
         private System.Windows.Forms.Label labelDoorMatBox3;
         private System.Windows.Forms.Panel panelYesNoBox2;
-        private System.Windows.Forms.RadioButton radioButton17;
-        private System.Windows.Forms.RadioButton radioButton18;
+        private System.Windows.Forms.RadioButton radioButtonYesBox2;
+        private System.Windows.Forms.RadioButton radioButtonNoBox2;
         private System.Windows.Forms.Label labelDoorBox1;
         private System.Windows.Forms.Panel panelDoorChoiceBox2;
         private System.Windows.Forms.ComboBox comboBoxDoorMatBox2;
         private System.Windows.Forms.Label labelDoorMatBox2;
         private System.Windows.Forms.Panel panelYesNoBox1;
-        private System.Windows.Forms.RadioButton radioButton15;
-        private System.Windows.Forms.RadioButton radioButton16;
+        private System.Windows.Forms.RadioButton radioButtonYesBox1;
+        private System.Windows.Forms.RadioButton radioButtonNoBox1;
         private System.Windows.Forms.Panel panelDoorChoiceBox1;
         private System.Windows.Forms.ComboBox comboBoxDoorMatBox1;
         private System.Windows.Forms.Label labelDoorMatBox1;

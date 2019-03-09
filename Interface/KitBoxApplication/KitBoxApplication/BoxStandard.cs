@@ -19,6 +19,34 @@ namespace KitBoxApplication
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
             radioButtonYesIf2.CheckedChanged += new EventHandler(radioButtonsYesNoIf2_CheckedChanged);
             radioButtonNoIf2.CheckedChanged += new EventHandler(radioButtonsYesNoIf2_CheckedChanged);
+
+            // radio buttons in same group added to same function - group : --panelYesNoIf2--
+            radioButtonYesBox1.CheckedChanged += new EventHandler(radioButtonBox1_CheckedChanged);
+            radioButtonNoBox1.CheckedChanged += new EventHandler(radioButtonBox1_CheckedChanged);
+
+            // radio buttons in same group added to same function - group : --panelYesNoIf2--
+            radioButtonYesBox2.CheckedChanged += new EventHandler(radioButtonBox2_CheckedChanged);
+            radioButtonNoBox2.CheckedChanged += new EventHandler(radioButtonBox2_CheckedChanged);
+
+            // radio buttons in same group added to same function - group : --panelYesNoIf2--
+            radioButtonYesBox3.CheckedChanged += new EventHandler(radioButtonBox3_CheckedChanged);
+            radioButtonNoBox3.CheckedChanged += new EventHandler(radioButtonBox3_CheckedChanged);
+
+            // radio buttons in same group added to same function - group : --panelYesNoIf2--
+            radioButtonYesBox4.CheckedChanged += new EventHandler(radioButtonBox4_CheckedChanged);
+            radioButtonNoBox4.CheckedChanged += new EventHandler(radioButtonBox4_CheckedChanged);
+
+            // radio buttons in same group added to same function - group : --panelYesNoIf2--
+            radioButtonYesBox5.CheckedChanged += new EventHandler(radioButtonBox5_CheckedChanged);
+            radioButtonNoBox5.CheckedChanged += new EventHandler(radioButtonBox5_CheckedChanged);
+
+            // radio buttons in same group added to same function - group : --panelYesNoIf2--
+            radioButtonYesBox6.CheckedChanged += new EventHandler(radioButtonBox6_CheckedChanged);
+            radioButtonNoBox6.CheckedChanged += new EventHandler(radioButtonBox6_CheckedChanged);
+
+            // radio buttons in same group added to same function - group : --panelYesNoIf2--
+            radioButtonYesBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
+            radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
         }
 
         // function to make appear color choice for all the boxes at once and door choice
@@ -72,17 +100,69 @@ namespace KitBoxApplication
             {
                 panelColorBoxIf1.Visible = false;
                 panelColorBoxIfN1.Visible = true;
+                // part to make appear features for box color and door
+                // color features box 3
+                labelColorS3.Visible = false;
+                comboBoxColorS3.Visible = false;
+                // door features box 3
+                labelDoorBox3.Visible = false;
+                panelYesNoBox3.Visible = false;
                 if (count > 2)
                 {
+                    // color features box 3 and box 4
+                    labelColorS3.Visible = true;
+                    comboBoxColorS3.Visible = true;
+                    labelColorS4.Visible = false;
+                    comboBoxColorS4.Visible = false;
+                    // door features box 3 and box 4
+                    labelDoorBox3.Visible = true;
+                    panelYesNoBox3.Visible = true;
+                    labelDoorBox4.Visible = false;
+                    panelYesNoBox4.Visible = false;
                     if (count > 3)
                     {
+                        // color features box 4 and box 5
+                        labelColorS4.Visible = true;
+                        comboBoxColorS4.Visible = true;
+                        labelColorS5.Visible = false;
+                        comboBoxColorS5.Visible = false;
+                        // door features box 4 and box 5
+                        labelDoorBox4.Visible = true;
+                        panelYesNoBox4.Visible = true;
+                        labelDoorBox5.Visible = false;
+                        panelYesNoBox5.Visible = false;
                         if (count > 4)
                         {
+                            // color features box 5 and box 6
+                            labelColorS5.Visible = true;
+                            comboBoxColorS5.Visible = true;
+                            labelColorS6.Visible = false;
+                            comboBoxColorS6.Visible = false;
+                            // door features box 5 and box 6
+                            labelDoorBox5.Visible = true;
+                            panelYesNoBox5.Visible = true;
+                            labelDoorBox6.Visible = false;
+                            panelYesNoBox6.Visible = false;
                             if (count > 5)
                             {
+                                // color features box 6 and box 7
+                                labelColorS6.Visible = true;
+                                comboBoxColorS6.Visible = true;
+                                labelColorS7.Visible = false;
+                                comboBoxColorS7.Visible = false;
+                                // door features box 6 and box 7
+                                labelDoorBox6.Visible = true;
+                                panelYesNoBox6.Visible = true;
+                                labelDoorBox7.Visible = false;
+                                panelYesNoBox7.Visible = false;
                                 if (count > 6)
                                 {
-
+                                    // color features box 7 
+                                    labelColorS7.Visible = true;
+                                    comboBoxColorS7.Visible = true;
+                                    // door features box 7
+                                    labelDoorBox7.Visible = true;
+                                    panelYesNoBox7.Visible = true;
                                 }
                             }
                         }
@@ -126,5 +206,131 @@ namespace KitBoxApplication
                 }
             }
         }
+
+        // function radiobuttons for door box 1
+        //
+        private void radioButtonBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            // Do stuff only if the radio button is checked (or the action will run twice).
+            if (((RadioButton)sender).Checked)
+            {
+                if (((RadioButton)sender) == radioButtonYesBox1)
+                {
+                    panelDoorChoiceBox1.Visible = true;
+                }
+                else if (((RadioButton)sender) == radioButtonNoBox1)
+                {
+                    panelDoorChoiceBox1.Visible = false;
+                }
+            }
+        }
+
+        // function radiobuttons for door box 2
+        //
+        private void radioButtonBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            // Do stuff only if the radio button is checked (or the action will run twice).
+            if (((RadioButton)sender).Checked)
+            {
+                if (((RadioButton)sender) == radioButtonYesBox2)
+                {
+                    panelDoorChoiceBox2.Visible = true;
+                }
+                else if (((RadioButton)sender) == radioButtonNoBox2)
+                {
+                    panelDoorChoiceBox2.Visible = false;
+                }
+            }
+        }
+
+        // function radiobuttons for door box 3
+        //
+        private void radioButtonBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            // Do stuff only if the radio button is checked (or the action will run twice).
+            if (((RadioButton)sender).Checked)
+            {
+                if (((RadioButton)sender) == radioButtonYesBox3)
+                {
+                    panelDoorChoiceBox3.Visible = true;
+                }
+                else if (((RadioButton)sender) == radioButtonNoBox3)
+                {
+                    panelDoorChoiceBox3.Visible = false;
+                }
+            }
+        }
+
+        // function radiobuttons for door box 4
+        //
+        private void radioButtonBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            // Do stuff only if the radio button is checked (or the action will run twice).
+            if (((RadioButton)sender).Checked)
+            {
+                if (((RadioButton)sender) == radioButtonYesBox4)
+                {
+                    panelDoorChoiceBox4.Visible = true;
+                }
+                else if (((RadioButton)sender) == radioButtonNoBox4)
+                {
+                    panelDoorChoiceBox4.Visible = false;
+                }
+            }
+        }
+
+        // function radiobuttons for door box 5
+        //
+        private void radioButtonBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            // Do stuff only if the radio button is checked (or the action will run twice).
+            if (((RadioButton)sender).Checked)
+            {
+                if (((RadioButton)sender) == radioButtonYesBox5)
+                {
+                    panelDoorChoiceBox5.Visible = true;
+                }
+                else if (((RadioButton)sender) == radioButtonNoBox5)
+                {
+                    panelDoorChoiceBox5.Visible = false;
+                }
+            }
+        }
+
+        // function radiobuttons for door box 6
+        //
+        private void radioButtonBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            // Do stuff only if the radio button is checked (or the action will run twice).
+            if (((RadioButton)sender).Checked)
+            {
+                if (((RadioButton)sender) == radioButtonYesBox6)
+                {
+                    panelDoorChoiceBox6.Visible = true;
+                }
+                else if (((RadioButton)sender) == radioButtonNoBox6)
+                {
+                    panelDoorChoiceBox6.Visible = false;
+                }
+            }
+        }
+        
+        // function radiobuttons for door box 7
+        //
+        private void radioButtonBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            // Do stuff only if the radio button is checked (or the action will run twice).
+            if (((RadioButton)sender).Checked)
+            {
+                if (((RadioButton)sender) == radioButtonYesBox7)
+                {
+                    panelDoorChoiceBox7.Visible = true;
+                }
+                else if (((RadioButton)sender) == radioButtonNoBox7)
+                {
+                    panelDoorChoiceBox7.Visible = false;
+                }
+            }
+        }        
     }
 }
