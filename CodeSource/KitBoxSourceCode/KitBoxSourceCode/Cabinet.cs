@@ -5,28 +5,28 @@ namespace KitBoxSourceCode
 {
     public class Cabinet
     {
-        private List<IStorageBox> StorageBoxes;
-        private int totalHeight;
+        private List<CabinetFloor> StorageBoxes;
+        private int cabinetHeight;
+
         private int CabinetPrice = 0;
+
+        public int GetCabinetPrice => CabinetPrice;
+        public int GetCabinetHeight => cabinetHeight;
+
         private List<Angle> angles;
 
         public Cabinet()
         {
-            totalHeight = 0;
-            StorageBoxes = new List<IStorageBox>();
+            cabinetHeight = 0;
+            StorageBoxes = new List<CabinetFloor>();
             angles = new List<Angle>();
         }
 
-        public void AddStorageBox(IStorageBox storage)
+        public void AddStorageBox(CabinetFloor storage)
         {
             StorageBoxes.Add(storage);
-            CabinetPrice += storage.GetPrice();
-            totalHeight += storage.GetHeight();
-        }
-
-        public int GetCabinetPrice()
-        {
-            return CabinetPrice;
+            CabinetPrice += storage.GetFloorPrice;
+            cabinetHeight += storage.GetFloorHeight;
         }
 
         public int GetNumber()
@@ -39,14 +39,9 @@ namespace KitBoxSourceCode
             int i = 0;
             while (i < 4)
             {
-                angles.Add(new Angle(totalHeight, color));
+                angles.Add(new Angle(cabinetHeight, color));
                 i++;
             }
-        }
-
-        public int GetTotalHieght()
-        {
-            return totalHeight;
         }
     }
 }

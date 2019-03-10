@@ -1,13 +1,13 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public abstract class BoxDecorator : IStorageBox
+    public abstract class BoxDecorator : StorageBox
     {
-        private IStorageBox storageBox;
+        private StorageBox storageBox;
 
-        IStorageBox StorageBox { get; set; }
+        StorageBox StorageBox { get; set; }
 
-        public void AddBoxDecorator(IStorageBox storageBox)
+        public void AddBoxDecorator(StorageBox storageBox)
         {
             this.storageBox = storageBox;
         }
