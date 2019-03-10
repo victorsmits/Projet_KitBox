@@ -1,26 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 namespace KitBoxSourceCode
 {
     public class Box : StorageBox
     {
-        private List<ICompoment> Compoments;
+        //private List<ICompoment> Compoments;
+        private Dictionary<ICompoment, int> Compoments;
         private int Price = 0;
         private readonly int Lenght;
         private readonly int Height;
         private readonly int Depth;
 
-        public List<ICompoment> GetCompoments => Compoments;
+        public Dictionary<ICompoment, int> GetCompoments => Compoments;
 
-        public Box(int len, int height, int depth)
+        public Box(int len, int height, int depth, string col)
         {
-            Compoments = new List<ICompoment>();
+            Compoments = new Dictionary<ICompoment, int>();
             Lenght = len;
             Height = height;
             Depth = depth;
-            Price = 30;
 
-            AddPanel(len, height, depth);
+            AddPanel(len, height, depth, col);
             AddCleat(height);
             AddBeam(len, depth);
             AddDoorBeam(len);
@@ -28,13 +29,16 @@ namespace KitBoxSourceCode
 
         public override int GetPrice()
         {
-            //  Compoments.ForEach(AddPrice);
+            foreach (ICompoment Key in Compoments.Keys)
+            {
+                AddPrice(Key);
+            }
             return Price;
         }
 
         private void AddPrice(ICompoment elem)
         {
-            Price = Price + elem.GetPrice();
+            Price = Price + (elem.GetPrice() * Compoments[elem]);
         }
 
         public override int GetHeight()
@@ -44,57 +48,36 @@ namespace KitBoxSourceCode
             return 200;
         }
 
-        public override void GetDetails()
+        public override string GetDetails()
         {
-            Console.WriteLine("box");
+            return " box";
         }
 
-        private void AddPanel(int x, int y, int z)
+        private void AddPanel(int x, int y, int z, string col)
         {
-            Compoments.Add(new Panel(x, y));
+            Compoments.Add(new Panel(x, y, col, 1), 1);
 
-            Compoments.Add(new Panel(z, y));
-            Compoments.Add(new Panel(z, y));
+            Compoments.Add(new Panel(z, y, col, 2), 2);
 
-            Compoments.Add(new Panel(z, x));
-            Compoments.Add(new Panel(z, x));
+            Compoments.Add(new Panel(z, x, col, 2), 2);
         }
 
         private void AddCleat(int height)
         {
-            int i = 0;
-            while (i < 4)
-            {
-                Compoments.Add(new Cleat(height));
-                i++;
-            }
+            Compoments.Add(new Cleat(height, 4), 4);
         }
 
         private void AddBeam(int len, int height)
         {
-            int i = 0;
-            while (i < 4)
-            {
-                Compoments.Add(new Beam(len));
-                i++;
-            }
+            Compoments.Add(new Beam(len, 4), 4);
 
-            int j = 0;
-            while (j < 2)
-            {
-                Compoments.Add(new Beam(height));
-                j++;
-            }
+            Compoments.Add(new Beam(height, 2), 2);
+
         }
 
         private void AddDoorBeam(int height)
         {
-            int j = 0;
-            while (j < 2)
-            {
-                Compoments.Add(new DoorBeam(height));
-                j++;
-            }
+            Compoments.Add(new DoorBeam(height, 2), 2);
         }
     }
 }

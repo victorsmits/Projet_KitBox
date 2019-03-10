@@ -12,12 +12,9 @@ namespace KitBoxSourceCode
             this.storageBox = storageBox;
         }
 
-        public override void GetDetails()
+        public override string GetDetails()
         {
-            if (storageBox != null)
-            {
-                storageBox.GetDetails();
-            }
+            return storageBox.GetDetails();
         }
 
         public override int GetHeight()

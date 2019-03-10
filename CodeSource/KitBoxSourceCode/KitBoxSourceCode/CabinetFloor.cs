@@ -5,10 +5,10 @@ namespace KitBoxSourceCode
 {
     public class CabinetFloor
     {
+        public Dictionary<ICompoment, int> compoments;
         public readonly List<StorageBox> cabinetFloor;
 
         private readonly Box box;
-        private readonly BoxColor bc;
         private readonly DoubleDoors db;
 
         private readonly string doorColor;
@@ -27,23 +27,17 @@ namespace KitBoxSourceCode
             FloorHeight = 0;
 
             cabinetFloor = new List<StorageBox>();
-            box = new Box(lenght, height, depth);
+            box = new Box(lenght, height, depth, panelCol);
+            compoments = box.GetCompoments;
+            cabinetFloor.Add(box);
 
             doorColor = doorCol;
             boxColor = panelCol;
 
-            if (panelCol != null)
-            {
-                bc = new BoxColor("green");
-                bc.AddBoxDecorator(box);
-                cabinetFloor.Add(box);
-                cabinetFloor.Add(bc);
-            }
-
             if (doorMat != null)
             {
-                db = new DoubleDoors(doorCol, doorMat);
-                db.AddBoxDecorator(bc);
+                db = new DoubleDoors(doorCol, doorMat, height, lenght);
+                db.AddBoxDecorator(box);
                 cabinetFloor.Add(db);
             }
 
@@ -55,7 +49,7 @@ namespace KitBoxSourceCode
         {
             foreach (StorageBox elem in cabinetFloor)
             {
-                //floorPrice += elem.GetPrice();
+                floorPrice += elem.GetPrice();
             }
         }
 
@@ -67,9 +61,19 @@ namespace KitBoxSourceCode
             }
         }
 
-        public void ShowPieces()
+        public string ShowPieces()
         {
+            string format = "";
+            foreach (ICompoment Key in compoments.Keys)
+            {
+                format += Key.GetDetails() + " | Qty : " + compoments[Key] + "\n";
+            }
 
+            if (cabinetFloor.Count > 1)
+            {
+                format += cabinetFloor[1].GetDetails() + " | Qty : 1\n";
+            }
+            return format;
         }
     }
 }

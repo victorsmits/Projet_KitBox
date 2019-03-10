@@ -7,7 +7,7 @@ namespace KitBoxSourceCode
     {
         public static void Main(string[] args)
         {
-            //Box box = new Box(10, 5, 20);
+            Box box = new Box(10, 5, 20, "green");
             //Console.WriteLine(box.GetCompoments.Count);
 
             //DoubleDoors db = new DoubleDoors("green", "Glass");
@@ -37,6 +37,7 @@ namespace KitBoxSourceCode
 
             Console.WriteLine("Hieght = " + cabinet.GetCabinetHeight);
             Console.WriteLine("Price = " + cabinet.GetCabinetPrice);
+            Console.WriteLine(cabinet.GetPartList());
 
             cart.AddToCart(cabinet);
             cart.AddCartProfile(client);
@@ -47,11 +48,12 @@ namespace KitBoxSourceCode
 
 /*  TODO
 - check if a class "floor" is a good idea
-- décorateur boxcolor a supprimer et intégré dans la génération des panneau
++ décorateur boxcolor a supprimer et intégré dans la génération des panneau
 - selection de la piece dans le stock
 - modification du stock qd on sélectionne la piece
-- recupération de la liste des pièces de l'armoir
-- requete OLE DB
+± detail différente piece de l'armoir
+± recupération de la liste des pièces de l'armoir
+- !!! requete OLE DB !!!
 - supression étage
 - modification étage
 - numérotation des commandes

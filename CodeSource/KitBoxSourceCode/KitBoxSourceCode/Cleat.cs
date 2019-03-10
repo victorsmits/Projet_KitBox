@@ -1,18 +1,28 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-	public class Cleat : ICompoment
-	{
-		private readonly int Lenght;
-		private readonly int Price;
+    public class Cleat : ICompoment
+    {
+        private readonly int Lenght;
+        private readonly int quantity;
+        private readonly int Price;
+        private readonly int stockNumber;
 
-		public Cleat(int Len)
-		{
-			Lenght = Len;
-			//TODO oledb requete price fct len
-		}
+        public Cleat(int Len, int qty)
+        {
+            Lenght = Len;
+            quantity = qty;
+            Price = 2;
+            stockNumber = 1;
 
-		public int GetLenght() => Lenght;
-		public int GetPrice() => Price;
-	}
+            //TODO oledb requete price fct len
+        }
+
+        public int GetLenght() => Lenght;
+        public string GetDetails()
+        {
+            return "Cleat -> Dimension : " + Lenght + " | Stock ref : " + stockNumber;
+        }
+        public int GetPrice() => Price;
+    }
 }

@@ -16,10 +16,9 @@ namespace KitBoxSourceCode
 
         public string GetWallColor => wallColor;
 
-        public override void GetDetails()
+        public override string GetDetails()
         {
-            base.GetDetails();
-            Console.WriteLine("red");
+            return " boxcolor";
         }
 
 

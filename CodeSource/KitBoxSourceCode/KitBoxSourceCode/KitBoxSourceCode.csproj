@@ -50,7 +50,7 @@
     <Compile Include="DoubleDoors.cs" />
     <Compile Include="Materials.cs" />
     <Compile Include="BoxColor.cs" />
-    <Compile Include="Compoment.cs" />
+    <Compile Include="ICompoment.cs" />
     <Compile Include="Knop.cs" />
     <Compile Include="CabinetFloor.cs" />
   </ItemGroup>

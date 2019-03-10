@@ -7,15 +7,22 @@ namespace KitBoxSourceCode
     {
         private readonly List<Knop> knops;
         private int Price;
+        private int Height;
+        private int Lenght;
+        private int stockNumber;
 
         public string Materials { get; }
         public string DoorColor { get; }
 
-        public DoubleDoors(string color, string mat)
+        public DoubleDoors(string color, string mat, int height, int len)
         {
             DoorColor = color;
             Price = 20;
             Materials = mat;
+            Height = height;
+            Lenght = len;
+            stockNumber = 1;
+
             knops = new List<Knop> {
                 new Knop(),
                 new Knop()
@@ -30,15 +37,14 @@ namespace KitBoxSourceCode
             //TODO ole db fct color et mat
         }
 
-        public override void GetDetails()
+        public override string GetDetails()
         {
-            base.GetDetails();
-            Console.WriteLine("Materials");
+            return "DoubleDoors -> Dimension : " + Height + " x " + Lenght
+            + " | Coleur : " + DoorColor + " | Stock ref : " + stockNumber;
         }
 
         public override int GetPrice()
         {
-            //base.GetPrice();
             return Price;
         }
 
