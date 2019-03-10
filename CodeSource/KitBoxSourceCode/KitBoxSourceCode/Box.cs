@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace KitBoxSourceCode
 {
-    public class Box : IStorageBox
+    public class Box : StorageBox
     {
         private List<ICompoment> Compoments;
         private int Price = 0;
@@ -28,7 +28,7 @@ namespace KitBoxSourceCode
 
         public override int GetPrice()
         {
-            //Compoments.ForEach(AddPrice);
+            //  Compoments.ForEach(AddPrice);
             return Price;
         }
 
@@ -39,7 +39,8 @@ namespace KitBoxSourceCode
 
         public override int GetHeight()
         {
-            //TODO calcul hauteur de la boie
+            //  TODO calcul hauteur de la boie en fonction de la 
+            //  dimmention total recu
             return 200;
         }
 

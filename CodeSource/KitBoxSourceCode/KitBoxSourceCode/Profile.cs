@@ -3,10 +3,16 @@ namespace KitBoxSourceCode
 {
     public class Profile
     {
-        private string FirstName;
-        private string LastName;
-        private string Email;
-        private string Adresse;
+        private const string format = "LastName: {0}, FirstName: {1}";
+        private readonly string FirstName;
+        private readonly string LastName;
+        private readonly string Email;
+        private readonly string Adresse;
+
+        public string GetFirstName => FirstName;
+        public string GetLastName => LastName;
+        public string GetEmail => Email;
+        public string GetAdresse => Adresse;
 
         public Profile(string LN, string FN, string mail = null, string adresse = null)
         {
@@ -16,12 +22,19 @@ namespace KitBoxSourceCode
             Adresse = adresse;
         }
 
-        public string GetEmail => Email;
+        public void ShowClientInfo()
+        {
+            Console.WriteLine(format, arg0: LastName, arg1: FirstName);
+            if (Email != null)
+            {
+                Console.WriteLine("Email: {0}", arg0: Email);
+            }
 
-        public string GetLastName => LastName;
+            if (Adresse != null)
+            {
+                Console.WriteLine("Adresse: {0}", arg0: Adresse);
+            }
 
-        public string GetFirstName => FirstName;
-
-        public string GetAdresse => Adresse;
+        }
     }
 }
