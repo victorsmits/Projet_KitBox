@@ -49,7 +49,7 @@ namespace KitBoxSourceCode
 
 /*  TODO
 - check if a class "floor" is a good idea
-- classe abstraite pour compoment pour les variable 
++ classe abstraite pour compoment pour les variable 
 + décorateur boxcolor a supprimer et intégré dans la génération des panneau
 - selection de la piece dans le stock
 - modification du stock qd on sélectionne la piece

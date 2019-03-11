@@ -1,7 +1,7 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public abstract class BoxDecorator : StorageBox
+    public abstract class BoxDecorator
     {
         private StorageBox storageBox;
 
@@ -12,19 +12,5 @@ namespace KitBoxSourceCode
             this.storageBox = storageBox;
         }
 
-        public override string GetDetails()
-        {
-            return storageBox.GetDetails();
-        }
-
-        public override int GetHeight()
-        {
-            return 0;
-        }
-
-        public override int GetPrice()
-        {
-            return storageBox.GetPrice();
-        }
     }
 }

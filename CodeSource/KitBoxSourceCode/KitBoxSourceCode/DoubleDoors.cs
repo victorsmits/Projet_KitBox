@@ -3,24 +3,27 @@ using System.Drawing;
 using System.Collections.Generic;
 namespace KitBoxSourceCode
 {
-    public class DoubleDoors : BoxDecorator
+    public class DoubleDoors : GenericStorageBox
     {
         private readonly List<Knop> knops;
-        private int Price;
-        private int Height;
-        private int Lenght;
         private string stockNumber;
 
         public string Materials { get; }
         public string DoorColor { get; }
 
-        public DoubleDoors(string color, string mat, int height, int len)
+        private StorageBox storageBox;
+
+        StorageBox StorageBox { get; set; }
+
+        public void AddBoxDecorator(StorageBox storageBox)
+        {
+            this.storageBox = storageBox;
+        }
+
+        public DoubleDoors(string color, string mat, int height, int len) : base(len, height)
         {
             DoorColor = color;
-            Price = 20;
             Materials = mat;
-            Height = height;
-            Lenght = len;
             stockNumber = "1";
 
             knops = new List<Knop> {
@@ -28,10 +31,10 @@ namespace KitBoxSourceCode
                 new Knop()
             };
 
-            //SetPrice();
+            SetPrice();
         }
 
-        private void SetPrice()
+        protected override void SetPrice()
         {
             Price = 20;
             //TODO ole db fct color et mat
@@ -41,11 +44,6 @@ namespace KitBoxSourceCode
         {
             return "DoubleDoors -> Dimension : " + Height + " x " + Lenght
             + " | Coleur : " + DoorColor + " | Stock ref : " + stockNumber;
-        }
-
-        public override int GetPrice()
-        {
-            return Price;
         }
 
     }

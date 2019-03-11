@@ -3,37 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 namespace KitBoxSourceCode
 {
-    public class Box : StorageBox
+    public class Box : GenericStorageBox
     {
-        //private List<ICompoment> Compoments;
         private Dictionary<ICompoment, int> Compoments;
-        private int Price = 0;
-        private readonly int Lenght;
-        private readonly int Height;
+
         private readonly int Depth;
 
         public Dictionary<ICompoment, int> GetCompoments => Compoments;
 
-        public Box(int len, int height, int depth, string col)
+        public Box(int len, int height, int depth, string col) : base(len, height)
         {
             Compoments = new Dictionary<ICompoment, int>();
-            Lenght = len;
-            Height = height;
             Depth = depth;
 
             AddPanel(len, height, depth, col);
             AddCleat(height);
             AddBeam(len, depth);
             AddDoorBeam(len);
+
+            SetPrice();
         }
 
-        public override int GetPrice()
+        protected override void SetPrice()
         {
+            Price = 0;
             foreach (ICompoment Key in Compoments.Keys)
             {
                 AddPrice(Key);
             }
-            return Price;
         }
 
         private void AddPrice(ICompoment elem)
@@ -41,7 +38,7 @@ namespace KitBoxSourceCode
             Price = Price + (elem.GetPrice() * Compoments[elem]);
         }
 
-        public override int GetHeight()
+        public int SetHeight()
         {
             //  TODO calcul hauteur de la boie en fonction de la 
             //  dimmention total recu
