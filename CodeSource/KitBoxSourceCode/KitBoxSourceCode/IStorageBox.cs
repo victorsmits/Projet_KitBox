@@ -1,7 +1,7 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public interface StorageBox
+    public interface IStorageBox
     {
         string GetDetails();
         int GetPrice();

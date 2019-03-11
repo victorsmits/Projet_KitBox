@@ -11,11 +11,11 @@ namespace KitBoxSourceCode
         public string Materials { get; }
         public string DoorColor { get; }
 
-        private StorageBox storageBox;
+        private IStorageBox storageBox;
 
-        StorageBox StorageBox { get; set; }
+        IStorageBox StorageBox { get; set; }
 
-        public void AddBoxDecorator(StorageBox storageBox)
+        public void AddBoxDecorator(IStorageBox storageBox)
         {
             this.storageBox = storageBox;
         }

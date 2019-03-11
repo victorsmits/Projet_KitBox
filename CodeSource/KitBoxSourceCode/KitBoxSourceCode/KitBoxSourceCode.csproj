@@ -32,6 +32,9 @@
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="SqlOledb">
+      <HintPath>dll\SqlOledb.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -39,14 +42,13 @@
     <Compile Include="Cart.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Cabinet.cs" />
-    <Compile Include="StorageBox.cs" />
+    <Compile Include="IStorageBox.cs" />
     <Compile Include="Box.cs" />
     <Compile Include="Angle.cs" />
     <Compile Include="Cleat.cs" />
     <Compile Include="Beam.cs" />
     <Compile Include="DoorBeam.cs" />
     <Compile Include="Panel.cs" />
-    <Compile Include="BoxDecorator.cs" />
     <Compile Include="DoubleDoors.cs" />
     <Compile Include="Materials.cs" />
     <Compile Include="ICompoment.cs" />

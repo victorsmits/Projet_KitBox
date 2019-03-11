@@ -1,7 +1,7 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public abstract class GenericStorageBox : StorageBox
+    public abstract class GenericStorageBox : IStorageBox
     {
         protected int Price;
         protected int Lenght;

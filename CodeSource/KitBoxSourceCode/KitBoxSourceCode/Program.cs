@@ -34,10 +34,11 @@ namespace KitBoxSourceCode
                 panelCol: "green");
 
             cabinet.AddStorageBox(new CabinetFloor(10, 5, 20, "green", "Wood", "green"));
+            cabinet.AddStorageBox(new CabinetFloor(10, 5, 20, panelCol: "green"));
 
             Console.WriteLine("Hieght = " + cabinet.GetCabinetHeight);
             Console.WriteLine("Price = " + cabinet.GetCabinetPrice);
-            Console.WriteLine(cabinet.GetPartList());
+            Console.WriteLine("\n" + cabinet.GetPartList());
 
             cart.AddToCart(cabinet);
             cart.AddCartProfile(client);
@@ -48,14 +49,15 @@ namespace KitBoxSourceCode
 }
 
 /*  TODO
-- check if a class "floor" is a good idea
++ check if a class "floor" is a good idea
 + classe abstraite pour compoment pour les variable 
++ classe abstraite pour StorageBox pour les variable 
 + décorateur boxcolor a supprimer et intégré dans la génération des panneau
-- selection de la piece dans le stock
-- modification du stock qd on sélectionne la piece
 ± detail différente piece de l'armoir
 ± recupération de la liste des pièces de l'armoir
 - !!! requete OLE DB !!!
+- selection de la piece dans le stock
+- modification du stock qd on sélectionne la piece
 - supression étage
 - modification étage
 - numérotation des commandes avec variable static et get last if crash
