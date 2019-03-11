@@ -5,17 +5,17 @@ namespace KitBoxSourceCode
 {
     public class CabinetFloor
     {
-        public readonly List<StorageBox> cabinetFloor;
+        public Dictionary<ICompoment, int> compoments;
+        public readonly List<IStorageBox> cabinetFloor;
 
         private readonly Box box;
-        private readonly BoxColor bc;
         private readonly DoubleDoors db;
 
         private readonly string doorColor;
         private readonly string boxColor;
 
         private int floorPrice;
-        private int FloorHeight;
+        private readonly int FloorHeight;
 
         public int GetFloorHeight => FloorHeight;
         public int GetFloorPrice => floorPrice;
@@ -24,52 +24,48 @@ namespace KitBoxSourceCode
             string doorCol = null, string doorMat = null, string panelCol = null)
         {
             floorPrice = 0;
-            FloorHeight = 0;
+            FloorHeight = height;
 
-            cabinetFloor = new List<StorageBox>();
-            box = new Box(lenght, height, depth);
+            cabinetFloor = new List<IStorageBox>();
+            box = new Box(lenght, height, depth, panelCol);
+            compoments = box.GetCompoments;
+            cabinetFloor.Add(box);
 
             doorColor = doorCol;
             boxColor = panelCol;
 
-            if (panelCol != null)
-            {
-                bc = new BoxColor("green");
-                bc.AddBoxDecorator(box);
-                cabinetFloor.Add(box);
-                cabinetFloor.Add(bc);
-            }
-
             if (doorMat != null)
             {
-                db = new DoubleDoors(doorCol, doorMat);
-                db.AddBoxDecorator(bc);
+                db = new DoubleDoors(doorCol, doorMat, height, lenght);
+                db.AddBoxDecorator(box);
                 cabinetFloor.Add(db);
             }
 
             SetFloorPrice();
-            SetFloorHeight();
         }
 
         private void SetFloorPrice()
         {
-            foreach (StorageBox elem in cabinetFloor)
+            foreach (IStorageBox elem in cabinetFloor)
             {
-                //floorPrice += elem.GetPrice();
+                floorPrice += elem.GetPrice();
             }
         }
 
-        private void SetFloorHeight()
+        public string ShowPieces()
         {
-            foreach (StorageBox elem in cabinetFloor)
+            string format = "";
+            foreach (ICompoment Key in compoments.Keys)
             {
-                FloorHeight += elem.GetHeight();
+                format += Key.GetDetails() + " | Qty : " + compoments[Key] + "\n";
             }
-        }
 
-        public void ShowPieces()
-        {
-
+            if (cabinetFloor.Count > 1)
+            {
+                format += cabinetFloor[1].GetDetails() + " | Qty : 1\n";
+            }
+            format += "--------------------------------------------------\n\n";
+            return format;
         }
     }
 }

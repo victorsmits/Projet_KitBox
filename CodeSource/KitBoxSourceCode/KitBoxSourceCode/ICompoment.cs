@@ -5,5 +5,6 @@ namespace KitBoxSourceCode
     {
         int GetPrice();
         int GetLenght();
+        string GetDetails();
     }
 }

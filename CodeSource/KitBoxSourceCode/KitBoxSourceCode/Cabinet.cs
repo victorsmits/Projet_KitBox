@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq.Expressions;
 namespace KitBoxSourceCode
 {
     public class Cabinet
@@ -42,6 +43,16 @@ namespace KitBoxSourceCode
                 angles.Add(new Angle(cabinetHeight, color));
                 i++;
             }
+        }
+
+        public string GetPartList()
+        {
+            string PartList = "";
+            foreach (CabinetFloor elem in StorageBoxes)
+            {
+                PartList += elem.ShowPieces();
+            }
+            return PartList;
         }
     }
 }

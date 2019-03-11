@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{B364BA50-8CE6-47A7-9429-D382A21B1433}|Default">
+  <MonoDevelop.Ide.ItemProperties.DB_220EXAMPLE_220Theo PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WindowsFormsApp4/Form1.cs">
+    <Files>
+      <File FileName="WindowsFormsApp4/Form1.cs" Line="82" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WindowsFormsApp4" expanded="True">
+            <Node name="DB EXAMPLE Theo" expanded="True">
+              <Node name="Form1.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
