@@ -23,8 +23,8 @@ namespace KitBoxSourceCode
         protected override void SetPrice()
         {
             //TODO oledb requete price fct dim et couleur
-
             Price = 2;
+
         }
 
         public override string GetDetails()

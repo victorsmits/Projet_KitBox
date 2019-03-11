@@ -33,7 +33,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="SqlOledb">
-      <HintPath>..\..\..\Database\SqlOledb\SqlOledb\bin\x64\Release\SqlOledb.dll</HintPath>
+      <HintPath>..\..\..\Database\SqlOledb\SqlOledb\bin\Debug\SqlOledb.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

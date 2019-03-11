@@ -9,20 +9,20 @@ namespace SqlOledb
 {
     public class Class1
     {
-        OleDbCommand cmd = new OleDbCommand(); //cmd for command
-        OleDbConnection cn = new OleDbConnection();  // cn for connection
-        OleDbDataReader dr;
-        public void connection(string path)
+        static OleDbCommand cmd = new OleDbCommand(); //cmd for command
+        static OleDbConnection cn = new OleDbConnection();  // cn for connection
+        static OleDbDataReader dr;
+        public static void connection(string path)
         {
             cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + path + ";";
             cmd.Connection = cn;
         }
-        public void Loaddata()
+        public static void Loaddata()
         {
 
         }
 
-        public void SqlRequest(String sql)//the command to do a sql instruction named q
+        public static void SqlRequest(String sql)//the command to do a sql instruction named q
         {
             try
             {
