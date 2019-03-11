@@ -255,10 +255,12 @@
             this.labelExplanation.AutoSize = true;
             this.labelExplanation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelExplanation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelExplanation.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExplanation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelExplanation.Location = new System.Drawing.Point(646, 143);
             this.labelExplanation.MaximumSize = new System.Drawing.Size(250, 0);
             this.labelExplanation.Name = "labelExplanation";
-            this.labelExplanation.Size = new System.Drawing.Size(246, 512);
+            this.labelExplanation.Size = new System.Drawing.Size(250, 594);
             this.labelExplanation.TabIndex = 19;
             this.labelExplanation.Text = resources.GetString("labelExplanation.Text");
             // 

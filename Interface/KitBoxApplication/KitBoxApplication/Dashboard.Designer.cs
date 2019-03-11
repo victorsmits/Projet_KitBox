@@ -289,6 +289,7 @@
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.SidePanel);
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.MaximumSize = new System.Drawing.Size(3840, 2060);
             this.MinimumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "Dashboard";
             this.Text = "Home";
