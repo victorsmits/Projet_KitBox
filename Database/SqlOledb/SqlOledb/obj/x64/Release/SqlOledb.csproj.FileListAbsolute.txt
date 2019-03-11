@@ -1,0 +1,5 @@
+C:\Users\Geryon\source\repos\SqlOledb\SqlOledb\bin\x64\Release\SqlOledb.dll
+C:\Users\Geryon\source\repos\SqlOledb\SqlOledb\bin\x64\Release\SqlOledb.pdb
+C:\Users\Geryon\source\repos\SqlOledb\SqlOledb\obj\x64\Release\SqlOledb.csproj.CoreCompileInputs.cache
+C:\Users\Geryon\source\repos\SqlOledb\SqlOledb\obj\x64\Release\SqlOledb.dll
+C:\Users\Geryon\source\repos\SqlOledb\SqlOledb\obj\x64\Release\SqlOledb.pdb

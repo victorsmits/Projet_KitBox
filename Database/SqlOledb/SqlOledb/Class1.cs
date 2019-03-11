@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 
-namespace OleDbSql
+namespace SqlOledb
 {
-    class Class1
+    public class Class1
     {
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
         OleDbConnection cn = new OleDbConnection();  // cn for connection
         OleDbDataReader dr;
         public void connection(string path)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source="+ path +";";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + path + ";";
             cmd.Connection = cn;
         }
         public void Loaddata()
