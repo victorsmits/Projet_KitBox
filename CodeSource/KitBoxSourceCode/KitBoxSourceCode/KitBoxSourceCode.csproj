@@ -30,11 +30,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Drawing.Design" />
     <Reference Include="SqlOledb">
-      <HintPath>dll\SqlOledb.dll</HintPath>
+      <HintPath>..\..\..\Database\SqlOledb\SqlOledb\bin\Debug\SqlOledb.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />

@@ -1,5 +1,5 @@
 ﻿using System;
-using SqlOledb;
+using Oledb = SqlOledb.SqlOledb;
 namespace KitBoxSourceCode
 {
     public class Panel : GenericCompoment
@@ -23,8 +23,8 @@ namespace KitBoxSourceCode
         protected override void SetPrice()
         {
             //TODO oledb requete price fct dim et couleur
-
             Price = 2;
+
         }
 
         public override string GetDetails()

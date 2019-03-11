@@ -1,11 +1,11 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{530905E3-D372-46FA-9434-CC18A725A47E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Panel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Program.cs">
     <Files>
-      <File FileName="KitBoxSourceCode/Program.cs" Line="41" Column="38" />
-      <File FileName="KitBoxSourceCode/Cabinet.cs" Line="53" Column="41" />
-      <File FileName="KitBoxSourceCode/DoubleDoors.cs" Line="3" Column="34" />
-      <File FileName="KitBoxSourceCode/Box.cs" Line="23" Column="1" />
-      <File FileName="KitBoxSourceCode/Panel.cs" Line="25" Column="58" />
+      <File FileName="KitBoxSourceCode/Program.cs" Line="44" Column="1" />
+      <File FileName="KitBoxSourceCode/Cabinet.cs" Line="9" Column="24" />
+      <File FileName="KitBoxSourceCode/DoubleDoors.cs" Line="1" Column="1" />
+      <File FileName="KitBoxSourceCode/Box.cs" Line="1" Column="1" />
+      <File FileName="KitBoxSourceCode/Panel.cs" Line="27" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,18 +13,14 @@
           <Node name="KitBoxSourceCode" expanded="True">
             <Node name="KitBoxSourceCode" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="Panel.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="ClassPad">
         <State name="__root__">
-          <Node name="KitBoxSourceCode" expanded="True">
-            <Node name="KitBoxSourceCode" expanded="True">
-              <Node name="References" selected="True" />
-            </Node>
-          </Node>
+          <Node name="KitBoxSourceCode" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
