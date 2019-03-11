@@ -9,7 +9,7 @@ namespace KitBoxSourceCode
         private int Price;
         private int Height;
         private int Lenght;
-        private int stockNumber;
+        private string stockNumber;
 
         public string Materials { get; }
         public string DoorColor { get; }
@@ -21,7 +21,7 @@ namespace KitBoxSourceCode
             Materials = mat;
             Height = height;
             Lenght = len;
-            stockNumber = 1;
+            stockNumber = "1";
 
             knops = new List<Knop> {
                 new Knop(),

@@ -53,6 +53,7 @@
     <Compile Include="ICompoment.cs" />
     <Compile Include="Knop.cs" />
     <Compile Include="CabinetFloor.cs" />
+    <Compile Include="GenericCompoment.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
