@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Drawing;
+using Oledb = SqlOledb.SqlOledb;
+
 
 namespace KitBoxSourceCode
 {
@@ -39,6 +40,8 @@ namespace KitBoxSourceCode
             Console.WriteLine("Hieght = " + cabinet.GetCabinetHeight);
             Console.WriteLine("Price = " + cabinet.GetCabinetPrice);
             Console.WriteLine("\n" + cabinet.GetPartList());
+
+            Oledb.connection("/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/DB_Lespieces.accdb");
 
             cart.AddToCart(cabinet);
             cart.AddCartProfile(client);

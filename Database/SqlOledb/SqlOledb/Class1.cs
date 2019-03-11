@@ -7,16 +7,18 @@ using System.Data.OleDb;
 
 namespace SqlOledb
 {
-    public class Class1
+    public static class SqlOledb
     {
-        static OleDbCommand cmd = new OleDbCommand(); //cmd for command
-        static OleDbConnection cn = new OleDbConnection();  // cn for connection
-        static OleDbDataReader dr;
+        public static OleDbCommand cmd = new OleDbCommand(); //cmd for command
+        public static OleDbConnection cn = new OleDbConnection();  // cn for connection
+        public static OleDbDataReader dr;
+
         public static void connection(string path)
         {
             cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + path + ";";
             cmd.Connection = cn;
         }
+
         public static void Loaddata()
         {
 

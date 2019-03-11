@@ -1,5 +1,5 @@
 ﻿using System;
-using SqlOledb;
+using Oledb = SqlOledb.SqlOledb;
 namespace KitBoxSourceCode
 {
     public class Panel : GenericCompoment
