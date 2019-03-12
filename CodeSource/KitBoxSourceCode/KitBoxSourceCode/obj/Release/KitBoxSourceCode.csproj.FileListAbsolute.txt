@@ -1,0 +1,12 @@
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Release/KitBoxSourceCode.exe.config
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Release/KitBoxSourceCode.exe
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Release/Google.Protobuf.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Release/MySql.Data.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Release/SqlOledb.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Release/System.ComponentModel.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Release/SqlOledb.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Release/Google.Protobuf.xml
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Release/MySql.Data.xml
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Release/KitBoxSourceCode.csproj.CoreCompileInputs.cache
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Release/KitBoxSourceCode.csproj.CopyComplete
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Release/KitBoxSourceCode.exe
