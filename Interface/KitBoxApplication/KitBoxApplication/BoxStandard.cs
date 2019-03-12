@@ -57,7 +57,7 @@ namespace KitBoxApplication
         // Connection to the DB and loading the data into the box
         private void BoxStandard_Load(object sender, EventArgs e) 
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Downloads\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             Loaddata();
         }
@@ -88,8 +88,15 @@ namespace KitBoxApplication
 
             try
             {
-                // TODO : ask for name column and database
-                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND WHERE référence NOT LIKE '%DEC'";
+                if (numericUpDownQuantity.Value == 1)
+                {
+
+                }
+
+                var count = numericUpDownQuantity.Value;
+                
+                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND WHERE division LIKE '" + count + "'" ;
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -402,6 +409,14 @@ namespace KitBoxApplication
                     panelDoorChoiceBox7.Visible = false;
                 }
             }
+        }
+
+        private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var height = comboBoxHeight.SelectedValue;
+            var nbrBox = numericUpDownQuantity.Value;
+            var boxHeight = (height -
+            labelHeightBox.T
         }
     }
 }
