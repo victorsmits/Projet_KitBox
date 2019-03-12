@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{530905E3-D372-46FA-9434-CC18A725A47E}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>KitBoxSourceCode</RootNamespace>
     <AssemblyName>KitBoxSourceCode</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -60,6 +60,26 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.ComponentModel">
       <HintPath>..\System.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="ADONetHelper">
+      <HintPath>..\packages\ADONetHelper.3.1.3\lib\net45\ADONetHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="ADONetHelper.Oledb">
+      <HintPath>..\packages\ADONetHelper.Oledb.1.0.7\lib\net45\ADONetHelper.Oledb.dll</HintPath>
+    </Reference>
+    <Reference Include="DatabaseConnections">
+      <HintPath>..\packages\DatabaseConnections.1.1.0\lib\net35\DatabaseConnections.dll</HintPath>
+    </Reference>
+    <Reference Include="OleDB">
+      <HintPath>..\packages\OleDB_dotNET.1.0.0\lib\net40\OleDB.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="lcpi.lib.net4_6">
+      <HintPath>..\packages\lcpi.lib.2.2.0.1687\lib\net46\lcpi.lib.net4_6.dll</HintPath>
+    </Reference>
+    <Reference Include="lcpi.data.oledb.net4_6">
+      <HintPath>..\packages\lcpi.data.oledb.1.11.0.3673\lib\net46\lcpi.data.oledb.net4_6.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

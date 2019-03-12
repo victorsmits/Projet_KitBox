@@ -1,7 +1,6 @@
 ﻿using System;
 using Oledb = SqlOledb.Oledb;
-
-
+using System.Data.OleDb;
 namespace KitBoxSourceCode
 {
 	class MainClass

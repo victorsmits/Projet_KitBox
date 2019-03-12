@@ -10,3 +10,10 @@
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/obj/Debug/SqlOledb.csproj.CopyComplete
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/obj/Debug/SqlOledb.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/obj/Debug/SqlOledb.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/bin/Debug/SqlOledb.dll.config
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/bin/Debug/lcpi.data.oledb.net4_6.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/bin/Debug/lcpi.lib.net4_6.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/bin/Debug/lcpi.lib.net4_6.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/bin/Debug/lcpi.data.oledb.net4_6.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/bin/Debug/ru/lcpi.lib.net4_6.resources.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/bin/Debug/ru/lcpi.data.oledb.net4_6.resources.dll

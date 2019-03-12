@@ -1,8 +1,10 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SqlOledb/packages.config">
+﻿<Properties StartupConfiguration="{56A0445F-2FFC-42EF-9066-14F714435E33}|Default">
+  <MonoDevelop.Ide.ItemProperties.testOleDb FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="testOleDb/Program.cs">
     <Files>
       <File FileName="SqlOledb/packages.config" Line="1" Column="1" />
-      <File FileName="SqlOledb/Class1.cs" Line="27" Column="57" />
+      <File FileName="SqlOledb/Class1.cs" Line="27" Column="1" />
+      <File FileName="testOleDb/Program.cs" Line="2" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,8 +12,8 @@
           <Node name="SqlOledb" expanded="True">
             <Node name="SqlOledb" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="packages.config" selected="True" />
             </Node>
+            <Node name="testOleDb" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
