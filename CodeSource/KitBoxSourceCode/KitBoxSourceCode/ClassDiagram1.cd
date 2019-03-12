@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="KitBoxSourceCode.Angle" Collapsed="true">
+    <Position X="12" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAQAAAAAAEAAQAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Angle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.Beam">
+    <Position X="3.25" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Beam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.Box">
+    <Position X="4.75" Y="13.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIAAAAAAAAAYABAAAAAAggAIQAAAEgAAAAAAAAAAA=</HashCode>
+      <FileName>Box.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.Cabinet" Collapsed="true">
+    <Position X="13.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAKQAABCAAAAAAAAAAQAAAgAAACAAAAAAABAAAA=</HashCode>
+      <FileName>Cabinet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.CabinetFloor" Collapsed="true">
+    <Position X="15.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAQAAAACCCAAgAAAAAAACAIAIAAAAAAIMA=</HashCode>
+      <FileName>CabinetFloor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.Cart" Collapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIABAAAAQAAAAAIAAAAAAAAAQAAAIAAAAAAADA=</HashCode>
+      <FileName>Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.Cleat">
+    <Position X="5.75" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Cleat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.DoorBeam">
+    <Position X="8.25" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>DoorBeam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.DoubleDoors">
+    <Position X="9" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAIAgQACAAABAABAAAAAAAAAAAAAAEAAAAAAAgAAAA=</HashCode>
+      <FileName>DoubleDoors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.GenericCompoment">
+    <Position X="4.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAQAAQAAAAABEAAAAAAAAAAAAEGAAAAAAAAAAAA=</HashCode>
+      <FileName>GenericCompoment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.216" />
+  </Class>
+  <Class Name="KitBoxSourceCode.GenericStorageBox">
+    <Position X="7" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABQAAAAABEAAAAABAAAAAAEEAAAAAAAAAAAA=</HashCode>
+      <FileName>GenericStorageBox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KitBoxSourceCode.Knop" Collapsed="true">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Knop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.Panel">
+    <Position X="0.75" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAABAAAABABAAAAAAAEAAAAAgAAAAAA=</HashCode>
+      <FileName>Panel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.Profile" Collapsed="true">
+    <Position X="12" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEAACCAAAAAAAAAACAAAAAAABAAIAAAAQAACAAg=</HashCode>
+      <FileName>Profile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KitBoxSourceCode.MainClass" Collapsed="true">
+    <Position X="15.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="KitBoxSourceCode.ICompoment" Collapsed="true">
+    <Position X="12" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAEAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>ICompoment.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KitBoxSourceCode.IStorageBox" Collapsed="true">
+    <Position X="13.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAABAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>IStorageBox.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
