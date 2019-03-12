@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.productGroupBox = new System.Windows.Forms.GroupBox();
+            this.RefLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SupplierBox = new System.Windows.Forms.TextBox();
             this.finishButton = new System.Windows.Forms.Button();
             this.supplierPriceLabel = new System.Windows.Forms.Label();
@@ -60,15 +62,22 @@
             this.colorLabel = new System.Windows.Forms.Label();
             this.widthLabel = new System.Windows.Forms.Label();
             this.codeLabel = new System.Windows.Forms.Label();
+            this.IdLabel = new System.Windows.Forms.Label();
+            this.IdSupplier = new System.Windows.Forms.ListBox();
+            this.ReferenceSupplier = new System.Windows.Forms.ListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Refresh = new System.Windows.Forms.Button();
             this.productGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delayNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InitialStockNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberPerBoxNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimumStockNum)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // productGroupBox
             // 
+            this.productGroupBox.Controls.Add(this.panel1);
             this.productGroupBox.Controls.Add(this.SupplierBox);
             this.productGroupBox.Controls.Add(this.finishButton);
             this.productGroupBox.Controls.Add(this.supplierPriceLabel);
@@ -102,10 +111,28 @@
             this.productGroupBox.Controls.Add(this.codeLabel);
             this.productGroupBox.Location = new System.Drawing.Point(3, 3);
             this.productGroupBox.Name = "productGroupBox";
-            this.productGroupBox.Size = new System.Drawing.Size(407, 531);
+            this.productGroupBox.Size = new System.Drawing.Size(527, 531);
             this.productGroupBox.TabIndex = 32;
             this.productGroupBox.TabStop = false;
             this.productGroupBox.Text = "Product";
+            // 
+            // RefLabel
+            // 
+            this.RefLabel.AutoSize = true;
+            this.RefLabel.Location = new System.Drawing.Point(164, 31);
+            this.RefLabel.Name = "RefLabel";
+            this.RefLabel.Size = new System.Drawing.Size(57, 13);
+            this.RefLabel.TabIndex = 36;
+            this.RefLabel.Text = "Reference";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(41, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Pick up the supplier in the  list bellow";
             // 
             // SupplierBox
             // 
@@ -113,6 +140,7 @@
             this.SupplierBox.Name = "SupplierBox";
             this.SupplierBox.Size = new System.Drawing.Size(100, 20);
             this.SupplierBox.TabIndex = 39;
+            this.SupplierBox.Click += new System.EventHandler(this.listBox2_Click);
             this.SupplierBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // finishButton
@@ -373,19 +401,74 @@
             this.codeLabel.TabIndex = 18;
             this.codeLabel.Text = "Code :";
             // 
+            // IdLabel
+            // 
+            this.IdLabel.AutoSize = true;
+            this.IdLabel.Location = new System.Drawing.Point(25, 31);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(18, 13);
+            this.IdLabel.TabIndex = 35;
+            this.IdLabel.Text = "ID";
+            // 
+            // IdSupplier
+            // 
+            this.IdSupplier.FormattingEnabled = true;
+            this.IdSupplier.Location = new System.Drawing.Point(15, 47);
+            this.IdSupplier.Name = "IdSupplier";
+            this.IdSupplier.Size = new System.Drawing.Size(120, 95);
+            this.IdSupplier.TabIndex = 34;
+            this.IdSupplier.Click += new System.EventHandler(this.listBox2_Click);
+            this.IdSupplier.SelectedIndexChanged += new System.EventHandler(this.listBox2_Click);
+            // 
+            // ReferenceSupplier
+            // 
+            this.ReferenceSupplier.FormattingEnabled = true;
+            this.ReferenceSupplier.Location = new System.Drawing.Point(141, 47);
+            this.ReferenceSupplier.Name = "ReferenceSupplier";
+            this.ReferenceSupplier.Size = new System.Drawing.Size(120, 95);
+            this.ReferenceSupplier.TabIndex = 33;
+            this.ReferenceSupplier.Click += new System.EventHandler(this.listBox2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.Refresh);
+            this.panel1.Controls.Add(this.ReferenceSupplier);
+            this.panel1.Controls.Add(this.IdSupplier);
+            this.panel1.Controls.Add(this.IdLabel);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.RefLabel);
+            this.panel1.Location = new System.Drawing.Point(237, 346);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(273, 179);
+            this.panel1.TabIndex = 40;
+            // 
+            // Refresh
+            // 
+            this.Refresh.Location = new System.Drawing.Point(79, 148);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(117, 23);
+            this.Refresh.TabIndex = 38;
+            this.Refresh.Text = "Refresh the list";
+            this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
+            // 
             // ProductWizard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.productGroupBox);
             this.Name = "ProductWizard";
-            this.Size = new System.Drawing.Size(433, 556);
+            this.Size = new System.Drawing.Size(551, 547);
+            this.Load += new System.EventHandler(this.LoadList);
             this.productGroupBox.ResumeLayout(false);
             this.productGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delayNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InitialStockNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberPerBoxNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimumStockNum)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -424,5 +507,12 @@
         private System.Windows.Forms.TextBox supplierPriceTextBox;
         private System.Windows.Forms.Label delayOrderLabel;
         private System.Windows.Forms.TextBox SupplierBox;
+        private System.Windows.Forms.Label RefLabel;
+        private System.Windows.Forms.Label IdLabel;
+        private System.Windows.Forms.ListBox IdSupplier;
+        private System.Windows.Forms.ListBox ReferenceSupplier;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button Refresh;
     }
 }
