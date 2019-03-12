@@ -9,6 +9,7 @@ namespace KitBoxSourceCode
 
 		public Knop()
 		{
+			Price = 2;
 			//TODO requet knop price
 		}
 	}
