@@ -58,45 +58,18 @@ namespace KitBoxApplication
         private void BoxStandard_Load(object sender, EventArgs e) 
         {
             cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
-            cmd.Connection = cn;
-            Loaddata();
+            cmd.Connection = cn;            
         }
 
-        // Different Listbox containing the 2 first colomns of the db 
-        private void Loaddata() 
+        // Loading height data from data base 
+        private void LoaddataHeight() 
         {
             comboBoxHeight.Items.Clear();
-            comboBoxDepth.Items.Clear();
-            comboBoxWidth.Items.Clear();
-            comboBoxColorAngles.Items.Clear();
-            comboBoxColorIf1.Items.Clear();
-            comboBoxColorS1.Items.Clear();
-            comboBoxColorS2.Items.Clear();
-            comboBoxColorS3.Items.Clear();
-            comboBoxColorS4.Items.Clear();
-            comboBoxColorS5.Items.Clear();
-            comboBoxColorS6.Items.Clear();
-            comboBoxColorS7.Items.Clear();
-            comboBoxColorSA.Items.Clear();
-            comboBoxDoorMatBox1.Items.Clear();
-            comboBoxDoorMatBox2.Items.Clear();
-            comboBoxDoorMatBox3.Items.Clear();
-            comboBoxDoorMatBox4.Items.Clear();
-            comboBoxDoorMatBox5.Items.Clear();
-            comboBoxDoorMatBox6.Items.Clear();
-            comboBoxDoorMatBox7.Items.Clear();
-
             try
-            {
-                if (numericUpDownQuantity.Value == 1)
-                {
-
-                }
-
-                var count = numericUpDownQuantity.Value;
-                
+            {                
+                var count = numericUpDownQuantity.Value;                
                 string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND WHERE division LIKE '" + count + "'" ;
+                    "AND division LIKE '" + count + "'" ;
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -117,7 +90,69 @@ namespace KitBoxApplication
                 MessageBox.Show(e.Message.ToString());
             }
         }
-    
+
+        // Loading height data from data base 
+        private void LoaddataWidth()
+        {                        
+            comboBoxWidth.Items.Clear();
+            try
+            {
+                var count = numericUpDownQuantity.Value;
+
+                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxHeight.Items.Add(dr[0].ToString());
+                        //listBox2.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
+        // Loading height data from data base 
+        private void LoaddataDepth()
+        {            
+            comboBoxDepth.Items.Clear();            
+            try
+            {
+                var count = numericUpDownQuantity.Value;
+
+                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxHeight.Items.Add(dr[0].ToString());
+                        //listBox2.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
 
         // function to make appear color choice for all the boxes at once and door choice
         //
@@ -160,6 +195,7 @@ namespace KitBoxApplication
         private void numericUpDownQuantity_ValueChanged(object sender, EventArgs e)
         {
             int count = Convert.ToInt32(numericUpDownQuantity.Value);
+            LoaddataHeight();
             if (count == 1)
             {
                 panelColorBoxIf1.Visible = true;
@@ -167,6 +203,7 @@ namespace KitBoxApplication
                 panelDoorChoiceMultiple.Visible = false;
                 radioButtonNoBox2.Checked = true;
                 radioButtonNoBox4.Checked = false;
+                
             }        
             else if (count > 1)
             {
@@ -415,8 +452,8 @@ namespace KitBoxApplication
         {
             var height = comboBoxHeight.SelectedValue;
             var nbrBox = numericUpDownQuantity.Value;
-            var boxHeight = (height -
-            labelHeightBox.T
+            
+            
         }
     }
 }
