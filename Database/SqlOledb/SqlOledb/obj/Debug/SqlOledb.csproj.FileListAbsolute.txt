@@ -9,3 +9,4 @@
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/bin/Debug/Google.Protobuf.xml
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/bin/Debug/MySql.Data.xml
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/obj/Debug/SqlOledb.csproj.CopyComplete
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/SqlOledb/bin/Debug/Google.Protobuf.pdb

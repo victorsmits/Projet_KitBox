@@ -5,7 +5,9 @@
       <File FileName="KitBoxSourceCode/Cabinet.cs" Line="9" Column="24" />
       <File FileName="KitBoxSourceCode/DoubleDoors.cs" Line="1" Column="1" />
       <File FileName="KitBoxSourceCode/Box.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Panel.cs" Line="27" Column="1" />
+      <File FileName="KitBoxSourceCode/Panel.cs" Line="1" Column="1" />
+      <File FileName="KitBoxSourceCode/Angle.cs" Line="16" Column="14" />
+      <File FileName="KitBoxSourceCode/Knop.cs" Line="17" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,16 +20,11 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="ClassPad">
-        <State name="__root__">
-          <Node name="KitBoxSourceCode" expanded="True" selected="True" />
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.KitBoxSourceCode PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
