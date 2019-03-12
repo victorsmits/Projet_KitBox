@@ -4,12 +4,16 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitBoxSourceCode", "KitBoxSourceCode\KitBoxSourceCode.csproj", "{530905E3-D372-46FA-9434-CC18A725A47E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlOledb", "..\..\Database\SqlOledb\SqlOledb\SqlOledb.csproj", "{8B9A56E2-4744-4BF2-9E2A-B245336A7546}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{530905E3-D372-46FA-9434-CC18A725A47E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -20,6 +24,22 @@ Global
 		{530905E3-D372-46FA-9434-CC18A725A47E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{530905E3-D372-46FA-9434-CC18A725A47E}.Release|x86.ActiveCfg = Release|x86
 		{530905E3-D372-46FA-9434-CC18A725A47E}.Release|x86.Build.0 = Release|x86
+		{530905E3-D372-46FA-9434-CC18A725A47E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{530905E3-D372-46FA-9434-CC18A725A47E}.Debug|x64.Build.0 = Debug|Any CPU
+		{530905E3-D372-46FA-9434-CC18A725A47E}.Release|x64.ActiveCfg = Release|Any CPU
+		{530905E3-D372-46FA-9434-CC18A725A47E}.Release|x64.Build.0 = Release|Any CPU
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Debug|x86.Build.0 = Debug|Any CPU
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Release|x86.ActiveCfg = Release|Any CPU
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Release|x86.Build.0 = Release|Any CPU
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Debug|x64.ActiveCfg = Debug|x64
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Debug|x64.Build.0 = Debug|x64
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Release|x64.ActiveCfg = Release|x64
+		{8B9A56E2-4744-4BF2-9E2A-B245336A7546}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
