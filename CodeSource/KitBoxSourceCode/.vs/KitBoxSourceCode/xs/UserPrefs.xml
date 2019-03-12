@@ -1,9 +1,15 @@
-﻿<Properties GitUserInfo="UsingMD">
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{FA7A1024-67EA-4115-9F6E-47AEA617D4F6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestCodeSource/Program.cs">
+    <Files>
+      <File FileName="TestCodeSource/Program.cs" Line="21" Column="4" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="KitBoxSourceCode" expanded="True" selected="True" />
+          <Node name="KitBoxSourceCode" expanded="True">
+            <Node name="KitBoxSourceCode" expanded="True" selected="True" />
+            <Node name="TestCodeSource" expanded="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -15,4 +21,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.TestCodeSource PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
