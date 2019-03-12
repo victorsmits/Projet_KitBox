@@ -40,3 +40,17 @@ C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\in
 C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.CopyComplete
 C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.exe
 C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.exe.config
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.exe
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\x86\Debug\SqlOledb.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csprojAssemblyReference.cache
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.Form1.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.ProductWizard.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.Properties.Resources.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.SupplierWizard.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.GenerateResource.cache
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.CoreCompileInputs.cache
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.CopyComplete
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.exe
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.pdb

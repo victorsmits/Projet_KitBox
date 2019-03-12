@@ -113,9 +113,11 @@
             this.SupplierBox.Name = "SupplierBox";
             this.SupplierBox.Size = new System.Drawing.Size(100, 20);
             this.SupplierBox.TabIndex = 39;
+            this.SupplierBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // finishButton
             // 
+            this.finishButton.Enabled = false;
             this.finishButton.Location = new System.Drawing.Point(17, 495);
             this.finishButton.Name = "finishButton";
             this.finishButton.Size = new System.Drawing.Size(75, 23);
@@ -148,6 +150,7 @@
             this.delayNum.Name = "delayNum";
             this.delayNum.Size = new System.Drawing.Size(65, 20);
             this.delayNum.TabIndex = 37;
+            this.delayNum.ValueChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // supplierPriceTextBox
             // 
@@ -155,6 +158,7 @@
             this.supplierPriceTextBox.Name = "supplierPriceTextBox";
             this.supplierPriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.supplierPriceTextBox.TabIndex = 36;
+            this.supplierPriceTextBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // delayOrderLabel
             // 
@@ -189,6 +193,7 @@
             this.referenceTextBox.Name = "referenceTextBox";
             this.referenceTextBox.Size = new System.Drawing.Size(100, 20);
             this.referenceTextBox.TabIndex = 6;
+            this.referenceTextBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // colorTextBox
             // 
@@ -196,6 +201,7 @@
             this.colorTextBox.Name = "colorTextBox";
             this.colorTextBox.Size = new System.Drawing.Size(100, 20);
             this.colorTextBox.TabIndex = 28;
+            this.colorTextBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // stockLabel
             // 
@@ -212,6 +218,7 @@
             this.codeTextBox.Name = "codeTextBox";
             this.codeTextBox.Size = new System.Drawing.Size(100, 20);
             this.codeTextBox.TabIndex = 27;
+            this.codeTextBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // InitialStockNum
             // 
@@ -219,6 +226,7 @@
             this.InitialStockNum.Name = "InitialStockNum";
             this.InitialStockNum.Size = new System.Drawing.Size(58, 20);
             this.InitialStockNum.TabIndex = 7;
+            this.InitialStockNum.ValueChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // widthTextBox
             // 
@@ -226,6 +234,7 @@
             this.widthTextBox.Name = "widthTextBox";
             this.widthTextBox.Size = new System.Drawing.Size(100, 20);
             this.widthTextBox.TabIndex = 26;
+            this.widthTextBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // ClientPrice
             // 
@@ -242,6 +251,7 @@
             this.depthTextBox.Name = "depthTextBox";
             this.depthTextBox.Size = new System.Drawing.Size(100, 20);
             this.depthTextBox.TabIndex = 25;
+            this.depthTextBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // clientPriceTextBox
             // 
@@ -249,6 +259,7 @@
             this.clientPriceTextBox.Name = "clientPriceTextBox";
             this.clientPriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.clientPriceTextBox.TabIndex = 9;
+            this.clientPriceTextBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // HeigthTextBox
             // 
@@ -256,6 +267,7 @@
             this.HeigthTextBox.Name = "HeigthTextBox";
             this.HeigthTextBox.Size = new System.Drawing.Size(100, 20);
             this.HeigthTextBox.TabIndex = 24;
+            this.HeigthTextBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // minimumStockLabel
             // 
@@ -272,6 +284,7 @@
             this.divisionTextBox.Name = "divisionTextBox";
             this.divisionTextBox.Size = new System.Drawing.Size(100, 20);
             this.divisionTextBox.TabIndex = 23;
+            this.divisionTextBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // label12
             // 
@@ -288,6 +301,7 @@
             this.DimensionsTextBox.Name = "DimensionsTextBox";
             this.DimensionsTextBox.Size = new System.Drawing.Size(100, 20);
             this.DimensionsTextBox.TabIndex = 22;
+            this.DimensionsTextBox.TextChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // DimensionLabel
             // 
@@ -304,6 +318,7 @@
             this.numberPerBoxNum.Name = "numberPerBoxNum";
             this.numberPerBoxNum.Size = new System.Drawing.Size(58, 20);
             this.numberPerBoxNum.TabIndex = 10;
+            this.numberPerBoxNum.ValueChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // divisionLabel
             // 
@@ -320,6 +335,7 @@
             this.MinimumStockNum.Name = "MinimumStockNum";
             this.MinimumStockNum.Size = new System.Drawing.Size(58, 20);
             this.MinimumStockNum.TabIndex = 8;
+            this.MinimumStockNum.ValueChanged += new System.EventHandler(this.checkingToEnable);
             // 
             // depthLabel
             // 
@@ -363,7 +379,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.productGroupBox);
             this.Name = "ProductWizard";
-            this.Size = new System.Drawing.Size(449, 633);
+            this.Size = new System.Drawing.Size(433, 556);
             this.productGroupBox.ResumeLayout(false);
             this.productGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delayNum)).EndInit();
