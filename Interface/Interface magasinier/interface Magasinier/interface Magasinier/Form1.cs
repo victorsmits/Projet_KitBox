@@ -24,6 +24,9 @@ namespace interface_Magasinier
             SqlOledb.SqlOledb.connection("C:\\Users\\Geryon\\Documents\\GitHub\\Projet_KitBox\\Database\\DB_Lespieces.accdb;");
             Loaddata();
         }
+        OleDbCommand cmd = new OleDbCommand(); //cmd for command
+        OleDbConnection cn = new OleDbConnection();  // cn for connection
+        OleDbDataReader dr;
 
         public void Loaddata() //Loading de data into the differents listbox
         {
@@ -125,6 +128,6 @@ namespace interface_Magasinier
             Loaddata();
         }
 
-        
+
     }
 }

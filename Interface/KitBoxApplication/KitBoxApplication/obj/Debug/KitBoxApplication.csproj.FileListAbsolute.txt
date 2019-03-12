@@ -26,3 +26,4 @@ C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\Kit
 C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
 C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxCreationScratch.resources
 C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationExplanation.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationScratchInside.resources
