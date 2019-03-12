@@ -1,0 +1,10 @@
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Release\SqlOledb.dll
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Release\SqlOledb.pdb
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Release\Google.Protobuf.dll
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Release\MySql.Data.dll
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Release\Google.Protobuf.xml
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Release\MySql.Data.xml
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Release\SqlOledb.csproj.CoreCompileInputs.cache
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Release\SqlOledb.csproj.CopyComplete
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Release\SqlOledb.dll
+C:\Users\Geryon\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Release\SqlOledb.pdb

@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Tabs = new System.Windows.Forms.TabControl();
+            this.stockTab = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -49,6 +45,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.listBox7 = new System.Windows.Forms.ListBox();
@@ -63,101 +64,65 @@
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
+            this.AddingProduct = new System.Windows.Forms.TabPage();
+            this.supplierWizard1 = new interface_Magasinier.SupplierWizard();
+            this.productWizard1 = new interface_Magasinier.ProductWizard();
             this.AddingProductLabel = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.Tabs.SuspendLayout();
+            this.stockTab.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.AddingProduct.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // Tabs
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1500, 750);
-            this.tabControl1.TabIndex = 0;
+            this.Tabs.Controls.Add(this.stockTab);
+            this.Tabs.Controls.Add(this.AddingProduct);
+            this.Tabs.Location = new System.Drawing.Point(12, 12);
+            this.Tabs.Name = "Tabs";
+            this.Tabs.SelectedIndex = 0;
+            this.Tabs.Size = new System.Drawing.Size(1500, 750);
+            this.Tabs.TabIndex = 0;
             // 
-            // tabPage1
+            // stockTab
             // 
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.panel6);
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.listBox7);
-            this.tabPage1.Controls.Add(this.listBox6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.listBox5);
-            this.tabPage1.Controls.Add(this.listBox4);
-            this.tabPage1.Controls.Add(this.listBox3);
-            this.tabPage1.Controls.Add(this.listBox2);
-            this.tabPage1.Controls.Add(this.listBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1492, 724);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Stock";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.stockTab.Controls.Add(this.button4);
+            this.stockTab.Controls.Add(this.panel6);
+            this.stockTab.Controls.Add(this.panel1);
+            this.stockTab.Controls.Add(this.panel2);
+            this.stockTab.Controls.Add(this.label7);
+            this.stockTab.Controls.Add(this.label6);
+            this.stockTab.Controls.Add(this.listBox7);
+            this.stockTab.Controls.Add(this.listBox6);
+            this.stockTab.Controls.Add(this.label5);
+            this.stockTab.Controls.Add(this.label4);
+            this.stockTab.Controls.Add(this.label3);
+            this.stockTab.Controls.Add(this.label2);
+            this.stockTab.Controls.Add(this.label1);
+            this.stockTab.Controls.Add(this.listBox5);
+            this.stockTab.Controls.Add(this.listBox4);
+            this.stockTab.Controls.Add(this.listBox3);
+            this.stockTab.Controls.Add(this.listBox2);
+            this.stockTab.Controls.Add(this.listBox1);
+            this.stockTab.Location = new System.Drawing.Point(4, 22);
+            this.stockTab.Name = "stockTab";
+            this.stockTab.Padding = new System.Windows.Forms.Padding(3);
+            this.stockTab.Size = new System.Drawing.Size(1492, 724);
+            this.stockTab.TabIndex = 0;
+            this.stockTab.Text = "Stock";
+            this.stockTab.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // button4
             // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(1119, 57);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(265, 72);
-            this.panel2.TabIndex = 20;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(23, 43);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 13);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Reference :";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(92, 37);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 16;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(23, 13);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Search";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(185, 8);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button4.Location = new System.Drawing.Point(1310, 462);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 24;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel6
             // 
@@ -169,10 +134,10 @@
             this.panel6.Controls.Add(this.label18);
             this.panel6.Controls.Add(this.label19);
             this.panel6.Controls.Add(this.label20);
-            this.panel6.Location = new System.Drawing.Point(1119, 297);
+            this.panel6.Location = new System.Drawing.Point(1124, 301);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(265, 122);
-            this.panel6.TabIndex = 20;
+            this.panel6.TabIndex = 23;
             // 
             // button2
             // 
@@ -235,10 +200,10 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(1119, 149);
+            this.panel1.Location = new System.Drawing.Point(1124, 151);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 122);
-            this.panel1.TabIndex = 14;
+            this.panel1.TabIndex = 22;
             // 
             // label10
             // 
@@ -290,6 +255,54 @@
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Location = new System.Drawing.Point(1124, 54);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(265, 72);
+            this.panel2.TabIndex = 21;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(23, 43);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 13);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Reference :";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(92, 37);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 16;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(23, 13);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 13);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Delete a product";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(185, 8);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label7
             // 
@@ -417,26 +430,35 @@
             this.listBox1.TabIndex = 0;
             this.listBox1.Click += new System.EventHandler(this.listBox2_Click);
             // 
-            // tabPage2
+            // AddingProduct
             // 
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.AddingProductLabel);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1492, 724);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.AddingProduct.BackColor = System.Drawing.Color.Transparent;
+            this.AddingProduct.Controls.Add(this.supplierWizard1);
+            this.AddingProduct.Controls.Add(this.productWizard1);
+            this.AddingProduct.Controls.Add(this.AddingProductLabel);
+            this.AddingProduct.Location = new System.Drawing.Point(4, 22);
+            this.AddingProduct.Name = "AddingProduct";
+            this.AddingProduct.Padding = new System.Windows.Forms.Padding(3);
+            this.AddingProduct.Size = new System.Drawing.Size(1492, 724);
+            this.AddingProduct.TabIndex = 1;
+            this.AddingProduct.Text = "Add a product";
             // 
-            // label12
+            // supplierWizard1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(33, 86);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 13);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "From what ";
+            this.supplierWizard1.Location = new System.Drawing.Point(304, 85);
+            this.supplierWizard1.Margin = new System.Windows.Forms.Padding(4);
+            this.supplierWizard1.Name = "supplierWizard1";
+            this.supplierWizard1.Size = new System.Drawing.Size(324, 183);
+            this.supplierWizard1.TabIndex = 2;
+            this.supplierWizard1.Visible = false;
+            // 
+            // productWizard1
+            // 
+            this.productWizard1.Location = new System.Drawing.Point(36, 85);
+            this.productWizard1.Margin = new System.Windows.Forms.Padding(4);
+            this.productWizard1.Name = "productWizard1";
+            this.productWizard1.Size = new System.Drawing.Size(260, 452);
+            this.productWizard1.TabIndex = 1;
             // 
             // AddingProductLabel
             // 
@@ -452,33 +474,33 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1512, 762);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1443, 716);
+            this.Controls.Add(this.Tabs);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Tabs.ResumeLayout(false);
+            this.stockTab.ResumeLayout(false);
+            this.stockTab.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.AddingProduct.ResumeLayout(false);
+            this.AddingProduct.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl Tabs;
+        private System.Windows.Forms.TabPage stockTab;
+        private System.Windows.Forms.TabPage AddingProduct;
         private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.ListBox listBox3;
@@ -493,27 +515,29 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label AddingProductLabel;
+        private ProductWizard productWizard1;
+        private SupplierWizard supplierWizard1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label AddingProductLabel;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

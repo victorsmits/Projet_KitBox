@@ -1,0 +1,27 @@
+D:\Bureau\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.exe.config
+D:\Bureau\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.exe
+D:\Bureau\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.pdb
+D:\Bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.Form1.resources
+D:\Bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.ProductWizard.resources
+D:\Bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.Properties.Resources.resources
+D:\Bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.SupplierWizard.resources
+D:\Bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.GenerateResource.cache
+D:\Bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.CoreCompileInputs.cache
+D:\Bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.exe
+D:\Bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.pdb
+D:\Bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csprojAssemblyReference.cache
+E:\bureau\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.exe.config
+E:\bureau\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.exe
+E:\bureau\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.pdb
+E:\bureau\interface Magasinier\interface Magasinier\bin\x86\Debug\SqlOledb.dll
+E:\bureau\interface Magasinier\interface Magasinier\bin\x86\Debug\SqlOledb.pdb
+E:\bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csprojAssemblyReference.cache
+E:\bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.Form1.resources
+E:\bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.ProductWizard.resources
+E:\bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.Properties.Resources.resources
+E:\bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.SupplierWizard.resources
+E:\bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.GenerateResource.cache
+E:\bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.CoreCompileInputs.cache
+E:\bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.CopyComplete
+E:\bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.exe
+E:\bureau\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.pdb
