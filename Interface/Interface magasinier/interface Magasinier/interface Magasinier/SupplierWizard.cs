@@ -36,6 +36,8 @@ namespace interface_Magasinier
                 SupplierList.Text = "";
                 supplierPriceTextBox.Text = "";
                 delayNum.Value = 0;
+
+                
             }
             else
             {

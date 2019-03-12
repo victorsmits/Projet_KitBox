@@ -33,39 +33,38 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PriceClientTextBox = new System.Windows.Forms.TextBox();
+            this.RefrenceTextBox3 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.StockTextBox = new System.Windows.Forms.TextBox();
+            this.RefrenceTextBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.RefrenceTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.listBox7 = new System.Windows.Forms.ListBox();
-            this.listBox6 = new System.Windows.Forms.ListBox();
+            this.ColorList = new System.Windows.Forms.ListBox();
+            this.TypeList = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.DimensionsList = new System.Windows.Forms.ListBox();
+            this.PriceClientList = new System.Windows.Forms.ListBox();
+            this.StockList = new System.Windows.Forms.ListBox();
+            this.RefrenceList = new System.Windows.Forms.ListBox();
+            this.IdList = new System.Windows.Forms.ListBox();
             this.AddingProduct = new System.Windows.Forms.TabPage();
-            this.supplierWizard1 = new interface_Magasinier.SupplierWizard();
             this.productWizard1 = new interface_Magasinier.ProductWizard();
             this.AddingProductLabel = new System.Windows.Forms.Label();
             this.Tabs.SuspendLayout();
@@ -94,18 +93,18 @@
             this.stockTab.Controls.Add(this.panel2);
             this.stockTab.Controls.Add(this.label7);
             this.stockTab.Controls.Add(this.label6);
-            this.stockTab.Controls.Add(this.listBox7);
-            this.stockTab.Controls.Add(this.listBox6);
+            this.stockTab.Controls.Add(this.ColorList);
+            this.stockTab.Controls.Add(this.TypeList);
             this.stockTab.Controls.Add(this.label5);
             this.stockTab.Controls.Add(this.label4);
             this.stockTab.Controls.Add(this.label3);
             this.stockTab.Controls.Add(this.label2);
             this.stockTab.Controls.Add(this.label1);
-            this.stockTab.Controls.Add(this.listBox5);
-            this.stockTab.Controls.Add(this.listBox4);
-            this.stockTab.Controls.Add(this.listBox3);
-            this.stockTab.Controls.Add(this.listBox2);
-            this.stockTab.Controls.Add(this.listBox1);
+            this.stockTab.Controls.Add(this.DimensionsList);
+            this.stockTab.Controls.Add(this.PriceClientList);
+            this.stockTab.Controls.Add(this.StockList);
+            this.stockTab.Controls.Add(this.RefrenceList);
+            this.stockTab.Controls.Add(this.IdList);
             this.stockTab.Location = new System.Drawing.Point(4, 22);
             this.stockTab.Name = "stockTab";
             this.stockTab.Padding = new System.Windows.Forms.Padding(3);
@@ -129,8 +128,8 @@
             this.panel6.BackColor = System.Drawing.Color.Gainsboro;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.button2);
-            this.panel6.Controls.Add(this.textBox4);
-            this.panel6.Controls.Add(this.textBox3);
+            this.panel6.Controls.Add(this.PriceClientTextBox);
+            this.panel6.Controls.Add(this.RefrenceTextBox3);
             this.panel6.Controls.Add(this.label18);
             this.panel6.Controls.Add(this.label19);
             this.panel6.Controls.Add(this.label20);
@@ -149,19 +148,19 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox4
+            // PriceClientTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(92, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 22;
+            this.PriceClientTextBox.Location = new System.Drawing.Point(92, 83);
+            this.PriceClientTextBox.Name = "PriceClientTextBox";
+            this.PriceClientTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PriceClientTextBox.TabIndex = 22;
             // 
-            // textBox3
+            // RefrenceTextBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(92, 40);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 21;
+            this.RefrenceTextBox3.Location = new System.Drawing.Point(92, 40);
+            this.RefrenceTextBox3.Name = "RefrenceTextBox3";
+            this.RefrenceTextBox3.Size = new System.Drawing.Size(100, 20);
+            this.RefrenceTextBox3.TabIndex = 21;
             // 
             // label18
             // 
@@ -196,8 +195,8 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.StockTextBox);
+            this.panel1.Controls.Add(this.RefrenceTextBox2);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(1124, 151);
@@ -223,19 +222,19 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Reference :";
             // 
-            // textBox2
+            // StockTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 17;
+            this.StockTextBox.Location = new System.Drawing.Point(92, 83);
+            this.StockTextBox.Name = "StockTextBox";
+            this.StockTextBox.Size = new System.Drawing.Size(100, 20);
+            this.StockTextBox.TabIndex = 17;
             // 
-            // textBox1
+            // RefrenceTextBox2
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 16;
+            this.RefrenceTextBox2.Location = new System.Drawing.Point(92, 37);
+            this.RefrenceTextBox2.Name = "RefrenceTextBox2";
+            this.RefrenceTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.RefrenceTextBox2.TabIndex = 16;
             // 
             // label8
             // 
@@ -261,7 +260,7 @@
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.RefrenceTextBox);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Location = new System.Drawing.Point(1124, 54);
@@ -278,12 +277,12 @@
             this.label13.TabIndex = 18;
             this.label13.Text = "Reference :";
             // 
-            // textBox6
+            // RefrenceTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(92, 37);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 16;
+            this.RefrenceTextBox.Location = new System.Drawing.Point(92, 37);
+            this.RefrenceTextBox.Name = "RefrenceTextBox";
+            this.RefrenceTextBox.Size = new System.Drawing.Size(100, 20);
+            this.RefrenceTextBox.TabIndex = 16;
             // 
             // label14
             // 
@@ -322,23 +321,23 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Type";
             // 
-            // listBox7
+            // ColorList
             // 
-            this.listBox7.FormattingEnabled = true;
-            this.listBox7.Location = new System.Drawing.Point(952, 57);
-            this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(120, 225);
-            this.listBox7.TabIndex = 11;
-            this.listBox7.Click += new System.EventHandler(this.listBox2_Click);
+            this.ColorList.FormattingEnabled = true;
+            this.ColorList.Location = new System.Drawing.Point(952, 57);
+            this.ColorList.Name = "ColorList";
+            this.ColorList.Size = new System.Drawing.Size(120, 225);
+            this.ColorList.TabIndex = 11;
+            this.ColorList.Click += new System.EventHandler(this.listBox2_Click);
             // 
-            // listBox6
+            // TypeList
             // 
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.Location = new System.Drawing.Point(810, 57);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(120, 225);
-            this.listBox6.TabIndex = 10;
-            this.listBox6.Click += new System.EventHandler(this.listBox2_Click);
+            this.TypeList.FormattingEnabled = true;
+            this.TypeList.Location = new System.Drawing.Point(810, 57);
+            this.TypeList.Name = "TypeList";
+            this.TypeList.Size = new System.Drawing.Size(120, 225);
+            this.TypeList.TabIndex = 10;
+            this.TypeList.Click += new System.EventHandler(this.listBox2_Click);
             // 
             // label5
             // 
@@ -385,55 +384,54 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "ID\r\n";
             // 
-            // listBox5
+            // DimensionsList
             // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(669, 57);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(120, 225);
-            this.listBox5.TabIndex = 4;
-            this.listBox5.Click += new System.EventHandler(this.listBox2_Click);
+            this.DimensionsList.FormattingEnabled = true;
+            this.DimensionsList.Location = new System.Drawing.Point(669, 57);
+            this.DimensionsList.Name = "DimensionsList";
+            this.DimensionsList.Size = new System.Drawing.Size(120, 225);
+            this.DimensionsList.TabIndex = 4;
+            this.DimensionsList.Click += new System.EventHandler(this.listBox2_Click);
             // 
-            // listBox4
+            // PriceClientList
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(530, 57);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(120, 225);
-            this.listBox4.TabIndex = 3;
-            this.listBox4.Click += new System.EventHandler(this.listBox2_Click);
+            this.PriceClientList.FormattingEnabled = true;
+            this.PriceClientList.Location = new System.Drawing.Point(530, 57);
+            this.PriceClientList.Name = "PriceClientList";
+            this.PriceClientList.Size = new System.Drawing.Size(120, 225);
+            this.PriceClientList.TabIndex = 3;
+            this.PriceClientList.Click += new System.EventHandler(this.listBox2_Click);
             // 
-            // listBox3
+            // StockList
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(387, 57);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(120, 225);
-            this.listBox3.TabIndex = 2;
-            this.listBox3.Click += new System.EventHandler(this.listBox2_Click);
+            this.StockList.FormattingEnabled = true;
+            this.StockList.Location = new System.Drawing.Point(387, 57);
+            this.StockList.Name = "StockList";
+            this.StockList.Size = new System.Drawing.Size(120, 225);
+            this.StockList.TabIndex = 2;
+            this.StockList.Click += new System.EventHandler(this.listBox2_Click);
             // 
-            // listBox2
+            // RefrenceList
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(245, 57);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 225);
-            this.listBox2.TabIndex = 1;
-            this.listBox2.Click += new System.EventHandler(this.listBox2_Click);
+            this.RefrenceList.FormattingEnabled = true;
+            this.RefrenceList.Location = new System.Drawing.Point(245, 57);
+            this.RefrenceList.Name = "RefrenceList";
+            this.RefrenceList.Size = new System.Drawing.Size(120, 225);
+            this.RefrenceList.TabIndex = 1;
+            this.RefrenceList.Click += new System.EventHandler(this.listBox2_Click);
             // 
-            // listBox1
+            // IdList
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(103, 57);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 225);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.Click += new System.EventHandler(this.listBox2_Click);
+            this.IdList.FormattingEnabled = true;
+            this.IdList.Location = new System.Drawing.Point(103, 57);
+            this.IdList.Name = "IdList";
+            this.IdList.Size = new System.Drawing.Size(120, 225);
+            this.IdList.TabIndex = 0;
+            this.IdList.Click += new System.EventHandler(this.listBox2_Click);
             // 
             // AddingProduct
             // 
             this.AddingProduct.BackColor = System.Drawing.Color.Transparent;
-            this.AddingProduct.Controls.Add(this.supplierWizard1);
             this.AddingProduct.Controls.Add(this.productWizard1);
             this.AddingProduct.Controls.Add(this.AddingProductLabel);
             this.AddingProduct.Location = new System.Drawing.Point(4, 22);
@@ -443,21 +441,12 @@
             this.AddingProduct.TabIndex = 1;
             this.AddingProduct.Text = "Add a product";
             // 
-            // supplierWizard1
-            // 
-            this.supplierWizard1.Location = new System.Drawing.Point(304, 85);
-            this.supplierWizard1.Margin = new System.Windows.Forms.Padding(4);
-            this.supplierWizard1.Name = "supplierWizard1";
-            this.supplierWizard1.Size = new System.Drawing.Size(324, 183);
-            this.supplierWizard1.TabIndex = 2;
-            this.supplierWizard1.Visible = false;
-            // 
             // productWizard1
             // 
             this.productWizard1.Location = new System.Drawing.Point(36, 85);
             this.productWizard1.Margin = new System.Windows.Forms.Padding(4);
             this.productWizard1.Name = "productWizard1";
-            this.productWizard1.Size = new System.Drawing.Size(260, 452);
+            this.productWizard1.Size = new System.Drawing.Size(376, 534);
             this.productWizard1.TabIndex = 1;
             // 
             // AddingProductLabel
@@ -501,40 +490,39 @@
         private System.Windows.Forms.TabControl Tabs;
         private System.Windows.Forms.TabPage stockTab;
         private System.Windows.Forms.TabPage AddingProduct;
-        private System.Windows.Forms.ListBox listBox5;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox DimensionsList;
+        private System.Windows.Forms.ListBox PriceClientList;
+        private System.Windows.Forms.ListBox StockList;
+        private System.Windows.Forms.ListBox RefrenceList;
+        private System.Windows.Forms.ListBox IdList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox listBox7;
-        private System.Windows.Forms.ListBox listBox6;
+        private System.Windows.Forms.ListBox ColorList;
+        private System.Windows.Forms.ListBox TypeList;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label AddingProductLabel;
         private ProductWizard productWizard1;
-        private SupplierWizard supplierWizard1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PriceClientTextBox;
+        private System.Windows.Forms.TextBox RefrenceTextBox3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox StockTextBox;
+        private System.Windows.Forms.TextBox RefrenceTextBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox RefrenceTextBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

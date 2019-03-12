@@ -29,7 +29,13 @@
         private void InitializeComponent()
         {
             this.productGroupBox = new System.Windows.Forms.GroupBox();
-            this.nextButton = new System.Windows.Forms.Button();
+            this.SupplierBox = new System.Windows.Forms.TextBox();
+            this.finishButton = new System.Windows.Forms.Button();
+            this.supplierPriceLabel = new System.Windows.Forms.Label();
+            this.SupplierChoice = new System.Windows.Forms.Label();
+            this.delayNum = new System.Windows.Forms.NumericUpDown();
+            this.supplierPriceTextBox = new System.Windows.Forms.TextBox();
+            this.delayOrderLabel = new System.Windows.Forms.Label();
             this.heightLabel = new System.Windows.Forms.Label();
             this.referenceLabel = new System.Windows.Forms.Label();
             this.referenceTextBox = new System.Windows.Forms.TextBox();
@@ -55,6 +61,7 @@
             this.widthLabel = new System.Windows.Forms.Label();
             this.codeLabel = new System.Windows.Forms.Label();
             this.productGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delayNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InitialStockNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberPerBoxNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimumStockNum)).BeginInit();
@@ -62,7 +69,13 @@
             // 
             // productGroupBox
             // 
-            this.productGroupBox.Controls.Add(this.nextButton);
+            this.productGroupBox.Controls.Add(this.SupplierBox);
+            this.productGroupBox.Controls.Add(this.finishButton);
+            this.productGroupBox.Controls.Add(this.supplierPriceLabel);
+            this.productGroupBox.Controls.Add(this.SupplierChoice);
+            this.productGroupBox.Controls.Add(this.delayNum);
+            this.productGroupBox.Controls.Add(this.supplierPriceTextBox);
+            this.productGroupBox.Controls.Add(this.delayOrderLabel);
             this.productGroupBox.Controls.Add(this.heightLabel);
             this.productGroupBox.Controls.Add(this.referenceLabel);
             this.productGroupBox.Controls.Add(this.referenceTextBox);
@@ -89,20 +102,68 @@
             this.productGroupBox.Controls.Add(this.codeLabel);
             this.productGroupBox.Location = new System.Drawing.Point(3, 3);
             this.productGroupBox.Name = "productGroupBox";
-            this.productGroupBox.Size = new System.Drawing.Size(245, 436);
+            this.productGroupBox.Size = new System.Drawing.Size(407, 531);
             this.productGroupBox.TabIndex = 32;
             this.productGroupBox.TabStop = false;
             this.productGroupBox.Text = "Product";
             // 
-            // nextButton
+            // SupplierBox
             // 
-            this.nextButton.Location = new System.Drawing.Point(10, 397);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(75, 23);
-            this.nextButton.TabIndex = 29;
-            this.nextButton.Text = "Next";
-            this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            this.SupplierBox.Location = new System.Drawing.Point(114, 395);
+            this.SupplierBox.Name = "SupplierBox";
+            this.SupplierBox.Size = new System.Drawing.Size(100, 20);
+            this.SupplierBox.TabIndex = 39;
+            // 
+            // finishButton
+            // 
+            this.finishButton.Location = new System.Drawing.Point(17, 495);
+            this.finishButton.Name = "finishButton";
+            this.finishButton.Size = new System.Drawing.Size(75, 23);
+            this.finishButton.TabIndex = 38;
+            this.finishButton.Text = "Finish";
+            this.finishButton.UseVisualStyleBackColor = true;
+            this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
+            // 
+            // supplierPriceLabel
+            // 
+            this.supplierPriceLabel.AutoSize = true;
+            this.supplierPriceLabel.Location = new System.Drawing.Point(7, 425);
+            this.supplierPriceLabel.Name = "supplierPriceLabel";
+            this.supplierPriceLabel.Size = new System.Drawing.Size(77, 13);
+            this.supplierPriceLabel.TabIndex = 34;
+            this.supplierPriceLabel.Text = "Supplier price :";
+            // 
+            // SupplierChoice
+            // 
+            this.SupplierChoice.AutoSize = true;
+            this.SupplierChoice.Location = new System.Drawing.Point(7, 398);
+            this.SupplierChoice.Name = "SupplierChoice";
+            this.SupplierChoice.Size = new System.Drawing.Size(101, 13);
+            this.SupplierChoice.TabIndex = 32;
+            this.SupplierChoice.Text = "From what supplier :";
+            // 
+            // delayNum
+            // 
+            this.delayNum.Location = new System.Drawing.Point(114, 454);
+            this.delayNum.Name = "delayNum";
+            this.delayNum.Size = new System.Drawing.Size(65, 20);
+            this.delayNum.TabIndex = 37;
+            // 
+            // supplierPriceTextBox
+            // 
+            this.supplierPriceTextBox.Location = new System.Drawing.Point(114, 425);
+            this.supplierPriceTextBox.Name = "supplierPriceTextBox";
+            this.supplierPriceTextBox.Size = new System.Drawing.Size(100, 20);
+            this.supplierPriceTextBox.TabIndex = 36;
+            // 
+            // delayOrderLabel
+            // 
+            this.delayOrderLabel.AutoSize = true;
+            this.delayOrderLabel.Location = new System.Drawing.Point(6, 456);
+            this.delayOrderLabel.Name = "delayOrderLabel";
+            this.delayOrderLabel.Size = new System.Drawing.Size(97, 13);
+            this.delayOrderLabel.TabIndex = 35;
+            this.delayOrderLabel.Text = "Delay of the order :";
             // 
             // heightLabel
             // 
@@ -302,9 +363,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.productGroupBox);
             this.Name = "ProductWizard";
-            this.Size = new System.Drawing.Size(260, 452);
+            this.Size = new System.Drawing.Size(449, 633);
             this.productGroupBox.ResumeLayout(false);
             this.productGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delayNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InitialStockNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberPerBoxNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimumStockNum)).EndInit();
@@ -315,7 +377,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox productGroupBox;
-        private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Label heightLabel;
         private System.Windows.Forms.Label referenceLabel;
         private System.Windows.Forms.TextBox referenceTextBox;
@@ -340,5 +401,12 @@
         private System.Windows.Forms.Label colorLabel;
         private System.Windows.Forms.Label widthLabel;
         private System.Windows.Forms.Label codeLabel;
+        private System.Windows.Forms.Button finishButton;
+        private System.Windows.Forms.Label supplierPriceLabel;
+        private System.Windows.Forms.Label SupplierChoice;
+        private System.Windows.Forms.NumericUpDown delayNum;
+        private System.Windows.Forms.TextBox supplierPriceTextBox;
+        private System.Windows.Forms.Label delayOrderLabel;
+        private System.Windows.Forms.TextBox SupplierBox;
     }
 }

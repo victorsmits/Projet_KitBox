@@ -25,17 +25,15 @@ namespace interface_Magasinier
             Loaddata();
         }
 
-    
-
-        public void Loaddata() //Different Listbox containing the 2 first colomns of the db 
+        public void Loaddata() //Loading de data into the differents listbox
         {
-            listBox1.Items.Clear();
-            listBox2.Items.Clear();
-            listBox3.Items.Clear();
-            listBox4.Items.Clear();
-            listBox5.Items.Clear();
-            listBox6.Items.Clear();
-            listBox7.Items.Clear();
+            IdList.Items.Clear();
+            RefrenceList.Items.Clear();
+            StockList.Items.Clear();
+            PriceClientList.Items.Clear();
+            DimensionsList.Items.Clear();
+            TypeList.Items.Clear();
+            ColorList.Items.Clear();
 
             try
             {
@@ -47,13 +45,13 @@ namespace interface_Magasinier
                 {
                     while (dr.Read())
                     {
-                        listBox1.Items.Add(dr[0].ToString());
-                        listBox2.Items.Add(dr[1].ToString());
-                        listBox3.Items.Add(dr[2].ToString());
-                        listBox4.Items.Add(dr[4].ToString());
-                        listBox5.Items.Add(dr[6].ToString());
-                        listBox6.Items.Add(dr[11].ToString());
-                        listBox7.Items.Add(dr[12].ToString());
+                        IdList.Items.Add(dr[0].ToString());
+                        RefrenceList.Items.Add(dr[1].ToString());
+                        StockList.Items.Add(dr[2].ToString());
+                        PriceClientList.Items.Add(dr[4].ToString());
+                        DimensionsList.Items.Add(dr[6].ToString());
+                        TypeList.Items.Add(dr[11].ToString());
+                        ColorList.Items.Add(dr[12].ToString());
                     }
                 }
                 dr.Close();
@@ -71,49 +69,49 @@ namespace interface_Magasinier
             ListBox l = sender as ListBox;
             if (l.SelectedIndex != -1)
             {
-                listBox1.SelectedIndex = l.SelectedIndex;
-                listBox2.SelectedIndex = l.SelectedIndex;
-                listBox3.SelectedIndex = l.SelectedIndex;
-                listBox4.SelectedIndex = l.SelectedIndex;
-                listBox5.SelectedIndex = l.SelectedIndex;
-                listBox6.SelectedIndex = l.SelectedIndex;
-                listBox7.SelectedIndex = l.SelectedIndex;
+                IdList.SelectedIndex = l.SelectedIndex;
+                RefrenceList.SelectedIndex = l.SelectedIndex;
+                StockList.SelectedIndex = l.SelectedIndex;
+                PriceClientList.SelectedIndex = l.SelectedIndex;
+                DimensionsList.SelectedIndex = l.SelectedIndex;
+                TypeList.SelectedIndex = l.SelectedIndex;
+                ColorList.SelectedIndex = l.SelectedIndex;
 
-                textBox1.Text = listBox2.SelectedItem.ToString();
-                textBox3.Text = listBox2.SelectedItem.ToString();
-                textBox2.Text = listBox3.SelectedItem.ToString();
-                textBox4.Text = listBox4.SelectedItem.ToString();
-                textBox6.Text = listBox2.SelectedItem.ToString();
+                RefrenceTextBox2.Text = RefrenceList.SelectedItem.ToString();
+                RefrenceTextBox3.Text = RefrenceList.SelectedItem.ToString();
+                StockTextBox.Text = StockList.SelectedItem.ToString();
+                PriceClientTextBox.Text = PriceClientList.SelectedItem.ToString();
+                RefrenceTextBox.Text = RefrenceList.SelectedItem.ToString();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text != "" & listBox1.SelectedIndex != -1)
+            if (StockTextBox.Text != "" & IdList.SelectedIndex != -1)
             {
-                string q = "update Piece set Enstock='" + textBox2.Text.ToString() + "' where PK_Piece=" + listBox1.SelectedItem.ToString();
+                string q = "update Piece set Enstock='" + StockTextBox.Text.ToString() + "' where PK_Piece=" + IdList.SelectedItem.ToString();
                 SqlOledb.SqlOledb.SqlRequest(q);
                 MessageBox.Show(q);
                 Loaddata();
-                textBox2.Text = "";
+                StockTextBox.Text = "";
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox4.Text != "" & listBox1.SelectedIndex != -1)
+            if (PriceClientTextBox.Text != "" & IdList.SelectedIndex != -1)
             {
-                string q = "update Piece set PrixClient=" + textBox4.Text.ToString() + " where PK_Piece=" + listBox1.SelectedItem.ToString();
+                string q = "update Piece set PrixClient=" + PriceClientTextBox.Text.ToString() + " where PK_Piece=" + IdList.SelectedItem.ToString();
                 SqlOledb.SqlOledb.SqlRequest(q);
                 MessageBox.Show(q);
                 Loaddata();
-                textBox4.Text = "";
+                PriceClientTextBox.Text = "";
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string q = "delete from Piece where PK_Piece=" + listBox1.SelectedItem.ToString();
+            string q = "delete from Piece where PK_Piece=" + IdList.SelectedItem.ToString();
             SqlOledb.SqlOledb.SqlRequest(q);
             MessageBox.Show(q);
             Loaddata();
