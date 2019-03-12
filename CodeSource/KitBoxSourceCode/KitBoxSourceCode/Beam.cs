@@ -1,17 +1,27 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public class Beam : ICompoment
+    public class Beam : GenericCompoment
     {
-        private readonly int Lenght;
-        private readonly int Price;
 
-        public Beam(int Len)
+        public Beam(int Len, int qty) : base(Len, qty)
         {
             Lenght = Len;
+            quantity = qty;
+            Price = 2;
+            stockNumber = "1";
+            SetPrice();
         }
 
-        public int GetLenght() => Lenght;
-        public int GetPrice() => Price;
+        public override string GetDetails()
+        {
+            return "Beam -> Dimension : " + Lenght + " | Stock ref : " + stockNumber;
+        }
+
+        protected override void SetPrice()
+        {
+            //TODO oledb requete price fct len
+            Price = 2;
+        }
     }
 }
