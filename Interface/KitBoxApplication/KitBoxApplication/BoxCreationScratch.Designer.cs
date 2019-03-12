@@ -36,27 +36,27 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageBox1 = new System.Windows.Forms.TabPage();
+            this.creationScratchInside2 = new KitBoxApplication.CreationScratchInside();
             this.tabPageBox2 = new System.Windows.Forms.TabPage();
-            this.TabPageBox3 = new System.Windows.Forms.TabPage();
+            this.creationScratchInside1 = new KitBoxApplication.CreationScratchInside();
+            this.tabPageBox3 = new System.Windows.Forms.TabPage();
+            this.creationScratchInside3 = new KitBoxApplication.CreationScratchInside();
             this.tabPageBox4 = new System.Windows.Forms.TabPage();
+            this.creationScratchInside4 = new KitBoxApplication.CreationScratchInside();
             this.tabPageBox5 = new System.Windows.Forms.TabPage();
+            this.creationScratchInside5 = new KitBoxApplication.CreationScratchInside();
             this.tabPageBox6 = new System.Windows.Forms.TabPage();
+            this.creationScratchInside6 = new KitBoxApplication.CreationScratchInside();
             this.tabPageBox7 = new System.Windows.Forms.TabPage();
+            this.creationScratchInside7 = new KitBoxApplication.CreationScratchInside();
             this.button2 = new System.Windows.Forms.Button();
             this.labelExplanation = new System.Windows.Forms.Label();
             this.labelHelp = new System.Windows.Forms.Label();
-            this.creationScratchInside2 = new KitBoxApplication.CreationScratchInside();
-            this.creationScratchInside1 = new KitBoxApplication.CreationScratchInside();
-            this.creationScratchInside3 = new KitBoxApplication.CreationScratchInside();
-            this.creationScratchInside4 = new KitBoxApplication.CreationScratchInside();
-            this.creationScratchInside5 = new KitBoxApplication.CreationScratchInside();
-            this.creationScratchInside6 = new KitBoxApplication.CreationScratchInside();
-            this.creationScratchInside7 = new KitBoxApplication.CreationScratchInside();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPageBox1.SuspendLayout();
             this.tabPageBox2.SuspendLayout();
-            this.TabPageBox3.SuspendLayout();
+            this.tabPageBox3.SuspendLayout();
             this.tabPageBox4.SuspendLayout();
             this.tabPageBox5.SuspendLayout();
             this.tabPageBox6.SuspendLayout();
@@ -117,6 +117,7 @@
             0,
             0,
             0});
+            this.numericUpDownQuantity.ValueChanged += new System.EventHandler(this.numericUpDownQuantity_ValueChanged);
             // 
             // labelQuantityBox
             // 
@@ -150,7 +151,7 @@
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControl1.Controls.Add(this.tabPageBox1);
             this.tabControl1.Controls.Add(this.tabPageBox2);
-            this.tabControl1.Controls.Add(this.TabPageBox3);
+            this.tabControl1.Controls.Add(this.tabPageBox3);
             this.tabControl1.Controls.Add(this.tabPageBox4);
             this.tabControl1.Controls.Add(this.tabPageBox5);
             this.tabControl1.Controls.Add(this.tabPageBox6);
@@ -181,7 +182,15 @@
             this.tabPageBox1.Size = new System.Drawing.Size(1357, 679);
             this.tabPageBox1.TabIndex = 0;
             this.tabPageBox1.Text = "Box 1";
-            this.tabPageBox1.Click += new System.EventHandler(this.tabPageBox1_Click);
+            // 
+            // creationScratchInside2
+            // 
+            this.creationScratchInside2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.creationScratchInside2.Location = new System.Drawing.Point(45, 36);
+            this.creationScratchInside2.Margin = new System.Windows.Forms.Padding(4);
+            this.creationScratchInside2.Name = "creationScratchInside2";
+            this.creationScratchInside2.Size = new System.Drawing.Size(1170, 589);
+            this.creationScratchInside2.TabIndex = 0;
             // 
             // tabPageBox2
             // 
@@ -195,18 +204,36 @@
             this.tabPageBox2.TabIndex = 1;
             this.tabPageBox2.Text = "Box 2";
             // 
-            // TabPageBox3
+            // creationScratchInside1
             // 
-            this.TabPageBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.TabPageBox3.Controls.Add(this.creationScratchInside3);
-            this.TabPageBox3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.TabPageBox3.ImageKey = "(none)";
-            this.TabPageBox3.Location = new System.Drawing.Point(4, 34);
-            this.TabPageBox3.Name = "TabPageBox3";
-            this.TabPageBox3.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPageBox3.Size = new System.Drawing.Size(1357, 679);
-            this.TabPageBox3.TabIndex = 2;
-            this.TabPageBox3.Text = "Box 3";
+            this.creationScratchInside1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.creationScratchInside1.Location = new System.Drawing.Point(45, 36);
+            this.creationScratchInside1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.creationScratchInside1.Name = "creationScratchInside1";
+            this.creationScratchInside1.Size = new System.Drawing.Size(1142, 569);
+            this.creationScratchInside1.TabIndex = 0;
+            // 
+            // tabPageBox3
+            // 
+            this.tabPageBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.tabPageBox3.Controls.Add(this.creationScratchInside3);
+            this.tabPageBox3.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.tabPageBox3.ImageKey = "(none)";
+            this.tabPageBox3.Location = new System.Drawing.Point(4, 34);
+            this.tabPageBox3.Name = "tabPageBox3";
+            this.tabPageBox3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBox3.Size = new System.Drawing.Size(1357, 679);
+            this.tabPageBox3.TabIndex = 2;
+            this.tabPageBox3.Text = "Box 3";
+            // 
+            // creationScratchInside3
+            // 
+            this.creationScratchInside3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.creationScratchInside3.Location = new System.Drawing.Point(45, 36);
+            this.creationScratchInside3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.creationScratchInside3.Name = "creationScratchInside3";
+            this.creationScratchInside3.Size = new System.Drawing.Size(1142, 569);
+            this.creationScratchInside3.TabIndex = 0;
             // 
             // tabPageBox4
             // 
@@ -220,6 +247,15 @@
             this.tabPageBox4.TabIndex = 3;
             this.tabPageBox4.Text = "Box 4";
             // 
+            // creationScratchInside4
+            // 
+            this.creationScratchInside4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.creationScratchInside4.Location = new System.Drawing.Point(45, 36);
+            this.creationScratchInside4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.creationScratchInside4.Name = "creationScratchInside4";
+            this.creationScratchInside4.Size = new System.Drawing.Size(1142, 569);
+            this.creationScratchInside4.TabIndex = 0;
+            // 
             // tabPageBox5
             // 
             this.tabPageBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
@@ -231,6 +267,15 @@
             this.tabPageBox5.Size = new System.Drawing.Size(1357, 679);
             this.tabPageBox5.TabIndex = 4;
             this.tabPageBox5.Text = "Box 5";
+            // 
+            // creationScratchInside5
+            // 
+            this.creationScratchInside5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.creationScratchInside5.Location = new System.Drawing.Point(45, 36);
+            this.creationScratchInside5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.creationScratchInside5.Name = "creationScratchInside5";
+            this.creationScratchInside5.Size = new System.Drawing.Size(1142, 569);
+            this.creationScratchInside5.TabIndex = 0;
             // 
             // tabPageBox6
             // 
@@ -244,6 +289,15 @@
             this.tabPageBox6.TabIndex = 5;
             this.tabPageBox6.Text = "Box 6";
             // 
+            // creationScratchInside6
+            // 
+            this.creationScratchInside6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.creationScratchInside6.Location = new System.Drawing.Point(45, 36);
+            this.creationScratchInside6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.creationScratchInside6.Name = "creationScratchInside6";
+            this.creationScratchInside6.Size = new System.Drawing.Size(1142, 569);
+            this.creationScratchInside6.TabIndex = 0;
+            // 
             // tabPageBox7
             // 
             this.tabPageBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
@@ -256,6 +310,15 @@
             this.tabPageBox7.Size = new System.Drawing.Size(1357, 679);
             this.tabPageBox7.TabIndex = 6;
             this.tabPageBox7.Text = "Box 7";
+            // 
+            // creationScratchInside7
+            // 
+            this.creationScratchInside7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.creationScratchInside7.Location = new System.Drawing.Point(45, 36);
+            this.creationScratchInside7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.creationScratchInside7.Name = "creationScratchInside7";
+            this.creationScratchInside7.Size = new System.Drawing.Size(1142, 569);
+            this.creationScratchInside7.TabIndex = 0;
             // 
             // button2
             // 
@@ -298,69 +361,6 @@
             this.labelHelp.TabIndex = 72;
             this.labelHelp.Text = "Help";
             // 
-            // creationScratchInside2
-            // 
-            this.creationScratchInside2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.creationScratchInside2.Location = new System.Drawing.Point(45, 36);
-            this.creationScratchInside2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.creationScratchInside2.Name = "creationScratchInside2";
-            this.creationScratchInside2.Size = new System.Drawing.Size(1170, 589);
-            this.creationScratchInside2.TabIndex = 0;
-            // 
-            // creationScratchInside1
-            // 
-            this.creationScratchInside1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.creationScratchInside1.Location = new System.Drawing.Point(45, 36);
-            this.creationScratchInside1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.creationScratchInside1.Name = "creationScratchInside1";
-            this.creationScratchInside1.Size = new System.Drawing.Size(1142, 569);
-            this.creationScratchInside1.TabIndex = 0;
-            // 
-            // creationScratchInside3
-            // 
-            this.creationScratchInside3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.creationScratchInside3.Location = new System.Drawing.Point(45, 36);
-            this.creationScratchInside3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.creationScratchInside3.Name = "creationScratchInside3";
-            this.creationScratchInside3.Size = new System.Drawing.Size(1142, 569);
-            this.creationScratchInside3.TabIndex = 0;
-            // 
-            // creationScratchInside4
-            // 
-            this.creationScratchInside4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.creationScratchInside4.Location = new System.Drawing.Point(45, 36);
-            this.creationScratchInside4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.creationScratchInside4.Name = "creationScratchInside4";
-            this.creationScratchInside4.Size = new System.Drawing.Size(1142, 569);
-            this.creationScratchInside4.TabIndex = 0;
-            // 
-            // creationScratchInside5
-            // 
-            this.creationScratchInside5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.creationScratchInside5.Location = new System.Drawing.Point(45, 36);
-            this.creationScratchInside5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.creationScratchInside5.Name = "creationScratchInside5";
-            this.creationScratchInside5.Size = new System.Drawing.Size(1142, 569);
-            this.creationScratchInside5.TabIndex = 0;
-            // 
-            // creationScratchInside6
-            // 
-            this.creationScratchInside6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.creationScratchInside6.Location = new System.Drawing.Point(45, 36);
-            this.creationScratchInside6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.creationScratchInside6.Name = "creationScratchInside6";
-            this.creationScratchInside6.Size = new System.Drawing.Size(1142, 569);
-            this.creationScratchInside6.TabIndex = 0;
-            // 
-            // creationScratchInside7
-            // 
-            this.creationScratchInside7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.creationScratchInside7.Location = new System.Drawing.Point(45, 36);
-            this.creationScratchInside7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.creationScratchInside7.Name = "creationScratchInside7";
-            this.creationScratchInside7.Size = new System.Drawing.Size(1142, 569);
-            this.creationScratchInside7.TabIndex = 0;
-            // 
             // BoxCreationScratch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -381,7 +381,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPageBox1.ResumeLayout(false);
             this.tabPageBox2.ResumeLayout(false);
-            this.TabPageBox3.ResumeLayout(false);
+            this.tabPageBox3.ResumeLayout(false);
             this.tabPageBox4.ResumeLayout(false);
             this.tabPageBox5.ResumeLayout(false);
             this.tabPageBox6.ResumeLayout(false);
@@ -400,7 +400,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPageBox1;
         private System.Windows.Forms.TabPage tabPageBox2;
-        private System.Windows.Forms.TabPage TabPageBox3;
+        private System.Windows.Forms.TabPage tabPageBox3;
         private System.Windows.Forms.TabPage tabPageBox4;
         private System.Windows.Forms.TabPage tabPageBox5;
         private System.Windows.Forms.TabPage tabPageBox6;

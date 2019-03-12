@@ -15,60 +15,29 @@ namespace KitBoxApplication
         public BoxCreationScratch()
         {
             InitializeComponent();
+
+            // enables design of tabheader
             this.tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabPageBox1_DrawItem);
+           
+            EnablePage(tabPageBox2, false);
+            EnablePage(tabPageBox3, false);
+            EnablePage(tabPageBox4, false);
+            EnablePage(tabPageBox5, false);
+            EnablePage(tabPageBox6, false);
+            EnablePage(tabPageBox7, false);
+
             
             
-          
-        }
+        }   
 
-        private void tabPageBox1_Click(object sender, EventArgs e)
-        {
-
-        }        
-
-        private Dictionary<TabPage, Color> TabColors = new Dictionary<TabPage, Color>();
-
-        private void SetTabHeader(TabPage page, Color color)
-        {
-            TabColors[page] = color;
-            tabControl1.Invalidate();
-        }
+        // -- Method to design tabheader 
         private void tabPageBox1_DrawItem(object sender, DrawItemEventArgs e)
         {
             TabPage page = tabControl1.TabPages[e.Index];
             Color col = Color.FromArgb(27, 29, 33);
-            /*
-            switch(e.Index)
-            {
-                case 0:
-                    col = Color.Black;
-                    break;
-                case 1:
-                    col = Color.Beige;
-                    break;
-                case 2:
-                    col = Color.Red;
-                    break;
-                case 3:
-                    col = Color.AliceBlue;
-                    break;
-                case 4:
-                    col = Color.Beige;
-                    break;
-                case 5:
-                    col = Color.Red;
-                    break;
-                case 6:
-                    col = Color.Blue;
-                    break;
-                default:
-                    col = Color.Red;
-                    break;
-            }
-            */
+       
             e.Graphics.FillRectangle(new SolidBrush(col), e.Bounds);
-
             
             Font font = new Font("Century Gothic", 12, FontStyle.Bold);
 
@@ -83,6 +52,64 @@ namespace KitBoxApplication
             rect.Inflate(0, -2);
             e.Graphics.DrawRectangle(Pens.Transparent, rect);
             e.DrawFocusRectangle();
+        }
+
+        private List<TabPage> hiddenPages = new List<TabPage>();
+
+        private void EnablePage(TabPage page, bool enable)
+        {
+            if (enable)
+            {
+                tabControl1.TabPages.Add(page);
+                hiddenPages.Remove(page);
+            }
+            else
+            {
+                tabControl1.TabPages.Remove(page);
+                hiddenPages.Add(page);
+            }
+        }
+
+        
+
+        // function to make tabs visible or not in function of how many boxes has been chosen
+        private void numericUpDownQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            int count = Convert.ToInt32(numericUpDownQuantity.Value);
+            if (count > 0)
+            {
+                
+                EnablePage(tabPageBox2, false);
+                if (count > 1)
+                {
+                    EnablePage(tabPageBox2, true);
+                    EnablePage(tabPageBox3, false);
+                    if (count > 2)
+                    {
+                        EnablePage(tabPageBox3, true);
+                        EnablePage(tabPageBox4, false);
+                        if (count > 3)
+                        {
+                            EnablePage(tabPageBox4, true);
+                            EnablePage(tabPageBox5, false);
+                            if (count > 4)
+                            {
+                                EnablePage(tabPageBox5, true);
+                                EnablePage(tabPageBox6, false);
+                                if (count > 5)
+                                {
+                                    EnablePage(tabPageBox6, true);
+                                    EnablePage(tabPageBox7, false);
+                                    if (count > 6)
+                                    {
+                                        EnablePage(tabPageBox7, true);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     

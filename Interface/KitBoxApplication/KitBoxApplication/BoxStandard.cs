@@ -47,6 +47,9 @@ namespace KitBoxApplication
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
             radioButtonYesBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
             radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
+
+            
+                
         }
 
         // function to make appear color choice for all the boxes at once and door choice
@@ -95,9 +98,12 @@ namespace KitBoxApplication
                 panelColorBoxIf1.Visible = true;
                 panelColorBoxIfN1.Visible = false;
                 panelDoorChoiceMultiple.Visible = false;
+                radioButtonNoBox2.Checked = true;
+                radioButtonNoBox4.Checked = false;
             }        
             else if (count > 1)
             {
+                panelDoorChoiceMultiple.Visible = true;
                 panelColorBoxIf1.Visible = false;
                 panelColorBoxIfN1.Visible = true;
                 // part to make appear features for box color and door
@@ -107,6 +113,7 @@ namespace KitBoxApplication
                 // door features box 3
                 labelDoorBox3.Visible = false;
                 panelYesNoBox3.Visible = false;
+                radioButtonNoBox3.Checked = true;
                 if (count > 2)
                 {
                     // color features box 3 and box 4
@@ -119,6 +126,7 @@ namespace KitBoxApplication
                     panelYesNoBox3.Visible = true;
                     labelDoorBox4.Visible = false;
                     panelYesNoBox4.Visible = false;
+                    radioButtonNoBox4.Checked = true;
                     if (count > 3)
                     {
                         // color features box 4 and box 5
@@ -131,6 +139,7 @@ namespace KitBoxApplication
                         panelYesNoBox4.Visible = true;
                         labelDoorBox5.Visible = false;
                         panelYesNoBox5.Visible = false;
+                        radioButtonNoBox5.Checked = true;
                         if (count > 4)
                         {
                             // color features box 5 and box 6
@@ -143,6 +152,7 @@ namespace KitBoxApplication
                             panelYesNoBox5.Visible = true;
                             labelDoorBox6.Visible = false;
                             panelYesNoBox6.Visible = false;
+                            radioButtonNoBox6.Checked = true;
                             if (count > 5)
                             {
                                 // color features box 6 and box 7
@@ -155,6 +165,7 @@ namespace KitBoxApplication
                                 panelYesNoBox6.Visible = true;
                                 labelDoorBox7.Visible = false;
                                 panelYesNoBox7.Visible = false;
+                                radioButtonNoBox7.Checked = true;
                                 if (count > 6)
                                 {
                                     // color features box 7 
