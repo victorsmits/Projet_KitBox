@@ -49,6 +49,110 @@ namespace KitBoxApplication
             radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
         }
 
+        OleDbCommand cmd = new OleDbCommand(); //cmd for command
+        OleDbConnection cn = new OleDbConnection();  // cn for connection
+        OleDbDataReader dr;
+
+        // Connection to the DB and loading the data into the box
+        private void BoxStandard_Load(object sender, EventArgs e)
+        {
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cmd.Connection = cn;
+        }
+
+        // Loading height data from data base
+        private void LoaddataHeight()
+        {
+            comboBoxHeight.Items.Clear();
+            try
+            {
+                var count = numericUpDownQuantity.Value;
+                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'" ;
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxHeight.Items.Add(dr[0].ToString());
+                        //listBox2.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
+        // Loading height data from data base
+        private void LoaddataWidth()
+        {
+            comboBoxWidth.Items.Clear();
+            try
+            {
+                var count = numericUpDownQuantity.Value;
+
+                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxHeight.Items.Add(dr[0].ToString());
+                        //listBox2.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
+        // Loading height data from data base
+        private void LoaddataDepth()
+        {
+            comboBoxDepth.Items.Clear();
+            try
+            {
+                var count = numericUpDownQuantity.Value;
+
+                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxHeight.Items.Add(dr[0].ToString());
+                        //listBox2.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
+
         // function to make appear color choice for all the boxes at once and door choice
         //
         private void checkBoxColorYes_CheckedChanged(object sender, EventArgs e)
@@ -86,16 +190,20 @@ namespace KitBoxApplication
         // function applied to number read on the numericUpDown
         // different groups will appear or disappear in function of how many boxes have
         // been chosen
-        // 
+        //
         private void numericUpDownQuantity_ValueChanged(object sender, EventArgs e)
         {
             int count = Convert.ToInt32(numericUpDownQuantity.Value);
+            LoaddataHeight();
             if (count == 1)
             {
                 panelColorBoxIf1.Visible = true;
                 panelColorBoxIfN1.Visible = false;
                 panelDoorChoiceMultiple.Visible = false;
-            }        
+                radioButtonNoBox2.Checked = true;
+                radioButtonNoBox4.Checked = false;
+
+            }
             else if (count > 1)
             {
                 panelColorBoxIf1.Visible = false;
@@ -157,7 +265,7 @@ namespace KitBoxApplication
                                 panelYesNoBox7.Visible = false;
                                 if (count > 6)
                                 {
-                                    // color features box 7 
+                                    // color features box 7
                                     labelColorS7.Visible = true;
                                     comboBoxColorS7.Visible = true;
                                     // door features box 7
@@ -167,7 +275,7 @@ namespace KitBoxApplication
                             }
                         }
                     }
-                }                
+                }
             }
         }
 
@@ -314,7 +422,7 @@ namespace KitBoxApplication
                 }
             }
         }
-        
+
         // function radiobuttons for door box 7
         //
         private void radioButtonBox7_CheckedChanged(object sender, EventArgs e)
@@ -331,6 +439,14 @@ namespace KitBoxApplication
                     panelDoorChoiceBox7.Visible = false;
                 }
             }
-        }        
+        }
+
+        private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var height = comboBoxHeight.SelectedValue;
+            var nbrBox = numericUpDownQuantity.Value;
+
+
+        }
     }
 }
