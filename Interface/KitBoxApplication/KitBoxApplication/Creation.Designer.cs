@@ -34,8 +34,6 @@
             this.creationExplanation1 = new KitBoxApplication.CreationExplanation();
             this.boxCreationScratch1 = new KitBoxApplication.BoxCreationScratch();
             this.boxStandard2 = new KitBoxApplication.BoxStandard();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -43,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(905, 46);
+            this.label1.Location = new System.Drawing.Point(1405, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(459, 42);
@@ -54,7 +52,7 @@
             // 
             this.standartCreation.Appearance = System.Windows.Forms.Appearance.Button;
             this.standartCreation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.standartCreation.Location = new System.Drawing.Point(1240, 118);
+            this.standartCreation.Location = new System.Drawing.Point(1740, 122);
             this.standartCreation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.standartCreation.Name = "standartCreation";
             this.standartCreation.Size = new System.Drawing.Size(339, 154);
@@ -68,7 +66,7 @@
             // 
             this.completeCreation.Appearance = System.Windows.Forms.Appearance.Button;
             this.completeCreation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.completeCreation.Location = new System.Drawing.Point(674, 118);
+            this.completeCreation.Location = new System.Drawing.Point(1174, 122);
             this.completeCreation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.completeCreation.Name = "completeCreation";
             this.completeCreation.Size = new System.Drawing.Size(339, 154);
@@ -81,15 +79,14 @@
             // creationExplanation1
             // 
             this.creationExplanation1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.creationExplanation1.Location = new System.Drawing.Point(421, 282);
+            this.creationExplanation1.Location = new System.Drawing.Point(921, 286);
             this.creationExplanation1.Name = "creationExplanation1";
             this.creationExplanation1.Size = new System.Drawing.Size(1400, 1000);
             this.creationExplanation1.TabIndex = 24;
             // 
             // boxCreationScratch1
             // 
-            this.boxCreationScratch1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.boxCreationScratch1.Location = new System.Drawing.Point(20, 282);
+            this.boxCreationScratch1.Location = new System.Drawing.Point(520, 286);
             this.boxCreationScratch1.Name = "boxCreationScratch1";
             this.boxCreationScratch1.Size = new System.Drawing.Size(2416, 1407);
             this.boxCreationScratch1.TabIndex = 23;
@@ -99,36 +96,27 @@
             // 
             this.boxStandard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.boxStandard2.Font = new System.Drawing.Font("Century Gothic", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxStandard2.Location = new System.Drawing.Point(20, 282);
+            this.boxStandard2.Location = new System.Drawing.Point(520, 286);
             this.boxStandard2.MinimumSize = new System.Drawing.Size(416, 0);
             this.boxStandard2.Name = "boxStandard2";
             this.boxStandard2.Size = new System.Drawing.Size(2416, 1407);
             this.boxStandard2.TabIndex = 22;
             this.boxStandard2.Visible = false;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.creationExplanation1);
-            this.panel1.Controls.Add(this.completeCreation);
-            this.panel1.Controls.Add(this.boxCreationScratch1);
-            this.panel1.Controls.Add(this.standartCreation);
-            this.panel1.Controls.Add(this.boxStandard2);
-            this.panel1.Location = new System.Drawing.Point(481, 20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2453, 1699);
-            this.panel1.TabIndex = 25;
-            // 
             // Creation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.creationExplanation1);
+            this.Controls.Add(this.boxCreationScratch1);
+            this.Controls.Add(this.boxStandard2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.standartCreation);
+            this.Controls.Add(this.completeCreation);
             this.Name = "Creation";
             this.Size = new System.Drawing.Size(3416, 1722);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -139,6 +127,5 @@
         private BoxStandard boxStandard2;
         private BoxCreationScratch boxCreationScratch1;
         private CreationExplanation creationExplanation1;
-        private System.Windows.Forms.Panel panel1;
     }
 }

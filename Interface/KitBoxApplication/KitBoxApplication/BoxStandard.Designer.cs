@@ -130,7 +130,6 @@
             this.panelYesNoIf2 = new System.Windows.Forms.Panel();
             this.radioButtonYesIf2 = new System.Windows.Forms.RadioButton();
             this.radioButtonNoIf2 = new System.Windows.Forms.RadioButton();
-            this.labelHeightBox = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.panelColorChoice.SuspendLayout();
             this.panelColorChoiceAll.SuspendLayout();
@@ -236,9 +235,8 @@
             this.comboBoxHeight.Location = new System.Drawing.Point(241, 78);
             this.comboBoxHeight.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxHeight.Name = "comboBoxHeight";
-            this.comboBoxHeight.Size = new System.Drawing.Size(91, 41);
+            this.comboBoxHeight.Size = new System.Drawing.Size(191, 41);
             this.comboBoxHeight.TabIndex = 17;
-            this.comboBoxHeight.SelectedIndexChanged += new System.EventHandler(this.comboBoxHeight_SelectedIndexChanged);
             // 
             // labelHelp
             // 
@@ -257,12 +255,10 @@
             this.labelExplanation.AutoSize = true;
             this.labelExplanation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelExplanation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelExplanation.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExplanation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelExplanation.Location = new System.Drawing.Point(646, 143);
             this.labelExplanation.MaximumSize = new System.Drawing.Size(250, 0);
             this.labelExplanation.Name = "labelExplanation";
-            this.labelExplanation.Size = new System.Drawing.Size(250, 594);
+            this.labelExplanation.Size = new System.Drawing.Size(246, 512);
             this.labelExplanation.TabIndex = 19;
             this.labelExplanation.Text = resources.GetString("labelExplanation.Text");
             // 
@@ -746,7 +742,7 @@
             this.comboBoxWidth.Location = new System.Drawing.Point(241, 103);
             this.comboBoxWidth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxWidth.Name = "comboBoxWidth";
-            this.comboBoxWidth.Size = new System.Drawing.Size(91, 41);
+            this.comboBoxWidth.Size = new System.Drawing.Size(191, 41);
             this.comboBoxWidth.TabIndex = 58;
             // 
             // comboBoxDepth
@@ -760,7 +756,7 @@
             this.comboBoxDepth.Location = new System.Drawing.Point(241, 128);
             this.comboBoxDepth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxDepth.Name = "comboBoxDepth";
-            this.comboBoxDepth.Size = new System.Drawing.Size(91, 41);
+            this.comboBoxDepth.Size = new System.Drawing.Size(191, 41);
             this.comboBoxDepth.TabIndex = 59;
             // 
             // labelDoorBox7
@@ -1441,23 +1437,11 @@
             this.radioButtonNoIf2.UseVisualStyleBackColor = true;
             this.radioButtonNoIf2.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf2_CheckedChanged);
             // 
-            // labelHeightBox
-            // 
-            this.labelHeightBox.AutoSize = true;
-            this.labelHeightBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeightBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelHeightBox.Location = new System.Drawing.Point(364, 75);
-            this.labelHeightBox.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.labelHeightBox.Name = "labelHeightBox";
-            this.labelHeightBox.Size = new System.Drawing.Size(0, 40);
-            this.labelHeightBox.TabIndex = 62;
-            // 
             // BoxStandard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.Controls.Add(this.labelHeightBox);
             this.Controls.Add(this.panelDoorChoiceMultiple);
             this.Controls.Add(this.comboBoxDepth);
             this.Controls.Add(this.comboBoxWidth);
@@ -1479,7 +1463,6 @@
             this.MinimumSize = new System.Drawing.Size(416, 0);
             this.Name = "BoxStandard";
             this.Size = new System.Drawing.Size(2416, 1407);
-            this.Load += new System.EventHandler(this.BoxStandard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
             this.panelColorChoice.ResumeLayout(false);
             this.panelColorChoice.PerformLayout();
@@ -1635,6 +1618,5 @@
         private System.Windows.Forms.Panel panelDoorMaterial;
         private System.Windows.Forms.ComboBox comboBoxDoorMatIf1;
         private System.Windows.Forms.Label labelDoorMatIf1;
-        private System.Windows.Forms.Label labelHeightBox;
     }
 }

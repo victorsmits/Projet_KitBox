@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace KitBoxApplication
@@ -47,77 +46,8 @@ namespace KitBoxApplication
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
             radioButtonYesBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
-            radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);           
+            radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
         }
-
-        OleDbCommand cmd = new OleDbCommand(); //cmd for command
-        OleDbConnection cn = new OleDbConnection();  // cn for connection
-        OleDbDataReader dr;
-
-        // Connection to the DB and loading the data into the box
-        private void BoxStandard_Load(object sender, EventArgs e) 
-        {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
-            cmd.Connection = cn;
-            Loaddata();
-        }
-
-        // Different Listbox containing the 2 first colomns of the db 
-        private void Loaddata() 
-        {
-            comboBoxHeight.Items.Clear();
-            comboBoxDepth.Items.Clear();
-            comboBoxWidth.Items.Clear();
-            comboBoxColorAngles.Items.Clear();
-            comboBoxColorIf1.Items.Clear();
-            comboBoxColorS1.Items.Clear();
-            comboBoxColorS2.Items.Clear();
-            comboBoxColorS3.Items.Clear();
-            comboBoxColorS4.Items.Clear();
-            comboBoxColorS5.Items.Clear();
-            comboBoxColorS6.Items.Clear();
-            comboBoxColorS7.Items.Clear();
-            comboBoxColorSA.Items.Clear();
-            comboBoxDoorMatBox1.Items.Clear();
-            comboBoxDoorMatBox2.Items.Clear();
-            comboBoxDoorMatBox3.Items.Clear();
-            comboBoxDoorMatBox4.Items.Clear();
-            comboBoxDoorMatBox5.Items.Clear();
-            comboBoxDoorMatBox6.Items.Clear();
-            comboBoxDoorMatBox7.Items.Clear();
-
-            try
-            {
-                if (numericUpDownQuantity.Value == 1)
-                {
-
-                }
-
-                var count = numericUpDownQuantity.Value;
-                
-                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND WHERE division LIKE '" + count + "'" ;
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxHeight.Items.Add(dr[0].ToString());
-                        //listBox2.Items.Add(dr[0].ToString());
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
-        }
-    
 
         // function to make appear color choice for all the boxes at once and door choice
         //
@@ -165,12 +95,9 @@ namespace KitBoxApplication
                 panelColorBoxIf1.Visible = true;
                 panelColorBoxIfN1.Visible = false;
                 panelDoorChoiceMultiple.Visible = false;
-                radioButtonNoBox2.Checked = true;
-                radioButtonNoBox4.Checked = false;
             }        
             else if (count > 1)
             {
-                panelDoorChoiceMultiple.Visible = true;
                 panelColorBoxIf1.Visible = false;
                 panelColorBoxIfN1.Visible = true;
                 // part to make appear features for box color and door
@@ -180,7 +107,6 @@ namespace KitBoxApplication
                 // door features box 3
                 labelDoorBox3.Visible = false;
                 panelYesNoBox3.Visible = false;
-                radioButtonNoBox3.Checked = true;
                 if (count > 2)
                 {
                     // color features box 3 and box 4
@@ -193,7 +119,6 @@ namespace KitBoxApplication
                     panelYesNoBox3.Visible = true;
                     labelDoorBox4.Visible = false;
                     panelYesNoBox4.Visible = false;
-                    radioButtonNoBox4.Checked = true;
                     if (count > 3)
                     {
                         // color features box 4 and box 5
@@ -206,7 +131,6 @@ namespace KitBoxApplication
                         panelYesNoBox4.Visible = true;
                         labelDoorBox5.Visible = false;
                         panelYesNoBox5.Visible = false;
-                        radioButtonNoBox5.Checked = true;
                         if (count > 4)
                         {
                             // color features box 5 and box 6
@@ -219,7 +143,6 @@ namespace KitBoxApplication
                             panelYesNoBox5.Visible = true;
                             labelDoorBox6.Visible = false;
                             panelYesNoBox6.Visible = false;
-                            radioButtonNoBox6.Checked = true;
                             if (count > 5)
                             {
                                 // color features box 6 and box 7
@@ -232,7 +155,6 @@ namespace KitBoxApplication
                                 panelYesNoBox6.Visible = true;
                                 labelDoorBox7.Visible = false;
                                 panelYesNoBox7.Visible = false;
-                                radioButtonNoBox7.Checked = true;
                                 if (count > 6)
                                 {
                                     // color features box 7 
@@ -409,14 +331,6 @@ namespace KitBoxApplication
                     panelDoorChoiceBox7.Visible = false;
                 }
             }
-        }
-
-        private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var height = comboBoxHeight.SelectedValue;
-            var nbrBox = numericUpDownQuantity.Value;
-            var boxHeight = (height -
-            labelHeightBox.T
-        }
+        }        
     }
 }

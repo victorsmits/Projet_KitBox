@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace KitBoxApplication
 {
-    public partial class BoxCreationScratch : UserControl
+    public partial class ExplanationPanel : UserControl
     {
-        public BoxCreationScratch()
+        public ExplanationPanel()
         {
             InitializeComponent();
         }
