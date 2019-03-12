@@ -1465,6 +1465,7 @@
             this.MinimumSize = new System.Drawing.Size(416, 0);
             this.Name = "BoxStandard";
             this.Size = new System.Drawing.Size(2416, 1407);
+            this.Load += new System.EventHandler(this.BoxStandard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
             this.panelColorChoice.ResumeLayout(false);
             this.panelColorChoice.PerformLayout();

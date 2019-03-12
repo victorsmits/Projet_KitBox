@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace KitBoxApplication
@@ -46,11 +47,70 @@ namespace KitBoxApplication
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
             radioButtonYesBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
-            radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
-
-            
-                
+            radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);           
         }
+
+        OleDbCommand cmd = new OleDbCommand(); //cmd for command
+        OleDbConnection cn = new OleDbConnection();  // cn for connection
+        OleDbDataReader dr;
+
+        // Connection to the DB and loading the data into the box
+        private void BoxStandard_Load(object sender, EventArgs e) 
+        {
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Downloads\DB_Lespieces.accdb;";
+            cmd.Connection = cn;
+            Loaddata();
+        }
+
+        // Different Listbox containing the 2 first colomns of the db 
+        private void Loaddata() 
+        {
+            comboBoxHeight.Items.Clear();
+            comboBoxDepth.Items.Clear();
+            comboBoxWidth.Items.Clear();
+            comboBoxColorAngles.Items.Clear();
+            comboBoxColorIf1.Items.Clear();
+            comboBoxColorS1.Items.Clear();
+            comboBoxColorS2.Items.Clear();
+            comboBoxColorS3.Items.Clear();
+            comboBoxColorS4.Items.Clear();
+            comboBoxColorS5.Items.Clear();
+            comboBoxColorS6.Items.Clear();
+            comboBoxColorS7.Items.Clear();
+            comboBoxColorSA.Items.Clear();
+            comboBoxDoorMatBox1.Items.Clear();
+            comboBoxDoorMatBox2.Items.Clear();
+            comboBoxDoorMatBox3.Items.Clear();
+            comboBoxDoorMatBox4.Items.Clear();
+            comboBoxDoorMatBox5.Items.Clear();
+            comboBoxDoorMatBox6.Items.Clear();
+            comboBoxDoorMatBox7.Items.Clear();
+
+            try
+            {
+                // TODO : ask for name column and database
+                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND WHERE référence NOT LIKE '%DEC'";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxHeight.Items.Add(dr[0].ToString());
+                        //listBox2.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+    
 
         // function to make appear color choice for all the boxes at once and door choice
         //
@@ -342,6 +402,6 @@ namespace KitBoxApplication
                     panelDoorChoiceBox7.Visible = false;
                 }
             }
-        }        
+        }
     }
 }
