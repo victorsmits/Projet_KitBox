@@ -22,7 +22,7 @@ namespace WindowsFormsApp4
 
         private void Form1_Load(object sender, EventArgs e) //Connection to the DB and loading the data into the box
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=D:\Bureau\kitbox\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=E:\Bureau\11.accdb;";
             cmd.Connection = cn;
             Loaddata();
 
@@ -35,7 +35,7 @@ namespace WindowsFormsApp4
             listBox2.Items.Clear();
             try
             {
-                string q = "select * from Piece";
+                string q = "select * from dal";
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -74,8 +74,9 @@ namespace WindowsFormsApp4
         {
             if (textBox1.Text != "") 
             {
-                string q = "insert into Piece (référence) values ('" + textBox1.Text.ToString() + "')";
+                string q = "insert into dal (Référence,Prenom_cm,saucisson) values ('" + textBox1.Text.ToString() + "','MICHEL','sdf')";
                 dosomething(q);
+                MessageBox.Show(q);
                 textBox1.Text = null;
             }
         }
@@ -101,7 +102,7 @@ namespace WindowsFormsApp4
         {
             if (listBox1.SelectedIndex != -1)
             {
-                string q ="delete from Piece where PK_Piece="+ listBox1.SelectedItem.ToString();
+                string q ="delete from Table1 where Id="+ listBox1.SelectedItem.ToString();
                 dosomething(q);
             }
         }
@@ -110,7 +111,7 @@ namespace WindowsFormsApp4
         {
             if (textBox2.Text != "" & listBox1.SelectedIndex != -1)
             {
-                string q = "update Piece set référence='" + textBox2.Text.ToString() + "' where PK_Piece=" + listBox1.SelectedItem.ToString();
+                string q = "update Table1 set Nom='" + textBox2.Text.ToString() + "' where Id=" + listBox1.SelectedItem.ToString();
                 dosomething(q);
                 textBox2.Text = "";
             }

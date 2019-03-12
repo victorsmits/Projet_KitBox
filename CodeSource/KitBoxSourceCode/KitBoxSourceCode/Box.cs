@@ -1,99 +1,80 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 namespace KitBoxSourceCode
 {
-    public class Box : IStorageBox
+    public class Box : GenericStorageBox
     {
-        private List<ICompoment> Compoments;
-        private int Price = 0;
-        private readonly int Lenght;
-        private readonly int Height;
+        private Dictionary<ICompoment, int> Compoments;
+
         private readonly int Depth;
 
-        public List<ICompoment> GetCompoments => Compoments;
+        public Dictionary<ICompoment, int> GetCompoments => Compoments;
 
-        public Box(int len, int height, int depth)
+        public Box(int len, int height, int depth, string col) : base(len, height)
         {
-            Compoments = new List<ICompoment>();
-            Lenght = len;
-            Height = height;
+            Compoments = new Dictionary<ICompoment, int>();
             Depth = depth;
-            Price = 30;
 
-            AddPanel(len, height, depth);
+            AddPanel(len, height, depth, col);
             AddCleat(height);
             AddBeam(len, depth);
             AddDoorBeam(len);
+
+            SetPrice();
         }
 
-        public override int GetPrice()
+        protected override void SetPrice()
         {
-            //Compoments.ForEach(AddPrice);
-            return Price;
+            Price = 0;
+            foreach (ICompoment Key in Compoments.Keys)
+            {
+                AddPrice(Key);
+            }
         }
 
         private void AddPrice(ICompoment elem)
         {
-            Price = Price + elem.GetPrice();
+            Price = Price + (elem.GetPrice() * Compoments[elem]);
         }
 
-        public override int GetHeight()
+        public int SetHeight()
         {
-            //TODO calcul hauteur de la boie
+            //  TODO calcul hauteur de la boie en fonction de la 
+            //  dimmention total recu
             return 200;
         }
 
-        public override void GetDetails()
+        public override string GetDetails()
         {
-            Console.WriteLine("box");
+            return " box";
         }
 
-        private void AddPanel(int x, int y, int z)
+        private void AddPanel(int x, int y, int z, string col)
         {
-            Compoments.Add(new Panel(x, y));
+            Compoments.Add(new Panel(x, y, col, 1), 1);
 
-            Compoments.Add(new Panel(z, y));
-            Compoments.Add(new Panel(z, y));
+            Compoments.Add(new Panel(z, y, col, 2), 2);
 
-            Compoments.Add(new Panel(z, x));
-            Compoments.Add(new Panel(z, x));
+            Compoments.Add(new Panel(z, x, col, 2), 2);
         }
 
         private void AddCleat(int height)
         {
-            int i = 0;
-            while (i < 4)
-            {
-                Compoments.Add(new Cleat(height));
-                i++;
-            }
+            Compoments.Add(new Cleat(height, 4), 4);
         }
 
         private void AddBeam(int len, int height)
         {
-            int i = 0;
-            while (i < 4)
-            {
-                Compoments.Add(new Beam(len));
-                i++;
-            }
+            Compoments.Add(new Beam(len, 4), 4);
 
-            int j = 0;
-            while (j < 2)
-            {
-                Compoments.Add(new Beam(height));
-                j++;
-            }
+            Compoments.Add(new Beam(height, 2), 2);
+
         }
 
         private void AddDoorBeam(int height)
         {
-            int j = 0;
-            while (j < 2)
-            {
-                Compoments.Add(new DoorBeam(height));
-                j++;
-            }
+            Compoments.Add(new DoorBeam(height, 2), 2);
         }
     }
 }

@@ -1,21 +1,36 @@
 ﻿using System;
+using Oledb = SqlOledb.SqlOledb;
 namespace KitBoxSourceCode
 {
-	public class Panel : ICompoment
-	{
-		private readonly int Lenght;
-		private readonly int Height;
-		private readonly int Price;
+    public class Panel : GenericCompoment
+    {
+        private readonly int Height;
+        private readonly string Color;
 
-		public Panel(int len, int height)
-		{
-			Lenght = len;
-			Height = height;
-			//TODO oledb requete price fct dim
-		}
+        public int GetHeight => Height;
+        public string GetBoxColor => Color;
 
-		public int GetLenght() => Lenght;
-		public int GetHeight => Height;
-		public int GetPrice() => Price;
-	}
+        public Panel(int len, int height, string color, int qty) : base(len, qty)
+        {
+            Lenght = len;
+            Height = height;
+            Color = color;
+            quantity = qty;
+            stockNumber = "1"; // TODO OLEDB requete piece num
+            SetPrice();
+        }
+
+        protected override void SetPrice()
+        {
+            //TODO oledb requete price fct dim et couleur
+            Price = 2;
+
+        }
+
+        public override string GetDetails()
+        {
+            return "Panel -> Dimension : " + Height + " x " + Lenght
+            + " | Coleur : " + Color + " | Stock ref : " + stockNumber;
+        }
+    }
 }

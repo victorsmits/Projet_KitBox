@@ -1,10 +1,10 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public abstract class IStorageBox
+    public interface IStorageBox
     {
-        public abstract void GetDetails();
-        public abstract int GetPrice();
-        public abstract int GetHeight();
+        string GetDetails();
+        int GetPrice();
+        int GetHeight();
     }
 }
