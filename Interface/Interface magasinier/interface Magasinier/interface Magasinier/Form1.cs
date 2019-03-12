@@ -26,7 +26,7 @@ namespace interface_Magasinier
         }
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
         OleDbConnection cn = new OleDbConnection();  // cn for connection
-        OleDbDataReader dr;
+        
 
         public void Loaddata() //Loading de data into the differents listbox
         {
