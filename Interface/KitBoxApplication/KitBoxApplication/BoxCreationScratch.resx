@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="labelExplanation.Text" xml:space="preserve">
+    <value>At first, you must choose a quantity of boxes you want your cabinet to have. Next choose the your prefered height, width and depth. After that you will be able to choose which color your cabinet angles will have. After</value>
+  </data>
 </root>

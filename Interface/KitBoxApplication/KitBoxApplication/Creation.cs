@@ -15,12 +15,7 @@ namespace KitBoxApplication
         public Creation()
         {
             InitializeComponent();
-        }
-
-        private void Creation_Load(object sender, EventArgs e)
-        {
-
-        }
+        }       
 
         private void completeCreationAppear(object sender, EventArgs e)
         {
@@ -50,26 +45,6 @@ namespace KitBoxApplication
                 completeCreation.Checked = false;
                 creationExplanation1.Visible = false;            
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        }        
     }
 }

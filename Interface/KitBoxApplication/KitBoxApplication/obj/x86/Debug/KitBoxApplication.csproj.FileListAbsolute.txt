@@ -1,0 +1,17 @@
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\KitBoxApplication.exe.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\KitBoxApplication.exe
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.BoxCreationScratch.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.BoxStandard.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.CartPage.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.Creation.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.CreationExplanation.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.CreationScratchInside.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.Dashboard.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.HomePage.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.Properties.Resources.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.csproj.GenerateResource.cache
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.exe
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.csprojAssemblyReference.cache
