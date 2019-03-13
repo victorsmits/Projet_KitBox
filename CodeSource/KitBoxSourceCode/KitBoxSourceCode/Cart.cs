@@ -34,5 +34,17 @@ namespace KitBoxSourceCode
         {
             ClientProfile.ShowClientInfo();
         }
+
+        public string ShowCart()
+        {
+            string ShowCart = "";
+            foreach (Cabinet elem in Cabinets)
+            {
+                ShowCart += "\nCabinet " + Cabinets.IndexOf(elem) + ":\n"
+                + elem.GetPartList();
+            }
+            ShowCart += "---------------------------------------------------";
+            return ShowCart;
+        }
     }
 }
