@@ -130,6 +130,8 @@
             this.panelYesNoIf2 = new System.Windows.Forms.Panel();
             this.radioButtonYesIf2 = new System.Windows.Forms.RadioButton();
             this.radioButtonNoIf2 = new System.Windows.Forms.RadioButton();
+            this.labelHeightBox = new System.Windows.Forms.Label();
+            this.labelBoxHeight = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.panelColorChoice.SuspendLayout();
             this.panelColorChoiceAll.SuspendLayout();
@@ -226,6 +228,7 @@
             // 
             // comboBoxHeight
             // 
+            this.comboBoxHeight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxHeight.FormattingEnabled = true;
             this.comboBoxHeight.Items.AddRange(new object[] {
             "Brun",
@@ -235,8 +238,9 @@
             this.comboBoxHeight.Location = new System.Drawing.Point(241, 78);
             this.comboBoxHeight.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxHeight.Name = "comboBoxHeight";
-            this.comboBoxHeight.Size = new System.Drawing.Size(191, 41);
+            this.comboBoxHeight.Size = new System.Drawing.Size(91, 41);
             this.comboBoxHeight.TabIndex = 17;
+            this.comboBoxHeight.SelectedIndexChanged += new System.EventHandler(this.comboBoxHeight_SelectedIndexChanged);
             // 
             // labelHelp
             // 
@@ -255,10 +259,12 @@
             this.labelExplanation.AutoSize = true;
             this.labelExplanation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelExplanation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelExplanation.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExplanation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelExplanation.Location = new System.Drawing.Point(646, 143);
             this.labelExplanation.MaximumSize = new System.Drawing.Size(250, 0);
             this.labelExplanation.Name = "labelExplanation";
-            this.labelExplanation.Size = new System.Drawing.Size(246, 512);
+            this.labelExplanation.Size = new System.Drawing.Size(250, 594);
             this.labelExplanation.TabIndex = 19;
             this.labelExplanation.Text = resources.GetString("labelExplanation.Text");
             // 
@@ -365,6 +371,7 @@
             // 
             // comboBoxColorS1
             // 
+            this.comboBoxColorS1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS1.FormattingEnabled = true;
             this.comboBoxColorS1.Items.AddRange(new object[] {
             "Brun",
@@ -377,6 +384,7 @@
             // 
             // comboBoxColorS6
             // 
+            this.comboBoxColorS6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS6.FormattingEnabled = true;
             this.comboBoxColorS6.Items.AddRange(new object[] {
             "Brun",
@@ -390,6 +398,7 @@
             // 
             // comboBoxColorS5
             // 
+            this.comboBoxColorS5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS5.FormattingEnabled = true;
             this.comboBoxColorS5.Items.AddRange(new object[] {
             "Brun",
@@ -403,6 +412,7 @@
             // 
             // comboBoxColorS4
             // 
+            this.comboBoxColorS4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS4.FormattingEnabled = true;
             this.comboBoxColorS4.Items.AddRange(new object[] {
             "Brun",
@@ -416,6 +426,7 @@
             // 
             // comboBoxColorS3
             // 
+            this.comboBoxColorS3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS3.FormattingEnabled = true;
             this.comboBoxColorS3.Items.AddRange(new object[] {
             "Brun",
@@ -429,6 +440,7 @@
             // 
             // comboBoxColorS2
             // 
+            this.comboBoxColorS2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS2.FormattingEnabled = true;
             this.comboBoxColorS2.Items.AddRange(new object[] {
             "Brun",
@@ -441,6 +453,7 @@
             // 
             // comboBoxColorS7
             // 
+            this.comboBoxColorS7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS7.FormattingEnabled = true;
             this.comboBoxColorS7.Items.AddRange(new object[] {
             "Brun",
@@ -504,6 +517,7 @@
             // 
             // comboBoxColorSA
             // 
+            this.comboBoxColorSA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorSA.FormattingEnabled = true;
             this.comboBoxColorSA.Items.AddRange(new object[] {
             "Brun",
@@ -528,6 +542,7 @@
             // 
             // comboBoxColorAngles
             // 
+            this.comboBoxColorAngles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorAngles.FormattingEnabled = true;
             this.comboBoxColorAngles.Items.AddRange(new object[] {
             "Brun",
@@ -649,6 +664,7 @@
             // 
             // comboBoxColorIf1
             // 
+            this.comboBoxColorIf1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorIf1.FormattingEnabled = true;
             this.comboBoxColorIf1.Items.AddRange(new object[] {
             "Brun",
@@ -671,6 +687,7 @@
             // 
             // comboBoxDoorMatIf1
             // 
+            this.comboBoxDoorMatIf1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatIf1.FormattingEnabled = true;
             this.comboBoxDoorMatIf1.Items.AddRange(new object[] {
             "Brun",
@@ -733,6 +750,7 @@
             // 
             // comboBoxWidth
             // 
+            this.comboBoxWidth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWidth.FormattingEnabled = true;
             this.comboBoxWidth.Items.AddRange(new object[] {
             "Brun",
@@ -742,11 +760,12 @@
             this.comboBoxWidth.Location = new System.Drawing.Point(241, 103);
             this.comboBoxWidth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxWidth.Name = "comboBoxWidth";
-            this.comboBoxWidth.Size = new System.Drawing.Size(191, 41);
+            this.comboBoxWidth.Size = new System.Drawing.Size(91, 41);
             this.comboBoxWidth.TabIndex = 58;
             // 
             // comboBoxDepth
             // 
+            this.comboBoxDepth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDepth.FormattingEnabled = true;
             this.comboBoxDepth.Items.AddRange(new object[] {
             "Brun",
@@ -756,7 +775,7 @@
             this.comboBoxDepth.Location = new System.Drawing.Point(241, 128);
             this.comboBoxDepth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxDepth.Name = "comboBoxDepth";
-            this.comboBoxDepth.Size = new System.Drawing.Size(191, 41);
+            this.comboBoxDepth.Size = new System.Drawing.Size(91, 41);
             this.comboBoxDepth.TabIndex = 59;
             // 
             // labelDoorBox7
@@ -820,6 +839,7 @@
             // 
             // comboBoxDoorMatBox7
             // 
+            this.comboBoxDoorMatBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox7.FormattingEnabled = true;
             this.comboBoxDoorMatBox7.Items.AddRange(new object[] {
             "Brun",
@@ -905,6 +925,7 @@
             // 
             // comboBoxDoorMatBox6
             // 
+            this.comboBoxDoorMatBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox6.FormattingEnabled = true;
             this.comboBoxDoorMatBox6.Items.AddRange(new object[] {
             "Brun",
@@ -990,6 +1011,7 @@
             // 
             // comboBoxDoorMatBox5
             // 
+            this.comboBoxDoorMatBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox5.FormattingEnabled = true;
             this.comboBoxDoorMatBox5.Items.AddRange(new object[] {
             "Brun",
@@ -1075,6 +1097,7 @@
             // 
             // comboBoxDoorMatBox4
             // 
+            this.comboBoxDoorMatBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox4.FormattingEnabled = true;
             this.comboBoxDoorMatBox4.Items.AddRange(new object[] {
             "Brun",
@@ -1160,6 +1183,7 @@
             // 
             // comboBoxDoorMatBox3
             // 
+            this.comboBoxDoorMatBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox3.FormattingEnabled = true;
             this.comboBoxDoorMatBox3.Items.AddRange(new object[] {
             "Brun",
@@ -1295,6 +1319,7 @@
             // 
             // comboBoxDoorMatBox2
             // 
+            this.comboBoxDoorMatBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox2.FormattingEnabled = true;
             this.comboBoxDoorMatBox2.Items.AddRange(new object[] {
             "Brun",
@@ -1366,6 +1391,7 @@
             // 
             // comboBoxDoorMatBox1
             // 
+            this.comboBoxDoorMatBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox1.FormattingEnabled = true;
             this.comboBoxDoorMatBox1.Items.AddRange(new object[] {
             "Brun",
@@ -1437,11 +1463,35 @@
             this.radioButtonNoIf2.UseVisualStyleBackColor = true;
             this.radioButtonNoIf2.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf2_CheckedChanged);
             // 
+            // labelHeightBox
+            // 
+            this.labelHeightBox.AutoSize = true;
+            this.labelHeightBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeightBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelHeightBox.Location = new System.Drawing.Point(364, 75);
+            this.labelHeightBox.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.labelHeightBox.Name = "labelHeightBox";
+            this.labelHeightBox.Size = new System.Drawing.Size(0, 40);
+            this.labelHeightBox.TabIndex = 62;
+            // 
+            // labelBoxHeight
+            // 
+            this.labelBoxHeight.AutoSize = true;
+            this.labelBoxHeight.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBoxHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelBoxHeight.Location = new System.Drawing.Point(350, 78);
+            this.labelBoxHeight.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.labelBoxHeight.Name = "labelBoxHeight";
+            this.labelBoxHeight.Size = new System.Drawing.Size(0, 40);
+            this.labelBoxHeight.TabIndex = 63;
+            // 
             // BoxStandard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.Controls.Add(this.labelBoxHeight);
+            this.Controls.Add(this.labelHeightBox);
             this.Controls.Add(this.panelDoorChoiceMultiple);
             this.Controls.Add(this.comboBoxDepth);
             this.Controls.Add(this.comboBoxWidth);
@@ -1463,6 +1513,7 @@
             this.MinimumSize = new System.Drawing.Size(416, 0);
             this.Name = "BoxStandard";
             this.Size = new System.Drawing.Size(2416, 1407);
+            this.Load += new System.EventHandler(this.BoxStandard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
             this.panelColorChoice.ResumeLayout(false);
             this.panelColorChoice.PerformLayout();
@@ -1618,5 +1669,7 @@
         private System.Windows.Forms.Panel panelDoorMaterial;
         private System.Windows.Forms.ComboBox comboBoxDoorMatIf1;
         private System.Windows.Forms.Label labelDoorMatIf1;
+        private System.Windows.Forms.Label labelHeightBox;
+        private System.Windows.Forms.Label labelBoxHeight;
     }
 }

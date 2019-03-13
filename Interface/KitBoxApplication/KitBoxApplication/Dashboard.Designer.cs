@@ -45,9 +45,8 @@
             this.textBoxSubscribe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.homePage3 = new KitBoxApplication.HomePage();
             this.creation2 = new KitBoxApplication.Creation();
-            this.cartPage1 = new KitBoxApplication.CartPage();
+            this.homePage3 = new KitBoxApplication.HomePage();
             this.SidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,9 +66,8 @@
             this.SidePanel.Controls.Add(this.LogoPanel);
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
-            this.SidePanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(157, 478);
+            this.SidePanel.Size = new System.Drawing.Size(392, 1972);
             this.SidePanel.TabIndex = 0;
             // 
             // buttonAbout
@@ -80,10 +78,9 @@
             this.buttonAbout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAbout.ForeColor = System.Drawing.Color.White;
             this.buttonAbout.Image = ((System.Drawing.Image)(resources.GetObject("buttonAbout.Image")));
-            this.buttonAbout.Location = new System.Drawing.Point(0, 244);
-            this.buttonAbout.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonAbout.Location = new System.Drawing.Point(0, 611);
             this.buttonAbout.Name = "buttonAbout";
-            this.buttonAbout.Size = new System.Drawing.Size(157, 63);
+            this.buttonAbout.Size = new System.Drawing.Size(392, 158);
             this.buttonAbout.TabIndex = 8;
             this.buttonAbout.Text = "About Us";
             this.buttonAbout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -98,16 +95,14 @@
             this.buttonCart.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCart.ForeColor = System.Drawing.Color.White;
             this.buttonCart.Image = ((System.Drawing.Image)(resources.GetObject("buttonCart.Image")));
-            this.buttonCart.Location = new System.Drawing.Point(0, 181);
-            this.buttonCart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonCart.Location = new System.Drawing.Point(0, 453);
             this.buttonCart.Name = "buttonCart";
-            this.buttonCart.Size = new System.Drawing.Size(157, 63);
+            this.buttonCart.Size = new System.Drawing.Size(392, 158);
             this.buttonCart.TabIndex = 7;
             this.buttonCart.Text = "Cart";
             this.buttonCart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonCart.UseVisualStyleBackColor = true;
-            this.buttonCart.Click += new System.EventHandler(this.buttonCart_Click);
             // 
             // buttonCreation
             // 
@@ -117,10 +112,9 @@
             this.buttonCreation.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCreation.ForeColor = System.Drawing.Color.White;
             this.buttonCreation.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreation.Image")));
-            this.buttonCreation.Location = new System.Drawing.Point(0, 118);
-            this.buttonCreation.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonCreation.Location = new System.Drawing.Point(0, 295);
             this.buttonCreation.Name = "buttonCreation";
-            this.buttonCreation.Size = new System.Drawing.Size(157, 63);
+            this.buttonCreation.Size = new System.Drawing.Size(392, 158);
             this.buttonCreation.TabIndex = 6;
             this.buttonCreation.Text = "Creation";
             this.buttonCreation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -136,10 +130,9 @@
             this.buttonDash.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDash.ForeColor = System.Drawing.Color.White;
             this.buttonDash.Image = ((System.Drawing.Image)(resources.GetObject("buttonDash.Image")));
-            this.buttonDash.Location = new System.Drawing.Point(0, 55);
-            this.buttonDash.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonDash.Location = new System.Drawing.Point(0, 137);
             this.buttonDash.Name = "buttonDash";
-            this.buttonDash.Size = new System.Drawing.Size(157, 63);
+            this.buttonDash.Size = new System.Drawing.Size(392, 158);
             this.buttonDash.TabIndex = 1;
             this.buttonDash.Text = "Dashboard";
             this.buttonDash.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -149,10 +142,9 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(157, 55);
-            this.panel2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel2.Location = new System.Drawing.Point(392, 137);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(894, 427);
+            this.panel2.Size = new System.Drawing.Size(2235, 1068);
             this.panel2.TabIndex = 5;
             // 
             // ButtonHome
@@ -162,10 +154,9 @@
             this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonHome.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.ButtonHome.Location = new System.Drawing.Point(0, 55);
-            this.ButtonHome.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ButtonHome.Location = new System.Drawing.Point(0, 137);
             this.ButtonHome.Name = "ButtonHome";
-            this.ButtonHome.Size = new System.Drawing.Size(157, 46);
+            this.ButtonHome.Size = new System.Drawing.Size(392, 114);
             this.ButtonHome.TabIndex = 1;
             this.ButtonHome.Text = "Home";
             this.ButtonHome.UseVisualStyleBackColor = false;
@@ -177,9 +168,8 @@
             this.LogoPanel.Controls.Add(this.pictureBox1);
             this.LogoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.LogoPanel.Location = new System.Drawing.Point(0, 0);
-            this.LogoPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.LogoPanel.Name = "LogoPanel";
-            this.LogoPanel.Size = new System.Drawing.Size(157, 55);
+            this.LogoPanel.Size = new System.Drawing.Size(392, 137);
             this.LogoPanel.TabIndex = 0;
             // 
             // pictureBox1
@@ -189,9 +179,8 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 55);
+            this.pictureBox1.Size = new System.Drawing.Size(392, 137);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -200,10 +189,9 @@
             this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.HeaderPanel.Controls.Add(this.KitBoxHeader);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HeaderPanel.Location = new System.Drawing.Point(157, 0);
-            this.HeaderPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.HeaderPanel.Location = new System.Drawing.Point(392, 0);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(1366, 55);
+            this.HeaderPanel.Size = new System.Drawing.Size(3416, 137);
             this.HeaderPanel.TabIndex = 1;
             // 
             // KitBoxHeader
@@ -214,10 +202,9 @@
             this.KitBoxHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KitBoxHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
             this.KitBoxHeader.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.KitBoxHeader.Location = new System.Drawing.Point(615, 14);
-            this.KitBoxHeader.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.KitBoxHeader.Location = new System.Drawing.Point(1538, 36);
             this.KitBoxHeader.Name = "KitBoxHeader";
-            this.KitBoxHeader.Size = new System.Drawing.Size(88, 29);
+            this.KitBoxHeader.Size = new System.Drawing.Size(209, 69);
             this.KitBoxHeader.TabIndex = 0;
             this.KitBoxHeader.Text = "KitBox";
             // 
@@ -228,10 +215,9 @@
             this.panel1.Controls.Add(this.textBoxSubscribe);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(157, 435);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel1.Location = new System.Drawing.Point(392, 1865);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 43);
+            this.panel1.Size = new System.Drawing.Size(3416, 107);
             this.panel1.TabIndex = 4;
             // 
             // button2
@@ -242,10 +228,9 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(75)))), ((int)(((byte)(19)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(852, 11);
-            this.button2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button2.Location = new System.Drawing.Point(2129, 27);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 24);
+            this.button2.Size = new System.Drawing.Size(171, 59);
             this.button2.TabIndex = 2;
             this.button2.Text = "Submit";
             this.button2.UseVisualStyleBackColor = false;
@@ -253,10 +238,9 @@
             // textBoxSubscribe
             // 
             this.textBoxSubscribe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxSubscribe.Location = new System.Drawing.Point(694, 15);
-            this.textBoxSubscribe.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxSubscribe.Location = new System.Drawing.Point(1735, 38);
             this.textBoxSubscribe.Name = "textBoxSubscribe";
-            this.textBoxSubscribe.Size = new System.Drawing.Size(151, 20);
+            this.textBoxSubscribe.Size = new System.Drawing.Size(371, 38);
             this.textBoxSubscribe.TabIndex = 1;
             this.textBoxSubscribe.Text = "example@mail.com";
             this.textBoxSubscribe.Click += new System.EventHandler(this.PlaceHolderText);
@@ -269,57 +253,44 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(520, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Location = new System.Drawing.Point(1299, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 17);
+            this.label1.Size = new System.Drawing.Size(370, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Subscribe NewsLetter";
-            // 
-            // homePage3
-            // 
-            this.homePage3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.homePage3.Location = new System.Drawing.Point(157, 744);
-            this.homePage3.Margin = new System.Windows.Forms.Padding(0);
-            this.homePage3.Name = "homePage3";
-            this.homePage3.Size = new System.Drawing.Size(1366, 689);
-            this.homePage3.TabIndex = 6;
             // 
             // creation2
             // 
             this.creation2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.creation2.Location = new System.Drawing.Point(157, 55);
-            this.creation2.Margin = new System.Windows.Forms.Padding(0);
+            this.creation2.Location = new System.Drawing.Point(392, 137);
             this.creation2.Name = "creation2";
-            this.creation2.Size = new System.Drawing.Size(1366, 689);
+            this.creation2.Size = new System.Drawing.Size(3416, 1722);
             this.creation2.TabIndex = 5;
             this.creation2.Visible = false;
             // 
-            // cartPage1
+            // homePage3
             // 
-            this.cartPage1.Location = new System.Drawing.Point(376, 57);
-            this.cartPage1.Margin = new System.Windows.Forms.Padding(1);
-            this.cartPage1.Name = "cartPage1";
-            this.cartPage1.Size = new System.Drawing.Size(839, 442);
-            this.cartPage1.TabIndex = 7;
-            this.cartPage1.Visible = false;
+            this.homePage3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.homePage3.Location = new System.Drawing.Point(392, 1859);
+            this.homePage3.Name = "homePage3";
+            this.homePage3.Size = new System.Drawing.Size(3416, 1722);
+            this.homePage3.TabIndex = 6;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1523, 478);
-            this.Controls.Add(this.cartPage1);
+            this.ClientSize = new System.Drawing.Size(3808, 1972);
             this.Controls.Add(this.homePage3);
             this.Controls.Add(this.creation2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.SidePanel);
             this.ForeColor = System.Drawing.SystemColors.Control;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.MinimumSize = new System.Drawing.Size(777, 439);
+            this.MaximumSize = new System.Drawing.Size(3840, 2060);
+            this.MinimumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "Dashboard";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -354,7 +325,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;        
         private Creation creation2;
         private HomePage homePage3;
-        private CartPage cartPage1;
     }
 }
 
