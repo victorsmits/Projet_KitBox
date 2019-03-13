@@ -12,18 +12,19 @@ using SqlOledb;
 
 namespace interface_Magasinier
 {
-    public partial class SupplierWizard : UserControl
+    public partial class ClientWizard : UserControl
     {
-        OleDbDataReader dr;
-        public SupplierWizard()
+        public ClientWizard()
         {
             InitializeComponent();
         }
+        OleDbDataReader dr;
 
         private void loadList(object sender, EventArgs e) //Connection to the DB and loading the data into the box
         {
             SqlOledb.SqlOledb.connection("C:\\Users\\dtheo\\Documents\\GitHub\\Projet_KitBox\\Database\\DB_Lespieces.accdb;");
             Loaddata();
+            
         }
 
 
@@ -32,6 +33,14 @@ namespace interface_Magasinier
             IdZipList.Items.Clear();
             ZipList.Items.Clear();
             CityList.Items.Clear();
+            IdClientList.Items.Clear();
+            NameClientList.Items.Clear();
+            EmailClientList.Items.Clear();
+            StreetClientList.Items.Clear();
+            NumberClientList.Items.Clear();
+            PhoneClient.Items.Clear();
+            ZipClientList.Items.Clear();
+
 
             try
             {
@@ -50,6 +59,26 @@ namespace interface_Magasinier
                 }
                 dr.Close();
                 SqlOledb.SqlOledb.cn.Close();
+
+                 q = "select * from ClientDetail";
+                SqlOledb.SqlOledb.cmd.CommandText = q; // execution of a SQL instruction
+                SqlOledb.SqlOledb.cn.Open();
+                dr = SqlOledb.SqlOledb.cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                       IdClientList.Items.Add(dr[0].ToString());
+                       NameClientList.Items.Add(dr[1].ToString());
+                       EmailClientList.Items.Add(dr[6].ToString());
+                       StreetClientList.Items.Add(dr[2].ToString());
+                       NumberClientList.Items.Add(dr[3].ToString());
+                       PhoneClient.Items.Add(dr[5].ToString());
+                       ZipClientList.Items.Add(dr[8].ToString());
+                    }
+                }
+                dr.Close();
+                SqlOledb.SqlOledb.cn.Close();
             }
             catch (Exception e)
             {
@@ -57,10 +86,24 @@ namespace interface_Magasinier
                 MessageBox.Show(e.Message.ToString());
             }
         }
+  
+        private void ClientlistBox_Click(object sender, EventArgs e)
+        {
+            ListBox l = sender as ListBox;
+            if (l.SelectedIndex != -1)
+            {
+                IdClientList.SelectedIndex = l.SelectedIndex;
+                NameClientList.SelectedIndex = l.SelectedIndex;
+                EmailClientList.SelectedIndex = l.SelectedIndex;
+                StreetClientList.SelectedIndex = l.SelectedIndex;
+                NumberClientList.SelectedIndex = l.SelectedIndex;
+                ZipClientList.SelectedIndex = l.SelectedIndex;
+                PhoneClient.SelectedIndex = l.SelectedIndex;
 
-        
+            }
+        }
 
-        private void listBox_Click(object sender, EventArgs e)
+        private void ziplistBox_Click(object sender, EventArgs e)
         {
             ListBox l = sender as ListBox;
             if (l.SelectedIndex != -1)
@@ -75,22 +118,23 @@ namespace interface_Magasinier
 
         private void finishButton_Click(object sender, EventArgs e)
         {
-            string rsq = "INSERT INTO Fournisseur (Référence,Nom,Rue,Numero,FK_CodePostal) VALUES ('"
-                                + RefTextBox.Text.ToString() + "','"
-                                + NameTextBox.Text.ToString() +"','"
+            string rsq = "INSERT INTO Client (Nom,Email,Rue,Numero,Telephone,FK_CodePostal) VALUES ('"
+                                + NameTextBox.Text.ToString() + "','"
+                                + MailTextBox.Text.ToString() + "','"
                                 + StreetTextBox.Text.ToString() + "','"
                                 + NumbertextBox.Text.ToString() + "','"
+                                + PhoneNumberBox.Text.ToString() + "','"
                                 + ZipTextBox.Text.ToString() + "')";
 
             SqlOledb.SqlOledb.SqlRequest(rsq);
- 
             Loaddata();
-            RefTextBox.Text = "";
+            MailTextBox.Text = "";
             NameTextBox.Text = "";
             StreetTextBox.Text = "";
             NumbertextBox.Text = "";
+            PhoneNumberBox.Text = "";
             ZipTextBox.Text = "";
-            MessageBox.Show("Congrats! You added a new supplier");
+            MessageBox.Show("Congrats! You added a new Zip Code");
 
         }
 
@@ -101,12 +145,13 @@ namespace interface_Magasinier
                                 + CityBox.Text.ToString() + "')";
 
             SqlOledb.SqlOledb.SqlRequest(rsq);
-           
             Loaddata();
             ZipBox.Text = "";
             CityBox.Text = "";
-            MessageBox.Show("Congrats! You added a new zip");
+            MessageBox.Show("Congrats! You added a new Client");
 
         }
+
+        
     }
 }

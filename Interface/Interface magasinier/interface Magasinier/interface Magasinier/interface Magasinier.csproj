@@ -90,6 +90,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientWizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientWizard.Designer.cs">
+      <DependentUpon>ClientWizard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="SupplierWizard.Designer.cs">
       <DependentUpon>SupplierWizard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClientWizard.resx">
+      <DependentUpon>ClientWizard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
