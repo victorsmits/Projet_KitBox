@@ -1,0 +1,10 @@
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/bin/Debug/testOleDb.exe
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/bin/Debug/testOleDb.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/bin/Debug/SqlOledb.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/bin/Debug/SqlOledb.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/bin/Debug/SqlOledb.dll.config
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.csprojAssemblyReference.cache
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.csproj.CoreCompileInputs.cache
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.csproj.CopyComplete
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.exe
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.pdb

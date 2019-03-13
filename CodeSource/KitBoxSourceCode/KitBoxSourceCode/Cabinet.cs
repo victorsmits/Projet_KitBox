@@ -50,7 +50,7 @@ namespace KitBoxSourceCode
             string PartList = "";
             foreach (CabinetFloor elem in StorageBoxes)
             {
-                PartList += elem.ShowPieces();
+                PartList += "\nFloor " + StorageBoxes.IndexOf(elem) + ":\n" + elem.ShowPieces();
             }
             return PartList;
         }
