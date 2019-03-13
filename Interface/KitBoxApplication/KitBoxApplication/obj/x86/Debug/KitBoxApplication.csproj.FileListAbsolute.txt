@@ -14,3 +14,4 @@ C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\Kit
 C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
 C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.exe
 C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.csprojAssemblyReference.cache

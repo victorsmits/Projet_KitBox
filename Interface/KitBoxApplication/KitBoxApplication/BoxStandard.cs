@@ -67,34 +67,17 @@ namespace KitBoxApplication
             LoadDataDoor();
         }
 
-        // Loading data from data base 
-        private void LoadData()
+        // function model for loadData
+        private void loadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
         {
-            comboBoxHeight.Items.Clear();
-            comboBoxDepth.Items.Clear();
-            comboBoxWidth.Items.Clear();
-            comboBoxColorAngles.Items.Clear();
-            comboBoxColorIf1.Items.Clear();
-            comboBoxColorS1.Items.Clear();
-            comboBoxColorS2.Items.Clear();
-            comboBoxColorS3.Items.Clear();
-            comboBoxColorS4.Items.Clear();
-            comboBoxColorS5.Items.Clear();
-            comboBoxColorS6.Items.Clear();
-            comboBoxColorS7.Items.Clear();
-            comboBoxColorSA.Items.Clear();
-            comboBoxDoorMatBox1.Items.Clear();
-            comboBoxDoorMatBox2.Items.Clear();
-            comboBoxDoorMatBox3.Items.Clear();
-            comboBoxDoorMatBox4.Items.Clear();
-            comboBoxDoorMatBox5.Items.Clear();
-            comboBoxDoorMatBox6.Items.Clear();
-            comboBoxDoorMatBox7.Items.Clear();
+            foreach (System.Windows.Forms.ComboBox i in m)
+            {
+                i.Items.Clear();
+            }
             try
             {
                 var count = numericUpDownQuantity.Value;
-                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND division LIKE '" + count + "'";
+                string q = n;
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -102,7 +85,10 @@ namespace KitBoxApplication
                 {
                     while (dr.Read())
                     {
-                        comboBoxHeight.Items.Add(dr[0].ToString());                        
+                        foreach (System.Windows.Forms.ComboBox i in m)
+                        {
+                            i.Items.Add(dr[0].ToString());
+                        }
                     }
                 }
                 dr.Close();
@@ -114,235 +100,106 @@ namespace KitBoxApplication
                 MessageBox.Show(e.Message.ToString());
             }
         }
-        
-        // Loading Height data from data base 
-        private void LoadDataHeight() 
+
+        // Loading data from data base 
+        private void LoadData()
         {
-            comboBoxHeight.Items.Clear();            
-            try
-            {                
-                var count = numericUpDownQuantity.Value;                
-                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND division LIKE '" + count + "'" ;
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxHeight.Items.Add(dr[0].ToString());                        
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
-        }
+            System.Windows.Forms.ComboBox[] list = {
+                comboBoxHeight,
+                comboBoxDepth,
+                comboBoxWidth,
+                comboBoxColorAngles,
+                comboBoxColorIf1,
+                comboBoxColorS1,
+                comboBoxColorS2,
+                comboBoxColorS3,
+                comboBoxColorS4,
+                comboBoxColorS5,
+                comboBoxColorS6,
+                comboBoxColorS7,
+                comboBoxColorSA,
+                comboBoxDoorMatBox1,
+                comboBoxDoorMatBox2,
+                comboBoxDoorMatBox3,
+                comboBoxDoorMatBox4,
+                comboBoxDoorMatBox5,
+                comboBoxDoorMatBox6,
+                comboBoxDoorMatBox7
+            };
+            var count = numericUpDownQuantity.Value;
+            loadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'");
+        }   
+
+        // Loading Height data from data base
+        private void LoadDataHeight()
+        {
+            System.Windows.Forms.ComboBox[] list = { comboBoxHeight };
+            var count = numericUpDownQuantity.Value;
+            loadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " + "AND division LIKE '" + count + "'");
+        }        
 
         // Loading Width data from data base if cabinet without doors
         private void LoadDataWidth()
-        {                        
-            comboBoxWidth.Items.Clear();
-            try
-            {
-                var height = comboBoxHeight.SelectedValue;
-
-                string q = "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' "; //+
-                   // "AND hauteur LIKE '" + height + "'";
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxWidth.Items.Add(dr[0].ToString());                        
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
+        {
+            System.Windows.Forms.ComboBox[] list = {comboBoxWidth};
+            loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
         }
 
         // Loading Width data from data base if cabinet with doors
         private void LoadDataWidthDoor()
         {
-            comboBoxWidth.Items.Clear();
-            try
-            {                
-                string q = "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ";                                                                                
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxWidth.Items.Add(dr[0].ToString());
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
+            System.Windows.Forms.ComboBox[] list = {comboBoxWidth};
+            loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ");           
         }
 
         // Loading Depth data from data base 
         private void LoadDataDepth()
-        {            
-            comboBoxDepth.Items.Clear();            
-            try
-            {
-                var count = numericUpDownQuantity.Value;
-                string q = "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' "; 
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxDepth.Items.Add(dr[0].ToString());
-                        //listBox2.Items.Add(dr[0].ToString());
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
+        {
+            System.Windows.Forms.ComboBox[] list = {comboBoxDepth};            
+            loadDataGeneral(list, "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ");
         }
 
         // Loading Angle Color data from data base 
         private void LoadDataAngleColor()
-        {            
-            comboBoxColorAngles.Items.Clear();            
-            try
-            {
-                var count = numericUpDownQuantity.Value;
-                string q = "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND division LIKE '" + count + "'";
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxColorAngles.Items.Add(dr[0].ToString());
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
+        {
+            System.Windows.Forms.ComboBox[] list = {comboBoxColorAngles};
+            var count = numericUpDownQuantity.Value;
+            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'");            
         }
 
         // Loading Box Color data from data base 
         private void LoadDataBoxColor()
-        {            
-            comboBoxColorIf1.Items.Clear();
-            comboBoxColorS1.Items.Clear();
-            comboBoxColorS2.Items.Clear();
-            comboBoxColorS3.Items.Clear();
-            comboBoxColorS4.Items.Clear();
-            comboBoxColorS5.Items.Clear();
-            comboBoxColorS6.Items.Clear();
-            comboBoxColorS7.Items.Clear();
-            comboBoxColorSA.Items.Clear();            
-            try
-            {
-                var count = numericUpDownQuantity.Value;
-                string q = "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'PA%' ";
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxColorIf1.Items.Add(dr[0].ToString());
-                        comboBoxColorS1.Items.Add(dr[0].ToString());
-                        comboBoxColorS2.Items.Add(dr[0].ToString());
-                        comboBoxColorS3.Items.Add(dr[0].ToString());
-                        comboBoxColorS4.Items.Add(dr[0].ToString());
-                        comboBoxColorS5.Items.Add(dr[0].ToString());
-                        comboBoxColorS6.Items.Add(dr[0].ToString());
-                        comboBoxColorS7.Items.Add(dr[0].ToString());
-                        comboBoxColorSA.Items.Add(dr[0].ToString());                        
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
+        {
+            System.Windows.Forms.ComboBox[] list = {                
+                comboBoxColorIf1,
+                comboBoxColorS1,
+                comboBoxColorS2,
+                comboBoxColorS3,
+                comboBoxColorS4,
+                comboBoxColorS5,
+                comboBoxColorS6,
+                comboBoxColorS7,
+                comboBoxColorSA,
+            };
+            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'PA%' ");            
         }
 
         // Loading Door Material data from data base 
         private void LoadDataDoor()
         {
-            comboBoxDoorMatIf1.Items.Clear();
-            comboBoxDoorMatBox1.Items.Clear();
-            comboBoxDoorMatBox2.Items.Clear();
-            comboBoxDoorMatBox3.Items.Clear();
-            comboBoxDoorMatBox4.Items.Clear();
-            comboBoxDoorMatBox5.Items.Clear();
-            comboBoxDoorMatBox6.Items.Clear();
-            comboBoxDoorMatBox7.Items.Clear();
-            try
-            {
-                var count = numericUpDownQuantity.Value;
-                string q = "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'POR%' ";
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxDoorMatIf1.Items.Add(dr[0].ToString());
-                        comboBoxDoorMatBox1.Items.Add(dr[0].ToString());
-                        comboBoxDoorMatBox2.Items.Add(dr[0].ToString());
-                        comboBoxDoorMatBox3.Items.Add(dr[0].ToString());
-                        comboBoxDoorMatBox4.Items.Add(dr[0].ToString());
-                        comboBoxDoorMatBox5.Items.Add(dr[0].ToString());
-                        comboBoxDoorMatBox6.Items.Add(dr[0].ToString());
-                        comboBoxDoorMatBox7.Items.Add(dr[0].ToString());
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
+            System.Windows.Forms.ComboBox[] list = {
+                comboBoxDoorMatIf1,
+                comboBoxDoorMatBox1,
+                comboBoxDoorMatBox2,
+                comboBoxDoorMatBox3,
+                comboBoxDoorMatBox4,
+                comboBoxDoorMatBox5,
+                comboBoxDoorMatBox6,
+                comboBoxDoorMatBox7
+            };
+            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'POR%' ");           
         }
 
         // function to make appear color choice for all the boxes at once and door choice
@@ -642,11 +499,11 @@ namespace KitBoxApplication
         private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
         {
             // TODO : sth to change text next to combobox containing height of the box
-            var height = comboBoxHeight.SelectedValue;
-            //var nbrBox = numericUpDownQuantity.Value;
-            //int boxHeight = ((int)height - (int)nbrBox * 4) / (int)nbrBox;
-            //string dimension = nbrBox + "x" + boxHeight.ToString() + "(h)";
-            //labelBoxHeight.Text = height.ToString();
+            var height = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
+            var nbrBox = Int32.Parse(numericUpDownQuantity.Value.ToString());
+            int boxHeight = (height - nbrBox * 4) / nbrBox;
+            string dimension = nbrBox + "x" + boxHeight.ToString() + "(h)";
+            labelBoxHeight.Text = dimension.ToString();
         }
     }
 }
