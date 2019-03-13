@@ -81,7 +81,6 @@
     <Reference Include="MySql.Data">
       <HintPath>packages\MySql.Data.8.0.15\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="System.ComponentModel" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -89,6 +88,12 @@
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Transactions" />
+    <Reference Include="lcpi.lib.net4_6">
+      <HintPath>packages\lcpi.lib.2.2.0.1687\lib\net46\lcpi.lib.net4_6.dll</HintPath>
+    </Reference>
+    <Reference Include="lcpi.data.oledb.net4_6">
+      <HintPath>packages\lcpi.data.oledb.1.11.0.3673\lib\net46\lcpi.data.oledb.net4_6.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
@@ -96,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

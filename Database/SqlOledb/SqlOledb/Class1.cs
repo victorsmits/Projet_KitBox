@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
+using System.Data;
 
 namespace SqlOledb
 {
@@ -15,7 +16,7 @@ namespace SqlOledb
 
 		public static void connection(string path)
 		{
-			cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + path + ";";
+			cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.13.1; Data Source=" + path + ";";
 			cmd.Connection = cn;
 		}
 

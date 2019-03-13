@@ -20,9 +20,9 @@ namespace interface_Magasinier
             InitializeComponent();
         }
 
-        private void Form_Load(object sender, EventArgs e) //Connection to the DB and loading the data into the box
+        private void loadList(object sender, EventArgs e) //Connection to the DB and loading the data into the box
         {
-            SqlOledb.SqlOledb.connection("C:\\Users\\Geryon\\Documents\\GitHub\\Projet_KitBox\\Database\\DB_Lespieces.accdb;");
+            SqlOledb.SqlOledb.connection("C:\\Users\\dtheo\\Documents\\GitHub\\Projet_KitBox\\Database\\DB_Lespieces.accdb;");
             Loaddata();
         }
 
@@ -58,10 +58,7 @@ namespace interface_Magasinier
             }
         }
 
-        private void LoadList(object sender, EventArgs e) //loading data
-        {
-            Loaddata();
-        }
+        
 
         private void listBox_Click(object sender, EventArgs e)
         {
@@ -86,7 +83,7 @@ namespace interface_Magasinier
                                 + ZipTextBox.Text.ToString() + "')";
 
             SqlOledb.SqlOledb.SqlRequest(rsq);
-            MessageBox.Show(rsq);
+ 
             Loaddata();
             RefTextBox.Text = "";
             NameTextBox.Text = "";
@@ -104,7 +101,7 @@ namespace interface_Magasinier
                                 + CityBox.Text.ToString() + "')";
 
             SqlOledb.SqlOledb.SqlRequest(rsq);
-            MessageBox.Show(rsq);
+           
             Loaddata();
             ZipBox.Text = "";
             CityBox.Text = "";
