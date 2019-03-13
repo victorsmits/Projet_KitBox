@@ -46,7 +46,6 @@
             this.slidePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.slidePic.TabIndex = 4;
             this.slidePic.TabStop = false;
-            this.slidePic.Click += new System.EventHandler(this.slidePic_Click);
             // 
             // timerSlider
             // 

@@ -20,7 +20,7 @@ namespace KitBoxApplication
             // enables design of tabheader
             this.tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabPageBox1_DrawItem);
-           
+
             EnablePage(tabPageBox2, false);
             EnablePage(tabPageBox3, false);
             EnablePage(tabPageBox4, false);
@@ -28,7 +28,7 @@ namespace KitBoxApplication
             EnablePage(tabPageBox6, false);
             EnablePage(tabPageBox7, false);
 
-            
+
         }
 
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
@@ -45,7 +45,7 @@ namespace KitBoxApplication
             LoadDataDepth();
         }
 
-        // Loading Angle Color data from data base 
+        // Loading Angle Color data from data base
         private void LoadDataAngleColor()
         {
             comboBoxColorAngles.Items.Clear();
@@ -74,14 +74,14 @@ namespace KitBoxApplication
             }
         }
 
-        // Loading Depth data from data base 
+        // Loading Depth data from data base
         private void LoadDataDepth()
         {
-            
+
             creationScratch.ComboBoxDepth.Items.Clear();
+            comboBoxHeight.Items.Clear();
             try
             {
-                var count = numericUpDownQuantity.Value;
                 string q = "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ";
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
@@ -90,7 +90,8 @@ namespace KitBoxApplication
                 {
                     while (dr.Read())
                     {
-                        creationScratch.ComboBoxDepth.Items.Add(dr[0].ToString());                        
+                        creationScratch.ComboBoxDepth.Items.Add(dr[0].ToString());
+                        comboBoxHeight.Items.Add(dr[0].ToString());
                     }
                 }
                 dr.Close();
@@ -103,14 +104,14 @@ namespace KitBoxApplication
             }
         }
 
-        // -- Method to design tabheader 
+        // -- Method to design tabheader
         private void tabPageBox1_DrawItem(object sender, DrawItemEventArgs e)
         {
             TabPage page = tabControl1.TabPages[e.Index];
             Color col = Color.FromArgb(27, 29, 33);
-       
+
             e.Graphics.FillRectangle(new SolidBrush(col), e.Bounds);
-            
+
             Font font = new Font("Century Gothic", 12, FontStyle.Bold);
 
             Color myColor = Color.FromArgb(60,120,138);
@@ -148,8 +149,8 @@ namespace KitBoxApplication
         {
             int count = Convert.ToInt32(numericUpDownQuantity.Value);
             if (count > 0)
-            {                
-                EnablePage(tabPageBox2, false);                
+            {
+                EnablePage(tabPageBox2, false);
                 creationScratchInside2.Visible = false;
                 if (count > 1)
                 {
@@ -184,7 +185,7 @@ namespace KitBoxApplication
                                     if (count > 6)
                                     {
                                         EnablePage(tabPageBox7, true);
-                                        creationScratchInside7.Visible = true;                                        
+                                        creationScratchInside7.Visible = true;
                                     }
                                 }
                             }
@@ -192,7 +193,7 @@ namespace KitBoxApplication
                     }
                 }
             }
-        }        
+        }
     }
-    
+
 }

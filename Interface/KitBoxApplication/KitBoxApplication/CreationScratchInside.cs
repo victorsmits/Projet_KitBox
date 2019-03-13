@@ -40,7 +40,7 @@ namespace KitBoxApplication
         public System.Windows.Forms.ComboBox ComboBoxDepth
         {
             get { return this.comboBoxDepth; }
-            set { this.comboBoxDepth.Text = ""; }
+            set { this.comboBoxDepth = value; }
         }
     }
 }
