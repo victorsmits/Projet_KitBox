@@ -29,8 +29,8 @@ namespace KitBoxSourceCode
 
 		public override string GetDetails()
 		{
-			return "Panel -> Dimension : " + Height + " x " + Lenght
-			+ " | Coleur : " + Color + " | Stock ref : " + stockNumber;
+			return "\"Panel\" : { \"Height\": " + Height + ", \"Lenght\": " + Lenght
+			+ ", \"Coleur\": \"" + Color + "\", \"Stockref\": " + stockNumber;
 		}
 	}
 }
