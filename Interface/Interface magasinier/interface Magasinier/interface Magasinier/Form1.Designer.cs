@@ -65,8 +65,10 @@
             this.RefrenceList = new System.Windows.Forms.ListBox();
             this.IdList = new System.Windows.Forms.ListBox();
             this.AddingProduct = new System.Windows.Forms.TabPage();
-            this.productWizard1 = new interface_Magasinier.ProductWizard();
+            this.supplierWizard1 = new interface_Magasinier.SupplierWizard();
+            this.label11 = new System.Windows.Forms.Label();
             this.AddingProductLabel = new System.Windows.Forms.Label();
+            this.productWizard1 = new interface_Magasinier.ProductWizard();
             this.Tabs.SuspendLayout();
             this.stockTab.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -321,24 +323,6 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Reference :";
             //
-            // textBox2
-            //
-            /*
-            this.textBox2.Location = new System.Drawing.Point(92, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 17;
-            */
-            //
-            // textBox1
-            //
-            /*
-            this.textBox1.Location = new System.Drawing.Point(92, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 16;
-            */
-            //
             // label8
             //
             this.label8.AutoSize = true;
@@ -487,8 +471,10 @@
             // AddingProduct
             //
             this.AddingProduct.BackColor = System.Drawing.Color.Transparent;
-            this.AddingProduct.Controls.Add(this.productWizard1);
+            this.AddingProduct.Controls.Add(this.supplierWizard1);
+            this.AddingProduct.Controls.Add(this.label11);
             this.AddingProduct.Controls.Add(this.AddingProductLabel);
+            this.AddingProduct.Controls.Add(this.productWizard1);
             this.AddingProduct.Location = new System.Drawing.Point(4, 22);
             this.AddingProduct.Name = "AddingProduct";
             this.AddingProduct.Padding = new System.Windows.Forms.Padding(3);
@@ -496,13 +482,22 @@
             this.AddingProduct.TabIndex = 1;
             this.AddingProduct.Text = "Add a product";
             //
-            // productWizard1
+            // supplierWizard1
             //
-            this.productWizard1.Location = new System.Drawing.Point(36, 85);
-            this.productWizard1.Margin = new System.Windows.Forms.Padding(4);
-            this.productWizard1.Name = "productWizard1";
-            this.productWizard1.Size = new System.Drawing.Size(376, 534);
-            this.productWizard1.TabIndex = 1;
+            this.supplierWizard1.Location = new System.Drawing.Point(632, 67);
+            this.supplierWizard1.Name = "supplierWizard1";
+            this.supplierWizard1.Size = new System.Drawing.Size(601, 657);
+            this.supplierWizard1.TabIndex = 5;
+            //
+            // label11
+            //
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(628, 37);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(185, 20);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Adding a new supplier";
             //
             // AddingProductLabel
             //
@@ -513,6 +508,14 @@
             this.AddingProductLabel.Size = new System.Drawing.Size(183, 20);
             this.AddingProductLabel.TabIndex = 0;
             this.AddingProductLabel.Text = "Adding a new product";
+            //
+            // productWizard1
+            //
+            this.productWizard1.Location = new System.Drawing.Point(36, 67);
+            this.productWizard1.Margin = new System.Windows.Forms.Padding(4);
+            this.productWizard1.Name = "productWizard1";
+            this.productWizard1.Size = new System.Drawing.Size(579, 534);
+            this.productWizard1.TabIndex = 1;
             //
             // Form1
             //
@@ -581,5 +584,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label11;
+        private SupplierWizard supplierWizard1;
     }
 }
