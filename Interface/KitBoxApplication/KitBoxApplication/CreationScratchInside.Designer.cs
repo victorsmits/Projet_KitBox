@@ -259,21 +259,20 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBoxDepth;
-        private System.Windows.Forms.ComboBox comboBoxWidth;
         private System.Windows.Forms.Label labelDepth;
         private System.Windows.Forms.Label labelWidth;
-        private System.Windows.Forms.ComboBox comboBoxHeight;
         private System.Windows.Forms.Label labelHeight;
         private System.Windows.Forms.Label labelDoorYesNoIf1;
-        private System.Windows.Forms.Panel panelYesNo;
-        private System.Windows.Forms.RadioButton radioButtonYes;
-        private System.Windows.Forms.RadioButton radioButtonNo;
-        private System.Windows.Forms.ComboBox comboBoxColorIf1;
         private System.Windows.Forms.Panel panelDoorMaterial;
-        private System.Windows.Forms.ComboBox comboBoxDoorMatIf1;
         private System.Windows.Forms.Label labelDoorMatIf1;
         private System.Windows.Forms.Label labelColorBoxIf1;
+        protected System.Windows.Forms.ComboBox comboBoxWidth;
+        protected System.Windows.Forms.ComboBox comboBoxHeight;
+        protected System.Windows.Forms.Panel panelYesNo;
+        protected System.Windows.Forms.RadioButton radioButtonYes;
+        protected System.Windows.Forms.RadioButton radioButtonNo;
+        protected System.Windows.Forms.ComboBox comboBoxColorIf1;
+        protected System.Windows.Forms.ComboBox comboBoxDoorMatIf1;
+        private System.Windows.Forms.ComboBox comboBoxDepth;
     }
 }

@@ -58,13 +58,67 @@ namespace KitBoxApplication
         private void BoxStandard_Load(object sender, EventArgs e) 
         {
             cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
-            cmd.Connection = cn;            
+            cmd.Connection = cn;
+            LoadData();
+            LoadDataWidth();
+            LoadDataDepth();
+            LoadDataAngleColor();
+            LoadDataBoxColor();
+            LoadDataDoor();
         }
 
-        // Loading height data from data base 
-        private void LoaddataHeight() 
+        // Loading data from data base 
+        private void LoadData()
         {
             comboBoxHeight.Items.Clear();
+            comboBoxDepth.Items.Clear();
+            comboBoxWidth.Items.Clear();
+            comboBoxColorAngles.Items.Clear();
+            comboBoxColorIf1.Items.Clear();
+            comboBoxColorS1.Items.Clear();
+            comboBoxColorS2.Items.Clear();
+            comboBoxColorS3.Items.Clear();
+            comboBoxColorS4.Items.Clear();
+            comboBoxColorS5.Items.Clear();
+            comboBoxColorS6.Items.Clear();
+            comboBoxColorS7.Items.Clear();
+            comboBoxColorSA.Items.Clear();
+            comboBoxDoorMatBox1.Items.Clear();
+            comboBoxDoorMatBox2.Items.Clear();
+            comboBoxDoorMatBox3.Items.Clear();
+            comboBoxDoorMatBox4.Items.Clear();
+            comboBoxDoorMatBox5.Items.Clear();
+            comboBoxDoorMatBox6.Items.Clear();
+            comboBoxDoorMatBox7.Items.Clear();
+            try
+            {
+                var count = numericUpDownQuantity.Value;
+                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxHeight.Items.Add(dr[0].ToString());                        
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+        
+        // Loading Height data from data base 
+        private void LoadDataHeight() 
+        {
+            comboBoxHeight.Items.Clear();            
             try
             {                
                 var count = numericUpDownQuantity.Value;                
@@ -77,8 +131,7 @@ namespace KitBoxApplication
                 {
                     while (dr.Read())
                     {
-                        comboBoxHeight.Items.Add(dr[0].ToString());
-                        //listBox2.Items.Add(dr[0].ToString());
+                        comboBoxHeight.Items.Add(dr[0].ToString());                        
                     }
                 }
                 dr.Close();
@@ -91,16 +144,16 @@ namespace KitBoxApplication
             }
         }
 
-        // Loading height data from data base 
-        private void LoaddataWidth()
+        // Loading Width data from data base if cabinet without doors
+        private void LoadDataWidth()
         {                        
             comboBoxWidth.Items.Clear();
             try
             {
-                var count = numericUpDownQuantity.Value;
+                var height = comboBoxHeight.SelectedValue;
 
-                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND division LIKE '" + count + "'";
+                string q = "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' "; //+
+                   // "AND hauteur LIKE '" + height + "'";
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -108,8 +161,7 @@ namespace KitBoxApplication
                 {
                     while (dr.Read())
                     {
-                        comboBoxHeight.Items.Add(dr[0].ToString());
-                        //listBox2.Items.Add(dr[0].ToString());
+                        comboBoxWidth.Items.Add(dr[0].ToString());                        
                     }
                 }
                 dr.Close();
@@ -122,16 +174,41 @@ namespace KitBoxApplication
             }
         }
 
-        // Loading height data from data base 
-        private void LoaddataDepth()
+        // Loading Width data from data base if cabinet with doors
+        private void LoadDataWidthDoor()
+        {
+            comboBoxWidth.Items.Clear();
+            try
+            {                
+                string q = "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ";                                                                                
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxWidth.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
+        // Loading Depth data from data base 
+        private void LoadDataDepth()
         {            
             comboBoxDepth.Items.Clear();            
             try
             {
                 var count = numericUpDownQuantity.Value;
-
-                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND division LIKE '" + count + "'";
+                string q = "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' "; 
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -139,7 +216,7 @@ namespace KitBoxApplication
                 {
                     while (dr.Read())
                     {
-                        comboBoxHeight.Items.Add(dr[0].ToString());
+                        comboBoxDepth.Items.Add(dr[0].ToString());
                         //listBox2.Items.Add(dr[0].ToString());
                     }
                 }
@@ -153,9 +230,122 @@ namespace KitBoxApplication
             }
         }
 
+        // Loading Angle Color data from data base 
+        private void LoadDataAngleColor()
+        {            
+            comboBoxColorAngles.Items.Clear();            
+            try
+            {
+                var count = numericUpDownQuantity.Value;
+                string q = "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxColorAngles.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
+        // Loading Box Color data from data base 
+        private void LoadDataBoxColor()
+        {            
+            comboBoxColorIf1.Items.Clear();
+            comboBoxColorS1.Items.Clear();
+            comboBoxColorS2.Items.Clear();
+            comboBoxColorS3.Items.Clear();
+            comboBoxColorS4.Items.Clear();
+            comboBoxColorS5.Items.Clear();
+            comboBoxColorS6.Items.Clear();
+            comboBoxColorS7.Items.Clear();
+            comboBoxColorSA.Items.Clear();            
+            try
+            {
+                var count = numericUpDownQuantity.Value;
+                string q = "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'PA%' ";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxColorIf1.Items.Add(dr[0].ToString());
+                        comboBoxColorS1.Items.Add(dr[0].ToString());
+                        comboBoxColorS2.Items.Add(dr[0].ToString());
+                        comboBoxColorS3.Items.Add(dr[0].ToString());
+                        comboBoxColorS4.Items.Add(dr[0].ToString());
+                        comboBoxColorS5.Items.Add(dr[0].ToString());
+                        comboBoxColorS6.Items.Add(dr[0].ToString());
+                        comboBoxColorS7.Items.Add(dr[0].ToString());
+                        comboBoxColorSA.Items.Add(dr[0].ToString());                        
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
+        // Loading Door Material data from data base 
+        private void LoadDataDoor()
+        {
+            comboBoxDoorMatIf1.Items.Clear();
+            comboBoxDoorMatBox1.Items.Clear();
+            comboBoxDoorMatBox2.Items.Clear();
+            comboBoxDoorMatBox3.Items.Clear();
+            comboBoxDoorMatBox4.Items.Clear();
+            comboBoxDoorMatBox5.Items.Clear();
+            comboBoxDoorMatBox6.Items.Clear();
+            comboBoxDoorMatBox7.Items.Clear();
+            try
+            {
+                var count = numericUpDownQuantity.Value;
+                string q = "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'POR%' ";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxDoorMatIf1.Items.Add(dr[0].ToString());
+                        comboBoxDoorMatBox1.Items.Add(dr[0].ToString());
+                        comboBoxDoorMatBox2.Items.Add(dr[0].ToString());
+                        comboBoxDoorMatBox3.Items.Add(dr[0].ToString());
+                        comboBoxDoorMatBox4.Items.Add(dr[0].ToString());
+                        comboBoxDoorMatBox5.Items.Add(dr[0].ToString());
+                        comboBoxDoorMatBox6.Items.Add(dr[0].ToString());
+                        comboBoxDoorMatBox7.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
 
         // function to make appear color choice for all the boxes at once and door choice
-        //
         private void checkBoxColorYes_CheckedChanged(object sender, EventArgs e)
         {
             if (panelColorChoiceAll.Visible == true)
@@ -171,8 +361,7 @@ namespace KitBoxApplication
             }
         }
 
-        // function to make appear color choice for all boxes apart and door choice
-        //
+        // function to make appear color choice for all boxes apart and door choice        
         private void checkBoxColorNo_CheckedChanged(object sender, EventArgs e)
         {
             if (panelColorChoice.Visible == true)
@@ -191,18 +380,20 @@ namespace KitBoxApplication
         // function applied to number read on the numericUpDown
         // different groups will appear or disappear in function of how many boxes have
         // been chosen
-        // 
         private void numericUpDownQuantity_ValueChanged(object sender, EventArgs e)
         {
             int count = Convert.ToInt32(numericUpDownQuantity.Value);
-            LoaddataHeight();
+            LoadDataHeight();
+            comboBoxHeight.Text = "";
             if (count == 1)
             {
                 panelColorBoxIf1.Visible = true;
                 panelColorBoxIfN1.Visible = false;
                 panelDoorChoiceMultiple.Visible = false;
+                // resets radiobuttons
+                radioButtonNoIf2.Checked = true;
+                radioButtonNoBox1.Checked = true;
                 radioButtonNoBox2.Checked = true;
-                radioButtonNoBox4.Checked = false;
                 
             }        
             else if (count > 1)
@@ -217,6 +408,8 @@ namespace KitBoxApplication
                 // door features box 3
                 labelDoorBox3.Visible = false;
                 panelYesNoBox3.Visible = false;
+                // resets radiobuttons
+                radioButtonNoIf1.Checked = true;
                 radioButtonNoBox3.Checked = true;
                 if (count > 2)
                 {
@@ -286,8 +479,7 @@ namespace KitBoxApplication
             }
         }
 
-        // function for radiobuttons in case only 1 box
-        //
+        // function for door in case only 1 box
         private void radioButtonsYesNoIf1_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
@@ -296,16 +488,18 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYesIf1)
                 {
                     panelDoorMaterial.Visible = true;
+                    LoadDataWidthDoor();
+                    comboBoxWidth.Text = "";
                 }
                 else if (((RadioButton)sender) == radioButtonNoIf1)
                 {
                     panelDoorMaterial.Visible = false;
+                    LoadDataWidth();
                 }
             }
         }
 
-        // function radiobuttons in case multiple boxes
-        //
+        // function for doors in case multiple boxes
         private void radioButtonsYesNoIf2_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
@@ -314,16 +508,18 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYesIf2)
                 {
                     panelDoorChoicesM.Visible = true;
+                    LoadDataWidthDoor();
+                    comboBoxWidth.Text = "";
                 }
                 else if (((RadioButton)sender) == radioButtonNoIf2)
                 {
                     panelDoorChoicesM.Visible = false;
+                    LoadDataWidth();
                 }
             }
         }
 
         // function radiobuttons for door box 1
-        //
         private void radioButtonBox1_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
@@ -341,7 +537,6 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 2
-        //
         private void radioButtonBox2_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
@@ -359,7 +554,6 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 3
-        //
         private void radioButtonBox3_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
@@ -377,7 +571,6 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 4
-        //
         private void radioButtonBox4_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
@@ -395,7 +588,6 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 5
-        //
         private void radioButtonBox5_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
@@ -413,7 +605,6 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 6
-        //
         private void radioButtonBox6_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
@@ -431,7 +622,6 @@ namespace KitBoxApplication
         }
         
         // function radiobuttons for door box 7
-        //
         private void radioButtonBox7_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
@@ -448,12 +638,15 @@ namespace KitBoxApplication
             }
         }
 
+        // function to give dimension of the boxes 
         private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // TODO : sth to change text next to combobox containing height of the box
             var height = comboBoxHeight.SelectedValue;
-            var nbrBox = numericUpDownQuantity.Value;
-            
-            
+            //var nbrBox = numericUpDownQuantity.Value;
+            //int boxHeight = ((int)height - (int)nbrBox * 4) / (int)nbrBox;
+            //string dimension = nbrBox + "x" + boxHeight.ToString() + "(h)";
+            //labelBoxHeight.Text = height.ToString();
         }
     }
 }

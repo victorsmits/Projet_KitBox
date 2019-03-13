@@ -65,6 +65,7 @@
             // 
             // comboBoxColorAngles
             // 
+            this.comboBoxColorAngles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorAngles.FormattingEnabled = true;
             this.comboBoxColorAngles.Items.AddRange(new object[] {
             "Brun",
@@ -377,6 +378,7 @@
             this.Controls.Add(this.labelQuantityBox);
             this.Name = "BoxCreationScratch";
             this.Size = new System.Drawing.Size(2416, 1407);
+            this.Load += new System.EventHandler(this.BoxCreationScratch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPageBox1.ResumeLayout(false);
