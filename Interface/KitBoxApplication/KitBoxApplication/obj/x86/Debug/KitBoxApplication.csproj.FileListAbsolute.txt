@@ -37,3 +37,7 @@ C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBox
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\KitBoxSourceCode.dll.config
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\SqlOledb.pdb
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.csproj.CopyComplete
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\Newtonsoft.Json.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\SqlOledb.dll.config

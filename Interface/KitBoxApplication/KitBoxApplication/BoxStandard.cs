@@ -3,13 +3,14 @@ using System.Data.OleDb;
 using System.Windows.Forms;
 using KitBoxSourceCode;
 using System.Drawing;
+using Newtonsoft.Json.Linq;
 
 namespace KitBoxApplication
 {
     public partial class BoxStandard : UserControl
     {
 
-        Cart cart;
+        private static Cart cart;
 
         public BoxStandard()
         {
@@ -58,6 +59,8 @@ namespace KitBoxApplication
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
         OleDbConnection cn = new OleDbConnection();  // cn for connection
         OleDbDataReader dr;
+
+        public static Cart Cart { get => cart; set => cart = value; }
 
         // Connection to the DB and loading the data into the box
         private void BoxStandard_Load(object sender, EventArgs e)
@@ -697,6 +700,7 @@ namespace KitBoxApplication
                     break;
             }
 
+            JObject test = cart.ShowCart();
             cart.AddToCart(cabinet);
             
         }
