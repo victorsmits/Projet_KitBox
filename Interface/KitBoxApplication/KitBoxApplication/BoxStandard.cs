@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Data.OleDb;
 using System.Windows.Forms;
+using KitBoxSourceCode;
+using System.Drawing;
 
 namespace KitBoxApplication
 {
     public partial class BoxStandard : UserControl
     {
+
+        Cart cart;
+
         public BoxStandard()
         {
             InitializeComponent();
@@ -57,7 +62,7 @@ namespace KitBoxApplication
         // Connection to the DB and loading the data into the box
         private void BoxStandard_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadData();
             LoadDataWidth();
@@ -495,15 +500,114 @@ namespace KitBoxApplication
             }
         }
 
+        //function that give the height of each box
+        private int ProcessHeightForEachBox(int heightToGive, int nbrBoxToGive)
+        {
+            var height = heightToGive;
+            var nbrBox = nbrBoxToGive;
+            int boxHeight = (height - nbrBox * 4) / nbrBox;
+            return boxHeight;
+        }
+
         // function to give dimension of the boxes
         private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
         {
             // TODO : sth to change text next to combobox containing height of the box
             var height = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
             var nbrBox = Int32.Parse(numericUpDownQuantity.Value.ToString());
-            int boxHeight = (height - nbrBox * 4) / nbrBox;
+            int boxHeight = ProcessHeightForEachBox(height,nbrBox);
             string dimension = nbrBox + "x" + boxHeight.ToString() + "(h)";
             labelBoxHeight.Text = dimension.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            if (cart == null)
+            {
+                cart = new Cart();
+            }
+
+            Cabinet cabinet = new Cabinet();
+
+            int qty = (int)numericUpDownQuantity.Value;
+            int totalHeight = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
+            int heightForEach = ProcessHeightForEachBox(totalHeight,qty);
+            int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
+            string angleColor = comboBoxColorAngles.SelectedItem.ToString();
+            string color1;
+            string color2;
+            string color3;
+            string color4;
+            string color5;
+            string color6;
+            string color7;
+
+            if (checkBoxColorYes.Checked == true)
+            {
+                color1 = comboBoxColorS1.SelectedItem.ToString();
+                color2 = comboBoxColorS2.SelectedItem.ToString();
+                color3 = comboBoxColorS3.SelectedItem.ToString(); 
+                color4 = comboBoxColorS4.SelectedItem.ToString();
+                color5 = comboBoxColorS5.SelectedItem.ToString();
+                color6 = comboBoxColorS6.SelectedItem.ToString();
+                color7 = comboBoxColorS7.SelectedItem.ToString();
+            }
+            else
+            {
+                color1 = comboBoxColorIf1.SelectedItem.ToString();
+                color2 = comboBoxColorIf1.SelectedItem.ToString();
+                color3 = comboBoxColorIf1.SelectedItem.ToString();
+                color4 = comboBoxColorIf1.SelectedItem.ToString();
+                color5 = comboBoxColorIf1.SelectedItem.ToString();
+                color6 = comboBoxColorIf1.SelectedItem.ToString();
+                color7 = comboBoxColorIf1.SelectedItem.ToString();
+            }
+
+
+            //All the boxes we can get
+            
+            CabinetFloor box1 = new CabinetFloor(heightForEach, width, depth,,,color1);
+            CabinetFloor box2 = new CabinetFloor(heightForEach, width, depth,,,color2);
+            CabinetFloor box3 = new CabinetFloor(heightForEach, width, depth,,,color3);
+            CabinetFloor box4 = new CabinetFloor(heightForEach, width, depth,,,color4);
+            CabinetFloor box5 = new CabinetFloor(heightForEach, width, depth,,,color5);
+            CabinetFloor box6 = new CabinetFloor(heightForEach, width, depth,,,color6);
+            CabinetFloor box7 = new CabinetFloor(heightForEach, width, depth,,,color7);
+            
+            
+            
+
+            switch (qty)
+            {
+
+                case 1:
+                    //cabinet.AddAngles(color);
+                    //cabinet.AddStorageBox();
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+
+                    break;
+                case 6:
+
+                    break;
+                case 7:
+
+                    break;
+
+            }
+            cart.AddToCart(cabinet);
+            
         }
     }
 }
