@@ -51,12 +51,12 @@ namespace KitBoxApplication
             creation2.Visible = false;
             cartPage1.Visible = true;
 
-            MessageBox.Show(creation2.Controls[0].GetType().ToString());
             //MessageBox.Show(creation2.Controls.GetChildIndex());
-            MessageBox.Show(creation2.Controls[0].Controls[5].GetType().ToString());
+            //MessageBox.Show(creation2.Controls[0].Controls[5].Cart);
             //creation2.Controls[0].Controls[5];
 
-            Cart Test = BoxStandard.Cart;
+            Cart cartToProcess = BoxStandard.Cart;
+            MessageBox.Show(cartToProcess.ShowCart().ToString());
 
         }
     }

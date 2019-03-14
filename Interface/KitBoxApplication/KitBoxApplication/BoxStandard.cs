@@ -65,7 +65,7 @@ namespace KitBoxApplication
         // Connection to the DB and loading the data into the box
         private void BoxStandard_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadData();
             LoadDataWidth();
@@ -699,10 +699,11 @@ namespace KitBoxApplication
                     cabinet.AddStorageBox(box7);
                     break;
             }
-
-            JObject test = cart.ShowCart();
             cart.AddToCart(cabinet);
-            
+
+            //JObject test = cart.ShowCart();
+            //MessageBox.Show(test.ToString());
+
         }
     }
 }
