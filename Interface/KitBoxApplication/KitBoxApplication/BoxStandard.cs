@@ -9,8 +9,6 @@ namespace KitBoxApplication
 {
     public partial class BoxStandard : UserControl
     {
-
-
         public BoxStandard()
         {
             InitializeComponent();
@@ -74,7 +72,7 @@ namespace KitBoxApplication
         }
 
         // function model for loadData
-        private void loadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
+        public void loadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
         {
             foreach (System.Windows.Forms.ComboBox i in m)
             {

@@ -31,12 +31,12 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYes)
                 {
                     panelDoorMaterial.Visible = true;
-                    creation.LoadDataWidth();
+                    //creation.LoadDataWidth();
                 }
                 else if (((RadioButton)sender) == radioButtonNo)
                 {
                     panelDoorMaterial.Visible = false;
-                    creation.LoadDataWidth();
+                    //creation.LoadDataWidth();
                 }
             }
         }

@@ -27,81 +27,47 @@ namespace KitBoxApplication
             EnablePage(tabPageBox5, false);
             EnablePage(tabPageBox6, false);
             EnablePage(tabPageBox7, false);
-
-
         }
 
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
         OleDbConnection cn = new OleDbConnection();  // cn for connection
         OleDbDataReader dr;
 
-        CreationScratchInside creationScratch = new CreationScratchInside();
+        //CreationScratchInside creationScratch = new CreationScratchInside();
 
         private void BoxCreationScratch_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadDataAngleColor();
             LoadDataDepth();
         }
 
+        BoxStandard loadData = new BoxStandard();
+
         // Loading Angle Color data from data base
         private void LoadDataAngleColor()
         {
-            comboBoxColorAngles.Items.Clear();
-            try
-            {
-                var count = numericUpDownQuantity.Value;
-                string q = "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND division LIKE '" + count + "'";
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxColorAngles.Items.Add(dr[0].ToString());
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
+            System.Windows.Forms.ComboBox[] list = { comboBoxColorAngles };
+            var count = numericUpDownQuantity.Value;
+            loadData.loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'");            
         }
 
         // Loading Depth data from data base
         private void LoadDataDepth()
         {
-
-            creationScratch.ComboBoxDepth.Items.Clear();
-            //comboBoxHeight.Items.Clear();
-            try
-            {
-                string q = "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ";
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        creationScratch.ComboBoxDepth.Items.Add(dr[0].ToString());
-                        //comboBoxHeight.Items.Add(dr[0].ToString());
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
+            System.Windows.Forms.ComboBox[] list = {
+                creationScratchInside1.ComboBoxDepth,
+                creationScratchInside2.ComboBoxDepth,
+                creationScratchInside3.ComboBoxDepth,
+                creationScratchInside4.ComboBoxDepth,
+                creationScratchInside5.ComboBoxDepth,
+                creationScratchInside6.ComboBoxDepth,
+                creationScratchInside7.ComboBoxDepth,
+            };
+            var count = numericUpDownQuantity.Value;
+            loadData.loadDataGeneral(list, "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ");   
         }
 
         // -- Method to design tabheader
