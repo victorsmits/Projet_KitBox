@@ -348,17 +348,17 @@
             //
             // comboBoxHeight
             //
-            this.comboBoxHeight.FormattingEnabled = true;
-            this.comboBoxHeight.Items.AddRange(new object[] {
-            "Brun",
-            "Blanc",
-            "Galvinisé",
-            "Noir"});
-            this.comboBoxHeight.Location = new System.Drawing.Point(868, 200);
-            this.comboBoxHeight.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.comboBoxHeight.Name = "comboBoxHeight";
-            this.comboBoxHeight.Size = new System.Drawing.Size(200, 39);
-            this.comboBoxHeight.TabIndex = 75;
+            //this.comboBoxHeight.FormattingEnabled = true;
+            //this.comboBoxHeight.Items.AddRange(new object[] {
+            //"Brun",
+            //"Blanc",
+            //"Galvinisé",
+            //"Noir"});
+            //this.comboBoxHeight.Location = new System.Drawing.Point(868, 200);
+            //this.comboBoxHeight.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            //this.comboBoxHeight.Name = "comboBoxHeight";
+            //this.comboBoxHeight.Size = new System.Drawing.Size(200, 39);
+            //this.comboBoxHeight.TabIndex = 75;
             //
             // comboBoxColorAngles
             //
