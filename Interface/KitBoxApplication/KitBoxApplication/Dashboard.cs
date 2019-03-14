@@ -7,7 +7,13 @@ namespace KitBoxApplication
 {
     public partial class Dashboard : Form
     {
-        
+        private static JObject jsonCart;
+
+        public static JObject JsonCart
+        {
+            get => jsonCart;
+            set => jsonCart = value;
+        }
 
         public Dashboard()
         {
@@ -56,8 +62,13 @@ namespace KitBoxApplication
             //MessageBox.Show(creation2.Controls[0].Controls[5].Cart);
             //creation2.Controls[0].Controls[5];
 
-            
 
+            Cart cartToProcess = CartPage.Cart;
+            if (cartToProcess != null)
+            {
+                jsonCart = cartToProcess.ShowCart();
+                MessageBox.Show(jsonCart.ToString());
+            }
 
         }
     }
