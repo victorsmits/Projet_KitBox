@@ -5,16 +5,16 @@ namespace KitBoxSourceCode
 {
     public class Box : GenericStorageBox
     {
-        private Dictionary<ICompoment, int> components;
+        private Dictionary<IComponent, int> components;
 
-        private readonly int Width;
+        private readonly int boxWidth;
 
-        public Dictionary<ICompoment, int> GetCompoments => components;
+        public Dictionary<IComponent, int> GetComponents => components;
 
         public Box(int len, int height, int width, string col) : base(len, height)
         {
-            components = new Dictionary<ICompoment, int>();
-            Width = width;
+            components = new Dictionary<IComponent, int>();
+            boxWidth = width;
 
             AddPanel(len, height - 4, width, col);
             AddCleat(height - 4);
@@ -26,24 +26,24 @@ namespace KitBoxSourceCode
 
         protected override void SetPrice()
         {
-            Price = 0;
-            foreach (ICompoment Key in components.Keys)
+            price = 0;
+            foreach (IComponent key in components.Keys)
             {
-                AddPrice(Key);
+                AddPrice(key);
             }
         }
 
-        private void AddPrice(ICompoment elem)
+        private void AddPrice(IComponent elem)
         {
-            Price = Price + (elem.GetPrice() * components[elem]);
+            price = price + (elem.GetPrice() * components[elem]);
         }
 
         public override string GetDetails()
         {
             string format = "";
-            foreach (ICompoment Key in components.Keys)
+            foreach (IComponent key in components.Keys)
             {
-                format += Key.GetDetails() + ", \"Qty\": " + components[Key] + "},";
+                format += key.GetDetails() + ", \"Qty\": " + components[key] + "},";
 
             }
 

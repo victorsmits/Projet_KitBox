@@ -1,7 +1,7 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public interface ICompoment
+    public interface IComponent
     {
         int GetPrice();
         int GetLenght();

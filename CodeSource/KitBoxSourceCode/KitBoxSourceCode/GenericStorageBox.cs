@@ -3,19 +3,19 @@ namespace KitBoxSourceCode
 {
     public abstract class GenericStorageBox : IStorageBox
     {
-        protected int Price;
-        protected int Lenght;
-        protected int Height;
+        protected int price;
+        protected int lenght;
+        protected int height;
 
-        protected GenericStorageBox(int len, int height)
+        protected GenericStorageBox(int len, int hei)
         {
-            Lenght = len;
-            Height = height;
+            lenght = len;
+            height = hei;
         }
 
         public abstract string GetDetails();
         protected abstract void SetPrice();
-        public int GetPrice() => Price;
-        public int GetHeight() => Height;
+        public int GetPrice() => price;
+        public int GetHeight() => height;
     }
 }

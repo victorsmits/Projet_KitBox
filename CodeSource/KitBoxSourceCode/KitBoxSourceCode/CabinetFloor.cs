@@ -5,32 +5,32 @@ namespace KitBoxSourceCode
 {
     public class CabinetFloor
     {
-        public Dictionary<ICompoment, int> components;
+        public Dictionary<IComponent, int> components;
         public readonly List<IStorageBox> cabinetFloor;
 
         private readonly Box box;
         private readonly DoubleDoors db;
 
-        private readonly string DoorMat;
+        private readonly string theDoorMat;
 
         private int floorPrice;
-        private readonly int FloorHeight;
+        private readonly int floorHeight;
 
-        public int GetFloorHeight => FloorHeight;
+        public int GetFloorHeight => floorHeight;
         public int GetFloorPrice => floorPrice;
 
         public CabinetFloor(int height, int lenght, int width,
             string doorMat = null, string panelCol = null)
         {
             floorPrice = 0;
-            FloorHeight = height;
+            floorHeight = height;
 
             cabinetFloor = new List<IStorageBox>();
             box = new Box(lenght, height, width, panelCol);
-            components = box.GetCompoments;
+            components = box.GetComponents;
             cabinetFloor.Add(box);
 
-            DoorMat = doorMat;
+            theDoorMat = doorMat;
 
             if (doorMat != null)
             {
@@ -54,9 +54,9 @@ namespace KitBoxSourceCode
         {
             string format = "";
             int i = 0;
-            foreach (ICompoment Key in components.Keys)
+            foreach (IComponent key in components.Keys)
             {
-                format += Key.GetDetails() + ", \"Qty\": " + components[Key] + "},";
+                format += key.GetDetails() + ", \"Qty\": " + components[key] + "},";
                 i++;
             }
 
