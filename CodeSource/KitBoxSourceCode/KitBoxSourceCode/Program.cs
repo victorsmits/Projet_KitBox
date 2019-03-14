@@ -37,12 +37,12 @@ namespace KitBoxSourceCode
             Cabinet cabinet2 = new Cabinet();
             Cart cart = new Cart();
 
-            CabinetFloor cabinetFloor = new CabinetFloor
-                (height: 10,
-                lenght: 5,
-                width: 20,
-                doorMat: "green",
-                panelCol: "green");
+            //CabinetFloor cabinetFloor = new CabinetFloor
+            //(height: 10,
+            //lenght: 5,
+            //width: 20,
+            //doorMat: "green",
+            //panelCol: "green");
 
             cabinet.AddStorageBox(new CabinetFloor(10, 5, 20, "green", "green"));
             //cabinet.AddStorageBox(new CabinetFloor(10, 5, 20, panelCol: "green"));

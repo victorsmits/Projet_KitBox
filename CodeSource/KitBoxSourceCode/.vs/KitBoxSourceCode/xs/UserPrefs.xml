@@ -1,28 +1,25 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{530905E3-D372-46FA-9434-CC18A725A47E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Cart.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Box.cs">
     <Files>
-      <File FileName="KitBoxSourceCode/Program.cs" Line="28" Column="12" />
-      <File FileName="KitBoxSourceCode/Panel.cs" Line="36" Column="29" />
-      <File FileName="KitBoxSourceCode/GenericCompoment.cs" Line="9" Column="38" />
-      <File FileName="KitBoxSourceCode/Angle.cs" Line="18" Column="10" />
-      <File FileName="KitBoxSourceCode/Box.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Cabinet.cs" Line="19" Column="1" />
-      <File FileName="KitBoxSourceCode/CabinetFloor.cs" Line="59" Column="30" />
-      <File FileName="KitBoxSourceCode/Cart.cs" Line="60" Column="13" />
+      <File FileName="KitBoxSourceCode/Program.cs" Line="40" Column="13" />
+      <File FileName="KitBoxSourceCode/Panel.cs" Line="9" Column="33" />
+      <File FileName="KitBoxSourceCode/Box.cs" Line="19" Column="13" />
+      <File FileName="KitBoxSourceCode/GenericCompoment.cs" Line="11" Column="9" />
+      <File FileName="KitBoxSourceCode/Beam.cs" Line="6" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="KitBoxSourceCode" expanded="True">
             <Node name="KitBoxSourceCode" expanded="True">
-              <Node name="Cart.cs" selected="True" />
+              <Node name="Box.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="ClassPad">
         <State name="__root__">
-          <Node name="KitBoxSourceCode" expanded="True" selected="True" />
+          <Node name="KitBoxSourceCode" selected="True" />
         </State>
       </Pad>
     </Pads>
