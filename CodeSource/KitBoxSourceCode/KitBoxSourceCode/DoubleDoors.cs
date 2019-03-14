@@ -8,7 +8,7 @@ namespace KitBoxSourceCode
         private readonly List<Knop> knops;
         private string stockNumber;
 
-        public string DoorMat { get; }
+        public string theDoorMat { get; }
 
         private IStorageBox theStorageBox;
 
@@ -19,7 +19,7 @@ namespace KitBoxSourceCode
             this.theStorageBox = storageBox;
         }
 
-        public DoubleDoors(string doormat, int height, int len) : base(len, height)
+        public DoubleDoors(string doormat, int hei, int len) : base(len, hei)
         {
             theDoorMat = doormat;
             stockNumber = "1";

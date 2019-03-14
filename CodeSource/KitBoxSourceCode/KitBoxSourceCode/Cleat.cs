@@ -4,7 +4,7 @@ namespace KitBoxSourceCode
 	public class Cleat : GenericComponent
 	{
 
-		public Cleat(int Len, int qty) : base(Len, qty)
+		public Cleat(int len, int qty) : base(len, qty)
 		{
 			stockNumber = "1";
 			SetPrice();

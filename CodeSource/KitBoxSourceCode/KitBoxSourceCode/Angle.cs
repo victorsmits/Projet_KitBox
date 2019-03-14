@@ -8,17 +8,17 @@ namespace KitBoxSourceCode
         private readonly int price;
         private readonly string angleColor;
 
-        public Angle(int Len, string color)
+        public Angle(int len, string color)
         {
-            Lenght = Len;
+            lenght = len;
             angleColor = color;
-            CalculPrice(Len, color);
-            Price = 2;
+            CalculPrice(len, color);
+            price = 2;
 
         }
 
-        public int GetLenght() => Lenght;
-        public int GetPrice() => Price;
+        public int GetLenght() => lenght;
+        public int GetPrice() => price;
 
         private void CalculPrice(int len, string color)
         {
