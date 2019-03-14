@@ -5,20 +5,20 @@ namespace KitBoxSourceCode
 {
     public class Box : GenericStorageBox
     {
-        private Dictionary<ICompoment, int> Compoments;
+        private Dictionary<IComponent, int> components;
 
-        private readonly int Depth;
+        private readonly int boxWidth;
 
-        public Dictionary<ICompoment, int> GetCompoments => Compoments;
+        public Dictionary<IComponent, int> GetComponents => components;
 
-        public Box(int len, int height, int depth, string col) : base(len, height)
+        public Box(int len, int height, int width, string col) : base(len, height)
         {
-            Compoments = new Dictionary<ICompoment, int>();
-            Depth = depth;
+            components = new Dictionary<IComponent, int>();
+            boxWidth = width;
 
-            AddPanel(len, height, depth, col);
-            AddCleat(height);
-            AddBeam(len, depth);
+            AddPanel(len, height - 4, width, col);
+            AddCleat(height - 4);
+            AddBeam(len, width);
             AddDoorBeam(len);
 
             SetPrice();
@@ -26,55 +26,56 @@ namespace KitBoxSourceCode
 
         protected override void SetPrice()
         {
-            Price = 0;
-            foreach (ICompoment Key in Compoments.Keys)
+            price = 0;
+            foreach (IComponent key in components.Keys)
             {
-                AddPrice(Key);
+                AddPrice(key);
             }
         }
 
-        private void AddPrice(ICompoment elem)
+        private void AddPrice(IComponent elem)
         {
-            Price = Price + (elem.GetPrice() * Compoments[elem]);
-        }
-
-        public int SetHeight()
-        {
-            //  TODO calcul hauteur de la boie en fonction de la 
-            //  dimmention total recu
-            return 200;
+            price = price + (elem.GetPrice() * components[elem]);
         }
 
         public override string GetDetails()
         {
-            return " box";
+            string format = "";
+            foreach (IComponent key in components.Keys)
+            {
+                format += key.GetDetails() + ", \"Qty\": " + components[key] + "},";
+
+            }
+
+            return format;
         }
 
         private void AddPanel(int x, int y, int z, string col)
         {
-            Compoments.Add(new Panel(x, y, col, 1), 1);
+            components.Add(new Panel(x, y, col, 1), 1);
 
-            Compoments.Add(new Panel(z, y, col, 2), 2);
+            components.Add(new Panel(z, y, col, 2), 2);
 
-            Compoments.Add(new Panel(z, x, col, 2), 2);
+            components.Add(new Panel(z, x, col, 2), 2);
+            Console.WriteLine("coucou2");
         }
 
         private void AddCleat(int height)
         {
-            Compoments.Add(new Cleat(height, 4), 4);
+            components.Add(new Cleat(height, 4), 4);
         }
 
         private void AddBeam(int len, int height)
         {
-            Compoments.Add(new Beam(len, 4), 4);
+            components.Add(new Beam(len, 4), 4);
 
-            Compoments.Add(new Beam(height, 2), 2);
+            components.Add(new Beam(height, 2), 2);
 
         }
 
         private void AddDoorBeam(int height)
         {
-            Compoments.Add(new DoorBeam(height, 2), 2);
+            components.Add(new DoorBeam(height, 2), 2);
         }
     }
 }
