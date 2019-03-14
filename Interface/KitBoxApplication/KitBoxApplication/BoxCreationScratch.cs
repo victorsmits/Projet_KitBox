@@ -84,7 +84,7 @@ namespace KitBoxApplication
         // Loading Angle Color data from data base 
         private void LoadDataAngleColor()
         {
-            System.Windows.Forms.ComboBox[] list = { comboBoxColorAngles };
+            System.Windows.Forms.ComboBox[] list = {comboBoxColorAngles};
             var count = numericUpDownQuantity.Value;
             loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence LIKE '%DEC' " +
                     "AND division LIKE '" + count + "'");
@@ -121,7 +121,7 @@ namespace KitBoxApplication
         }
 
         // Loading Width data from data base 
-        private void LoadDataWidth()
+        public void LoadDataWidth()
         {
             System.Windows.Forms.ComboBox[] list = {
                 creationScratchInside1.ComboBoxWidth,
