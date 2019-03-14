@@ -35,9 +35,9 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageBox1 = new System.Windows.Forms.TabPage();
-            this.creationScratchInside2 = new KitBoxApplication.CreationScratchInside();
-            this.tabPageBox2 = new System.Windows.Forms.TabPage();
             this.creationScratchInside1 = new KitBoxApplication.CreationScratchInside();
+            this.tabPageBox2 = new System.Windows.Forms.TabPage();
+            this.creationScratchInside2 = new KitBoxApplication.CreationScratchInside();
             this.tabPageBox3 = new System.Windows.Forms.TabPage();
             this.creationScratchInside3 = new KitBoxApplication.CreationScratchInside();
             this.tabPageBox4 = new System.Windows.Forms.TabPage();
@@ -51,7 +51,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.labelExplanation = new System.Windows.Forms.Label();
             this.labelHelp = new System.Windows.Forms.Label();
-            this.comboBoxHeight = new System.Windows.Forms.ComboBox();
             this.comboBoxColorAngles = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -157,7 +156,7 @@
             // 
             this.tabPageBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.tabPageBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.tabPageBox1.Controls.Add(this.creationScratchInside2);
+            this.tabPageBox1.Controls.Add(this.creationScratchInside1);
             this.tabPageBox1.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.tabPageBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tabPageBox1.ImageIndex = 1;
@@ -169,19 +168,19 @@
             this.tabPageBox1.TabIndex = 0;
             this.tabPageBox1.Text = "Box 1";
             // 
-            // creationScratchInside2
+            // creationScratchInside1
             // 
-            this.creationScratchInside2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.creationScratchInside2.Location = new System.Drawing.Point(45, 36);
-            this.creationScratchInside2.Margin = new System.Windows.Forms.Padding(4);
-            this.creationScratchInside2.Name = "creationScratchInside2";
-            this.creationScratchInside2.Size = new System.Drawing.Size(1170, 589);
-            this.creationScratchInside2.TabIndex = 0;
+            this.creationScratchInside1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.creationScratchInside1.Location = new System.Drawing.Point(45, 36);
+            this.creationScratchInside1.Margin = new System.Windows.Forms.Padding(4);
+            this.creationScratchInside1.Name = "creationScratchInside1";
+            this.creationScratchInside1.Size = new System.Drawing.Size(1170, 589);
+            this.creationScratchInside1.TabIndex = 0;
             // 
             // tabPageBox2
             // 
             this.tabPageBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.tabPageBox2.Controls.Add(this.creationScratchInside1);
+            this.tabPageBox2.Controls.Add(this.creationScratchInside2);
             this.tabPageBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageBox2.Location = new System.Drawing.Point(4, 34);
             this.tabPageBox2.Name = "tabPageBox2";
@@ -190,14 +189,14 @@
             this.tabPageBox2.TabIndex = 1;
             this.tabPageBox2.Text = "Box 2";
             // 
-            // creationScratchInside1
+            // creationScratchInside2
             // 
-            this.creationScratchInside1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-            this.creationScratchInside1.Location = new System.Drawing.Point(45, 36);
-            this.creationScratchInside1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.creationScratchInside1.Name = "creationScratchInside1";
-            this.creationScratchInside1.Size = new System.Drawing.Size(1142, 569);
-            this.creationScratchInside1.TabIndex = 0;
+            this.creationScratchInside2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.creationScratchInside2.Location = new System.Drawing.Point(45, 36);
+            this.creationScratchInside2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.creationScratchInside2.Name = "creationScratchInside2";
+            this.creationScratchInside2.Size = new System.Drawing.Size(1142, 569);
+            this.creationScratchInside2.TabIndex = 0;
             // 
             // tabPageBox3
             // 
@@ -347,20 +346,6 @@
             this.labelHelp.TabIndex = 72;
             this.labelHelp.Text = "Help";
             // 
-            // comboBoxHeight
-            // 
-            this.comboBoxHeight.FormattingEnabled = true;
-            this.comboBoxHeight.Items.AddRange(new object[] {
-            "Brun",
-            "Blanc",
-            "Galvinisé",
-            "Noir"});
-            this.comboBoxHeight.Location = new System.Drawing.Point(868, 200);
-            this.comboBoxHeight.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.comboBoxHeight.Name = "comboBoxHeight";
-            this.comboBoxHeight.Size = new System.Drawing.Size(200, 39);
-            this.comboBoxHeight.TabIndex = 75;
-            // 
             // comboBoxColorAngles
             // 
             this.comboBoxColorAngles.FormattingEnabled = true;
@@ -381,7 +366,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.Controls.Add(this.comboBoxColorAngles);
-            this.Controls.Add(this.comboBoxHeight);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.labelExplanation);
             this.Controls.Add(this.labelHelp);
@@ -423,14 +407,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label labelExplanation;
         private System.Windows.Forms.Label labelHelp;
-        private CreationScratchInside creationScratchInside2;
         private CreationScratchInside creationScratchInside1;
+        private CreationScratchInside creationScratchInside2;
         private CreationScratchInside creationScratchInside3;
         private CreationScratchInside creationScratchInside4;
         private CreationScratchInside creationScratchInside5;
         private CreationScratchInside creationScratchInside6;
         private CreationScratchInside creationScratchInside7;
         private System.Windows.Forms.ComboBox comboBoxColorAngles;
-        private System.Windows.Forms.ComboBox comboBoxHeight;
     }
 }
