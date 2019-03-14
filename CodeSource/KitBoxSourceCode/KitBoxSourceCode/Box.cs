@@ -57,6 +57,7 @@ namespace KitBoxSourceCode
             components.Add(new Panel(z, y, col, 2), 2);
 
             components.Add(new Panel(z, x, col, 2), 2);
+            Console.WriteLine("coucou2");
         }
 
         private void AddCleat(int height)

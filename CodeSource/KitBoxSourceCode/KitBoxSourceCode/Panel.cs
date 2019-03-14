@@ -6,21 +6,23 @@ namespace KitBoxSourceCode
     {
         private readonly int Height;
         private readonly string Color;
-        private static int PanelNumber = 0;
-
-        public static int GetPanelNumber => PanelNumber;
+        private int panelNumber;
+        private static int panelNum = 0;
 
         public int GetHeight => Height;
         public string GetBoxColor => Color;
 
         public Panel(int len, int height, string color, int qty) : base(len, qty)
         {
+            Console.WriteLine("coucou");
             Lenght = len;
             Height = height;
             Color = color;
             quantity = qty;
             stockNumber = "1"; // TODO OLEDB requete piece num
-            PanelNumber++;
+
+            panelNum++;
+            panelNumber = panelNum;
             SetPrice();
         }
 
@@ -33,7 +35,7 @@ namespace KitBoxSourceCode
 
         public override string GetDetails()
         {
-            return "\"Panel " + GetPanelNumber + "\" : { \"height\": " + Height + ", \"Lenght\": " + Lenght
+            return "\"Panel " + panelNumber + "\" : { \"height\": " + Height + ", \"Lenght\": " + Lenght
             + ", \"Coleur\": \"" + Color + "\", \"Stockref\": " + stockNumber;
         }
     }
