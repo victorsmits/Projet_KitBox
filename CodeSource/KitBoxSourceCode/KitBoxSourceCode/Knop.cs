@@ -3,12 +3,13 @@ namespace KitBoxSourceCode
 {
 	public class Knop
 	{
-		private int Price;
+		private int price;
 
-		public int GetPrice => Price;
+		public int GetPrice => price;
 
 		public Knop()
 		{
+			price = 2;
 			//TODO requet knop price
 		}
 	}

@@ -4,21 +4,23 @@ namespace KitBoxSourceCode
 {
     public class Angle
     {
-        private readonly int Lenght;
-        private readonly int Price;
-        private readonly Color angleColor;
+        private readonly int lenght;
+        private readonly int price;
+        private readonly string angleColor;
 
-        public Angle(int Len, Color color)
+        public Angle(int len, string color)
         {
-            Lenght = Len;
+            lenght = len;
             angleColor = color;
-            CalculPrice(Len, color);
+            CalculPrice(len, color);
+            price = 2;
+
         }
 
-        public int GetLenght() => Lenght;
-        public int GetPrice() => Price;
+        public int GetLenght() => lenght;
+        public int GetPrice() => price;
 
-        private void CalculPrice(int len, Color color)
+        private void CalculPrice(int len, string color)
         {
             //TODO oledb requete price fct len et color
         }

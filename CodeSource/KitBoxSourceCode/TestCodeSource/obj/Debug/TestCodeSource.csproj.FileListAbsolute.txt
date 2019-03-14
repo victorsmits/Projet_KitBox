@@ -1,0 +1,17 @@
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/obj/Debug/TestCodeSource.csprojAssemblyReference.cache
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/obj/Debug/TestCodeSource.csproj.CoreCompileInputs.cache
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/TestCodeSource.exe
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/TestCodeSource.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/Google.Protobuf.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/KitBoxSourceCode.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/MySql.Data.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/SqlOledb.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/System.ComponentModel.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/Google.Protobuf.xml
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/MySql.Data.xml
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/SqlOledb.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/KitBoxSourceCode.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/bin/Debug/KitBoxSourceCode.dll.config
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/obj/Debug/TestCodeSource.csproj.CopyComplete
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/obj/Debug/TestCodeSource.exe
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/TestCodeSource/obj/Debug/TestCodeSource.pdb

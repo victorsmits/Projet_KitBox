@@ -26,7 +26,7 @@ namespace interface_Magasinier
         }
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
         OleDbConnection cn = new OleDbConnection();  // cn for connection
-        OleDbDataReader dr;
+        
 
         public void Loaddata() //Loading de data into the differents listbox
         {
@@ -94,7 +94,7 @@ namespace interface_Magasinier
             {
                 string q = "update Piece set Enstock='" + StockTextBox.Text.ToString() + "' where PK_Piece=" + IdList.SelectedItem.ToString();
                 SqlOledb.SqlOledb.SqlRequest(q);
-                MessageBox.Show(q);
+                
                 Loaddata();
                 StockTextBox.Text = "";
             }
@@ -106,7 +106,7 @@ namespace interface_Magasinier
             {
                 string q = "update Piece set PrixClient=" + PriceClientTextBox.Text.ToString() + " where PK_Piece=" + IdList.SelectedItem.ToString();
                 SqlOledb.SqlOledb.SqlRequest(q);
-                MessageBox.Show(q);
+                
                 Loaddata();
                 PriceClientTextBox.Text = "";
             }
@@ -116,7 +116,7 @@ namespace interface_Magasinier
         {
             string q = "delete from Piece where PK_Piece=" + IdList.SelectedItem.ToString();
             SqlOledb.SqlOledb.SqlRequest(q);
-            MessageBox.Show(q);
+            
             Loaddata();
         }
 
@@ -124,10 +124,13 @@ namespace interface_Magasinier
         {
             string rsq = "INSERT INTO Req (Référence,Enstock,StockMinimum,PrixClient,Nb_PiecesCasier,Dimensions_cm,hauteur,profondeur,largeur,Reservation,Code,Couleur,Division,Prix,Delai,FK_Fournisseur) VALUES ('TRG','82','32','52','4','62','0','62','0','0','Trav','Pasde','0','1','1','1')";
             SqlOledb.SqlOledb.SqlRequest(rsq);
-            MessageBox.Show(rsq);
+           
             Loaddata();
         }
 
-
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            Loaddata();
+        }
     }
 }

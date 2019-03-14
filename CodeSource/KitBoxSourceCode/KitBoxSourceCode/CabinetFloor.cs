@@ -5,38 +5,36 @@ namespace KitBoxSourceCode
 {
     public class CabinetFloor
     {
-        public Dictionary<ICompoment, int> compoments;
+        public Dictionary<IComponent, int> components;
         public readonly List<IStorageBox> cabinetFloor;
 
         private readonly Box box;
         private readonly DoubleDoors db;
 
-        private readonly string doorColor;
-        private readonly string boxColor;
+        private readonly string theDoorMat;
 
         private int floorPrice;
-        private readonly int FloorHeight;
+        private readonly int floorHeight;
 
-        public int GetFloorHeight => FloorHeight;
+        public int GetFloorHeight => floorHeight;
         public int GetFloorPrice => floorPrice;
 
-        public CabinetFloor(int height, int lenght, int depth,
-            string doorCol = null, string doorMat = null, string panelCol = null)
+        public CabinetFloor(int height, int lenght, int width,
+            string doorMat = null, string panelCol = null)
         {
             floorPrice = 0;
-            FloorHeight = height;
+            floorHeight = height;
 
             cabinetFloor = new List<IStorageBox>();
-            box = new Box(lenght, height, depth, panelCol);
-            compoments = box.GetCompoments;
+            box = new Box(lenght, height, width, panelCol);
+            components = box.GetComponents;
             cabinetFloor.Add(box);
 
-            doorColor = doorCol;
-            boxColor = panelCol;
+            theDoorMat = doorMat;
 
             if (doorMat != null)
             {
-                db = new DoubleDoors(doorCol, doorMat, height, lenght);
+                db = new DoubleDoors(doorMat, height, lenght);
                 db.AddBoxDecorator(box);
                 cabinetFloor.Add(db);
             }
@@ -55,17 +53,20 @@ namespace KitBoxSourceCode
         public string ShowPieces()
         {
             string format = "";
-            foreach (ICompoment Key in compoments.Keys)
+            int i = 0;
+            foreach (IComponent key in components.Keys)
             {
-                format += Key.GetDetails() + " | Qty : " + compoments[Key] + "\n";
+                format += key.GetDetails() + ", \"Qty\": " + components[key] + "},";
+                i++;
             }
 
             if (cabinetFloor.Count > 1)
             {
-                format += cabinetFloor[1].GetDetails() + " | Qty : 1\n";
+                format += cabinetFloor[1].GetDetails() + ", \"Qty\" : 1},";
             }
-            format += "--------------------------------------------------\n\n";
             return format;
+
+
         }
     }
 }

@@ -1,16 +1,16 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public abstract class GenericCompoment : ICompoment
+    public abstract class GenericComponent : IComponent
     {
-        protected int Lenght;
+        protected int lenght;
         protected int quantity;
-        protected int Price;
+        protected int price;
         protected string stockNumber;
 
         protected GenericCompoment(int len, int qty)
         {
-            Lenght = len;
+            lenght = len;
             quantity = qty;
         }
 
@@ -18,9 +18,9 @@ namespace KitBoxSourceCode
 
         protected abstract void SetPrice();
 
-        public int GetLenght() => Lenght;
+        public int GetLenght() => lenght;
 
-        public int GetPrice() => Price;
+        public int GetPrice() => price;
 
     }
 }

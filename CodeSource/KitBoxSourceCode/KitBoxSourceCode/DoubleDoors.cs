@@ -8,22 +8,20 @@ namespace KitBoxSourceCode
         private readonly List<Knop> knops;
         private string stockNumber;
 
-        public string Materials { get; }
-        public string DoorColor { get; }
+        public string theDoorMat { get; }
 
-        private IStorageBox storageBox;
+        private IStorageBox theStorageBox;
 
-        IStorageBox StorageBox { get; set; }
+        IStorageBox theStorageBox { get; set; }
 
         public void AddBoxDecorator(IStorageBox storageBox)
         {
-            this.storageBox = storageBox;
+            this.theStorageBox = storageBox;
         }
 
-        public DoubleDoors(string color, string mat, int height, int len) : base(len, height)
+        public DoubleDoors(string doormat, int hei, int len) : base(len, hei)
         {
-            DoorColor = color;
-            Materials = mat;
+            theDoorMat = doormat;
             stockNumber = "1";
 
             knops = new List<Knop> {
@@ -36,14 +34,14 @@ namespace KitBoxSourceCode
 
         protected override void SetPrice()
         {
-            Price = 20;
+            price = 20;
             //TODO ole db fct color et mat
         }
 
         public override string GetDetails()
         {
-            return "DoubleDoors -> Dimension : " + Height + " x " + Lenght
-            + " | Coleur : " + DoorColor + " | Stock ref : " + stockNumber;
+            return "\"DoubleDoors\" : {\"height\": " + height + ",\"Lenght\": " + lenght
+            + ", \"Material\": \"" + theDoorMat + "\", \"Stockref\": " + stockNumber;
         }
 
     }

@@ -1,22 +1,23 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public class DoorBeam : GenericCompoment
-    {
-        public DoorBeam(int Len, int qty) : base(Len, qty)
-        {
-            SetPrice();
-        }
+	public class DoorBeam : GenericComponent
+	{
+		public DoorBeam(int len, int qty) : base(len, qty)
+		{
+			SetPrice();
+			stockNumber = "1";
+		}
 
-        public override string GetDetails()
-        {
-            return "DoorBeam -> Dimension : " + Lenght + " | Stock ref : " + stockNumber;
-        }
+		public override string GetDetails()
+		{
+			return "\"DoorBeam\" : {\"Lenght\": " + lenght + ", \"Stockref\": " + stockNumber;
+		}
 
-        protected override void SetPrice()
-        {
-            //TODO oledb requete price fct len
-            Price = 2;
-        }
-    }
+		protected override void SetPrice()
+		{
+			//TODO oledb requete price fct len
+			price = 2;
+		}
+	}
 }
