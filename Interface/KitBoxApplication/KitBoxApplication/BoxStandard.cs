@@ -63,7 +63,7 @@ namespace KitBoxApplication
         // Connection to the DB and loading the data into the box
         private void BoxStandard_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadData();
             LoadDataWidth();
@@ -73,34 +73,17 @@ namespace KitBoxApplication
             LoadDataDoor();
         }
 
-        // Loading data from data base
-        private void LoadData()
+        // function model for loadData
+        private void loadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
         {
-            comboBoxHeight.Items.Clear();
-            comboBoxDepth.Items.Clear();
-            comboBoxWidth.Items.Clear();
-            comboBoxColorAngles.Items.Clear();
-            comboBoxColorIf1.Items.Clear();
-            comboBoxColorS1.Items.Clear();
-            comboBoxColorS2.Items.Clear();
-            comboBoxColorS3.Items.Clear();
-            comboBoxColorS4.Items.Clear();
-            comboBoxColorS5.Items.Clear();
-            comboBoxColorS6.Items.Clear();
-            comboBoxColorS7.Items.Clear();
-            comboBoxColorSA.Items.Clear();
-            comboBoxDoorMatBox1.Items.Clear();
-            comboBoxDoorMatBox2.Items.Clear();
-            comboBoxDoorMatBox3.Items.Clear();
-            comboBoxDoorMatBox4.Items.Clear();
-            comboBoxDoorMatBox5.Items.Clear();
-            comboBoxDoorMatBox6.Items.Clear();
-            comboBoxDoorMatBox7.Items.Clear();
+            foreach (System.Windows.Forms.ComboBox i in m)
+            {
+                i.Items.Clear();
+            }
             try
             {
                 var count = numericUpDownQuantity.Value;
-                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND division LIKE '" + count + "'";
+                string q = n;
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -108,7 +91,10 @@ namespace KitBoxApplication
                 {
                     while (dr.Read())
                     {
-                        comboBoxHeight.Items.Add(dr[0].ToString());
+                        foreach (System.Windows.Forms.ComboBox i in m)
+                        {
+                            i.Items.Add(dr[0].ToString());
+                        }
                     }
                 }
                 dr.Close();
@@ -162,31 +148,8 @@ namespace KitBoxApplication
         // Loading Width data from data base if cabinet without doors
         private void LoadDataWidth()
         {
-            comboBoxWidth.Items.Clear();
-            try
-            {
-                var height = comboBoxHeight.SelectedValue;
-
-                string q = "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' "; //+
-                   // "AND hauteur LIKE '" + height + "'";
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxWidth.Items.Add(dr[0].ToString());
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
+            System.Windows.Forms.ComboBox[] list = { comboBoxWidth };
+            loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
         }
 
         // Loading Width data from data base if cabinet with doors
