@@ -4,8 +4,8 @@ namespace KitBoxSourceCode
 {
     public class Angle
     {
-        private readonly int Lenght;
-        private readonly int Price;
+        private readonly int lenght;
+        private readonly int price;
         private readonly string angleColor;
 
         public Angle(int Len, string color)

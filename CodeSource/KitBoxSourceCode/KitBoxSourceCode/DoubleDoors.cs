@@ -10,18 +10,18 @@ namespace KitBoxSourceCode
 
         public string DoorMat { get; }
 
-        private IStorageBox storageBox;
+        private IStorageBox theStorageBox;
 
-        IStorageBox StorageBox { get; set; }
+        IStorageBox theStorageBox { get; set; }
 
         public void AddBoxDecorator(IStorageBox storageBox)
         {
-            this.storageBox = storageBox;
+            this.theStorageBox = storageBox;
         }
 
         public DoubleDoors(string doormat, int height, int len) : base(len, height)
         {
-            DoorMat = doormat;
+            theDoorMat = doormat;
             stockNumber = "1";
 
             knops = new List<Knop> {
@@ -34,14 +34,14 @@ namespace KitBoxSourceCode
 
         protected override void SetPrice()
         {
-            Price = 20;
+            price = 20;
             //TODO ole db fct color et mat
         }
 
         public override string GetDetails()
         {
-            return "\"DoubleDoors\" : {\"height\": " + Height + ",\"Lenght\": " + Lenght
-            + ", \"Material\": \"" + DoorMat + "\", \"Stockref\": " + stockNumber;
+            return "\"DoubleDoors\" : {\"height\": " + height + ",\"Lenght\": " + lenght
+            + ", \"Material\": \"" + theDoorMat + "\", \"Stockref\": " + stockNumber;
         }
 
     }

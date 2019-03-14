@@ -1,14 +1,14 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-	public class Beam : GenericCompoment
+	public class Beam : GenericComponent
 	{
 
 		public Beam(int Len, int qty) : base(Len, qty)
 		{
-			Lenght = Len;
+			lenght = Len;
 			quantity = qty;
-			Price = 2;
+			price = 2;
 			stockNumber = "1";
 			SetPrice();
 		}

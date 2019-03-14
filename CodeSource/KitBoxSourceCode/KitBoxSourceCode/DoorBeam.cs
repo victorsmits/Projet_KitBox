@@ -1,9 +1,9 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-	public class DoorBeam : GenericCompoment
+	public class DoorBeam : GenericComponent
 	{
-		public DoorBeam(int Len, int qty) : base(Len, qty)
+		public DoorBeam(int len, int qty) : base(len, qty)
 		{
 			SetPrice();
 			stockNumber = "1";
@@ -11,13 +11,13 @@ namespace KitBoxSourceCode
 
 		public override string GetDetails()
 		{
-			return "\"DoorBeam\" : {\"Lenght\": " + Lenght + ", \"Stockref\": " + stockNumber;
+			return "\"DoorBeam\" : {\"Lenght\": " + lenght + ", \"Stockref\": " + stockNumber;
 		}
 
 		protected override void SetPrice()
 		{
 			//TODO oledb requete price fct len
-			Price = 2;
+			price = 2;
 		}
 	}
 }

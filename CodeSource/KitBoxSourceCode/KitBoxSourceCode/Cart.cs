@@ -5,56 +5,56 @@ namespace KitBoxSourceCode
 {
     public class Cart
     {
-        private List<Cabinet> Cabinets;
-        private readonly int OrderNumber;
-        private Profile ClientProfile = null;
+        private List<Cabinet> cabinets;
+        private readonly int orderNumber;
+        private Profile clientProfile = null;
         private int cartPrice;
 
-        public int GetOrderNumber => OrderNumber;
+        public int GetOrderNumber => orderNumber;
 
         //TODO global increase ordernumber
         public Cart()
         {
-            OrderNumber = 1;
-            Cabinets = new List<Cabinet>();
+            orderNumber = 1;
+            cabinets = new List<Cabinet>();
             cartPrice = 0;
         }
 
         public void AddToCart(Cabinet cabinet)
         {
-            Cabinets.Add(cabinet);
+            cabinets.Add(cabinet);
             cartPrice += cabinet.GetCabinetPrice;
         }
 
         public void AddCartProfile(Profile profile)
         {
-            ClientProfile = profile;
+            clientProfile = profile;
         }
 
         public void GetProfile()
         {
-            ClientProfile.ShowClientInfo();
+            clientProfile.ShowClientInfo();
         }
 
         public JObject ShowCart()
         {
-            JObject JsonCart = new JObject();
-            string ShowCart = "";
-            foreach (Cabinet elem in Cabinets)
+            JObject jsonCart = new JObject();
+            string showCart = "";
+            foreach (Cabinet elem in cabinets)
             {
-                if (Cabinets.IndexOf(elem) == 0)
+                if (cabinets.IndexOf(elem) == 0)
                 {
-                    ShowCart += "\n{";
+                    showCart += "\n{";
                 }
-                ShowCart += "\"Cabinet " + Cabinets.IndexOf(elem) + "\":{"
+                showCart += "\"Cabinet " + cabinets.IndexOf(elem) + "\":{"
                     + elem.GetPartList();
-                if (Cabinets.IndexOf(elem) == Cabinets.Count - 1)
+                if (cabinets.IndexOf(elem) == cabinets.Count - 1)
                 {
-                    ShowCart += "}}";
+                    showCart += "}}";
                 }
                 else
                 {
-                    ShowCart += "},";
+                    showCart += "},";
                 }
             }
             return JObject.Parse(ShowCart);

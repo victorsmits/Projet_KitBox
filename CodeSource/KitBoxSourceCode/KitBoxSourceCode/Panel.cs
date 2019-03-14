@@ -4,9 +4,9 @@ namespace KitBoxSourceCode
 {
     public class Panel : GenericCompoment
     {
-        private readonly int Height;
-        private readonly string Color;
-        private static int PanelNumber = 0;
+        private readonly int height;
+        private readonly string color;
+        private static int panelNum = 0;
 
         public static int GetPanelNumber => PanelNumber;
 
