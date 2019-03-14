@@ -76,6 +76,7 @@ namespace KitBoxApplication
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Loading Angle Color data from data base 
         private void LoadDataAngleColor()
         {
@@ -109,9 +110,22 @@ namespace KitBoxApplication
 
 =======
 >>>>>>> parent of 8331cbe... big update insertion database into scratch creation
+||||||| 8331cbe... big update insertion database into scratch creation
+        // Loading Angle Color data from data base 
+        private void LoadDataAngleColor()
+        {
+            System.Windows.Forms.ComboBox[] list = { comboBoxColorAngles };
+            var count = numericUpDownQuantity.Value;
+            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'");
+        }   
+
+=======
+>>>>>>> parent of 8331cbe... big update insertion database into scratch creation
         // Loading Depth data from data base 
         private void LoadDataDepth()
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             System.Windows.Forms.ComboBox[] list = {
@@ -278,11 +292,80 @@ namespace KitBoxApplication
                 (creationScratchInside7.DoorNo == true))
             {
                 loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
-            }
-            else
+||||||| 8331cbe... big update insertion database into scratch creation
+            System.Windows.Forms.ComboBox[] list = {
+                creationScratchInside1.ComboBoxDepth,
+                creationScratchInside2.ComboBoxDepth,
+                creationScratchInside3.ComboBoxDepth,
+                creationScratchInside4.ComboBoxDepth,
+                creationScratchInside5.ComboBoxDepth,
+                creationScratchInside6.ComboBoxDepth,
+                creationScratchInside7.ComboBoxDepth,
+            };
+            loadDataGeneral(list, "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ");   
+        }
+
+        // Loading Height data from data base 
+        private void LoadDataHeight()
+        {
+            System.Windows.Forms.ComboBox[] list = {
+                creationScratchInside1.ComboBoxHeight,
+                creationScratchInside2.ComboBoxHeight,
+                creationScratchInside3.ComboBoxHeight,
+                creationScratchInside4.ComboBoxHeight,
+                creationScratchInside5.ComboBoxHeight,
+                creationScratchInside6.ComboBoxHeight,
+                creationScratchInside7.ComboBoxHeight,
+            };           
+            loadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAH%' ");
+        }
+
+        // Loading Width data from data base 
+        private void LoadDataWidth()
+        {
+            System.Windows.Forms.ComboBox[] list = {
+                creationScratchInside1.ComboBoxWidth,
+                creationScratchInside2.ComboBoxWidth,
+                creationScratchInside3.ComboBoxWidth,
+                creationScratchInside4.ComboBoxWidth,
+                creationScratchInside5.ComboBoxWidth,
+                creationScratchInside6.ComboBoxWidth,
+                creationScratchInside7.ComboBoxWidth,
+            };
+            if ((creationScratchInside1.DoorNo == true) && (creationScratchInside2.DoorNo == true) && 
+                (creationScratchInside3.DoorNo == true) && (creationScratchInside4.DoorNo == true) &&
+                (creationScratchInside5.DoorNo == true) && (creationScratchInside6.DoorNo == true) &&
+                (creationScratchInside7.DoorNo == true))
             {
-                loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ");
+                loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
+=======
+            
+            creationScratch.ComboBoxDepth.Items.Clear();
+            comboBoxHeight.Items.Clear();
+            try
+            {                
+                string q = "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        creationScratch.ComboBoxDepth.Items.Add(dr[0].ToString());
+                        comboBoxHeight.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+>>>>>>> parent of 8331cbe... big update insertion database into scratch creation
             }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+<<<<<<< HEAD
             
         }
 
@@ -340,6 +423,40 @@ namespace KitBoxApplication
                 cn.Close();
                 MessageBox.Show(e.Message.ToString());
             }
+>>>>>>> parent of 8331cbe... big update insertion database into scratch creation
+||||||| 8331cbe... big update insertion database into scratch creation
+            
+        }
+
+        // Loading Box color data from data base 
+        private void LoadDataBoxColor()
+        {
+            System.Windows.Forms.ComboBox[] list = {
+                creationScratchInside1.ComboBoxColor,
+                creationScratchInside2.ComboBoxColor,
+                creationScratchInside3.ComboBoxColor,
+                creationScratchInside4.ComboBoxColor,
+                creationScratchInside5.ComboBoxColor,
+                creationScratchInside6.ComboBoxColor,
+                creationScratchInside7.ComboBoxColor,
+            };
+            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'PA%' ");
+        }
+
+        // Loading Door Material data from data base 
+        private void LoadDataDoorMat()
+        {
+            System.Windows.Forms.ComboBox[] list = {
+                creationScratchInside1.ComboBoxDoorMat,
+                creationScratchInside2.ComboBoxDoorMat,
+                creationScratchInside3.ComboBoxDoorMat,
+                creationScratchInside4.ComboBoxDoorMat,
+                creationScratchInside5.ComboBoxDoorMat,
+                creationScratchInside6.ComboBoxDoorMat,
+                creationScratchInside7.ComboBoxDoorMat,
+            };
+            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'POR%' ");
+=======
 >>>>>>> parent of 8331cbe... big update insertion database into scratch creation
         }
 
