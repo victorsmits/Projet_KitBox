@@ -10,22 +10,6 @@
       <File FileName="KitBoxSourceCode/CabinetFloor.cs" Line="59" Column="30" />
       <File FileName="KitBoxSourceCode/Cart.cs" Line="60" Column="13" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="KitBoxSourceCode" expanded="True">
-            <Node name="KitBoxSourceCode" expanded="True">
-              <Node name="Cart.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="ClassPad">
-        <State name="__root__">
-          <Node name="KitBoxSourceCode" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.KitBoxSourceCode PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

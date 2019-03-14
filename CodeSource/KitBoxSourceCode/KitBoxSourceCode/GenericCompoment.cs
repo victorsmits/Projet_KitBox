@@ -8,7 +8,7 @@ namespace KitBoxSourceCode
         protected int price;
         protected string stockNumber;
 
-        protected GenericCompoment(int len, int qty)
+        protected GenericComponent(int len, int qty)
         {
             lenght = len;
             quantity = qty;

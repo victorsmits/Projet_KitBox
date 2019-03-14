@@ -28,3 +28,6 @@
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.pdb
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csprojAssemblyReference.cache
+/Users/Maxime/Documents/GitHub/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csprojAssemblyReference.cache
+/Users/Maxime/Documents/GitHub/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csproj.CoreCompileInputs.cache
+/Users/Maxime/Documents/GitHub/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.pdb
