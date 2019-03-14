@@ -58,17 +58,7 @@ namespace KitBoxApplication
             creation2.Visible = false;
             cartPage1.Visible = true;
 
-            //MessageBox.Show(creation2.Controls.GetChildIndex());
-            //MessageBox.Show(creation2.Controls[0].Controls[5].Cart);
-            //creation2.Controls[0].Controls[5];
-
-
-            Cart cartToProcess = CartPage.Cart;
-            if (cartToProcess != null)
-            {
-                jsonCart = cartToProcess.ShowCart();
-                MessageBox.Show(jsonCart.ToString());
-            }
+            cartPage1.Load_Json();
 
         }
     }

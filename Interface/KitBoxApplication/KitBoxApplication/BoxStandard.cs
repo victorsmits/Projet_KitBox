@@ -63,7 +63,7 @@ namespace KitBoxApplication
         // Connection to the DB and loading the data into the box
         private void BoxStandard_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadData();
             LoadDataWidth();
@@ -700,7 +700,7 @@ namespace KitBoxApplication
             CartPage.Cart.AddToCart(cabinet);
 
             JObject test = CartPage.Cart.ShowCart();
-            MessageBox.Show(test.ToString());
+            MessageBox.Show("This cabinet has been added to the cart succesfully!");
 
         }
     }
