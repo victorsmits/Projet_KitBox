@@ -10,7 +10,6 @@ namespace KitBoxApplication
     public partial class BoxStandard : UserControl
     {
 
-        private static Cart cart;
 
         public BoxStandard()
         {
@@ -60,7 +59,6 @@ namespace KitBoxApplication
         OleDbConnection cn = new OleDbConnection();  // cn for connection
         OleDbDataReader dr;
 
-        public static Cart Cart { get => cart; set => cart = value; }
 
         // Connection to the DB and loading the data into the box
         private void BoxStandard_Load(object sender, EventArgs e)
@@ -528,9 +526,9 @@ namespace KitBoxApplication
         {
             
             //If the cart is empty, create it
-            if (cart == null)
+            if (CartPage.Cart == null)
             {
-                cart = new Cart();
+                CartPage.Cart = new Cart();
             }
 
             Cabinet cabinet = new Cabinet();
@@ -699,10 +697,10 @@ namespace KitBoxApplication
                     cabinet.AddStorageBox(box7);
                     break;
             }
-            cart.AddToCart(cabinet);
+            CartPage.Cart.AddToCart(cabinet);
 
-            //JObject test = cart.ShowCart();
-            //MessageBox.Show(test.ToString());
+            JObject test = CartPage.Cart.ShowCart();
+            MessageBox.Show(test.ToString());
 
         }
     }

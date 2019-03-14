@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using KitBoxSourceCode;
+using Newtonsoft.Json.Linq;
 
 namespace KitBoxApplication
 {
@@ -55,8 +56,8 @@ namespace KitBoxApplication
             //MessageBox.Show(creation2.Controls[0].Controls[5].Cart);
             //creation2.Controls[0].Controls[5];
 
-            Cart cartToProcess = BoxStandard.Cart;
-            MessageBox.Show(cartToProcess.ShowCart().ToString());
+            
+
 
         }
     }
