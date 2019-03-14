@@ -400,9 +400,9 @@ namespace KitBoxApplication
 =======
             
             creationScratch.ComboBoxDepth.Items.Clear();
-            comboBoxHeight.Items.Clear();
             try
-            {                
+            {
+                var count = numericUpDownQuantity.Value;
                 string q = "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ";
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
@@ -411,8 +411,7 @@ namespace KitBoxApplication
                 {
                     while (dr.Read())
                     {
-                        creationScratch.ComboBoxDepth.Items.Add(dr[0].ToString());
-                        comboBoxHeight.Items.Add(dr[0].ToString());
+                        creationScratch.ComboBoxDepth.Items.Add(dr[0].ToString());                        
                     }
                 }
                 dr.Close();
