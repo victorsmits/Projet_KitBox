@@ -43,8 +43,14 @@ namespace KitBoxApplication
             {
                 boxStandard2.Visible = true;
                 completeCreation.Checked = false;
-                creationExplanation1.Visible = false;            
+                creationExplanation1.Visible = false; 
+                
             }
-        }        
+        }
+
+        private void creationExplanation1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

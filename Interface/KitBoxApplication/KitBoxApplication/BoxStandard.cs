@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Data.OleDb;
 using System.Windows.Forms;
+using KitBoxSourceCode;
+using System.Drawing;
+using Newtonsoft.Json.Linq;
 
 namespace KitBoxApplication
 {
     public partial class BoxStandard : UserControl
     {
+
+
         public BoxStandard()
         {
             InitializeComponent();
@@ -47,17 +52,18 @@ namespace KitBoxApplication
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
             radioButtonYesBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
-            radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);           
+            radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
         }
 
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
         OleDbConnection cn = new OleDbConnection();  // cn for connection
         OleDbDataReader dr;
 
+
         // Connection to the DB and loading the data into the box
-        private void BoxStandard_Load(object sender, EventArgs e) 
+        private void BoxStandard_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadData();
             LoadDataWidth();
@@ -67,17 +73,34 @@ namespace KitBoxApplication
             LoadDataDoor();
         }
 
-        // function model for loadData
-        private void loadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
+        // Loading data from data base
+        private void LoadData()
         {
-            foreach (System.Windows.Forms.ComboBox i in m)
-            {
-                i.Items.Clear();
-            }
+            comboBoxHeight.Items.Clear();
+            comboBoxDepth.Items.Clear();
+            comboBoxWidth.Items.Clear();
+            comboBoxColorAngles.Items.Clear();
+            comboBoxColorIf1.Items.Clear();
+            comboBoxColorS1.Items.Clear();
+            comboBoxColorS2.Items.Clear();
+            comboBoxColorS3.Items.Clear();
+            comboBoxColorS4.Items.Clear();
+            comboBoxColorS5.Items.Clear();
+            comboBoxColorS6.Items.Clear();
+            comboBoxColorS7.Items.Clear();
+            comboBoxColorSA.Items.Clear();
+            comboBoxDoorMatBox1.Items.Clear();
+            comboBoxDoorMatBox2.Items.Clear();
+            comboBoxDoorMatBox3.Items.Clear();
+            comboBoxDoorMatBox4.Items.Clear();
+            comboBoxDoorMatBox5.Items.Clear();
+            comboBoxDoorMatBox6.Items.Clear();
+            comboBoxDoorMatBox7.Items.Clear();
             try
             {
                 var count = numericUpDownQuantity.Value;
-                string q = n;
+                string q = "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+                    "AND division LIKE '" + count + "'";
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
                 dr = cmd.ExecuteReader();
@@ -85,10 +108,7 @@ namespace KitBoxApplication
                 {
                     while (dr.Read())
                     {
-                        foreach (System.Windows.Forms.ComboBox i in m)
-                        {
-                            i.Items.Add(dr[0].ToString());
-                        }
+                        comboBoxHeight.Items.Add(dr[0].ToString());
                     }
                 }
                 dr.Close();
@@ -101,7 +121,7 @@ namespace KitBoxApplication
             }
         }
 
-        // Loading data from data base 
+        // Loading data from data base
         private void LoadData()
         {
             System.Windows.Forms.ComboBox[] list = {
@@ -129,7 +149,7 @@ namespace KitBoxApplication
             var count = numericUpDownQuantity.Value;
             loadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
                     "AND division LIKE '" + count + "'");
-        }   
+        }
 
         // Loading Height data from data base
         private void LoadDataHeight()
@@ -137,42 +157,65 @@ namespace KitBoxApplication
             System.Windows.Forms.ComboBox[] list = { comboBoxHeight };
             var count = numericUpDownQuantity.Value;
             loadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " + "AND division LIKE '" + count + "'");
-        }        
+        }
 
         // Loading Width data from data base if cabinet without doors
         private void LoadDataWidth()
         {
-            System.Windows.Forms.ComboBox[] list = {comboBoxWidth};
-            loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
+            comboBoxWidth.Items.Clear();
+            try
+            {
+                var height = comboBoxHeight.SelectedValue;
+
+                string q = "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' "; //+
+                   // "AND hauteur LIKE '" + height + "'";
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        comboBoxWidth.Items.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
         }
 
         // Loading Width data from data base if cabinet with doors
         private void LoadDataWidthDoor()
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxWidth};
-            loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ");           
+            loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ");
         }
 
-        // Loading Depth data from data base 
+        // Loading Depth data from data base
         private void LoadDataDepth()
         {
-            System.Windows.Forms.ComboBox[] list = {comboBoxDepth};            
+            System.Windows.Forms.ComboBox[] list = {comboBoxDepth};
             loadDataGeneral(list, "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ");
         }
 
-        // Loading Angle Color data from data base 
+        // Loading Angle Color data from data base
         private void LoadDataAngleColor()
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxColorAngles};
             var count = numericUpDownQuantity.Value;
             loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND division LIKE '" + count + "'");            
+                    "AND division LIKE '" + count + "'");
         }
 
-        // Loading Box Color data from data base 
+        // Loading Box Color data from data base
         private void LoadDataBoxColor()
         {
-            System.Windows.Forms.ComboBox[] list = {                
+            System.Windows.Forms.ComboBox[] list = {
                 comboBoxColorIf1,
                 comboBoxColorS1,
                 comboBoxColorS2,
@@ -183,10 +226,10 @@ namespace KitBoxApplication
                 comboBoxColorS7,
                 comboBoxColorSA,
             };
-            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'PA%' ");            
+            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'PA%' ");
         }
 
-        // Loading Door Material data from data base 
+        // Loading Door Material data from data base
         private void LoadDataDoor()
         {
             System.Windows.Forms.ComboBox[] list = {
@@ -199,7 +242,7 @@ namespace KitBoxApplication
                 comboBoxDoorMatBox6,
                 comboBoxDoorMatBox7
             };
-            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'POR%' ");           
+            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'POR%' ");
         }
 
         // function to make appear color choice for all the boxes at once and door choice
@@ -218,7 +261,7 @@ namespace KitBoxApplication
             }
         }
 
-        // function to make appear color choice for all boxes apart and door choice        
+        // function to make appear color choice for all boxes apart and door choice
         private void checkBoxColorNo_CheckedChanged(object sender, EventArgs e)
         {
             if (panelColorChoice.Visible == true)
@@ -251,8 +294,8 @@ namespace KitBoxApplication
                 radioButtonNoIf2.Checked = true;
                 radioButtonNoBox1.Checked = true;
                 radioButtonNoBox2.Checked = true;
-                
-            }        
+
+            }
             else if (count > 1)
             {
                 panelDoorChoiceMultiple.Visible = true;
@@ -322,7 +365,7 @@ namespace KitBoxApplication
                                 radioButtonNoBox7.Checked = true;
                                 if (count > 6)
                                 {
-                                    // color features box 7 
+                                    // color features box 7
                                     labelColorS7.Visible = true;
                                     comboBoxColorS7.Visible = true;
                                     // door features box 7
@@ -332,7 +375,7 @@ namespace KitBoxApplication
                             }
                         }
                     }
-                }                
+                }
             }
         }
 
@@ -477,7 +520,7 @@ namespace KitBoxApplication
                 }
             }
         }
-        
+
         // function radiobuttons for door box 7
         private void radioButtonBox7_CheckedChanged(object sender, EventArgs e)
         {
@@ -495,15 +538,207 @@ namespace KitBoxApplication
             }
         }
 
-        // function to give dimension of the boxes 
+        //function that give the height of each box
+        private int ProcessHeightForEachBox(int heightToGive, int nbrBoxToGive)
+        {
+            var height = heightToGive;
+            var nbrBox = nbrBoxToGive;
+            int boxHeight = (height - nbrBox * 4) / nbrBox;
+            return boxHeight;
+        }
+
+        // function to give dimension of the boxes
         private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
         {
             // TODO : sth to change text next to combobox containing height of the box
             var height = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
             var nbrBox = Int32.Parse(numericUpDownQuantity.Value.ToString());
-            int boxHeight = (height - nbrBox * 4) / nbrBox;
+            int boxHeight = ProcessHeightForEachBox(height,nbrBox);
             string dimension = nbrBox + "x" + boxHeight.ToString() + "(h)";
             labelBoxHeight.Text = dimension.ToString();
+        }
+
+        //function that add the chosen features to the cart
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            //If the cart is empty, create it
+            if (CartPage.Cart == null)
+            {
+                CartPage.Cart = new Cart();
+            }
+
+            Cabinet cabinet = new Cabinet();
+
+
+            int qty = (int)numericUpDownQuantity.Value;
+            int totalHeight = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
+            int heightForEach = ProcessHeightForEachBox(totalHeight,qty);
+            int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
+            Color angleColor = Color.FromName(comboBoxColorAngles.SelectedItem.ToString());
+
+            cabinet.AddAngles(angleColor);
+
+            //Initialize colors and doors choices
+            string color1 = null;
+            string color2 = null;
+            string color3 = null;
+            string color4 = null;
+            string color5 = null;
+            string color6 = null;
+            string color7 = null;
+
+            string door1 = null;
+            string door2 = null;
+            string door3 = null;
+            string door4 = null;
+            string door5 = null;
+            string door6 = null;
+            string door7 = null;
+
+
+            if (qty == 1)
+            {
+                color1 = comboBoxColorIf1.SelectedItem.ToString();
+                if (radioButtonYesIf1.Checked == true)
+                {
+                    door1 = comboBoxDoorMatIf1.Text.ToString();
+                }
+
+                else
+                {
+                    door1 = null;
+                }
+            }
+
+            else
+            {
+                if (checkBoxColorYes.Checked == true & radioButtonYesIf2.Checked == true)
+                {
+                    color1 = comboBoxColorSA.Text.ToString();
+                    color2 = comboBoxColorSA.Text.ToString();
+                    color3 = comboBoxColorSA.Text.ToString();
+                    color4 = comboBoxColorSA.Text.ToString();
+                    color5 = comboBoxColorSA.Text.ToString();
+                    color6 = comboBoxColorSA.Text.ToString();
+                    color7 = comboBoxColorSA.Text.ToString();
+
+                    if (radioButtonYesBox1.Checked == true)
+                    {
+                        door1 = comboBoxDoorMatBox1.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox2.Checked == true)
+                    {
+                        door2 = comboBoxDoorMatBox2.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox3.Checked == true)
+                    {
+                        door3 = comboBoxDoorMatBox3.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox4.Checked == true)
+                    {
+                        door4 = comboBoxDoorMatBox4.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox5.Checked == true)
+                    {
+                        door5 = comboBoxDoorMatBox5.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox6.Checked == true)
+                    {
+                        door6 = comboBoxDoorMatBox6.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox7.Checked == true)
+                    {
+                        door7 = comboBoxDoorMatBox7.SelectedItem.ToString();
+                    }
+                }
+                if (checkBoxColorYes.Checked == true & radioButtonYesIf2.Checked == false)
+                {
+                    color1 = comboBoxColorSA.Text.ToString();
+                    color2 = comboBoxColorSA.Text.ToString();
+                    color3 = comboBoxColorSA.Text.ToString();
+                    color4 = comboBoxColorSA.Text.ToString();
+                    color5 = comboBoxColorSA.Text.ToString();
+                    color6 = comboBoxColorSA.Text.ToString();
+                    color7 = comboBoxColorSA.Text.ToString();
+                }
+                else
+                {
+                    color1 = comboBoxColorS1.Text.ToString();
+                    color2 = comboBoxColorS2.Text.ToString();
+                    color3 = comboBoxColorS3.Text.ToString();
+                    color4 = comboBoxColorS4.Text.ToString();
+                    color5 = comboBoxColorS5.Text.ToString();
+                    color6 = comboBoxColorS6.Text.ToString();
+                    color7 = comboBoxColorS7.Text.ToString();
+                }
+            }
+
+
+            //All the boxes we can get
+
+            CabinetFloor box1 = new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1);
+            CabinetFloor box2 = new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2);
+            CabinetFloor box3 = new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3);
+            CabinetFloor box4 = new CabinetFloor(heightForEach, width, depth, door4, panelCol: color4);
+            CabinetFloor box5 = new CabinetFloor(heightForEach, width, depth, door5, panelCol: color5);
+            CabinetFloor box6 = new CabinetFloor(heightForEach, width, depth, door6, panelCol: color6);
+            CabinetFloor box7 = new CabinetFloor(heightForEach, width, depth, door7, panelCol: color7);
+
+
+
+
+            switch (qty)
+            {
+                case 1:
+                    cabinet.AddStorageBox(box1);
+                    break;
+                case 2:
+                    cabinet.AddStorageBox(box1);
+                    cabinet.AddStorageBox(box2);
+                    break;
+                case 3:
+                    cabinet.AddStorageBox(box1);
+                    cabinet.AddStorageBox(box2);
+                    cabinet.AddStorageBox(box3);
+                    break;
+                case 4:
+                    cabinet.AddStorageBox(box1);
+                    cabinet.AddStorageBox(box2);
+                    cabinet.AddStorageBox(box3);
+                    cabinet.AddStorageBox(box4);
+                    break;
+                case 5:
+                    cabinet.AddStorageBox(box1);
+                    cabinet.AddStorageBox(box2);
+                    cabinet.AddStorageBox(box3);
+                    cabinet.AddStorageBox(box4);
+                    cabinet.AddStorageBox(box5);
+                    break;
+                case 6:
+                    cabinet.AddStorageBox(box1);
+                    cabinet.AddStorageBox(box2);
+                    cabinet.AddStorageBox(box3);
+                    cabinet.AddStorageBox(box4);
+                    cabinet.AddStorageBox(box5);
+                    cabinet.AddStorageBox(box6);
+                    break;
+                case 7:
+                    cabinet.AddStorageBox(box1);
+                    cabinet.AddStorageBox(box2);
+                    cabinet.AddStorageBox(box3);
+                    cabinet.AddStorageBox(box4);
+                    cabinet.AddStorageBox(box5);
+                    cabinet.AddStorageBox(box6);
+                    cabinet.AddStorageBox(box7);
+                    break;
+            }
+            CartPage.Cart.AddToCart(cabinet);
+
+            JObject test = CartPage.Cart.ShowCart();
+            MessageBox.Show(test.ToString());
+
         }
     }
 }
