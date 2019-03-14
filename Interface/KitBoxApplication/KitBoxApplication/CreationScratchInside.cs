@@ -46,41 +46,5 @@ namespace KitBoxApplication
             get { return this.comboBoxDepth; }
             set { this.comboBoxDepth = value; }
         }
-
-        public System.Windows.Forms.ComboBox ComboBoxHeight
-        {
-            get { return this.comboBoxHeight; }
-            set { this.comboBoxHeight = value; }
-        }
-
-        public System.Windows.Forms.ComboBox ComboBoxWidth
-        {
-            get { return this.comboBoxWidth; }
-            set { this.comboBoxWidth = value; }
-        }
-
-        public System.Windows.Forms.ComboBox ComboBoxColor
-        {
-            get { return this.comboBoxColor; }
-            set { this.comboBoxColor = value; }
-        }
-
-        public System.Windows.Forms.ComboBox ComboBoxDoorMat
-        {
-            get { return this.comboBoxDoorMat; }
-            set { this.comboBoxDoorMat = value; }
-        }
-
-        public bool DoorNo
-        {
-            get { return this.radioButtonNo.Checked; }
-            set { }
-        }
-
-        public System.Windows.Forms.RadioButton DoorNochange
-        {
-            get { return this.radioButtonNo; }
-            set { }
-        }
     }
 }
