@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{530905E3-D372-46FA-9434-CC18A725A47E}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>KitBoxSourceCode</RootNamespace>
     <AssemblyName>KitBoxSourceCode</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -62,7 +62,7 @@
       <HintPath>..\System.ComponentModel.dll</HintPath>
     </Reference>
     <Reference Include="ADONetHelper">
-      <HintPath>..\packages\ADONetHelper.3.1.3\lib\net45\ADONetHelper.dll</HintPath>
+      <HintPath>..\packages\ADONetHelper.3.2.1\lib\net45\ADONetHelper.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="ADONetHelper.Oledb">
@@ -86,6 +86,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Transactions" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
