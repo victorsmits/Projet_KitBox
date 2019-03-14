@@ -64,7 +64,7 @@ namespace KitBoxApplication
             LoadDataDepth();
             LoadDataAngleColor();
             LoadDataBoxColor();
-            LoadDataDoor();
+            LoadDataDoorMat();
         }
 
         // function model for loadData
@@ -187,7 +187,7 @@ namespace KitBoxApplication
         }
 
         // Loading Door Material data from data base 
-        private void LoadDataDoor()
+        private void LoadDataDoorMat()
         {
             System.Windows.Forms.ComboBox[] list = {
                 comboBoxDoorMatIf1,
