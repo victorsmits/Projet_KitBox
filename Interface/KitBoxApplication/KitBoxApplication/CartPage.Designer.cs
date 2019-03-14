@@ -36,30 +36,33 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(10, 48);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(828, 413);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.tabPage1.Size = new System.Drawing.Size(2209, 989);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Empty";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(836, 439);
+            this.tabControl1.Size = new System.Drawing.Size(2229, 1047);
             this.tabControl1.TabIndex = 0;
             // 
             // CartPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CartPage";
-            this.Size = new System.Drawing.Size(839, 442);
+            this.Size = new System.Drawing.Size(2237, 1054);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 

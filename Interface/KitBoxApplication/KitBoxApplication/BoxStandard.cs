@@ -9,6 +9,8 @@ namespace KitBoxApplication
 {
     public partial class BoxStandard : UserControl
     {
+
+
         public BoxStandard()
         {
             InitializeComponent();
@@ -61,7 +63,7 @@ namespace KitBoxApplication
         // Connection to the DB and loading the data into the box
         private void BoxStandard_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadData();
             LoadDataWidth();
@@ -72,7 +74,7 @@ namespace KitBoxApplication
         }
 
         // function model for loadData
-        public void loadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
+        private void loadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
         {
             foreach (System.Windows.Forms.ComboBox i in m)
             {
@@ -146,7 +148,7 @@ namespace KitBoxApplication
         // Loading Width data from data base if cabinet without doors
         private void LoadDataWidth()
         {
-            System.Windows.Forms.ComboBox[] list = { comboBoxWidth };
+            System.Windows.Forms.ComboBox[] list = {comboBoxWidth};
             loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
         }
 
@@ -522,7 +524,7 @@ namespace KitBoxApplication
         //function that add the chosen features to the cart
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
             //If the cart is empty, create it
             if (CartPage.Cart == null)
             {
@@ -531,7 +533,7 @@ namespace KitBoxApplication
 
             Cabinet cabinet = new Cabinet();
 
-
+            
             int qty = (int)numericUpDownQuantity.Value;
             int totalHeight = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
             int heightForEach = ProcessHeightForEachBox(totalHeight,qty);
@@ -566,7 +568,7 @@ namespace KitBoxApplication
                 {
                     door1 = comboBoxDoorMatIf1.Text.ToString();
                 }
-
+                
                 else
                 {
                     door1 = null;
@@ -574,7 +576,7 @@ namespace KitBoxApplication
             }
 
             else
-            {
+            { 
                 if (checkBoxColorYes.Checked == true & radioButtonYesIf2.Checked == true)
                 {
                     color1 = comboBoxColorSA.Text.ToString();
@@ -628,7 +630,7 @@ namespace KitBoxApplication
                 {
                     color1 = comboBoxColorS1.Text.ToString();
                     color2 = comboBoxColorS2.Text.ToString();
-                    color3 = comboBoxColorS3.Text.ToString();
+                    color3 = comboBoxColorS3.Text.ToString(); 
                     color4 = comboBoxColorS4.Text.ToString();
                     color5 = comboBoxColorS5.Text.ToString();
                     color6 = comboBoxColorS6.Text.ToString();
@@ -646,9 +648,9 @@ namespace KitBoxApplication
             CabinetFloor box5 = new CabinetFloor(heightForEach, width, depth, door5, panelCol: color5);
             CabinetFloor box6 = new CabinetFloor(heightForEach, width, depth, door6, panelCol: color6);
             CabinetFloor box7 = new CabinetFloor(heightForEach, width, depth, door7, panelCol: color7);
-
-
-
+            
+            
+            
 
             switch (qty)
             {

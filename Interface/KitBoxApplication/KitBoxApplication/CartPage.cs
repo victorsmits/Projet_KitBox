@@ -26,6 +26,9 @@ namespace KitBoxApplication
 
         public static Cart Cart { get => cart; set => cart = value; }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
