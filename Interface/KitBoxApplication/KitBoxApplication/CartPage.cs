@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KitBoxSourceCode;
+using Newtonsoft.Json.Linq;
+
 
 namespace KitBoxApplication
 {
     public partial class CartPage : UserControl
     {
+
+        private static Cart cart;
+       
+
         public CartPage()
         {
             InitializeComponent();
         }
+
+        public static Cart Cart { get => cart; set => cart = value; }
+
+
     }
 }

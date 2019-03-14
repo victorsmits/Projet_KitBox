@@ -36,5 +36,11 @@ namespace KitBoxApplication
                 }
             }
         }
+
+        public System.Windows.Forms.ComboBox ComboBoxDepth
+        {
+            get { return this.comboBoxDepth; }
+            set { this.comboBoxDepth = value; }
+        }
     }
 }

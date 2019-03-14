@@ -2,12 +2,12 @@
 {
     partial class BoxCreationScratch
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -22,14 +22,13 @@
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoxCreationScratch));
-            this.comboBoxColorAngles = new System.Windows.Forms.ComboBox();
             this.labelColorAngles = new System.Windows.Forms.Label();
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.labelQuantityBox = new System.Windows.Forms.Label();
@@ -52,6 +51,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.labelExplanation = new System.Windows.Forms.Label();
             this.labelHelp = new System.Windows.Forms.Label();
+            this.comboBoxHeight = new System.Windows.Forms.ComboBox();
+            this.comboBoxColorAngles = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPageBox1.SuspendLayout();
@@ -62,24 +63,9 @@
             this.tabPageBox6.SuspendLayout();
             this.tabPageBox7.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // comboBoxColorAngles
-            // 
-            this.comboBoxColorAngles.FormattingEnabled = true;
-            this.comboBoxColorAngles.Items.AddRange(new object[] {
-            "Brun",
-            "Blanc",
-            "Galvinisé",
-            "Noir"});
-            this.comboBoxColorAngles.Location = new System.Drawing.Point(441, 200);
-            this.comboBoxColorAngles.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.comboBoxColorAngles.Name = "comboBoxColorAngles";
-            this.comboBoxColorAngles.Size = new System.Drawing.Size(300, 39);
-            this.comboBoxColorAngles.TabIndex = 65;
-            this.comboBoxColorAngles.UseWaitCursor = true;
-            // 
+            //
             // labelColorAngles
-            // 
+            //
             this.labelColorAngles.AutoSize = true;
             this.labelColorAngles.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelColorAngles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
@@ -89,9 +75,9 @@
             this.labelColorAngles.Size = new System.Drawing.Size(328, 40);
             this.labelColorAngles.TabIndex = 64;
             this.labelColorAngles.Text = "Color of the Angles";
-            // 
+            //
             // numericUpDownQuantity
-            // 
+            //
             this.numericUpDownQuantity.AutoSize = true;
             this.numericUpDownQuantity.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.numericUpDownQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -118,9 +104,9 @@
             0,
             0});
             this.numericUpDownQuantity.ValueChanged += new System.EventHandler(this.numericUpDownQuantity_ValueChanged);
-            // 
+            //
             // labelQuantityBox
-            // 
+            //
             this.labelQuantityBox.AutoSize = true;
             this.labelQuantityBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuantityBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
@@ -130,9 +116,9 @@
             this.labelQuantityBox.Size = new System.Drawing.Size(309, 40);
             this.labelQuantityBox.TabIndex = 60;
             this.labelQuantityBox.Text = "Quantity of boxes";
-            // 
+            //
             // labelTitle
-            // 
+            //
             this.labelTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 14.1F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,9 +131,9 @@
             this.labelTitle.TabIndex = 70;
             this.labelTitle.Text = "Construction Cabinet";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // tabControl1
-            // 
+            //
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControl1.Controls.Add(this.tabPageBox1);
             this.tabControl1.Controls.Add(this.tabPageBox2);
@@ -166,9 +152,9 @@
             this.tabControl1.Size = new System.Drawing.Size(1365, 717);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 1;
-            // 
+            //
             // tabPageBox1
-            // 
+            //
             this.tabPageBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.tabPageBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.tabPageBox1.Controls.Add(this.creationScratchInside2);
@@ -182,18 +168,18 @@
             this.tabPageBox1.Size = new System.Drawing.Size(1357, 679);
             this.tabPageBox1.TabIndex = 0;
             this.tabPageBox1.Text = "Box 1";
-            // 
+            //
             // creationScratchInside2
-            // 
+            //
             this.creationScratchInside2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.creationScratchInside2.Location = new System.Drawing.Point(45, 36);
             this.creationScratchInside2.Margin = new System.Windows.Forms.Padding(4);
             this.creationScratchInside2.Name = "creationScratchInside2";
             this.creationScratchInside2.Size = new System.Drawing.Size(1170, 589);
             this.creationScratchInside2.TabIndex = 0;
-            // 
+            //
             // tabPageBox2
-            // 
+            //
             this.tabPageBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.tabPageBox2.Controls.Add(this.creationScratchInside1);
             this.tabPageBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,18 +189,18 @@
             this.tabPageBox2.Size = new System.Drawing.Size(1357, 679);
             this.tabPageBox2.TabIndex = 1;
             this.tabPageBox2.Text = "Box 2";
-            // 
+            //
             // creationScratchInside1
-            // 
+            //
             this.creationScratchInside1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.creationScratchInside1.Location = new System.Drawing.Point(45, 36);
             this.creationScratchInside1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.creationScratchInside1.Name = "creationScratchInside1";
             this.creationScratchInside1.Size = new System.Drawing.Size(1142, 569);
             this.creationScratchInside1.TabIndex = 0;
-            // 
+            //
             // tabPageBox3
-            // 
+            //
             this.tabPageBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.tabPageBox3.Controls.Add(this.creationScratchInside3);
             this.tabPageBox3.Font = new System.Drawing.Font("Century Gothic", 9F);
@@ -225,18 +211,18 @@
             this.tabPageBox3.Size = new System.Drawing.Size(1357, 679);
             this.tabPageBox3.TabIndex = 2;
             this.tabPageBox3.Text = "Box 3";
-            // 
+            //
             // creationScratchInside3
-            // 
+            //
             this.creationScratchInside3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.creationScratchInside3.Location = new System.Drawing.Point(45, 36);
             this.creationScratchInside3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.creationScratchInside3.Name = "creationScratchInside3";
             this.creationScratchInside3.Size = new System.Drawing.Size(1142, 569);
             this.creationScratchInside3.TabIndex = 0;
-            // 
+            //
             // tabPageBox4
-            // 
+            //
             this.tabPageBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.tabPageBox4.Controls.Add(this.creationScratchInside4);
             this.tabPageBox4.Font = new System.Drawing.Font("Century Gothic", 9F);
@@ -246,18 +232,18 @@
             this.tabPageBox4.Size = new System.Drawing.Size(1357, 679);
             this.tabPageBox4.TabIndex = 3;
             this.tabPageBox4.Text = "Box 4";
-            // 
+            //
             // creationScratchInside4
-            // 
+            //
             this.creationScratchInside4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.creationScratchInside4.Location = new System.Drawing.Point(45, 36);
             this.creationScratchInside4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.creationScratchInside4.Name = "creationScratchInside4";
             this.creationScratchInside4.Size = new System.Drawing.Size(1142, 569);
             this.creationScratchInside4.TabIndex = 0;
-            // 
+            //
             // tabPageBox5
-            // 
+            //
             this.tabPageBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.tabPageBox5.Controls.Add(this.creationScratchInside5);
             this.tabPageBox5.Font = new System.Drawing.Font("Century Gothic", 9F);
@@ -267,18 +253,18 @@
             this.tabPageBox5.Size = new System.Drawing.Size(1357, 679);
             this.tabPageBox5.TabIndex = 4;
             this.tabPageBox5.Text = "Box 5";
-            // 
+            //
             // creationScratchInside5
-            // 
+            //
             this.creationScratchInside5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.creationScratchInside5.Location = new System.Drawing.Point(45, 36);
             this.creationScratchInside5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.creationScratchInside5.Name = "creationScratchInside5";
             this.creationScratchInside5.Size = new System.Drawing.Size(1142, 569);
             this.creationScratchInside5.TabIndex = 0;
-            // 
+            //
             // tabPageBox6
-            // 
+            //
             this.tabPageBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.tabPageBox6.Controls.Add(this.creationScratchInside6);
             this.tabPageBox6.Font = new System.Drawing.Font("Century Gothic", 9F);
@@ -288,18 +274,18 @@
             this.tabPageBox6.Size = new System.Drawing.Size(1357, 679);
             this.tabPageBox6.TabIndex = 5;
             this.tabPageBox6.Text = "Box 6";
-            // 
+            //
             // creationScratchInside6
-            // 
+            //
             this.creationScratchInside6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.creationScratchInside6.Location = new System.Drawing.Point(45, 36);
             this.creationScratchInside6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.creationScratchInside6.Name = "creationScratchInside6";
             this.creationScratchInside6.Size = new System.Drawing.Size(1142, 569);
             this.creationScratchInside6.TabIndex = 0;
-            // 
+            //
             // tabPageBox7
-            // 
+            //
             this.tabPageBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.tabPageBox7.Controls.Add(this.creationScratchInside7);
             this.tabPageBox7.Font = new System.Drawing.Font("Century Gothic", 9F);
@@ -310,18 +296,18 @@
             this.tabPageBox7.Size = new System.Drawing.Size(1357, 679);
             this.tabPageBox7.TabIndex = 6;
             this.tabPageBox7.Text = "Box 7";
-            // 
+            //
             // creationScratchInside7
-            // 
+            //
             this.creationScratchInside7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
             this.creationScratchInside7.Location = new System.Drawing.Point(45, 36);
             this.creationScratchInside7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.creationScratchInside7.Name = "creationScratchInside7";
             this.creationScratchInside7.Size = new System.Drawing.Size(1142, 569);
             this.creationScratchInside7.TabIndex = 0;
-            // 
+            //
             // button2
-            // 
+            //
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
@@ -334,9 +320,9 @@
             this.button2.TabIndex = 74;
             this.button2.Text = "Add To Cart";
             this.button2.UseVisualStyleBackColor = false;
-            // 
+            //
             // labelExplanation
-            // 
+            //
             this.labelExplanation.AllowDrop = true;
             this.labelExplanation.AutoSize = true;
             this.labelExplanation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -349,9 +335,9 @@
             this.labelExplanation.Size = new System.Drawing.Size(736, 187);
             this.labelExplanation.TabIndex = 73;
             this.labelExplanation.Text = resources.GetString("labelExplanation.Text");
-            // 
+            //
             // labelHelp
-            // 
+            //
             this.labelHelp.AutoSize = true;
             this.labelHelp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -360,23 +346,53 @@
             this.labelHelp.Size = new System.Drawing.Size(109, 47);
             this.labelHelp.TabIndex = 72;
             this.labelHelp.Text = "Help";
-            // 
+            //
+            // comboBoxHeight
+            //
+            this.comboBoxHeight.FormattingEnabled = true;
+            this.comboBoxHeight.Items.AddRange(new object[] {
+            "Brun",
+            "Blanc",
+            "Galvinisé",
+            "Noir"});
+            this.comboBoxHeight.Location = new System.Drawing.Point(868, 200);
+            this.comboBoxHeight.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.comboBoxHeight.Name = "comboBoxHeight";
+            this.comboBoxHeight.Size = new System.Drawing.Size(200, 39);
+            this.comboBoxHeight.TabIndex = 75;
+            //
+            // comboBoxColorAngles
+            //
+            this.comboBoxColorAngles.FormattingEnabled = true;
+            this.comboBoxColorAngles.Items.AddRange(new object[] {
+            "Brun",
+            "Blanc",
+            "Galvinisé",
+            "Noir"});
+            this.comboBoxColorAngles.Location = new System.Drawing.Point(441, 201);
+            this.comboBoxColorAngles.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.comboBoxColorAngles.Name = "comboBoxColorAngles";
+            this.comboBoxColorAngles.Size = new System.Drawing.Size(200, 39);
+            this.comboBoxColorAngles.TabIndex = 76;
+            //
             // BoxCreationScratch
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.Controls.Add(this.comboBoxColorAngles);
+            this.Controls.Add(this.comboBoxHeight);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.labelExplanation);
             this.Controls.Add(this.labelHelp);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.labelTitle);
-            this.Controls.Add(this.comboBoxColorAngles);
             this.Controls.Add(this.labelColorAngles);
             this.Controls.Add(this.numericUpDownQuantity);
             this.Controls.Add(this.labelQuantityBox);
             this.Name = "BoxCreationScratch";
             this.Size = new System.Drawing.Size(2416, 1407);
+            this.Load += new System.EventHandler(this.BoxCreationScratch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPageBox1.ResumeLayout(false);
@@ -392,7 +408,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox comboBoxColorAngles;
         private System.Windows.Forms.Label labelColorAngles;
         private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
         private System.Windows.Forms.Label labelQuantityBox;
@@ -415,5 +430,7 @@
         private CreationScratchInside creationScratchInside5;
         private CreationScratchInside creationScratchInside6;
         private CreationScratchInside creationScratchInside7;
+        private System.Windows.Forms.ComboBox comboBoxColorAngles;
+        private System.Windows.Forms.ComboBox comboBoxHeight;
     }
 }
