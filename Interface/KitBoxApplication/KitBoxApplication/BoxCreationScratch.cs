@@ -27,8 +27,6 @@ namespace KitBoxApplication
             EnablePage(tabPageBox5, false);
             EnablePage(tabPageBox6, false);
             EnablePage(tabPageBox7, false);
-
-
         }
 
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
@@ -39,71 +37,52 @@ namespace KitBoxApplication
 
         private void BoxCreationScratch_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
-            LoadDataAngleColor();
-            LoadDataDepth();
+            LoadDataAngleColor();            
+        }
+
+        // function model for loadData
+        public void LoadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
+        {
+            foreach (System.Windows.Forms.ComboBox i in m)
+            {
+                i.Items.Clear();
+            }
+            try
+            {                
+                string q = n;
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        foreach (System.Windows.Forms.ComboBox i in m)
+                        {
+                            i.Items.Add(dr[0].ToString());
+                        }
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
         }
 
         // Loading Angle Color data from data base
         private void LoadDataAngleColor()
         {
-            comboBoxColorAngles.Items.Clear();
-            try
-            {
-                var count = numericUpDownQuantity.Value;
-                string q = "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
-                    "AND division LIKE '" + count + "'";
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        comboBoxColorAngles.Items.Add(dr[0].ToString());
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
+            System.Windows.Forms.ComboBox[] list = {comboBoxColorAngles};
+            var count = numericUpDownQuantity.Value;
+            LoadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +"AND division LIKE '" + count + "'");           
         }
-
-        // Loading Depth data from data base
-        private void LoadDataDepth()
-        {
-
-            creationScratch.ComboBoxDepth.Items.Clear();
-            comboBoxHeight.Items.Clear();
-            try
-            {
-                string q = "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ";
-                cmd.CommandText = q; // execution of a SQL instruction
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        creationScratch.ComboBoxDepth.Items.Add(dr[0].ToString());
-                        comboBoxHeight.Items.Add(dr[0].ToString());
-                    }
-                }
-                dr.Close();
-                cn.Close();
-            }
-            catch (Exception e)
-            {
-                cn.Close();
-                MessageBox.Show(e.Message.ToString());
-            }
-        }
-
+        
         // -- Method to design tabheader
         private void tabPageBox1_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -195,5 +174,4 @@ namespace KitBoxApplication
             }
         }
     }
-
 }

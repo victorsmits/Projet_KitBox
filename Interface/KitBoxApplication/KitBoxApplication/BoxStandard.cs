@@ -63,7 +63,7 @@ namespace KitBoxApplication
         // Connection to the DB and loading the data into the box
         private void BoxStandard_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadData();
             LoadDataWidth();
@@ -74,15 +74,14 @@ namespace KitBoxApplication
         }
 
         // function model for loadData
-        private void loadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
+        public void LoadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
         {
             foreach (System.Windows.Forms.ComboBox i in m)
             {
                 i.Items.Clear();
             }
             try
-            {
-                var count = numericUpDownQuantity.Value;
+            {                
                 string q = n;
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
@@ -133,7 +132,7 @@ namespace KitBoxApplication
                 comboBoxDoorMatBox7
             };
             var count = numericUpDownQuantity.Value;
-            loadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+            LoadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
                     "AND division LIKE '" + count + "'");
         }
 
@@ -142,28 +141,28 @@ namespace KitBoxApplication
         {
             System.Windows.Forms.ComboBox[] list = { comboBoxHeight };
             var count = numericUpDownQuantity.Value;
-            loadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " + "AND division LIKE '" + count + "'");
+            LoadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " + "AND division LIKE '" + count + "'");
         }
 
         // Loading Width data from data base if cabinet without doors
         private void LoadDataWidth()
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxWidth};
-            loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
         }
 
         // Loading Width data from data base if cabinet with doors
         private void LoadDataWidthDoor()
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxWidth};
-            loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ");
         }
 
         // Loading Depth data from data base
         private void LoadDataDepth()
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxDepth};
-            loadDataGeneral(list, "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ");
         }
 
         // Loading Angle Color data from data base
@@ -171,7 +170,7 @@ namespace KitBoxApplication
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxColorAngles};
             var count = numericUpDownQuantity.Value;
-            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+            LoadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
                     "AND division LIKE '" + count + "'");
         }
 
@@ -189,7 +188,7 @@ namespace KitBoxApplication
                 comboBoxColorS7,
                 comboBoxColorSA,
             };
-            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'PA%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'PA%' ");
         }
 
         // Loading Door Material data from data base
@@ -205,7 +204,7 @@ namespace KitBoxApplication
                 comboBoxDoorMatBox6,
                 comboBoxDoorMatBox7
             };
-            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'POR%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'POR%' ");
         }
 
         // function to make appear color choice for all the boxes at once and door choice

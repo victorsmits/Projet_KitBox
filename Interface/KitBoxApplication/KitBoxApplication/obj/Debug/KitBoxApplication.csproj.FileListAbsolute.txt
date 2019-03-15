@@ -107,3 +107,14 @@ C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplic
 C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
 C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
 C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.exe.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CopyComplete
