@@ -27,6 +27,8 @@ namespace KitBoxApplication
             EnablePage(tabPageBox5, false);
             EnablePage(tabPageBox6, false);
             EnablePage(tabPageBox7, false);
+
+            
         }
 
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
@@ -39,7 +41,7 @@ namespace KitBoxApplication
         {
             cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
-            LoadDataAngleColor();            
+            LoadDataAngleColor();           
         }
 
         // function model for loadData
@@ -131,40 +133,52 @@ namespace KitBoxApplication
             {
                 EnablePage(tabPageBox2, false);
                 creationScratchInside2.Visible = false;
+                panelShelf2.Visible = false;
                 if (count > 1)
                 {
                     EnablePage(tabPageBox2, true);
                     EnablePage(tabPageBox3, false);
                     creationScratchInside2.Visible = true;
                     creationScratchInside3.Visible = false;
+                    panelShelf2.Visible = true;
+                    panelShelf3.Visible = false;
                     if (count > 2)
                     {
                         EnablePage(tabPageBox3, true);
                         EnablePage(tabPageBox4, false);
                         creationScratchInside3.Visible = true;
                         creationScratchInside4.Visible = false;
+                        panelShelf3.Visible = true;
+                        panelShelf4.Visible = false;
                         if (count > 3)
                         {
                             EnablePage(tabPageBox4, true);
                             EnablePage(tabPageBox5, false);
                             creationScratchInside4.Visible = true;
                             creationScratchInside5.Visible = false;
+                            panelShelf4.Visible = true;
+                            panelShelf5.Visible = false;
                             if (count > 4)
                             {
                                 EnablePage(tabPageBox5, true);
                                 EnablePage(tabPageBox6, false);
                                 creationScratchInside5.Visible = true;
                                 creationScratchInside6.Visible = false;
+                                panelShelf5.Visible = true;
+                                panelShelf6.Visible = false;
                                 if (count > 5)
                                 {
                                     EnablePage(tabPageBox6, true);
                                     EnablePage(tabPageBox7, false);
                                     creationScratchInside6.Visible = true;
                                     creationScratchInside7.Visible = false;
+                                    panelShelf6.Visible = true;
+                                    panelShelf7.Visible = false;
                                     if (count > 6)
                                     {
                                         EnablePage(tabPageBox7, true);
                                         creationScratchInside7.Visible = true;
+                                        panelShelf7.Visible = true;                                        
                                     }
                                 }
                             }
@@ -172,6 +186,48 @@ namespace KitBoxApplication
                     }
                 }
             }
+        }
+
+        public System.Windows.Forms.Panel PanelShelf1
+        {
+            get { return this.panelShelf1; }
+            set { this.panelShelf1 = value; }
+        }
+
+        public System.Windows.Forms.Panel PanelShelf2
+        {
+            get { return this.panelShelf2; }
+            set { this.panelShelf2 = value; }
+        }
+
+        public System.Windows.Forms.Panel PanelShelf3
+        {
+            get { return this.panelShelf3; }
+            set { this.panelShelf3 = value; }
+        }
+
+        public System.Windows.Forms.Panel PanelShelf4
+        {
+            get { return this.panelShelf4; }
+            set { this.panelShelf4 = value; }
+        }
+
+        public System.Windows.Forms.Panel PanelShelf5
+        {
+            get { return this.panelShelf5; }
+            set { this.panelShelf5 = value; }
+        }
+
+        public System.Windows.Forms.Panel PanelShelf6
+        {
+            get { return this.panelShelf6; }
+            set { this.panelShelf6 = value; }
+        }
+
+        public System.Windows.Forms.Panel PanelShelf7
+        {
+            get { return this.panelShelf7; }
+            set { this.panelShelf7 = value; }
         }
     }
 }

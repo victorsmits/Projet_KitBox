@@ -49,9 +49,14 @@
             this.tabPageBox7 = new System.Windows.Forms.TabPage();
             this.creationScratchInside7 = new KitBoxApplication.CreationScratchInside();
             this.button2 = new System.Windows.Forms.Button();
-            this.labelExplanation = new System.Windows.Forms.Label();
-            this.labelHelp = new System.Windows.Forms.Label();
             this.comboBoxColorAngles = new System.Windows.Forms.ComboBox();
+            this.panelShelf1 = new System.Windows.Forms.Panel();
+            this.panelShelf2 = new System.Windows.Forms.Panel();
+            this.panelShelf3 = new System.Windows.Forms.Panel();
+            this.panelShelf4 = new System.Windows.Forms.Panel();
+            this.panelShelf5 = new System.Windows.Forms.Panel();
+            this.panelShelf6 = new System.Windows.Forms.Panel();
+            this.panelShelf7 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPageBox1.SuspendLayout();
@@ -61,6 +66,12 @@
             this.tabPageBox5.SuspendLayout();
             this.tabPageBox6.SuspendLayout();
             this.tabPageBox7.SuspendLayout();
+            this.panelShelf1.SuspendLayout();
+            this.panelShelf2.SuspendLayout();
+            this.panelShelf3.SuspendLayout();
+            this.panelShelf4.SuspendLayout();
+            this.panelShelf5.SuspendLayout();
+            this.panelShelf6.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelColorAngles
@@ -320,32 +331,6 @@
             this.button2.Text = "Add To Cart";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // labelExplanation
-            // 
-            this.labelExplanation.AllowDrop = true;
-            this.labelExplanation.AutoSize = true;
-            this.labelExplanation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelExplanation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelExplanation.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExplanation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelExplanation.Location = new System.Drawing.Point(1579, 203);
-            this.labelExplanation.MaximumSize = new System.Drawing.Size(750, 0);
-            this.labelExplanation.Name = "labelExplanation";
-            this.labelExplanation.Size = new System.Drawing.Size(736, 187);
-            this.labelExplanation.TabIndex = 73;
-            this.labelExplanation.Text = resources.GetString("labelExplanation.Text");
-            // 
-            // labelHelp
-            // 
-            this.labelHelp.AutoSize = true;
-            this.labelHelp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.labelHelp.Location = new System.Drawing.Point(1909, 109);
-            this.labelHelp.Name = "labelHelp";
-            this.labelHelp.Size = new System.Drawing.Size(109, 47);
-            this.labelHelp.TabIndex = 72;
-            this.labelHelp.Text = "Help";
-            // 
             // comboBoxColorAngles
             // 
             this.comboBoxColorAngles.FormattingEnabled = true;
@@ -360,15 +345,103 @@
             this.comboBoxColorAngles.Size = new System.Drawing.Size(200, 39);
             this.comboBoxColorAngles.TabIndex = 76;
             // 
+            // panelShelf1
+            // 
+            this.panelShelf1.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf1.BackgroundImage")));
+            this.panelShelf1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf1.Controls.Add(this.panelShelf2);
+            this.panelShelf1.Location = new System.Drawing.Point(1797, 88);
+            this.panelShelf1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf1.Name = "panelShelf1";
+            this.panelShelf1.Size = new System.Drawing.Size(450, 1000);
+            this.panelShelf1.TabIndex = 77;
+            // 
+            // panelShelf2
+            // 
+            this.panelShelf2.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf2.BackgroundImage")));
+            this.panelShelf2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf2.Controls.Add(this.panelShelf3);
+            this.panelShelf2.Location = new System.Drawing.Point(0, -127);
+            this.panelShelf2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf2.Name = "panelShelf2";
+            this.panelShelf2.Size = new System.Drawing.Size(450, 1000);
+            this.panelShelf2.TabIndex = 11;
+            this.panelShelf2.Visible = false;
+            // 
+            // panelShelf3
+            // 
+            this.panelShelf3.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf3.BackgroundImage")));
+            this.panelShelf3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf3.Controls.Add(this.panelShelf4);
+            this.panelShelf3.Location = new System.Drawing.Point(0, -127);
+            this.panelShelf3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf3.Name = "panelShelf3";
+            this.panelShelf3.Size = new System.Drawing.Size(450, 1000);
+            this.panelShelf3.TabIndex = 10;
+            this.panelShelf3.Visible = false;
+            // 
+            // panelShelf4
+            // 
+            this.panelShelf4.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf4.BackgroundImage")));
+            this.panelShelf4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf4.Controls.Add(this.panelShelf5);
+            this.panelShelf4.Location = new System.Drawing.Point(0, -127);
+            this.panelShelf4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf4.Name = "panelShelf4";
+            this.panelShelf4.Size = new System.Drawing.Size(450, 1000);
+            this.panelShelf4.TabIndex = 10;
+            this.panelShelf4.Visible = false;
+            // 
+            // panelShelf5
+            // 
+            this.panelShelf5.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf5.BackgroundImage")));
+            this.panelShelf5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf5.Controls.Add(this.panelShelf6);
+            this.panelShelf5.Location = new System.Drawing.Point(0, -127);
+            this.panelShelf5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf5.Name = "panelShelf5";
+            this.panelShelf5.Size = new System.Drawing.Size(450, 1000);
+            this.panelShelf5.TabIndex = 10;
+            this.panelShelf5.Visible = false;
+            // 
+            // panelShelf6
+            // 
+            this.panelShelf6.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf6.BackgroundImage")));
+            this.panelShelf6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf6.Controls.Add(this.panelShelf7);
+            this.panelShelf6.Location = new System.Drawing.Point(0, -127);
+            this.panelShelf6.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf6.Name = "panelShelf6";
+            this.panelShelf6.Size = new System.Drawing.Size(450, 1000);
+            this.panelShelf6.TabIndex = 11;
+            this.panelShelf6.Visible = false;
+            // 
+            // panelShelf7
+            // 
+            this.panelShelf7.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf7.BackgroundImage")));
+            this.panelShelf7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf7.Location = new System.Drawing.Point(0, -127);
+            this.panelShelf7.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf7.Name = "panelShelf7";
+            this.panelShelf7.Size = new System.Drawing.Size(450, 1000);
+            this.panelShelf7.TabIndex = 11;
+            this.panelShelf7.Visible = false;
+            // 
             // BoxCreationScratch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.Controls.Add(this.panelShelf1);
             this.Controls.Add(this.comboBoxColorAngles);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.labelExplanation);
-            this.Controls.Add(this.labelHelp);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.labelColorAngles);
@@ -386,6 +459,12 @@
             this.tabPageBox5.ResumeLayout(false);
             this.tabPageBox6.ResumeLayout(false);
             this.tabPageBox7.ResumeLayout(false);
+            this.panelShelf1.ResumeLayout(false);
+            this.panelShelf2.ResumeLayout(false);
+            this.panelShelf3.ResumeLayout(false);
+            this.panelShelf4.ResumeLayout(false);
+            this.panelShelf5.ResumeLayout(false);
+            this.panelShelf6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,8 +484,6 @@
         private System.Windows.Forms.TabPage tabPageBox6;
         private System.Windows.Forms.TabPage tabPageBox7;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label labelExplanation;
-        private System.Windows.Forms.Label labelHelp;
         private CreationScratchInside creationScratchInside2;
         private CreationScratchInside creationScratchInside1;
         private CreationScratchInside creationScratchInside3;
@@ -415,5 +492,12 @@
         private CreationScratchInside creationScratchInside6;
         private CreationScratchInside creationScratchInside7;
         private System.Windows.Forms.ComboBox comboBoxColorAngles;
+        private System.Windows.Forms.Panel panelShelf1;
+        private System.Windows.Forms.Panel panelShelf2;
+        private System.Windows.Forms.Panel panelShelf3;
+        private System.Windows.Forms.Panel panelShelf4;
+        private System.Windows.Forms.Panel panelShelf5;
+        private System.Windows.Forms.Panel panelShelf6;
+        private System.Windows.Forms.Panel panelShelf7;
     }
 }

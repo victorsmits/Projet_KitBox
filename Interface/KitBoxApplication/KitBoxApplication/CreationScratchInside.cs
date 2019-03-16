@@ -130,5 +130,33 @@ namespace KitBoxApplication
                 }
             }
         }
+
+        
+
+        private void comboBoxColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BoxCreationScratch boxCreationScratch = new BoxCreationScratch();
+            string color = comboBoxColor.Text;
+            if (comboBoxDoorMat.Text == "")
+            {
+                //Image myImage = new Bitmap(@"C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\Resources\" + color + "NoDoor.png");
+                Image myImage = new Bitmap(@"C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\Resources\brunbrun.png");
+                //panelShelf1.BackgroundImage = myImage;
+                boxCreationScratch.PanelShelf1.BackgroundImage = myImage;
+                
+
+            }
+            else
+            {
+                string doorMat = comboBoxDoorMat.Text;
+                Image myImage = new Bitmap(@"C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\Resources\" + color + doorMat + ".png");
+                boxCreationScratch.PanelShelf1.BackgroundImage = myImage;
+            }   
+        }
+
+        private void comboBoxDoorMat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

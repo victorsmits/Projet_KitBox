@@ -49,6 +49,7 @@
             // 
             // comboBoxDepth
             // 
+            this.comboBoxDepth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDepth.FormattingEnabled = true;
             this.comboBoxDepth.Items.AddRange(new object[] {
             "Brun",
@@ -63,6 +64,7 @@
             // 
             // comboBoxWidth
             // 
+            this.comboBoxWidth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWidth.FormattingEnabled = true;
             this.comboBoxWidth.Items.AddRange(new object[] {
             "Brun",
@@ -101,6 +103,7 @@
             // 
             // comboBoxHeight
             // 
+            this.comboBoxHeight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxHeight.FormattingEnabled = true;
             this.comboBoxHeight.Items.AddRange(new object[] {
             "Brun",
@@ -173,6 +176,7 @@
             // 
             // comboBoxColor
             // 
+            this.comboBoxColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColor.FormattingEnabled = true;
             this.comboBoxColor.Items.AddRange(new object[] {
             "Brun",
@@ -182,6 +186,7 @@
             this.comboBoxColor.Name = "comboBoxColor";
             this.comboBoxColor.Size = new System.Drawing.Size(200, 39);
             this.comboBoxColor.TabIndex = 40;
+            this.comboBoxColor.SelectedIndexChanged += new System.EventHandler(this.comboBoxColor_SelectedIndexChanged);
             // 
             // panelDoorMaterial
             // 
@@ -195,6 +200,7 @@
             // 
             // comboBoxDoorMat
             // 
+            this.comboBoxDoorMat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMat.FormattingEnabled = true;
             this.comboBoxDoorMat.Items.AddRange(new object[] {
             "Brun",
@@ -206,6 +212,7 @@
             this.comboBoxDoorMat.Name = "comboBoxDoorMat";
             this.comboBoxDoorMat.Size = new System.Drawing.Size(200, 39);
             this.comboBoxDoorMat.TabIndex = 43;
+            this.comboBoxDoorMat.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMat_SelectedIndexChanged);
             // 
             // labelDoorMatIf1
             // 
