@@ -63,9 +63,9 @@ namespace KitBoxApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap phWpbBprWdlGdrG {
+        internal static System.Drawing.Bitmap BlancBlanc {
             get {
-                object obj = ResourceManager.GetObject("phWpbBprWdlGdrG", resourceCulture);
+                object obj = ResourceManager.GetObject("BlancBlanc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace KitBoxApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap phWpbWprWdlGdrG {
+        internal static System.Drawing.Bitmap blancbrun {
             get {
-                object obj = ResourceManager.GetObject("phWpbWprWdlGdrG", resourceCulture);
+                object obj = ResourceManager.GetObject("blancbrun", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,59 @@ namespace KitBoxApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap phWpbWprWdlNdrN {
+        internal static System.Drawing.Bitmap blancNoDoor {
             get {
-                object obj = ResourceManager.GetObject("phWpbWprWdlNdrN", resourceCulture);
+                object obj = ResourceManager.GetObject("blancNoDoor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blancverre {
+            get {
+                object obj = ResourceManager.GetObject("blancverre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brunblanc {
+            get {
+                object obj = ResourceManager.GetObject("brunblanc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brunBrun {
+            get {
+                object obj = ResourceManager.GetObject("brunBrun", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brunNoDoor {
+            get {
+                object obj = ResourceManager.GetObject("brunNoDoor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brunverre {
+            get {
+                object obj = ResourceManager.GetObject("brunverre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

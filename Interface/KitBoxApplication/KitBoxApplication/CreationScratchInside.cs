@@ -13,10 +13,12 @@ namespace KitBoxApplication
 {
     public partial class CreationScratchInside : UserControl
     {
+        
+
         public CreationScratchInside()
         {
             InitializeComponent();
-
+            
             // radio buttons in same group added to same function - group : --panelYesNoIf1--
             radioButtonYes.CheckedChanged += new EventHandler(radioButtonsYesNo_CheckedChanged);
             radioButtonNo.CheckedChanged += new EventHandler(radioButtonsYesNo_CheckedChanged);
@@ -28,6 +30,7 @@ namespace KitBoxApplication
 
         private void CreationScratchInside_Load(object sender, EventArgs e)
         {
+            BoxCreationScratch boxCreationScratch = new BoxCreationScratch();
             cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadDataWidth();
@@ -35,6 +38,7 @@ namespace KitBoxApplication
             LoadDataBoxHeight();
             LoadDataDoor();
             LoadDataBoxColor();
+            //boxCreationScratch.PanelShelf1 = (Image)(Properties.Resources.phWpbBprWdlGdrG);
         }
 
         // function model for loadData
@@ -87,7 +91,7 @@ namespace KitBoxApplication
         // Loading Depth data from data base
         private void LoadDataDepth()
         {
-            System.Windows.Forms.ComboBox[] list = { comboBoxHeight };
+            System.Windows.Forms.ComboBox[] list = { comboBoxDepth };
             LoadDataGeneral(list, "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ");
         }
 
@@ -131,8 +135,6 @@ namespace KitBoxApplication
             }
         }
 
-        
-
         private void comboBoxColor_SelectedIndexChanged(object sender, EventArgs e)
         {
             BoxCreationScratch boxCreationScratch = new BoxCreationScratch();
@@ -141,17 +143,20 @@ namespace KitBoxApplication
             {
                 //Image myImage = new Bitmap(@"C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\Resources\" + color + "NoDoor.png");
                 Image myImage = new Bitmap(@"C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\Resources\brunbrun.png");
-                //panelShelf1.BackgroundImage = myImage;
-                boxCreationScratch.PanelShelf1.BackgroundImage = myImage;
-                
+                //boxCreationScratch.PanelShelf1 = myImage;
+                //boxCreationScratch.PanelShelf1 = (Image)(Properties.Resources.phWpbBprWdlGdrG);
+                //boxCreationScratch.ColorAngles = "hello";
+
 
             }
             else
             {
                 string doorMat = comboBoxDoorMat.Text;
                 Image myImage = new Bitmap(@"C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                boxCreationScratch.PanelShelf1.BackgroundImage = myImage;
-            }   
+                //boxCreationScratch.PanelShelf1 = myImage;
+            }
+            
+            //boxCreationScratch.PanelShelf1 = (Image)(Properties.Resources.phWpbBprWdlGdrG);
         }
 
         private void comboBoxDoorMat_SelectedIndexChanged(object sender, EventArgs e)
