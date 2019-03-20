@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using KitBoxSourceCode;
 using System.Drawing;
 using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace KitBoxApplication
 {
@@ -59,11 +60,22 @@ namespace KitBoxApplication
         OleDbConnection cn = new OleDbConnection();  // cn for connection
         OleDbDataReader dr;
 
+        private string GetRelativePath(string directory)
+        {
+            char[] test1 = "\\".ToCharArray();
+            string[] test = directory.Split(test1);
+            string root = test[0];
+            string user = test[1];
+            string namePC = test[2];
+            string dir = root + "\\" + user + "\\" + namePC + "\\";
+            return dir;
+        }
 
         // Connection to the DB and loading the data into the box
         private void BoxStandard_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
+
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source= " + GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadData();
             LoadDataWidth();
