@@ -28,55 +28,64 @@ namespace KitBoxApplication
 
         public void Load_Json()
         {
-            jsonCart = cart.ShowCart();
-            Create_Layout();
+            try
+            {
+                jsonCart = cart.ShowCart();
+                Create_Layout();
+            }
+            catch
+            {
+
+            }
 
         }
 
+
         private void Create_Layout()
         {
-            MessageBox.Show(jsonCart.ToString());
-
-            JToken firstCabinet = jsonCart.First;
-            JToken firstFloor = firstCabinet.First;
-            JToken nextCabinet = firstCabinet.Next;
-            JToken nextFloor = firstFloor.Next;
-
-            MessageBox.Show(jsonCart.Count.ToString());
-            MessageBox.Show(firstCabinet.ToString());
-            //Generates the first cabinet tab
-            TabPage cabine1Page = new TabPage(Name = "Cabine 1");
-            cabine1Page.BackColor = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            Label floorCab1 = new Label();
-            floorCab1.Text = "floor : ";
-            floorCab1.Location = new Point(29, 26);
-            cabine1Page.Controls.Add(floorCab1);
             tabControl1.TabPages.Clear();
-            tabControl1.TabPages.Add(cabine1Page);
-
-            try
+            MessageBox.Show(jsonCart.ToString());
+            for (int cabinetCount = 0; cabinetCount < jsonCart.Count; cabinetCount++)
             {
-                for (int cabinetNumber = 0; cabinetNumber <= jsonCart.Count; cabinetNumber++)
+                JObject cabinetContains = jsonCart["Cabinet " + cabinetCount.ToString()].Value<JObject>();
+                MessageBox.Show(cabinetContains.ToString());
+
+                TabPage addedCabinePage = new TabPage(Name = "Cabine " + (cabinetCount + 1).ToString());
+                addedCabinePage.BackColor = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+                tabControl1.TabPages.Add(addedCabinePage);
+                for (int floorCount = 0; floorCount < cabinetContains.Count; floorCount++)
                 {
-                
-                    MessageBox.Show("test longueur : " + (cabinetNumber).ToString());
-                    MessageBox.Show(nextCabinet.ToString());
-                    //Generates the following cabinet tabs
-                    TabPage addedCabinePage = new TabPage(Name = "Cabine "+ (cabinetNumber + 2).ToString());
-                    addedCabinePage.BackColor = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-                    Label floor = new Label();
-                    floor.Text = "floor : ";
-                    floor.Location = new Point(29, 26);
-                    addedCabinePage.Controls.Add(floor);
-                    tabControl1.TabPages.Add(addedCabinePage);
-                    nextCabinet = nextCabinet.Next; 
-                }
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show("c'est tout : ");
-            }
+                    JObject floor = cabinetContains["Floor " + floorCount.ToString()].Value<JObject>();
+                    MessageBox.Show(floor.ToString());
 
+                    //Creating a GroupBox for a box
+                    GroupBox floorGroup = new GroupBox();
+                    floorGroup.Text = "Box " + (floorCount+1).ToString();
+                    floorGroup.AutoSize = true;
+                    Color color = Color.White;
+                    floorGroup.ForeColor = color;
+                    floorGroup.Location = new Point(30, 25 + floorCount * 106);
+                    addedCabinePage.Controls.Add(floorGroup);
+
+                    //Get Panel caract
+                    JObject floorPanel = floor["Panel"].Value<JObject>();
+
+                    string floorColor = floorPanel["Coleur"].Value<string>();
+                    int height = floorPanel["Height"].Value<int>();
+                    int length = floorPanel["Lenght"].Value<int>();
+                    int qty = floorPanel["Qty"].Value<int>();
+
+                    Label floorColorLabel = new Label();
+                    floorColorLabel.AutoSize = true;
+                    floorColorLabel.Text = String.Format("Panel\n\nColor : {0}\nDimensions : {1}x{2}cm\nQuantity : {3}", floorColor.ToString(), height.ToString(), length.ToString(), qty.ToString());
+                    floorColorLabel.Location = new Point(6, 28);
+                    floorGroup.Controls.Add(floorColorLabel);
+                }
+                
+            }
+            
+
+            
         }
 
 

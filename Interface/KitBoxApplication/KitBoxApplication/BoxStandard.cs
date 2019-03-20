@@ -638,6 +638,37 @@ namespace KitBoxApplication
                     color6 = comboBoxColorSA.Text.ToString();
                     color7 = comboBoxColorSA.Text.ToString();
                 }
+                if (checkBoxColorYes.Checked == false & radioButtonYesIf2.Checked == true)
+                {
+                    if (radioButtonYesBox1.Checked == true)
+                    {
+                        door1 = comboBoxDoorMatBox1.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox2.Checked == true)
+                    {
+                        door2 = comboBoxDoorMatBox2.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox3.Checked == true)
+                    {
+                        door3 = comboBoxDoorMatBox3.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox4.Checked == true)
+                    {
+                        door4 = comboBoxDoorMatBox4.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox5.Checked == true)
+                    {
+                        door5 = comboBoxDoorMatBox5.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox6.Checked == true)
+                    {
+                        door6 = comboBoxDoorMatBox6.SelectedItem.ToString();
+                    }
+                    if (radioButtonYesBox7.Checked == true)
+                    {
+                        door7 = comboBoxDoorMatBox7.SelectedItem.ToString();
+                    }
+                }
                 else
                 {
                     color1 = comboBoxColorS1.Text.ToString();
