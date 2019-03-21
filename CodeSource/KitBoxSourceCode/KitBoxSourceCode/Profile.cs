@@ -4,35 +4,36 @@ namespace KitBoxSourceCode
     public class Profile
     {
         private const string format = "LastName: {0}, FirstName: {1}";
-        private readonly string FirstName;
-        private readonly string LastName;
-        private readonly string Email;
-        private readonly string Adresse;
+        private readonly string firstName;
+        private readonly string lastName;
+        private readonly string email;
+        private readonly string adresse;
 
-        public string GetFirstName => FirstName;
-        public string GetLastName => LastName;
-        public string GetEmail => Email;
-        public string GetAdresse => Adresse;
+        public string GetFirstName => firstName;
+        public string GetLastName => lastName;
+        public string GetEmail => email;
+        public string GetAdresse => adresse;
 
-        public Profile(string LN, string FN, string mail = null, string adresse = null)
+        public Profile(string LN, string FN, string mail = null, string ads = null)
         {
-            FirstName = FN;
-            LastName = LN;
-            Email = mail;
-            Adresse = adresse;
+            firstName = FN;
+            lastName = LN;
+            email = mail;
+            adresse = ads;
+            //TODO add profile to db
         }
 
         public void ShowClientInfo()
         {
-            Console.WriteLine(format, arg0: LastName, arg1: FirstName);
-            if (Email != null)
+            Console.WriteLine(format, arg0: lastName, arg1: firstName);
+            if (email != null)
             {
-                Console.WriteLine("Email: {0}", arg0: Email);
+                Console.WriteLine("Email: {0}", arg0: email);
             }
 
-            if (Adresse != null)
+            if (adresse != null)
             {
-                Console.WriteLine("Adresse: {0}", arg0: Adresse);
+                Console.WriteLine("Adresse: {0}", arg0: adresse);
             }
 
         }

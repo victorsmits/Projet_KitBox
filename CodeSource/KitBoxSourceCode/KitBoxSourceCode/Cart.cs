@@ -57,7 +57,7 @@ namespace KitBoxSourceCode
                     showCart += "},";
                 }
             }
-            return JObject.Parse(ShowCart);
+            return JObject.Parse(showCart);
         }
     }
 }

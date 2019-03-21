@@ -34,7 +34,6 @@ namespace KitBoxSourceCode
             Profile client = new Profile("Smits", "Victor");
 
             Cabinet cabinet = new Cabinet();
-            Cabinet cabinet2 = new Cabinet();
             Cart cart = new Cart();
 
             //CabinetFloor cabinetFloor = new CabinetFloor
@@ -45,17 +44,13 @@ namespace KitBoxSourceCode
             //panelCol: "green");
 
             cabinet.AddStorageBox(new CabinetFloor(10, 5, 20, "green", "green"));
-            //cabinet.AddStorageBox(new CabinetFloor(10, 5, 20, panelCol: "green"));
-            //cabinet2.AddStorageBox(new CabinetFloor(10, 5, 20, panelCol: "green"));
-
+            cabinet.AddAngles("black");
             Console.WriteLine("height = " + cabinet.GetCabinetHeight);
             Console.WriteLine("Price = " + cabinet.GetCabinetPrice);
-            //Console.WriteLine("\n" + cabinet.GetPartList());
 
             //Oledb.connection("/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/DB_Lespieces.accdb");
 
             cart.AddToCart(cabinet);
-            cart.AddToCart(cabinet2);
             cart.AddCartProfile(client);
             cart.GetProfile();
 
@@ -64,21 +59,3 @@ namespace KitBoxSourceCode
         }
     }
 }
-
-/*  TODO
-+ check if a class "floor" is a good idea
-+ classe abstraite pour compoment pour les variable 
-+ classe abstraite pour StorageBox pour les variable 
-+ décorateur boxcolor a supprimer et intégré dans la génération des panneau
-+ detail différente piece de l'armoir
-+ recupération de la liste des pièces de l'armoir
-- !!! requete OLE DB !!!
-    |-> selection de la piece dans le stock
-    |-> modification du stock qd on sélectionne la piece
-- supression étage
-- modification étage
-- numérotation des commandes avec variable static et get last if crash
-- supprimer les console.writeline et fixer les return de methode
-- correction orthographe
-- !!! verification de don't be STUPID be SOLID !!!
-*/

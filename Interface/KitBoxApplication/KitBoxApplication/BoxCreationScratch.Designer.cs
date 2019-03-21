@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoxCreationScratch));
+            this.comboBoxColorAngles = new System.Windows.Forms.ComboBox();
             this.labelColorAngles = new System.Windows.Forms.Label();
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.labelQuantityBox = new System.Windows.Forms.Label();
@@ -51,8 +52,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.labelExplanation = new System.Windows.Forms.Label();
             this.labelHelp = new System.Windows.Forms.Label();
-            this.comboBoxHeight = new System.Windows.Forms.ComboBox();
-            this.comboBoxColorAngles = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPageBox1.SuspendLayout();
@@ -349,17 +348,17 @@
             //
             // comboBoxHeight
             //
-            this.comboBoxHeight.FormattingEnabled = true;
-            this.comboBoxHeight.Items.AddRange(new object[] {
-            "Brun",
-            "Blanc",
-            "Galvinisé",
-            "Noir"});
-            this.comboBoxHeight.Location = new System.Drawing.Point(868, 200);
-            this.comboBoxHeight.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.comboBoxHeight.Name = "comboBoxHeight";
-            this.comboBoxHeight.Size = new System.Drawing.Size(200, 39);
-            this.comboBoxHeight.TabIndex = 75;
+            //this.comboBoxHeight.FormattingEnabled = true;
+            //this.comboBoxHeight.Items.AddRange(new object[] {
+            //"Brun",
+            //"Blanc",
+            //"Galvinisé",
+            //"Noir"});
+            //this.comboBoxHeight.Location = new System.Drawing.Point(868, 200);
+            //this.comboBoxHeight.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            //this.comboBoxHeight.Name = "comboBoxHeight";
+            //this.comboBoxHeight.Size = new System.Drawing.Size(200, 39);
+            //this.comboBoxHeight.TabIndex = 75;
             //
             // comboBoxColorAngles
             //
@@ -380,13 +379,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.Controls.Add(this.comboBoxColorAngles);
-            this.Controls.Add(this.comboBoxHeight);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.labelExplanation);
             this.Controls.Add(this.labelHelp);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.comboBoxColorAngles);
             this.Controls.Add(this.labelColorAngles);
             this.Controls.Add(this.numericUpDownQuantity);
             this.Controls.Add(this.labelQuantityBox);
@@ -408,6 +406,7 @@
         }
 
         #endregion
+        private System.Windows.Forms.ComboBox comboBoxColorAngles;
         private System.Windows.Forms.Label labelColorAngles;
         private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
         private System.Windows.Forms.Label labelQuantityBox;
@@ -430,7 +429,5 @@
         private CreationScratchInside creationScratchInside5;
         private CreationScratchInside creationScratchInside6;
         private CreationScratchInside creationScratchInside7;
-        private System.Windows.Forms.ComboBox comboBoxColorAngles;
-        private System.Windows.Forms.ComboBox comboBoxHeight;
     }
 }
