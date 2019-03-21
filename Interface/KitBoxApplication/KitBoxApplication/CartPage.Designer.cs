@@ -40,7 +40,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(828, 413);
+            this.tabPage1.Size = new System.Drawing.Size(1146, 665);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Empty";
             // 
@@ -50,7 +50,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(836, 439);
+            this.tabControl1.Size = new System.Drawing.Size(1154, 691);
             this.tabControl1.TabIndex = 0;
             // 
             // CartPage
@@ -60,7 +60,7 @@
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "CartPage";
-            this.Size = new System.Drawing.Size(839, 442);
+            this.Size = new System.Drawing.Size(1154, 691);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 

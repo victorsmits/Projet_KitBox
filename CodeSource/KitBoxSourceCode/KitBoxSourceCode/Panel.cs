@@ -21,7 +21,10 @@ namespace KitBoxSourceCode
             quantity = qty;
             stockNumber = "1"; // TODO OLEDB requete piece num fct dimension & color
             //TODO oledb book fct dimension, color & qty
-
+            if(panelNum == 3)
+            {
+                panelNum = 0;
+            }
             panelNum++;
             panelNumber = panelNum;
             SetPrice();

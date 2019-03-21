@@ -12,7 +12,10 @@ namespace KitBoxSourceCode
             quantity = qty;
             price = 2;
             stockNumber = "1";
-
+            if (beamNum == 2)
+            {
+                beamNum = 0;
+            }
             beamNum++;
             beamNumber = beamNum;
 
