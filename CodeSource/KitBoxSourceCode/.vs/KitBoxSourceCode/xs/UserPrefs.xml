@@ -1,5 +1,5 @@
 ﻿<Properties GitUserInfo="UsingMD">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Angle.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Cabinet.cs">
     <Files>
       <File FileName="KitBoxSourceCode/Program.cs" Line="1" Column="1" />
       <File FileName="KitBoxSourceCode/Panel.cs" Line="1" Column="1" />
@@ -7,13 +7,15 @@
       <File FileName="KitBoxSourceCode/GenericCompoment.cs" Line="1" Column="1" />
       <File FileName="KitBoxSourceCode/Beam.cs" Line="1" Column="1" />
       <File FileName="KitBoxSourceCode/Angle.cs" Line="21" Column="13" />
+      <File FileName="KitBoxSourceCode/CabinetFloor.cs" Line="76" Column="1" />
+      <File FileName="KitBoxSourceCode/Cabinet.cs" Line="34" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="KitBoxSourceCode" expanded="True">
             <Node name="KitBoxSourceCode" expanded="True">
-              <Node name="Angle.cs" selected="True" />
+              <Node name="Cabinet.cs" selected="True" />
             </Node>
           </Node>
         </State>
