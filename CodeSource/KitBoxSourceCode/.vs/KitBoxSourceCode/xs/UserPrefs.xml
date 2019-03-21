@@ -1,18 +1,11 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{530905E3-D372-46FA-9434-CC18A725A47E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Panel.cs">
-    <Files>
-      <File FileName="KitBoxSourceCode/Program.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Panel.cs" Line="21" Column="28" />
-      <File FileName="KitBoxSourceCode/Box.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/GenericCompoment.cs" Line="11" Column="9" />
-      <File FileName="KitBoxSourceCode/Beam.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="KitBoxSourceCode" expanded="True">
             <Node name="KitBoxSourceCode" expanded="True">
-              <Node name="Panel.cs" selected="True" />
+              <Node name="ClassDiagram1.cd" selected="True" />
             </Node>
           </Node>
         </State>
