@@ -878,7 +878,8 @@
         </member>
         <member name="M:ADONetHelper.DbObjectFactory.GetProviderFactory(System.String)">
             <summary>
-            Gets an instance of <see cref="T:System.Data.Common.DbProviderFactory"/> based off a .NET drivers <paramref name="providerName"/>, such as System.Data.SqlClientt
+            Gets an instance of <see cref="T:System.Data.Common.DbProviderFactory"/> based off a .NET drivers <paramref name="providerName"/>, such as System.Data.SqlClient.
+            Looks for the <paramref name="providerName"/> within the current <see cref="T:System.Runtime.Loader.AssemblyLoadContext"/>
             </summary>
             <returns>Returns an instance of <see cref="T:System.Data.Common.DbProviderFactory"/></returns>
         </member>

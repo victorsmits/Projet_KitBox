@@ -32,6 +32,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <OutputPath>bin\Debug\</OutputPath>
+    <Commandlineparameters></Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -102,7 +103,6 @@
     <Compile Include="DoorBeam.cs" />
     <Compile Include="Panel.cs" />
     <Compile Include="DoubleDoors.cs" />
-    <Compile Include="Materials.cs" />
     <Compile Include="ICompoment.cs" />
     <Compile Include="Knop.cs" />
     <Compile Include="CabinetFloor.cs" />
