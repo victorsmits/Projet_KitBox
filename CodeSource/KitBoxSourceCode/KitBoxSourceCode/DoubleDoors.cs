@@ -5,14 +5,14 @@ namespace KitBoxSourceCode
 {
     public class DoubleDoors : GenericStorageBox
     {
-        private readonly Knop knops;
-        private readonly string stockNumber;
+        private readonly List<Knop> knops;
+        private string stockNumber;
 
-        public string TheDoorMat { get; }
+        public string theDoorMat { get; }
 
         private IStorageBox theStorageBox;
 
-        IStorageBox GettheStorageBox { get; set; }
+        IStorageBox theStorageBox { get; set; }
 
         public void AddBoxDecorator(IStorageBox storageBox)
         {
@@ -21,15 +21,15 @@ namespace KitBoxSourceCode
 
         public DoubleDoors(string doormat, int hei, int len) : base(len, hei)
         {
-            TheDoorMat = doormat;
+            theDoorMat = doormat;
             stockNumber = "1";
 
-            knops = new Knop(2);
+            knops = new List<Knop> {
+                new Knop(),
+                new Knop()
+            };
 
             SetPrice();
-
-            //TODO oledb stock ref fct dimension, doormat
-            //TODO oledb book fct dimension & doormat
         }
 
         protected override void SetPrice()
@@ -41,7 +41,7 @@ namespace KitBoxSourceCode
         public override string GetDetails()
         {
             return "\"DoubleDoors\" : {\"height\": " + height + ",\"Lenght\": " + lenght
-            + ", \"Material\": \"" + TheDoorMat + "\",\"Stockref\": " + stockNumber + knops.GetDetails();
+            + ", \"Material\": \"" + theDoorMat + "\", \"Stockref\": " + stockNumber;
         }
 
     }

@@ -17,9 +17,6 @@ namespace KitBoxSourceCode
             beamNumber = beamNum;
 
             SetPrice();
-
-            //TODO oledb stock ref fct len
-            //TODO oledb book beam fct len & qty
         }
 
         public override string GetDetails()

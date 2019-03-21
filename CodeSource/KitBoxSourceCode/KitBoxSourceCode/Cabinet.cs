@@ -7,6 +7,7 @@ namespace KitBoxSourceCode
     public class Cabinet
     {
         private List<CabinetFloor> storageBoxes;
+        private Dictionary<int, IStorageBox> cabinetPartList;
         private int cabinetHeight;
 
         private int cabinetPrice = 0;
@@ -14,12 +15,13 @@ namespace KitBoxSourceCode
         public int GetCabinetPrice => cabinetPrice;
         public int GetCabinetHeight => cabinetHeight;
 
-        private Angle angles;
+        private List<Angle> angles;
 
         public Cabinet()
         {
             cabinetHeight = 0;
             storageBoxes = new List<CabinetFloor>();
+            angles = new List<Angle>();
         }
 
         public void AddStorageBox(CabinetFloor storage)
@@ -36,7 +38,12 @@ namespace KitBoxSourceCode
 
         public void AddAngles(string color)
         {
-            angles = new Angle(cabinetHeight, color, 4);
+            int i = 0;
+            while (i < 4)
+            {
+                angles.Add(new Angle(cabinetHeight, color));
+                i++;
+            }
         }
 
         public string GetPartList()
@@ -44,10 +51,8 @@ namespace KitBoxSourceCode
             string partList = "";
             foreach (CabinetFloor elem in storageBoxes)
             {
-                partList += "\"Floor " + storageBoxes.IndexOf(elem) + "\":{"
-                + elem.ShowPieces();
+                partList += "\"Floor " + storageBoxes.IndexOf(elem) + "\":{" + elem.ShowPieces() + "},";
             }
-            partList += angles.GetDetails() + "},";
             return partList;
         }
 
