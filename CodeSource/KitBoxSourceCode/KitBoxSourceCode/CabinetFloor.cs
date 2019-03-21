@@ -6,7 +6,7 @@ namespace KitBoxSourceCode
     public class CabinetFloor
     {
         public Dictionary<IComponent, int> components;
-        public readonly List<IStorageBox> cabinetFloor;
+        public readonly List<IStorageBox> storageBoxes;
 
         private readonly Box box;
         private readonly DoubleDoors db;
@@ -25,10 +25,10 @@ namespace KitBoxSourceCode
             floorPrice = 0;
             floorHeight = height;
 
-            cabinetFloor = new List<IStorageBox>();
+            storageBoxes = new List<IStorageBox>();
             box = new Box(lenght, height, width, panelCol);
             components = box.GetComponents;
-            cabinetFloor.Add(box);
+            storageBoxes.Add(box);
 
             theDoorMat = doorMat;
 
@@ -36,7 +36,7 @@ namespace KitBoxSourceCode
             {
                 db = new DoubleDoors(doorMat, height, lenght);
                 db.AddBoxDecorator(box);
-                cabinetFloor.Add(db);
+                storageBoxes.Add(db);
             }
 
             SetFloorPrice();
@@ -44,7 +44,7 @@ namespace KitBoxSourceCode
 
         private void SetFloorPrice()
         {
-            foreach (IStorageBox elem in cabinetFloor)
+            foreach (IStorageBox elem in storageBoxes)
             {
                 floorPrice += elem.GetPrice();
             }
@@ -60,13 +60,11 @@ namespace KitBoxSourceCode
                 i++;
             }
 
-            if (cabinetFloor.Count > 1)
+            if (storageBoxes.Count > 1)
             {
-                format += cabinetFloor[1].GetDetails() + ", \"Qty\" : 1},";
+                format += storageBoxes[1].GetDetails() + ", \"Qty\" : 1},";
             }
             return format;
-
-
         }
     }
 }
