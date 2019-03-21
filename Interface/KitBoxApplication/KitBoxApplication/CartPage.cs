@@ -33,9 +33,9 @@ namespace KitBoxApplication
                 jsonCart = cart.ShowCart();
                 Create_Layout();
             }
-            catch
+            catch(Exception e)
             {
-
+                MessageBox.Show(e.ToString());
             }
 
         }
@@ -68,18 +68,18 @@ namespace KitBoxApplication
                     addedCabinePage.Controls.Add(floorGroup);
 
                     //Get Panel caract
-                    JObject floorPanel = floor["Panel"].Value<JObject>();
-
-                    string floorColor = floorPanel["Coleur"].Value<string>();
-                    int height = floorPanel["Height"].Value<int>();
-                    int length = floorPanel["Lenght"].Value<int>();
-                    int qty = floorPanel["Qty"].Value<int>();
-
-                    Label floorColorLabel = new Label();
-                    floorColorLabel.AutoSize = true;
-                    floorColorLabel.Text = String.Format("Panel\n\nColor : {0}\nDimensions : {1}x{2}cm\nQuantity : {3}", floorColor.ToString(), height.ToString(), length.ToString(), qty.ToString());
-                    floorColorLabel.Location = new Point(6, 28);
-                    floorGroup.Controls.Add(floorColorLabel);
+                    //JObject floorPanel = floor["Panel"].Value<JObject>();
+                    //
+                    //string floorColor = floorPanel["Coleur"].Value<string>();
+                    //int height = floorPanel["Height"].Value<int>();
+                    //int length = floorPanel["Lenght"].Value<int>();
+                    //int qty = floorPanel["Qty"].Value<int>();
+                    //
+                    //Label floorColorLabel = new Label();
+                    //floorColorLabel.AutoSize = true;
+                    //floorColorLabel.Text = String.Format("Panel\n\nColor : {0}\nDimensions : {1}x{2}cm\nQuantity : {3}", floorColor.ToString(), height.ToString(), length.ToString(), qty.ToString());
+                    //floorColorLabel.Location = new Point(6, 28);
+                    //floorGroup.Controls.Add(floorColorLabel);
                 }
                 
             }

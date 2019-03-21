@@ -551,7 +551,7 @@ namespace KitBoxApplication
             int heightForEach = ProcessHeightForEachBox(totalHeight,qty);
             int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
             int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
-            Color angleColor = Color.FromName(comboBoxColorAngles.SelectedItem.ToString());
+            string angleColor = comboBoxColorAngles.SelectedItem.ToString();
 
             cabinet.AddAngles(angleColor);
 
@@ -741,8 +741,7 @@ namespace KitBoxApplication
                     break;
             }
             CartPage.Cart.AddToCart(cabinet);
-
-            JObject test = CartPage.Cart.ShowCart();
+            
             MessageBox.Show("This cabinet has been added to the cart succesfully!");
 
         }
