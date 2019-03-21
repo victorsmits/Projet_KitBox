@@ -104,28 +104,20 @@
             //
             // stockTab
             //
-            this.stockTab.Controls.Add(this.panel4);
-            this.stockTab.Location = new System.Drawing.Point(4, 22);
+            this.stockTab.Controls.Add(this.label12);
+            this.stockTab.Controls.Add(this.panel3);
+            this.stockTab.Controls.Add(this.button4);
+            this.stockTab.Controls.Add(this.panel6);
+            this.stockTab.Controls.Add(this.panel1);
+            this.stockTab.Controls.Add(this.panel2);
+            this.stockTab.Location = new System.Drawing.Point(4, 25);
+            this.stockTab.Margin = new System.Windows.Forms.Padding(4);
             this.stockTab.Name = "stockTab";
             this.stockTab.Padding = new System.Windows.Forms.Padding(3);
             this.stockTab.Size = new System.Drawing.Size(1492, 724);
             this.stockTab.TabIndex = 0;
             this.stockTab.Text = "Stock";
             this.stockTab.UseVisualStyleBackColor = true;
-            //
-            // panel4
-            //
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1424, 677);
-            this.panel4.TabIndex = 26;
             //
             // label12
             //
@@ -136,54 +128,6 @@
             this.label12.Size = new System.Drawing.Size(55, 20);
             this.label12.TabIndex = 6;
             this.label12.Text = "Stock";
-            //
-            // panel2
-            //
-            this.panel2.BackColor = System.Drawing.Color.DarkGray;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.RefrenceTextBox);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(1122, 36);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(265, 72);
-            this.panel2.TabIndex = 21;
-            //
-            // label13
-            //
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(23, 43);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 13);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Reference :";
-            //
-            // RefrenceTextBox
-            //
-            this.RefrenceTextBox.Location = new System.Drawing.Point(92, 37);
-            this.RefrenceTextBox.Name = "RefrenceTextBox";
-            this.RefrenceTextBox.Size = new System.Drawing.Size(100, 20);
-            this.RefrenceTextBox.TabIndex = 16;
-            //
-            // label14
-            //
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(23, 13);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Delete a product";
-            //
-            // button3
-            //
-            this.button3.Location = new System.Drawing.Point(185, 8);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             //
             // panel3
             //
@@ -334,9 +278,93 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Dimensions";
             //
+            // button4
+            //
+            this.button4.Location = new System.Drawing.Point(1747, 569);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 28);
+            this.button4.TabIndex = 24;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            //
+            // panel6
+            //
+            this.panel6.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.button2);
+            this.panel6.Controls.Add(this.PriceClientTextBox);
+            this.panel6.Controls.Add(this.RefrenceTextBox3);
+            this.panel6.Controls.Add(this.label18);
+            this.panel6.Controls.Add(this.label19);
+            this.panel6.Controls.Add(this.label20);
+            this.panel6.Location = new System.Drawing.Point(1499, 370);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(353, 150);
+            this.panel6.TabIndex = 23;
+            //
+            // button2
+            //
+            this.button2.Location = new System.Drawing.Point(247, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Update";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            //
+            // PriceClientTextBox
+            //
+            this.PriceClientTextBox.Location = new System.Drawing.Point(123, 102);
+            this.PriceClientTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.PriceClientTextBox.Name = "PriceClientTextBox";
+            this.PriceClientTextBox.Size = new System.Drawing.Size(132, 22);
+            this.PriceClientTextBox.TabIndex = 22;
+            //
+            // RefrenceTextBox3
+            //
+            this.RefrenceTextBox3.Location = new System.Drawing.Point(123, 49);
+            this.RefrenceTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.RefrenceTextBox3.Name = "RefrenceTextBox3";
+            this.RefrenceTextBox3.Size = new System.Drawing.Size(132, 22);
+            this.RefrenceTextBox3.TabIndex = 21;
+            //
+            // label18
+            //
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(31, 106);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(48, 17);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Price :";
+            //
+            // label19
+            //
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(31, 53);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(82, 17);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "Reference :";
+            //
+            // label20
+            //
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(31, 16);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(90, 17);
+            this.label20.TabIndex = 15;
+            this.label20.Text = "Update Price";
+            //
             // panel1
             //
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
@@ -369,14 +397,16 @@
             //
             // StockTextBox
             //
-            this.StockTextBox.Location = new System.Drawing.Point(92, 83);
+            this.StockTextBox.Location = new System.Drawing.Point(123, 102);
+            this.StockTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.StockTextBox.Name = "StockTextBox";
             this.StockTextBox.Size = new System.Drawing.Size(100, 20);
             this.StockTextBox.TabIndex = 17;
             //
             // RefrenceTextBox2
             //
-            this.RefrenceTextBox2.Location = new System.Drawing.Point(92, 37);
+            this.RefrenceTextBox2.Location = new System.Drawing.Point(123, 46);
+            this.RefrenceTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.RefrenceTextBox2.Name = "RefrenceTextBox2";
             this.RefrenceTextBox2.Size = new System.Drawing.Size(100, 20);
             this.RefrenceTextBox2.TabIndex = 16;
@@ -392,7 +422,8 @@
             //
             // button1
             //
-            this.button1.Location = new System.Drawing.Point(185, 8);
+            this.button1.Location = new System.Drawing.Point(247, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -400,81 +431,58 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             //
-            // button4
+            // panel2
             //
-            this.button4.Location = new System.Drawing.Point(1312, 427);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.RefrenceTextBox);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Location = new System.Drawing.Point(1499, 66);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(353, 88);
+            this.panel2.TabIndex = 21;
             //
-            // panel6
+            // label13
             //
-            this.panel6.BackColor = System.Drawing.Color.DarkGray;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Controls.Add(this.PriceClientTextBox);
-            this.panel6.Controls.Add(this.RefrenceTextBox3);
-            this.panel6.Controls.Add(this.label18);
-            this.panel6.Controls.Add(this.label19);
-            this.panel6.Controls.Add(this.label20);
-            this.panel6.Location = new System.Drawing.Point(1122, 283);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(265, 122);
-            this.panel6.TabIndex = 23;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(31, 53);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(82, 17);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Reference :";
             //
-            // button2
+            // RefrenceTextBox
             //
-            this.button2.Location = new System.Drawing.Point(185, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.RefrenceTextBox.Location = new System.Drawing.Point(123, 46);
+            this.RefrenceTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.RefrenceTextBox.Name = "RefrenceTextBox";
+            this.RefrenceTextBox.Size = new System.Drawing.Size(132, 22);
+            this.RefrenceTextBox.TabIndex = 16;
             //
-            // PriceClientTextBox
+            // label14
             //
-            this.PriceClientTextBox.Location = new System.Drawing.Point(92, 83);
-            this.PriceClientTextBox.Name = "PriceClientTextBox";
-            this.PriceClientTextBox.Size = new System.Drawing.Size(100, 20);
-            this.PriceClientTextBox.TabIndex = 22;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(31, 16);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(113, 17);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Delete a product";
             //
-            // RefrenceTextBox3
+            // button3
             //
-            this.RefrenceTextBox3.Location = new System.Drawing.Point(92, 40);
-            this.RefrenceTextBox3.Name = "RefrenceTextBox3";
-            this.RefrenceTextBox3.Size = new System.Drawing.Size(100, 20);
-            this.RefrenceTextBox3.TabIndex = 21;
-            //
-            // label18
-            //
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(23, 86);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(37, 13);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "Price :";
-            //
-            // label19
-            //
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(23, 43);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(63, 13);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "Reference :";
-            //
-            // label20
-            //
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(23, 13);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(69, 13);
-            this.label20.TabIndex = 15;
-            this.label20.Text = "Update Price";
+            this.button3.Location = new System.Drawing.Point(247, 10);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             //
             // AddingProduct
             //
@@ -489,20 +497,6 @@
             this.AddingProduct.Size = new System.Drawing.Size(1492, 724);
             this.AddingProduct.TabIndex = 1;
             this.AddingProduct.Text = "Add a product or supplier";
-            //
-            // supplierWizard1
-            //
-            this.supplierWizard1.Location = new System.Drawing.Point(632, 72);
-            this.supplierWizard1.Name = "supplierWizard1";
-            this.supplierWizard1.Size = new System.Drawing.Size(601, 657);
-            this.supplierWizard1.TabIndex = 7;
-            //
-            // productWizard1
-            //
-            this.productWizard1.Location = new System.Drawing.Point(20, 74);
-            this.productWizard1.Name = "productWizard1";
-            this.productWizard1.Size = new System.Drawing.Size(589, 547);
-            this.productWizard1.TabIndex = 6;
             //
             // label11
             //
@@ -526,25 +520,16 @@
             //
             // tabPage1
             //
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.command1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(1492, 724);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Command";
-            //
-            // command1
-            //
-            this.command1.BackColor = System.Drawing.Color.Transparent;
-            this.command1.Location = new System.Drawing.Point(3, 47);
-            this.command1.Name = "command1";
-            this.command1.Size = new System.Drawing.Size(1392, 412);
-            this.command1.TabIndex = 0;
+            this.tabPage1.UseVisualStyleBackColor = true;
             //
             // tabPage2
             //
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage2.Controls.Add(this.clientWizard1);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -553,13 +538,7 @@
             this.tabPage2.Size = new System.Drawing.Size(1492, 724);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Client";
-            //
-            // clientWizard1
-            //
-            this.clientWizard1.Location = new System.Drawing.Point(3, 45);
-            this.clientWizard1.Name = "clientWizard1";
-            this.clientWizard1.Size = new System.Drawing.Size(1070, 628);
-            this.clientWizard1.TabIndex = 7;
+            this.tabPage2.UseVisualStyleBackColor = true;
             //
             // label15
             //
@@ -570,20 +549,35 @@
             this.label15.Size = new System.Drawing.Size(168, 20);
             this.label15.TabIndex = 6;
             this.label15.Text = "Adding a new Client";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             //
-            // RefreshButton
+            // clientWizard1
             //
-            this.RefreshButton.Location = new System.Drawing.Point(961, 10);
-            this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(111, 23);
-            this.RefreshButton.TabIndex = 39;
-            this.RefreshButton.Text = "Refresh the list";
-            this.RefreshButton.UseVisualStyleBackColor = true;
-            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            this.clientWizard1.Location = new System.Drawing.Point(4, 55);
+            this.clientWizard1.Margin = new System.Windows.Forms.Padding(4);
+            this.clientWizard1.Name = "clientWizard1";
+            this.clientWizard1.Size = new System.Drawing.Size(1427, 773);
+            this.clientWizard1.TabIndex = 7;
+            //
+            // productWizard1
+            //
+            this.productWizard1.Location = new System.Drawing.Point(27, 91);
+            this.productWizard1.Margin = new System.Windows.Forms.Padding(4);
+            this.productWizard1.Name = "productWizard1";
+            this.productWizard1.Size = new System.Drawing.Size(785, 673);
+            this.productWizard1.TabIndex = 6;
+            //
+            // supplierWizard1
+            //
+            this.supplierWizard1.Location = new System.Drawing.Point(842, 89);
+            this.supplierWizard1.Margin = new System.Windows.Forms.Padding(4);
+            this.supplierWizard1.Name = "supplierWizard1";
+            this.supplierWizard1.Size = new System.Drawing.Size(801, 809);
+            this.supplierWizard1.TabIndex = 7;
             //
             // Form1
             //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 716);
             this.Controls.Add(this.Tabs);

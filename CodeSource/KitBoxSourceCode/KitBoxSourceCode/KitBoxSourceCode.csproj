@@ -102,6 +102,7 @@
     <Compile Include="DoorBeam.cs" />
     <Compile Include="Panel.cs" />
     <Compile Include="DoubleDoors.cs" />
+    <Compile Include="Materials.cs" />
     <Compile Include="ICompoment.cs" />
     <Compile Include="Knop.cs" />
     <Compile Include="CabinetFloor.cs" />

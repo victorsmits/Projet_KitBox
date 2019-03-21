@@ -18,11 +18,6 @@ namespace KitBoxApplication
             InitializeComponent();          
         }
 
-        private void slidePic_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private int imageNumber = 1;
 
         private void LoadNextImage()
