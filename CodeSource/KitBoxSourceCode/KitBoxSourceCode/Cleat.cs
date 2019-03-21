@@ -1,27 +1,29 @@
 ﻿using System;
 namespace KitBoxSourceCode
 {
-    public class Cleat : GenericComponent
-    {
+	public class Cleat : GenericComponent
+	{
 
-        public Cleat(int len, int qty) : base(len, qty)
-        {
-            stockNumber = "1";
-            SetPrice();
-            //TODO oledb stock ref fct len
-            //TODO oledb book fct len et qty
-        }
+<<<<<<< HEAD
+		public Cleat(int len, int qty) : base(len, qty)
+=======
+		public Cleat(int Len, int qty) : base(Len, qty)
+>>>>>>> parent of 0e30a2b... Merge branch 'master' into AddingCart-Michaël
+		{
+			stockNumber = "1";
+			SetPrice();
+		}
 
-        public override string GetDetails()
-        {
-            return "\"Cleat\":{ \"Lenght\": " + lenght + ", \"Stockref\" : " + stockNumber;
-        }
+		public override string GetDetails()
+		{
+			return "\"Cleat\":{ \"Lenght\": " + lenght + ", \"Stockref\" : " + stockNumber;
+		}
 
-        protected override void SetPrice()
-        {
-            //TODO oledb requete price fct len
-            price = 2;
-        }
+		protected override void SetPrice()
+		{
+			//TODO oledb requete price fct len
+			price = 2;
+		}
 
-    }
+	}
 }

@@ -278,10 +278,13 @@
             // 
             // cartPage1
             // 
-            this.cartPage1.Location = new System.Drawing.Point(384, 67);
+            this.cartPage1.AutoSize = true;
+            this.cartPage1.Location = new System.Drawing.Point(372, 57);
             this.cartPage1.Margin = new System.Windows.Forms.Padding(1);
+            this.cartPage1.MaximumSize = new System.Drawing.Size(1000, 500);
+            this.cartPage1.MinimumSize = new System.Drawing.Size(839, 392);
             this.cartPage1.Name = "cartPage1";
-            this.cartPage1.Size = new System.Drawing.Size(839, 400);
+            this.cartPage1.Size = new System.Drawing.Size(839, 442);
             this.cartPage1.TabIndex = 7;
             this.cartPage1.Visible = false;
             // 
@@ -332,6 +335,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

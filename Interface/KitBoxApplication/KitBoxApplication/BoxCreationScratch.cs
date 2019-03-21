@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -79,7 +79,7 @@ namespace KitBoxApplication
         {
 
             creationScratch.ComboBoxDepth.Items.Clear();
-            //comboBoxHeight.Items.Clear();
+            comboBoxHeight.Items.Clear();
             try
             {
                 string q = "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ";
@@ -91,7 +91,7 @@ namespace KitBoxApplication
                     while (dr.Read())
                     {
                         creationScratch.ComboBoxDepth.Items.Add(dr[0].ToString());
-                        //comboBoxHeight.Items.Add(dr[0].ToString());
+                        comboBoxHeight.Items.Add(dr[0].ToString());
                     }
                 }
                 dr.Close();

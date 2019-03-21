@@ -21,8 +21,6 @@ namespace KitBoxApplication
             radioButtonNo.CheckedChanged += new EventHandler(radioButtonsYesNo_CheckedChanged);
         }
 
-        BoxCreationScratch creation = new BoxCreationScratch();
-
         private void radioButtonsYesNo_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
@@ -31,12 +29,10 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYes)
                 {
                     panelDoorMaterial.Visible = true;
-                    creation.LoadDataWidth();
                 }
                 else if (((RadioButton)sender) == radioButtonNo)
                 {
                     panelDoorMaterial.Visible = false;
-                    creation.LoadDataWidth();
                 }
             }
         }
@@ -44,7 +40,7 @@ namespace KitBoxApplication
         public System.Windows.Forms.ComboBox ComboBoxDepth
         {
             get { return this.comboBoxDepth; }
-            set { this.comboBoxDepth.Text = ""; }
+            set { this.comboBoxDepth = value; }
         }
     }
 }
