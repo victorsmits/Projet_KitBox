@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{530905E3-D372-46FA-9434-CC18A725A47E}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>KitBoxSourceCode</RootNamespace>
     <AssemblyName>KitBoxSourceCode</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
