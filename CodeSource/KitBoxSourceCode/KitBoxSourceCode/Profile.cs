@@ -20,6 +20,7 @@ namespace KitBoxSourceCode
             lastName = LN;
             email = mail;
             adresse = ads;
+            //TODO add profile to db
         }
 
         public void ShowClientInfo()

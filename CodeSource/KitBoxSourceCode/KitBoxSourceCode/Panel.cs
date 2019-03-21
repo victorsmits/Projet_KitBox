@@ -19,7 +19,8 @@ namespace KitBoxSourceCode
             height = hei;
             color = col;
             quantity = qty;
-            stockNumber = "1"; // TODO OLEDB requete piece num
+            stockNumber = "1"; // TODO OLEDB requete piece num fct dimension & color
+            //TODO oledb book fct dimension, color & qty
 
             panelNum++;
             panelNumber = panelNum;
