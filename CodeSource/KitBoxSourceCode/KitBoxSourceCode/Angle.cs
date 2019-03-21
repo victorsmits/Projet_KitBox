@@ -8,17 +8,26 @@ namespace KitBoxSourceCode
         private readonly int price;
         private readonly string angleColor;
 
+<<<<<<< HEAD
         public Angle(int len, string color)
+=======
+        public Angle(int Len, string color)
+>>>>>>> parent of 0e30a2b... Merge branch 'master' into AddingCart-Michaël
         {
-            lenght = len;
+            Lenght = Len;
             angleColor = color;
+<<<<<<< HEAD
             CalculPrice(len, color);
             price = 2;
+=======
+            CalculPrice(Len, color);
+            Price = 2;
+>>>>>>> parent of 0e30a2b... Merge branch 'master' into AddingCart-Michaël
 
         }
 
-        public int GetLenght() => lenght;
-        public int GetPrice() => price;
+        public int GetLenght() => Lenght;
+        public int GetPrice() => Price;
 
         private void CalculPrice(int len, string color)
         {

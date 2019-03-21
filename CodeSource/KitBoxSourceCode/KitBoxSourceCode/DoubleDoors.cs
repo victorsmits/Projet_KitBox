@@ -8,7 +8,11 @@ namespace KitBoxSourceCode
         private readonly List<Knop> knops;
         private string stockNumber;
 
+<<<<<<< HEAD
         public string theDoorMat { get; }
+=======
+        public string DoorMat { get; }
+>>>>>>> parent of 0e30a2b... Merge branch 'master' into AddingCart-Michaël
 
         private IStorageBox theStorageBox;
 
@@ -19,7 +23,7 @@ namespace KitBoxSourceCode
             this.theStorageBox = storageBox;
         }
 
-        public DoubleDoors(string doormat, int hei, int len) : base(len, hei)
+        public DoubleDoors(string doormat, int height, int len) : base(len, height)
         {
             theDoorMat = doormat;
             stockNumber = "1";

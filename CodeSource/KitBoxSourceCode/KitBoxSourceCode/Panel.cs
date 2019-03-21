@@ -2,22 +2,22 @@
 using Oledb = SqlOledb.Oledb;
 namespace KitBoxSourceCode
 {
-    public class Panel : GenericComponent
+    public class Panel : GenericCompoment
     {
-        private readonly int height;
-        private readonly string color;
+        private readonly int Height;
+        private readonly string Color;
         private int panelNumber;
         private static int panelNum = 0;
 
-        public int GetHeight => height;
-        public string GetBoxColor => color;
+        public int GetHeight => Height;
+        public string GetBoxColor => Color;
 
-        public Panel(int len, int hei, string col, int qty) : base(len, qty)
+        public Panel(int len, int height, string color, int qty) : base(len, qty)
         {
             Console.WriteLine("coucou");
-            lenght = len;
-            height = hei;
-            color = col;
+            Lenght = len;
+            Height = height;
+            Color = color;
             quantity = qty;
             stockNumber = "1"; // TODO OLEDB requete piece num
 
@@ -29,14 +29,14 @@ namespace KitBoxSourceCode
         protected override void SetPrice()
         {
             //TODO oledb requete price fct dim et couleur
-            price = 2;
+            Price = 2;
 
         }
 
         public override string GetDetails()
         {
-            return "\"Panel " + panelNumber + "\" : { \"height\": " + height + ", \"Lenght\": " + lenght
-            + ", \"Coleur\": \"" + color + "\", \"Stockref\": " + stockNumber;
+            return "\"Panel " + panelNumber + "\" : { \"height\": " + Height + ", \"Lenght\": " + Lenght
+            + ", \"Coleur\": \"" + Color + "\", \"Stockref\": " + stockNumber;
         }
     }
 }

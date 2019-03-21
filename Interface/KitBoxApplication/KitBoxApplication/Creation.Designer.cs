@@ -85,7 +85,6 @@
             this.creationExplanation1.Name = "creationExplanation1";
             this.creationExplanation1.Size = new System.Drawing.Size(1400, 1000);
             this.creationExplanation1.TabIndex = 24;
-            this.creationExplanation1.Load += new System.EventHandler(this.creationExplanation1_Load);
             // 
             // boxCreationScratch1
             // 
