@@ -1,21 +1,17 @@
-﻿<Properties GitUserInfo="UsingMD">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Cabinet.cs">
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{530905E3-D372-46FA-9434-CC18A725A47E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Program.cs">
     <Files>
-      <File FileName="KitBoxSourceCode/Program.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Panel.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Box.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/GenericCompoment.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Beam.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Angle.cs" Line="21" Column="13" />
-      <File FileName="KitBoxSourceCode/CabinetFloor.cs" Line="76" Column="1" />
-      <File FileName="KitBoxSourceCode/Cabinet.cs" Line="34" Column="33" />
+      <File FileName="KitBoxSourceCode/Program.cs" Line="60" Column="36" />
+      <File FileName="KitBoxSourceCode/Cabinet.cs" Line="48" Column="42" />
+      <File FileName="KitBoxSourceCode/Cart.cs" Line="60" Column="1" />
+      <File FileName="KitBoxSourceCode/Angle.cs" Line="38" Column="78" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="KitBoxSourceCode" expanded="True">
             <Node name="KitBoxSourceCode" expanded="True">
-              <Node name="Cabinet.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -27,6 +23,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.KitBoxSourceCode PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

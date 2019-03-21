@@ -45,9 +45,10 @@ namespace KitBoxSourceCode
             foreach (CabinetFloor elem in cabinetFloors)
             {
                 partList += "\"Floor " + cabinetFloors.IndexOf(elem) + "\":{"
-                + elem.ShowPieces();
+                + elem.ShowPieces() + "},";
             }
-            partList += angles.GetDetails() + "},";
+            partList += angles.GetDetails() + "}";
+
             return partList;
         }
 

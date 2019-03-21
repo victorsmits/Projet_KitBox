@@ -35,7 +35,7 @@ namespace KitBoxSourceCode
         public string GetDetails()
         {
             return "\"Angle\":{\"Length\":" + lenght + ",\"Color\":\"" + angleColor
-            + "\",\"StockRef\":\"" + stockRef + "\",\"Quantity\":" + quantity + "}";
+            + "\",\"StockRef\":\"" + stockRef + "\",\"Quantity\":" + quantity;
         }
     }
 }
