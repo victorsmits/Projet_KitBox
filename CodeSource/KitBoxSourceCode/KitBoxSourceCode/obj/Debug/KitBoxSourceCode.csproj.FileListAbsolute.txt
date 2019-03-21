@@ -13,6 +13,8 @@
 //Mac/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csproj.CopyComplete
 //Mac/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.exe
 //Mac/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.dll.config
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.pdb
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ADONetHelper.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ADONetHelper.Oledb.dll
@@ -39,8 +41,5 @@
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ru/lcpi.data.oledb.net4_6.resources.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csproj.CoreCompileInputs.cache
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csproj.CopyComplete
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.pdb
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csprojAssemblyReference.cache
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.exe.config
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.exe
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.exe
