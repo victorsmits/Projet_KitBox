@@ -19,6 +19,7 @@ namespace KitBoxSourceCode
             stockRef = "1";
             quantity = qty;
 
+
             //TODO oledb book 4 angles fct len & color
             //TODO oledb stock ref fct len & color
         }
