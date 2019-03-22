@@ -1283,6 +1283,7 @@
             this.radioButtonNo5.TabStop = true;
             this.radioButtonNo5.Text = "No";
             this.radioButtonNo5.UseVisualStyleBackColor = true;
+            this.radioButtonNo5.CheckedChanged += new System.EventHandler(this.radioButtonsYesNo_CheckedChangedPanel5);
             this.radioButtonNo5.SystemColorsChanged += new System.EventHandler(this.radioButtonsYesNo_CheckedChangedPanel5);
             // 
             // label20

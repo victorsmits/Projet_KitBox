@@ -68,3 +68,14 @@ C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitB
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.csproj.CopyComplete
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.exe
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\KitBoxSourceCode.dll
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\SqlOledb.dll
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\KitBoxSourceCode.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\KitBoxSourceCode.dll.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\KitBoxSourceCode.exe.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\Newtonsoft.Json.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\SqlOledb.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\x86\Debug\SqlOledb.dll.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\x86\Debug\KitBoxApplication.csproj.CopyComplete
