@@ -669,6 +669,13 @@ namespace KitBoxApplication
                         {
                             door7 = comboBoxDoorMatBox7.SelectedItem.ToString();
                         }
+                        color1 = comboBoxColorS1.Text.ToString();
+                        color2 = comboBoxColorS2.Text.ToString();
+                        color3 = comboBoxColorS3.Text.ToString();
+                        color4 = comboBoxColorS4.Text.ToString();
+                        color5 = comboBoxColorS5.Text.ToString();
+                        color6 = comboBoxColorS6.Text.ToString();
+                        color7 = comboBoxColorS7.Text.ToString();
                     }
                     else
                     {
