@@ -304,7 +304,7 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial1.Visible = false;
                     LoadDataWidth();
-                    comboBoxDoorMat1.Text = "hello";
+                    comboBoxDoorMat1.SelectedItem = null;
                     removeDoor(comboBoxColor1, panelShelf1);
                 }
             }
@@ -326,7 +326,7 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial2.Visible = false;
                     LoadDataWidth();
-                    comboBoxDoorMat2.Text = "";
+                    comboBoxDoorMat2.SelectedItem = null;
                     removeDoor(comboBoxColor2, panelShelf2);
                 }
             }
@@ -348,7 +348,7 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial3.Visible = false;
                     LoadDataWidth();
-                    comboBoxDoorMat3.Text = "";
+                    comboBoxDoorMat3.SelectedItem = null;
                     removeDoor(comboBoxColor3, panelShelf3);
                 }
             }
@@ -370,7 +370,7 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial4.Visible = false;
                     LoadDataWidth();
-                    comboBoxDoorMat4.Text = "";
+                    comboBoxDoorMat4.SelectedItem = null;
                     removeDoor(comboBoxColor4, panelShelf4);
                 }
             }
@@ -392,7 +392,7 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial5.Visible = false;
                     LoadDataWidth();
-                    comboBoxDoorMat5.Text = "";
+                    comboBoxDoorMat5.SelectedItem = null;
                     removeDoor(comboBoxColor5, panelShelf5);
                 }
             }
@@ -414,7 +414,7 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial6.Visible = false;
                     LoadDataWidth();
-                    comboBoxDoorMat6.Text = "";
+                    comboBoxDoorMat6.SelectedItem = null;
                     removeDoor(comboBoxColor6, panelShelf6);
                 }
             }
@@ -436,7 +436,7 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial7.Visible = false;
                     LoadDataWidth();
-                    comboBoxDoorMat7.Text = "";
+                    comboBoxDoorMat7.SelectedItem = null;
                     removeDoor(comboBoxColor7, panelShelf7);
                 }
             }
@@ -454,6 +454,7 @@ namespace KitBoxApplication
             return dir;
         }
 
+        // general function to add color to box cabinet image
         public void AddColorToBox(ComboBox box, ComboBox door, Panel shelf)
         {
             string color = box.Text;
@@ -473,240 +474,112 @@ namespace KitBoxApplication
         // function to change color of boxPanel1
         private void comboBoxColor1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string color = comboBoxColor1.Text;
-            if (comboBoxDoorMat1.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                panelShelf1.BackgroundImage = myImage;                
-            }
-            else
-            {
-                string doorMat = comboBoxDoorMat1.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf1.BackgroundImage = myImage;
-            }
+            AddColorToBox(comboBoxColor1, comboBoxDoorMat1, panelShelf1);           
         }
 
         // function to change color of boxPanel2
         private void comboBoxColor2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string color = comboBoxColor2.Text;
-            if (comboBoxDoorMat2.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                panelShelf2.BackgroundImage = myImage;               
-            }
-            else
-            {
-                string doorMat = comboBoxDoorMat2.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf2.BackgroundImage = myImage;
-            }
+            AddColorToBox(comboBoxColor2, comboBoxDoorMat2, panelShelf2);
         }
 
         // function to change color of boxPanel3
         private void comboBoxColor3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string color = comboBoxColor3.Text;
-            if (comboBoxDoorMat3.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                panelShelf3.BackgroundImage = myImage;                
-            }
-            else
-            {
-                string doorMat = comboBoxDoorMat3.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf3.BackgroundImage = myImage;
-            }
+            AddColorToBox(comboBoxColor3, comboBoxDoorMat3, panelShelf3);
         }
 
         // function to change color of boxPanel4
         private void comboBoxColor4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string color = comboBoxColor4.Text;
-            if (comboBoxDoorMat4.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                panelShelf4.BackgroundImage = myImage;               
-            }
-            else
-            {
-                string doorMat = comboBoxDoorMat4.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf4.BackgroundImage = myImage;
-            }
+            AddColorToBox(comboBoxColor4, comboBoxDoorMat4, panelShelf4);
         }
 
         // function to change color of boxPanel5
         private void comboBoxColor5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string color = comboBoxColor5.Text;
-            if (comboBoxDoorMat5.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                panelShelf5.BackgroundImage = myImage;
-            }
-            else
-            {
-                string doorMat = comboBoxDoorMat5.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf5.BackgroundImage = myImage;
-            }
+            AddColorToBox(comboBoxColor5, comboBoxDoorMat5, panelShelf5);
         }
 
         // function to change color of boxPanel6
         private void comboBoxColor6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string color = comboBoxColor6.Text;
-            if (comboBoxDoorMat6.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                panelShelf6.BackgroundImage = myImage;
-            }
-            else
-            {
-                string doorMat = comboBoxDoorMat6.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf6.BackgroundImage = myImage;
-            }
+            AddColorToBox(comboBoxColor6, comboBoxDoorMat6, panelShelf6);
         }
 
         // function to change color of boxPanel7
         private void comboBoxColor7_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string color = comboBoxColor7.Text;
-            if (comboBoxDoorMat7.Text == "")
+            AddColorToBox(comboBoxColor7, comboBoxDoorMat7, panelShelf7);
+        }
+
+        // general function to add door and color door to cabinet image
+        public void AddDoorToBox(ComboBox door, ComboBox box, Panel shelf)
+        {
+            string doorMat = door.Text;
+            if (box.Text == "")
             {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                panelShelf7.BackgroundImage = myImage;               
+                if (doorMat != "")
+                {
+                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
+                    shelf.BackgroundImage = myImage;
+                }               
             }
             else
             {
-                string doorMat = comboBoxDoorMat7.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf7.BackgroundImage = myImage;
+                string color = box.Text;
+                if (doorMat != "")
+                {                   
+                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
+                    shelf.BackgroundImage = myImage;
+                } else
+                {
+                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
+                    shelf.BackgroundImage = myImage;
+                }                              
             }
         }
 
         // function to change color of door material of box 1
         private void comboBoxDoorMat1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string doorMat = comboBoxDoorMat1.Text;
-            if (comboBoxColor1.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
-                panelShelf1.BackgroundImage = myImage;
-            }
-            else
-            {
-                string color = comboBoxColor1.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf1.BackgroundImage = myImage;
-            }
+            AddDoorToBox(comboBoxDoorMat1, comboBoxColor1, panelShelf1);
         }
 
         // function to change color of door material of box 2
         private void comboBoxDoorMat2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string doorMat = comboBoxDoorMat2.Text;
-            if (comboBoxColor2.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
-                panelShelf2.BackgroundImage = myImage;
-            }
-            else
-            {
-                string color = comboBoxColor2.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf2.BackgroundImage = myImage;
-            }
+            AddDoorToBox(comboBoxDoorMat2, comboBoxColor2, panelShelf2);
         }
 
         // function to change color of door material of box 3
         private void comboBoxDoorMat3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string doorMat = comboBoxDoorMat3.Text;
-            if (comboBoxColor3.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
-                panelShelf3.BackgroundImage = myImage;
-                //boxCreationScratch.PanelShelf1 = (Image)(Properties.Resources\.phWpbBprWdlGdrG);
-            }
-            else
-            {
-                string color = comboBoxColor3.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf3.BackgroundImage = myImage;
-            }
+            AddDoorToBox(comboBoxDoorMat3, comboBoxColor3, panelShelf3);
         }
 
         // function to change color of door material of box 4
         private void comboBoxDoorMat4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string doorMat = comboBoxDoorMat4.Text;
-            if (comboBoxColor4.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
-                panelShelf4.BackgroundImage = myImage;
-            }
-            else
-            {
-                string color = comboBoxColor4.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf4.BackgroundImage = myImage;
-            }
+            AddDoorToBox(comboBoxDoorMat4, comboBoxColor4, panelShelf4);
         }
 
         // function to change color of door material of box 5
         private void comboBoxDoorMat5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string doorMat = comboBoxDoorMat5.Text;
-            if (comboBoxColor5.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
-                panelShelf5.BackgroundImage = myImage;
-            }
-            else
-            {
-                string color = comboBoxColor5.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf5.BackgroundImage = myImage;
-            }
+            AddDoorToBox(comboBoxDoorMat5, comboBoxColor5, panelShelf5);
         }
 
         // function to change color of door material of box 6
         private void comboBoxDoorMat6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string doorMat = comboBoxDoorMat6.Text;
-            if (comboBoxColor6.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
-                panelShelf6.BackgroundImage = myImage;
-            }
-            else
-            {
-                string color = comboBoxColor6.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf6.BackgroundImage = myImage;
-            }
+            AddDoorToBox(comboBoxDoorMat6, comboBoxColor6, panelShelf6);
         }
 
         // function to change color of door material of box 7
         private void comboBoxDoorMat7_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string doorMat = comboBoxDoorMat7.Text;
-            if (comboBoxColor7.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
-                panelShelf7.BackgroundImage = myImage;
-            }
-            else
-            {
-                string color = comboBoxColor7.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                panelShelf7.BackgroundImage = myImage;
-            }
+            AddDoorToBox(comboBoxDoorMat7, comboBoxColor7, panelShelf7);
         }
 
         // -- Method to design tabheader
