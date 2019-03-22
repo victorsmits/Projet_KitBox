@@ -67,7 +67,7 @@ namespace KitBoxApplication
 
         private void BoxCreationScratch_Load(object sender, EventArgs e)
         {
-            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Database\DB_Lespieces.accdb;";
+            cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source= " + GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
             cmd.Connection = cn;
             LoadDataAngleColor();
             LoadDataWidth();
@@ -273,17 +273,17 @@ namespace KitBoxApplication
         }
 
         // general function to remove door image
-        public void removeDoor(ComboBox a, Panel b)
+        public void RemoveDoor(ComboBox a, Panel b)
         {
             if (a.Text == "")
             {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blancNoDoor.png");
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blancNoDoor.png");
                 b.BackgroundImage = myImage;
             }
             else
             {
                 string color = a.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
                 b.BackgroundImage = myImage;
             }
         }
@@ -305,7 +305,7 @@ namespace KitBoxApplication
                     panelDoorMaterial1.Visible = false;
                     LoadDataWidth();
                     comboBoxDoorMat1.SelectedItem = null;
-                    removeDoor(comboBoxColor1, panelShelf1);
+                    RemoveDoor(comboBoxColor1, panelShelf1);
                 }
             }
         }
@@ -327,7 +327,7 @@ namespace KitBoxApplication
                     panelDoorMaterial2.Visible = false;
                     LoadDataWidth();
                     comboBoxDoorMat2.SelectedItem = null;
-                    removeDoor(comboBoxColor2, panelShelf2);
+                    RemoveDoor(comboBoxColor2, panelShelf2);
                 }
             }
         }
@@ -349,7 +349,7 @@ namespace KitBoxApplication
                     panelDoorMaterial3.Visible = false;
                     LoadDataWidth();
                     comboBoxDoorMat3.SelectedItem = null;
-                    removeDoor(comboBoxColor3, panelShelf3);
+                    RemoveDoor(comboBoxColor3, panelShelf3);
                 }
             }
         }
@@ -371,7 +371,7 @@ namespace KitBoxApplication
                     panelDoorMaterial4.Visible = false;
                     LoadDataWidth();
                     comboBoxDoorMat4.SelectedItem = null;
-                    removeDoor(comboBoxColor4, panelShelf4);
+                    RemoveDoor(comboBoxColor4, panelShelf4);
                 }
             }
         }
@@ -393,7 +393,7 @@ namespace KitBoxApplication
                     panelDoorMaterial5.Visible = false;
                     LoadDataWidth();
                     comboBoxDoorMat5.SelectedItem = null;
-                    removeDoor(comboBoxColor5, panelShelf5);
+                    RemoveDoor(comboBoxColor5, panelShelf5);
                 }
             }
         }
@@ -415,7 +415,7 @@ namespace KitBoxApplication
                     panelDoorMaterial6.Visible = false;
                     LoadDataWidth();
                     comboBoxDoorMat6.SelectedItem = null;
-                    removeDoor(comboBoxColor6, panelShelf6);
+                    RemoveDoor(comboBoxColor6, panelShelf6);
                 }
             }
         }
@@ -437,7 +437,7 @@ namespace KitBoxApplication
                     panelDoorMaterial7.Visible = false;
                     LoadDataWidth();
                     comboBoxDoorMat7.SelectedItem = null;
-                    removeDoor(comboBoxColor7, panelShelf7);
+                    RemoveDoor(comboBoxColor7, panelShelf7);
                 }
             }
         }
@@ -460,13 +460,13 @@ namespace KitBoxApplication
             string color = box.Text;
             if (door.Text == "")
             {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
                 shelf.BackgroundImage = myImage;
             }
             else
             {
                 string doorMat = door.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
                 shelf.BackgroundImage = myImage;
             }
         }
@@ -521,7 +521,7 @@ namespace KitBoxApplication
             {
                 if (doorMat != "")
                 {
-                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
+                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
                     shelf.BackgroundImage = myImage;
                 }
             }
@@ -530,11 +530,11 @@ namespace KitBoxApplication
                 string color = box.Text;
                 if (doorMat != "")
                 {
-                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
+                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
                     shelf.BackgroundImage = myImage;
                 } else
                 {
-                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
+                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
                     shelf.BackgroundImage = myImage;
                 }
             }

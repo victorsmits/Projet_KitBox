@@ -86,7 +86,7 @@ namespace KitBoxApplication
         }
 
         // function model for loadData
-        private void loadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
+        private void LoadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
         {
             foreach (System.Windows.Forms.ComboBox i in m)
             {
@@ -550,7 +550,7 @@ namespace KitBoxApplication
             int heightForEach = ProcessHeightForEachBox(totalHeight,qty);
             int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
             int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
-            Color angleColor = Color.FromName(comboBoxColorAngles.SelectedItem.ToString());
+            String angleColor = comboBoxColorAngles.SelectedItem.ToString();
 
             cabinet.AddAngles(angleColor);
 
