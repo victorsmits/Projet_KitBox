@@ -94,7 +94,6 @@ namespace KitBoxApplication
             }
             try
             {
-                var count = numericUpDownQuantity.Value;
                 string q = n;
                 cmd.CommandText = q; // execution of a SQL instruction
                 cn.Open();
@@ -145,7 +144,7 @@ namespace KitBoxApplication
                 comboBoxDoorMatBox7
             };
             var count = numericUpDownQuantity.Value;
-            loadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+            LoadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
                     "AND division LIKE '" + count + "'");
         }
 
@@ -154,28 +153,28 @@ namespace KitBoxApplication
         {
             System.Windows.Forms.ComboBox[] list = { comboBoxHeight };
             var count = numericUpDownQuantity.Value;
-            loadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " + "AND division LIKE '" + count + "'");
+            LoadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " + "AND division LIKE '" + count + "'");
         }
 
         // Loading Width data from data base if cabinet without doors
         private void LoadDataWidth()
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxWidth};
-            loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
         }
 
         // Loading Width data from data base if cabinet with doors
         private void LoadDataWidthDoor()
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxWidth};
-            loadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ");
         }
 
         // Loading Depth data from data base
         private void LoadDataDepth()
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxDepth};
-            loadDataGeneral(list, "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ");
         }
 
         // Loading Angle Color data from data base
@@ -183,7 +182,7 @@ namespace KitBoxApplication
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxColorAngles};
             var count = numericUpDownQuantity.Value;
-            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
+            LoadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +
                     "AND division LIKE '" + count + "'");
         }
 
@@ -201,7 +200,7 @@ namespace KitBoxApplication
                 comboBoxColorS7,
                 comboBoxColorSA,
             };
-            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'PA%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'PA%' ");
         }
 
         // Loading Door Material data from data base
@@ -217,7 +216,7 @@ namespace KitBoxApplication
                 comboBoxDoorMatBox6,
                 comboBoxDoorMatBox7
             };
-            loadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'POR%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'POR%' ");
         }
 
         // function to make appear color choice for all the boxes at once and door choice
@@ -536,7 +535,7 @@ namespace KitBoxApplication
         //function that add the chosen features to the cart
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             //If the cart is empty, create it
             if (CartPage.Cart == null)
             {
@@ -545,7 +544,7 @@ namespace KitBoxApplication
 
             Cabinet cabinet = new Cabinet();
 
-            
+
             int qty = (int)numericUpDownQuantity.Value;
             int totalHeight = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
             int heightForEach = ProcessHeightForEachBox(totalHeight,qty);
@@ -580,7 +579,7 @@ namespace KitBoxApplication
                 {
                     door1 = comboBoxDoorMatIf1.Text.ToString();
                 }
-                
+
                 else
                 {
                     door1 = null;
@@ -588,7 +587,7 @@ namespace KitBoxApplication
             }
 
             else
-            { 
+            {
                 if (checkBoxColorYes.Checked == true & radioButtonYesIf2.Checked == true)
                 {
                     color1 = comboBoxColorSA.Text.ToString();
@@ -673,7 +672,7 @@ namespace KitBoxApplication
                 {
                     color1 = comboBoxColorS1.Text.ToString();
                     color2 = comboBoxColorS2.Text.ToString();
-                    color3 = comboBoxColorS3.Text.ToString(); 
+                    color3 = comboBoxColorS3.Text.ToString();
                     color4 = comboBoxColorS4.Text.ToString();
                     color5 = comboBoxColorS5.Text.ToString();
                     color6 = comboBoxColorS6.Text.ToString();
@@ -691,9 +690,9 @@ namespace KitBoxApplication
             CabinetFloor box5 = new CabinetFloor(heightForEach, width, depth, door5, panelCol: color5);
             CabinetFloor box6 = new CabinetFloor(heightForEach, width, depth, door6, panelCol: color6);
             CabinetFloor box7 = new CabinetFloor(heightForEach, width, depth, door7, panelCol: color7);
-            
-            
-            
+
+
+
 
             switch (qty)
             {
