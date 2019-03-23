@@ -261,17 +261,20 @@ namespace KitBoxApplication
             comboBoxHeight.Text = "";
             if (count == 1)
             {
+                // visibility for which panel to show (case1 : 1box, case2: 1+boxes)
                 panelColorBoxIf1.Visible = true;
                 panelColorBoxIfN1.Visible = false;
                 panelDoorChoiceMultiple.Visible = false;
-                // resets radiobuttons
-                radioButtonNoIf2.Checked = true;
-                radioButtonNoBox1.Checked = true;
-                radioButtonNoBox2.Checked = true;
-
+                // resets radiobuttons door for more than one box
+                radioButtonNoIf2.Checked = true;    // no door at all
+                radioButtonNoBox1.Checked = true;   // no door for box 1 checked
+                radioButtonNoBox2.Checked = true;   // no door for box 2 checked
+                // shelf image
+                panelShelf2.Visible = false;
             }
             else if (count > 1)
             {
+                // visibility for which panel to show (case1 : 1box, case2: 1+boxes)
                 panelDoorChoiceMultiple.Visible = true;
                 panelColorBoxIf1.Visible = false;
                 panelColorBoxIfN1.Visible = true;
@@ -285,6 +288,9 @@ namespace KitBoxApplication
                 // resets radiobuttons
                 radioButtonNoIf1.Checked = true;
                 radioButtonNoBox3.Checked = true;
+                // shelf image
+                panelShelf2.Visible = true;
+                panelShelf3.Visible = false;
                 if (count > 2)
                 {
                     // color features box 3 and box 4
@@ -298,6 +304,9 @@ namespace KitBoxApplication
                     labelDoorBox4.Visible = false;
                     panelYesNoBox4.Visible = false;
                     radioButtonNoBox4.Checked = true;
+                    // shelf image
+                    panelShelf3.Visible = true;
+                    panelShelf4.Visible = false;
                     if (count > 3)
                     {
                         // color features box 4 and box 5
@@ -311,6 +320,9 @@ namespace KitBoxApplication
                         labelDoorBox5.Visible = false;
                         panelYesNoBox5.Visible = false;
                         radioButtonNoBox5.Checked = true;
+                        // shelf image
+                        panelShelf4.Visible = true;
+                        panelShelf5.Visible = false;
                         if (count > 4)
                         {
                             // color features box 5 and box 6
@@ -324,6 +336,9 @@ namespace KitBoxApplication
                             labelDoorBox6.Visible = false;
                             panelYesNoBox6.Visible = false;
                             radioButtonNoBox6.Checked = true;
+                            // shelf image
+                            panelShelf5.Visible = true;
+                            panelShelf6.Visible = false;
                             if (count > 5)
                             {
                                 // color features box 6 and box 7
@@ -337,6 +352,9 @@ namespace KitBoxApplication
                                 labelDoorBox7.Visible = false;
                                 panelYesNoBox7.Visible = false;
                                 radioButtonNoBox7.Checked = true;
+                                // shelf image
+                                panelShelf6.Visible = true;
+                                panelShelf7.Visible = false;
                                 if (count > 6)
                                 {
                                     // color features box 7
@@ -345,6 +363,8 @@ namespace KitBoxApplication
                                     // door features box 7
                                     labelDoorBox7.Visible = true;
                                     panelYesNoBox7.Visible = true;
+                                    // shelf image
+                                    panelShelf7.Visible = true;                                 
                                 }
                             }
                         }
@@ -510,6 +530,208 @@ namespace KitBoxApplication
                     panelDoorChoiceBox7.Visible = false;
                 }
             }
+        }
+
+        // general function to add color to box cabinet image
+        public void AddColorToBox(ComboBox box, ComboBox door, System.Windows.Forms.Panel shelf)
+        {
+            string color = box.Text;
+            if (door.Text == "")
+            {
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
+                shelf.BackgroundImage = myImage;
+            }
+            else
+            {
+                string doorMat = door.Text;
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
+                shelf.BackgroundImage = myImage;
+            }
+        }
+
+        private void comboBoxColorIf1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
+        }
+
+        private void comboBoxColorSA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int count = Convert.ToInt32(numericUpDownQuantity.Value);
+            string color = comboBoxColorSA.Text;
+            if (comboBoxDoorMatBox1.Text == "" && comboBoxDoorMatBox2.Text == "" && comboBoxDoorMatBox3.Text == "" && comboBoxDoorMatBox4.Text == "" && comboBoxDoorMatBox5.Text == "" && comboBoxDoorMatBox6.Text == "" && comboBoxDoorMatBox7.Text == "")
+            {
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
+                panelShelf1.BackgroundImage = myImage;
+                if (count > 1)
+                {
+                    panelShelf2.BackgroundImage = myImage;
+                    if (count > 2)
+                    {
+                        panelShelf3.BackgroundImage = myImage;
+                        if (count > 3)
+                        {
+                            panelShelf4.BackgroundImage = myImage;
+                            if (count > 4)
+                            {
+                                panelShelf5.BackgroundImage = myImage;
+                                if (count > 5)
+                                {
+                                    panelShelf6.BackgroundImage = myImage;
+                                    if (count > 6)
+                                    {
+                                        panelShelf7.BackgroundImage = myImage;
+                                    }                                   
+                                }                                
+                            }
+                        }                       
+                    }                   
+                }               
+            }
+            else
+            {
+                string doorMat1 = comboBoxColorS1.Text;
+                Image myImage1 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat1 + ".png");
+                panelShelf1.BackgroundImage = myImage1;
+                if (count > 1)
+                {
+                    string doorMat2 = comboBoxColorS2.Text;
+                    Image myImage2 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat2 + ".png");
+                    panelShelf2.BackgroundImage = myImage2;
+                    if (count > 2)
+                    {
+                        string doorMat3 = comboBoxColorS3.Text;
+                        Image myImage3 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat3 + ".png");
+                        panelShelf3.BackgroundImage = myImage3;
+                        if (count > 3)
+                        {
+                            string doorMat4 = comboBoxColorS4.Text;
+                            Image myImage4 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat4 + ".png");
+                            panelShelf4.BackgroundImage = myImage4;
+                            if (count > 4)
+                            {
+                                string doorMat5 = comboBoxColorS5.Text;
+                                Image myImage5 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat5 + ".png");
+                                panelShelf5.BackgroundImage = myImage5;
+                                if (count > 5)
+                                {
+                                    string doorMat6 = comboBoxColorS6.Text;
+                                    Image myImage6 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat6 + ".png");
+                                    panelShelf6.BackgroundImage = myImage6;
+                                    if (count > 6)
+                                    {
+                                        string doorMat7 = comboBoxColorS7.Text;
+                                        Image myImage7 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat7 + ".png");
+                                        panelShelf7.BackgroundImage = myImage7;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+
+        private void comboBoxColorS1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
+        }
+
+        private void comboBoxColorS2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
+        }
+
+        private void comboBoxColorS3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
+        }
+
+        private void comboBoxColorS4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
+        }
+
+        private void comboBoxColorS5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
+        }
+
+        private void comboBoxColorS6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
+        }
+
+        private void comboBoxColorS7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
+        }
+
+        // general function to add door and color door to cabinet image
+        public void AddDoorToBox(ComboBox door, ComboBox box, System.Windows.Forms.Panel shelf)
+        {
+            string doorMat = door.Text;
+            if (box.Text == "")
+            {
+                if (doorMat != "")
+                {
+                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
+                    shelf.BackgroundImage = myImage;
+                }
+            }
+            else
+            {
+                string color = box.Text;
+                if (doorMat != "")
+                {
+                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
+                    shelf.BackgroundImage = myImage;
+                }
+                else
+                {
+                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
+                    shelf.BackgroundImage = myImage;
+                }
+            }
+        }
+
+        private void comboBoxDoorMatBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddDoorToBox(comboBoxDoorMatBox1 , comboBoxColorS1, panelShelf1);
+        }
+
+        private void comboBoxDoorMatBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddDoorToBox(comboBoxDoorMatBox2, comboBoxColorS2, panelShelf2);
+        }
+
+        private void comboBoxDoorMatBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddDoorToBox(comboBoxDoorMatBox3, comboBoxColorS3, panelShelf3);
+        }
+
+        private void comboBoxDoorMatBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddDoorToBox(comboBoxDoorMatBox4, comboBoxColorS4, panelShelf4);
+        }
+
+        private void comboBoxDoorMatBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddDoorToBox(comboBoxDoorMatBox5, comboBoxColorS5, panelShelf5);
+        }
+
+        private void comboBoxDoorMatBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddDoorToBox(comboBoxDoorMatBox6, comboBoxColorS6, panelShelf6);
+        }
+
+        private void comboBoxDoorMatBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddDoorToBox(comboBoxDoorMatBox7, comboBoxColorS7, panelShelf7);
+        }
+
+        private void comboBoxDoorMatIf1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddDoorToBox(comboBoxDoorMatIf1, comboBoxColorIf1 , panelShelf1);
         }
 
         //function that give the height of each box
@@ -745,5 +967,6 @@ namespace KitBoxApplication
             MessageBox.Show("This cabinet has been added to the cart succesfully!");
 
         }
+        
     }
 }
