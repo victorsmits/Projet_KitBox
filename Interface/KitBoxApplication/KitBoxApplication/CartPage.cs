@@ -45,6 +45,7 @@ namespace KitBoxApplication
         {
             tabControl1.TabPages.Clear(); //Clear the tabs
             MessageBox.Show(jsonCart.ToString());
+
             //For every cabinet of the json
             for (int cabinetCount = 0; cabinetCount < jsonCart.Count; cabinetCount++)
             {
@@ -53,12 +54,29 @@ namespace KitBoxApplication
                 MessageBox.Show(cabinetContains.ToString());
                 //Add a tab for the cabinet
                 TabPage addedCabinePage = new TabPage(Name = "Cabine " + (cabinetCount + 1).ToString());
-                addedCabinePage.BackColor = Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+                addedCabinePage.BackColor = Color.FromArgb(41, 44, 51);
                 tabControl1.TabPages.Add(addedCabinePage);
                 int floorCount = 0;
 
+                //Generates label for angles
+                JObject angle = cabinetContains["Angle"].Value<JObject>();
+                int angleLength = angle["Length"].Value<int>();
+                string angleColor = angle["Color"].Value<string>();
+                int angleQty = angle["Quantity"].Value<int>();
+
+                Label angleLabel = new Label();
+                angleLabel.AutoSize = true;
+                angleLabel.Text = String.Format("\nAngle\n\nLength: {0}cm\nColor : {1}\nQuantity: {2}\n", angleLength.ToString(), angleColor, angleQty.ToString());
+                angleLabel.Location = new Point(30, 5);
+                int angleLabelLenght = angleLabel.Width;
+
+                addedCabinePage.Controls.Add(angleLabel);
+
+                int labelLength = 15; 
+
                 for (floorCount = 0; floorCount < cabinetContains.Count-1; floorCount++)
                 {
+                    labelLength = 15;
                     JObject floor = cabinetContains["Floor " + floorCount.ToString()].Value<JObject>();
                     MessageBox.Show(floor.ToString());
 
@@ -68,42 +86,55 @@ namespace KitBoxApplication
                     floorGroup.AutoSize = true;
                     Color color = Color.White;
                     floorGroup.ForeColor = color;
-                    floorGroup.Location = new Point(30, 15 + floorCount * 110);
+                    floorGroup.Location = new Point(30, 100 + floorCount * 110);
                     addedCabinePage.Controls.Add(floorGroup);
-                    int numberOfLabel = 0;
-                    int labelLength = 6;
 
-                    //Generates label for every pannel
-                    for (numberOfLabel = 0; numberOfLabel < 3; numberOfLabel++)
+                    //Generates label for dimension
+                    string floorColor = "";
+                    int HEIGHT = 4;
+                    int LENGTH = 0;
+                    int DEPTH = 0;
+                    Label boxDimension = new Label();
+                    Label boxColor = new Label();
+                    boxDimension.AutoSize = true;
+                    boxColor.AutoSize = true;
+
+                    for (int numberOfLabel = 0; numberOfLabel < 3; numberOfLabel++)
                     {
                         JObject floorPanel = floor["Panel " + (numberOfLabel+1).ToString()].Value<JObject>();
-                        string floorColor = floorPanel["Coleur"].Value<string>();
+                        floorColor = floorPanel["Coleur"].Value<string>();
                         int height = floorPanel["height"].Value<int>();
                         int length = floorPanel["Lenght"].Value<int>();
-                        int panelQty = floorPanel["Qty"].Value<int>();
-                        string panelPosition = null;
+                        int panelQty = floorPanel["Qty"].Value<int>(); 
+                        
 
-                        Label panelLabel = new Label();
-                        panelLabel.AutoSize = true;
                         if (numberOfLabel == 0)
                         {
-                            panelPosition = "Back Panel";
+                            HEIGHT += height;
+                            LENGTH += length;
                         }
                         if (numberOfLabel == 1)
                         {
-                            panelPosition = "Side Panel";
+                            DEPTH += length;
                         }
                         if (numberOfLabel == 2)
                         {
-                            panelPosition = "Top or bottom Panel";
+                            boxColor.Text = String.Format("Color\n\n{0}", floorColor);
                         }
-                        panelLabel.Text = String.Format("\n{0}\n\nColor : {1}\nDimensions : {2}x{3}cm\nQuantity : {4}", panelPosition, floorColor.ToString(), height.ToString(), length.ToString(), panelQty.ToString());
-                        panelLabel.Location = new Point(labelLength, 28);
-                        int panelLabelLength = panelLabel.Width;
-                        labelLength += (panelLabelLength+15);
-                        floorGroup.Controls.Add(panelLabel);
+                        
                     }
+                    boxDimension.Text = String.Format("Dimensions\n\nHeight : {0}cm\nWidth : {1}cm\nDepth : {2}cm", HEIGHT.ToString(), LENGTH.ToString(), DEPTH.ToString());
+                    boxDimension.Location = new Point(labelLength, 28);
+                    int panelLabelLength = boxDimension.Width;
+                    labelLength += (panelLabelLength);
+                    floorGroup.Controls.Add(boxDimension);
 
+                    //Generates label for color
+
+                    boxColor.Location = new Point(labelLength, 28);
+                    labelLength += (panelLabelLength);
+                    floorGroup.Controls.Add(boxColor);
+                    /*
                     //Generates label for side Beam
                     JObject sideBeam = floor["Beam 1"].Value<JObject>();
                     int sideBeamLength = sideBeam["Lenght"].Value<int>();
@@ -157,21 +188,7 @@ namespace KitBoxApplication
                     labelLength += (cleatLabelLenght - 20);
 
                     floorGroup.Controls.Add(cleatLabel);
-
-                    //Generates label for angles
-                    JObject angle = cabinetContains["Angle"].Value<JObject>();
-                    int angleLength = angle["Length"].Value<int>();
-                    string angleColor = angle["Color"].Value<string>();
-                    int angleQty = angle["Quantity"].Value<int>();
-
-                    Label angleLabel = new Label();
-                    angleLabel.AutoSize = true;
-                    angleLabel.Text = String.Format("\nAngle\n\nLength: {0}cm\nColor : {1}\nQuantity: {2}\n", angleLength.ToString(), angleColor, angleQty.ToString());
-                    angleLabel.Location = new Point(labelLength, 28);
-                    int angleLabelLenght = angleLabel.Width;
-                    labelLength += (angleLabelLenght - 20);
-
-                    floorGroup.Controls.Add(angleLabel);
+                    */
 
                     //Generates label for the doors
                     try
@@ -187,7 +204,7 @@ namespace KitBoxApplication
 
                         Label doorLabel = new Label();
                         doorLabel.AutoSize = true;
-                        doorLabel.Text = String.Format("Double Doors\n\nHeight : {0}cm\nLength : {1}cm\nColor (or Material) : {2}\nGot {3} knops\nQuantity : {4}", doorHeight.ToString(), doorLength.ToString(), doorMaterial, knopQty.ToString(), doorQty.ToString());
+                        doorLabel.Text = String.Format("Double Doors\n\nColor (or Material) : {0}\nGot {1} knops\n", doorMaterial, knopQty.ToString());
                         doorLabel.Location = new Point(labelLength, 28);
                         int doorLabelLenght = doorLabel.Width;
                         labelLength += (doorLabelLenght);

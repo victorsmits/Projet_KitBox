@@ -518,7 +518,7 @@ namespace KitBoxApplication
         {
             var height = heightToGive;
             var nbrBox = nbrBoxToGive;
-            int boxHeight = (height - nbrBox * 4) / nbrBox;
+            int boxHeight = (height) / nbrBox;
             return boxHeight;
         }
 
@@ -629,7 +629,7 @@ namespace KitBoxApplication
                             door7 = comboBoxDoorMatBox7.SelectedItem.ToString();
                         }
                     }
-                    if (checkBoxColorYes.Checked == true & radioButtonYesIf2.Checked == false)
+                    else if (checkBoxColorYes.Checked == true & radioButtonYesIf2.Checked == false)
                     {
                         color1 = comboBoxColorSA.Text.ToString();
                         color2 = comboBoxColorSA.Text.ToString();
@@ -639,7 +639,7 @@ namespace KitBoxApplication
                         color6 = comboBoxColorSA.Text.ToString();
                         color7 = comboBoxColorSA.Text.ToString();
                     }
-                    if (checkBoxColorYes.Checked == false & radioButtonYesIf2.Checked == true)
+                    else if (checkBoxColorYes.Checked == false & radioButtonYesIf2.Checked == true)
                     {
                         if (radioButtonYesBox1.Checked == true)
                         {
