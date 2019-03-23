@@ -19,7 +19,7 @@ namespace KitBoxSourceCode
             this.theStorageBox = storageBox;
         }
 
-        public DoubleDoors(string doormat, int hei, int len) : base(len, hei)
+        public DoubleDoors(string doormat, int hei, int len) : base(len, hei - 4)
         {
             TheDoorMat = doormat;
             stockNumber = "1";

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using SqlOledb;
 namespace KitBoxSourceCode
 {
     public class Angle
@@ -19,7 +20,9 @@ namespace KitBoxSourceCode
             stockRef = "1";
             quantity = qty;
 
-
+            Oledb.Connection();
+            Oledb.SqlRequest("");
+            Oledb.Loaddata();
             //TODO oledb book 4 angles fct len & color
             //TODO oledb stock ref fct len & color
         }
