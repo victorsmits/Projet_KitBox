@@ -32,12 +32,32 @@ namespace SqlOledb
             cmd.Connection = cn;
         }
 
-        public static void Loaddata()
+        public static string LoadData(string sql)
         {
-
+            try
+            {
+                string q = sql;
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        return dr[0].ToString();
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+            }
+            return null;
         }
 
-        public static void SqlRequest(String sql)//the command to do a sql instruction named q
+        public static string SqlRequest(String sql)//the command to do a sql instruction named q
         {
             try
             {
@@ -45,13 +65,15 @@ namespace SqlOledb
                 cmd.CommandText = sql;
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                Loaddata();
+                return LoadData(sql);
 
             }
             catch (Exception e)
             {
                 cn.Close();
             }
+
+            return null;
         }
     }
 }
