@@ -72,7 +72,9 @@ namespace SqlOledb
 
 		public static void UpdateReservation(int quantity, string stockRef)
 		{
-			SqlRequest("UPDATE Piece SET Reservation '" + quantity.ToString() + "' WHERE Référence LIKE '" + stockRef + "'");
+            int currentReservation = int.Parse(SqlRequest("SELECT Reservation FROM Piece WHERE Référence LIKE '" + stockRef + "'"));
+            int newReservation = currentReservation + quantity;
+			SqlRequest("UPDATE Piece SET Reservation = '" + newReservation.ToString() + "' WHERE Référence LIKE '" + stockRef + "'");
 		}
 
 		public static double GetDBPrice(string stockRef)
