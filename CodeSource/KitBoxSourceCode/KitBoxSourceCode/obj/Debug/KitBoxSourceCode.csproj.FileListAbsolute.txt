@@ -72,6 +72,6 @@ C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBox
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ru\lcpi.lib.net4_6.resources.dll
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ru\lcpi.data.oledb.net4_6.resources.dll
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.csproj.CopyComplete
-C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.dll.config
-C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.dll
-C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.exe.config
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.exe
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.exe
