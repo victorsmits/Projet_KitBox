@@ -6,6 +6,7 @@ namespace KitBoxSourceCode
 	{
 		private readonly int height;
 		private readonly string color;
+
 		private int panelNumber;
 		private static int panelNum = 0;
 
@@ -14,26 +15,37 @@ namespace KitBoxSourceCode
 
 		public Panel(int len, int hei, string col, int qty) : base(len, qty)
 		{
-			Console.WriteLine("coucou");
 			lenght = len;
 			height = hei;
 			color = col;
 			quantity = qty;
-			stockNumber = "1"; // TODO OLEDB requete piece num fct dimension & color
-							   //TODO oledb book fct dimension, color & qty
+
 			if (panelNum == 3) {
 				panelNum = 0;
 			}
 			panelNum++;
 			panelNumber = panelNum;
+
+			// TODO OLEDB requete piece num fct dimension & color
+			switch (panelNumber) {
+				case 1:
+					stockNumber = Oledb.SqlRequest("SELECT Rfrence FROM Piece WHERE Rfrence LIKE PAR% AND hauteur LIKE \""
+					+ height + "\" AND largeur LIKE \"" + lenght + "\" AND couleur LIKE " + color);
+					break;
+				case 2:
+					stockNumber = Oledb.SqlRequest("SELECT Rfrence FROM Piece WHERE Rfrence LIKE PAG% AND hauteur LIKE \""
+					+ height + "\" AND profondeur LIKE \"" + lenght + "\" AND couleur LIKE " + color);
+					break;
+				case 3:
+					stockNumber = Oledb.SqlRequest("SELECT Rfrence FROM Piece WHERE Rfrence LIKE PAH% AND profondeur LIKE \""
+					+ height + "\" AND largeur LIKE \"" + lenght + "\" AND couleur LIKE " + color);
+					break;
+			}
+
+			//TODO oledb book fct dimension, color & qty
+			Oledb.UpdateReservation(quantity, stockNumber);
+
 			SetPrice();
-		}
-
-		protected override void SetPrice()
-		{
-			//TODO oledb requete price fct dim et couleur
-			price = 2;
-
 		}
 
 		public override string GetDetails()
