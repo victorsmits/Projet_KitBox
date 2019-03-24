@@ -9,9 +9,9 @@ namespace KitBoxSourceCode
         private List<CabinetFloor> cabinetFloors;
         private int cabinetHeight;
 
-        private double cabinetPrice = 0;
+        private int cabinetPrice = 0;
 
-        public double GetCabinetPrice => cabinetPrice;
+        public int GetCabinetPrice => cabinetPrice;
         public int GetCabinetHeight => cabinetHeight;
 
         private Angle angles;

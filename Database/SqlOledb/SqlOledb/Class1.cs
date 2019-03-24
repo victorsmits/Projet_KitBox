@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
-using System.IO;
 
 namespace SqlOledb
 {
@@ -15,71 +14,29 @@ namespace SqlOledb
 		public static OleDbConnection cn = new OleDbConnection();  // cn for connection
 		public static OleDbDataReader dr;
 
-		private static string GetRelativePath(string directory)
+		public static void connection(string path)
 		{
-			char[] test1 = "\\".ToCharArray();
-			string[] test = directory.Split(test1);
-			string root = test[0];
-			string user = test[1];
-			string namePC = test[2];
-			string dir = root + "\\" + user + "\\" + namePC + "\\";
-			return dir;
-		}
-
-		public static void Connection()
-		{
-			cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source= " + GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;";
+			cn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.13.1; Data Source=" + path + ";";
 			cmd.Connection = cn;
 		}
 
-		public static string LoadData(string sql)
+		public static void Loaddata()
 		{
-			string data = "";
-			try {
-				string q = sql;
-				cmd.CommandText = q; // execution of a SQL instruction
-				cn.Open();
-				dr = cmd.ExecuteReader();
-				if (dr.HasRows) {
-					while (dr.Read()) {
-						data += dr[0].ToString();
-					}
-				}
-				dr.Close();
-				cn.Close();
-			} catch (Exception e) {
-				cn.Close();
-			}
-			return data;
+
 		}
 
-		public static string SqlRequest(String sql)//the command to do a sql instruction named q
+		public static void SqlRequest(String sql)//the command to do a sql instruction named q
 		{
-            Connection();
 			try {
 				cn.Open();
 				cmd.CommandText = sql;
 				cmd.ExecuteNonQuery();
 				cn.Close();
-				return LoadData(sql);
+				Loaddata();
 
 			} catch (Exception e) {
 				cn.Close();
 			}
-
-			return null;
-		}
-
-		public static void UpdateReservation(int quantity, string stockRef)
-		{
-			SqlRequest("UPDATE Piece SET Reservation '" + quantity.ToString() + "' WHERE Référence LIKE '" + stockRef + "'");
-		}
-
-		public static double GetDBPrice(string stockRef)
-		{
-            string price = SqlRequest("SELECT PrixClient FROM Piece WHERE Référence LIKE '" + stockRef + "'");
-
-            return double.Parse(price);
 		}
 	}
 }

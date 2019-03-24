@@ -3,7 +3,7 @@ namespace KitBoxSourceCode
 {
     public interface IComponent
     {
-        double GetPrice();
+        int GetPrice();
         int GetLenght();
         string GetDetails();
     }
