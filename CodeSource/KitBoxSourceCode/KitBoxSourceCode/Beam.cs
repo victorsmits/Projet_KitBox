@@ -1,39 +1,41 @@
 ﻿using System;
+using SqlOledb;
+
 namespace KitBoxSourceCode
 {
-    public class Beam : GenericComponent
-    {
-        private int beamNumber;
-        private static int beamNum = 0;
+	public class Beam : GenericComponent
+	{
+		private int beamNumber;
+		private static int beamNum = 0;
 
-        public Beam(int len, int qty) : base(len, qty)
-        {
-            lenght = len;
-            quantity = qty;
-            price = 2;
-            stockNumber = "1";
-            if (beamNum == 2)
-            {
-                beamNum = 0;
-            }
-            beamNum++;
-            beamNumber = beamNum;
+		public Beam(int len, int qty) : base(len, qty)
+		{
+			lenght = len;
+			quantity = qty;
 
-            SetPrice();
+			// oledb stock ref fct len
 
-            //TODO oledb stock ref fct len
-            //TODO oledb book beam fct len & qty
-        }
+			switch (qty) {
+				case 2:
+					stockNumber = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRR%' AND largeur LIKE '" + len.ToString() + "'");
+					break;
+				case 4:
+					stockNumber = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRG%' AND profondeur LIKE '" + len.ToString() + "'");
+					break;
+			}
 
-        public override string GetDetails()
-        {
-            return "\"Beam " + beamNumber + "\" : { \"Lenght\": " + lenght + ", \"Stockref\" : " + stockNumber;
-        }
+			beamNum++;
+			beamNumber = beamNum;
 
-        protected override void SetPrice()
-        {
-            //TODO oledb requete price fct len
-            price = 2;
-        }
-    }
+			// oledb book beam fct len & qty
+			Oledb.UpdateReservation(quantity, stockNumber);
+            price = Oledb.GetDBPrice(stockNumber);
+			
+		}
+
+		public override string GetDetails()
+		{
+			return "\"Beam " + beamNumber + "\" : { \"Lenght\": " + lenght + ", \"Stockref\" : \"" + stockNumber + "\"";
+		}
+	}
 }
