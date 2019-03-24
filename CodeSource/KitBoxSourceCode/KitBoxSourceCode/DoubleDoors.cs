@@ -24,12 +24,12 @@ namespace KitBoxSourceCode
 		{
 			TheDoorMat = doormat;
 			// oledb stock ref fct dimension, doormat
-			stockNumber = Oledb.SqlRequest("SELECT Rfrence FROM Piece WHERE Rfrence LIKE POR% AND largeur LIKE \""
-			+ lenght + "\" AND hauteur LIKE \"" + height + "\" AND couleur LIKE" + doormat + "\"");
+			stockNumber = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'POR%' AND largeur LIKE '"
+			+ lenght.ToString() + "' AND hauteur LIKE '" + height.ToString() + "' AND Couleur LIKE '" + doormat + "'");
 
 			knops = new Knop(2);
 
-			SetPrice();
+			price = Oledb.GetDBPrice(stockNumber);
 			// oledb book double door
 			Oledb.UpdateReservation(2, stockNumber);
 
@@ -38,7 +38,7 @@ namespace KitBoxSourceCode
 		public override string GetDetails()
 		{
 			return "\"DoubleDoors\" : {\"height\": " + height + ",\"Lenght\": " + lenght
-			+ ", \"Material\": \"" + TheDoorMat + "\",\"Stockref\": " + stockNumber + knops.GetDetails();
+			+ ", \"Material\": \"" + TheDoorMat + "\",\"Stockref\": \"" + stockNumber + knops.GetDetails();
 		}
 
 	}

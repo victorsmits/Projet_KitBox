@@ -5,16 +5,16 @@ namespace KitBoxSourceCode
 {
 	public class Knop
 	{
-		private readonly int price;
+		private readonly double price;
 		private readonly int quantity;
 		private readonly string stockRef;
 
-		public int GetPrice => price;
+		public double GetPrice => price;
 
 		public Knop(int qty)
 		{
 			//TODO requet knop stock Ref
-			stockRef = Oledb.SqlRequest("SELECT Rfrence FROM Piece WHERE Rfrence LIKE COUP% ");
+			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'COUP%' ");
 
 			//TODO requet knop price
 			price = Oledb.GetDBPrice(stockRef);
@@ -26,7 +26,7 @@ namespace KitBoxSourceCode
 
 		public string GetDetails()
 		{
-			return ",\"Knop\":{\"StockRef\":" + stockRef + ",\"Quantity\":" + quantity + "}";
+			return "\",\"Knop\":{\"StockRef\": \"" + stockRef + "\",\"Quantity\":" + quantity + "}";
 		}
 
 	}

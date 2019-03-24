@@ -9,15 +9,15 @@ namespace KitBoxSourceCode
 		public Cleat(int len, int qty) : base(len, qty)
 		{
 			// oledb stock ref fct len
-			stockNumber = Oledb.SqlRequest("SELECT Rfrence FROM Piece WHERE Rfrence LIKE TAS% AND hauteur LIKE \"" + len + "\"");
-			SetPrice();
-			// oledb book fct len et qty
-			Oledb.UpdateReservation(quantity, stockNumber);
+			stockNumber = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TAS%' AND hauteur LIKE '" + len.ToString() + "'");
+            price = Oledb.GetDBPrice(stockNumber);
+            // oledb book fct len et qty
+            Oledb.UpdateReservation(quantity, stockNumber);
 		}
 
 		public override string GetDetails()
 		{
-			return "\"Cleat\":{ \"Lenght\": " + lenght + ", \"Stockref\" : " + stockNumber;
+			return "\"Cleat\":{ \"Lenght\": " + lenght + ", \"Stockref\" : \"" + stockNumber + "\"";
 		}
 
 	}

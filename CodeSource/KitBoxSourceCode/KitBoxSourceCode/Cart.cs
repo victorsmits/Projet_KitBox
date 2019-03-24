@@ -10,14 +10,14 @@ namespace KitBoxSourceCode
 		private List<Cabinet> cabinets;
 		private readonly int orderNumber;
 		private Profile clientProfile = null;
-		private int cartPrice;
+		private double cartPrice;
 
 		public int GetOrderNumber => orderNumber;
 
 		public Cart()
 		{
 			// global increase ordernumber
-			orderNumber = int.Parse(Oledb.SqlRequest("SELECT TOP 1 PK_Commande FROM Commande ORDER BY PK_Commande DESC")) + 1;
+			//orderNumber = int.Parse(Oledb.SqlRequest("SELECT TOP 1 PK_Commande FROM Commande ORDER BY PK_Commande DESC")) + 1;
 			cabinets = new List<Cabinet>();
 			cartPrice = 0;
 		}

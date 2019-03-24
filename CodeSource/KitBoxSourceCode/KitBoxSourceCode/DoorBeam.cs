@@ -8,15 +8,15 @@ namespace KitBoxSourceCode
 		public DoorBeam(int len, int qty) : base(len, qty)
 		{
 			// oledb stock ref fct len
-			stockNumber = Oledb.SqlRequest("SELECT Rfrence FROM Piece WHERE Rfrence LIKE TRF% AND largeur LIKE \"" + len + "\"");
+			stockNumber = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRF%' AND largeur LIKE '" + len.ToString() + "'");
 			// oledb book fct len et qty
 			Oledb.UpdateReservation(quantity, stockNumber);
-			SetPrice();
-		}
+            price = Oledb.GetDBPrice(stockNumber);
+        }
 
 		public override string GetDetails()
 		{
-			return "\"DoorBeam\" : {\"Lenght\": " + lenght + ", \"Stockref\": " + stockNumber;
+			return "\"DoorBeam\" : {\"Lenght\": " + lenght + ", \"Stockref\": \"" + stockNumber + "\"";
 		}
 	}
 }

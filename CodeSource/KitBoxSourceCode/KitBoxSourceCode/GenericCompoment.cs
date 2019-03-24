@@ -6,7 +6,7 @@ namespace KitBoxSourceCode
 	{
 		protected int lenght;
 		protected int quantity;
-		protected int price;
+		protected double price;
 		protected string stockNumber;
 
 		protected GenericComponent(int len, int qty)
@@ -17,15 +17,11 @@ namespace KitBoxSourceCode
 
 		public abstract string GetDetails();
 
-		protected void SetPrice()
-		{
-			// Oledb get price of the object
-			price = Oledb.GetDBPrice(stockNumber);
-		}
+		
 
 		public int GetLenght() => lenght;
 
-		public int GetPrice() => price;
+		public double GetPrice() => price;
 
 	}
 }

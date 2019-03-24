@@ -6,7 +6,7 @@ namespace KitBoxSourceCode
 	public class Angle
 	{
 		private readonly int lenght;
-		private int price;
+		private double price;
 		private readonly int quantity;
 		private readonly string angleColor;
 		private readonly string stockRef;
@@ -14,10 +14,10 @@ namespace KitBoxSourceCode
 		public Angle(int len, string color, int qty)
 		{
 			Oledb.Connection();
-			lenght = len;
+			lenght = 108;
 			angleColor = color;
 			// oledb stock ref fct len & color
-			stockRef = Oledb.SqlRequest("SELECT Rfrence FROM Piece WHERE Rfrence LIKE COR% AND hauteur LIKE \"" + len + "\" AND Couleur LIKE " + angleColor);
+			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'COR%' AND hauteur LIKE '" + lenght.ToString() + "' AND Couleur LIKE '" + angleColor+"'");
 			quantity = qty;
 			CalculPrice();
 
@@ -26,7 +26,7 @@ namespace KitBoxSourceCode
 		}
 
 		public int GetLenght() => lenght;
-		public int GetPrice() => price;
+		public double GetPrice() => price;
 
 		private void CalculPrice()
 		{

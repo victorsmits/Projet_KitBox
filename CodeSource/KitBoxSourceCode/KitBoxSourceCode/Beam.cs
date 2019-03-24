@@ -17,10 +17,10 @@ namespace KitBoxSourceCode
 
 			switch (qty) {
 				case 2:
-					stockNumber = Oledb.SqlRequest("SELECT Rfrence FROM Piece WHERE Rfrence LIKE TRR% AND largeur LIKE \"" + len + "\"");
+					stockNumber = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRR%' AND largeur LIKE '" + len.ToString() + "'");
 					break;
 				case 4:
-					stockNumber = Oledb.SqlRequest("SELECT Rfrence FROM Piece WHERE Rfrence LIKE TRG% AND profondeur LIKE \"" + len + "\"");
+					stockNumber = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRG%' AND profondeur LIKE '" + len.ToString() + "'");
 					break;
 			}
 
@@ -29,13 +29,13 @@ namespace KitBoxSourceCode
 
 			// oledb book beam fct len & qty
 			Oledb.UpdateReservation(quantity, stockNumber);
-
-			SetPrice();
+            price = Oledb.GetDBPrice(stockNumber);
+			
 		}
 
 		public override string GetDetails()
 		{
-			return "\"Beam " + beamNumber + "\" : { \"Lenght\": " + lenght + ", \"Stockref\" : " + stockNumber;
+			return "\"Beam " + beamNumber + "\" : { \"Lenght\": " + lenght + ", \"Stockref\" : \"" + stockNumber + "\"";
 		}
 	}
 }

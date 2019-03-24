@@ -24,7 +24,7 @@ namespace KitBoxSourceCode
 			SetPrice();
 		}
 
-		protected override void SetPrice()
+		protected void SetPrice()
 		{
 			price = 0;
 			foreach (IComponent key in components.Keys) {
@@ -67,9 +67,9 @@ namespace KitBoxSourceCode
 
 		private void AddBeam(int len, int height)
 		{
-			components.Add(new Beam(len, 4), 4);
+			components.Add(new Beam(len, 2), 2);
 
-			components.Add(new Beam(height, 2), 2);
+			components.Add(new Beam(height, 4), 4);
 
 		}
 

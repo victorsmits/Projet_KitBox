@@ -5,7 +5,7 @@ namespace KitBoxSourceCode
 {
 	public abstract class GenericStorageBox : IStorageBox
 	{
-		protected int price;
+		protected double price;
 		protected int lenght;
 		protected int height;
 		protected string stockNumber;
@@ -17,12 +17,9 @@ namespace KitBoxSourceCode
 		}
 
 		public abstract string GetDetails();
-		protected void SetPrice()
-		{
-			// Oledb get price of the object
-			price = Oledb.GetDBPrice(stockNumber);
-		}
-		public int GetPrice() => price;
+        
+		
+		public double GetPrice() => price;
 		public int GetHeight() => height;
 	}
 }

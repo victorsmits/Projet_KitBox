@@ -4,7 +4,7 @@ namespace KitBoxSourceCode
     public interface IStorageBox
     {
         string GetDetails();
-        int GetPrice();
+        double GetPrice();
         int GetHeight();
     }
 }

@@ -55,6 +55,7 @@ namespace SqlOledb
 
 		public static string SqlRequest(String sql)//the command to do a sql instruction named q
 		{
+            Connection();
 			try {
 				cn.Open();
 				cmd.CommandText = sql;
@@ -71,12 +72,14 @@ namespace SqlOledb
 
 		public static void UpdateReservation(int quantity, string stockRef)
 		{
-			SqlRequest("UPDATE Piece SET Reservation \"" + quantity + "\" WHERE Rfrence LIKE \"" + stockRef + "\"");
+			SqlRequest("UPDATE Piece SET Reservation '" + quantity.ToString() + "' WHERE Référence LIKE '" + stockRef + "'");
 		}
 
-		public static int GetDBPrice(string stockRef)
+		public static double GetDBPrice(string stockRef)
 		{
-			return int.Parse(SqlRequest("SELECT PrixClient FROM Piece WHERE Rfrence LIKE " + stockRef));
+            string price = SqlRequest("SELECT PrixClient FROM Piece WHERE Référence LIKE '" + stockRef + "'");
+
+            return double.Parse(price);
 		}
 	}
 }
