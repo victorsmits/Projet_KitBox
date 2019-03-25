@@ -10,17 +10,17 @@ namespace KitBoxSourceCode
 
 		public Beam(int len, int qty) : base(len, qty)
 		{
-			lenght = len;
+			length = len;
 			quantity = qty;
 
 			// oledb stock ref fct len
 
 			switch (qty) {
 				case 2:
-					stockNumber = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRR%' AND largeur LIKE '" + len.ToString() + "'");
+					stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRR%' AND largeur LIKE '" + len.ToString() + "'");
 					break;
 				case 4:
-					stockNumber = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRG%' AND profondeur LIKE '" + len.ToString() + "'");
+					stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRG%' AND profondeur LIKE '" + len.ToString() + "'");
 					break;
 			}
 
@@ -28,14 +28,14 @@ namespace KitBoxSourceCode
 			beamNumber = beamNum;
 
 			// oledb book beam fct len & qty
-			Oledb.UpdateReservation(quantity, stockNumber);
-            price = Oledb.GetDBPrice(stockNumber);
+			Oledb.UpdateReservation(quantity, stockRef);
+            price = Oledb.GetDBPrice(stockRef);
 			
 		}
 
 		public override string GetDetails()
 		{
-			return "\"Beam " + beamNumber + "\" : { \"Lenght\": " + lenght + ", \"Stockref\" : \"" + stockNumber + "\"";
+			return "\"Beam " + beamNumber + "\" : { \"Length\": " + length + ", \"Stockref\" : \"" + stockRef + "\"";
 		}
 	}
 }

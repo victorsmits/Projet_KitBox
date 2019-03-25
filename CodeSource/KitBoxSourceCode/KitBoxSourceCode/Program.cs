@@ -39,7 +39,7 @@ namespace KitBoxSourceCode
 
             //CabinetFloor cabinetFloor = new CabinetFloor
             //(height: 10,
-            //lenght: 5,
+            //length: 5,
             //width: 20,
             //doorMat: "green",
             //panelCol: "green");
