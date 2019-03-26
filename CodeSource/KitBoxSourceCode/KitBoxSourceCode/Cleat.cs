@@ -10,9 +10,9 @@ namespace KitBoxSourceCode
 		{
 			// oledb stock ref fct len
 			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TAS%' AND hauteur LIKE '" + len.ToString() + "'");
-            price = Oledb.GetDBPrice(stockRef);
-            // oledb book fct len et qty
-            Oledb.UpdateReservation(quantity, stockRef);
+			SetPrice();
+			// oledb book fct len et qty
+			Oledb.UpdateReservation(quantity, stockRef);
 		}
 
 		public override string GetDetails()

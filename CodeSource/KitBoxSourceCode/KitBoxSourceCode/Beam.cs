@@ -29,8 +29,8 @@ namespace KitBoxSourceCode
 
 			// oledb book beam fct len & qty
 			Oledb.UpdateReservation(quantity, stockRef);
-            price = Oledb.GetDBPrice(stockRef);
-			
+			SetPrice();
+
 		}
 
 		public override string GetDetails()

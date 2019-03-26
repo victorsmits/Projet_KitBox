@@ -31,7 +31,6 @@ namespace KitBoxSourceCode
 						closest = elem;
 					}
 				}
-
 			}
 			angleColor = color;
 			// oledb stock ref fct len & color

@@ -11,8 +11,8 @@ namespace KitBoxSourceCode
 			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRF%' AND largeur LIKE '" + len.ToString() + "'");
 			// oledb book fct len et qty
 			Oledb.UpdateReservation(quantity, stockRef);
-            price = Oledb.GetDBPrice(stockRef);
-        }
+			SetPrice();
+		}
 
 		public override string GetDetails()
 		{
