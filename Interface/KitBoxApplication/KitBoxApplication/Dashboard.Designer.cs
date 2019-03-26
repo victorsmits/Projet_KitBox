@@ -281,7 +281,7 @@
             this.cartPage1.Location = new System.Drawing.Point(280, 67);
             this.cartPage1.Margin = new System.Windows.Forms.Padding(1);
             this.cartPage1.Name = "cartPage1";
-            this.cartPage1.Size = new System.Drawing.Size(1163, 691);
+            this.cartPage1.Size = new System.Drawing.Size(1212, 691);
             this.cartPage1.TabIndex = 7;
             this.cartPage1.Visible = false;
             // 

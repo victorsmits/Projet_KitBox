@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormPanel = System.Windows.Forms.Panel;
 using System.Data.OleDb;
 using System.IO;
+using KitBoxSourceCode;
 
 namespace KitBoxApplication
 {
@@ -113,9 +115,9 @@ namespace KitBoxApplication
         // Loading Angle Color data from data base
         private void LoadDataAngleColor()
         {
-            System.Windows.Forms.ComboBox[] list = {comboBoxColorAngles};
+            System.Windows.Forms.ComboBox[] list = { comboBoxColorAngles };
             var count = numericUpDownQuantity.Value;
-            LoadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " +"AND division LIKE '" + count + "'");
+            LoadDataGeneral(list, "SELECT DISTINCT couleur FROM Piece WHERE référence LIKE 'COR%' AND référence NOT LIKE '%DEC' " + "AND division LIKE '" + count + "'");
         }
 
         // Loading Width data from data base if cabinet without doors
@@ -152,16 +154,16 @@ namespace KitBoxApplication
                 radioButtonYes4,
                 radioButtonYes5,
                 radioButtonYes6,
-                radioButtonYes7,               
+                radioButtonYes7,
             };
             // initialization list size
-            int qty = 0;           
+            int qty = 0;
             foreach (System.Windows.Forms.RadioButton radioElem in radioList)
             {
                 if (radioElem.Checked)
                 {
                     qty++;
-                }                
+                }
             }
             System.Windows.Forms.ComboBox[] list = new System.Windows.Forms.ComboBox[qty];
 
@@ -169,7 +171,7 @@ namespace KitBoxApplication
             int i = 0;  // index listProv
             int j = 0;  // index list
             foreach (System.Windows.Forms.RadioButton radioElem in radioList)
-            {   
+            {
                 if (radioElem.Checked)
                 {
                     list[j] = listprov[i];
@@ -177,7 +179,7 @@ namespace KitBoxApplication
                 }
                 i++;
             }
-            
+
             LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PAR%100BL' OR référence LIKE 'PAR%120BL' OR référence LIKE 'PAR%80BL' OR référence LIKE 'PAR%62BL'");
         }
 
@@ -270,7 +272,7 @@ namespace KitBoxApplication
                     panelShelf2.Visible = true;
                     panelShelf3.Visible = false;
                     if (count == 2)
-                    {                       
+                    {
                         // resets radiobutton only if 
                         radioButtonNo3.Checked = true;
                         // resets comboBox selected items
@@ -366,7 +368,7 @@ namespace KitBoxApplication
         }
 
         // general function to remove door image
-        private void RemoveDoor(ComboBox a, Panel b)
+        private void RemoveDoor(ComboBox a, WinFormPanel b)
         {
             if (a.Text == "")
             {
@@ -548,7 +550,7 @@ namespace KitBoxApplication
         }
 
         // general function to add color to box cabinet image
-        private void AddColorToBox(ComboBox box, ComboBox door, Panel shelf)
+        private void AddColorToBox(ComboBox box, ComboBox door, WinFormPanel shelf)
         {
             string color = box.Text;
             if (color == "")
@@ -611,7 +613,7 @@ namespace KitBoxApplication
         }
 
         // general function to add door and color door to cabinet image
-        private void AddDoorToBox(ComboBox door, ComboBox box, Panel shelf)
+        private void AddDoorToBox(ComboBox door, ComboBox box, WinFormPanel shelf)
         {
             string doorMat = door.Text;
             if (box.Text == "")
@@ -629,7 +631,8 @@ namespace KitBoxApplication
                 {
                     Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
                     shelf.BackgroundImage = myImage;
-                } else
+                }
+                else
                 {
                     Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
                     shelf.BackgroundImage = myImage;
@@ -689,7 +692,7 @@ namespace KitBoxApplication
 
             Font font = new Font("Century Gothic", 12, FontStyle.Bold);
 
-            Color myColor = Color.FromArgb(60,120,138);
+            Color myColor = Color.FromArgb(60, 120, 138);
             SolidBrush myBrush = new SolidBrush(myColor);
 
             SizeF sz = e.Graphics.MeasureString(tabPage.TabPages[e.Index].Text, font);
@@ -716,6 +719,174 @@ namespace KitBoxApplication
             {
                 tabPage.TabPages.Remove(page);
                 hiddenPages.Add(page);
+            }
+        }
+
+        private CabinetFloor GenerateBox1()
+        {
+
+            int height = Int32.Parse(comboBoxHeight1.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth1.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth1.SelectedItem.ToString());
+            string color = comboBoxColor1.Text;
+            string doorMat = null;
+            if (radioButtonYes1.Checked == true)
+            {
+                doorMat = comboBoxDoorMat1.Text;
+            }
+            CabinetFloor box = new CabinetFloor(height, width, depth, doorMat, color);
+            return box;
+        }
+
+        private CabinetFloor GenerateBox2()
+        {
+
+            int height = Int32.Parse(comboBoxHeight2.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth2.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth2.SelectedItem.ToString());
+            string color = comboBoxColor2.Text;
+            string doorMat = null;
+            if (radioButtonYes2.Checked == true)
+            {
+                doorMat = comboBoxDoorMat2.Text;
+            }
+            CabinetFloor box = new CabinetFloor(height, width, depth, doorMat, color);
+            return box;
+        }
+
+        private CabinetFloor GenerateBox3()
+        {
+
+            int height = Int32.Parse(comboBoxHeight3.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth3.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth3.SelectedItem.ToString());
+            string color = comboBoxColor3.Text;
+            string doorMat = null;
+            if (radioButtonYes3.Checked == true)
+            {
+                doorMat = comboBoxDoorMat3.Text;
+            }
+            CabinetFloor box = new CabinetFloor(height, width, depth, doorMat, color);
+            return box;
+        }
+
+        private CabinetFloor GenerateBox4()
+        {
+
+            int height = Int32.Parse(comboBoxHeight4.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth4.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth4.SelectedItem.ToString());
+            string color = comboBoxColor4.Text;
+            string doorMat = null;
+            if (radioButtonYes4.Checked == true)
+            {
+                doorMat = comboBoxDoorMat4.Text;
+            }
+            CabinetFloor box = new CabinetFloor(height, width, depth, doorMat, color);
+            return box;
+        }
+
+        private CabinetFloor GenerateBox5()
+        {
+
+            int height = Int32.Parse(comboBoxHeight5.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth5.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth5.SelectedItem.ToString());
+            string color = comboBoxColor5.Text;
+            string doorMat = null;
+            if (radioButtonYes5.Checked == true)
+            {
+                doorMat = comboBoxDoorMat5.Text;
+            }
+            CabinetFloor box = new CabinetFloor(height, width, depth, doorMat, color);
+            return box;
+        }
+
+        private CabinetFloor GenerateBox6()
+        {
+
+            int height = Int32.Parse(comboBoxHeight6.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth6.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth6.SelectedItem.ToString());
+            string color = comboBoxColor6.Text;
+            string doorMat = null;
+            if (radioButtonYes6.Checked == true)
+            {
+                doorMat = comboBoxDoorMat6.Text;
+            }
+            CabinetFloor box = new CabinetFloor(height, width, depth, doorMat, color);
+            return box;
+        }
+
+        private CabinetFloor GenerateBox7()
+        {
+
+            int height = Int32.Parse(comboBoxHeight7.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth7.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth7.SelectedItem.ToString());
+            string color = comboBoxColor7.Text;
+            string doorMat = null;
+            if (radioButtonYes7.Checked == true)
+            {
+                doorMat = comboBoxDoorMat7.Text;
+            }
+            CabinetFloor box = new CabinetFloor(height, width, depth, doorMat, color);
+            return box;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //If the cart is empty, create it
+            if (CartPage.Cart == null)
+            {
+                CartPage.Cart = new Cart();
+            }
+
+            Cabinet cabinet = new Cabinet();
+
+            string angleColor = comboBoxColorAngles.SelectedItem.ToString();
+            cabinet.AddAngles(angleColor);
+
+            try
+            {
+                int qty = (int)numericUpDownQuantity.Value;
+
+                if (qty >= 1)
+                {
+                    cabinet.AddStorageBox(GenerateBox1());
+                    if (qty >= 2)
+                    {
+                        cabinet.AddStorageBox(GenerateBox2());
+                        if (qty >= 3)
+                        {
+                            cabinet.AddStorageBox(GenerateBox3());
+                            if (qty >= 4)
+                            {
+                                cabinet.AddStorageBox(GenerateBox4());
+                                if (qty >= 5)
+                                {
+                                    cabinet.AddStorageBox(GenerateBox5());
+                                    if (qty >= 6)
+                                    {
+                                        cabinet.AddStorageBox(GenerateBox6());
+                                        if (qty >= 7)
+                                        {
+                                            cabinet.AddStorageBox(GenerateBox7());
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                CartPage.Cart.AddToCart(cabinet);
+                
+                MessageBox.Show("This cabinet has been added to the cart succesfully!");
+            }
+            catch
+            {
+                MessageBox.Show("Please enter all the necessary information");
             }
         }
     }

@@ -31,11 +31,15 @@ namespace KitBoxApplication
             try
             {
                 jsonCart = cart.ShowCart();
+                if (cart != null)
+                {
+                    comfirmCartButton.Visible = true;
+                }
                 Create_Layout();
             }
-            catch
+            catch(Exception test)
             {
-                
+                MessageBox.Show(test.ToString());
             }
 
         }
@@ -44,14 +48,14 @@ namespace KitBoxApplication
         private void Create_Layout()
         {
             tabControl1.TabPages.Clear(); //Clear the tabs
-            MessageBox.Show(jsonCart.ToString());
+            //MessageBox.Show(jsonCart.ToString());
 
             //For every cabinet of the json
             for (int cabinetCount = 0; cabinetCount < jsonCart.Count; cabinetCount++)
             {
                 //Get the elements of the cabinet
                 JObject cabinetContains = jsonCart["Cabinet " + cabinetCount.ToString()].Value<JObject>();
-                MessageBox.Show(cabinetContains.ToString());
+                //MessageBox.Show(cabinetContains.ToString());
                 //Add a tab for the cabinet
                 TabPage addedCabinePage = new TabPage(Name = "Cabine " + (cabinetCount + 1).ToString());
                 addedCabinePage.BackColor = Color.FromArgb(41, 44, 51);
@@ -72,17 +76,17 @@ namespace KitBoxApplication
 
                 addedCabinePage.Controls.Add(angleLabel);
 
-                int labelLength = 15; 
+                int labelLength = 15;
 
-                for (floorCount = 0; floorCount < cabinetContains.Count-1; floorCount++)
+                for (floorCount = 0; floorCount < cabinetContains.Count - 1; floorCount++)
                 {
                     labelLength = 15;
                     JObject floor = cabinetContains["Floor " + floorCount.ToString()].Value<JObject>();
-                    MessageBox.Show(floor.ToString());
+                    //MessageBox.Show(floor.ToString());
 
                     //Creating a GroupBox for a box
                     GroupBox floorGroup = new GroupBox();
-                    floorGroup.Text = "Box " + (floorCount+1).ToString();
+                    floorGroup.Text = "Box " + (floorCount + 1).ToString();
                     floorGroup.AutoSize = true;
                     Color color = Color.White;
                     floorGroup.ForeColor = color;
@@ -101,12 +105,12 @@ namespace KitBoxApplication
 
                     for (int numberOfLabel = 0; numberOfLabel < 3; numberOfLabel++)
                     {
-                        JObject floorPanel = floor["Panel " + (numberOfLabel+1).ToString()].Value<JObject>();
+                        JObject floorPanel = floor["Panel " + (numberOfLabel + 1).ToString()].Value<JObject>();
                         floorColor = floorPanel["Coleur"].Value<string>();
                         int height = floorPanel["height"].Value<int>();
                         int length = floorPanel["Lenght"].Value<int>();
-                        int panelQty = floorPanel["Qty"].Value<int>(); 
-                        
+                        int panelQty = floorPanel["Qty"].Value<int>();
+
 
                         if (numberOfLabel == 0)
                         {
@@ -121,7 +125,7 @@ namespace KitBoxApplication
                         {
                             boxColor.Text = String.Format("Color\n\n{0}", floorColor);
                         }
-                        
+
                     }
                     boxDimension.Text = String.Format("Dimensions\n\nHeight : {0}cm\nWidth : {1}cm\nDepth : {2}cm", HEIGHT.ToString(), LENGTH.ToString(), DEPTH.ToString());
                     boxDimension.Location = new Point(labelLength, 28);
@@ -130,67 +134,11 @@ namespace KitBoxApplication
                     floorGroup.Controls.Add(boxDimension);
 
                     //Generates label for color
-
                     boxColor.Location = new Point(labelLength, 28);
-                    labelLength += (panelLabelLength);
+                    labelLength += (panelLabelLength - 30);
                     floorGroup.Controls.Add(boxColor);
-                    /*
-                    //Generates label for side Beam
-                    JObject sideBeam = floor["Beam 1"].Value<JObject>();
-                    int sideBeamLength = sideBeam["Lenght"].Value<int>();
-                    int sideBeamQty = sideBeam["Qty"].Value<int>();
-                    
-                    Label sideBeamLabel = new Label();
-                    sideBeamLabel.AutoSize = true;
-                    sideBeamLabel.Text = String.Format("\nSide Beam\n\nLength : {0}cm\nQuantity : {1}\n", sideBeamLength.ToString(), sideBeamQty.ToString());
-                    sideBeamLabel.Location = new Point(labelLength, 28);
-                    int sideBeamLabelLength = sideBeamLabel.Width;
-                    labelLength += (sideBeamLabelLength - 20);
 
-                    //Generates label for back Beam
-                    JObject backBeam = floor["Beam 2"].Value<JObject>();
-                    int backBeamLength = backBeam["Lenght"].Value<int>();
-                    int backBeamQty = backBeam["Qty"].Value<int>();
-
-                    Label backBeamLabel = new Label();
-                    backBeamLabel.AutoSize = true;
-                    backBeamLabel.Text = String.Format("\nBack Beam\n\nLength: {0}cm\nQuantity: {1}\n", backBeamLength.ToString(), backBeamQty.ToString());
-                    backBeamLabel.Location = new Point(labelLength, 28);
-                    int backBeamLabelLength = backBeamLabel.Width;
-                    labelLength += (backBeamLabelLength - 20);
-
-                    //Generates label for front Beam
-                    JObject frontBeam = floor["DoorBeam"].Value<JObject>();
-                    int frontBeamLength = frontBeam["Lenght"].Value<int>();
-                    int frontBeamQty = frontBeam["Qty"].Value<int>();
-
-                    Label frontBeamLabel = new Label();
-                    frontBeamLabel.AutoSize = true;
-                    frontBeamLabel.Text = String.Format("\nFront Beam\n\nLength: {0}cm\nQuantity: {1}\n", frontBeamLength.ToString(), frontBeamQty.ToString());
-                    frontBeamLabel.Location = new Point(labelLength, 28);
-                    int frontBeamLabelLength = frontBeamLabel.Width;
-                    labelLength += (frontBeamLabelLength - 20);
-
-                    floorGroup.Controls.Add(sideBeamLabel);
-                    floorGroup.Controls.Add(backBeamLabel);
-                    floorGroup.Controls.Add(frontBeamLabel);
-
-                    //Generates label for cleat
-                    JObject cleat = floor["Cleat"].Value<JObject>();
-                    int cleatLength = cleat["Lenght"].Value<int>();
-                    int cleatQty = cleat["Qty"].Value<int>();
-
-                    Label cleatLabel = new Label();
-                    cleatLabel.AutoSize = true;
-                    cleatLabel.Text = String.Format("\nCleat\n\nLength: {0}cm\nQuantity: {1}\n", cleatLength.ToString(), cleatQty.ToString());
-                    cleatLabel.Location = new Point(labelLength, 28);
-                    int cleatLabelLenght = cleatLabel.Width;
-                    labelLength += (cleatLabelLenght - 20);
-
-                    floorGroup.Controls.Add(cleatLabel);
-                    */
-
-                    //Generates label for the doors
+                    //Generates label for Double doors
                     try
                     {
                         JObject doors = floor["DoubleDoors"].Value<JObject>();
@@ -213,23 +161,20 @@ namespace KitBoxApplication
                     }
                     catch
                     {
-                        
+
                     }
 
                 }
-                if (floorCount >= 7)
+                if (floorCount >= 4)
                 {
                     addedCabinePage.AutoScroll = true;
                     addedCabinePage.AutoScrollMargin = new Size(20,5);
                 }
                 
             }
-            
-
-            
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void comfirmCartButton_Click(object sender, EventArgs e)
         {
 
         }
