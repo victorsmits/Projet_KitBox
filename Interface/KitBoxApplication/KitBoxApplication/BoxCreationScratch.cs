@@ -78,7 +78,7 @@ namespace KitBoxApplication
         }
 
         // function model for loadData
-        public void LoadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
+        private void LoadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
         {
             foreach (System.Windows.Forms.ComboBox i in m)
             {
@@ -136,7 +136,7 @@ namespace KitBoxApplication
         // Loading Width data from data base if cabinet with doors
         private void LoadDataWidthDoor()
         {
-            System.Windows.Forms.ComboBox[] list = {
+            System.Windows.Forms.ComboBox[] listprov = {
                 comboBoxWidth1,
                 comboBoxWidth2,
                 comboBoxWidth3,
@@ -145,7 +145,40 @@ namespace KitBoxApplication
                 comboBoxWidth6,
                 comboBoxWidth7
             };
-            LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ");
+            System.Windows.Forms.RadioButton[] radioList = {
+                radioButtonYes1,
+                radioButtonYes2,
+                radioButtonYes3,
+                radioButtonYes4,
+                radioButtonYes5,
+                radioButtonYes6,
+                radioButtonYes7,               
+            };
+            // initialization list size
+            int qty = 0;           
+            foreach (System.Windows.Forms.RadioButton radioElem in radioList)
+            {
+                if (radioElem.Checked)
+                {
+                    qty++;
+                }                
+            }
+            System.Windows.Forms.ComboBox[] list = new System.Windows.Forms.ComboBox[qty];
+
+            // adding the comboboxWidth for which we have to change available items
+            int i = 0;  // index listProv
+            int j = 0;  // index list
+            foreach (System.Windows.Forms.RadioButton radioElem in radioList)
+            {   
+                if (radioElem.Checked)
+                {
+                    list[j] = listprov[i];
+                    j++;
+                }
+                i++;
+            }
+            
+            LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PAR%100BL' OR référence LIKE 'PAR%120BL' OR référence LIKE 'PAR%80BL' OR référence LIKE 'PAR%62BL'");
         }
 
         // Loading Depth data from data base
@@ -218,6 +251,16 @@ namespace KitBoxApplication
                 EnablePage(tabPageBox2, false);
                 panelInside2.Visible = false;
                 panelShelf2.Visible = false;
+                if (count == 1)
+                {
+                    // resets radiobutton only if 
+                    radioButtonNo2.Checked = true;
+                    // resets comboBox selected items
+                    comboBoxColor2.SelectedItem = null;
+                    comboBoxDepth2.SelectedItem = null;
+                    comboBoxWidth2.SelectedItem = null;
+                    comboBoxHeight2.SelectedItem = null;
+                }
                 if (count > 1)
                 {
                     EnablePage(tabPageBox2, true);
@@ -226,6 +269,16 @@ namespace KitBoxApplication
                     panelInside3.Visible = false;
                     panelShelf2.Visible = true;
                     panelShelf3.Visible = false;
+                    if (count == 2)
+                    {                       
+                        // resets radiobutton only if 
+                        radioButtonNo3.Checked = true;
+                        // resets comboBox selected items
+                        comboBoxColor3.SelectedItem = null;
+                        comboBoxDepth3.SelectedItem = null;
+                        comboBoxWidth3.SelectedItem = null;
+                        comboBoxHeight3.SelectedItem = null;
+                    }
                     if (count > 2)
                     {
                         EnablePage(tabPageBox3, true);
@@ -234,6 +287,16 @@ namespace KitBoxApplication
                         panelInside4.Visible = false;
                         panelShelf3.Visible = true;
                         panelShelf4.Visible = false;
+                        if (count == 3)
+                        {
+                            // resets radiobutton only if 
+                            radioButtonNo4.Checked = true;
+                            // resets comboBox selected items
+                            comboBoxColor4.SelectedItem = null;
+                            comboBoxDepth4.SelectedItem = null;
+                            comboBoxWidth4.SelectedItem = null;
+                            comboBoxHeight4.SelectedItem = null;
+                        }
                         if (count > 3)
                         {
                             EnablePage(tabPageBox4, true);
@@ -242,6 +305,16 @@ namespace KitBoxApplication
                             panelInside5.Visible = false;
                             panelShelf4.Visible = true;
                             panelShelf5.Visible = false;
+                            if (count == 4)
+                            {
+                                // resets radiobutton only if 
+                                radioButtonNo5.Checked = true;
+                                // resets comboBox selected items
+                                comboBoxColor5.SelectedItem = null;
+                                comboBoxDepth5.SelectedItem = null;
+                                comboBoxWidth5.SelectedItem = null;
+                                comboBoxHeight5.SelectedItem = null;
+                            }
                             if (count > 4)
                             {
                                 EnablePage(tabPageBox5, true);
@@ -250,6 +323,16 @@ namespace KitBoxApplication
                                 panelInside6.Visible = false;
                                 panelShelf5.Visible = true;
                                 panelShelf6.Visible = false;
+                                if (count == 5)
+                                {
+                                    // resets radiobutton only if 
+                                    radioButtonNo6.Checked = true;
+                                    // resets comboBox selected items
+                                    comboBoxColor6.SelectedItem = null;
+                                    comboBoxDepth6.SelectedItem = null;
+                                    comboBoxWidth6.SelectedItem = null;
+                                    comboBoxHeight6.SelectedItem = null;
+                                }
                                 if (count > 5)
                                 {
                                     EnablePage(tabPageBox6, true);
@@ -258,6 +341,16 @@ namespace KitBoxApplication
                                     panelInside7.Visible = false;
                                     panelShelf6.Visible = true;
                                     panelShelf7.Visible = false;
+                                    if (count == 6)
+                                    {
+                                        // resets radiobutton only if 
+                                        radioButtonNo7.Checked = true;
+                                        // resets comboBox selected items
+                                        comboBoxColor7.SelectedItem = null;
+                                        comboBoxDepth7.SelectedItem = null;
+                                        comboBoxWidth7.SelectedItem = null;
+                                        comboBoxHeight7.SelectedItem = null;
+                                    }
                                     if (count > 6)
                                     {
                                         EnablePage(tabPageBox7, true);
@@ -273,7 +366,7 @@ namespace KitBoxApplication
         }
 
         // general function to remove door image
-        public void RemoveDoor(ComboBox a, Panel b)
+        private void RemoveDoor(ComboBox a, Panel b)
         {
             if (a.Text == "")
             {
@@ -455,9 +548,13 @@ namespace KitBoxApplication
         }
 
         // general function to add color to box cabinet image
-        public void AddColorToBox(ComboBox box, ComboBox door, Panel shelf)
+        private void AddColorToBox(ComboBox box, ComboBox door, Panel shelf)
         {
             string color = box.Text;
+            if (color == "")
+            {
+                color = "blanc";
+            }
             if (door.Text == "")
             {
                 Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
@@ -514,7 +611,7 @@ namespace KitBoxApplication
         }
 
         // general function to add door and color door to cabinet image
-        public void AddDoorToBox(ComboBox door, ComboBox box, Panel shelf)
+        private void AddDoorToBox(ComboBox door, ComboBox box, Panel shelf)
         {
             string doorMat = door.Text;
             if (box.Text == "")
@@ -621,63 +718,5 @@ namespace KitBoxApplication
                 hiddenPages.Add(page);
             }
         }
-
-        //public System.Drawing.Image PanelShelf1
-        //{
-        //    get { return this.panelShelf1.BackgroundImage; }
-        //    set { this.panelShelf1.BackgroundImage = value; }
-        //}
-
-        //public string ColorAngles
-        //{
-        //    get { return labelColorAngles.Text; }
-        //    set { labelColorAngles.Text = value; }
-        //}
-
-        //public System.Windows.Forms.Panel PanelShelf2
-        //{
-        //    get { return this.panelShelf2; }
-        //    set { this.panelShelf2 = value; }
-        //}
-
-        //public System.Drawing.Image PanelShelf3
-        //{
-        //    get { return this.panelShelf3.BackgroundImage; }
-        //    set { this.panelShelf3.BackgroundImage = value; }
-        //}
-
-        //public System.Windows.Forms.Panel PanelShelf4
-        //{
-        //    get { return this.panelShelf4; }
-        //    set { this.panelShelf4 = value; }
-        //}
-
-        //public System.Windows.Forms.Panel PanelShelf5
-        //{
-        //    get { return this.panelShelf5; }
-        //    set { this.panelShelf5 = value; }
-        //}
-
-        //public System.Windows.Forms.Panel PanelShelf6
-        //{
-        //    get { return this.panelShelf6; }
-        //    set { this.panelShelf6 = value; }
-        //}
-
-        //public System.Windows.Forms.Panel PanelShelf7
-        //{
-        //    get { return this.panelShelf7; }
-        //    set { this.panelShelf7 = value; }
-        //}
-
-        //private void comboBoxColorAngles_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    BoxCreationScratch boxCreationScratch = new BoxCreationScratch();
-
-        //    Image myImage = new Bitmap(@"C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\brunbrun.png");
-        //    panelShelf1.BackgroundImage = myImage;
-        //    //boxCreationScratch.PanelShelf1 = (Image)(Properties.Resources\.phWpbBprWdlGdrG);
-        //    labelColorAngles.Text = "hello";
-        //}
     }
 }

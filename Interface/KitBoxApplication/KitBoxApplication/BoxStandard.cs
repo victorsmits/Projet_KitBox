@@ -10,23 +10,11 @@ namespace KitBoxApplication
 {
     public partial class BoxStandard : UserControl
     {
-        private string colorS1 = null;
-        private string colorS2 = null;
-        private string colorS3 = null;
-        private string colorS4 = null;
-        private string colorS5 = null;
-        private string colorS6 = null;
-        private string colorS7 = null;
+        private string colorS1 = null;        
         private string colorSA = null;
         private string colorSIf1 = null;
 
-        private string doorM1 = null;
-        private string doorM2 = null;
-        private string doorM3 = null;
-        private string doorM4 = null;
-        private string doorM5 = null;
-        private string doorM6 = null;
-        private string doorM7 = null;
+        private string doorM1 = null;       
         private string doorMIf1 = null;
 
         public BoxStandard()
@@ -184,7 +172,7 @@ namespace KitBoxApplication
         private void LoadDataWidthDoor()
         {
             System.Windows.Forms.ComboBox[] list = {comboBoxWidth};
-            LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'POR%' ");
+            LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PAR%100BL' OR référence LIKE 'PAR%120BL' OR référence LIKE 'PAR%80BL' OR référence LIKE 'PAR%62BL'");
         }
 
         // Loading Depth data from data base
@@ -332,12 +320,17 @@ namespace KitBoxApplication
                 // color features box 3
                 labelColorS3.Visible = false;
                 comboBoxColorS3.Visible = false;
-                // door features box 3
-                labelDoorBox3.Visible = false;
-                panelYesNoBox3.Visible = false;
+                // need to be, as it only need to change if 2 boxes chosen
+                if (count == 2)
+                {
+                    // door features box 3
+                    labelDoorBox3.Visible = false;
+                    panelYesNoBox3.Visible = false;
+                    // resets radiobutton only if 
+                    radioButtonNoBox3.Checked = true;
+                }               
                 // resets radiobuttons
-                radioButtonNoIf1.Checked = true;
-                radioButtonNoBox3.Checked = true;
+                radioButtonNoIf1.Checked = true;                
                 // shelf image
                 panelShelf2.Visible = true;
                 panelShelf3.Visible = false;
@@ -368,9 +361,14 @@ namespace KitBoxApplication
                     // door features box 3 and box 4
                     labelDoorBox3.Visible = true;
                     panelYesNoBox3.Visible = true;
-                    labelDoorBox4.Visible = false;
-                    panelYesNoBox4.Visible = false;
-                    radioButtonNoBox4.Checked = true;
+                    if (count == 3)
+                    {
+                        // door features box 3
+                        labelDoorBox4.Visible = false;
+                        panelYesNoBox4.Visible = false;
+                        // resets radiobutton only if 
+                        radioButtonNoBox4.Checked = true;
+                    }                   
                     // shelf image
                     panelShelf3.Visible = true;
                     panelShelf4.Visible = false;
@@ -384,9 +382,14 @@ namespace KitBoxApplication
                         // door features box 4 and box 5
                         labelDoorBox4.Visible = true;
                         panelYesNoBox4.Visible = true;
-                        labelDoorBox5.Visible = false;
-                        panelYesNoBox5.Visible = false;
-                        radioButtonNoBox5.Checked = true;
+                        if (count == 4)
+                        {
+                            // door features box 3
+                            labelDoorBox5.Visible = false;
+                            panelYesNoBox5.Visible = false;
+                            // resets radiobutton only if 
+                            radioButtonNoBox5.Checked = true;
+                        }
                         // shelf image
                         panelShelf4.Visible = true;
                         panelShelf5.Visible = false;
@@ -400,9 +403,14 @@ namespace KitBoxApplication
                             // door features box 5 and box 6
                             labelDoorBox5.Visible = true;
                             panelYesNoBox5.Visible = true;
-                            labelDoorBox6.Visible = false;
-                            panelYesNoBox6.Visible = false;
-                            radioButtonNoBox6.Checked = true;
+                            if (count == 5)
+                            {
+                                // door features box 3
+                                labelDoorBox6.Visible = false;
+                                panelYesNoBox6.Visible = false;
+                                // resets radiobutton only if 
+                                radioButtonNoBox6.Checked = true;
+                            }
                             // shelf image
                             panelShelf5.Visible = true;
                             panelShelf6.Visible = false;
@@ -416,9 +424,14 @@ namespace KitBoxApplication
                                 // door features box 6 and box 7
                                 labelDoorBox6.Visible = true;
                                 panelYesNoBox6.Visible = true;
-                                labelDoorBox7.Visible = false;
-                                panelYesNoBox7.Visible = false;
-                                radioButtonNoBox7.Checked = true;
+                                if (count == 6)
+                                {
+                                    // door features box 3
+                                    labelDoorBox7.Visible = false;
+                                    panelYesNoBox7.Visible = false;
+                                    // resets radiobutton only if 
+                                    radioButtonNoBox7.Checked = true;
+                                }
                                 // shelf image
                                 panelShelf6.Visible = true;
                                 panelShelf7.Visible = false;
@@ -530,8 +543,7 @@ namespace KitBoxApplication
                 else if (((RadioButton)sender) == radioButtonNoBox2)
                 {
                     panelDoorChoiceBox2.Visible = false;
-                    comboBoxDoorMatBox2.SelectedItem = null;
-                    doorM2 = null;
+                    comboBoxDoorMatBox2.SelectedItem = null;                    
                     if (checkBoxColorNo.Checked)
                     {
                         RemoveDoor(comboBoxColorS2, panelShelf2);
@@ -558,7 +570,6 @@ namespace KitBoxApplication
                 {
                     panelDoorChoiceBox3.Visible = false;
                     comboBoxDoorMatBox3.SelectedItem = null;
-                    doorM3 = null;
                     if (checkBoxColorNo.Checked)
                     {
                         RemoveDoor(comboBoxColorS3, panelShelf3);
@@ -585,7 +596,6 @@ namespace KitBoxApplication
                 {
                     panelDoorChoiceBox4.Visible = false;
                     comboBoxDoorMatBox4.SelectedItem = null;
-                    doorM4 = null;
                     if (checkBoxColorNo.Checked)
                     {
                         RemoveDoor(comboBoxColorS4, panelShelf4);
@@ -612,7 +622,6 @@ namespace KitBoxApplication
                 {
                     panelDoorChoiceBox5.Visible = false;
                     comboBoxDoorMatBox5.SelectedItem = null;
-                    doorM5 = null;
                     if (checkBoxColorNo.Checked)
                     {
                         RemoveDoor(comboBoxColorS5, panelShelf5);
@@ -639,7 +648,6 @@ namespace KitBoxApplication
                 {
                     panelDoorChoiceBox6.Visible = false;
                     comboBoxDoorMatBox6.SelectedItem = null;
-                    doorM6 = null;
                     if (checkBoxColorNo.Checked)
                     {
                         RemoveDoor(comboBoxColorS6, panelShelf6);
@@ -666,7 +674,6 @@ namespace KitBoxApplication
                 {
                     panelDoorChoiceBox7.Visible = false;
                     comboBoxDoorMatBox7.SelectedItem = null;
-                    doorM7 = null;
                     if (checkBoxColorNo.Checked)
                     {
                         RemoveDoor(comboBoxColorS7, panelShelf7);
@@ -808,41 +815,35 @@ namespace KitBoxApplication
         private void comboBoxColorS2_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
-            colorS2 = comboBoxColorS2.Text;
         }
 
         private void comboBoxColorS3_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
-            colorS3 = comboBoxColorS3.Text;
         }
 
         private void comboBoxColorS4_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
-            colorS4 = comboBoxColorS4.Text;
         }
 
         private void comboBoxColorS5_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
-            colorS5 = comboBoxColorS5.Text;
         }
 
         private void comboBoxColorS6_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
-            colorS6 = comboBoxColorS6.Text;
         }
 
         private void comboBoxColorS7_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
-            colorS7 = comboBoxColorS7.Text;
         }
 
         // general function to add door and color door to cabinet image
-        public void AddDoorToBox(ComboBox door, ComboBox box, System.Windows.Forms.Panel shelf)
+        private void AddDoorToBox(ComboBox door, ComboBox box, System.Windows.Forms.Panel shelf)
         {
             string doorMat = door.Text;
             string boxSA = comboBoxColorSA.Text;
@@ -885,7 +886,7 @@ namespace KitBoxApplication
         }
 
         // general function to remove door image
-        public void RemoveDoor(ComboBox a, System.Windows.Forms.Panel b)
+        private void RemoveDoor(ComboBox a, System.Windows.Forms.Panel b)
         {
             if (a.Text == "")
             {
@@ -909,37 +910,31 @@ namespace KitBoxApplication
         private void comboBoxDoorMatBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddDoorToBox(comboBoxDoorMatBox2, comboBoxColorS2, panelShelf2);
-            doorM2 = comboBoxDoorMatBox2.Text;
         }
 
         private void comboBoxDoorMatBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddDoorToBox(comboBoxDoorMatBox3, comboBoxColorS3, panelShelf3);
-            doorM3 = comboBoxDoorMatBox3.Text;
         }
 
         private void comboBoxDoorMatBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddDoorToBox(comboBoxDoorMatBox4, comboBoxColorS4, panelShelf4);
-            doorM4 = comboBoxDoorMatBox4.Text;
         }
 
         private void comboBoxDoorMatBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddDoorToBox(comboBoxDoorMatBox5, comboBoxColorS5, panelShelf5);
-            doorM5 = comboBoxDoorMatBox5.Text;
         }
 
         private void comboBoxDoorMatBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddDoorToBox(comboBoxDoorMatBox6, comboBoxColorS6, panelShelf6);
-            doorM6 = comboBoxDoorMatBox6.Text;
         }
 
         private void comboBoxDoorMatBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddDoorToBox(comboBoxDoorMatBox7, comboBoxColorS7, panelShelf7);
-            doorM7 = comboBoxDoorMatBox7.Text;
         }
 
         private void comboBoxDoorMatIf1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1180,7 +1175,6 @@ namespace KitBoxApplication
             JObject test = CartPage.Cart.ShowCart();
             MessageBox.Show("This cabinet has been added to the cart succesfully!");
 
-        }
-        
+        }       
     }
 }
