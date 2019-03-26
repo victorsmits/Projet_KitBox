@@ -256,6 +256,7 @@ namespace KitBoxApplication
                 comboBoxColorS5.SelectedItem = null;
                 comboBoxColorS6.SelectedItem = null;
                 comboBoxColorS7.SelectedItem = null;
+                LoadColorAllSame();
             }
         }
 
@@ -272,6 +273,7 @@ namespace KitBoxApplication
                 panelColorChoice.Visible = true;
                 checkBoxColorYes.Checked = false;
                 panelDoorChoiceMultiple.Visible = true;
+                comboBoxColorSA.SelectedItem = null;
             }
         }
 
@@ -454,6 +456,9 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial.Visible = false;
                     LoadDataWidth();
+                    comboBoxDoorMatIf1.SelectedItem = null;
+                    doorMIf1 = null;
+                    RemoveDoor(comboBoxColorIf1, panelShelf1);
                 }
             }
         }
@@ -474,6 +479,13 @@ namespace KitBoxApplication
                 {
                     panelDoorChoicesM.Visible = false;
                     LoadDataWidth();
+                    radioButtonNoBox1.Checked = true;
+                    radioButtonNoBox2.Checked = true;
+                    radioButtonNoBox3.Checked = true;
+                    radioButtonNoBox4.Checked = true;
+                    radioButtonNoBox5.Checked = true;
+                    radioButtonNoBox6.Checked = true;
+                    radioButtonNoBox7.Checked = true;
                 }
             }
         }
@@ -491,6 +503,16 @@ namespace KitBoxApplication
                 else if (((RadioButton)sender) == radioButtonNoBox1)
                 {
                     panelDoorChoiceBox1.Visible = false;
+                    comboBoxDoorMatBox1.SelectedItem = null;
+                    doorM1 = null;
+                    if (checkBoxColorNo.Checked)
+                    {
+                        RemoveDoor(comboBoxColorS1, panelShelf1);
+                    }
+                    else
+                    {
+                        RemoveDoor(comboBoxColorSA, panelShelf1);
+                    }
                 }
             }
         }
@@ -508,6 +530,16 @@ namespace KitBoxApplication
                 else if (((RadioButton)sender) == radioButtonNoBox2)
                 {
                     panelDoorChoiceBox2.Visible = false;
+                    comboBoxDoorMatBox2.SelectedItem = null;
+                    doorM2 = null;
+                    if (checkBoxColorNo.Checked)
+                    {
+                        RemoveDoor(comboBoxColorS2, panelShelf2);
+                    }
+                    else
+                    {
+                        RemoveDoor(comboBoxColorSA, panelShelf2);
+                    }
                 }
             }
         }
@@ -525,6 +557,16 @@ namespace KitBoxApplication
                 else if (((RadioButton)sender) == radioButtonNoBox3)
                 {
                     panelDoorChoiceBox3.Visible = false;
+                    comboBoxDoorMatBox3.SelectedItem = null;
+                    doorM3 = null;
+                    if (checkBoxColorNo.Checked)
+                    {
+                        RemoveDoor(comboBoxColorS3, panelShelf3);
+                    }
+                    else
+                    {
+                        RemoveDoor(comboBoxColorSA, panelShelf3);
+                    }
                 }
             }
         }
@@ -542,6 +584,16 @@ namespace KitBoxApplication
                 else if (((RadioButton)sender) == radioButtonNoBox4)
                 {
                     panelDoorChoiceBox4.Visible = false;
+                    comboBoxDoorMatBox4.SelectedItem = null;
+                    doorM4 = null;
+                    if (checkBoxColorNo.Checked)
+                    {
+                        RemoveDoor(comboBoxColorS4, panelShelf4);
+                    }
+                    else
+                    {
+                        RemoveDoor(comboBoxColorSA, panelShelf4);
+                    }
                 }
             }
         }
@@ -559,6 +611,16 @@ namespace KitBoxApplication
                 else if (((RadioButton)sender) == radioButtonNoBox5)
                 {
                     panelDoorChoiceBox5.Visible = false;
+                    comboBoxDoorMatBox5.SelectedItem = null;
+                    doorM5 = null;
+                    if (checkBoxColorNo.Checked)
+                    {
+                        RemoveDoor(comboBoxColorS5, panelShelf5);
+                    }
+                    else
+                    {
+                        RemoveDoor(comboBoxColorSA, panelShelf5);
+                    }
                 }
             }
         }
@@ -576,6 +638,16 @@ namespace KitBoxApplication
                 else if (((RadioButton)sender) == radioButtonNoBox6)
                 {
                     panelDoorChoiceBox6.Visible = false;
+                    comboBoxDoorMatBox6.SelectedItem = null;
+                    doorM6 = null;
+                    if (checkBoxColorNo.Checked)
+                    {
+                        RemoveDoor(comboBoxColorS6, panelShelf6);
+                    }
+                    else
+                    {
+                        RemoveDoor(comboBoxColorSA, panelShelf6);
+                    }
                 }
             }
         }
@@ -593,6 +665,16 @@ namespace KitBoxApplication
                 else if (((RadioButton)sender) == radioButtonNoBox7)
                 {
                     panelDoorChoiceBox7.Visible = false;
+                    comboBoxDoorMatBox7.SelectedItem = null;
+                    doorM7 = null;
+                    if (checkBoxColorNo.Checked)
+                    {
+                        RemoveDoor(comboBoxColorS7, panelShelf7);
+                    }
+                    else
+                    {
+                        RemoveDoor(comboBoxColorSA, panelShelf7);
+                    }
                 }
             }
         }
@@ -601,15 +683,28 @@ namespace KitBoxApplication
         private void AddColorToBox(ComboBox box, ComboBox door, System.Windows.Forms.Panel shelf)
         {
             string color = box.Text;
-            if (door.Text == "")
+            string doorMat = door.Text;
+            // if only the color has been chosen
+            if (door.Text == "" && color != "")
             {
                 Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
                 shelf.BackgroundImage = myImage;
             }
+            // if a color and a door has been chosen
+            else if (door.Text != "" && color != "")
+            {               
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
+                shelf.BackgroundImage = myImage;
+            }
+            // if their is a change in choice from unique choice for each box or same choice for each box
+            else if (door.Text != "" && color != "")
+            {               
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
+                shelf.BackgroundImage = myImage;
+            }
             else
             {
-                string doorMat = door.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blancNoDoor.png");
                 shelf.BackgroundImage = myImage;
             }
         }
@@ -622,138 +717,80 @@ namespace KitBoxApplication
 
         private void LoadColorAllSame()
         {
-            int count = Convert.ToInt32(numericUpDownQuantity.Value);
+            int count = Convert.ToInt32(numericUpDownQuantity.Value);            
+            
             string color = comboBoxColorSA.Text;
-            // if no door or color chosen
-            if (comboBoxDoorMatBox1.Text == "" && comboBoxDoorMatBox2.Text == "" && comboBoxDoorMatBox3.Text == "" && comboBoxDoorMatBox4.Text == "" && comboBoxDoorMatBox5.Text == "" && comboBoxDoorMatBox6.Text == "" && comboBoxDoorMatBox7.Text == "" && comboBoxColorS1.Text == "" && comboBoxColorS2.Text == "" && comboBoxColorS3.Text == "" && comboBoxColorS4.Text == "" && comboBoxColorS5.Text == "" && comboBoxColorS6.Text == "" && comboBoxColorS7.Text == "" && comboBoxColorSA.Text == "")
+            string doorMat1 = comboBoxDoorMatBox1.Text;
+            if (doorMat1 == "")
             {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blancNoDoor.png");
-                panelShelf1.BackgroundImage = myImage;
-                if (count > 1)
+                doorMat1 = "NoDoor";
+            }
+            if (color == "")
+            {
+                color = "blanc";
+            }
+            Image myImage1 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat1 + ".png");
+            panelShelf1.BackgroundImage = myImage1;
+            if (count > 1)
+            {
+                string doorMat2 = comboBoxDoorMatBox2.Text;
+                if (doorMat2 == "")
                 {
-                    panelShelf2.BackgroundImage = myImage;
-                    if (count > 2)
+                    doorMat2 = "NoDoor";
+                }                    
+                Image myImage2 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat2 + ".png");
+                panelShelf2.BackgroundImage = myImage2;                                     
+                if (count > 2)
+                {
+                    string doorMat3 = comboBoxDoorMatBox3.Text;
+                    if (doorMat3 == "")
                     {
-                        panelShelf3.BackgroundImage = myImage;
-                        if (count > 3)
+                        doorMat3 = "NoDoor";
+                    }                        
+                    Image myImage3 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat3 + ".png");
+                    panelShelf3.BackgroundImage = myImage3;
+                    if (count > 3)
+                    {
+                        string doorMat4 = comboBoxDoorMatBox4.Text;
+                        if (doorMat4 == "")
                         {
-                            panelShelf4.BackgroundImage = myImage;
-                            if (count > 4)
+                            doorMat4 = "NoDoor";
+                        }
+                        Image myImage4 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat4 + ".png");
+                        panelShelf4.BackgroundImage = myImage4;
+                        if (count > 4)
+                        {
+                            string doorMat5 = comboBoxDoorMatBox5.Text;
+                            if (doorMat5 == "")
                             {
-                                panelShelf5.BackgroundImage = myImage;
-                                if (count > 5)
+                                doorMat5 = "NoDoor";
+                            }
+                            Image myImage5 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat5 + ".png");
+                            panelShelf5.BackgroundImage = myImage5;
+                            if (count > 5)
+                            {
+                                string doorMat6 = comboBoxDoorMatBox6.Text;
+                                if (doorMat6 == "")
                                 {
-                                    panelShelf6.BackgroundImage = myImage;
-                                    if (count > 6)
+                                    doorMat6 = "NoDoor";
+                                }
+                                Image myImage6 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat6 + ".png");
+                                panelShelf6.BackgroundImage = myImage6;
+                                if (count > 6)
+                                {
+                                    string doorMat7 = comboBoxDoorMatBox7.Text;
+                                    if (doorMat7 == "")
                                     {
-                                        panelShelf7.BackgroundImage = myImage;
+                                        doorMat7 = "NoDoor";
                                     }
+                                    Image myImage7 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat7 + ".png");
+                                    panelShelf7.BackgroundImage = myImage7;
                                 }
                             }
                         }
                     }
                 }
-            }
-            // if no door chosen but colors haven been chosen
-            else if (comboBoxDoorMatBox1.Text == "" && comboBoxDoorMatBox2.Text == "" && comboBoxDoorMatBox3.Text == "" && comboBoxDoorMatBox4.Text == "" && comboBoxDoorMatBox5.Text == "" && comboBoxDoorMatBox6.Text == "" && comboBoxDoorMatBox7.Text == "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                panelShelf1.BackgroundImage = myImage;
-                if (count > 1)
-                {
-                    panelShelf2.BackgroundImage = myImage;
-                    if (count > 2)
-                    {
-                        panelShelf3.BackgroundImage = myImage;
-                        if (count > 3)
-                        {
-                            panelShelf4.BackgroundImage = myImage;
-                            if (count > 4)
-                            {
-                                panelShelf5.BackgroundImage = myImage;
-                                if (count > 5)
-                                {
-                                    panelShelf6.BackgroundImage = myImage;
-                                    if (count > 6)
-                                    {
-                                        panelShelf7.BackgroundImage = myImage;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            else
-            {
-                string doorMat1 = comboBoxColorS1.Text;
-                if (doorMat1 == "")
-                {
-                    doorMat1 = "NoDoor";
-                }
-                Image myImage1 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat1 + ".png");
-                panelShelf1.BackgroundImage = myImage1;
-                if (count > 1)
-                {
-                    string doorMat2 = comboBoxColorS2.Text;
-                    if (doorMat2 == "")
-                    {
-                        doorMat2 = "NoDoor";
-                    }                    
-                    Image myImage2 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat2 + ".png");
-                    panelShelf2.BackgroundImage = myImage2;                                     
-                    if (count > 2)
-                    {
-                        string doorMat3 = comboBoxColorS3.Text;
-                        if (doorMat3 == "")
-                        {
-                            doorMat3 = "NoDoor";
-                        }                        
-                        Image myImage3 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat3 + ".png");
-                        panelShelf3.BackgroundImage = myImage3;
-                        if (count > 3)
-                        {
-                            string doorMat4 = comboBoxColorS4.Text;
-                            if (doorMat4 == "")
-                            {
-                                doorMat4 = "NoDoor";
-                            }
-                            Image myImage4 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat4 + ".png");
-                            panelShelf4.BackgroundImage = myImage4;
-                            if (count > 4)
-                            {
-                                string doorMat5 = comboBoxColorS5.Text;
-                                if (doorMat5 == "")
-                                {
-                                    doorMat5 = "NoDoor";
-                                }
-                                Image myImage5 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat5 + ".png");
-                                panelShelf5.BackgroundImage = myImage5;
-                                if (count > 5)
-                                {
-                                    string doorMat6 = comboBoxColorS6.Text;
-                                    if (doorMat6 == "")
-                                    {
-                                        doorMat6 = "NoDoor";
-                                    }
-                                    Image myImage6 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat6 + ".png");
-                                    panelShelf6.BackgroundImage = myImage6;
-                                    if (count > 6)
-                                    {
-                                        string doorMat7 = comboBoxColorS7.Text;
-                                        if (doorMat7 == "")
-                                        {
-                                            doorMat7 = "NoDoor";
-                                        }
-                                        Image myImage7 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat7 + ".png");
-                                        panelShelf7.BackgroundImage = myImage7;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            }            
         }
 
         private void comboBoxColorSA_SelectedIndexChanged(object sender, EventArgs e)
@@ -831,7 +868,7 @@ namespace KitBoxApplication
                     shelf.BackgroundImage = myImage;
                 }
             } 
-            else
+            else if (box.Text == "" && boxSA != "")
             {
                 string color = boxSA;
                 if (doorMat != "")
@@ -844,6 +881,22 @@ namespace KitBoxApplication
                     Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
                     shelf.BackgroundImage = myImage;
                 }
+            }
+        }
+
+        // general function to remove door image
+        public void RemoveDoor(ComboBox a, System.Windows.Forms.Panel b)
+        {
+            if (a.Text == "")
+            {
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blancNoDoor.png");
+                b.BackgroundImage = myImage;
+            }
+            else
+            {
+                string color = a.Text;
+                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
+                b.BackgroundImage = myImage;
             }
         }
 
