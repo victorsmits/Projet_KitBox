@@ -473,7 +473,7 @@
         </member>
         <member name="M:ADONetHelper.DbClient.Dispose(System.Boolean)">
             <summary>
-            Dispose of any unmanged resorces if disposing passed in is true 
+            Dispose of any unmanged resorces if disposing passed in is true
             </summary>
             <param name="disposing">Whether or not we need to explicitly close unmanaged resources</param>
         </member>
@@ -663,8 +663,8 @@
             </summary>
             <param name="transact">An instance of <see cref="T:System.Transactions.Transaction"/> to use to enlist a distributed transaction</param>
             <remarks>
-            Because it enlists a connection in a Transaction instance, EnlistTransaction takes advantage of functionality available in the System.Transactions namespace for managing distributed transactions. 
-            Once a connection is explicitly enlisted in a transaction, it cannot be unenlisted or enlisted in another transaction until the first transaction finishes. 
+            Because it enlists a connection in a Transaction instance, EnlistTransaction takes advantage of functionality available in the System.Transactions namespace for managing distributed transactions.
+            Once a connection is explicitly enlisted in a transaction, it cannot be unenlisted or enlisted in another transaction until the first transaction finishes.
             </remarks>
         </member>
         <member name="M:ADONetHelper.DbClient.ChangeDatabase(System.String)">
@@ -723,7 +723,7 @@
             A class that facilitates creating the ADO.NET class objects necessary to query a data store
             </summary>
             <remarks>
-            <see cref="T:ADONetHelper.DbObjectFactory"/> is a class that is intended to be used at the lowest level of the ADO.NET workflow.  
+            <see cref="T:ADONetHelper.DbObjectFactory"/> is a class that is intended to be used at the lowest level of the ADO.NET workflow.
             It creates the objects necessary to query a relational database using the RDBMS providers own driver to do this.
             For the .NET framework the providers dll can be within the Global Assembly Cache, and the providers dll can also be used as a dll
             contained within the application
@@ -1094,7 +1094,7 @@
         </member>
         <member name="M:ADONetHelper.IDbClient.Close">
             <summary>
-            Closes any open connections being used by the helper 
+            Closes any open connections being used by the helper
             </summary>
         </member>
         <member name="M:ADONetHelper.IDbClient.Open">
@@ -1108,8 +1108,8 @@
             </summary>
             <param name="transact">An instance of <see cref="T:System.Transactions.Transaction"/> to use to enlist a distributed transaction</param>
             <remarks>
-            Because it enlists a connection in a Transaction instance, EnlistTransaction takes advantage of functionality available in the System.Transactions namespace for managing distributed transactions. 
-            Once a connection is explicitly enlisted in a transaction, it cannot be unenlisted or enlisted in another transaction until the first transaction finishes. 
+            Because it enlists a connection in a Transaction instance, EnlistTransaction takes advantage of functionality available in the System.Transactions namespace for managing distributed transactions.
+            Once a connection is explicitly enlisted in a transaction, it cannot be unenlisted or enlisted in another transaction until the first transaction finishes.
             </remarks>
         </member>
         <member name="M:ADONetHelper.IDbClient.GetSchema(System.String,System.String[])">

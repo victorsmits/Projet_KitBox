@@ -34,7 +34,6 @@ namespace KitBoxSourceCode
             Profile client = new Profile("Smits", "Victor");
 
             Cabinet cabinet = new Cabinet();
-            Cabinet cabinet2 = new Cabinet();
             Cart cart = new Cart();
 
             //CabinetFloor cabinetFloor = new CabinetFloor
@@ -57,7 +56,6 @@ namespace KitBoxSourceCode
             //Oledb.connection("/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/DB_Lespieces.accdb");
 
             cart.AddToCart(cabinet);
-            cart.AddToCart(cabinet2);
             cart.AddCartProfile(client);
             cart.GetProfile();
 
