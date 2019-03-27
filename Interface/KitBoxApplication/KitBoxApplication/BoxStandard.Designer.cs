@@ -188,7 +188,7 @@
             // 
             this.labelQuantityBox.AutoSize = true;
             this.labelQuantityBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQuantityBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelQuantityBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelQuantityBox.Location = new System.Drawing.Point(30, 53);
             this.labelQuantityBox.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelQuantityBox.Name = "labelQuantityBox";
@@ -229,7 +229,7 @@
             // 
             this.labelHeight.AutoSize = true;
             this.labelHeight.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelHeight.Location = new System.Drawing.Point(30, 78);
             this.labelHeight.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelHeight.Name = "labelHeight";
@@ -257,7 +257,7 @@
             // 
             this.labelDoorYesNoIf1.AutoSize = true;
             this.labelDoorYesNoIf1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorYesNoIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorYesNoIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorYesNoIf1.Location = new System.Drawing.Point(8, 53);
             this.labelDoorYesNoIf1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorYesNoIf1.Name = "labelDoorYesNoIf1";
@@ -269,7 +269,7 @@
             // 
             this.labelColorS1.AutoSize = true;
             this.labelColorS1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorS1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorS1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorS1.Location = new System.Drawing.Point(8, 4);
             this.labelColorS1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS1.Name = "labelColorS1";
@@ -281,7 +281,7 @@
             // 
             this.labelColorS2.AutoSize = true;
             this.labelColorS2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorS2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorS2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorS2.Location = new System.Drawing.Point(8, 29);
             this.labelColorS2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS2.Name = "labelColorS2";
@@ -306,7 +306,7 @@
             // 
             this.labelColorS3.AutoSize = true;
             this.labelColorS3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorS3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorS3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorS3.Location = new System.Drawing.Point(8, 54);
             this.labelColorS3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS3.Name = "labelColorS3";
@@ -319,7 +319,7 @@
             // 
             this.labelColorS7.AutoSize = true;
             this.labelColorS7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorS7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorS7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorS7.Location = new System.Drawing.Point(419, 4);
             this.labelColorS7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS7.Name = "labelColorS7";
@@ -332,7 +332,7 @@
             // 
             this.labelColorS6.AutoSize = true;
             this.labelColorS6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorS6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorS6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorS6.Location = new System.Drawing.Point(213, 54);
             this.labelColorS6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS6.Name = "labelColorS6";
@@ -461,7 +461,7 @@
             // 
             this.labelColorQuestions.AutoSize = true;
             this.labelColorQuestions.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorQuestions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorQuestions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorQuestions.Location = new System.Drawing.Point(24, 4);
             this.labelColorQuestions.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorQuestions.Name = "labelColorQuestions";
@@ -525,7 +525,7 @@
             // 
             this.labelColorAngles.AutoSize = true;
             this.labelColorAngles.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorAngles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorAngles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorAngles.Location = new System.Drawing.Point(30, 153);
             this.labelColorAngles.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorAngles.Name = "labelColorAngles";
@@ -700,7 +700,7 @@
             // 
             this.labelDoorMatIf1.AutoSize = true;
             this.labelDoorMatIf1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatIf1.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatIf1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatIf1.Name = "labelDoorMatIf1";
@@ -712,7 +712,7 @@
             // 
             this.labelColorBoxIf1.AutoSize = true;
             this.labelColorBoxIf1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorBoxIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorBoxIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorBoxIf1.Location = new System.Drawing.Point(8, 4);
             this.labelColorBoxIf1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorBoxIf1.Name = "labelColorBoxIf1";
@@ -724,7 +724,7 @@
             // 
             this.labelWidth.AutoSize = true;
             this.labelWidth.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWidth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelWidth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelWidth.Location = new System.Drawing.Point(30, 103);
             this.labelWidth.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelWidth.Name = "labelWidth";
@@ -736,7 +736,7 @@
             // 
             this.labelDepth.AutoSize = true;
             this.labelDepth.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDepth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDepth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDepth.Location = new System.Drawing.Point(30, 128);
             this.labelDepth.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDepth.Name = "labelDepth";
@@ -778,7 +778,7 @@
             // 
             this.labelDoorBox7.AutoSize = true;
             this.labelDoorBox7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox7.Location = new System.Drawing.Point(8, 166);
             this.labelDoorBox7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox7.Name = "labelDoorBox7";
@@ -813,7 +813,7 @@
             // 
             this.radioButtonNoBox7.AutoSize = true;
             this.radioButtonNoBox7.Checked = true;
-            this.radioButtonNoBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox7.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox7.Name = "radioButtonNoBox7";
             this.radioButtonNoBox7.Size = new System.Drawing.Size(91, 38);
@@ -853,7 +853,7 @@
             // 
             this.labelDoorMatBox7.AutoSize = true;
             this.labelDoorMatBox7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox7.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox7.Name = "labelDoorMatBox7";
@@ -865,7 +865,7 @@
             // 
             this.labelDoorBox6.AutoSize = true;
             this.labelDoorBox6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox6.Location = new System.Drawing.Point(8, 139);
             this.labelDoorBox6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox6.Name = "labelDoorBox6";
@@ -900,7 +900,7 @@
             // 
             this.radioButtonNoBox6.AutoSize = true;
             this.radioButtonNoBox6.Checked = true;
-            this.radioButtonNoBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox6.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox6.Name = "radioButtonNoBox6";
             this.radioButtonNoBox6.Size = new System.Drawing.Size(91, 38);
@@ -940,7 +940,7 @@
             // 
             this.labelDoorMatBox6.AutoSize = true;
             this.labelDoorMatBox6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox6.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox6.Name = "labelDoorMatBox6";
@@ -987,7 +987,7 @@
             // 
             this.radioButtonNoBox5.AutoSize = true;
             this.radioButtonNoBox5.Checked = true;
-            this.radioButtonNoBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox5.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox5.Name = "radioButtonNoBox5";
             this.radioButtonNoBox5.Size = new System.Drawing.Size(91, 38);
@@ -1027,7 +1027,7 @@
             // 
             this.labelDoorMatBox5.AutoSize = true;
             this.labelDoorMatBox5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox5.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox5.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox5.Name = "labelDoorMatBox5";
@@ -1039,7 +1039,7 @@
             // 
             this.labelDoorBox4.AutoSize = true;
             this.labelDoorBox4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox4.Location = new System.Drawing.Point(8, 85);
             this.labelDoorBox4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox4.Name = "labelDoorBox4";
@@ -1074,7 +1074,7 @@
             // 
             this.radioButtonNoBox4.AutoSize = true;
             this.radioButtonNoBox4.Checked = true;
-            this.radioButtonNoBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox4.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox4.Name = "radioButtonNoBox4";
             this.radioButtonNoBox4.Size = new System.Drawing.Size(91, 38);
@@ -1114,7 +1114,7 @@
             // 
             this.labelDoorMatBox4.AutoSize = true;
             this.labelDoorMatBox4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox4.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox4.Name = "labelDoorMatBox4";
@@ -1126,7 +1126,7 @@
             // 
             this.labelDoorBox3.AutoSize = true;
             this.labelDoorBox3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox3.Location = new System.Drawing.Point(8, 58);
             this.labelDoorBox3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox3.Name = "labelDoorBox3";
@@ -1161,7 +1161,7 @@
             // 
             this.radioButtonNoBox3.AutoSize = true;
             this.radioButtonNoBox3.Checked = true;
-            this.radioButtonNoBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox3.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox3.Name = "radioButtonNoBox3";
             this.radioButtonNoBox3.Size = new System.Drawing.Size(91, 38);
@@ -1201,7 +1201,7 @@
             // 
             this.labelDoorMatBox3.AutoSize = true;
             this.labelDoorMatBox3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox3.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox3.Name = "labelDoorMatBox3";
@@ -1253,7 +1253,7 @@
             // 
             this.labelDoorBox2.AutoSize = true;
             this.labelDoorBox2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox2.Location = new System.Drawing.Point(8, 31);
             this.labelDoorBox2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox2.Name = "labelDoorBox2";
@@ -1300,7 +1300,7 @@
             // 
             this.labelDoorBox1.AutoSize = true;
             this.labelDoorBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox1.Location = new System.Drawing.Point(8, 4);
             this.labelDoorBox1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox1.Name = "labelDoorBox1";
@@ -1371,7 +1371,7 @@
             // 
             this.radioButtonNoBox1.AutoSize = true;
             this.radioButtonNoBox1.Checked = true;
-            this.radioButtonNoBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox1.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox1.Name = "radioButtonNoBox1";
             this.radioButtonNoBox1.Size = new System.Drawing.Size(91, 38);
@@ -1411,7 +1411,7 @@
             // 
             this.labelDoorMatBox1.AutoSize = true;
             this.labelDoorMatBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox1.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox1.Name = "labelDoorMatBox1";
@@ -1423,7 +1423,7 @@
             // 
             this.labelYesNoIf2.AutoSize = true;
             this.labelYesNoIf2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelYesNoIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelYesNoIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelYesNoIf2.Location = new System.Drawing.Point(8, 4);
             this.labelYesNoIf2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelYesNoIf2.Name = "labelYesNoIf2";
@@ -1443,7 +1443,7 @@
             // radioButtonYesIf2
             // 
             this.radioButtonYesIf2.AutoSize = true;
-            this.radioButtonYesIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonYesIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonYesIf2.Location = new System.Drawing.Point(3, 4);
             this.radioButtonYesIf2.Name = "radioButtonYesIf2";
             this.radioButtonYesIf2.Size = new System.Drawing.Size(99, 38);
@@ -1456,7 +1456,7 @@
             // 
             this.radioButtonNoIf2.AutoSize = true;
             this.radioButtonNoIf2.Checked = true;
-            this.radioButtonNoIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoIf2.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoIf2.Name = "radioButtonNoIf2";
             this.radioButtonNoIf2.Size = new System.Drawing.Size(91, 38);
@@ -1481,7 +1481,7 @@
             // 
             this.labelBoxHeight.AutoSize = true;
             this.labelBoxHeight.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBoxHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelBoxHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelBoxHeight.Location = new System.Drawing.Point(350, 78);
             this.labelBoxHeight.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelBoxHeight.Name = "labelBoxHeight";
