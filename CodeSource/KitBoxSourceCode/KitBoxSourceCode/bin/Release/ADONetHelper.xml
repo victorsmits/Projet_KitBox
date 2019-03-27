@@ -473,7 +473,7 @@
         </member>
         <member name="M:ADONetHelper.DbClient.Dispose(System.Boolean)">
             <summary>
-            Dispose of any unmanged resorces if disposing passed in is true
+            Dispose of any unmanged resorces if disposing passed in is true 
             </summary>
             <param name="disposing">Whether or not we need to explicitly close unmanaged resources</param>
         </member>
@@ -558,13 +558,13 @@
             Or the default value of <typeparamref name="T"/> if there are no search results
             </returns>
         </member>
-        <member name="M:ADONetHelper.DbClient.GetDataObjectEnumerable``1(System.String)">
+        <member name="M:ADONetHelper.DbClient.GetDataObjectList``1(System.String)">
             <summary>
             Gets a list of the type parameter object that creates an object based on the query passed into the routine
             </summary>
             <typeparam name="T">An instance of the type the caller wants create to from the query passed into procedure</typeparam>
             <param name="query">The query command text or name of stored procedure to execute against the data store</param>
-            <returns>Returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> based on the results of the passed in <paramref name="query"/></returns>
+            <returns>Returns a <see cref="T:System.Collections.Generic.List`1"/> based on the results of the passed in <paramref name="query"/></returns>
         </member>
         <member name="M:ADONetHelper.DbClient.GetDataObjectList``1(System.String,System.Data.Common.DbConnection)">
             <summary>
@@ -573,7 +573,7 @@
             <param name="connection">An instance of <see cref="T:System.Data.Common.DbConnection"/></param>
             <typeparam name="T">An instance of the type the caller wants create to from the query passed into procedure</typeparam>
             <param name="query">The query command text or name of stored procedure to execute against the data store</param>
-            <returns>Returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> based on the results of the passed in <paramref name="query"/></returns>
+            <returns>Returns a <see cref="T:System.Collections.Generic.List`1"/> based on the results of the passed in <paramref name="query"/></returns>
         </member>
         <member name="M:ADONetHelper.DbClient.ExecuteNonQuery(System.String)">
             <summary>
@@ -622,7 +622,7 @@
         </member>
         <member name="M:ADONetHelper.DbClient.GetDbTransaction">
             <summary>
-            Starts a <see cref="T:System.Data.Common.DbTransaction"/> using the underlying <see cref="T:System.Data.Common.DbConnection"/>
+            Starts a database transaction using the underlying <see cref="T:System.Data.Common.DbConnection"/>
             </summary>
             <returns>Returns an instance of <see cref="T:System.Data.Common.DbTransaction"/></returns>
         </member>
@@ -663,8 +663,8 @@
             </summary>
             <param name="transact">An instance of <see cref="T:System.Transactions.Transaction"/> to use to enlist a distributed transaction</param>
             <remarks>
-            Because it enlists a connection in a Transaction instance, EnlistTransaction takes advantage of functionality available in the System.Transactions namespace for managing distributed transactions.
-            Once a connection is explicitly enlisted in a transaction, it cannot be unenlisted or enlisted in another transaction until the first transaction finishes.
+            Because it enlists a connection in a Transaction instance, EnlistTransaction takes advantage of functionality available in the System.Transactions namespace for managing distributed transactions. 
+            Once a connection is explicitly enlisted in a transaction, it cannot be unenlisted or enlisted in another transaction until the first transaction finishes. 
             </remarks>
         </member>
         <member name="M:ADONetHelper.DbClient.ChangeDatabase(System.String)">
@@ -723,7 +723,7 @@
             A class that facilitates creating the ADO.NET class objects necessary to query a data store
             </summary>
             <remarks>
-            <see cref="T:ADONetHelper.DbObjectFactory"/> is a class that is intended to be used at the lowest level of the ADO.NET workflow.
+            <see cref="T:ADONetHelper.DbObjectFactory"/> is a class that is intended to be used at the lowest level of the ADO.NET workflow.  
             It creates the objects necessary to query a relational database using the RDBMS providers own driver to do this.
             For the .NET framework the providers dll can be within the Global Assembly Cache, and the providers dll can also be used as a dll
             contained within the application
@@ -740,21 +740,26 @@
             Whether or not the passed in provider is capable of creating a data source enumerator
             </summary>
         </member>
+        <member name="P:ADONetHelper.DbObjectFactory.ProviderFactory">
+            <summary>
+            An instance of the <see cref="T:System.Data.Common.DbProviderFactory"/> class initialized with the provider specified by the Provider property
+            </summary>
+        </member>
         <member name="M:ADONetHelper.DbObjectFactory.#ctor(System.Data.Common.DbProviderFactory)">
             <summary>
-            Instantiates a new instance with the passed in <paramref name="factory"/>
+            Initialzes and instantiates a new instance of the <see cref="T:System.Data.Common.DbProviderFactory"/> class
             </summary>
             <param name="factory">An instance of the <see cref="T:System.Data.Common.DbProviderFactory"/> client class</param>
         </member>
         <member name="M:ADONetHelper.DbObjectFactory.#ctor(System.String)">
             <summary>
-            Instantiates a new instance with the passed in <paramref name="providerName"/>
+            Initialzes and instantiates a new instance of the <see cref="T:System.Data.Common.DbProviderFactory"/>
             </summary>
             <param name="providerName">The name of the data provider that the should be used to query a data store</param>
         </member>
         <member name="M:ADONetHelper.DbObjectFactory.#ctor(System.Data.Common.DbConnection)">
             <summary>
-            Instantiates a new instance with the passed in <paramref name="connection"/>
+            Initialzes and instantiates a new instance of the <see cref="T:System.Data.Common.DbProviderFactory"/>  class
             </summary>
             <param name="connection">An instance of <see cref="T:System.Data.Common.DbConnection"/> </param>
         </member>
@@ -777,13 +782,6 @@
             <returns>Returns an instance of <see cref="T:System.Data.Common.DbCommandBuilder"/></returns>
         </member>
         <member name="M:ADONetHelper.DbObjectFactory.GetDbConnectionStringBuilder(System.String)">
-            <summary>
-            Gets a <see cref="T:System.Data.Common.DbConnectionStringBuilder"/> based off the provider passed into class using the passed in <paramref name="connectionString"/>
-            </summary>
-            <param name="connectionString">The connection string that will be used to when building a connection string</param>
-            <returns>Returns a <see cref="T:System.Data.Common.DbConnectionStringBuilder"/> based off of target .NET framework data provider</returns>
-        </member>
-        <member name="M:ADONetHelper.DbObjectFactory.GetDbConnectionStringBuilder">
             <summary>
             Gets a <see cref="T:System.Data.Common.DbConnectionStringBuilder"/> based off the provider passed into class
             </summary>
@@ -1081,7 +1079,7 @@
         </member>
         <member name="M:ADONetHelper.IDbClient.GetDbTransaction">
             <summary>
-            Starts a <see cref="T:System.Data.Common.DbTransaction"/>n using the underlying <see cref="T:System.Data.Common.DbConnection"/>
+            Starts a database transaction using the underlying <see cref="T:System.Data.Common.DbConnection"/>
             </summary>
             <returns>Returns an instance of <see cref="T:System.Data.Common.DbTransaction"/></returns>
         </member>
@@ -1094,7 +1092,7 @@
         </member>
         <member name="M:ADONetHelper.IDbClient.Close">
             <summary>
-            Closes any open connections being used by the helper
+            Closes any open connections being used by the helper 
             </summary>
         </member>
         <member name="M:ADONetHelper.IDbClient.Open">
@@ -1108,8 +1106,8 @@
             </summary>
             <param name="transact">An instance of <see cref="T:System.Transactions.Transaction"/> to use to enlist a distributed transaction</param>
             <remarks>
-            Because it enlists a connection in a Transaction instance, EnlistTransaction takes advantage of functionality available in the System.Transactions namespace for managing distributed transactions.
-            Once a connection is explicitly enlisted in a transaction, it cannot be unenlisted or enlisted in another transaction until the first transaction finishes.
+            Because it enlists a connection in a Transaction instance, EnlistTransaction takes advantage of functionality available in the System.Transactions namespace for managing distributed transactions. 
+            Once a connection is explicitly enlisted in a transaction, it cannot be unenlisted or enlisted in another transaction until the first transaction finishes. 
             </remarks>
         </member>
         <member name="M:ADONetHelper.IDbClient.GetSchema(System.String,System.String[])">
@@ -1182,13 +1180,13 @@
             Or the default value of <typeparamref name="T"/> if there are no search results
             </returns>
         </member>
-        <member name="M:ADONetHelper.IDbClient.GetDataObjectEnumerable``1(System.String)">
+        <member name="M:ADONetHelper.IDbClient.GetDataObjectList``1(System.String)">
             <summary>
             Gets a list of the type parameter object that creates an object based on the query passed into the routine
             </summary>
             <typeparam name="T">An instance of the type caller wants create from query passed into procedure</typeparam>
             <param name="query">The query command text or name of stored procedure to execute against the data store</param>
-            <returns>Returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> based on the results of the passed in <paramref name="query"/></returns>
+            <returns>Returns a <see cref="T:System.Collections.Generic.List`1"/> based on the results of the passed in <paramref name="query"/></returns>
         </member>
         <member name="M:ADONetHelper.IDbClient.GetDbDataReader(System.String,System.Data.CommandBehavior,System.Data.Common.DbTransaction)">
             <summary>
@@ -1330,13 +1328,6 @@
             <returns>Returns an instance of <see cref="T:System.Data.Common.DbDataAdapter"/></returns>
         </member>
         <member name="M:ADONetHelper.IDbObjectFactory.GetDbConnectionStringBuilder(System.String)">
-            <summary>
-            Gets a <see cref="T:System.Data.Common.DbConnectionStringBuilder"/> based off the provider passed into class
-            </summary>
-            <param name="connectionString">The connection string that will be used to when building a connection string</param>
-            <returns>Returns a <see cref="T:System.Data.Common.DbConnectionStringBuilder"/> based off of target .NET framework data provider</returns>
-        </member>
-        <member name="M:ADONetHelper.IDbObjectFactory.GetDbConnectionStringBuilder">
             <summary>
             Gets a <see cref="T:System.Data.Common.DbConnectionStringBuilder"/> based off the provider passed into class
             </summary>
@@ -1967,16 +1958,16 @@
             <param name="connection">An instance of a DbConnection object to use to query a datastore</param>
             <returns>Returns an instance of the <typeparamref name="T"/> based on the fields in the passed in query.  Returns the default value for the type if a record is not found</returns>
         </member>
-        <member name="M:ADONetHelper.ISqlExecutor.GetDataObjectEnumerable``1(System.Data.CommandType,System.String)">
+        <member name="M:ADONetHelper.ISqlExecutor.GetDataObjectList``1(System.Data.CommandType,System.String)">
             <summary>
             Gets a list of the type parameter object that creates an object based on the query passed into the routine
             </summary>
             <typeparam name="T">An instance of the type caller wants create from the query passed into procedure</typeparam>
             <param name="query">The query command text or name of stored procedure to execute against the data store</param>
             <param name="queryCommandType">Represents how a command should be interpreted by the data provider</param>
-            <returns>Returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> based on the results of the passedin <paramref name="query"/></returns>
+            <returns>Returns a <see cref="T:System.Collections.Generic.List`1"/> based on the results of the passedin <paramref name="query"/></returns>
         </member>
-        <member name="M:ADONetHelper.ISqlExecutor.GetDataObjectEnumerable``1(System.Data.CommandType,System.String,System.String)">
+        <member name="M:ADONetHelper.ISqlExecutor.GetDataObjectList``1(System.Data.CommandType,System.String,System.String)">
             <summary>
             Gets a list of the type parameter object that creates an object based on the query passed into the routine
             </summary>
@@ -1984,9 +1975,9 @@
             <param name="query">The query command text or name of stored procedure to execute against the data store</param>
             <param name="queryCommandType">Represents how a command should be interpreted by the data provider</param>
             <param name="connectionString">The connection string used to query a data store</param>
-            <returns>Returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> based on the results of the passed in <paramref name="query"/></returns>
+            <returns>Returns a <see cref="T:System.Collections.Generic.List`1"/> based on the results of the passed in <paramref name="query"/></returns>
         </member>
-        <member name="M:ADONetHelper.ISqlExecutor.GetDataObjectEnumerable``1(System.Data.CommandType,System.String,System.Data.Common.DbConnection)">
+        <member name="M:ADONetHelper.ISqlExecutor.GetDataObjectList``1(System.Data.CommandType,System.String,System.Data.Common.DbConnection)">
             <summary>
             Gets a list of the type parameter object that creates an object based on the query passed into the routine
             </summary>
@@ -1994,7 +1985,7 @@
             <param name="query">The query command text or name of stored procedure to execute against the data store</param>
             <param name="queryCommandType">Represents how a command should be interpreted by the data provider</param>
             <param name="connection">An instance of a DbConnection object to use to query a datastore</param>
-            <returns>Returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> based on the results of the passed in <paramref name="query"/></returns>
+            <returns>Returns a <see cref="T:System.Collections.Generic.List`1"/> based on the results of the passed in <paramref name="query"/></returns>
         </member>
         <member name="M:ADONetHelper.ISqlExecutor.GetDbDataReader(System.Data.CommandType,System.String,System.Data.CommandBehavior,System.Data.Common.DbTransaction)">
             <summary>
@@ -2276,7 +2267,7 @@
         </member>
         <member name="M:ADONetHelper.SqlExecutor.#ctor(ADONetHelper.IDbObjectFactory)">
             <summary>
-            Initializes a new instance with an instance of <see cref="T:ADONetHelper.IDbObjectFactory"/>
+            Initializes an instance of the SQLExecutor class with an instance of <see cref="T:ADONetHelper.IDbObjectFactory"/>
             </summary>
             <param name="factory">An instance of <see cref="T:ADONetHelper.IDbObjectFactory"/></param>
         </member>
@@ -2733,16 +2724,16 @@
             <param name="connection">An instance of a <see cref="T:System.Data.Common.DbConnection"/> object to use to query a datastore</param>
             <returns>Returns an instance of the <typeparamref name="T"/> based on the fields in the passed in query.  Returns the default value for the <typeparamref name="T"/> if a record is not found</returns>
         </member>
-        <member name="M:ADONetHelper.SqlExecutor.GetDataObjectEnumerable``1(System.Data.CommandType,System.String)">
+        <member name="M:ADONetHelper.SqlExecutor.GetDataObjectList``1(System.Data.CommandType,System.String)">
             <summary>
             Gets a list of the type parameter object that creates an object based on the query passed into the routine
             </summary>
             <typeparam name="T">An instance of the type caller wants created from the query passed into procedure</typeparam>
             <param name="query">The query command text or name of stored procedure to execute against the data store</param>
             <param name="queryCommandType">Represents how a command should be interpreted by the data provider</param>
-            <returns>Returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> based on the results of the passed in <paramref name="query"/></returns>
+            <returns>Returns a <see cref="T:System.Collections.Generic.List`1"/> based on the results of the passed in <paramref name="query"/></returns>
         </member>
-        <member name="M:ADONetHelper.SqlExecutor.GetDataObjectEnumerable``1(System.Data.CommandType,System.String,System.String)">
+        <member name="M:ADONetHelper.SqlExecutor.GetDataObjectList``1(System.Data.CommandType,System.String,System.String)">
             <summary>
             Gets a list of the type parameter object that creates an object based on the query passed into the routine
             </summary>
@@ -2750,9 +2741,9 @@
             <param name="query">The query command text or name of stored procedure to execute against the data store</param>
             <param name="queryCommandType">Represents how a command should be interpreted by the data provider</param>
             <param name="connectionString">The connection string used to query a data store</param>
-            <returns>Returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> based on the results of the passed in <paramref name="query"/></returns>
+            <returns>Returns a <see cref="T:System.Collections.Generic.List`1"/> based on the results of the passed in <paramref name="query"/></returns>
         </member>
-        <member name="M:ADONetHelper.SqlExecutor.GetDataObjectEnumerable``1(System.Data.CommandType,System.String,System.Data.Common.DbConnection)">
+        <member name="M:ADONetHelper.SqlExecutor.GetDataObjectList``1(System.Data.CommandType,System.String,System.Data.Common.DbConnection)">
             <summary>
             Gets a list of the type parameter object that creates an object based on the query passed into the routine
             </summary>
@@ -2760,7 +2751,7 @@
             <param name="query">The query command text or name of stored procedure to execute against the data store</param>
             <param name="queryCommandType">Represents how a command should be interpreted by the data provider</param>
             <param name="connection">An instance of a <see cref="T:System.Data.Common.DbConnection"/> object to use to query a datastore</param>
-            <returns>Returns a <see cref="T:System.Collections.Generic.IEnumerable`1"/> based on the results of the passed in <paramref name="query"/></returns>
+            <returns>Returns a <see cref="T:System.Collections.Generic.List`1"/> based on the results of the passed in <paramref name="query"/></returns>
         </member>
         <member name="M:ADONetHelper.SqlExecutor.GetDbDataReader(System.Data.CommandType,System.String,System.Data.CommandBehavior,System.Data.Common.DbTransaction)">
             <summary>
@@ -3076,7 +3067,7 @@
         </member>
         <member name="M:ADONetHelper.Utilites.OpenDbConnection(System.Data.Common.DbConnection)">
             <summary>
-            Opens the passed in <see cref="T:System.Data.Common.DbConnection"/> if the <see cref="P:System.Data.Common.DbConnection.State"/> is <see cref="F:System.Data.ConnectionState.Closed"/>
+            Opens the passed in <see cref="T:System.Data.Common.DbConnection"/>
             </summary>
             <param name="connection">An instance of the <see cref="T:System.Data.Common.DbConnection"/> class</param>
         </member>

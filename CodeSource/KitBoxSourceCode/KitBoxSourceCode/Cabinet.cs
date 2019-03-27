@@ -9,9 +9,9 @@ namespace KitBoxSourceCode
         private List<CabinetFloor> cabinetFloors;
         private int cabinetHeight;
 
-        private int cabinetPrice = 0;
+        private double cabinetPrice = 0;
 
-        public int GetCabinetPrice => cabinetPrice;
+        public double GetCabinetPrice => cabinetPrice;
         public int GetCabinetHeight => cabinetHeight;
 
         private Angle angles;
@@ -47,7 +47,7 @@ namespace KitBoxSourceCode
                 partList += "\"Floor " + cabinetFloors.IndexOf(elem) + "\":{"
                 + elem.ShowPieces() + "},";
             }
-            partList += angles.GetDetails() + "}";
+            partList += angles.GetDetails() + ", \"CabinetPrice\":" + cabinetPrice + "}";
 
             return partList;
         }

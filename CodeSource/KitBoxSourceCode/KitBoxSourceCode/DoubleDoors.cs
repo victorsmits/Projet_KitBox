@@ -1,48 +1,45 @@
 ﻿using System;
 using System.Drawing;
 using System.Collections.Generic;
+using SqlOledb;
+
 namespace KitBoxSourceCode
 {
-    public class DoubleDoors : GenericStorageBox
-    {
-        private readonly Knop knops;
-        private readonly string stockNumber;
+	public class DoubleDoors : GenericStorageBox
+	{
+		private readonly Knop knops;
 
-        public string TheDoorMat { get; }
+		public string TheDoorMat { get; }
 
-        private IStorageBox theStorageBox;
+		private IStorageBox theStorageBox;
 
-        IStorageBox GettheStorageBox { get; set; }
+		IStorageBox GettheStorageBox { get; set; }
 
-        public void AddBoxDecorator(IStorageBox storageBox)
-        {
-            this.theStorageBox = storageBox;
-        }
+		public void AddBoxDecorator(IStorageBox storageBox)
+		{
+			this.theStorageBox = storageBox;
+		}
 
-        public DoubleDoors(string doormat, int hei, int len) : base(len, hei-4)
-        {
-            TheDoorMat = doormat;
-            stockNumber = "1";
+		public DoubleDoors(string doormat, int hei, int len) : base(len, hei - 4)
+		{
+			TheDoorMat = doormat;
+			// oledb stock ref fct dimension, doormat
+			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'POR%' AND largeur LIKE '"
+			+ length.ToString() + "' AND hauteur LIKE '" + height.ToString() + "' AND Couleur LIKE '" + doormat + "'");
 
-            knops = new Knop(2);
+			knops = new Knop(2);
 
-            SetPrice();
+			price = Oledb.GetDBPrice(stockRef);
+			// oledb book double door
+			Oledb.UpdateReservation(2, stockRef);
 
-            //TODO oledb stock ref fct dimension, doormat
-            //TODO oledb book fct dimension & doormat
-        }
+		}
 
-        protected override void SetPrice()
-        {
-            price = 20;
-            //TODO ole db fct color et mat
-        }
+		public override string GetDetails()
+		{
+			return "\"DoubleDoors\" : {\"Height\": " + height + ",\"Length\": " + length
+			+ ", \"Material\": \"" + TheDoorMat + "\",\"Stockref\": \"" + stockRef + knops.GetDetails();
+		}
 
-        public override string GetDetails()
-        {
-            return "\"DoubleDoors\" : {\"height\": " + height + ",\"Lenght\": " + lenght
-            + ", \"Material\": \"" + TheDoorMat + "\",\"Stockref\": " + stockNumber + knops.GetDetails();
-        }
-
-    }
+	}
 }

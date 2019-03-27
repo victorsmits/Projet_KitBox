@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
+using SqlOledb;
+
 namespace KitBoxSourceCode
 {
     public class Cart
     {
         private List<Cabinet> cabinets;
-        private readonly int orderNumber;
         private Profile clientProfile = null;
-        private int cartPrice;
+        private double cartPrice;
 
-        public int GetOrderNumber => orderNumber;
+        public double GetCartPrice => cartPrice;
 
-        //TODO global increase ordernumber
         public Cart()
         {
-            orderNumber = 1;
             cabinets = new List<Cabinet>();
             cartPrice = 0;
         }
@@ -50,11 +49,11 @@ namespace KitBoxSourceCode
                     + elem.GetPartList();
                 if (cabinets.IndexOf(elem) == cabinets.Count - 1)
                 {
-                    showCart += "}}";
+                    showCart += ", \"CartPrice\": " + cartPrice + "}}";
                 }
                 else
                 {
-                    showCart += "},";
+                    showCart += ", \"CartPrice\": " + cartPrice + "},";
                 }
             }
             return JObject.Parse(showCart);
