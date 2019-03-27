@@ -8,9 +8,10 @@ namespace KitBoxSourceCode
     public class Cart
     {
         private List<Cabinet> cabinets;
-        private readonly int orderNumber;
         private Profile clientProfile = null;
         private double cartPrice;
+
+        public double GetCartPrice => cartPrice;
 
         public Cart()
         {
