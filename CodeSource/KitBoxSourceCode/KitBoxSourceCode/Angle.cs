@@ -17,21 +17,7 @@ namespace KitBoxSourceCode
 		public Angle(int len, string color, int qty)
 		{
 			Oledb.Connection();
-			possibleLength = Oledb.LoadForDistinct("SELECT hauteur FROM Piece WHERE Référence LIKE 'COR%'");
-			if (possibleLength.Contains(len.ToString())) {
-				length = len;
-			} else {
-				var closest = int.MaxValue;
-				var minDifference = int.MaxValue;
-				foreach (var element in possibleLength) {
-					int elem = int.Parse(element);
-					var difference = Math.Abs((long)elem - len);
-					if (minDifference > difference) {
-						minDifference = (int)difference;
-						closest = elem;
-					}
-				}
-			}
+			length = len;
 			angleColor = color;
 			// oledb stock ref fct len & color
 			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'COR%' AND hauteur LIKE '" + length.ToString() + "' AND Couleur LIKE '" + angleColor + "'");
