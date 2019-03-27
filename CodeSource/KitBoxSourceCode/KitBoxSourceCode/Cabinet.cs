@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq.Expressions;
+using SqlOledb;
+
 namespace KitBoxSourceCode
 {
     public class Cabinet
@@ -9,9 +11,9 @@ namespace KitBoxSourceCode
         private List<CabinetFloor> cabinetFloors;
         private int cabinetHeight;
 
-        private int cabinetPrice = 0;
+        private double cabinetPrice = 0;
 
-        public int GetCabinetPrice => cabinetPrice;
+        public double GetCabinetPrice => cabinetPrice;
         public int GetCabinetHeight => cabinetHeight;
 
         private Angle angles;
@@ -45,15 +47,38 @@ namespace KitBoxSourceCode
             foreach (CabinetFloor elem in cabinetFloors)
             {
                 partList += "\"Floor " + cabinetFloors.IndexOf(elem) + "\":{"
-                + elem.ShowPieces();
+                + elem.ShowPieces() + "},";
             }
-            partList += angles.GetDetails() + "},";
+            partList += angles.GetDetails() + "}, \"CabinetPrice\": \"" + cabinetPrice + "\"";
+
             return partList;
         }
 
         public void DelCabinetFloor(int floor)
         {
             cabinetFloors.RemoveAt(floor);
+        }
+
+        public void AddScratchAngles(string color)
+        {
+            List<string> possibleLength = Oledb.LoadForDistinct("SELECT DISTINCT hauteur FROM Piece WHERE Référence LIKE 'COR%'");
+            var closest = int.MaxValue;
+            var minDifference = int.MaxValue;
+
+            foreach (var element in possibleLength)
+            {
+                int elem = int.Parse(element);
+                var difference = Math.Abs((long)elem - cabinetHeight);
+                if (minDifference > difference)
+                {
+                    if (elem > cabinetHeight)
+                    {
+                        minDifference = (int)difference;
+                        closest = elem;
+                    }
+                }
+            }
+            angles = new Angle(closest, color, 4);
         }
     }
 }

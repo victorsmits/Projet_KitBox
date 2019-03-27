@@ -1,26 +1,28 @@
 ﻿using System;
+using SqlOledb;
 namespace KitBoxSourceCode
 {
-    public abstract class GenericComponent : IComponent
-    {
-        protected int lenght;
-        protected int quantity;
-        protected int price;
-        protected string stockNumber;
+	public abstract class GenericComponent : IComponent
+	{
+		protected int length;
+		protected int quantity;
+		protected double price;
+		protected string stockRef;
 
-        protected GenericComponent(int len, int qty)
-        {
-            lenght = len;
-            quantity = qty;
-        }
+		protected GenericComponent(int len, int qty)
+		{
+			length = len;
+			quantity = qty;
+		}
 
-        public abstract string GetDetails();
+		public abstract string GetDetails();
+		protected void SetPrice()
+		{
+			price = Oledb.GetDBPrice(stockRef);
+		}
+		public int GetLenght() => length;
 
-        protected abstract void SetPrice();
+		public double GetPrice() => price;
 
-        public int GetLenght() => lenght;
-
-        public int GetPrice() => price;
-
-    }
+	}
 }

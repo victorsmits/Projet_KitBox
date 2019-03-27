@@ -46,6 +46,11 @@ namespace KitBoxApplication
                 creationExplanation1.Visible = false; 
                 
             }
-        }        
+        }
+
+        private void Creation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

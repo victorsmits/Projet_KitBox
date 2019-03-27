@@ -13,20 +13,20 @@ namespace KitBoxSourceCode
 
         private readonly string theDoorMat;
 
-        private int floorPrice;
+        private double floorPrice;
         private readonly int floorHeight;
 
         public int GetFloorHeight => floorHeight;
-        public int GetFloorPrice => floorPrice;
+        public double GetFloorPrice => floorPrice;
 
-        public CabinetFloor(int height, int lenght, int width,
+        public CabinetFloor(int height, int length, int width,
             string doorMat = null, string panelCol = null)
         {
             floorPrice = 0;
             floorHeight = height;
 
             storageBoxes = new List<IStorageBox>();
-            box = new Box(lenght, height, width, panelCol);
+            box = new Box(length, height, width, panelCol);
             components = box.GetComponents;
             storageBoxes.Add(box);
 
@@ -34,7 +34,7 @@ namespace KitBoxSourceCode
 
             if (doorMat != null)
             {
-                db = new DoubleDoors(doorMat, height, lenght);
+                db = new DoubleDoors(doorMat, height, (length/2)+2);
                 db.AddBoxDecorator(box);
                 storageBoxes.Add(db);
             }

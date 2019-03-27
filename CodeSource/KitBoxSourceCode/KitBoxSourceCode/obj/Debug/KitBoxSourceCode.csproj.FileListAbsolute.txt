@@ -13,8 +13,6 @@
 //Mac/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csproj.CopyComplete
 //Mac/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.exe
 //Mac/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.pdb
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.dll.config
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.pdb
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ADONetHelper.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ADONetHelper.Oledb.dll
@@ -41,6 +39,70 @@
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ru/lcpi.data.oledb.net4_6.resources.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csproj.CoreCompileInputs.cache
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csproj.CopyComplete
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.exe.config
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.exe
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csprojAssemblyReference.cache
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.exe
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.exe.config
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.exe
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/KitBoxSourceCode.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ADONetHelper.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ADONetHelper.Oledb.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/Google.Protobuf.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/lcpi.data.oledb.net4_6.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/lcpi.lib.net4_6.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/MySql.Data.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/Newtonsoft.Json.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/OleDB.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/SqlOledb.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/System.ComponentModel.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/SqlOledb.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/SqlOledb.dll.config
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/Google.Protobuf.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/Google.Protobuf.xml
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/MySql.Data.xml
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ADONetHelper.xml
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ADONetHelper.Oledb.xml
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/lcpi.lib.net4_6.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/lcpi.data.oledb.net4_6.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/Newtonsoft.Json.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/Newtonsoft.Json.xml
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ru/lcpi.lib.net4_6.resources.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/bin/Debug/ru/lcpi.data.oledb.net4_6.resources.dll
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csprojAssemblyReference.cache
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csproj.CoreCompileInputs.cache
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.csproj.CopyComplete
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.exe
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/CodeSource/KitBoxSourceCode/KitBoxSourceCode/obj/Debug/KitBoxSourceCode.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.csprojAssemblyReference.cache
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.csproj.CoreCompileInputs.cache
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ADONetHelper.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ADONetHelper.Oledb.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Google.Protobuf.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\lcpi.data.oledb.net4_6.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\lcpi.lib.net4_6.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\MySql.Data.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Newtonsoft.Json.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\OleDB.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\SqlOledb.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\System.ComponentModel.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\SqlOledb.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\SqlOledb.dll.config
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Google.Protobuf.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Google.Protobuf.xml
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\MySql.Data.xml
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ADONetHelper.xml
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ADONetHelper.Oledb.xml
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\lcpi.lib.net4_6.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\lcpi.data.oledb.net4_6.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Newtonsoft.Json.xml
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ru\lcpi.lib.net4_6.resources.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ru\lcpi.data.oledb.net4_6.resources.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.csproj.CopyComplete
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.dll.config
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.dll
