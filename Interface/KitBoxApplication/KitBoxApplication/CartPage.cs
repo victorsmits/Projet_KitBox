@@ -34,12 +34,14 @@ namespace KitBoxApplication
                 if (cart != null)
                 {
                     comfirmCartButton.Visible = true;
+                    totalLabel.Visible = true;
+                    costLabel.Visible = true;
                 }
                 Create_Layout();
             }
-            catch(Exception test)
+            catch
             {
-                MessageBox.Show(test.ToString());
+                
             }
 
         }
@@ -48,14 +50,13 @@ namespace KitBoxApplication
         private void Create_Layout()
         {
             tabControl1.TabPages.Clear(); //Clear the tabs
-            //MessageBox.Show(jsonCart.ToString());
-
+            //MessageBox.Show(jsonCart.ToString
             //For every cabinet of the json
             for (int cabinetCount = 0; cabinetCount < jsonCart.Count; cabinetCount++)
             {
                 //Get the elements of the cabinet
                 JObject cabinetContains = jsonCart["Cabinet " + cabinetCount.ToString()].Value<JObject>();
-                //MessageBox.Show(cabinetContains.ToString());
+                MessageBox.Show(cabinetContains.ToString());
                 //Add a tab for the cabinet
                 TabPage addedCabinePage = new TabPage(Name = "Cabine " + (cabinetCount + 1).ToString());
                 addedCabinePage.BackColor = Color.FromArgb(41, 44, 51);
@@ -176,7 +177,8 @@ namespace KitBoxApplication
 
         private void comfirmCartButton_Click(object sender, EventArgs e)
         {
-
+            summaryLabel.Visible = true;
+            tabControl1.TabPages.Clear();
         }
     }
 }
