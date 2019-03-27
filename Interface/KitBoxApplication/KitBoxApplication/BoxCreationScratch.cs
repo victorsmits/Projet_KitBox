@@ -56,7 +56,6 @@ namespace KitBoxApplication
             // radio buttons in same group added to same function - group : --panelYesNoIf7--
             radioButtonYes7.CheckedChanged += new EventHandler(radioButtonsYesNo_CheckedChangedPanel1);
             radioButtonNo7.CheckedChanged += new EventHandler(radioButtonsYesNo_CheckedChangedPanel1);
-
         }
 
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
@@ -110,6 +109,42 @@ namespace KitBoxApplication
             }
         }
 
+        // function model for height loaddata
+        private void LoadDataGeneralForHeight(System.Windows.Forms.ComboBox[] m, string n)
+        {
+            foreach (System.Windows.Forms.ComboBox i in m)
+            {
+                i.Items.Clear();
+            }
+            try
+            {
+                string q = n;
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        foreach (System.Windows.Forms.ComboBox i in m)
+                        {
+                            string column = dr[0].ToString();
+                            int internalHeight = int.Parse(column);
+                            int externalHeigth = internalHeight + 4;
+                            i.Items.Add(externalHeigth.ToString());
+                        }
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
         // Loading Angle Color data from data base
         private void LoadDataAngleColor()
         {
@@ -132,40 +167,7 @@ namespace KitBoxApplication
         {
             System.Windows.Forms.ComboBox[] listprov = {
                 comboBoxWidth,                
-            };
-            //System.Windows.Forms.RadioButton[] radioList = {
-            //    radioButtonYes1,
-            //    radioButtonYes2,
-            //    radioButtonYes3,
-            //    radioButtonYes4,
-            //    radioButtonYes5,
-            //    radioButtonYes6,
-            //    radioButtonYes7,               
-            //};
-            //// initialization list size
-            //int qty = 0;           
-            //foreach (System.Windows.Forms.RadioButton radioElem in radioList)
-            //{
-            //    if (radioElem.Checked)
-            //    {
-            //        qty++;
-            //    }                
-            //}
-            //System.Windows.Forms.ComboBox[] list = new System.Windows.Forms.ComboBox[qty];
-
-            //// adding the comboboxWidth for which we have to change available items
-            //int i = 0;  // index listProv
-            //int j = 0;  // index list
-            //foreach (System.Windows.Forms.RadioButton radioElem in radioList)
-            //{   
-            //    if (radioElem.Checked)
-            //    {
-            //        list[j] = listprov[i];
-            //        j++;
-            //    }
-            //    i++;
-            //}
-            
+            };            
             LoadDataGeneral(listprov, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PAR%100BL' OR référence LIKE 'PAR%120BL' OR référence LIKE 'PAR%80BL' OR référence LIKE 'PAR%62BL'");
         }
 
@@ -190,7 +192,7 @@ namespace KitBoxApplication
                 comboBoxHeight6,
                 comboBoxHeight7
             };
-            LoadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAH%' ");
+            LoadDataGeneralForHeight(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAH%' ");
         }
 
         // Loading Box Color data from data base
@@ -764,6 +766,56 @@ namespace KitBoxApplication
         private void panelShelf7_Click(object sender, EventArgs e)
         {
             tabControl.SelectTab(tabPageBox7);
+        }       
+
+        private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int height1 = 0;
+            int height2 = 0;
+            int height3 = 0;
+            int height4 = 0;
+            int height5 = 0;
+            int height6 = 0;
+            int height7 = 0;
+            if (comboBoxHeight1.Text != "")
+            {
+                height1 = int.Parse(comboBoxHeight1.Text.ToString());
+            }
+            if (comboBoxHeight2.Text != "")
+            {
+                height2 = int.Parse(comboBoxHeight2.Text.ToString());
+            }
+            if (comboBoxHeight3.Text != "")
+            {
+                height3 = int.Parse(comboBoxHeight3.Text.ToString());
+            }
+            if (comboBoxHeight4.Text != "")
+            {
+                height4 = int.Parse(comboBoxHeight4.Text.ToString());
+            }
+            if (comboBoxHeight5.Text != "")
+            {
+                height5 = int.Parse(comboBoxHeight5.Text.ToString());
+            }
+            if (comboBoxHeight6.Text != "")
+            {
+                height6 = int.Parse(comboBoxHeight6.Text.ToString());
+            }
+            if (comboBoxHeight7.Text != "")
+            {
+                height7 = int.Parse(comboBoxHeight7.Text.ToString());
+            }
+                       
+            int total = height1 + height2 + height3 + height4 + height5 + height6 + height7;
+            labelActualHeight.Text = "Actual height of Cabinet :  " + total.ToString() + " cm";
+            if (total > 375)
+            {
+                labelActualHeight.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
+            }
+            else
+            {
+                labelActualHeight.ForeColor = System.Drawing.Color.FromArgb(0, 255, 0);
+            }
         }
     }
 }
