@@ -48,7 +48,7 @@ namespace KitBoxApplication
             }
         }
 
-        private void creationExplanation1_Load(object sender, EventArgs e)
+        private void Creation_Load(object sender, EventArgs e)
         {
 
         }

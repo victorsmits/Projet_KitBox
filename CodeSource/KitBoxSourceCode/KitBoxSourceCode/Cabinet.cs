@@ -47,7 +47,7 @@ namespace KitBoxSourceCode
                 partList += "\"Floor " + cabinetFloors.IndexOf(elem) + "\":{"
                 + elem.ShowPieces() + "},";
             }
-            partList += angles.GetDetails() + ", \"CabinetPrice\":" + cabinetPrice + "}";
+            partList += angles.GetDetails() + "}, \"CabinetPrice\": \"" + cabinetPrice + "\"";
 
             return partList;
         }

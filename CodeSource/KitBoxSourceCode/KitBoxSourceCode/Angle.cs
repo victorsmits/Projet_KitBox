@@ -12,12 +12,12 @@ namespace KitBoxSourceCode
 		private readonly int quantity;
 		private readonly string angleColor;
 		private readonly string stockRef;
-		private string[] possibleLength;
+		private List<string> possibleLength;
 
 		public Angle(int len, string color, int qty)
 		{
 			Oledb.Connection();
-			possibleLength = Oledb.SqlRequest("SELECT hauteur FROM Piece WHERE Référence LIKE 'COR%'").Split(' ');
+			possibleLength = Oledb.LoadForDistinct("SELECT hauteur FROM Piece WHERE Référence LIKE 'COR%'");
 			if (possibleLength.Contains(len.ToString())) {
 				length = len;
 			} else {

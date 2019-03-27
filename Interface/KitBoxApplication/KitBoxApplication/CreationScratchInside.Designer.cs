@@ -38,9 +38,9 @@
             this.panelYesNo = new System.Windows.Forms.Panel();
             this.radioButtonYes = new System.Windows.Forms.RadioButton();
             this.radioButtonNo = new System.Windows.Forms.RadioButton();
-            this.comboBoxColorIf1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.panelDoorMaterial = new System.Windows.Forms.Panel();
-            this.comboBoxDoorMatIf1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxDoorMat = new System.Windows.Forms.ComboBox();
             this.labelDoorMatIf1 = new System.Windows.Forms.Label();
             this.labelColorBoxIf1 = new System.Windows.Forms.Label();
             this.panelYesNo.SuspendLayout();
@@ -49,6 +49,7 @@
             // 
             // comboBoxDepth
             // 
+            this.comboBoxDepth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDepth.FormattingEnabled = true;
             this.comboBoxDepth.Items.AddRange(new object[] {
             "Brun",
@@ -63,6 +64,7 @@
             // 
             // comboBoxWidth
             // 
+            this.comboBoxWidth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWidth.FormattingEnabled = true;
             this.comboBoxWidth.Items.AddRange(new object[] {
             "Brun",
@@ -101,6 +103,7 @@
             // 
             // comboBoxHeight
             // 
+            this.comboBoxHeight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxHeight.FormattingEnabled = true;
             this.comboBoxHeight.Items.AddRange(new object[] {
             "Brun",
@@ -171,21 +174,23 @@
             this.radioButtonNo.Text = "No";
             this.radioButtonNo.UseVisualStyleBackColor = true;
             // 
-            // comboBoxColorIf1
+            // comboBoxColor
             // 
-            this.comboBoxColorIf1.FormattingEnabled = true;
-            this.comboBoxColorIf1.Items.AddRange(new object[] {
+            this.comboBoxColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxColor.FormattingEnabled = true;
+            this.comboBoxColor.Items.AddRange(new object[] {
             "Brun",
             "Blanc"});
-            this.comboBoxColorIf1.Location = new System.Drawing.Point(416, 200);
-            this.comboBoxColorIf1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.comboBoxColorIf1.Name = "comboBoxColorIf1";
-            this.comboBoxColorIf1.Size = new System.Drawing.Size(200, 39);
-            this.comboBoxColorIf1.TabIndex = 40;
+            this.comboBoxColor.Location = new System.Drawing.Point(416, 200);
+            this.comboBoxColor.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.comboBoxColor.Name = "comboBoxColor";
+            this.comboBoxColor.Size = new System.Drawing.Size(200, 39);
+            this.comboBoxColor.TabIndex = 40;
+            this.comboBoxColor.SelectedIndexChanged += new System.EventHandler(this.comboBoxColor_SelectedIndexChanged);
             // 
             // panelDoorMaterial
             // 
-            this.panelDoorMaterial.Controls.Add(this.comboBoxDoorMatIf1);
+            this.panelDoorMaterial.Controls.Add(this.comboBoxDoorMat);
             this.panelDoorMaterial.Controls.Add(this.labelDoorMatIf1);
             this.panelDoorMaterial.Location = new System.Drawing.Point(401, 280);
             this.panelDoorMaterial.Name = "panelDoorMaterial";
@@ -193,19 +198,21 @@
             this.panelDoorMaterial.TabIndex = 52;
             this.panelDoorMaterial.Visible = false;
             // 
-            // comboBoxDoorMatIf1
+            // comboBoxDoorMat
             // 
-            this.comboBoxDoorMatIf1.FormattingEnabled = true;
-            this.comboBoxDoorMatIf1.Items.AddRange(new object[] {
+            this.comboBoxDoorMat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDoorMat.FormattingEnabled = true;
+            this.comboBoxDoorMat.Items.AddRange(new object[] {
             "Brun",
             "Blanc",
             "Galvinisé",
             "Noir"});
-            this.comboBoxDoorMatIf1.Location = new System.Drawing.Point(264, 4);
-            this.comboBoxDoorMatIf1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.comboBoxDoorMatIf1.Name = "comboBoxDoorMatIf1";
-            this.comboBoxDoorMatIf1.Size = new System.Drawing.Size(200, 39);
-            this.comboBoxDoorMatIf1.TabIndex = 43;
+            this.comboBoxDoorMat.Location = new System.Drawing.Point(264, 4);
+            this.comboBoxDoorMat.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.comboBoxDoorMat.Name = "comboBoxDoorMat";
+            this.comboBoxDoorMat.Size = new System.Drawing.Size(200, 39);
+            this.comboBoxDoorMat.TabIndex = 43;
+            this.comboBoxDoorMat.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMat_SelectedIndexChanged);
             // 
             // labelDoorMatIf1
             // 
@@ -240,7 +247,7 @@
             this.Controls.Add(this.panelYesNo);
             this.Controls.Add(this.labelDoorYesNoIf1);
             this.Controls.Add(this.comboBoxDepth);
-            this.Controls.Add(this.comboBoxColorIf1);
+            this.Controls.Add(this.comboBoxColor);
             this.Controls.Add(this.comboBoxWidth);
             this.Controls.Add(this.labelDepth);
             this.Controls.Add(this.labelColorBoxIf1);
@@ -249,6 +256,7 @@
             this.Controls.Add(this.labelHeight);
             this.Name = "CreationScratchInside";
             this.Size = new System.Drawing.Size(1142, 569);
+            this.Load += new System.EventHandler(this.CreationScratchInside_Load);
             this.panelYesNo.ResumeLayout(false);
             this.panelYesNo.PerformLayout();
             this.panelDoorMaterial.ResumeLayout(false);
@@ -271,8 +279,8 @@
         protected System.Windows.Forms.Panel panelYesNo;
         protected System.Windows.Forms.RadioButton radioButtonYes;
         protected System.Windows.Forms.RadioButton radioButtonNo;
-        protected System.Windows.Forms.ComboBox comboBoxColorIf1;
-        protected System.Windows.Forms.ComboBox comboBoxDoorMatIf1;
+        protected System.Windows.Forms.ComboBox comboBoxColor;
+        protected System.Windows.Forms.ComboBox comboBoxDoorMat;
         private System.Windows.Forms.ComboBox comboBoxDepth;
     }
 }

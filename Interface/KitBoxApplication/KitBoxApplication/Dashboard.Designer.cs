@@ -69,7 +69,7 @@
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
             this.SidePanel.Margin = new System.Windows.Forms.Padding(1);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(157, 478);
+            this.SidePanel.Size = new System.Drawing.Size(157, 808);
             this.SidePanel.TabIndex = 0;
             // 
             // buttonAbout
@@ -203,7 +203,7 @@
             this.HeaderPanel.Location = new System.Drawing.Point(157, 0);
             this.HeaderPanel.Margin = new System.Windows.Forms.Padding(1);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(1366, 55);
+            this.HeaderPanel.Size = new System.Drawing.Size(1373, 55);
             this.HeaderPanel.TabIndex = 1;
             // 
             // KitBoxHeader
@@ -214,7 +214,7 @@
             this.KitBoxHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KitBoxHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
             this.KitBoxHeader.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.KitBoxHeader.Location = new System.Drawing.Point(615, 14);
+            this.KitBoxHeader.Location = new System.Drawing.Point(618, 14);
             this.KitBoxHeader.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.KitBoxHeader.Name = "KitBoxHeader";
             this.KitBoxHeader.Size = new System.Drawing.Size(88, 29);
@@ -228,10 +228,10 @@
             this.panel1.Controls.Add(this.textBoxSubscribe);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(157, 435);
+            this.panel1.Location = new System.Drawing.Point(157, 765);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 43);
+            this.panel1.Size = new System.Drawing.Size(1373, 43);
             this.panel1.TabIndex = 4;
             // 
             // button2
@@ -242,7 +242,7 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(75)))), ((int)(((byte)(19)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(852, 11);
+            this.button2.Location = new System.Drawing.Point(855, 11);
             this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 24);
@@ -253,7 +253,7 @@
             // textBoxSubscribe
             // 
             this.textBoxSubscribe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxSubscribe.Location = new System.Drawing.Point(694, 15);
+            this.textBoxSubscribe.Location = new System.Drawing.Point(697, 15);
             this.textBoxSubscribe.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxSubscribe.Name = "textBoxSubscribe";
             this.textBoxSubscribe.Size = new System.Drawing.Size(151, 20);
@@ -269,7 +269,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(520, 15);
+            this.label1.Location = new System.Drawing.Point(523, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 17);
@@ -278,10 +278,10 @@
             // 
             // cartPage1
             // 
-            this.cartPage1.Location = new System.Drawing.Point(384, 67);
+            this.cartPage1.Location = new System.Drawing.Point(280, 67);
             this.cartPage1.Margin = new System.Windows.Forms.Padding(1);
             this.cartPage1.Name = "cartPage1";
-            this.cartPage1.Size = new System.Drawing.Size(839, 400);
+            this.cartPage1.Size = new System.Drawing.Size(1212, 691);
             this.cartPage1.TabIndex = 7;
             this.cartPage1.Visible = false;
             // 
@@ -291,7 +291,7 @@
             this.homePage3.Location = new System.Drawing.Point(157, 744);
             this.homePage3.Margin = new System.Windows.Forms.Padding(0);
             this.homePage3.Name = "homePage3";
-            this.homePage3.Size = new System.Drawing.Size(1366, 689);
+            this.homePage3.Size = new System.Drawing.Size(1373, 689);
             this.homePage3.TabIndex = 6;
             // 
             // creation2
@@ -300,7 +300,7 @@
             this.creation2.Location = new System.Drawing.Point(157, 55);
             this.creation2.Margin = new System.Windows.Forms.Padding(0);
             this.creation2.Name = "creation2";
-            this.creation2.Size = new System.Drawing.Size(1366, 689);
+            this.creation2.Size = new System.Drawing.Size(1373, 689);
             this.creation2.TabIndex = 5;
             this.creation2.Visible = false;
             // 
@@ -310,7 +310,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1523, 478);
+            this.ClientSize = new System.Drawing.Size(1530, 808);
             this.Controls.Add(this.cartPage1);
             this.Controls.Add(this.homePage3);
             this.Controls.Add(this.creation2);

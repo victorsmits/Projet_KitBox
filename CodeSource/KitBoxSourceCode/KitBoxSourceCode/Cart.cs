@@ -49,7 +49,7 @@ namespace KitBoxSourceCode
                     + elem.GetPartList();
                 if (cabinets.IndexOf(elem) == cabinets.Count - 1)
                 {
-                    showCart += ", \"CartPrice\": " + cartPrice + "}}";
+                    showCart += "},\"CartPrice\": \"" + cartPrice + "\"}";
                 }
                 else
                 {

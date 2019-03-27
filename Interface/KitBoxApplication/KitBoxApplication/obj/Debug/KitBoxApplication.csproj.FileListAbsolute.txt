@@ -11,22 +11,6 @@ C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_
 C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
 C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
 C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxStandard.resources
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Creation.resources
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Dashboard.resources
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.HomePage.resources
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Properties.Resources.resources
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.GenerateResource.cache
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxCreationScratch.resources
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationExplanation.resources
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationScratchInside.resources
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
@@ -54,4 +38,137 @@ C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitB
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CopyComplete
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
-C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.pdb
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll.config
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.pdb
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll.config
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxCreationScratch.resources
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxStandard.resources
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Creation.resources
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationExplanation.resources
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationScratchInside.resources
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Dashboard.resources
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.HomePage.resources
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Properties.Resources.resources
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.GenerateResource.cache
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CopyComplete
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
+C:\Users\Harold\Dropbox\BA3\Q2\projet informatique\projet genie logiciel\backupinterface\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.pdb
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll.config
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.pdb
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll.config
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxCreationScratch.resources
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxStandard.resources
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Creation.resources
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationExplanation.resources
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationScratchInside.resources
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Dashboard.resources
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.HomePage.resources
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Properties.Resources.resources
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.GenerateResource.cache
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CopyComplete
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.exe.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.pdb
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll.config
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxCreationScratch.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxStandard.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Creation.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationExplanation.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationScratchInside.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Dashboard.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.HomePage.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Properties.Resources.resources
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.GenerateResource.cache
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CopyComplete
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
+C:\Users\Harold\Documents\GitHub\Projet_kitBox_final\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.pdb
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll.config
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.pdb
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll.config
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxCreationScratch.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxStandard.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Creation.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationExplanation.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationScratchInside.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Dashboard.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.HomePage.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Properties.Resources.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.GenerateResource.cache
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CopyComplete
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe.config
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.exe
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll.config
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll.config
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxCreationScratch.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxStandard.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Creation.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationExplanation.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CreationScratchInside.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Dashboard.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.HomePage.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.Properties.Resources.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.GenerateResource.cache
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CoreCompileInputs.cache
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CopyComplete
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
