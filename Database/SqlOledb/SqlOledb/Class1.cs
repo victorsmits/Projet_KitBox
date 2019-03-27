@@ -83,5 +83,32 @@ namespace SqlOledb
 
             return double.Parse(price);
 		}
+
+        public static List<string> LoadForDistinct(string n)
+        {
+            List<string> list = new List<string>();
+            try
+            {
+                string q = n;
+                cmd.CommandText = q;
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        list.Add(dr[0].ToString());
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                Console.WriteLine(e.ToString());
+            }
+            return list;
+        }
 	}
 }
