@@ -48,11 +48,11 @@ namespace KitBoxSourceCode
                     + elem.GetPartList();
                 if (cabinets.IndexOf(elem) == cabinets.Count - 1)
                 {
-                    showCart += "}}";
+                    showCart += ", \"CartPrice\": " + cartPrice + "}}";
                 }
                 else
                 {
-                    showCart += "},";
+                    showCart += ", \"CartPrice\": " + cartPrice + "},";
                 }
             }
             return JObject.Parse(showCart);
