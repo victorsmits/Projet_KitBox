@@ -98,6 +98,7 @@
             // costLabel
             // 
             this.costLabel.AutoSize = true;
+            this.costLabel.ForeColor = System.Drawing.SystemColors.InfoText;
             this.costLabel.Location = new System.Drawing.Point(1090, 85);
             this.costLabel.Name = "costLabel";
             this.costLabel.Size = new System.Drawing.Size(0, 13);

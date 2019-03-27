@@ -112,6 +112,41 @@ namespace KitBoxApplication
             }
         }
 
+        private void LoadDataGeneralForHeight(System.Windows.Forms.ComboBox[] m, string n)
+        {
+            foreach (System.Windows.Forms.ComboBox i in m)
+            {
+                i.Items.Clear();
+            }
+            try
+            {
+                string q = n;
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        foreach (System.Windows.Forms.ComboBox i in m)
+                        {
+                            string column = dr[0].ToString();
+                            int internalHeight = int.Parse(column);
+                            int externalHeigth = internalHeight + 4;
+                            i.Items.Add(externalHeigth.ToString());
+                        }
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
         // Loading Angle Color data from data base
         private void LoadDataAngleColor()
         {
@@ -210,7 +245,7 @@ namespace KitBoxApplication
                 comboBoxHeight6,
                 comboBoxHeight7
             };
-            LoadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAH%' ");
+            LoadDataGeneralForHeight(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAH%' ");
         }
 
         // Loading Box Color data from data base
@@ -845,7 +880,7 @@ namespace KitBoxApplication
             Cabinet cabinet = new Cabinet();
 
             string angleColor = comboBoxColorAngles.SelectedItem.ToString();
-            cabinet.AddAngles(angleColor);
+            
 
             try
             {
@@ -880,13 +915,16 @@ namespace KitBoxApplication
 
                     }
                 }
+
+                cabinet.AddScratchAngles(angleColor);
+
                 CartPage.Cart.AddToCart(cabinet);
                 
                 MessageBox.Show("This cabinet has been added to the cart succesfully!");
             }
-            catch
+            catch(Exception except)
             {
-                MessageBox.Show("Please enter all the necessary information");
+                MessageBox.Show("Please enter all the necessary information\n" + except.ToString());
             }
         }
     }

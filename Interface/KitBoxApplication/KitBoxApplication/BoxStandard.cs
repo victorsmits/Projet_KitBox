@@ -984,7 +984,7 @@ namespace KitBoxApplication
                 int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
                 string angleColor = comboBoxColorAngles.SelectedItem.ToString();
 
-                cabinet.AddAngles(angleColor);
+                
 
                 //Initialize colors and doors choices
                 string color1 = null;
@@ -1120,64 +1120,55 @@ namespace KitBoxApplication
                 }
 
 
-                //All the boxes we can get
-
-                CabinetFloor box1 = new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1);
-                CabinetFloor box2 = new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2);
-                CabinetFloor box3 = new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3);
-                CabinetFloor box4 = new CabinetFloor(heightForEach, width, depth, door4, panelCol: color4);
-                CabinetFloor box5 = new CabinetFloor(heightForEach, width, depth, door5, panelCol: color5);
-                CabinetFloor box6 = new CabinetFloor(heightForEach, width, depth, door6, panelCol: color6);
-                CabinetFloor box7 = new CabinetFloor(heightForEach, width, depth, door7, panelCol: color7);
-
-
-
-
+                //All the boxes we can get                
                 switch (qty)
                 {
                     case 1:
-                        cabinet.AddStorageBox(box1);
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
                         break;
                     case 2:
-                        cabinet.AddStorageBox(box1);
-                        cabinet.AddStorageBox(box2);
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
                         break;
                     case 3:
-                        cabinet.AddStorageBox(box1);
-                        cabinet.AddStorageBox(box2);
-                        cabinet.AddStorageBox(box3);
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3));
                         break;
                     case 4:
-                        cabinet.AddStorageBox(box1);
-                        cabinet.AddStorageBox(box2);
-                        cabinet.AddStorageBox(box3);
-                        cabinet.AddStorageBox(box4);
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door4, panelCol: color4));
                         break;
                     case 5:
-                        cabinet.AddStorageBox(box1);
-                        cabinet.AddStorageBox(box2);
-                        cabinet.AddStorageBox(box3);
-                        cabinet.AddStorageBox(box4);
-                        cabinet.AddStorageBox(box5);
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door4, panelCol: color4));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door5, panelCol: color5));
                         break;
                     case 6:
-                        cabinet.AddStorageBox(box1);
-                        cabinet.AddStorageBox(box2);
-                        cabinet.AddStorageBox(box3);
-                        cabinet.AddStorageBox(box4);
-                        cabinet.AddStorageBox(box5);
-                        cabinet.AddStorageBox(box6);
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door4, panelCol: color4));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door5, panelCol: color5));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door6, panelCol: color6));
                         break;
                     case 7:
-                        cabinet.AddStorageBox(box1);
-                        cabinet.AddStorageBox(box2);
-                        cabinet.AddStorageBox(box3);
-                        cabinet.AddStorageBox(box4);
-                        cabinet.AddStorageBox(box5);
-                        cabinet.AddStorageBox(box6);
-                        cabinet.AddStorageBox(box7);
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door4, panelCol: color4));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door5, panelCol: color5));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door6, panelCol: color6));
+                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door7, panelCol: color7));
                         break;
                 }
+
+                cabinet.AddAngles(angleColor);
+
                 CartPage.Cart.AddToCart(cabinet);
 
                 MessageBox.Show("This cabinet has been added to the cart succesfully!");
