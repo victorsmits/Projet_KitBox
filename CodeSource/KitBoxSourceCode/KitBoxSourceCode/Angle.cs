@@ -21,7 +21,7 @@ namespace KitBoxSourceCode
             length = len;
             angleColor = color;
             // oledb stock ref fct len & color
-            stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'COR%' AND hauteur LIKE '" + length.ToString() + "' AND Couleur LIKE '" + angleColor + "'");
+            stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'COR%' AND hauteur = '" + length.ToString() + "' AND Couleur = '" + angleColor + "'");
             quantity = qty;
             CalculPrice();
 

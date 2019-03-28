@@ -80,21 +80,21 @@ namespace SqlOledb
 
         public static void UpdateReservation(int quantity, string stockRef)
         {
-            int currentReservation = int.Parse(SqlRequest("SELECT Reservation FROM Piece WHERE Référence LIKE '" + stockRef + "'"));
+            int currentReservation = int.Parse(SqlRequest("SELECT Reservation FROM Piece WHERE Référence = '" + stockRef + "'"));
             int newReservation = currentReservation + quantity;
-            SqlRequest("UPDATE Piece SET Reservation = '" + newReservation.ToString() + "' WHERE Référence LIKE '" + stockRef + "'");
+            SqlRequest("UPDATE Piece SET Reservation = '" + newReservation.ToString() + "' WHERE Référence = '" + stockRef + "'");
         }
 
         public static double GetDBPrice(string stockRef)
         {
-            string price = SqlRequest("SELECT PrixClient FROM Piece WHERE Référence LIKE '" + stockRef + "'");
+            string price = SqlRequest("SELECT PrixClient FROM Piece WHERE Référence = '" + stockRef + "'");
 
             return double.Parse(price);
         }
 
         public static int GetDBStock(string stockRef)
         {
-            string stock = SqlRequest("SELECT Enstock FROM Piece WHERE Référence LIKE '" + stockRef + "'");
+            string stock = SqlRequest("SELECT Enstock FROM Piece WHERE Référence = '" + stockRef + "'");
 
             return int.Parse(stock);
         }

@@ -1,11 +1,13 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{530905E3-D372-46FA-9434-CC18A725A47E}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Panel.cs">
     <Files>
-      <File FileName="KitBoxSourceCode/Angle.cs" Line="46" Column="52" />
-      <File FileName="KitBoxSourceCode/Beam.cs" Line="46" Column="1" />
-      <File FileName="KitBoxSourceCode/DoorBeam.cs" Line="21" Column="82" />
-      <File FileName="KitBoxSourceCode/DoubleDoors.cs" Line="43" Column="17" />
-      <File FileName="KitBoxSourceCode/Panel.cs" Line="58" Column="53" />
+      <File FileName="KitBoxSourceCode/Angle.cs" Line="24" Column="30" />
+      <File FileName="KitBoxSourceCode/Beam.cs" Line="25" Column="38" />
+      <File FileName="KitBoxSourceCode/DoorBeam.cs" Line="11" Column="30" />
+      <File FileName="KitBoxSourceCode/DoubleDoors.cs" Line="27" Column="30" />
+      <File FileName="KitBoxSourceCode/Panel.cs" Line="44" Column="27" />
+      <File FileName="KitBoxSourceCode/Cleat.cs" Line="12" Column="102" />
+      <File FileName="KitBoxSourceCode/Knop.cs" Line="18" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

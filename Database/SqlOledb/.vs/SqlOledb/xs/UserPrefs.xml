@@ -4,7 +4,7 @@
     <Files>
       <File FileName="SqlOledb/packages.config" Line="1" Column="1" />
       <File FileName="SqlOledb/app.config" Line="1" Column="1" />
-      <File FileName="SqlOledb/Class1.cs" Line="74" Column="14" />
+      <File FileName="SqlOledb/Class1.cs" Line="88" Column="57" />
       <File FileName="testOleDb/Program.cs" Line="2" Column="8" />
     </Files>
     <Pads>
