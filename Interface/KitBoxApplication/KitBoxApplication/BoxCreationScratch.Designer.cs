@@ -37,7 +37,7 @@
             this.comboBoxWidth = new System.Windows.Forms.ComboBox();
             this.labelDepth = new System.Windows.Forms.Label();
             this.labelWidth = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAddToCart = new System.Windows.Forms.Button();
             this.comboBoxColorAngles = new System.Windows.Forms.ComboBox();
             this.panelShelf1 = new System.Windows.Forms.Panel();
             this.panelShelf2 = new System.Windows.Forms.Panel();
@@ -300,21 +300,21 @@
             this.labelWidth.TabIndex = 75;
             this.labelWidth.Text = "Width of the Box";
             // 
-            // button2
+            // buttonAddToCart
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.button2.Location = new System.Drawing.Point(1040, 1223);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(378, 104);
-            this.button2.TabIndex = 74;
-            this.button2.Text = "Add To Cart";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonAddToCart.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAddToCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonAddToCart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonAddToCart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonAddToCart.Font = new System.Drawing.Font("Century Gothic", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddToCart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonAddToCart.Location = new System.Drawing.Point(1040, 1223);
+            this.buttonAddToCart.Name = "buttonAddToCart";
+            this.buttonAddToCart.Size = new System.Drawing.Size(378, 104);
+            this.buttonAddToCart.TabIndex = 74;
+            this.buttonAddToCart.Text = "Add To Cart";
+            this.buttonAddToCart.UseVisualStyleBackColor = false;
+            this.buttonAddToCart.Click += new System.EventHandler(this.buttonAddToCart_Click);
             // 
             // comboBoxColorAngles
             // 
@@ -803,9 +803,9 @@
             "Blanc",
             "Galvinisé",
             "Noir"});
-            this.comboBoxDoorMat5.Location = new System.Drawing.Point(136, 2);
+            this.comboBoxDoorMat5.Location = new System.Drawing.Point(364, 4);
             this.comboBoxDoorMat5.Name = "comboBoxDoorMat5";
-            this.comboBoxDoorMat5.Size = new System.Drawing.Size(78, 45);
+            this.comboBoxDoorMat5.Size = new System.Drawing.Size(200, 45);
             this.comboBoxDoorMat5.TabIndex = 43;
             this.comboBoxDoorMat5.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMat5_SelectedIndexChanged);
             // 
@@ -879,7 +879,7 @@
             this.comboBoxColor5.Location = new System.Drawing.Point(404, 139);
             this.comboBoxColor5.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxColor5.Name = "comboBoxColor5";
-            this.comboBoxColor5.Size = new System.Drawing.Size(78, 45);
+            this.comboBoxColor5.Size = new System.Drawing.Size(200, 45);
             this.comboBoxColor5.TabIndex = 70;
             this.comboBoxColor5.SelectedIndexChanged += new System.EventHandler(this.comboBoxColor5_SelectedIndexChanged);
             // 
@@ -904,9 +904,9 @@
             "Blanc",
             "Galvinisé",
             "Noir"});
-            this.comboBoxHeight5.Location = new System.Drawing.Point(152, 11);
+            this.comboBoxHeight5.Location = new System.Drawing.Point(404, 27);
             this.comboBoxHeight5.Name = "comboBoxHeight5";
-            this.comboBoxHeight5.Size = new System.Drawing.Size(78, 45);
+            this.comboBoxHeight5.Size = new System.Drawing.Size(200, 45);
             this.comboBoxHeight5.TabIndex = 74;
             this.comboBoxHeight5.SelectedIndexChanged += new System.EventHandler(this.comboBoxHeight_SelectedIndexChanged);
             // 
@@ -915,7 +915,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.label24.Location = new System.Drawing.Point(14, 11);
+            this.label24.Location = new System.Drawing.Point(38, 27);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(256, 40);
             this.label24.TabIndex = 73;
@@ -1649,7 +1649,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelShelf1);
             this.Controls.Add(this.comboBoxColorAngles);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonAddToCart);
             this.Controls.Add(this.comboBoxDepth);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.labelTitle);
@@ -1731,7 +1731,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
         private System.Windows.Forms.Label labelQuantityBox;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAddToCart;
         private System.Windows.Forms.ComboBox comboBoxColorAngles;
         private System.Windows.Forms.Panel panelShelf1;
         private System.Windows.Forms.Panel panelShelf2;

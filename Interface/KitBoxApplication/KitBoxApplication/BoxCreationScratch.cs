@@ -736,9 +736,11 @@ namespace KitBoxApplication
             }
         }
 
+        /*
+         * generating each box with its features 
+             */
         private CabinetFloor GenerateBox1()
         {
-
             int height = Int32.Parse(comboBoxHeight1.SelectedItem.ToString());
             int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
             int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
@@ -848,7 +850,7 @@ namespace KitBoxApplication
             return box;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonAddToCart_Click(object sender, EventArgs e)
         {
             //If the cart is empty, create it
             if (CartPage.Cart == null)
@@ -858,53 +860,58 @@ namespace KitBoxApplication
 
             Cabinet cabinet = new Cabinet();
 
-            string angleColor = comboBoxColorAngles.SelectedItem.ToString();
-
-
-            try
+            int totalHeight = ActualHeight();
+            if (totalHeight > 375)
             {
-                int qty = (int)numericUpDownQuantity.Value;
-
-                if (qty >= 1)
+                MessageBox.Show("You have exceeded the max height as it was shown under max height (red)");
+                MessageBox.Show("Please change the height of some boxes until actual height is green!");
+            }
+            else
+            {
+                try
                 {
-                    cabinet.AddStorageBox(GenerateBox1());
-                    if (qty >= 2)
+                    int qty = (int)numericUpDownQuantity.Value;
+
+                    if (qty >= 1)
                     {
-                        cabinet.AddStorageBox(GenerateBox2());
-                        if (qty >= 3)
+                        cabinet.AddStorageBox(GenerateBox1());
+                        if (qty >= 2)
                         {
-                            cabinet.AddStorageBox(GenerateBox3());
-                            if (qty >= 4)
+                            cabinet.AddStorageBox(GenerateBox2());
+                            if (qty >= 3)
                             {
-                                cabinet.AddStorageBox(GenerateBox4());
-                                if (qty >= 5)
+                                cabinet.AddStorageBox(GenerateBox3());
+                                if (qty >= 4)
                                 {
-                                    cabinet.AddStorageBox(GenerateBox5());
-                                    if (qty >= 6)
+                                    cabinet.AddStorageBox(GenerateBox4());
+                                    if (qty >= 5)
                                     {
-                                        cabinet.AddStorageBox(GenerateBox6());
-                                        if (qty >= 7)
+                                        cabinet.AddStorageBox(GenerateBox5());
+                                        if (qty >= 6)
                                         {
-                                            cabinet.AddStorageBox(GenerateBox7());
+                                            cabinet.AddStorageBox(GenerateBox6());
+                                            if (qty >= 7)
+                                            {
+                                                cabinet.AddStorageBox(GenerateBox7());
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-
                     }
+                    string angleColor = comboBoxColorAngles.SelectedItem.ToString();
+                    cabinet.AddScratchAngles(angleColor);
+
+                    CartPage.Cart.AddToCart(cabinet);
+
+                    MessageBox.Show("This cabinet has been added to the cart succesfully!");
                 }
-
-                cabinet.AddScratchAngles(angleColor);
-
-                CartPage.Cart.AddToCart(cabinet);
-
-                MessageBox.Show("This cabinet has been added to the cart succesfully!");
-            }
-            catch(Exception except)
-            {
-                MessageBox.Show("Please enter all the necessary information\n" + except.ToString());
-            }
+                catch (NullReferenceException except)
+                {
+                    MessageBox.Show("Please enter all the necessary information\n");
+                }
+            }  
         }
 
         private void panelShelf1_Click(object sender, EventArgs e)
@@ -942,7 +949,11 @@ namespace KitBoxApplication
             tabControl.SelectTab(tabPageBox7);
         }
 
-        private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
+        /* function to calculate actual height of Cabinet
+         * used to verify cabinet doesn't exceeds max height avalaible
+         * used to change color of actual height label to show it exceeds
+         */
+        private int ActualHeight()
         {
             int height1 = 0;
             int height2 = 0;
@@ -981,6 +992,12 @@ namespace KitBoxApplication
             }
 
             int total = height1 + height2 + height3 + height4 + height5 + height6 + height7;
+            return total;
+        }
+
+        private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int total = ActualHeight();
             labelActualHeight.Text = "Actual height of Cabinet :  " + total.ToString() + " cm";
             if (total > 375)
             {

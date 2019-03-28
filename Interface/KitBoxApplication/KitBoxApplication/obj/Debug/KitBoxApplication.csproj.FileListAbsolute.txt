@@ -170,3 +170,4 @@ C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBox
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CopyComplete
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache
