@@ -13,14 +13,14 @@ namespace KitBoxSourceCode
 
 		public Knop(int qty)
 		{
-			//TODO requet knop stock Ref
+			//Getting stock reference for the knop
 			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'COUP%' ");
 
-			//TODO requet knop price
+			//Getting knop's price
 			price = Oledb.GetDBPrice(stockRef);
 
 			quantity = qty;
-			//TODO requet book fct qty
+			//Update reservation in the data base
 			Oledb.UpdateReservation(quantity, stockRef);
 		}
 

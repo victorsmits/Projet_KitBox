@@ -32,6 +32,7 @@ namespace KitBoxSourceCode
 
             theDoorMat = doorMat;
 
+            //Adding doors
             if (doorMat != null)
             {
                 db = new DoubleDoors(doorMat, height, (length/2)+2);
@@ -44,12 +45,14 @@ namespace KitBoxSourceCode
 
         private void SetFloorPrice()
         {
+            //Setting the price from the box and the doors
             foreach (IStorageBox elem in storageBoxes)
             {
                 floorPrice += elem.GetPrice();
             }
         }
 
+        //Showing all the box's part
         public string ShowPieces()
         {
             string format = "";

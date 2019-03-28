@@ -26,7 +26,8 @@ namespace KitBoxSourceCode
 			panelNum++;
 			panelNumber = panelNum;
 
-			// TODO OLEDB requete piece num fct dimension & color
+            //Getting stock reference for the 3 panels:
+            //1 = backward, 2 = side and 3 = upward/downward
 			switch (panelNumber) {
 				case 1:
 					stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAR%' AND hauteur LIKE '"
@@ -42,7 +43,7 @@ namespace KitBoxSourceCode
 					break;
 			}
 
-			//TODO oledb book fct dimension, color & qty
+			//Update reservation in the data base
 			Oledb.UpdateReservation(quantity, stockRef);
 
 			SetPrice();

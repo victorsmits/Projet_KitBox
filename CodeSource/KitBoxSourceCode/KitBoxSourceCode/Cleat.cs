@@ -8,10 +8,10 @@ namespace KitBoxSourceCode
 
 		public Cleat(int len, int qty) : base(len, qty)
 		{
-			// oledb stock ref fct len
+            //Getting the stock reference by the length
 			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TAS%' AND hauteur LIKE '" + len.ToString() + "'");
 			SetPrice();
-			// oledb book fct len et qty
+			//Updating the reservation in the data base
 			Oledb.UpdateReservation(quantity, stockRef);
 		}
 

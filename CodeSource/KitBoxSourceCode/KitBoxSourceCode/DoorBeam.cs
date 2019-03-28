@@ -7,9 +7,9 @@ namespace KitBoxSourceCode
 	{
 		public DoorBeam(int len, int qty) : base(len, qty)
 		{
-			// oledb stock ref fct len
+            //Getting the stock reference by the length
 			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRF%' AND largeur LIKE '" + len.ToString() + "'");
-			// oledb book fct len et qty
+			//Updating the reservation in the data base
 			Oledb.UpdateReservation(quantity, stockRef);
 			SetPrice();
 		}
