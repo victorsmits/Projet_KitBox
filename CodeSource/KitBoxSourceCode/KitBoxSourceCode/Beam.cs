@@ -14,7 +14,7 @@ namespace KitBoxSourceCode
             length = len;
             quantity = qty;
 
-            // oledb stock ref fct len
+            //Getting stock reference by dimension
 
             switch (qty)
             {
@@ -29,7 +29,7 @@ namespace KitBoxSourceCode
             beamNum++;
             beamNumber = beamNum;
 
-            // oledb book beam fct len & qty
+            //Update reservation in the data base
             Oledb.UpdateReservation(quantity, stockRef);
             SetPrice();
 
