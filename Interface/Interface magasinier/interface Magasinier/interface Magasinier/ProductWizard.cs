@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using SqlOledb;
+using System.IO;
 
 namespace interface_Magasinier
 {
@@ -21,7 +22,7 @@ namespace interface_Magasinier
         }
         private void LoadList(object sender, EventArgs e) //loading data
         {
-            SqlOledb.SqlOledb.connection("C:\\Users\\dtheo\\Documents\\GitHub\\Projet_KitBox\\Database\\DB_Lespieces.accdb;");
+            SqlOledb.SqlOledb.connection(Form1.GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;");
             Loaddata();
         }
 

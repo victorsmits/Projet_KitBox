@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 namespace interface_Magasinier
 {
@@ -18,10 +19,22 @@ namespace interface_Magasinier
             InitializeComponent();
 
         }
+
+        public static string GetRelativePath(string directory)
+        {
+            char[] test1 = "\\".ToCharArray();
+            string[] test = directory.Split(test1);
+            string root = test[0];
+            string user = test[1];
+            string namePC = test[2];
+            string dir = root + "\\" + user + "\\" + namePC + "\\";
+            return dir;
+        }
+
         OleDbDataReader dr;
         private void Form1_Load(object sender, EventArgs e) //Connection to the DB and loading the data into the box
         {
-            SqlOledb.SqlOledb.connection("C:\\Users\\dtheo\\Documents\\GitHub\\Projet_KitBox\\Database\\DB_Lespieces.accdb;");
+            SqlOledb.SqlOledb.connection(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;");
             Loaddata();
         }
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
