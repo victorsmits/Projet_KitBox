@@ -35,6 +35,11 @@ namespace KitBoxSourceCode
             clientProfile.ShowClientInfo();
         }
 
+        public void DelCabinet(int number)
+        {
+            cabinets.RemoveAt(number);
+        }
+
         public JObject ShowCart()
         {
             JObject jsonCart = new JObject();
@@ -53,7 +58,7 @@ namespace KitBoxSourceCode
                 }
                 else
                 {
-                    showCart += "},";
+                    showCart += ", \"CartPrice\": " + cartPrice + "},";
                 }
             }
             return JObject.Parse(showCart);
