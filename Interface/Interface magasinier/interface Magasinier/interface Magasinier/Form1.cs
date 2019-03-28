@@ -21,12 +21,12 @@ namespace interface_Magasinier
         OleDbDataReader dr;
         private void Form1_Load(object sender, EventArgs e) //Connection to the DB and loading the data into the box
         {
-            SqlOledb.SqlOledb.connection("C:\\Users\\Geryon\\Documents\\GitHub\\Projet_KitBox\\Database\\DB_Lespieces.accdb;");
+            SqlOledb.SqlOledb.connection("C:\\Users\\dtheo\\Documents\\GitHub\\Projet_KitBox\\Database\\DB_Lespieces.accdb;");
             Loaddata();
         }
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
         OleDbConnection cn = new OleDbConnection();  // cn for connection
-
+        
 
         public void Loaddata() //Loading de data into the differents listbox
         {

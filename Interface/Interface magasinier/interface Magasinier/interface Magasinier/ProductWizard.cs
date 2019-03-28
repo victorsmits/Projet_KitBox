@@ -21,7 +21,7 @@ namespace interface_Magasinier
         }
         private void LoadList(object sender, EventArgs e) //loading data
         {
-            SqlOledb.SqlOledb.connection("C:\\Users\\Geryon\\Documents\\GitHub\\Projet_KitBox\\Database\\DB_Lespieces.accdb;");
+            SqlOledb.SqlOledb.connection("C:\\Users\\dtheo\\Documents\\GitHub\\Projet_KitBox\\Database\\DB_Lespieces.accdb;");
             Loaddata();
         }
 
