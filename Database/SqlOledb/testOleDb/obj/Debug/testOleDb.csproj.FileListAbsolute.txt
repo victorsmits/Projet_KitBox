@@ -15,6 +15,7 @@ C:/Users/m_sca/Documents/GitHub/Projet_KitBox/Database/SqlOledb/testOleDb/obj/De
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/testOleDb/bin/Debug/testOleDb.exe.config
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/testOleDb/bin/Debug/testOleDb.exe
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/testOleDb/bin/Debug/testOleDb.pdb
+/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.csprojAssemblyReference.cache
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.csproj.CoreCompileInputs.cache
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.exe
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.pdb

@@ -43,7 +43,7 @@ namespace KitBoxSourceCode
 
 		public void AddScratchAngles(string color)
 		{
-			List<string> possibleLength = Oledb.LoadForDistinct("SELECT DISTINCT hauteur FROM Piece WHERE Référence LIKE 'COR%'");
+			List<string> possibleLength = Oledb.LoadForDistinct("SELECT DISTINCT hauteur FROM Piece WHERE Référence LIKE 'COR%DEC'");
 			var closest = int.MaxValue;
 			var minDifference = int.MaxValue;
 

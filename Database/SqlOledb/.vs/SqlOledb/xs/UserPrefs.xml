@@ -4,7 +4,7 @@
     <Files>
       <File FileName="SqlOledb/packages.config" Line="1" Column="1" />
       <File FileName="SqlOledb/app.config" Line="1" Column="1" />
-      <File FileName="SqlOledb/Class1.cs" Line="1" Column="1" />
+      <File FileName="SqlOledb/Class1.cs" Line="74" Column="14" />
       <File FileName="testOleDb/Program.cs" Line="2" Column="8" />
     </Files>
     <Pads>
@@ -16,6 +16,11 @@
             </Node>
             <Node name="testOleDb" expanded="True" />
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="SqlOledb" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
