@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Define commum methods for IStorageBox
+
+using System;
 using SqlOledb;
 
 namespace KitBoxSourceCode

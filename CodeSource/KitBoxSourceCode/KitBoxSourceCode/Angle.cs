@@ -20,12 +20,12 @@ namespace KitBoxSourceCode
             Oledb.Connection();
             length = len;
             angleColor = color;
-            // oledb stock ref fct len & color
+            //Getting the stock reference by the length and color
             stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'COR%' AND hauteur = '" + length.ToString() + "' AND Couleur = '" + angleColor + "'");
             quantity = qty;
             CalculPrice();
 
-            // oledb book 4 angles fct len & color
+            //Updating the reservation in the data base
             Oledb.UpdateReservation(quantity, stockRef);
 
             stock = Oledb.GetDBStock(stockRef);

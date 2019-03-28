@@ -25,6 +25,7 @@ namespace KitBoxSourceCode
             cartPrice += cabinet.GetCabinetPrice;
         }
 
+        //Add customer's profile
         public void AddCartProfile(Profile profile)
         {
             clientProfile = profile;
