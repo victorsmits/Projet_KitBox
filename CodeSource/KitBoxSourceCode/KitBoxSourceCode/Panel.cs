@@ -31,16 +31,16 @@ namespace KitBoxSourceCode
             switch (panelNumber)
             {
                 case 1:
-                    stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAR%' AND hauteur = '"
-                    + height.ToString() + "' AND largeur = '" + length.ToString() + "' AND Couleur = '" + color + "'");
+                    stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAR%' AND hauteur = "
+                    + height.ToString() + " AND largeur = " + length.ToString() + " AND Couleur = '" + color + "'");
                     break;
                 case 2:
-                    stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAG%' AND hauteur = '"
-                    + height.ToString() + "' AND profondeur = '" + length.ToString() + "' AND Couleur = '" + color + "'");
+                    stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAG%' AND hauteur = "
+                    + height.ToString() + " AND profondeur = " + length.ToString() + " AND Couleur = '" + color + "'");
                     break;
                 case 3:
-                    stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAH%' AND largeur = '"
-                    + height.ToString() + "' AND profondeur = '" + length.ToString() + "' AND Couleur = '" + color + "'");
+                    stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAH%' AND largeur = "
+                    + height.ToString() + " AND profondeur = " + length.ToString() + " AND Couleur LIKE '" + color + "'");
                     break;
             }
 

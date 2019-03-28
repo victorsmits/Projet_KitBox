@@ -24,8 +24,8 @@ namespace KitBoxSourceCode
         {
             TheDoorMat = doormat;
             // oledb stock ref fct dimension, doormat
-            stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'POR%' AND largeur = '"
-            + length.ToString() + "' AND hauteur = '" + height.ToString() + "' AND Couleur = '" + doormat + "'");
+            stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'POR%' AND largeur = "
+            + length.ToString() + " AND hauteur = " + height.ToString() + " AND Couleur = '" + doormat + "'");
 
             knops = new Knop(2);
 

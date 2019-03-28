@@ -19,10 +19,10 @@ namespace KitBoxSourceCode
             switch (qty)
             {
                 case 2:
-                    stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRR%' AND largeur = '" + len.ToString() + "'");
+                    stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRR%' AND largeur = " + len.ToString() );
                     break;
                 case 4:
-                    stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRG%' AND profondeur = '" + len.ToString() + "'");
+                    stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TRG%' AND profondeur = " + len.ToString() );
                     break;
             }
 

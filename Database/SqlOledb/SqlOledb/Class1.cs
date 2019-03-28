@@ -82,7 +82,7 @@ namespace SqlOledb
         {
             int currentReservation = int.Parse(SqlRequest("SELECT Reservation FROM Piece WHERE Référence = '" + stockRef + "'"));
             int newReservation = currentReservation + quantity;
-            SqlRequest("UPDATE Piece SET Reservation = '" + newReservation.ToString() + "' WHERE Référence = '" + stockRef + "'");
+            SqlRequest("UPDATE Piece SET Reservation = " + newReservation.ToString() + " WHERE Référence = '" + stockRef + "'");
         }
 
         public static double GetDBPrice(string stockRef)

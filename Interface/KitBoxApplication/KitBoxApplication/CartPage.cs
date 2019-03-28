@@ -48,9 +48,15 @@ namespace KitBoxApplication
 
         private void  deleteButton_Clicked(object sender, EventArgs e)
         {
-            
+            //Get the index of the cabinet from parent of the button
+            Control button = (Control)sender;
+            Control tabPage = button.Parent;
+            string tabName = tabPage.Text;
+            string[] list = tabName.Split(' ');
+            int index = (int.Parse(list[1])-1);
+            cart.DelCabinet(index);
             MessageBox.Show("L'armoire a été supprimé");
-            Create_Layout();
+            Load_Json();
         }
 
         private void Create_Layout()
