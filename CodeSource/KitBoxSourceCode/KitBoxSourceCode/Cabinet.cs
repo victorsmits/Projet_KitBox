@@ -2,59 +2,83 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq.Expressions;
+using SqlOledb;
+
 namespace KitBoxSourceCode
 {
     public class Cabinet
     {
-        private List<CabinetFloor> storageBoxes;
-        private Dictionary<int, IStorageBox> cabinetPartList;
+        private List<CabinetFloor> cabinetFloors;
         private int cabinetHeight;
 
-        private int cabinetPrice = 0;
+        private double cabinetPrice = 0;
 
-        public int GetCabinetPrice => cabinetPrice;
+        public double GetCabinetPrice => cabinetPrice;
         public int GetCabinetHeight => cabinetHeight;
 
-        private List<Angle> angles;
+        private Angle angles;
 
         public Cabinet()
         {
             cabinetHeight = 0;
-            storageBoxes = new List<CabinetFloor>();
-            angles = new List<Angle>();
+            cabinetFloors = new List<CabinetFloor>();
         }
 
         public void AddStorageBox(CabinetFloor storage)
         {
-            storageBoxes.Add(storage);
+            cabinetFloors.Add(storage);
             cabinetPrice += storage.GetFloorPrice;
             cabinetHeight += storage.GetFloorHeight;
         }
 
         public int GetNumber()
         {
-            return storageBoxes.Count;
+            return cabinetFloors.Count;
         }
 
         public void AddAngles(string color)
         {
-            int i = 0;
-            while (i < 4)
-            {
-                angles.Add(new Angle(cabinetHeight, color));
-                i++;
-            }
+            angles = new Angle(cabinetHeight, color, 4);
         }
 
         public string GetPartList()
         {
             string partList = "";
-            foreach (CabinetFloor elem in storageBoxes)
+            foreach (CabinetFloor elem in cabinetFloors)
             {
-                partList += "\"Floor " + storageBoxes.IndexOf(elem) + "\":{" + elem.ShowPieces() + "},";
+                partList += "\"Floor " + cabinetFloors.IndexOf(elem) + "\":{"
+                + elem.ShowPieces() + "},";
             }
+            partList += angles.GetDetails() + "}, \"CabinetPrice\": \"" + cabinetPrice + "\"";
+
             return partList;
         }
 
+        public void DelCabinetFloor(int floor)
+        {
+            cabinetFloors.RemoveAt(floor);
+        }
+
+        public void AddScratchAngles(string color)
+        {
+            List<string> possibleLength = Oledb.LoadForDistinct("SELECT DISTINCT hauteur FROM Piece WHERE Référence LIKE 'COR%'");
+            var closest = int.MaxValue;
+            var minDifference = int.MaxValue;
+
+            foreach (var element in possibleLength)
+            {
+                int elem = int.Parse(element);
+                var difference = Math.Abs((long)elem - cabinetHeight);
+                if (minDifference > difference)
+                {
+                    if (elem > cabinetHeight)
+                    {
+                        minDifference = (int)difference;
+                        closest = elem;
+                    }
+                }
+            }
+            angles = new Angle(closest, color, 4);
+        }
     }
 }

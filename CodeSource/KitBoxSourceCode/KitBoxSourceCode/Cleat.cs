@@ -1,24 +1,23 @@
 ﻿using System;
+using SqlOledb;
+
 namespace KitBoxSourceCode
 {
 	public class Cleat : GenericComponent
 	{
 
-		public Cleat(int Len, int qty) : base(Len, qty)
+		public Cleat(int len, int qty) : base(len, qty)
 		{
-			stockNumber = "1";
+			// oledb stock ref fct len
+			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'TAS%' AND hauteur LIKE '" + len.ToString() + "'");
 			SetPrice();
+			// oledb book fct len et qty
+			Oledb.UpdateReservation(quantity, stockRef);
 		}
 
 		public override string GetDetails()
 		{
-			return "\"Cleat\":{ \"Lenght\": " + lenght + ", \"Stockref\" : " + stockNumber;
-		}
-
-		protected override void SetPrice()
-		{
-			//TODO oledb requete price fct len
-			price = 2;
+			return "\"Cleat\":{ \"Length\": " + length + ", \"Stockref\" : \"" + stockRef + "\"";
 		}
 
 	}

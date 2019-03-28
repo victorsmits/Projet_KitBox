@@ -1,21 +1,24 @@
 ﻿using System;
+using SqlOledb;
+
 namespace KitBoxSourceCode
 {
     public abstract class GenericStorageBox : IStorageBox
     {
-        protected int price;
-        protected int lenght;
+        protected double price;
+        protected int length;
         protected int height;
+        protected string stockRef;
 
         protected GenericStorageBox(int len, int hei)
         {
-            lenght = len;
+            length = len;
             height = hei;
         }
 
         public abstract string GetDetails();
-        protected abstract void SetPrice();
-        public int GetPrice() => price;
+
+        public double GetPrice() => price;
         public int GetHeight() => height;
     }
 }

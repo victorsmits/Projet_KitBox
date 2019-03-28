@@ -34,8 +34,6 @@
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.labelHeight = new System.Windows.Forms.Label();
             this.comboBoxHeight = new System.Windows.Forms.ComboBox();
-            this.labelHelp = new System.Windows.Forms.Label();
-            this.labelExplanation = new System.Windows.Forms.Label();
             this.labelDoorYesNoIf1 = new System.Windows.Forms.Label();
             this.labelColorS1 = new System.Windows.Forms.Label();
             this.labelColorS2 = new System.Windows.Forms.Label();
@@ -131,6 +129,14 @@
             this.radioButtonYesIf2 = new System.Windows.Forms.RadioButton();
             this.radioButtonNoIf2 = new System.Windows.Forms.RadioButton();
             this.labelHeightBox = new System.Windows.Forms.Label();
+            this.labelBoxHeight = new System.Windows.Forms.Label();
+            this.panelShelf1 = new System.Windows.Forms.Panel();
+            this.panelShelf2 = new System.Windows.Forms.Panel();
+            this.panelShelf3 = new System.Windows.Forms.Panel();
+            this.panelShelf4 = new System.Windows.Forms.Panel();
+            this.panelShelf5 = new System.Windows.Forms.Panel();
+            this.panelShelf6 = new System.Windows.Forms.Panel();
+            this.panelShelf7 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.panelColorChoice.SuspendLayout();
             this.panelColorChoiceAll.SuspendLayout();
@@ -155,6 +161,12 @@
             this.panelYesNoBox1.SuspendLayout();
             this.panelDoorChoiceBox1.SuspendLayout();
             this.panelYesNoIf2.SuspendLayout();
+            this.panelShelf1.SuspendLayout();
+            this.panelShelf2.SuspendLayout();
+            this.panelShelf3.SuspendLayout();
+            this.panelShelf4.SuspendLayout();
+            this.panelShelf5.SuspendLayout();
+            this.panelShelf6.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -176,7 +188,7 @@
             // 
             this.labelQuantityBox.AutoSize = true;
             this.labelQuantityBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQuantityBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelQuantityBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelQuantityBox.Location = new System.Drawing.Point(30, 53);
             this.labelQuantityBox.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelQuantityBox.Name = "labelQuantityBox";
@@ -217,7 +229,7 @@
             // 
             this.labelHeight.AutoSize = true;
             this.labelHeight.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelHeight.Location = new System.Drawing.Point(30, 78);
             this.labelHeight.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelHeight.Name = "labelHeight";
@@ -227,6 +239,7 @@
             // 
             // comboBoxHeight
             // 
+            this.comboBoxHeight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxHeight.FormattingEnabled = true;
             this.comboBoxHeight.Items.AddRange(new object[] {
             "Brun",
@@ -240,37 +253,11 @@
             this.comboBoxHeight.TabIndex = 17;
             this.comboBoxHeight.SelectedIndexChanged += new System.EventHandler(this.comboBoxHeight_SelectedIndexChanged);
             // 
-            // labelHelp
-            // 
-            this.labelHelp.AutoSize = true;
-            this.labelHelp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.labelHelp.Location = new System.Drawing.Point(734, 98);
-            this.labelHelp.Name = "labelHelp";
-            this.labelHelp.Size = new System.Drawing.Size(109, 47);
-            this.labelHelp.TabIndex = 18;
-            this.labelHelp.Text = "Help";
-            // 
-            // labelExplanation
-            // 
-            this.labelExplanation.AllowDrop = true;
-            this.labelExplanation.AutoSize = true;
-            this.labelExplanation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelExplanation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelExplanation.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExplanation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelExplanation.Location = new System.Drawing.Point(646, 143);
-            this.labelExplanation.MaximumSize = new System.Drawing.Size(250, 0);
-            this.labelExplanation.Name = "labelExplanation";
-            this.labelExplanation.Size = new System.Drawing.Size(250, 594);
-            this.labelExplanation.TabIndex = 19;
-            this.labelExplanation.Text = resources.GetString("labelExplanation.Text");
-            // 
             // labelDoorYesNoIf1
             // 
             this.labelDoorYesNoIf1.AutoSize = true;
             this.labelDoorYesNoIf1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorYesNoIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorYesNoIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorYesNoIf1.Location = new System.Drawing.Point(8, 53);
             this.labelDoorYesNoIf1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorYesNoIf1.Name = "labelDoorYesNoIf1";
@@ -282,7 +269,7 @@
             // 
             this.labelColorS1.AutoSize = true;
             this.labelColorS1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorS1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorS1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorS1.Location = new System.Drawing.Point(8, 4);
             this.labelColorS1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS1.Name = "labelColorS1";
@@ -294,7 +281,7 @@
             // 
             this.labelColorS2.AutoSize = true;
             this.labelColorS2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorS2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorS2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorS2.Location = new System.Drawing.Point(8, 29);
             this.labelColorS2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS2.Name = "labelColorS2";
@@ -319,7 +306,7 @@
             // 
             this.labelColorS3.AutoSize = true;
             this.labelColorS3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorS3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorS3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorS3.Location = new System.Drawing.Point(8, 54);
             this.labelColorS3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS3.Name = "labelColorS3";
@@ -332,7 +319,7 @@
             // 
             this.labelColorS7.AutoSize = true;
             this.labelColorS7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorS7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorS7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorS7.Location = new System.Drawing.Point(419, 4);
             this.labelColorS7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS7.Name = "labelColorS7";
@@ -345,7 +332,7 @@
             // 
             this.labelColorS6.AutoSize = true;
             this.labelColorS6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorS6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorS6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorS6.Location = new System.Drawing.Point(213, 54);
             this.labelColorS6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorS6.Name = "labelColorS6";
@@ -369,6 +356,7 @@
             // 
             // comboBoxColorS1
             // 
+            this.comboBoxColorS1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS1.FormattingEnabled = true;
             this.comboBoxColorS1.Items.AddRange(new object[] {
             "Brun",
@@ -378,9 +366,11 @@
             this.comboBoxColorS1.Name = "comboBoxColorS1";
             this.comboBoxColorS1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS1.TabIndex = 28;
+            this.comboBoxColorS1.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS1_SelectedIndexChanged);
             // 
             // comboBoxColorS6
             // 
+            this.comboBoxColorS6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS6.FormattingEnabled = true;
             this.comboBoxColorS6.Items.AddRange(new object[] {
             "Brun",
@@ -391,9 +381,11 @@
             this.comboBoxColorS6.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS6.TabIndex = 29;
             this.comboBoxColorS6.Visible = false;
+            this.comboBoxColorS6.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS6_SelectedIndexChanged);
             // 
             // comboBoxColorS5
             // 
+            this.comboBoxColorS5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS5.FormattingEnabled = true;
             this.comboBoxColorS5.Items.AddRange(new object[] {
             "Brun",
@@ -404,9 +396,11 @@
             this.comboBoxColorS5.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS5.TabIndex = 30;
             this.comboBoxColorS5.Visible = false;
+            this.comboBoxColorS5.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS5_SelectedIndexChanged);
             // 
             // comboBoxColorS4
             // 
+            this.comboBoxColorS4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS4.FormattingEnabled = true;
             this.comboBoxColorS4.Items.AddRange(new object[] {
             "Brun",
@@ -417,9 +411,11 @@
             this.comboBoxColorS4.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS4.TabIndex = 31;
             this.comboBoxColorS4.Visible = false;
+            this.comboBoxColorS4.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS4_SelectedIndexChanged);
             // 
             // comboBoxColorS3
             // 
+            this.comboBoxColorS3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS3.FormattingEnabled = true;
             this.comboBoxColorS3.Items.AddRange(new object[] {
             "Brun",
@@ -430,9 +426,11 @@
             this.comboBoxColorS3.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS3.TabIndex = 32;
             this.comboBoxColorS3.Visible = false;
+            this.comboBoxColorS3.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS3_SelectedIndexChanged);
             // 
             // comboBoxColorS2
             // 
+            this.comboBoxColorS2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS2.FormattingEnabled = true;
             this.comboBoxColorS2.Items.AddRange(new object[] {
             "Brun",
@@ -442,9 +440,11 @@
             this.comboBoxColorS2.Name = "comboBoxColorS2";
             this.comboBoxColorS2.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS2.TabIndex = 33;
+            this.comboBoxColorS2.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS2_SelectedIndexChanged);
             // 
             // comboBoxColorS7
             // 
+            this.comboBoxColorS7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorS7.FormattingEnabled = true;
             this.comboBoxColorS7.Items.AddRange(new object[] {
             "Brun",
@@ -455,12 +455,13 @@
             this.comboBoxColorS7.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS7.TabIndex = 34;
             this.comboBoxColorS7.Visible = false;
+            this.comboBoxColorS7.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS7_SelectedIndexChanged);
             // 
             // labelColorQuestions
             // 
             this.labelColorQuestions.AutoSize = true;
             this.labelColorQuestions.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorQuestions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorQuestions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorQuestions.Location = new System.Drawing.Point(24, 4);
             this.labelColorQuestions.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorQuestions.Name = "labelColorQuestions";
@@ -508,6 +509,7 @@
             // 
             // comboBoxColorSA
             // 
+            this.comboBoxColorSA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorSA.FormattingEnabled = true;
             this.comboBoxColorSA.Items.AddRange(new object[] {
             "Brun",
@@ -517,12 +519,13 @@
             this.comboBoxColorSA.Name = "comboBoxColorSA";
             this.comboBoxColorSA.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorSA.TabIndex = 39;
+            this.comboBoxColorSA.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorSA_SelectedIndexChanged);
             // 
             // labelColorAngles
             // 
             this.labelColorAngles.AutoSize = true;
             this.labelColorAngles.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorAngles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorAngles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorAngles.Location = new System.Drawing.Point(30, 153);
             this.labelColorAngles.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorAngles.Name = "labelColorAngles";
@@ -532,6 +535,7 @@
             // 
             // comboBoxColorAngles
             // 
+            this.comboBoxColorAngles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorAngles.FormattingEnabled = true;
             this.comboBoxColorAngles.Items.AddRange(new object[] {
             "Brun",
@@ -558,6 +562,7 @@
             this.button2.TabIndex = 47;
             this.button2.Text = "Add To Cart";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panelColorChoice
             // 
@@ -653,6 +658,7 @@
             // 
             // comboBoxColorIf1
             // 
+            this.comboBoxColorIf1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColorIf1.FormattingEnabled = true;
             this.comboBoxColorIf1.Items.AddRange(new object[] {
             "Brun",
@@ -662,6 +668,7 @@
             this.comboBoxColorIf1.Name = "comboBoxColorIf1";
             this.comboBoxColorIf1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorIf1.TabIndex = 40;
+            this.comboBoxColorIf1.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorIf1_SelectedIndexChanged);
             // 
             // panelDoorMaterial
             // 
@@ -675,6 +682,7 @@
             // 
             // comboBoxDoorMatIf1
             // 
+            this.comboBoxDoorMatIf1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatIf1.FormattingEnabled = true;
             this.comboBoxDoorMatIf1.Items.AddRange(new object[] {
             "Brun",
@@ -686,12 +694,13 @@
             this.comboBoxDoorMatIf1.Name = "comboBoxDoorMatIf1";
             this.comboBoxDoorMatIf1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatIf1.TabIndex = 43;
+            this.comboBoxDoorMatIf1.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatIf1_SelectedIndexChanged);
             // 
             // labelDoorMatIf1
             // 
             this.labelDoorMatIf1.AutoSize = true;
             this.labelDoorMatIf1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatIf1.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatIf1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatIf1.Name = "labelDoorMatIf1";
@@ -703,7 +712,7 @@
             // 
             this.labelColorBoxIf1.AutoSize = true;
             this.labelColorBoxIf1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColorBoxIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelColorBoxIf1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelColorBoxIf1.Location = new System.Drawing.Point(8, 4);
             this.labelColorBoxIf1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelColorBoxIf1.Name = "labelColorBoxIf1";
@@ -715,7 +724,7 @@
             // 
             this.labelWidth.AutoSize = true;
             this.labelWidth.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWidth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelWidth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelWidth.Location = new System.Drawing.Point(30, 103);
             this.labelWidth.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelWidth.Name = "labelWidth";
@@ -727,7 +736,7 @@
             // 
             this.labelDepth.AutoSize = true;
             this.labelDepth.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDepth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDepth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDepth.Location = new System.Drawing.Point(30, 128);
             this.labelDepth.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDepth.Name = "labelDepth";
@@ -737,6 +746,7 @@
             // 
             // comboBoxWidth
             // 
+            this.comboBoxWidth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWidth.FormattingEnabled = true;
             this.comboBoxWidth.Items.AddRange(new object[] {
             "Brun",
@@ -751,6 +761,7 @@
             // 
             // comboBoxDepth
             // 
+            this.comboBoxDepth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDepth.FormattingEnabled = true;
             this.comboBoxDepth.Items.AddRange(new object[] {
             "Brun",
@@ -767,7 +778,7 @@
             // 
             this.labelDoorBox7.AutoSize = true;
             this.labelDoorBox7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox7.Location = new System.Drawing.Point(8, 166);
             this.labelDoorBox7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox7.Name = "labelDoorBox7";
@@ -802,7 +813,7 @@
             // 
             this.radioButtonNoBox7.AutoSize = true;
             this.radioButtonNoBox7.Checked = true;
-            this.radioButtonNoBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox7.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox7.Name = "radioButtonNoBox7";
             this.radioButtonNoBox7.Size = new System.Drawing.Size(91, 38);
@@ -824,6 +835,7 @@
             // 
             // comboBoxDoorMatBox7
             // 
+            this.comboBoxDoorMatBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox7.FormattingEnabled = true;
             this.comboBoxDoorMatBox7.Items.AddRange(new object[] {
             "Brun",
@@ -835,12 +847,13 @@
             this.comboBoxDoorMatBox7.Name = "comboBoxDoorMatBox7";
             this.comboBoxDoorMatBox7.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox7.TabIndex = 43;
+            this.comboBoxDoorMatBox7.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox7_SelectedIndexChanged);
             // 
             // labelDoorMatBox7
             // 
             this.labelDoorMatBox7.AutoSize = true;
             this.labelDoorMatBox7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox7.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox7.Name = "labelDoorMatBox7";
@@ -852,7 +865,7 @@
             // 
             this.labelDoorBox6.AutoSize = true;
             this.labelDoorBox6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox6.Location = new System.Drawing.Point(8, 139);
             this.labelDoorBox6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox6.Name = "labelDoorBox6";
@@ -887,7 +900,7 @@
             // 
             this.radioButtonNoBox6.AutoSize = true;
             this.radioButtonNoBox6.Checked = true;
-            this.radioButtonNoBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox6.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox6.Name = "radioButtonNoBox6";
             this.radioButtonNoBox6.Size = new System.Drawing.Size(91, 38);
@@ -909,6 +922,7 @@
             // 
             // comboBoxDoorMatBox6
             // 
+            this.comboBoxDoorMatBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox6.FormattingEnabled = true;
             this.comboBoxDoorMatBox6.Items.AddRange(new object[] {
             "Brun",
@@ -920,12 +934,13 @@
             this.comboBoxDoorMatBox6.Name = "comboBoxDoorMatBox6";
             this.comboBoxDoorMatBox6.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox6.TabIndex = 43;
+            this.comboBoxDoorMatBox6.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox6_SelectedIndexChanged);
             // 
             // labelDoorMatBox6
             // 
             this.labelDoorMatBox6.AutoSize = true;
             this.labelDoorMatBox6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox6.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox6.Name = "labelDoorMatBox6";
@@ -972,7 +987,7 @@
             // 
             this.radioButtonNoBox5.AutoSize = true;
             this.radioButtonNoBox5.Checked = true;
-            this.radioButtonNoBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox5.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox5.Name = "radioButtonNoBox5";
             this.radioButtonNoBox5.Size = new System.Drawing.Size(91, 38);
@@ -994,6 +1009,7 @@
             // 
             // comboBoxDoorMatBox5
             // 
+            this.comboBoxDoorMatBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox5.FormattingEnabled = true;
             this.comboBoxDoorMatBox5.Items.AddRange(new object[] {
             "Brun",
@@ -1005,12 +1021,13 @@
             this.comboBoxDoorMatBox5.Name = "comboBoxDoorMatBox5";
             this.comboBoxDoorMatBox5.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox5.TabIndex = 43;
+            this.comboBoxDoorMatBox5.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox5_SelectedIndexChanged);
             // 
             // labelDoorMatBox5
             // 
             this.labelDoorMatBox5.AutoSize = true;
             this.labelDoorMatBox5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox5.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox5.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox5.Name = "labelDoorMatBox5";
@@ -1022,7 +1039,7 @@
             // 
             this.labelDoorBox4.AutoSize = true;
             this.labelDoorBox4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox4.Location = new System.Drawing.Point(8, 85);
             this.labelDoorBox4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox4.Name = "labelDoorBox4";
@@ -1057,7 +1074,7 @@
             // 
             this.radioButtonNoBox4.AutoSize = true;
             this.radioButtonNoBox4.Checked = true;
-            this.radioButtonNoBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox4.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox4.Name = "radioButtonNoBox4";
             this.radioButtonNoBox4.Size = new System.Drawing.Size(91, 38);
@@ -1079,6 +1096,7 @@
             // 
             // comboBoxDoorMatBox4
             // 
+            this.comboBoxDoorMatBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox4.FormattingEnabled = true;
             this.comboBoxDoorMatBox4.Items.AddRange(new object[] {
             "Brun",
@@ -1090,12 +1108,13 @@
             this.comboBoxDoorMatBox4.Name = "comboBoxDoorMatBox4";
             this.comboBoxDoorMatBox4.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox4.TabIndex = 43;
+            this.comboBoxDoorMatBox4.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox4_SelectedIndexChanged);
             // 
             // labelDoorMatBox4
             // 
             this.labelDoorMatBox4.AutoSize = true;
             this.labelDoorMatBox4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox4.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox4.Name = "labelDoorMatBox4";
@@ -1107,7 +1126,7 @@
             // 
             this.labelDoorBox3.AutoSize = true;
             this.labelDoorBox3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox3.Location = new System.Drawing.Point(8, 58);
             this.labelDoorBox3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox3.Name = "labelDoorBox3";
@@ -1142,7 +1161,7 @@
             // 
             this.radioButtonNoBox3.AutoSize = true;
             this.radioButtonNoBox3.Checked = true;
-            this.radioButtonNoBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox3.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox3.Name = "radioButtonNoBox3";
             this.radioButtonNoBox3.Size = new System.Drawing.Size(91, 38);
@@ -1164,6 +1183,7 @@
             // 
             // comboBoxDoorMatBox3
             // 
+            this.comboBoxDoorMatBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox3.FormattingEnabled = true;
             this.comboBoxDoorMatBox3.Items.AddRange(new object[] {
             "Brun",
@@ -1175,12 +1195,13 @@
             this.comboBoxDoorMatBox3.Name = "comboBoxDoorMatBox3";
             this.comboBoxDoorMatBox3.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox3.TabIndex = 43;
+            this.comboBoxDoorMatBox3.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox3_SelectedIndexChanged);
             // 
             // labelDoorMatBox3
             // 
             this.labelDoorMatBox3.AutoSize = true;
             this.labelDoorMatBox3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox3.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox3.Name = "labelDoorMatBox3";
@@ -1232,7 +1253,7 @@
             // 
             this.labelDoorBox2.AutoSize = true;
             this.labelDoorBox2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox2.Location = new System.Drawing.Point(8, 31);
             this.labelDoorBox2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox2.Name = "labelDoorBox2";
@@ -1279,7 +1300,7 @@
             // 
             this.labelDoorBox1.AutoSize = true;
             this.labelDoorBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorBox1.Location = new System.Drawing.Point(8, 4);
             this.labelDoorBox1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorBox1.Name = "labelDoorBox1";
@@ -1299,6 +1320,7 @@
             // 
             // comboBoxDoorMatBox2
             // 
+            this.comboBoxDoorMatBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox2.FormattingEnabled = true;
             this.comboBoxDoorMatBox2.Items.AddRange(new object[] {
             "Brun",
@@ -1310,6 +1332,7 @@
             this.comboBoxDoorMatBox2.Name = "comboBoxDoorMatBox2";
             this.comboBoxDoorMatBox2.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox2.TabIndex = 43;
+            this.comboBoxDoorMatBox2.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox2_SelectedIndexChanged);
             // 
             // labelDoorMatBox2
             // 
@@ -1348,7 +1371,7 @@
             // 
             this.radioButtonNoBox1.AutoSize = true;
             this.radioButtonNoBox1.Checked = true;
-            this.radioButtonNoBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoBox1.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoBox1.Name = "radioButtonNoBox1";
             this.radioButtonNoBox1.Size = new System.Drawing.Size(91, 38);
@@ -1370,6 +1393,7 @@
             // 
             // comboBoxDoorMatBox1
             // 
+            this.comboBoxDoorMatBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoorMatBox1.FormattingEnabled = true;
             this.comboBoxDoorMatBox1.Items.AddRange(new object[] {
             "Brun",
@@ -1381,12 +1405,13 @@
             this.comboBoxDoorMatBox1.Name = "comboBoxDoorMatBox1";
             this.comboBoxDoorMatBox1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox1.TabIndex = 43;
+            this.comboBoxDoorMatBox1.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox1_SelectedIndexChanged);
             // 
             // labelDoorMatBox1
             // 
             this.labelDoorMatBox1.AutoSize = true;
             this.labelDoorMatBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoorMatBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDoorMatBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelDoorMatBox1.Location = new System.Drawing.Point(10, 4);
             this.labelDoorMatBox1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelDoorMatBox1.Name = "labelDoorMatBox1";
@@ -1398,7 +1423,7 @@
             // 
             this.labelYesNoIf2.AutoSize = true;
             this.labelYesNoIf2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelYesNoIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelYesNoIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.labelYesNoIf2.Location = new System.Drawing.Point(8, 4);
             this.labelYesNoIf2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelYesNoIf2.Name = "labelYesNoIf2";
@@ -1418,7 +1443,7 @@
             // radioButtonYesIf2
             // 
             this.radioButtonYesIf2.AutoSize = true;
-            this.radioButtonYesIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonYesIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonYesIf2.Location = new System.Drawing.Point(3, 4);
             this.radioButtonYesIf2.Name = "radioButtonYesIf2";
             this.radioButtonYesIf2.Size = new System.Drawing.Size(99, 38);
@@ -1431,7 +1456,7 @@
             // 
             this.radioButtonNoIf2.AutoSize = true;
             this.radioButtonNoIf2.Checked = true;
-            this.radioButtonNoIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.radioButtonNoIf2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.radioButtonNoIf2.Location = new System.Drawing.Point(55, 4);
             this.radioButtonNoIf2.Name = "radioButtonNoIf2";
             this.radioButtonNoIf2.Size = new System.Drawing.Size(91, 38);
@@ -1452,11 +1477,113 @@
             this.labelHeightBox.Size = new System.Drawing.Size(0, 40);
             this.labelHeightBox.TabIndex = 62;
             // 
+            // labelBoxHeight
+            // 
+            this.labelBoxHeight.AutoSize = true;
+            this.labelBoxHeight.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBoxHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
+            this.labelBoxHeight.Location = new System.Drawing.Point(350, 78);
+            this.labelBoxHeight.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.labelBoxHeight.Name = "labelBoxHeight";
+            this.labelBoxHeight.Size = new System.Drawing.Size(0, 40);
+            this.labelBoxHeight.TabIndex = 63;
+            // 
+            // panelShelf1
+            // 
+            this.panelShelf1.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf1.BackgroundImage")));
+            this.panelShelf1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf1.Controls.Add(this.panelShelf2);
+            this.panelShelf1.Location = new System.Drawing.Point(677, 53);
+            this.panelShelf1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf1.Name = "panelShelf1";
+            this.panelShelf1.Size = new System.Drawing.Size(175, 420);
+            this.panelShelf1.TabIndex = 78;
+            // 
+            // panelShelf2
+            // 
+            this.panelShelf2.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf2.BackgroundImage")));
+            this.panelShelf2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf2.Controls.Add(this.panelShelf3);
+            this.panelShelf2.Location = new System.Drawing.Point(0, -52);
+            this.panelShelf2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf2.Name = "panelShelf2";
+            this.panelShelf2.Size = new System.Drawing.Size(175, 420);
+            this.panelShelf2.TabIndex = 11;
+            this.panelShelf2.Visible = false;
+            // 
+            // panelShelf3
+            // 
+            this.panelShelf3.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf3.BackgroundImage")));
+            this.panelShelf3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf3.Controls.Add(this.panelShelf4);
+            this.panelShelf3.Location = new System.Drawing.Point(0, -52);
+            this.panelShelf3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf3.Name = "panelShelf3";
+            this.panelShelf3.Size = new System.Drawing.Size(175, 420);
+            this.panelShelf3.TabIndex = 10;
+            this.panelShelf3.Visible = false;
+            // 
+            // panelShelf4
+            // 
+            this.panelShelf4.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf4.BackgroundImage")));
+            this.panelShelf4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf4.Controls.Add(this.panelShelf5);
+            this.panelShelf4.Location = new System.Drawing.Point(0, -52);
+            this.panelShelf4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf4.Name = "panelShelf4";
+            this.panelShelf4.Size = new System.Drawing.Size(175, 420);
+            this.panelShelf4.TabIndex = 10;
+            this.panelShelf4.Visible = false;
+            // 
+            // panelShelf5
+            // 
+            this.panelShelf5.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf5.BackgroundImage")));
+            this.panelShelf5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf5.Controls.Add(this.panelShelf6);
+            this.panelShelf5.Location = new System.Drawing.Point(0, -52);
+            this.panelShelf5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf5.Name = "panelShelf5";
+            this.panelShelf5.Size = new System.Drawing.Size(175, 420);
+            this.panelShelf5.TabIndex = 10;
+            this.panelShelf5.Visible = false;
+            // 
+            // panelShelf6
+            // 
+            this.panelShelf6.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf6.BackgroundImage")));
+            this.panelShelf6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf6.Controls.Add(this.panelShelf7);
+            this.panelShelf6.Location = new System.Drawing.Point(0, -52);
+            this.panelShelf6.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf6.Name = "panelShelf6";
+            this.panelShelf6.Size = new System.Drawing.Size(175, 420);
+            this.panelShelf6.TabIndex = 11;
+            this.panelShelf6.Visible = false;
+            // 
+            // panelShelf7
+            // 
+            this.panelShelf7.BackColor = System.Drawing.Color.Transparent;
+            this.panelShelf7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShelf7.BackgroundImage")));
+            this.panelShelf7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShelf7.Location = new System.Drawing.Point(0, -52);
+            this.panelShelf7.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelShelf7.Name = "panelShelf7";
+            this.panelShelf7.Size = new System.Drawing.Size(175, 420);
+            this.panelShelf7.TabIndex = 11;
+            this.panelShelf7.Visible = false;
+            // 
             // BoxStandard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.Controls.Add(this.panelShelf1);
+            this.Controls.Add(this.labelBoxHeight);
             this.Controls.Add(this.labelHeightBox);
             this.Controls.Add(this.panelDoorChoiceMultiple);
             this.Controls.Add(this.comboBoxDepth);
@@ -1468,8 +1595,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBoxColorAngles);
             this.Controls.Add(this.labelColorAngles);
-            this.Controls.Add(this.labelExplanation);
-            this.Controls.Add(this.labelHelp);
             this.Controls.Add(this.comboBoxHeight);
             this.Controls.Add(this.labelHeight);
             this.Controls.Add(this.numericUpDownQuantity);
@@ -1527,6 +1652,12 @@
             this.panelDoorChoiceBox1.PerformLayout();
             this.panelYesNoIf2.ResumeLayout(false);
             this.panelYesNoIf2.PerformLayout();
+            this.panelShelf1.ResumeLayout(false);
+            this.panelShelf2.ResumeLayout(false);
+            this.panelShelf3.ResumeLayout(false);
+            this.panelShelf4.ResumeLayout(false);
+            this.panelShelf5.ResumeLayout(false);
+            this.panelShelf6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1539,8 +1670,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
         private System.Windows.Forms.Label labelHeight;
         private System.Windows.Forms.ComboBox comboBoxHeight;
-        private System.Windows.Forms.Label labelHelp;
-        private System.Windows.Forms.Label labelExplanation;
         private System.Windows.Forms.Label labelDoorYesNoIf1;
         private System.Windows.Forms.Label labelColorS1;
         private System.Windows.Forms.Label labelColorS2;
@@ -1636,5 +1765,13 @@
         private System.Windows.Forms.ComboBox comboBoxDoorMatIf1;
         private System.Windows.Forms.Label labelDoorMatIf1;
         private System.Windows.Forms.Label labelHeightBox;
+        private System.Windows.Forms.Label labelBoxHeight;
+        private System.Windows.Forms.Panel panelShelf1;
+        private System.Windows.Forms.Panel panelShelf2;
+        private System.Windows.Forms.Panel panelShelf3;
+        private System.Windows.Forms.Panel panelShelf4;
+        private System.Windows.Forms.Panel panelShelf5;
+        private System.Windows.Forms.Panel panelShelf6;
+        private System.Windows.Forms.Panel panelShelf7;
     }
 }

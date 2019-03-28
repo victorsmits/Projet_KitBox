@@ -73,6 +73,13 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="KitBoxSourceCode, Version=1.0.7011.41054, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -116,12 +123,6 @@
     <Compile Include="CreationExplanation.Designer.cs">
       <DependentUpon>CreationExplanation.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreationScratchInside.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CreationScratchInside.Designer.cs">
-      <DependentUpon>CreationScratchInside.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,9 +152,6 @@
     <EmbeddedResource Include="CreationExplanation.resx">
       <DependentUpon>CreationExplanation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreationScratchInside.resx">
-      <DependentUpon>CreationScratchInside.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,17 +160,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -181,6 +181,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlancBlanc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blancbrun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blancNoDoor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blancverre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brunblanc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brunBrun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brunNoDoor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brunverre.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
