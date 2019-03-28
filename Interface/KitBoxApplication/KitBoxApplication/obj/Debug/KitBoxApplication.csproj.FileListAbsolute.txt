@@ -130,7 +130,6 @@ C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBo
 C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.pdb
 C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll.config
-C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache
 C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxCreationScratch.resources
 C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.BoxStandard.resources
 C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.CartPage.resources

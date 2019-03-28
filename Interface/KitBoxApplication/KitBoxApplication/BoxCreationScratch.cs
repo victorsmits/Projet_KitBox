@@ -740,8 +740,8 @@ namespace KitBoxApplication
         {
 
             int height = Int32.Parse(comboBoxHeight1.SelectedItem.ToString());
-            int width = Int32.Parse(comboBoxWidth1.SelectedItem.ToString());
-            int depth = Int32.Parse(comboBoxDepth1.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
             string color = comboBoxColor1.Text;
             string doorMat = null;
             if (radioButtonYes1.Checked == true)
@@ -756,8 +756,8 @@ namespace KitBoxApplication
         {
 
             int height = Int32.Parse(comboBoxHeight2.SelectedItem.ToString());
-            int width = Int32.Parse(comboBoxWidth2.SelectedItem.ToString());
-            int depth = Int32.Parse(comboBoxDepth2.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
             string color = comboBoxColor2.Text;
             string doorMat = null;
             if (radioButtonYes2.Checked == true)
@@ -772,8 +772,8 @@ namespace KitBoxApplication
         {
 
             int height = Int32.Parse(comboBoxHeight3.SelectedItem.ToString());
-            int width = Int32.Parse(comboBoxWidth3.SelectedItem.ToString());
-            int depth = Int32.Parse(comboBoxDepth3.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
             string color = comboBoxColor3.Text;
             string doorMat = null;
             if (radioButtonYes3.Checked == true)
@@ -788,8 +788,8 @@ namespace KitBoxApplication
         {
 
             int height = Int32.Parse(comboBoxHeight4.SelectedItem.ToString());
-            int width = Int32.Parse(comboBoxWidth4.SelectedItem.ToString());
-            int depth = Int32.Parse(comboBoxDepth4.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
             string color = comboBoxColor4.Text;
             string doorMat = null;
             if (radioButtonYes4.Checked == true)
@@ -804,8 +804,8 @@ namespace KitBoxApplication
         {
 
             int height = Int32.Parse(comboBoxHeight5.SelectedItem.ToString());
-            int width = Int32.Parse(comboBoxWidth5.SelectedItem.ToString());
-            int depth = Int32.Parse(comboBoxDepth5.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
             string color = comboBoxColor5.Text;
             string doorMat = null;
             if (radioButtonYes5.Checked == true)
@@ -820,8 +820,8 @@ namespace KitBoxApplication
         {
 
             int height = Int32.Parse(comboBoxHeight6.SelectedItem.ToString());
-            int width = Int32.Parse(comboBoxWidth6.SelectedItem.ToString());
-            int depth = Int32.Parse(comboBoxDepth6.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
             string color = comboBoxColor6.Text;
             string doorMat = null;
             if (radioButtonYes6.Checked == true)
@@ -836,8 +836,8 @@ namespace KitBoxApplication
         {
 
             int height = Int32.Parse(comboBoxHeight7.SelectedItem.ToString());
-            int width = Int32.Parse(comboBoxWidth7.SelectedItem.ToString());
-            int depth = Int32.Parse(comboBoxDepth7.SelectedItem.ToString());
+            int width = Int32.Parse(comboBoxWidth.SelectedItem.ToString());
+            int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
             string color = comboBoxColor7.Text;
             string doorMat = null;
             if (radioButtonYes7.Checked == true)
