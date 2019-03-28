@@ -63,11 +63,11 @@
       <FileName>DoubleDoors.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="KitBoxSourceCode.GenericCompoment">
+  <Class Name="KitBoxSourceCode.GenericComponent">
     <Position X="4.5" Y="3.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAQAAAQAAQAAAAABEAAAAAAAAAAAAEGAAAAAAAAAAAA=</HashCode>
-      <FileName>GenericCompoment.cs</FileName>
+      <FileName>GenericComponent.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.216" />
   </Class>

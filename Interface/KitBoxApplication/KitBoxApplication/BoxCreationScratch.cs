@@ -21,8 +21,8 @@ namespace KitBoxApplication
             InitializeComponent();
 
             // enables design of tabheader
-            this.tabPage.DrawMode = TabDrawMode.OwnerDrawFixed;
-            this.tabPage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabPageBox1_DrawItem);
+            this.tabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
+            this.tabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabPageBox1_DrawItem);
 
             EnablePage(tabPageBox2, false);
             EnablePage(tabPageBox3, false);
@@ -58,7 +58,6 @@ namespace KitBoxApplication
             // radio buttons in same group added to same function - group : --panelYesNoIf7--
             radioButtonYes7.CheckedChanged += new EventHandler(radioButtonsYesNo_CheckedChangedPanel1);
             radioButtonNo7.CheckedChanged += new EventHandler(radioButtonsYesNo_CheckedChangedPanel1);
-
         }
 
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
@@ -112,6 +111,42 @@ namespace KitBoxApplication
             }
         }
 
+        // function model for height loaddata
+        private void LoadDataGeneralForHeight(System.Windows.Forms.ComboBox[] m, string n)
+        {
+            foreach (System.Windows.Forms.ComboBox i in m)
+            {
+                i.Items.Clear();
+            }
+            try
+            {
+                string q = n;
+                cmd.CommandText = q; // execution of a SQL instruction
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        foreach (System.Windows.Forms.ComboBox i in m)
+                        {
+                            string column = dr[0].ToString();
+                            int internalHeight = int.Parse(column);
+                            int externalHeigth = internalHeight + 4;
+                            i.Items.Add(externalHeigth.ToString());
+                        }
+                    }
+                }
+                dr.Close();
+                cn.Close();
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
         // Loading Angle Color data from data base
         private void LoadDataAngleColor()
         {
@@ -124,13 +159,7 @@ namespace KitBoxApplication
         private void LoadDataWidth()
         {
             System.Windows.Forms.ComboBox[] list = {
-                comboBoxWidth1,
-                comboBoxWidth2,
-                comboBoxWidth3,
-                comboBoxWidth4,
-                comboBoxWidth5,
-                comboBoxWidth6,
-                comboBoxWidth7
+                comboBoxWidth,
             };
             LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAG%' ");
         }
@@ -139,61 +168,16 @@ namespace KitBoxApplication
         private void LoadDataWidthDoor()
         {
             System.Windows.Forms.ComboBox[] listprov = {
-                comboBoxWidth1,
-                comboBoxWidth2,
-                comboBoxWidth3,
-                comboBoxWidth4,
-                comboBoxWidth5,
-                comboBoxWidth6,
-                comboBoxWidth7
+                comboBoxWidth,
             };
-            System.Windows.Forms.RadioButton[] radioList = {
-                radioButtonYes1,
-                radioButtonYes2,
-                radioButtonYes3,
-                radioButtonYes4,
-                radioButtonYes5,
-                radioButtonYes6,
-                radioButtonYes7,
-            };
-            // initialization list size
-            int qty = 0;
-            foreach (System.Windows.Forms.RadioButton radioElem in radioList)
-            {
-                if (radioElem.Checked)
-                {
-                    qty++;
-                }
-            }
-            System.Windows.Forms.ComboBox[] list = new System.Windows.Forms.ComboBox[qty];
-
-            // adding the comboboxWidth for which we have to change available items
-            int i = 0;  // index listProv
-            int j = 0;  // index list
-            foreach (System.Windows.Forms.RadioButton radioElem in radioList)
-            {
-                if (radioElem.Checked)
-                {
-                    list[j] = listprov[i];
-                    j++;
-                }
-                i++;
-            }
-
-            LoadDataGeneral(list, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PAR%100BL' OR référence LIKE 'PAR%120BL' OR référence LIKE 'PAR%80BL' OR référence LIKE 'PAR%62BL'");
+            LoadDataGeneral(listprov, "SELECT DISTINCT largeur FROM Piece WHERE référence LIKE 'PAR%100BL' OR référence LIKE 'PAR%120BL' OR référence LIKE 'PAR%80BL' OR référence LIKE 'PAR%62BL'");
         }
 
         // Loading Depth data from data base
         private void LoadDataDepth()
         {
             System.Windows.Forms.ComboBox[] list = {
-                comboBoxDepth1,
-                comboBoxDepth2,
-                comboBoxDepth3,
-                comboBoxDepth4,
-                comboBoxDepth5,
-                comboBoxDepth6,
-                comboBoxDepth7
+                comboBoxDepth,
             };
             LoadDataGeneral(list, "SELECT DISTINCT profondeur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAR%' ");
         }
@@ -210,7 +194,7 @@ namespace KitBoxApplication
                 comboBoxHeight6,
                 comboBoxHeight7
             };
-            LoadDataGeneral(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAH%' ");
+            LoadDataGeneralForHeight(list, "SELECT DISTINCT hauteur FROM Piece WHERE référence LIKE 'PA%' AND référence NOT LIKE 'PAH%' ");
         }
 
         // Loading Box Color data from data base
@@ -255,12 +239,10 @@ namespace KitBoxApplication
                 panelShelf2.Visible = false;
                 if (count == 1)
                 {
-                    // resets radiobutton only if 
+                    // resets radiobutton only if
                     radioButtonNo2.Checked = true;
                     // resets comboBox selected items
                     comboBoxColor2.SelectedItem = null;
-                    comboBoxDepth2.SelectedItem = null;
-                    comboBoxWidth2.SelectedItem = null;
                     comboBoxHeight2.SelectedItem = null;
                 }
                 if (count > 1)
@@ -273,12 +255,10 @@ namespace KitBoxApplication
                     panelShelf3.Visible = false;
                     if (count == 2)
                     {
-                        // resets radiobutton only if 
+                        // resets radiobutton only if
                         radioButtonNo3.Checked = true;
                         // resets comboBox selected items
                         comboBoxColor3.SelectedItem = null;
-                        comboBoxDepth3.SelectedItem = null;
-                        comboBoxWidth3.SelectedItem = null;
                         comboBoxHeight3.SelectedItem = null;
                     }
                     if (count > 2)
@@ -291,12 +271,10 @@ namespace KitBoxApplication
                         panelShelf4.Visible = false;
                         if (count == 3)
                         {
-                            // resets radiobutton only if 
+                            // resets radiobutton only if
                             radioButtonNo4.Checked = true;
                             // resets comboBox selected items
                             comboBoxColor4.SelectedItem = null;
-                            comboBoxDepth4.SelectedItem = null;
-                            comboBoxWidth4.SelectedItem = null;
                             comboBoxHeight4.SelectedItem = null;
                         }
                         if (count > 3)
@@ -309,12 +287,10 @@ namespace KitBoxApplication
                             panelShelf5.Visible = false;
                             if (count == 4)
                             {
-                                // resets radiobutton only if 
+                                // resets radiobutton only if
                                 radioButtonNo5.Checked = true;
                                 // resets comboBox selected items
                                 comboBoxColor5.SelectedItem = null;
-                                comboBoxDepth5.SelectedItem = null;
-                                comboBoxWidth5.SelectedItem = null;
                                 comboBoxHeight5.SelectedItem = null;
                             }
                             if (count > 4)
@@ -327,12 +303,10 @@ namespace KitBoxApplication
                                 panelShelf6.Visible = false;
                                 if (count == 5)
                                 {
-                                    // resets radiobutton only if 
+                                    // resets radiobutton only if
                                     radioButtonNo6.Checked = true;
                                     // resets comboBox selected items
                                     comboBoxColor6.SelectedItem = null;
-                                    comboBoxDepth6.SelectedItem = null;
-                                    comboBoxWidth6.SelectedItem = null;
                                     comboBoxHeight6.SelectedItem = null;
                                 }
                                 if (count > 5)
@@ -345,12 +319,10 @@ namespace KitBoxApplication
                                     panelShelf7.Visible = false;
                                     if (count == 6)
                                     {
-                                        // resets radiobutton only if 
+                                        // resets radiobutton only if
                                         radioButtonNo7.Checked = true;
                                         // resets comboBox selected items
                                         comboBoxColor7.SelectedItem = null;
-                                        comboBoxDepth7.SelectedItem = null;
-                                        comboBoxWidth7.SelectedItem = null;
                                         comboBoxHeight7.SelectedItem = null;
                                     }
                                     if (count > 6)
@@ -392,13 +364,19 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYes1)
                 {
                     panelDoorMaterial1.Visible = true;
-                    LoadDataWidthDoor();
-                    comboBoxWidth1.Text = "";
+                    if (radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidthDoor();
+                        comboBoxWidth.Text = "";
+                    }
                 }
                 else if (((RadioButton)sender) == radioButtonNo1)
                 {
                     panelDoorMaterial1.Visible = false;
-                    LoadDataWidth();
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidth();
+                    }
                     comboBoxDoorMat1.SelectedItem = null;
                     RemoveDoor(comboBoxColor1, panelShelf1);
                 }
@@ -414,13 +392,19 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYes2)
                 {
                     panelDoorMaterial2.Visible = true;
-                    LoadDataWidthDoor();
-                    comboBoxWidth2.Text = "";
+                    if (radioButtonNo1.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidthDoor();
+                        comboBoxWidth.Text = "";
+                    }
                 }
                 else if (((RadioButton)sender) == radioButtonNo2)
                 {
                     panelDoorMaterial2.Visible = false;
-                    LoadDataWidth();
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidth();
+                    }
                     comboBoxDoorMat2.SelectedItem = null;
                     RemoveDoor(comboBoxColor2, panelShelf2);
                 }
@@ -436,13 +420,19 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYes3)
                 {
                     panelDoorMaterial3.Visible = true;
-                    LoadDataWidthDoor();
-                    comboBoxWidth3.Text = "";
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidthDoor();
+                        comboBoxWidth.Text = "";
+                    }
                 }
                 else if (((RadioButton)sender) == radioButtonNo3)
                 {
                     panelDoorMaterial3.Visible = false;
-                    LoadDataWidth();
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidth();
+                    }
                     comboBoxDoorMat3.SelectedItem = null;
                     RemoveDoor(comboBoxColor3, panelShelf3);
                 }
@@ -458,13 +448,19 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYes4)
                 {
                     panelDoorMaterial4.Visible = true;
-                    LoadDataWidthDoor();
-                    comboBoxWidth4.Text = "";
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidthDoor();
+                        comboBoxWidth.Text = "";
+                    }
                 }
                 else if (((RadioButton)sender) == radioButtonNo4)
                 {
                     panelDoorMaterial4.Visible = false;
-                    LoadDataWidth();
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidth();
+                    }
                     comboBoxDoorMat4.SelectedItem = null;
                     RemoveDoor(comboBoxColor4, panelShelf4);
                 }
@@ -480,13 +476,19 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYes5)
                 {
                     panelDoorMaterial5.Visible = true;
-                    LoadDataWidthDoor();
-                    comboBoxWidth5.Text = "";
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidthDoor();
+                        comboBoxWidth.Text = "";
+                    }
                 }
                 else if (((RadioButton)sender) == radioButtonNo5)
                 {
                     panelDoorMaterial5.Visible = false;
-                    LoadDataWidth();
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidth();
+                    }
                     comboBoxDoorMat5.SelectedItem = null;
                     RemoveDoor(comboBoxColor5, panelShelf5);
                 }
@@ -502,13 +504,19 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYes6)
                 {
                     panelDoorMaterial6.Visible = true;
-                    LoadDataWidthDoor();
-                    comboBoxWidth6.Text = "";
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidthDoor();
+                        comboBoxWidth.Text = "";
+                    }
                 }
                 else if (((RadioButton)sender) == radioButtonNo6)
                 {
                     panelDoorMaterial6.Visible = false;
-                    LoadDataWidth();
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidth();
+                    }
                     comboBoxDoorMat6.SelectedItem = null;
                     RemoveDoor(comboBoxColor6, panelShelf6);
                 }
@@ -524,13 +532,19 @@ namespace KitBoxApplication
                 if (((RadioButton)sender) == radioButtonYes7)
                 {
                     panelDoorMaterial7.Visible = true;
-                    LoadDataWidthDoor();
-                    comboBoxWidth7.Text = "";
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked)
+                    {
+                        LoadDataWidthDoor();
+                        comboBoxWidth.Text = "";
+                    }
                 }
                 else if (((RadioButton)sender) == radioButtonNo7)
                 {
                     panelDoorMaterial7.Visible = false;
-                    LoadDataWidth();
+                    if (radioButtonNo1.Checked && radioButtonNo2.Checked && radioButtonNo3.Checked && radioButtonNo4.Checked && radioButtonNo5.Checked && radioButtonNo6.Checked && radioButtonNo7.Checked)
+                    {
+                        LoadDataWidth();
+                    }
                     comboBoxDoorMat7.SelectedItem = null;
                     RemoveDoor(comboBoxColor7, panelShelf7);
                 }
@@ -685,7 +699,7 @@ namespace KitBoxApplication
         // -- Method to design tabheader
         private void tabPageBox1_DrawItem(object sender, DrawItemEventArgs e)
         {
-            TabPage page = tabPage.TabPages[e.Index];
+            TabPage page = tabControl.TabPages[e.Index];
             Color col = Color.FromArgb(27, 29, 33);
 
             e.Graphics.FillRectangle(new SolidBrush(col), e.Bounds);
@@ -695,8 +709,8 @@ namespace KitBoxApplication
             Color myColor = Color.FromArgb(60, 120, 138);
             SolidBrush myBrush = new SolidBrush(myColor);
 
-            SizeF sz = e.Graphics.MeasureString(tabPage.TabPages[e.Index].Text, font);
-            e.Graphics.DrawString(tabPage.TabPages[e.Index].Text, font, myBrush, e.Bounds.Left + (e.Bounds.Width - sz.Width) / 2, e.Bounds.Top + (e.Bounds.Height - sz.Height) / 2 + 1);
+            SizeF sz = e.Graphics.MeasureString(tabControl.TabPages[e.Index].Text, font);
+            e.Graphics.DrawString(tabControl.TabPages[e.Index].Text, font, myBrush, e.Bounds.Left + (e.Bounds.Width - sz.Width) / 2, e.Bounds.Top + (e.Bounds.Height - sz.Height) / 2 + 1);
 
             Rectangle rect = e.Bounds;
             rect.Offset(0, 2);
@@ -712,12 +726,12 @@ namespace KitBoxApplication
         {
             if (enable)
             {
-                tabPage.TabPages.Add(page);
+                tabControl.TabPages.Add(page);
                 hiddenPages.Remove(page);
             }
             else
             {
-                tabPage.TabPages.Remove(page);
+                tabControl.TabPages.Remove(page);
                 hiddenPages.Add(page);
             }
         }
@@ -845,7 +859,7 @@ namespace KitBoxApplication
             Cabinet cabinet = new Cabinet();
 
             string angleColor = comboBoxColorAngles.SelectedItem.ToString();
-            cabinet.AddAngles(angleColor);
+
 
             try
             {
@@ -880,13 +894,101 @@ namespace KitBoxApplication
 
                     }
                 }
+
+                cabinet.AddScratchAngles(angleColor);
+
                 CartPage.Cart.AddToCart(cabinet);
-                
+
                 MessageBox.Show("This cabinet has been added to the cart succesfully!");
             }
-            catch
+            catch(Exception except)
             {
-                MessageBox.Show("Please enter all the necessary information");
+                MessageBox.Show("Please enter all the necessary information\n" + except.ToString());
+            }
+        }
+
+        private void panelShelf1_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabPageBox1);
+        }
+
+        private void panelShelf2_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabPageBox2);
+        }
+
+        private void panelShelf3_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabPageBox3);
+        }
+
+        private void panelShelf4_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabPageBox4);
+        }
+
+        private void panelShelf5_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabPageBox5);
+        }
+
+        private void panelShelf6_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabPageBox6);
+        }
+
+        private void panelShelf7_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabPageBox7);
+        }
+
+        private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int height1 = 0;
+            int height2 = 0;
+            int height3 = 0;
+            int height4 = 0;
+            int height5 = 0;
+            int height6 = 0;
+            int height7 = 0;
+            if (comboBoxHeight1.Text != "")
+            {
+                height1 = int.Parse(comboBoxHeight1.Text.ToString());
+            }
+            if (comboBoxHeight2.Text != "")
+            {
+                height2 = int.Parse(comboBoxHeight2.Text.ToString());
+            }
+            if (comboBoxHeight3.Text != "")
+            {
+                height3 = int.Parse(comboBoxHeight3.Text.ToString());
+            }
+            if (comboBoxHeight4.Text != "")
+            {
+                height4 = int.Parse(comboBoxHeight4.Text.ToString());
+            }
+            if (comboBoxHeight5.Text != "")
+            {
+                height5 = int.Parse(comboBoxHeight5.Text.ToString());
+            }
+            if (comboBoxHeight6.Text != "")
+            {
+                height6 = int.Parse(comboBoxHeight6.Text.ToString());
+            }
+            if (comboBoxHeight7.Text != "")
+            {
+                height7 = int.Parse(comboBoxHeight7.Text.ToString());
+            }
+
+            int total = height1 + height2 + height3 + height4 + height5 + height6 + height7;
+            labelActualHeight.Text = "Actual height of Cabinet :  " + total.ToString() + " cm";
+            if (total > 375)
+            {
+                labelActualHeight.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
+            }
+            else
+            {
+                labelActualHeight.ForeColor = System.Drawing.Color.FromArgb(0, 255, 0);
             }
         }
     }

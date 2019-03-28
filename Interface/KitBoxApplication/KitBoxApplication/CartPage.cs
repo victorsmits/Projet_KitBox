@@ -39,9 +39,9 @@ namespace KitBoxApplication
                 }
                 Create_Layout();
             }
-            catch
+            catch(Exception e)
             {
-                
+                MessageBox.Show(e.ToString());
             }
 
         }
@@ -50,9 +50,9 @@ namespace KitBoxApplication
         private void Create_Layout()
         {
             tabControl1.TabPages.Clear(); //Clear the tabs
-            //MessageBox.Show(jsonCart.ToString
+            MessageBox.Show(jsonCart.ToString());
             //For every cabinet of the json
-            for (int cabinetCount = 0; cabinetCount < jsonCart.Count; cabinetCount++)
+            for (int cabinetCount = 0; cabinetCount < jsonCart.Count-1; cabinetCount++)
             {
                 //Get the elements of the cabinet
                 JObject cabinetContains = jsonCart["Cabinet " + cabinetCount.ToString()].Value<JObject>();
@@ -79,7 +79,7 @@ namespace KitBoxApplication
 
                 int labelLength = 15;
 
-                for (floorCount = 0; floorCount < cabinetContains.Count - 1; floorCount++)
+                for (floorCount = 0; floorCount < cabinetContains.Count - 2; floorCount++)
                 {
                     labelLength = 15;
                     JObject floor = cabinetContains["Floor " + floorCount.ToString()].Value<JObject>();
@@ -108,8 +108,8 @@ namespace KitBoxApplication
                     {
                         JObject floorPanel = floor["Panel " + (numberOfLabel + 1).ToString()].Value<JObject>();
                         floorColor = floorPanel["Coleur"].Value<string>();
-                        int height = floorPanel["height"].Value<int>();
-                        int length = floorPanel["Lenght"].Value<int>();
+                        int height = floorPanel["Height"].Value<int>();
+                        int length = floorPanel["Length"].Value<int>();
                         int panelQty = floorPanel["Qty"].Value<int>();
 
 
@@ -139,12 +139,14 @@ namespace KitBoxApplication
                     labelLength += (panelLabelLength - 30);
                     floorGroup.Controls.Add(boxColor);
 
+                    costLabel.Text = jsonCart["CartPrice"] + "€";
+
                     //Generates label for Double doors
                     try
                     {
                         JObject doors = floor["DoubleDoors"].Value<JObject>();
-                        int doorHeight = doors["height"].Value<int>();
-                        int doorLength = doors["Lenght"].Value<int>();
+                        int doorHeight = doors["Height"].Value<int>();
+                        int doorLength = doors["Length"].Value<int>();
                         string doorMaterial = doors["Material"].Value<string>();
                         int doorQty = doors["Qty"].Value<int>();
 
@@ -159,6 +161,8 @@ namespace KitBoxApplication
                         labelLength += (doorLabelLenght);
 
                         floorGroup.Controls.Add(doorLabel);
+
+                        
                     }
                     catch
                     {

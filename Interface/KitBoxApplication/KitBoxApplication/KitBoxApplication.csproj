@@ -123,12 +123,6 @@
     <Compile Include="CreationExplanation.Designer.cs">
       <DependentUpon>CreationExplanation.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreationScratchInside.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CreationScratchInside.Designer.cs">
-      <DependentUpon>CreationScratchInside.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,9 +151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreationExplanation.resx">
       <DependentUpon>CreationExplanation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreationScratchInside.resx">
-      <DependentUpon>CreationScratchInside.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
