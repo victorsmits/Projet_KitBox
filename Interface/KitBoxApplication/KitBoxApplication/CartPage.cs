@@ -46,6 +46,12 @@ namespace KitBoxApplication
 
         }
 
+        private void  deleteButton_Clicked(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("L'armoire a été supprimé");
+            Create_Layout();
+        }
 
         private void Create_Layout()
         {
@@ -54,6 +60,8 @@ namespace KitBoxApplication
             //For every cabinet of the json
             for (int cabinetCount = 0; cabinetCount < jsonCart.Count-1; cabinetCount++)
             {
+                
+
                 //Get the elements of the cabinet
                 JObject cabinetContains = jsonCart["Cabinet " + cabinetCount.ToString()].Value<JObject>();
                 MessageBox.Show(cabinetContains.ToString());
@@ -62,7 +70,19 @@ namespace KitBoxApplication
                 addedCabinePage.BackColor = Color.FromArgb(41, 44, 51);
                 tabControl1.TabPages.Add(addedCabinePage);
                 int floorCount = 0;
-
+                
+                //Add a delete button
+                Button deleteButton = new Button();
+                Color DarkRed = Color.FromName("DarkRed");
+                deleteButton.BackColor = DarkRed;
+                Color Black = Color.FromName("Black");
+                deleteButton.ForeColor = Black;
+                deleteButton.Text = "Delete cabinet";
+                deleteButton.Click += deleteButton_Clicked;
+                deleteButton.Location = new Point(981, 15);
+                deleteButton.Size = new Size(75, 61);
+                addedCabinePage.Controls.Add(deleteButton);
+                
                 //Generates label for angles
                 JObject angle = cabinetContains["Angle"].Value<JObject>();
                 int angleLength = angle["Length"].Value<int>();
