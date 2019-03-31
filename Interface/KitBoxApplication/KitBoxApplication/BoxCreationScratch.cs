@@ -244,6 +244,12 @@ namespace KitBoxApplication
                     // resets comboBox selected items
                     comboBoxColor2.SelectedItem = null;
                     comboBoxHeight2.SelectedItem = null;
+
+                    EnablePage(tabPageBox3, false);
+                    EnablePage(tabPageBox4, false);
+                    EnablePage(tabPageBox5, false);
+                    EnablePage(tabPageBox6, false);
+                    EnablePage(tabPageBox7, false);
                 }
                 if (count > 1)
                 {
@@ -907,7 +913,7 @@ namespace KitBoxApplication
 
                     MessageBox.Show("This cabinet has been added to the cart succesfully!");
                 }
-                catch (NullReferenceException except)
+                catch (NullReferenceException)
                 {
                     MessageBox.Show("Please enter all the necessary information\n");
                 }
@@ -995,7 +1001,7 @@ namespace KitBoxApplication
             return total;
         }
 
-        private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
         {
             int total = ActualHeight();
             labelActualHeight.Text = "Actual height of Cabinet :  " + total.ToString() + " cm";
@@ -1007,6 +1013,17 @@ namespace KitBoxApplication
             {
                 labelActualHeight.ForeColor = System.Drawing.Color.FromArgb(0, 255, 0);
             }
+        }
+
+        private void ButtonReset_Click(object sender, EventArgs e)
+        {
+            numericUpDownQuantity.Value = 1;
+            comboBoxColor1.SelectedItem = null;
+            comboBoxDepth.SelectedItem = null;
+            comboBoxColorAngles.SelectedItem = null;
+            comboBoxHeight1.SelectedItem = null;
+            comboBoxWidth.SelectedItem = null;
+            radioButtonNo1.Checked = true;
         }
     }
 }

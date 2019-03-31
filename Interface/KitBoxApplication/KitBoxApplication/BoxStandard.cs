@@ -231,6 +231,7 @@ namespace KitBoxApplication
             {
                 panelColorChoiceAll.Visible = false;
                 panelDoorChoiceMultiple.Visible = false;
+                comboBoxColorSA.SelectedItem = null;
             }
             else
             {
@@ -254,7 +255,14 @@ namespace KitBoxApplication
             if (panelColorChoice.Visible == true)
             {
                 panelColorChoice.Visible = false;
-                panelDoorChoiceMultiple.Visible = false;
+                panelDoorChoiceMultiple.Visible = false;                
+                comboBoxColorS1.SelectedItem = null;
+                comboBoxColorS2.SelectedItem = null;
+                comboBoxColorS3.SelectedItem = null;
+                comboBoxColorS4.SelectedItem = null;
+                comboBoxColorS5.SelectedItem = null;
+                comboBoxColorS6.SelectedItem = null;
+                comboBoxColorS7.SelectedItem = null;
             }
             else
             {
@@ -1173,7 +1181,7 @@ namespace KitBoxApplication
 
                 MessageBox.Show("This cabinet has been added to the cart succesfully!");
             }
-            catch(NullReferenceException except)
+            catch(NullReferenceException)
             {
                 MessageBox.Show("Please enter all the necessary information");
             }

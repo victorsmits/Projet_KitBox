@@ -206,5 +206,17 @@
   <ItemGroup>
     <None Include="Resources\brunverre.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restartLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restartLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restartLogo2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
