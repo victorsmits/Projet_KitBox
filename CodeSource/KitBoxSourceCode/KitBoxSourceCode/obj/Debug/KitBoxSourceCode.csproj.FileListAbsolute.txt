@@ -136,3 +136,4 @@ C:\Users\Michael\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitB
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.csproj.CopyComplete
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.dll
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.pdb
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.csprojAssemblyReference.cache
