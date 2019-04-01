@@ -25,40 +25,40 @@ namespace KitBoxApplication
             // Ensure that all radio buttons are in the same groupbox control.
 
             // radio buttons in same group added to same function - group : --panelYesNoIf1--
-            radioButtonYesIf1.CheckedChanged += new EventHandler(radioButtonsYesNoIf1_CheckedChanged);
-            radioButtonNoIf1.CheckedChanged += new EventHandler(radioButtonsYesNoIf1_CheckedChanged);
+            radioButtonYesIf1.CheckedChanged += new EventHandler(RadioButtonsYesNoIf1_CheckedChanged);
+            radioButtonNoIf1.CheckedChanged += new EventHandler(RadioButtonsYesNoIf1_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesIf2.CheckedChanged += new EventHandler(radioButtonsYesNoIf2_CheckedChanged);
-            radioButtonNoIf2.CheckedChanged += new EventHandler(radioButtonsYesNoIf2_CheckedChanged);
+            radioButtonYesIf2.CheckedChanged += new EventHandler(RadioButtonsYesNoIf2_CheckedChanged);
+            radioButtonNoIf2.CheckedChanged += new EventHandler(RadioButtonsYesNoIf2_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox1.CheckedChanged += new EventHandler(radioButtonBox1_CheckedChanged);
-            radioButtonNoBox1.CheckedChanged += new EventHandler(radioButtonBox1_CheckedChanged);
+            radioButtonYesBox1.CheckedChanged += new EventHandler(RadioButtonBox1_CheckedChanged);
+            radioButtonNoBox1.CheckedChanged += new EventHandler(RadioButtonBox1_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox2.CheckedChanged += new EventHandler(radioButtonBox2_CheckedChanged);
-            radioButtonNoBox2.CheckedChanged += new EventHandler(radioButtonBox2_CheckedChanged);
+            radioButtonYesBox2.CheckedChanged += new EventHandler(RadioButtonBox2_CheckedChanged);
+            radioButtonNoBox2.CheckedChanged += new EventHandler(RadioButtonBox2_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox3.CheckedChanged += new EventHandler(radioButtonBox3_CheckedChanged);
-            radioButtonNoBox3.CheckedChanged += new EventHandler(radioButtonBox3_CheckedChanged);
+            radioButtonYesBox3.CheckedChanged += new EventHandler(RadioButtonBox3_CheckedChanged);
+            radioButtonNoBox3.CheckedChanged += new EventHandler(RadioButtonBox3_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox4.CheckedChanged += new EventHandler(radioButtonBox4_CheckedChanged);
-            radioButtonNoBox4.CheckedChanged += new EventHandler(radioButtonBox4_CheckedChanged);
+            radioButtonYesBox4.CheckedChanged += new EventHandler(RadioButtonBox4_CheckedChanged);
+            radioButtonNoBox4.CheckedChanged += new EventHandler(RadioButtonBox4_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox5.CheckedChanged += new EventHandler(radioButtonBox5_CheckedChanged);
-            radioButtonNoBox5.CheckedChanged += new EventHandler(radioButtonBox5_CheckedChanged);
+            radioButtonYesBox5.CheckedChanged += new EventHandler(RadioButtonBox5_CheckedChanged);
+            radioButtonNoBox5.CheckedChanged += new EventHandler(RadioButtonBox5_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox6.CheckedChanged += new EventHandler(radioButtonBox6_CheckedChanged);
-            radioButtonNoBox6.CheckedChanged += new EventHandler(radioButtonBox6_CheckedChanged);
+            radioButtonYesBox6.CheckedChanged += new EventHandler(RadioButtonBox6_CheckedChanged);
+            radioButtonNoBox6.CheckedChanged += new EventHandler(RadioButtonBox6_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
-            radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
+            radioButtonYesBox7.CheckedChanged += new EventHandler(RadioButtonBox7_CheckedChanged);
+            radioButtonNoBox7.CheckedChanged += new EventHandler(RadioButtonBox7_CheckedChanged);
         }
 
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
@@ -225,7 +225,7 @@ namespace KitBoxApplication
         }
 
         // function to make appear color choice for all the boxes at once and door choice
-        private void checkBoxColorYes_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxColorYes_CheckedChanged(object sender, EventArgs e)
         {
             if (panelColorChoiceAll.Visible == true)
             {
@@ -250,7 +250,7 @@ namespace KitBoxApplication
         }
 
         // function to make appear color choice for all boxes apart and door choice
-        private void checkBoxColorNo_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxColorNo_CheckedChanged(object sender, EventArgs e)
         {
             if (panelColorChoice.Visible == true)
             {
@@ -276,7 +276,7 @@ namespace KitBoxApplication
         // function applied to number read on the numericUpDown
         // different groups will appear or disappear in function of how many boxes have
         // been chosen
-        private void numericUpDownQuantity_ValueChanged(object sender, EventArgs e)
+        private void NumericUpDownQuantity_ValueChanged(object sender, EventArgs e)
         {
             int count = Convert.ToInt32(numericUpDownQuantity.Value);
             LoadDataHeight();
@@ -302,21 +302,30 @@ namespace KitBoxApplication
                 {
                     if (colorSA != null)
                     {
-                        comboBoxColorIf1.Text = colorSA;
+                        comboBoxColorIf1.SelectedItem = colorSA;
                         colorSA = null;
                     }
                     else if (colorSA != null)
                     {
-                        comboBoxColorIf1.Text = colorS1;
+                        comboBoxColorIf1.SelectedItem = colorS1;
                         colorS1 = null;
                     }
                     if (doorM1 != null)
                     {
-                        comboBoxDoorMatIf1.Text = doorM1;
+                        comboBoxDoorMatIf1.SelectedItem = doorM1;
                         radioButtonYesIf1.Checked = true;
                         doorM1 = null;
                     }
                 }
+                comboBoxColorS1.SelectedItem = null;
+                comboBoxColorS2.SelectedItem = null;
+                AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
+                AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
+                AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
+                AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
+                AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
+                AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
+                AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
             }
             else if (count > 1)
             {
@@ -336,6 +345,8 @@ namespace KitBoxApplication
                     panelYesNoBox3.Visible = false;
                     // resets radiobutton only if
                     radioButtonNoBox3.Checked = true;
+                    comboBoxColorS3.SelectedItem = null;
+                    
                 }
                 // resets radiobuttons
                 radioButtonNoIf1.Checked = true;
@@ -347,18 +358,19 @@ namespace KitBoxApplication
                 {
                     if (colorSIf1 != null)
                     {
-                        comboBoxColorS1.Text = colorSIf1;
+                        comboBoxColorS1.SelectedItem = colorSIf1;
                         checkBoxColorNo.Checked = true;
                         colorSIf1 = null;
                     }
                     if (doorMIf1 != null)
                     {
-                        comboBoxDoorMatBox1.Text = doorMIf1;
+                        comboBoxDoorMatBox1.SelectedItem = doorMIf1;
                         radioButtonYesIf2.Checked = true;
                         radioButtonYesBox1.Checked = true;
                         doorMIf1 = null;
                     }
                 }
+                
                 if (count > 2)
                 {
                     // color features box 3 and box 4
@@ -376,6 +388,7 @@ namespace KitBoxApplication
                         panelYesNoBox4.Visible = false;
                         // resets radiobutton only if
                         radioButtonNoBox4.Checked = true;
+                        comboBoxColorS4.SelectedItem = null;
                     }
                     // shelf image
                     panelShelf3.Visible = true;
@@ -397,6 +410,7 @@ namespace KitBoxApplication
                             panelYesNoBox5.Visible = false;
                             // resets radiobutton only if
                             radioButtonNoBox5.Checked = true;
+                            comboBoxColorS5.SelectedItem = null;
                         }
                         // shelf image
                         panelShelf4.Visible = true;
@@ -418,6 +432,7 @@ namespace KitBoxApplication
                                 panelYesNoBox6.Visible = false;
                                 // resets radiobutton only if
                                 radioButtonNoBox6.Checked = true;
+                                comboBoxColorS6.SelectedItem = null;
                             }
                             // shelf image
                             panelShelf5.Visible = true;
@@ -439,6 +454,7 @@ namespace KitBoxApplication
                                     panelYesNoBox7.Visible = false;
                                     // resets radiobutton only if
                                     radioButtonNoBox7.Checked = true;
+                                    comboBoxColorS7.SelectedItem = null;
                                 }
                                 // shelf image
                                 panelShelf6.Visible = true;
@@ -462,7 +478,7 @@ namespace KitBoxApplication
         }
 
         // function for door in case only 1 box
-        private void radioButtonsYesNoIf1_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonsYesNoIf1_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -485,7 +501,7 @@ namespace KitBoxApplication
         }
 
         // function for doors in case multiple boxes
-        private void radioButtonsYesNoIf2_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonsYesNoIf2_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -512,7 +528,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 1
-        private void radioButtonBox1_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox1_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -539,7 +555,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 2
-        private void radioButtonBox2_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox2_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -565,7 +581,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 3
-        private void radioButtonBox3_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox3_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -591,7 +607,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 4
-        private void radioButtonBox4_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox4_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -617,7 +633,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 5
-        private void radioButtonBox5_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox5_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -643,7 +659,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 6
-        private void radioButtonBox6_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox6_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -669,7 +685,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 7
-        private void radioButtonBox7_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox7_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -964,7 +980,11 @@ namespace KitBoxApplication
         private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
         {
             // TODO : sth to change text next to combobox containing height of the box
-            var height = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
+            var height = 0;
+            if (comboBoxHeight.SelectedItem != null)
+            {
+                height = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
+            }            
             var nbrBox = Int32.Parse(numericUpDownQuantity.Value.ToString());
             int boxHeight = ProcessHeightForEachBox(height,nbrBox);
             string dimension = nbrBox + "x" + boxHeight.ToString() + "(h)";
@@ -1185,6 +1205,18 @@ namespace KitBoxApplication
             {
                 MessageBox.Show("Please enter all the necessary information");
             }
+        }
+
+        private void ButtonReset_Click(object sender, EventArgs e)
+        {
+            numericUpDownQuantity.Value = 1;
+            comboBoxColorAngles.SelectedItem = null;
+            comboBoxHeight.SelectedItem = null;
+            comboBoxWidth.SelectedItem = null;
+            comboBoxDepth.SelectedItem = null;
+            comboBoxColorIf1.SelectedItem = null;
+            radioButtonNoIf1.Checked = true;
+            labelBoxHeight.Text = "";
         }
     }
 }

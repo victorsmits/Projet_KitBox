@@ -1560,9 +1560,10 @@
             this.buttonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonReset.Location = new System.Drawing.Point(61, 1223);
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(451, 104);
+            this.buttonReset.Size = new System.Drawing.Size(339, 104);
             this.buttonReset.TabIndex = 79;
             this.buttonReset.Text = "Reset All";
+            this.buttonReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.ButtonReset_Click);
             // 
