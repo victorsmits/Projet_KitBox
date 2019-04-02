@@ -308,11 +308,11 @@
             this.buttonAddToCart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.buttonAddToCart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddToCart.Font = new System.Drawing.Font("Century Gothic", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddToCart.Font = new System.Drawing.Font("Century Gothic", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddToCart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonAddToCart.Location = new System.Drawing.Point(1040, 1223);
+            this.buttonAddToCart.Location = new System.Drawing.Point(1042, 1200);
             this.buttonAddToCart.Name = "buttonAddToCart";
-            this.buttonAddToCart.Size = new System.Drawing.Size(378, 104);
+            this.buttonAddToCart.Size = new System.Drawing.Size(353, 119);
             this.buttonAddToCart.TabIndex = 74;
             this.buttonAddToCart.Text = "Add To Cart";
             this.buttonAddToCart.UseVisualStyleBackColor = false;
@@ -1558,9 +1558,9 @@
             this.buttonReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.buttonReset.Image = global::KitBoxApplication.Properties.Resources.restartLogo2;
             this.buttonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonReset.Location = new System.Drawing.Point(61, 1223);
+            this.buttonReset.Location = new System.Drawing.Point(61, 1200);
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(339, 104);
+            this.buttonReset.Size = new System.Drawing.Size(321, 115);
             this.buttonReset.TabIndex = 79;
             this.buttonReset.Text = "Reset All";
             this.buttonReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

@@ -555,11 +555,12 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.900001F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.button2.Location = new System.Drawing.Point(694, 498);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 42);
+            this.button2.Size = new System.Drawing.Size(140, 55);
             this.button2.TabIndex = 47;
             this.button2.Text = "Add To Cart";
             this.button2.UseVisualStyleBackColor = false;
@@ -669,7 +670,7 @@
             this.comboBoxColorIf1.Name = "comboBoxColorIf1";
             this.comboBoxColorIf1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorIf1.TabIndex = 40;
-            this.comboBoxColorIf1.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorIf1_SelectedIndexChanged);
+            this.comboBoxColorIf1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorIf1_SelectedIndexChanged);
             // 
             // panelDoorMaterial
             // 
@@ -1591,7 +1592,7 @@
             this.buttonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonReset.Location = new System.Drawing.Point(537, 500);
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(123, 40);
+            this.buttonReset.Size = new System.Drawing.Size(123, 53);
             this.buttonReset.TabIndex = 80;
             this.buttonReset.Text = "Reset All";
             this.buttonReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

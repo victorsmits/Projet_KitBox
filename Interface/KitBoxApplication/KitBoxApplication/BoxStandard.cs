@@ -303,29 +303,30 @@ namespace KitBoxApplication
                     if (colorSA != null)
                     {
                         comboBoxColorIf1.SelectedItem = colorSA;
-                        colorSA = null;
+                        //colorSA = null;
                     }
                     else if (colorSA != null)
                     {
                         comboBoxColorIf1.SelectedItem = colorS1;
-                        colorS1 = null;
+                        //colorS1 = null;
                     }
                     if (doorM1 != null)
                     {
                         comboBoxDoorMatIf1.SelectedItem = doorM1;
                         radioButtonYesIf1.Checked = true;
-                        doorM1 = null;
+                        //doorM1 = null;
                     }
                 }
                 comboBoxColorS1.SelectedItem = null;
                 comboBoxColorS2.SelectedItem = null;
-                AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
+                AddColorToBox(comboBoxColorIf1, comboBoxDoorMatBox1, panelShelf1);
                 AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
                 AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
                 AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
                 AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
                 AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
                 AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
+                colorSIf1 = comboBoxColorIf1.Text;
             }
             else if (count > 1)
             {
@@ -338,6 +339,12 @@ namespace KitBoxApplication
                 labelColorS3.Visible = false;
                 comboBoxColorS3.Visible = false;
                 // need to be, as it only need to change if 2 boxes chosen
+                // resets radiobuttons
+                radioButtonNoIf1.Checked = true;
+                // shelf image
+                panelShelf2.Visible = true;
+                panelShelf3.Visible = false;
+                
                 if (count == 2)
                 {
                     // door features box 3
@@ -346,30 +353,29 @@ namespace KitBoxApplication
                     // resets radiobutton only if
                     radioButtonNoBox3.Checked = true;
                     comboBoxColorS3.SelectedItem = null;
+                    // keep selected value of first box
+                    if (colorSIf1 != null || doorMIf1 != null)
+                    {
+                        if (colorSIf1 != null)
+                        {
+                            comboBoxColorS1.SelectedItem = colorSIf1;
+                            checkBoxColorNo.Checked = true;
+                            colorSIf1 = null;
+                        }
+                        if (doorMIf1 != null)
+                        {
+                            comboBoxDoorMatBox1.SelectedItem = doorMIf1;
+                            radioButtonYesIf2.Checked = true;
+                            radioButtonYesBox1.Checked = true;
+                            doorMIf1 = null;
+                        }
+                    }
+                    if (comboBoxColorSA.SelectedItem == null)
+                    {
+                        AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
+                    }
                     
-                }
-                // resets radiobuttons
-                radioButtonNoIf1.Checked = true;
-                // shelf image
-                panelShelf2.Visible = true;
-                panelShelf3.Visible = false;
-                // keep selected value of first box
-                if (colorSIf1 != null || doorMIf1 != null)
-                {
-                    if (colorSIf1 != null)
-                    {
-                        comboBoxColorS1.SelectedItem = colorSIf1;
-                        checkBoxColorNo.Checked = true;
-                        colorSIf1 = null;
-                    }
-                    if (doorMIf1 != null)
-                    {
-                        comboBoxDoorMatBox1.SelectedItem = doorMIf1;
-                        radioButtonYesIf2.Checked = true;
-                        radioButtonYesBox1.Checked = true;
-                        doorMIf1 = null;
-                    }
-                }
+                }                
                 
                 if (count > 2)
                 {
@@ -740,7 +746,7 @@ namespace KitBoxApplication
             }
         }
 
-        private void comboBoxColorIf1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxColorIf1_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
             colorSIf1 = comboBoxColorIf1.Text;
