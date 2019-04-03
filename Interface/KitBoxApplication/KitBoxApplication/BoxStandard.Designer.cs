@@ -252,7 +252,7 @@
             this.comboBoxHeight.Name = "comboBoxHeight";
             this.comboBoxHeight.Size = new System.Drawing.Size(91, 41);
             this.comboBoxHeight.TabIndex = 17;
-            this.comboBoxHeight.SelectedIndexChanged += new System.EventHandler(this.comboBoxHeight_SelectedIndexChanged);
+            this.comboBoxHeight.SelectedIndexChanged += new System.EventHandler(this.ComboBoxHeight_SelectedIndexChanged);
             // 
             // labelDoorYesNoIf1
             // 
@@ -367,7 +367,7 @@
             this.comboBoxColorS1.Name = "comboBoxColorS1";
             this.comboBoxColorS1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS1.TabIndex = 28;
-            this.comboBoxColorS1.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS1_SelectedIndexChanged);
+            this.comboBoxColorS1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS1_SelectedIndexChanged);
             // 
             // comboBoxColorS6
             // 
@@ -382,7 +382,7 @@
             this.comboBoxColorS6.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS6.TabIndex = 29;
             this.comboBoxColorS6.Visible = false;
-            this.comboBoxColorS6.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS6_SelectedIndexChanged);
+            this.comboBoxColorS6.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS6_SelectedIndexChanged);
             // 
             // comboBoxColorS5
             // 
@@ -397,7 +397,7 @@
             this.comboBoxColorS5.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS5.TabIndex = 30;
             this.comboBoxColorS5.Visible = false;
-            this.comboBoxColorS5.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS5_SelectedIndexChanged);
+            this.comboBoxColorS5.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS5_SelectedIndexChanged);
             // 
             // comboBoxColorS4
             // 
@@ -412,7 +412,7 @@
             this.comboBoxColorS4.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS4.TabIndex = 31;
             this.comboBoxColorS4.Visible = false;
-            this.comboBoxColorS4.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS4_SelectedIndexChanged);
+            this.comboBoxColorS4.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS4_SelectedIndexChanged);
             // 
             // comboBoxColorS3
             // 
@@ -427,7 +427,7 @@
             this.comboBoxColorS3.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS3.TabIndex = 32;
             this.comboBoxColorS3.Visible = false;
-            this.comboBoxColorS3.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS3_SelectedIndexChanged);
+            this.comboBoxColorS3.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS3_SelectedIndexChanged);
             // 
             // comboBoxColorS2
             // 
@@ -441,7 +441,7 @@
             this.comboBoxColorS2.Name = "comboBoxColorS2";
             this.comboBoxColorS2.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS2.TabIndex = 33;
-            this.comboBoxColorS2.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS2_SelectedIndexChanged);
+            this.comboBoxColorS2.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS2_SelectedIndexChanged);
             // 
             // comboBoxColorS7
             // 
@@ -456,7 +456,7 @@
             this.comboBoxColorS7.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS7.TabIndex = 34;
             this.comboBoxColorS7.Visible = false;
-            this.comboBoxColorS7.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS7_SelectedIndexChanged);
+            this.comboBoxColorS7.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS7_SelectedIndexChanged);
             // 
             // labelColorQuestions
             // 
@@ -520,7 +520,7 @@
             this.comboBoxColorSA.Name = "comboBoxColorSA";
             this.comboBoxColorSA.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorSA.TabIndex = 39;
-            this.comboBoxColorSA.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorSA_SelectedIndexChanged);
+            this.comboBoxColorSA.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorSA_SelectedIndexChanged);
             // 
             // labelColorAngles
             // 
@@ -564,7 +564,7 @@
             this.button2.TabIndex = 47;
             this.button2.Text = "Add To Cart";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.ButtonAddToCart_Click);
             // 
             // panelColorChoice
             // 
@@ -696,7 +696,7 @@
             this.comboBoxDoorMatIf1.Name = "comboBoxDoorMatIf1";
             this.comboBoxDoorMatIf1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatIf1.TabIndex = 43;
-            this.comboBoxDoorMatIf1.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatIf1_SelectedIndexChanged);
+            this.comboBoxDoorMatIf1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatIf1_SelectedIndexChanged);
             // 
             // labelDoorMatIf1
             // 
@@ -849,7 +849,7 @@
             this.comboBoxDoorMatBox7.Name = "comboBoxDoorMatBox7";
             this.comboBoxDoorMatBox7.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox7.TabIndex = 43;
-            this.comboBoxDoorMatBox7.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox7_SelectedIndexChanged);
+            this.comboBoxDoorMatBox7.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox7_SelectedIndexChanged);
             // 
             // labelDoorMatBox7
             // 
@@ -936,7 +936,7 @@
             this.comboBoxDoorMatBox6.Name = "comboBoxDoorMatBox6";
             this.comboBoxDoorMatBox6.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox6.TabIndex = 43;
-            this.comboBoxDoorMatBox6.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox6_SelectedIndexChanged);
+            this.comboBoxDoorMatBox6.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox6_SelectedIndexChanged);
             // 
             // labelDoorMatBox6
             // 
@@ -1023,7 +1023,7 @@
             this.comboBoxDoorMatBox5.Name = "comboBoxDoorMatBox5";
             this.comboBoxDoorMatBox5.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox5.TabIndex = 43;
-            this.comboBoxDoorMatBox5.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox5_SelectedIndexChanged);
+            this.comboBoxDoorMatBox5.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox5_SelectedIndexChanged);
             // 
             // labelDoorMatBox5
             // 
@@ -1110,7 +1110,7 @@
             this.comboBoxDoorMatBox4.Name = "comboBoxDoorMatBox4";
             this.comboBoxDoorMatBox4.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox4.TabIndex = 43;
-            this.comboBoxDoorMatBox4.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox4_SelectedIndexChanged);
+            this.comboBoxDoorMatBox4.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox4_SelectedIndexChanged);
             // 
             // labelDoorMatBox4
             // 
@@ -1197,7 +1197,7 @@
             this.comboBoxDoorMatBox3.Name = "comboBoxDoorMatBox3";
             this.comboBoxDoorMatBox3.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox3.TabIndex = 43;
-            this.comboBoxDoorMatBox3.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox3_SelectedIndexChanged);
+            this.comboBoxDoorMatBox3.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox3_SelectedIndexChanged);
             // 
             // labelDoorMatBox3
             // 
@@ -1334,7 +1334,7 @@
             this.comboBoxDoorMatBox2.Name = "comboBoxDoorMatBox2";
             this.comboBoxDoorMatBox2.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox2.TabIndex = 43;
-            this.comboBoxDoorMatBox2.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox2_SelectedIndexChanged);
+            this.comboBoxDoorMatBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox2_SelectedIndexChanged);
             // 
             // labelDoorMatBox2
             // 
@@ -1407,7 +1407,7 @@
             this.comboBoxDoorMatBox1.Name = "comboBoxDoorMatBox1";
             this.comboBoxDoorMatBox1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox1.TabIndex = 43;
-            this.comboBoxDoorMatBox1.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox1_SelectedIndexChanged);
+            this.comboBoxDoorMatBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox1_SelectedIndexChanged);
             // 
             // labelDoorMatBox1
             // 
