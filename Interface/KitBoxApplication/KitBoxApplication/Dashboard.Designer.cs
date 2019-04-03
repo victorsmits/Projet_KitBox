@@ -107,7 +107,7 @@
             this.buttonCart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonCart.UseVisualStyleBackColor = true;
-            this.buttonCart.Click += new System.EventHandler(this.buttonCart_Click);
+            this.buttonCart.Click += new System.EventHandler(this.ButtonCart_Click);
             // 
             // buttonCreation
             // 
@@ -145,7 +145,7 @@
             this.buttonDash.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonDash.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDash.UseVisualStyleBackColor = true;
-            this.buttonDash.Click += new System.EventHandler(this.buttonHome_Click);
+            this.buttonDash.Click += new System.EventHandler(this.ButtonHome_Click);
             // 
             // panel2
             // 
@@ -169,7 +169,7 @@
             this.ButtonHome.TabIndex = 1;
             this.ButtonHome.Text = "Home";
             this.ButtonHome.UseVisualStyleBackColor = false;
-            this.ButtonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            this.ButtonHome.Click += new System.EventHandler(this.ButtonHome_Click);
             // 
             // LogoPanel
             // 

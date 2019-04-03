@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.standartCreation = new System.Windows.Forms.CheckBox();
+            this.standardCreation = new System.Windows.Forms.CheckBox();
             this.completeCreation = new System.Windows.Forms.CheckBox();
             this.creationExplanation1 = new KitBoxApplication.CreationExplanation();
             this.boxCreationScratch1 = new KitBoxApplication.BoxCreationScratch();
@@ -50,19 +50,19 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Composition of the cabinet";
             // 
-            // standartCreation
+            // standardCreation
             // 
-            this.standartCreation.Appearance = System.Windows.Forms.Appearance.Button;
-            this.standartCreation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.standartCreation.Location = new System.Drawing.Point(1240, 117);
-            this.standartCreation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.standartCreation.Name = "standartCreation";
-            this.standartCreation.Size = new System.Drawing.Size(339, 155);
-            this.standartCreation.TabIndex = 2;
-            this.standartCreation.Text = "Creation from standard dimensions";
-            this.standartCreation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.standartCreation.UseVisualStyleBackColor = true;
-            this.standartCreation.CheckedChanged += new System.EventHandler(this.standartCreationAppear);
+            this.standardCreation.Appearance = System.Windows.Forms.Appearance.Button;
+            this.standardCreation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.standardCreation.Location = new System.Drawing.Point(1240, 117);
+            this.standardCreation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.standardCreation.Name = "standardCreation";
+            this.standardCreation.Size = new System.Drawing.Size(339, 155);
+            this.standardCreation.TabIndex = 2;
+            this.standardCreation.Text = "Creation from standard dimensions";
+            this.standardCreation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.standardCreation.UseVisualStyleBackColor = true;
+            this.standardCreation.CheckedChanged += new System.EventHandler(this.StandardCreationAppear);
             // 
             // completeCreation
             // 
@@ -76,7 +76,7 @@
             this.completeCreation.Text = "Total Creation";
             this.completeCreation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.completeCreation.UseVisualStyleBackColor = true;
-            this.completeCreation.CheckedChanged += new System.EventHandler(this.completeCreationAppear);
+            this.completeCreation.CheckedChanged += new System.EventHandler(this.CompleteCreationAppear);
             // 
             // creationExplanation1
             // 
@@ -115,7 +115,7 @@
             this.panel1.Controls.Add(this.creationExplanation1);
             this.panel1.Controls.Add(this.completeCreation);
             this.panel1.Controls.Add(this.boxCreationScratch1);
-            this.panel1.Controls.Add(this.standartCreation);
+            this.panel1.Controls.Add(this.standardCreation);
             this.panel1.Controls.Add(this.boxStandard2);
             this.panel1.Location = new System.Drawing.Point(480, 19);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -131,7 +131,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Creation";
             this.Size = new System.Drawing.Size(3416, 1722);
-            this.Load += new System.EventHandler(this.Creation_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -140,7 +139,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox standartCreation;
+        private System.Windows.Forms.CheckBox standardCreation;
         private System.Windows.Forms.CheckBox completeCreation;
         private BoxStandard boxStandard2;
         private BoxCreationScratch boxCreationScratch1;
