@@ -322,7 +322,7 @@ namespace KitBoxApplication
                 }
                 comboBoxColorS1.SelectedItem = null;
                 comboBoxColorS2.SelectedItem = null;
-                AddColorToBox(comboBoxColorIf1, comboBoxDoorMatBox1, panelShelf1);
+                AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1 , panelShelf1);
                 AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
                 AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
                 AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
@@ -341,9 +341,7 @@ namespace KitBoxApplication
                 // color features box 3
                 labelColorS3.Visible = false;
                 comboBoxColorS3.Visible = false;
-                // need to be, as it only need to change if 2 boxes chosen
-                // resets radiobuttons
-                radioButtonNoIf1.Checked = true;
+
                 // shelf image
                 panelShelf2.Visible = true;
                 panelShelf3.Visible = false;
@@ -363,21 +361,25 @@ namespace KitBoxApplication
                         {
                             comboBoxColorS1.SelectedItem = colorSIf1;
                             checkBoxColorNo.Checked = true;
-                            colorSIf1 = null;
+                            //colorSIf1 = null;
                         }
                         if (doorMIf1 != null)
                         {
                             comboBoxDoorMatBox1.SelectedItem = doorMIf1;
                             radioButtonYesIf2.Checked = true;
                             radioButtonYesBox1.Checked = true;
-                            doorMIf1 = null;
+                            //doorMIf1 = null;
+                        } 
+                        else
+                        {
+                            // resets radiobuttons
+                            radioButtonNoIf1.Checked = true;
                         }
                     }
                     if (comboBoxColorSA.SelectedItem == null)
                     {
                         AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
-                    }
-                    
+                    } 
                 }                
                 
                 if (count > 2)
@@ -821,43 +823,51 @@ namespace KitBoxApplication
             }
         }
 
+        // function to change color of all active boxPanels
         private void ComboBoxColorSA_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadColorAllSame();
             colorSA = comboBoxColorSA.Text;
         }
 
+        // function to change color of boxPanel1
         private void ComboBoxColorS1_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
             colorS1 = comboBoxColorS1.Text;
         }
 
+        // function to change color of boxPanel2
         private void ComboBoxColorS2_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
         }
 
+        // function to change color of boxPanel3
         private void ComboBoxColorS3_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
         }
 
+        // function to change color of boxPanel4
         private void ComboBoxColorS4_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
         }
 
+        // function to change color of boxPanel5
         private void ComboBoxColorS5_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
         }
 
+        // function to change color of boxPanel6
         private void ComboBoxColorS6_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
         }
 
+        // function to change color of boxPanel7
         private void ComboBoxColorS7_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
@@ -875,42 +885,50 @@ namespace KitBoxApplication
             b.BackgroundImage = myImage;
         }
 
+        // function to change color of door material of box 1
         private void ComboBoxDoorMatBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
             doorM1 = comboBoxDoorMatBox1.Text;
         }
 
+        // function to change color of door material of box 2
         private void ComboBoxDoorMatBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
         }
 
+        // function to change color of door material of box 3
         private void ComboBoxDoorMatBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
         }
 
+        // function to change color of door material of box 4
         private void ComboBoxDoorMatBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
         }
 
+        // function to change color of door material of box 5
         private void ComboBoxDoorMatBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
         }
 
+        // function to change color of door material of box 6
         private void ComboBoxDoorMatBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
         }
 
+        // function to change color of door material of box 7
         private void ComboBoxDoorMatBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
         }
 
+        // function to change color of door material of box 1 in case 1 box cabinet
         private void ComboBoxDoorMatIf1_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
