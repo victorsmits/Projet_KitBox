@@ -233,8 +233,11 @@ namespace KitBoxApplication
 
         private void comfirmCartButton_Click(object sender, EventArgs e)
         {
-            summaryLabel.Visible = true;
-            tabControl1.TabPages.Clear();
+            tabControl1.Visible = false;
+            totalLabel.Visible = false;
+            comfirmCartButton.Visible = false;
+            costLabel.Visible = false;
+            clientIdentifier1.Visible = true;
         }
     }
 }

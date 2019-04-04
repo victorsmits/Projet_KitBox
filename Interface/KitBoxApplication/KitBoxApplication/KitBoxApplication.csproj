@@ -111,6 +111,12 @@
     <Compile Include="CartPage.Designer.cs">
       <DependentUpon>CartPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientIdentifier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientIdentifier.Designer.cs">
+      <DependentUpon>ClientIdentifier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Creation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CartPage.resx">
       <DependentUpon>CartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientIdentifier.resx">
+      <DependentUpon>ClientIdentifier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Creation.resx">
       <DependentUpon>Creation.cs</DependentUpon>
