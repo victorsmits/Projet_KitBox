@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using System.Text.RegularExpressions;
+using SqlOledb;
 
 namespace KitBoxApplication
 {
@@ -28,12 +29,19 @@ namespace KitBoxApplication
         private void comfirmButton_Click(object sender, EventArgs e)
         {
             string mail = textBox1.Text;
+            JObject json = CartPage.Cart.ShowCart();
             if (TestCorrectMail(mail)) {
                 if (checkBox1.Checked)
                 {
-                    //TODO request for the subscribe
+                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','20','"+ json.ToString() +"','" + mail + "','Yes')";
+                    SqlOledb.Oledb.SqlRequest(rqst);
                 }
-                //TODO request for the mail
+                else
+                {
+                    string rqst = "INSERT INTO ComClientS (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','20','" + json.ToString() + "','" + mail + "','No')";
+                    SqlOledb.Oledb.SqlRequest(rqst);
+                }
+                
                 this.Visible = false;
                 TabControl tabControl = (TabControl)this.Parent.Controls[4];
                 tabControl.Visible = true;
@@ -41,10 +49,7 @@ namespace KitBoxApplication
                 TabPage emptyCart = new TabPage(Name = "Empty");
                 emptyCart.BackColor = Color.FromArgb(41, 44, 51);
                 tabControl.TabPages.Add(emptyCart);
-
-                JObject json = CartPage.Cart.ShowCart();
-                //TODO send the json to database
-
+                                
                 CartPage.Cart = null;
 
                 MessageBox.Show("Your order has been registered successfuly!");
@@ -62,5 +67,8 @@ namespace KitBoxApplication
             TabControl tabControl = (TabControl)this.Parent.Controls[4];
             tabControl.Visible = true;
         }
+
+       
+
     }
 }

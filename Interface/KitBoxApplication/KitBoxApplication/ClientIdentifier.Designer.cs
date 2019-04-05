@@ -93,9 +93,9 @@
             this.instructionLabel.ForeColor = System.Drawing.SystemColors.InfoText;
             this.instructionLabel.Location = new System.Drawing.Point(4, 6);
             this.instructionLabel.Name = "instructionLabel";
-            this.instructionLabel.Size = new System.Drawing.Size(341, 24);
+            this.instructionLabel.Size = new System.Drawing.Size(336, 24);
             this.instructionLabel.TabIndex = 5;
-            this.instructionLabel.Text = "Enter your mail to comfirm your cart";
+            this.instructionLabel.Text = "Enter your mail to confirm your cart";
             // 
             // ClientIdentifier
             // 
