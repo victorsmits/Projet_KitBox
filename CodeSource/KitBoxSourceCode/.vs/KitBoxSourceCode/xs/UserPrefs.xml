@@ -1,12 +1,12 @@
 ﻿<Properties GitUserInfo="UsingMD">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Knop.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Angle.cs">
     <Files>
-      <File FileName="KitBoxSourceCode/Angle.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Beam.cs" Line="1" Column="1" />
+      <File FileName="KitBoxSourceCode/Angle.cs" Line="46" Column="20" />
+      <File FileName="KitBoxSourceCode/Beam.cs" Line="32" Column="50" />
       <File FileName="KitBoxSourceCode/DoorBeam.cs" Line="1" Column="1" />
       <File FileName="KitBoxSourceCode/DoubleDoors.cs" Line="1" Column="1" />
       <File FileName="KitBoxSourceCode/Panel.cs" Line="1" Column="1" />
-      <File FileName="KitBoxSourceCode/Knop.cs" Line="1" Column="1" />
+      <File FileName="KitBoxSourceCode/Knop.cs" Line="27" Column="1" />
       <File FileName="KitBoxSourceCode/Cart.cs" Line="1" Column="1" />
       <File FileName="KitBoxSourceCode/Box.cs" Line="1" Column="1" />
       <File FileName="KitBoxSourceCode/Cabinet.cs" Line="55" Column="86" />
@@ -23,7 +23,7 @@
         <State name="__root__">
           <Node name="KitBoxSourceCode" expanded="True">
             <Node name="KitBoxSourceCode" expanded="True">
-              <Node name="Knop.cs" selected="True" />
+              <Node name="Angle.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -43,7 +43,7 @@ namespace KitBoxSourceCode
         {
             return "\"Angle\":{\"Length\":" + length + ",\"Color\":\"" + angleColor
             + "\",\"StockRef\":\"" + stockRef + "\",\"Quantity\":" + quantity
-                + "\",\"Remaining Stock\":" + stock;
+                + ",\"Remaining Stock\":" + stock;
         }
     }
 }
