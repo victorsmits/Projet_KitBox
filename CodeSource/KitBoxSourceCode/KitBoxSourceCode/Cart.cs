@@ -35,25 +35,38 @@ namespace KitBoxSourceCode
             clientProfile.ShowClientInfo();
         }
 
+        public void DelCabinet(int number)
+        {
+            cartPrice -= cabinets[number].GetCabinetPrice;
+            cabinets.RemoveAt(number);
+        }
+
         public JObject ShowCart()
         {
             JObject jsonCart = new JObject();
             string showCart = "";
-            foreach (Cabinet elem in cabinets)
+            if (cabinets.Count == 0)
             {
-                if (cabinets.IndexOf(elem) == 0)
+                showCart = "{}";
+            }
+            else
+            {
+                foreach (Cabinet elem in cabinets)
                 {
-                    showCart += "\n{";
-                }
-                showCart += "\"Cabinet " + cabinets.IndexOf(elem) + "\":{"
-                    + elem.GetPartList();
-                if (cabinets.IndexOf(elem) == cabinets.Count - 1)
-                {
-                    showCart += "},\"CartPrice\": \"" + cartPrice + "\"}";
-                }
-                else
-                {
-                    showCart += "},";
+                    if (cabinets.IndexOf(elem) == 0)
+                    {
+                        showCart += "\n{";
+                    }
+                    showCart += "\"Cabinet " + cabinets.IndexOf(elem) + "\":{"
+                        + elem.GetPartList();
+                    if (cabinets.IndexOf(elem) == cabinets.Count - 1)
+                    {
+                        showCart += "},\"CartPrice\": \"" + cartPrice + "\"}";
+                    }
+                    else
+                    {
+                        showCart += "},";
+                    }
                 }
             }
             return JObject.Parse(showCart);

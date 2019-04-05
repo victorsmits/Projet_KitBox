@@ -3,31 +3,34 @@ using SqlOledb;
 
 namespace KitBoxSourceCode
 {
-	public class Knop
-	{
-		private readonly double price;
-		private readonly int quantity;
-		private readonly string stockRef;
+    public class Knop
+    {
+        private readonly double price;
+        private readonly int stock;
+        private readonly int quantity;
+        private readonly string stockRef;
 
-		public double GetPrice => price;
+        public double GetPrice => price;
 
-		public Knop(int qty)
-		{
-			//TODO requet knop stock Ref
-			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'COUP%' ");
+        public Knop(int qty)
+        {
+            //TODO requet knop stock Ref
+            stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'COUP%' ");
 
-			//TODO requet knop price
-			price = Oledb.GetDBPrice(stockRef);
+            //TODO requet knop price
+            price = Oledb.GetDBPrice(stockRef);
 
-			quantity = qty;
-			//TODO requet book fct qty
-			Oledb.UpdateReservation(quantity, stockRef);
-		}
+            stock = Oledb.GetDBStock(stockRef);
 
-		public string GetDetails()
-		{
-			return "\",\"Knop\":{\"StockRef\": \"" + stockRef + "\",\"Quantity\":" + quantity + "}";
-		}
+            quantity = qty;
+            //TODO requet book fct qty
+            Oledb.UpdateReservation(quantity, stockRef);
+        }
 
-	}
+        public string GetDetails()
+        {
+            return ",\"Knop\":{\"StockRef\": \"" + stockRef + "\",\"Quantity\":" + quantity + "}";
+        }
+
+    }
 }

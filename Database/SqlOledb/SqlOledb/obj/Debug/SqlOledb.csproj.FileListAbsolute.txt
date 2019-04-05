@@ -31,11 +31,29 @@
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/SqlOledb/bin/Debug/lcpi.data.oledb.net4_6.pdb
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/SqlOledb/bin/Debug/ru/lcpi.lib.net4_6.resources.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/SqlOledb/bin/Debug/ru/lcpi.data.oledb.net4_6.resources.dll
-/Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/SqlOledb/obj/Debug/SqlOledb.csprojAssemblyReference.cache
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/SqlOledb/obj/Debug/SqlOledb.csproj.CoreCompileInputs.cache
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/SqlOledb/obj/Debug/SqlOledb.csproj.CopyComplete
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/SqlOledb/obj/Debug/SqlOledb.dll
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/SqlOledb/obj/Debug/SqlOledb.pdb
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\SqlOledb.dll.config
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\SqlOledb.dll
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\SqlOledb.pdb
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\Google.Protobuf.dll
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\lcpi.data.oledb.net4_6.dll
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\lcpi.lib.net4_6.dll
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\MySql.Data.dll
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\Google.Protobuf.pdb
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\Google.Protobuf.xml
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\MySql.Data.xml
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\lcpi.lib.net4_6.pdb
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\lcpi.data.oledb.net4_6.pdb
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\ru\lcpi.lib.net4_6.resources.dll
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\ru\lcpi.data.oledb.net4_6.resources.dll
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.csprojAssemblyReference.cache
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.csproj.CoreCompileInputs.cache
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.csproj.CopyComplete
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.dll
+C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.pdb
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\SqlOledb.dll.config
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\SqlOledb.dll
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\SqlOledb.pdb
@@ -50,7 +68,6 @@ C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Deb
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\lcpi.data.oledb.net4_6.pdb
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\ru\lcpi.lib.net4_6.resources.dll
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\bin\Debug\ru\lcpi.data.oledb.net4_6.resources.dll
-C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.csprojAssemblyReference.cache
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.csproj.CoreCompileInputs.cache
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.csproj.CopyComplete
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.dll
