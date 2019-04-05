@@ -29,7 +29,7 @@ namespace KitBoxSourceCode
 
         public string GetDetails()
         {
-            return "\",\"Knop\":{\"StockRef\": \"" + stockRef + "\",\"Quantity\":" + quantity + "}";
+            return ",\"Knop\":{\"StockRef\": \"" + stockRef + "\",\"Quantity\":" + quantity + "}";
         }
 
     }

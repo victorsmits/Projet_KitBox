@@ -123,7 +123,6 @@ C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBox
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxApplication.pdb
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.dll
-C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.pdb
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\KitBoxSourceCode.dll.config
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\Newtonsoft.Json.pdb
@@ -174,3 +173,4 @@ C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitB
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.ClientIdentifier.resources
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.ClientIdentifier.resources
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll

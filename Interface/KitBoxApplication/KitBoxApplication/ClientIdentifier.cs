@@ -30,16 +30,17 @@ namespace KitBoxApplication
         {
             string mail = textBox1.Text;
             JObject json = CartPage.Cart.ShowCart();
+            JToken cartPrice = json["CartPrice"];
             if (TestCorrectMail(mail)) {
                 if (checkBox1.Checked)
                 {
-                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','20','"+ json.ToString() +"','" + mail + "','Yes')";
-                    SqlOledb.Oledb.SqlRequest(rqst);
+                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','"+ cartPrice.ToString() +"','"+ json.ToString() +"','" + mail + "','Yes')";
+                    SqlOledb.Oledb.SqlRequestInsert(rqst);
                 }
                 else
                 {
-                    string rqst = "INSERT INTO ComClientS (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','20','" + json.ToString() + "','" + mail + "','No')";
-                    SqlOledb.Oledb.SqlRequest(rqst);
+                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','" + cartPrice.ToString() + "','" + json.ToString() + "','" + mail + "','No')";
+                    SqlOledb.Oledb.SqlRequestInsert(rqst);
                 }
                 
                 this.Visible = false;
