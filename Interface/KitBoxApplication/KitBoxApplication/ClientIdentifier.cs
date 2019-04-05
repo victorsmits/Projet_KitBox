@@ -22,7 +22,7 @@ namespace KitBoxApplication
 
         private bool TestCorrectMail(string mail)
         {
-            Regex typeMail = new Regex(@"^[a-z0-9]+@[a-z]+\.{1}[a-z]+$");
+            Regex typeMail = new Regex(@"^[a-zA-Z0-9]+@[a-z]+\.{1}[a-z]+$");
             return typeMail.IsMatch(mail);
         }
 
