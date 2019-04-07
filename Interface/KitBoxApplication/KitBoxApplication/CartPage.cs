@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KitBoxSourceCode;
 using Newtonsoft.Json.Linq;
-
+using System.IO;
 
 namespace KitBoxApplication
 {
@@ -74,6 +74,18 @@ namespace KitBoxApplication
             cart.DelCabinet(index);
             MessageBox.Show("L'armoire a été supprimé");
             Load_Json();
+        }
+
+        // function to get relative path to a file
+        private string GetRelativePath(string directory)
+        {
+            char[] test1 = "\\".ToCharArray();
+            string[] test = directory.Split(test1);
+            string root = test[0];
+            string user = test[1];
+            string namePC = test[2];
+            string dir = root + "\\" + user + "\\" + namePC + "\\";
+            return dir;
         }
 
         private void Create_Layout()
@@ -147,6 +159,21 @@ namespace KitBoxApplication
 
                     int labelLength = 15;
 
+                    string floorColor1 = "blanc";
+                    string floorColor2 = "blanc";
+                    string floorColor3 = "blanc";
+                    string floorColor4 = "blanc";
+                    string floorColor5 = "blanc";
+                    string floorColor6 = "blanc";
+                    string floorColor7 = "blanc";
+                    string doorMaterial1 = "NoDoor";
+                    string doorMaterial2 = "NoDoor";
+                    string doorMaterial3 = "NoDoor";
+                    string doorMaterial4 = "NoDoor";
+                    string doorMaterial5 = "NoDoor";
+                    string doorMaterial6 = "NoDoor";
+                    string doorMaterial7 = "NoDoor";
+
                     for (floorCount = 0; floorCount < cabinetContains.Count - 2; floorCount++)
                     {
                         labelLength = 15;
@@ -181,6 +208,30 @@ namespace KitBoxApplication
                             int length = floorPanel["Length"].Value<int>();
                             int panelQty = floorPanel["Qty"].Value<int>();
 
+                            switch (floorCount)
+                            {
+                                case 0:
+                                    floorColor1 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 1:
+                                    floorColor2 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 2:
+                                    floorColor3 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 3:
+                                    floorColor4 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 4:
+                                    floorColor5 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 5:
+                                    floorColor6 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 6:
+                                    floorColor7 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                            }
 
                             if (numberOfLabel == 0)
                             {
@@ -219,6 +270,31 @@ namespace KitBoxApplication
                             string doorMaterial = doors["Material"].Value<string>();
                             int doorQty = doors["Qty"].Value<int>();
 
+                            switch (floorCount)
+                            {
+                                case 0:
+                                    doorMaterial1 = doors["Material"].Value<string>();
+                                    break;
+                                case 1:
+                                    doorMaterial2 = doors["Material"].Value<string>();
+                                    break;
+                                case 2:
+                                    doorMaterial3 = doors["Material"].Value<string>();
+                                    break;
+                                case 3:
+                                    doorMaterial4 = doors["Material"].Value<string>();
+                                    break;
+                                case 4:
+                                    doorMaterial5 = doors["Material"].Value<string>();
+                                    break;
+                                case 5:
+                                    doorMaterial6 = doors["Material"].Value<string>();
+                                    break;
+                                case 6:
+                                    doorMaterial7 = doors["Material"].Value<string>();
+                                    break;
+                            }
+
                             JObject knop = doors["Knop"].Value<JObject>();
                             int knopQty = knop["Quantity"].Value<int>();
 
@@ -230,14 +306,26 @@ namespace KitBoxApplication
                             labelLength += (doorLabelLenght);
 
                             floorGroup.Controls.Add(doorLabel);
-
-
                         }
                         catch
                         {
 
                         }
 
+                        
+
+                        //System.Windows.Forms.Panel panelshelf1 = new System.Windows.Forms.Panel();
+                        ////Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor + doorMaterial + ".png");
+                        ////panelshelf1.BackgroundImage = myImage;
+                        //panelshelf1.BackColor = Color.Red;
+                        //if (floorCount == 1)
+                        //{
+                        //    panelshelf1.BackColor = Color.AliceBlue;
+                        //}
+                        //panelshelf1.BackgroundImageLayout = ImageLayout.Stretch;
+                        //panelshelf1.Size = new System.Drawing.Size(300, 100);
+                        //panelshelf1.Location = new Point(500, (0 + (cabinetContains.Count - 3) * 100) - floorCount * 100);
+                        //addedCabinePage.Controls.Add(panelshelf1);
                     }
                     if (floorCount >= 4)
                     {
@@ -245,6 +333,116 @@ namespace KitBoxApplication
                         addedCabinePage.AutoScrollMargin = new Size(20, 5);
                     }
 
+                    System.Windows.Forms.Panel panelShelf1 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf2 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf3 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf4 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf5 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf6 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf7 = new System.Windows.Forms.Panel();
+
+                    if (cabinetContains.Count - 2 > 0)
+                    {
+                        Image myImage1 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor1 + doorMaterial1 + ".png");
+                        panelShelf1.BackgroundImage = myImage1;
+                        panelShelf1.BackColor = Color.Transparent;
+                        panelShelf1.BackgroundImageLayout = ImageLayout.Stretch;
+                        panelShelf1.Size = new System.Drawing.Size(300, 600);
+                        panelShelf1.Location = new Point(500, (-200 + floorCount * 76/5*2));
+
+                        if (cabinetContains.Count - 2 > 1)
+                        {
+                            Image myImage2 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor2 + doorMaterial2 + ".png");
+                            panelShelf2.BackgroundImage = myImage2;
+                            panelShelf2.BackColor = Color.Transparent;
+                            panelShelf2.BackgroundImageLayout = ImageLayout.Stretch;
+                            panelShelf2.Size = new System.Drawing.Size(300, 600);
+                            panelShelf2.Location = new Point(0, -76);
+                            panelShelf1.Controls.Add(panelShelf2);
+                            if (cabinetContains.Count - 2 > 2)
+                            {
+                                Image myImage3 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor3 + doorMaterial3 + ".png");
+                                panelShelf3.BackgroundImage = myImage3;
+                                panelShelf3.BackColor = Color.Transparent;
+                                panelShelf3.BackgroundImageLayout = ImageLayout.Stretch;
+                                panelShelf3.Size = new System.Drawing.Size(300, 600);
+                                panelShelf3.Location = new Point(0, -76);
+                                panelShelf2.Controls.Add(panelShelf3);
+                                
+                                if (cabinetContains.Count - 2 > 3)
+                                {
+                                    Image myImage4 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor4 + doorMaterial4 + ".png");
+                                    panelShelf4.BackgroundImage = myImage4;
+                                    panelShelf4.BackColor = Color.Transparent;
+                                    panelShelf4.BackgroundImageLayout = ImageLayout.Stretch;
+                                    panelShelf4.Size = new System.Drawing.Size(300, 600);
+                                    panelShelf4.Location = new Point(0, -76);
+                                    panelShelf3.Controls.Add(panelShelf4);
+                                    
+                                    if (cabinetContains.Count - 2 > 4)
+                                    {
+                                        Image myImage5 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor5 + doorMaterial5 + ".png");
+                                        panelShelf5.BackgroundImage = myImage5;
+                                        panelShelf5.BackColor = Color.Transparent;
+                                        panelShelf5.BackgroundImageLayout = ImageLayout.Stretch;
+                                        panelShelf5.Size = new System.Drawing.Size(300, 600);
+                                        panelShelf5.Location = new Point(0, -76);
+                                        panelShelf4.Controls.Add(panelShelf5);
+                                        
+                                        if (cabinetContains.Count - 2 > 5)
+                                        {
+                                            Image myImage6 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor6 + doorMaterial6 + ".png");
+                                            panelShelf6.BackgroundImage = myImage6;
+                                            panelShelf6.BackColor = Color.Transparent;
+                                            panelShelf6.BackgroundImageLayout = ImageLayout.Stretch;
+                                            panelShelf6.Size = new System.Drawing.Size(300, 600);
+                                            panelShelf6.Location = new Point(0, -76);
+                                            panelShelf5.Controls.Add(panelShelf6);
+                                            
+                                            if (cabinetContains.Count - 2 > 6)
+                                            {
+                                                Image myImage7 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor7 + doorMaterial7 + ".png");
+                                                panelShelf7.BackgroundImage = myImage7;
+                                                panelShelf7.BackColor = Color.Transparent;
+                                                panelShelf7.BackgroundImageLayout = ImageLayout.Stretch;
+                                                panelShelf7.Size = new System.Drawing.Size(300, 600);
+                                                panelShelf7.Location = new Point(0, -76);
+                                                panelShelf6.Controls.Add(panelShelf7);
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    addedCabinePage.Controls.Add(panelShelf1);
+
+                    //switch (cabinetContains.Count - 3)
+                    //{
+                    //    case 0:
+                    //        addedCabinePage.Controls.Add(panelShelf1);
+                    //        break;
+                    //    case 1:
+                    //        addedCabinePage.Controls.Add(panelShelf2);
+                    //        addedCabinePage.Controls.Add(panelShelf1);
+                    //        break;
+                    //    case 2:
+                    //        addedCabinePage.Controls.Add(panelShelf1);
+                    //        break;
+                    //    case 3:
+                    //        addedCabinePage.Controls.Add(panelShelf1);
+                    //        break;
+                    //    case 4:
+                    //        addedCabinePage.Controls.Add(panelShelf1);
+                    //        break;
+                    //    case 5:
+                    //        addedCabinePage.Controls.Add(panelShelf1);
+                    //        break;
+                    //    case 6:
+                    //        addedCabinePage.Controls.Add(panelShelf1);
+                    //        break;
+                    //}
                 }
             }
         }
