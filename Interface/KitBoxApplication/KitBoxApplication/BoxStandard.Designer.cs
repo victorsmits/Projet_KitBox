@@ -558,9 +558,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.button2.Location = new System.Drawing.Point(694, 498);
+            this.button2.Location = new System.Drawing.Point(722, 496);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 55);
+            this.button2.Size = new System.Drawing.Size(120, 50);
             this.button2.TabIndex = 47;
             this.button2.Text = "Add To Cart";
             this.button2.UseVisualStyleBackColor = false;
@@ -1590,9 +1590,9 @@
             this.buttonReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
             this.buttonReset.Image = global::KitBoxApplication.Properties.Resources.restartLogo2;
             this.buttonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonReset.Location = new System.Drawing.Point(537, 500);
+            this.buttonReset.Location = new System.Drawing.Point(549, 498);
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(123, 53);
+            this.buttonReset.Size = new System.Drawing.Size(120, 50);
             this.buttonReset.TabIndex = 80;
             this.buttonReset.Text = "Reset All";
             this.buttonReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

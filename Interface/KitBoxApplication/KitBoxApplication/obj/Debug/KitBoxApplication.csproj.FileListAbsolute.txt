@@ -171,3 +171,6 @@ C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitB
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.ClientIdentifier.resources
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.ClientIdentifier.resources
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\bin\Debug\SqlOledb.dll
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.ClientIdentifier.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.AboutUs.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.csprojAssemblyReference.cache

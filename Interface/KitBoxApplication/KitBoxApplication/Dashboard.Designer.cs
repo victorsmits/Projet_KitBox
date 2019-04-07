@@ -30,29 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.SidePanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ButtonHome = new System.Windows.Forms.Button();
+            this.LogoPanel = new System.Windows.Forms.Panel();
+            this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.KitBoxHeader = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button2 = new System.Windows.Forms.Button();
             this.buttonAbout = new System.Windows.Forms.Button();
             this.buttonCart = new System.Windows.Forms.Button();
             this.buttonCreation = new System.Windows.Forms.Button();
             this.buttonDash = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ButtonHome = new System.Windows.Forms.Button();
-            this.LogoPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.HeaderPanel = new System.Windows.Forms.Panel();
-            this.KitBoxHeader = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBoxSubscribe = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cartPage1 = new KitBoxApplication.CartPage();
             this.homePage3 = new KitBoxApplication.HomePage();
             this.creation2 = new KitBoxApplication.Creation();
+            this.aboutUs1 = new KitBoxApplication.AboutUs();
             this.SidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.HeaderPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -72,6 +72,109 @@
             this.SidePanel.Size = new System.Drawing.Size(392, 1898);
             this.SidePanel.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(392, 138);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(2235, 1068);
+            this.panel2.TabIndex = 5;
+            // 
+            // ButtonHome
+            // 
+            this.ButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.ButtonHome.FlatAppearance.BorderSize = 0;
+            this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonHome.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonHome.Location = new System.Drawing.Point(0, 138);
+            this.ButtonHome.Margin = new System.Windows.Forms.Padding(2);
+            this.ButtonHome.Name = "ButtonHome";
+            this.ButtonHome.Size = new System.Drawing.Size(392, 115);
+            this.ButtonHome.TabIndex = 1;
+            this.ButtonHome.Text = "Home";
+            this.ButtonHome.UseVisualStyleBackColor = false;
+            this.ButtonHome.Click += new System.EventHandler(this.ButtonHome_Click);
+            // 
+            // LogoPanel
+            // 
+            this.LogoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.LogoPanel.Controls.Add(this.pictureBox1);
+            this.LogoPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LogoPanel.Location = new System.Drawing.Point(0, 0);
+            this.LogoPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.LogoPanel.Name = "LogoPanel";
+            this.LogoPanel.Size = new System.Drawing.Size(392, 138);
+            this.LogoPanel.TabIndex = 0;
+            // 
+            // HeaderPanel
+            // 
+            this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.HeaderPanel.Controls.Add(this.KitBoxHeader);
+            this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HeaderPanel.Location = new System.Drawing.Point(392, 0);
+            this.HeaderPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.HeaderPanel.Name = "HeaderPanel";
+            this.HeaderPanel.Size = new System.Drawing.Size(3393, 138);
+            this.HeaderPanel.TabIndex = 1;
+            // 
+            // KitBoxHeader
+            // 
+            this.KitBoxHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.KitBoxHeader.AutoSize = true;
+            this.KitBoxHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.KitBoxHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KitBoxHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
+            this.KitBoxHeader.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.KitBoxHeader.Location = new System.Drawing.Point(1525, 35);
+            this.KitBoxHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.KitBoxHeader.Name = "KitBoxHeader";
+            this.KitBoxHeader.Size = new System.Drawing.Size(209, 69);
+            this.KitBoxHeader.TabIndex = 0;
+            this.KitBoxHeader.Text = "KitBox";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(392, 1790);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(3393, 108);
+            this.panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Location = new System.Drawing.Point(1550, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(350, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CopyRight Reserved";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(75)))), ((int)(((byte)(19)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(3031, 78);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(10, 10);
+            this.button2.TabIndex = 106;
+            this.button2.Text = "Submit";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // buttonAbout
             // 
             this.buttonAbout.Dock = System.Windows.Forms.DockStyle.Top;
@@ -89,6 +192,7 @@
             this.buttonAbout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonAbout.UseVisualStyleBackColor = true;
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
             // buttonCart
             // 
@@ -147,41 +251,6 @@
             this.buttonDash.UseVisualStyleBackColor = true;
             this.buttonDash.Click += new System.EventHandler(this.ButtonHome_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(392, 138);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2235, 1068);
-            this.panel2.TabIndex = 5;
-            // 
-            // ButtonHome
-            // 
-            this.ButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.ButtonHome.FlatAppearance.BorderSize = 0;
-            this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonHome.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.ButtonHome.Location = new System.Drawing.Point(0, 138);
-            this.ButtonHome.Margin = new System.Windows.Forms.Padding(2);
-            this.ButtonHome.Name = "ButtonHome";
-            this.ButtonHome.Size = new System.Drawing.Size(392, 115);
-            this.ButtonHome.TabIndex = 1;
-            this.ButtonHome.Text = "Home";
-            this.ButtonHome.UseVisualStyleBackColor = false;
-            this.ButtonHome.Click += new System.EventHandler(this.ButtonHome_Click);
-            // 
-            // LogoPanel
-            // 
-            this.LogoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.LogoPanel.Controls.Add(this.pictureBox1);
-            this.LogoPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LogoPanel.Location = new System.Drawing.Point(0, 0);
-            this.LogoPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.LogoPanel.Name = "LogoPanel";
-            this.LogoPanel.Size = new System.Drawing.Size(392, 138);
-            this.LogoPanel.TabIndex = 0;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -194,87 +263,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(392, 138);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // HeaderPanel
-            // 
-            this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.HeaderPanel.Controls.Add(this.KitBoxHeader);
-            this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HeaderPanel.Location = new System.Drawing.Point(392, 0);
-            this.HeaderPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(3393, 138);
-            this.HeaderPanel.TabIndex = 1;
-            // 
-            // KitBoxHeader
-            // 
-            this.KitBoxHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.KitBoxHeader.AutoSize = true;
-            this.KitBoxHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.KitBoxHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KitBoxHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
-            this.KitBoxHeader.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.KitBoxHeader.Location = new System.Drawing.Point(1525, 35);
-            this.KitBoxHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.KitBoxHeader.Name = "KitBoxHeader";
-            this.KitBoxHeader.Size = new System.Drawing.Size(209, 69);
-            this.KitBoxHeader.TabIndex = 0;
-            this.KitBoxHeader.Text = "KitBox";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.textBoxSubscribe);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(392, 1790);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3393, 108);
-            this.panel1.TabIndex = 4;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(97)))), ((int)(((byte)(24)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(75)))), ((int)(((byte)(19)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(2118, 28);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 60);
-            this.button2.TabIndex = 106;
-            this.button2.Text = "Submit";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBoxSubscribe
-            // 
-            this.textBoxSubscribe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxSubscribe.Location = new System.Drawing.Point(1722, 38);
-            this.textBoxSubscribe.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxSubscribe.Name = "textBoxSubscribe";
-            this.textBoxSubscribe.Size = new System.Drawing.Size(372, 38);
-            this.textBoxSubscribe.TabIndex = 105;
-            this.textBoxSubscribe.Text = "example@mail.com";
-            this.textBoxSubscribe.Click += new System.EventHandler(this.PlaceHolderText);
-            this.textBoxSubscribe.MouseLeave += new System.EventHandler(this.PlaceHolderTextleaving);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(1288, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(370, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Subscribe NewsLetter";
             // 
             // cartPage1
             // 
@@ -304,6 +292,15 @@
             this.creation2.TabIndex = 5;
             this.creation2.Visible = false;
             // 
+            // aboutUs1
+            // 
+            this.aboutUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.aboutUs1.Location = new System.Drawing.Point(668, 274);
+            this.aboutUs1.Name = "aboutUs1";
+            this.aboutUs1.Size = new System.Drawing.Size(2750, 1650);
+            this.aboutUs1.TabIndex = 8;
+            this.aboutUs1.Visible = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
@@ -311,6 +308,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(3785, 1898);
+            this.Controls.Add(this.aboutUs1);
             this.Controls.Add(this.cartPage1);
             this.Controls.Add(this.homePage3);
             this.Controls.Add(this.creation2);
@@ -318,6 +316,7 @@
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.SidePanel);
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(3917, 2486);
             this.MinimumSize = new System.Drawing.Size(1894, 966);
@@ -326,11 +325,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.SidePanel.ResumeLayout(false);
             this.LogoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.HeaderPanel.ResumeLayout(false);
             this.HeaderPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,18 +343,18 @@
         private System.Windows.Forms.Label KitBoxHeader;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxSubscribe;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;       
         private System.Windows.Forms.Button buttonAbout;
         private System.Windows.Forms.Button buttonCart;
         private System.Windows.Forms.Button buttonCreation;
         private System.Windows.Forms.Button buttonDash;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;        
-        private Creation creation2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button2;
         private HomePage homePage3;
         private CartPage cartPage1;
+        private Creation creation2;
+        private AboutUs aboutUs1;
     }
 }
 
