@@ -8,10 +8,6 @@
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.csproj.CopyComplete
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.exe
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_GL/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.pdb
-C:/Users/m_sca/Documents/GitHub/Projet_KitBox/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.csprojAssemblyReference.cache
-C:/Users/m_sca/Documents/GitHub/Projet_KitBox/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.csproj.CoreCompileInputs.cache
-C:/Users/m_sca/Documents/GitHub/Projet_KitBox/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.exe
-C:/Users/m_sca/Documents/GitHub/Projet_KitBox/Database/SqlOledb/testOleDb/obj/Debug/testOleDb.pdb
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/testOleDb/bin/Debug/testOleDb.exe.config
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/testOleDb/bin/Debug/testOleDb.exe
 /Users/victorsmits/Dropbox/ECAM/BAC3/Projet informatique/Projet_KitBox/Database/SqlOledb/testOleDb/bin/Debug/testOleDb.pdb
@@ -30,3 +26,13 @@ C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.csproj.CopyComplete
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.exe
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\bin\Debug\testOleDb.exe.config
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\bin\Debug\testOleDb.exe
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\bin\Debug\testOleDb.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\bin\Debug\SqlOledb.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\bin\Debug\SqlOledb.dll.config
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.csprojAssemblyReference.cache
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.csproj.CoreCompileInputs.cache
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.csproj.CopyComplete
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.exe
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.pdb

@@ -37,6 +37,7 @@ namespace KitBoxSourceCode
 
         public void DelCabinet(int number)
         {
+            cartPrice -= cabinets[number].GetCabinetPrice;
             cabinets.RemoveAt(number);
         }
 

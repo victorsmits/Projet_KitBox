@@ -10,6 +10,7 @@ namespace KitBoxApplication
 {
     public partial class BoxStandard : UserControl
     {
+        // initialisation of variable to be able to safe selected values when switching to one or more boxes
         private string colorS1 = null;
         private string colorSA = null;
         private string colorSIf1 = null;
@@ -25,46 +26,47 @@ namespace KitBoxApplication
             // Ensure that all radio buttons are in the same groupbox control.
 
             // radio buttons in same group added to same function - group : --panelYesNoIf1--
-            radioButtonYesIf1.CheckedChanged += new EventHandler(radioButtonsYesNoIf1_CheckedChanged);
-            radioButtonNoIf1.CheckedChanged += new EventHandler(radioButtonsYesNoIf1_CheckedChanged);
+            radioButtonYesIf1.CheckedChanged += new EventHandler(RadioButtonsYesNoIf1_CheckedChanged);
+            radioButtonNoIf1.CheckedChanged += new EventHandler(RadioButtonsYesNoIf1_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesIf2.CheckedChanged += new EventHandler(radioButtonsYesNoIf2_CheckedChanged);
-            radioButtonNoIf2.CheckedChanged += new EventHandler(radioButtonsYesNoIf2_CheckedChanged);
+            radioButtonYesIf2.CheckedChanged += new EventHandler(RadioButtonsYesNoIf2_CheckedChanged);
+            radioButtonNoIf2.CheckedChanged += new EventHandler(RadioButtonsYesNoIf2_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox1.CheckedChanged += new EventHandler(radioButtonBox1_CheckedChanged);
-            radioButtonNoBox1.CheckedChanged += new EventHandler(radioButtonBox1_CheckedChanged);
+            radioButtonYesBox1.CheckedChanged += new EventHandler(RadioButtonBox1_CheckedChanged);
+            radioButtonNoBox1.CheckedChanged += new EventHandler(RadioButtonBox1_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox2.CheckedChanged += new EventHandler(radioButtonBox2_CheckedChanged);
-            radioButtonNoBox2.CheckedChanged += new EventHandler(radioButtonBox2_CheckedChanged);
+            radioButtonYesBox2.CheckedChanged += new EventHandler(RadioButtonBox2_CheckedChanged);
+            radioButtonNoBox2.CheckedChanged += new EventHandler(RadioButtonBox2_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox3.CheckedChanged += new EventHandler(radioButtonBox3_CheckedChanged);
-            radioButtonNoBox3.CheckedChanged += new EventHandler(radioButtonBox3_CheckedChanged);
+            radioButtonYesBox3.CheckedChanged += new EventHandler(RadioButtonBox3_CheckedChanged);
+            radioButtonNoBox3.CheckedChanged += new EventHandler(RadioButtonBox3_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox4.CheckedChanged += new EventHandler(radioButtonBox4_CheckedChanged);
-            radioButtonNoBox4.CheckedChanged += new EventHandler(radioButtonBox4_CheckedChanged);
+            radioButtonYesBox4.CheckedChanged += new EventHandler(RadioButtonBox4_CheckedChanged);
+            radioButtonNoBox4.CheckedChanged += new EventHandler(RadioButtonBox4_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox5.CheckedChanged += new EventHandler(radioButtonBox5_CheckedChanged);
-            radioButtonNoBox5.CheckedChanged += new EventHandler(radioButtonBox5_CheckedChanged);
+            radioButtonYesBox5.CheckedChanged += new EventHandler(RadioButtonBox5_CheckedChanged);
+            radioButtonNoBox5.CheckedChanged += new EventHandler(RadioButtonBox5_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox6.CheckedChanged += new EventHandler(radioButtonBox6_CheckedChanged);
-            radioButtonNoBox6.CheckedChanged += new EventHandler(radioButtonBox6_CheckedChanged);
+            radioButtonYesBox6.CheckedChanged += new EventHandler(RadioButtonBox6_CheckedChanged);
+            radioButtonNoBox6.CheckedChanged += new EventHandler(RadioButtonBox6_CheckedChanged);
 
             // radio buttons in same group added to same function - group : --panelYesNoIf2--
-            radioButtonYesBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
-            radioButtonNoBox7.CheckedChanged += new EventHandler(radioButtonBox7_CheckedChanged);
+            radioButtonYesBox7.CheckedChanged += new EventHandler(RadioButtonBox7_CheckedChanged);
+            radioButtonNoBox7.CheckedChanged += new EventHandler(RadioButtonBox7_CheckedChanged);
         }
 
         OleDbCommand cmd = new OleDbCommand(); //cmd for command
         OleDbConnection cn = new OleDbConnection();  // cn for connection
         OleDbDataReader dr;
 
+        // function to get relative path to a file
         private string GetRelativePath(string directory)
         {
             char[] test1 = "\\".ToCharArray();
@@ -225,13 +227,15 @@ namespace KitBoxApplication
         }
 
         // function to make appear color choice for all the boxes at once and door choice
-        private void checkBoxColorYes_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxColorYes_CheckedChanged(object sender, EventArgs e)
         {
             if (panelColorChoiceAll.Visible == true)
             {
                 panelColorChoiceAll.Visible = false;
                 panelDoorChoiceMultiple.Visible = false;
+                comboBoxColorSA.SelectedItem = null;
             }
+            // yes selected, reseting every comboBox to initial state
             else
             {
                 panelColorChoiceAll.Visible = true;
@@ -249,12 +253,19 @@ namespace KitBoxApplication
         }
 
         // function to make appear color choice for all boxes apart and door choice
-        private void checkBoxColorNo_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxColorNo_CheckedChanged(object sender, EventArgs e)
         {
             if (panelColorChoice.Visible == true)
             {
                 panelColorChoice.Visible = false;
-                panelDoorChoiceMultiple.Visible = false;
+                panelDoorChoiceMultiple.Visible = false;                
+                comboBoxColorS1.SelectedItem = null;
+                comboBoxColorS2.SelectedItem = null;
+                comboBoxColorS3.SelectedItem = null;
+                comboBoxColorS4.SelectedItem = null;
+                comboBoxColorS5.SelectedItem = null;
+                comboBoxColorS6.SelectedItem = null;
+                comboBoxColorS7.SelectedItem = null;
             }
             else
             {
@@ -268,7 +279,7 @@ namespace KitBoxApplication
         // function applied to number read on the numericUpDown
         // different groups will appear or disappear in function of how many boxes have
         // been chosen
-        private void numericUpDownQuantity_ValueChanged(object sender, EventArgs e)
+        private void NumericUpDownQuantity_ValueChanged(object sender, EventArgs e)
         {
             int count = Convert.ToInt32(numericUpDownQuantity.Value);
             LoadDataHeight();
@@ -294,21 +305,31 @@ namespace KitBoxApplication
                 {
                     if (colorSA != null)
                     {
-                        comboBoxColorIf1.Text = colorSA;
-                        colorSA = null;
+                        comboBoxColorIf1.SelectedItem = colorSA;
+                        //colorSA = null;
                     }
                     else if (colorSA != null)
                     {
-                        comboBoxColorIf1.Text = colorS1;
-                        colorS1 = null;
+                        comboBoxColorIf1.SelectedItem = colorS1;
+                        //colorS1 = null;
                     }
                     if (doorM1 != null)
                     {
-                        comboBoxDoorMatIf1.Text = doorM1;
+                        comboBoxDoorMatIf1.SelectedItem = doorM1;
                         radioButtonYesIf1.Checked = true;
-                        doorM1 = null;
+                        //doorM1 = null;
                     }
                 }
+                comboBoxColorS1.SelectedItem = null;
+                comboBoxColorS2.SelectedItem = null;
+                AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1 , panelShelf1);
+                AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
+                AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
+                AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
+                AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
+                AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
+                AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
+                colorSIf1 = comboBoxColorIf1.Text;
             }
             else if (count > 1)
             {
@@ -320,7 +341,11 @@ namespace KitBoxApplication
                 // color features box 3
                 labelColorS3.Visible = false;
                 comboBoxColorS3.Visible = false;
-                // need to be, as it only need to change if 2 boxes chosen
+
+                // shelf image
+                panelShelf2.Visible = true;
+                panelShelf3.Visible = false;
+                
                 if (count == 2)
                 {
                     // door features box 3
@@ -328,29 +353,35 @@ namespace KitBoxApplication
                     panelYesNoBox3.Visible = false;
                     // resets radiobutton only if
                     radioButtonNoBox3.Checked = true;
-                }
-                // resets radiobuttons
-                radioButtonNoIf1.Checked = true;
-                // shelf image
-                panelShelf2.Visible = true;
-                panelShelf3.Visible = false;
-                // keep selected value of first box
-                if (colorSIf1 != null || doorMIf1 != null)
-                {
-                    if (colorSIf1 != null)
+                    comboBoxColorS3.SelectedItem = null;
+                    // keep selected value of first box
+                    if (colorSIf1 != null || doorMIf1 != null)
                     {
-                        comboBoxColorS1.Text = colorSIf1;
-                        checkBoxColorNo.Checked = true;
-                        colorSIf1 = null;
+                        if (colorSIf1 != null)
+                        {
+                            comboBoxColorS1.SelectedItem = colorSIf1;
+                            checkBoxColorNo.Checked = true;
+                            //colorSIf1 = null;
+                        }
+                        if (doorMIf1 != null)
+                        {
+                            comboBoxDoorMatBox1.SelectedItem = doorMIf1;
+                            radioButtonYesIf2.Checked = true;
+                            radioButtonYesBox1.Checked = true;
+                            //doorMIf1 = null;
+                        } 
+                        else
+                        {
+                            // resets radiobuttons
+                            radioButtonNoIf1.Checked = true;
+                        }
                     }
-                    if (doorMIf1 != null)
+                    if (comboBoxColorSA.SelectedItem == null)
                     {
-                        comboBoxDoorMatBox1.Text = doorMIf1;
-                        radioButtonYesIf2.Checked = true;
-                        radioButtonYesBox1.Checked = true;
-                        doorMIf1 = null;
-                    }
-                }
+                        AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
+                    } 
+                }                
+                
                 if (count > 2)
                 {
                     // color features box 3 and box 4
@@ -368,6 +399,7 @@ namespace KitBoxApplication
                         panelYesNoBox4.Visible = false;
                         // resets radiobutton only if
                         radioButtonNoBox4.Checked = true;
+                        comboBoxColorS4.SelectedItem = null;
                     }
                     // shelf image
                     panelShelf3.Visible = true;
@@ -389,6 +421,7 @@ namespace KitBoxApplication
                             panelYesNoBox5.Visible = false;
                             // resets radiobutton only if
                             radioButtonNoBox5.Checked = true;
+                            comboBoxColorS5.SelectedItem = null;
                         }
                         // shelf image
                         panelShelf4.Visible = true;
@@ -410,6 +443,7 @@ namespace KitBoxApplication
                                 panelYesNoBox6.Visible = false;
                                 // resets radiobutton only if
                                 radioButtonNoBox6.Checked = true;
+                                comboBoxColorS6.SelectedItem = null;
                             }
                             // shelf image
                             panelShelf5.Visible = true;
@@ -431,6 +465,7 @@ namespace KitBoxApplication
                                     panelYesNoBox7.Visible = false;
                                     // resets radiobutton only if
                                     radioButtonNoBox7.Checked = true;
+                                    comboBoxColorS7.SelectedItem = null;
                                 }
                                 // shelf image
                                 panelShelf6.Visible = true;
@@ -454,7 +489,7 @@ namespace KitBoxApplication
         }
 
         // function for door in case only 1 box
-        private void radioButtonsYesNoIf1_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonsYesNoIf1_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -477,7 +512,7 @@ namespace KitBoxApplication
         }
 
         // function for doors in case multiple boxes
-        private void radioButtonsYesNoIf2_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonsYesNoIf2_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -504,7 +539,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 1
-        private void radioButtonBox1_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox1_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -531,7 +566,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 2
-        private void radioButtonBox2_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox2_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -557,7 +592,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 3
-        private void radioButtonBox3_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox3_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -583,7 +618,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 4
-        private void radioButtonBox4_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox4_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -609,7 +644,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 5
-        private void radioButtonBox5_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox5_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -635,7 +670,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 6
-        private void radioButtonBox6_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox6_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -661,7 +696,7 @@ namespace KitBoxApplication
         }
 
         // function radiobuttons for door box 7
-        private void radioButtonBox7_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonBox7_CheckedChanged(object sender, EventArgs e)
         {
             // Do stuff only if the radio button is checked (or the action will run twice).
             if (((RadioButton)sender).Checked)
@@ -691,37 +726,25 @@ namespace KitBoxApplication
         {
             string color = box.Text;
             string doorMat = door.Text;
-            // if only the color has been chosen
-            if (door.Text == "" && color != "")
+            if (color == "")
             {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                shelf.BackgroundImage = myImage;
+                color = "blanc";
             }
-            // if a color and a door has been chosen
-            else if (door.Text != "" && color != "")
+            if (doorMat == "")
             {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                shelf.BackgroundImage = myImage;
+                doorMat = "NoDoor";
             }
-            // if their is a change in choice from unique choice for each box or same choice for each box
-            else if (door.Text != "" && color != "")
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
-                shelf.BackgroundImage = myImage;
-            }
-            else
-            {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blancNoDoor.png");
-                shelf.BackgroundImage = myImage;
-            }
+            Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
+            shelf.BackgroundImage = myImage;
         }
 
-        private void comboBoxColorIf1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxColorIf1_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
             colorSIf1 = comboBoxColorIf1.Text;
         }
 
+        // function to change colors of cabinet image in case checkBox "all color same" checked
         private void LoadColorAllSame()
         {
             int count = Convert.ToInt32(numericUpDownQuantity.Value);
@@ -800,146 +823,115 @@ namespace KitBoxApplication
             }
         }
 
-        private void comboBoxColorSA_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of all active boxPanels
+        private void ComboBoxColorSA_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadColorAllSame();
             colorSA = comboBoxColorSA.Text;
         }
 
-        private void comboBoxColorS1_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of boxPanel1
+        private void ComboBoxColorS1_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
             colorS1 = comboBoxColorS1.Text;
         }
 
-        private void comboBoxColorS2_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of boxPanel2
+        private void ComboBoxColorS2_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
         }
 
-        private void comboBoxColorS3_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of boxPanel3
+        private void ComboBoxColorS3_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
         }
 
-        private void comboBoxColorS4_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of boxPanel4
+        private void ComboBoxColorS4_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
         }
 
-        private void comboBoxColorS5_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of boxPanel5
+        private void ComboBoxColorS5_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
         }
 
-        private void comboBoxColorS6_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of boxPanel6
+        private void ComboBoxColorS6_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
         }
 
-        private void comboBoxColorS7_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of boxPanel7
+        private void ComboBoxColorS7_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
-        }
-
-        // general function to add door and color door to cabinet image
-        private void AddDoorToBox(ComboBox door, ComboBox box, System.Windows.Forms.Panel shelf)
-        {
-            string doorMat = door.Text;
-            string boxSA = comboBoxColorSA.Text;
-            if (box.Text == "" && boxSA == "")
-            {
-                if (doorMat != "")
-                {
-                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blanc" + doorMat + ".png");
-                    shelf.BackgroundImage = myImage;
-                }
-            }
-            else if (box.Text != "" && boxSA == "")
-            {
-                string color = box.Text;
-                if (doorMat != "")
-                {
-                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                    shelf.BackgroundImage = myImage;
-                }
-                else
-                {
-                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                    shelf.BackgroundImage = myImage;
-                }
-            }
-            else if (box.Text == "" && boxSA != "")
-            {
-                string color = boxSA;
-                if (doorMat != "")
-                {
-                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + doorMat + ".png");
-                    shelf.BackgroundImage = myImage;
-                }
-                else
-                {
-                    Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                    shelf.BackgroundImage = myImage;
-                }
-            }
         }
 
         // general function to remove door image
         private void RemoveDoor(ComboBox a, System.Windows.Forms.Panel b)
         {
-            if (a.Text == "")
+            string color = a.Text;
+            if (color == "")
             {
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\blancNoDoor.png");
-                b.BackgroundImage = myImage;
+                color = "blanc";
             }
-            else
-            {
-                string color = a.Text;
-                Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
-                b.BackgroundImage = myImage;
-            }
+            Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + color + "NoDoor.png");
+            b.BackgroundImage = myImage;
         }
 
-        private void comboBoxDoorMatBox1_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of door material of box 1
+        private void ComboBoxDoorMatBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddDoorToBox(comboBoxDoorMatBox1 , comboBoxColorS1, panelShelf1);
+            AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
             doorM1 = comboBoxDoorMatBox1.Text;
         }
 
-        private void comboBoxDoorMatBox2_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of door material of box 2
+        private void ComboBoxDoorMatBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddDoorToBox(comboBoxDoorMatBox2, comboBoxColorS2, panelShelf2);
+            AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
         }
 
-        private void comboBoxDoorMatBox3_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of door material of box 3
+        private void ComboBoxDoorMatBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddDoorToBox(comboBoxDoorMatBox3, comboBoxColorS3, panelShelf3);
+            AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
         }
 
-        private void comboBoxDoorMatBox4_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of door material of box 4
+        private void ComboBoxDoorMatBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddDoorToBox(comboBoxDoorMatBox4, comboBoxColorS4, panelShelf4);
+            AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
         }
 
-        private void comboBoxDoorMatBox5_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of door material of box 5
+        private void ComboBoxDoorMatBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddDoorToBox(comboBoxDoorMatBox5, comboBoxColorS5, panelShelf5);
+            AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
         }
 
-        private void comboBoxDoorMatBox6_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of door material of box 6
+        private void ComboBoxDoorMatBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddDoorToBox(comboBoxDoorMatBox6, comboBoxColorS6, panelShelf6);
+            AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
         }
 
-        private void comboBoxDoorMatBox7_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of door material of box 7
+        private void ComboBoxDoorMatBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddDoorToBox(comboBoxDoorMatBox7, comboBoxColorS7, panelShelf7);
+            AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
         }
 
-        private void comboBoxDoorMatIf1_SelectedIndexChanged(object sender, EventArgs e)
+        // function to change color of door material of box 1 in case 1 box cabinet
+        private void ComboBoxDoorMatIf1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddDoorToBox(comboBoxDoorMatIf1, comboBoxColorIf1 , panelShelf1);
+            AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
             doorMIf1 = comboBoxDoorMatIf1.Text;
         }
 
@@ -953,10 +945,13 @@ namespace KitBoxApplication
         }
 
         // function to give dimension of the boxes
-        private void comboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // TODO : sth to change text next to combobox containing height of the box
-            var height = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
+        private void ComboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
+        {           
+            var height = 0;
+            if (comboBoxHeight.SelectedItem != null)
+            {
+                height = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
+            }            
             var nbrBox = Int32.Parse(numericUpDownQuantity.Value.ToString());
             int boxHeight = ProcessHeightForEachBox(height,nbrBox);
             string dimension = nbrBox + "x" + boxHeight.ToString() + "(h)";
@@ -964,7 +959,7 @@ namespace KitBoxApplication
         }
 
         //function that add the chosen features to the cart
-        private void button2_Click(object sender, EventArgs e)
+        private void ButtonAddToCart_Click(object sender, EventArgs e)
         {
 
             //If the cart is empty, create it
@@ -1173,10 +1168,23 @@ namespace KitBoxApplication
 
                 MessageBox.Show("This cabinet has been added to the cart succesfully!");
             }
-            catch(NullReferenceException except)
+            catch(NullReferenceException)
             {
                 MessageBox.Show("Please enter all the necessary information");
             }
+        }
+
+        // function to reset every combobox, numericupdown, radiobutton and checkbox to his initial state
+        private void ButtonReset_Click(object sender, EventArgs e)
+        {
+            numericUpDownQuantity.Value = 1;
+            comboBoxColorAngles.SelectedItem = null;
+            comboBoxHeight.SelectedItem = null;
+            comboBoxWidth.SelectedItem = null;
+            comboBoxDepth.SelectedItem = null;
+            comboBoxColorIf1.SelectedItem = null;
+            radioButtonNoIf1.Checked = true;
+            labelBoxHeight.Text = "";
         }
     }
 }

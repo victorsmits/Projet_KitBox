@@ -51,7 +51,7 @@
             // 
             this.timerSlider.Enabled = true;
             this.timerSlider.Interval = 5000;
-            this.timerSlider.Tick += new System.EventHandler(this.timerSlider_Tick);
+            this.timerSlider.Tick += new System.EventHandler(this.TimerSlider_Tick);
             // 
             // HomePage
             // 
