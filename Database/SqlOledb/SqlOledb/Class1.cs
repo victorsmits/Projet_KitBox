@@ -78,6 +78,23 @@ namespace SqlOledb
             return null;
         }
 
+        public static void SqlRequestInsert(String sql)//the command to do a sql instruction named q
+        {
+            Connection();
+            try
+            {
+                cn.Open();
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cn.Close();
+
+            }
+            catch (Exception e)
+            {
+                cn.Close();
+            }
+        }
+
         public static void UpdateReservation(int quantity, string stockRef)
         {
             int currentReservation = int.Parse(SqlRequest("SELECT Reservation FROM Piece WHERE Référence = '" + stockRef + "'"));

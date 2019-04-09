@@ -71,7 +71,7 @@
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="ADONetHelper.Oledb">
-      <HintPath>..\packages\ADONetHelper.Oledb.1.0.7\lib\net45\ADONetHelper.Oledb.dll</HintPath>
+      <HintPath>..\packages\ADONetHelper.Oledb.1.0.8\lib\net45\ADONetHelper.Oledb.dll</HintPath>
     </Reference>
     <Reference Include="DatabaseConnections">
       <HintPath>..\packages\DatabaseConnections.1.1.0\lib\net35\DatabaseConnections.dll</HintPath>

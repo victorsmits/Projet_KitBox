@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KitBoxApplication
@@ -17,7 +10,7 @@ namespace KitBoxApplication
             InitializeComponent();
         }       
 
-        private void completeCreationAppear(object sender, EventArgs e)
+        private void CompleteCreationAppear(object sender, EventArgs e)
         {
             if (boxCreationScratch1.Visible == true)
             {
@@ -27,12 +20,12 @@ namespace KitBoxApplication
             else
             {
                 boxCreationScratch1.Visible = true;
-                standartCreation.Checked = false;
+                standardCreation.Checked = false;
                 creationExplanation1.Visible = false;
             }
         }
 
-        private void standartCreationAppear(object sender, EventArgs e)
+        private void StandardCreationAppear(object sender, EventArgs e)
         {
             if (boxStandard2.Visible == true)
             {
@@ -44,13 +37,7 @@ namespace KitBoxApplication
                 boxStandard2.Visible = true;
                 completeCreation.Checked = false;
                 creationExplanation1.Visible = false; 
-                
             }
-        }
-
-        private void Creation_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

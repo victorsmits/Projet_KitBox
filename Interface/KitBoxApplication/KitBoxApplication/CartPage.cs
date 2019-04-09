@@ -220,6 +220,26 @@ namespace KitBoxApplication
 
                         }
 
+                        //Generate label if material available 
+                        Label availableMaterial = new Label();
+                        availableMaterial.AutoSize = true;
+                        availableMaterial.Location = new Point(floorGroup.Width + 35, 120 + floorCount * 110);
+                        //TODO : modify availability in function of the different parts
+                        bool availability = false;
+                        if (availability)
+                        {
+                            Color Green = Color.FromName("Green");
+                            availableMaterial.ForeColor = Green;
+                            availableMaterial.Text = "All the parts are available";
+                        }
+                        else
+                        {
+                            Color Red = Color.FromName("Red");
+                            availableMaterial.ForeColor = Red;
+                            availableMaterial.Text = "Not all the parts are available";
+                        }
+                        addedCabinePage.Controls.Add(availableMaterial);
+
                     }
                     if (floorCount >= 4)
                     {

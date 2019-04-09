@@ -22,7 +22,7 @@ namespace KitBoxApplication
 
         private bool TestCorrectMail(string mail)
         {
-            Regex typeMail = new Regex(@"^[a-z0-9]+@[a-z]+\.{1}[a-z]+$");
+            Regex typeMail = new Regex(@"^[a-zA-Z0-9]+@[a-z]+\.{1}[a-z]+$");
             return typeMail.IsMatch(mail);
         }
 
@@ -30,18 +30,19 @@ namespace KitBoxApplication
         {
             string mail = textBox1.Text;
             JObject json = CartPage.Cart.ShowCart();
+            JToken cartPrice = json["CartPrice"];
             if (TestCorrectMail(mail)) {
                 if (checkBox1.Checked)
                 {
-                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','20','"+ json.ToString() +"','" + mail + "','Yes')";
-                    SqlOledb.Oledb.SqlRequest(rqst);
+                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','"+ cartPrice.ToString() +"','"+ json.ToString() +"','" + mail + "','Yes')";
+                    SqlOledb.Oledb.SqlRequestInsert(rqst);
                 }
                 else
                 {
-                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','20','" + json.ToString() + "','" + mail + "','No')";
-                    SqlOledb.Oledb.SqlRequest(rqst);
+                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','" + cartPrice.ToString() + "','" + json.ToString() + "','" + mail + "','No')";
+                    SqlOledb.Oledb.SqlRequestInsert(rqst);
                 }
-                
+
                 this.Visible = false;
                 TabControl tabControl = (TabControl)this.Parent.Controls[4];
                 tabControl.Visible = true;
@@ -49,7 +50,7 @@ namespace KitBoxApplication
                 TabPage emptyCart = new TabPage(Name = "Empty");
                 emptyCart.BackColor = Color.FromArgb(41, 44, 51);
                 tabControl.TabPages.Add(emptyCart);
-                                
+
                 CartPage.Cart = null;
 
                 MessageBox.Show("Your order has been registered successfuly!");
@@ -68,7 +69,7 @@ namespace KitBoxApplication
             tabControl.Visible = true;
         }
 
-       
+
 
     }
 }
