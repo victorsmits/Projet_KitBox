@@ -30,7 +30,7 @@ namespace KitBoxSourceCode
         {
             return "\",\"Knop\":{\"StockRef\": \"" + stockRef
                 + "\",\"Quantity\":" + quantity
-                + "\",\"Remaining Stock\":" + stock + "\"}";
+                + "\",\"Remaining Stock\":" + stock + "}";
         }
 
     }
