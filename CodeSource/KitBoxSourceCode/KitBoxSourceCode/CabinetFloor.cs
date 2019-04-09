@@ -35,7 +35,15 @@ namespace KitBoxSourceCode
             //Adding doors
             if (doorMat != null)
             {
-                db = new DoubleDoors(doorMat, height, (length/2)+2);
+                if (length == 62)
+                {
+                    db = new DoubleDoors(doorMat, height, length);
+                }
+                else
+                {
+                    db = new DoubleDoors(doorMat, height, (length / 2) + 2);
+                }
+
                 db.AddBoxDecorator(box);
                 storageBoxes.Add(db);
             }

@@ -20,18 +20,18 @@ namespace KitBoxSourceCode
             this.theStorageBox = storageBox;
         }
 
-		public DoubleDoors(string doormat, int hei, int len) : base(len, hei - 4)
-		{
-			TheDoorMat = doormat;
+        public DoubleDoors(string doormat, int hei, int len) : base(len, hei - 4)
+        {
+            TheDoorMat = doormat;
             //Getting the stock reference by dimension and color/material
-			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'POR%' AND largeur = '"
-			+ length.ToString() + "' AND hauteur = '" + height.ToString() + "' AND Couleur = '" + doormat + "'");
+            stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'POR%' AND largeur LIKE '"
+            + length.ToString() + "' AND hauteur LIKE '" + height.ToString() + "' AND Couleur LIKE '" + doormat + "'");
 
             knops = new Knop(2);
 
-			price = Oledb.GetDBPrice(stockRef);
-			//Update the reservation in the data base
-			Oledb.UpdateReservation(2, stockRef);
+            price = Oledb.GetDBPrice(stockRef);
+            //Update the reservation in the data base
+            Oledb.UpdateReservation(2, stockRef);
 
             SetPrice();
             SetStock();

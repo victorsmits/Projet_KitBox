@@ -20,6 +20,7 @@ namespace KitBoxSourceCode
             //Getting knop's price
             price = Oledb.GetDBPrice(stockRef);
 
+            stock = Oledb.GetDBStock(stockRef);
             quantity = qty;
             //Update reservation in the data base
             Oledb.UpdateReservation(quantity, stockRef);
@@ -27,7 +28,9 @@ namespace KitBoxSourceCode
 
         public string GetDetails()
         {
-            return "\",\"Knop\":{\"StockRef\": \"" + stockRef + "\",\"Quantity\":" + quantity + "}";
+            return "\",\"Knop\":{\"StockRef\": \"" + stockRef
+                + "\",\"Quantity\":" + quantity
+                + "\",\"Remaining Stock\":" + stock + "\"}";
         }
 
     }
