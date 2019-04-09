@@ -73,7 +73,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="KitBoxSourceCode, Version=1.0.7025.36025, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="KitBoxSourceCode, Version=1.0.7034.31125, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.dll</HintPath>
     </Reference>
