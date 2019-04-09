@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.confirmButton = new System.Windows.Forms.Button();
+            this.confirmClientButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -36,16 +36,16 @@
             this.instructionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // confirmButton
+            // confirmClientButton
             // 
-            this.confirmButton.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.confirmButton.Location = new System.Drawing.Point(93, 108);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(75, 23);
-            this.confirmButton.TabIndex = 0;
-            this.confirmButton.Text = "Confirm";
-            this.confirmButton.UseVisualStyleBackColor = true;
-            this.confirmButton.Click += new System.EventHandler(this.comfirmButton_Click);
+            this.confirmClientButton.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.confirmClientButton.Location = new System.Drawing.Point(93, 108);
+            this.confirmClientButton.Name = "confirmClientButton";
+            this.confirmClientButton.Size = new System.Drawing.Size(75, 23);
+            this.confirmClientButton.TabIndex = 0;
+            this.confirmClientButton.Text = "Confirm";
+            this.confirmClientButton.UseVisualStyleBackColor = true;
+            this.confirmClientButton.Click += new System.EventHandler(this.comfirmClientButton_Click);
             // 
             // cancelButton
             // 
@@ -106,7 +106,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.confirmButton);
+            this.Controls.Add(this.confirmClientButton);
             this.Name = "ClientIdentifier";
             this.Size = new System.Drawing.Size(352, 144);
             this.ResumeLayout(false);
@@ -116,7 +116,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button confirmButton;
+        private System.Windows.Forms.Button confirmClientButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox1;

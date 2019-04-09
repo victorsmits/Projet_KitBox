@@ -26,7 +26,7 @@ namespace KitBoxApplication
             return typeMail.IsMatch(mail);
         }
 
-        private void comfirmButton_Click(object sender, EventArgs e)
+        private void comfirmClientButton_Click(object sender, EventArgs e)
         {
             string mail = textBox1.Text;
             JObject json = CartPage.Cart.ShowCart();
@@ -38,7 +38,7 @@ namespace KitBoxApplication
                 }
                 else
                 {
-                    string rqst = "INSERT INTO ComClientS (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','20','" + json.ToString() + "','" + mail + "','No')";
+                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','20','" + json.ToString() + "','" + mail + "','No')";
                     SqlOledb.Oledb.SqlRequest(rqst);
                 }
                 
