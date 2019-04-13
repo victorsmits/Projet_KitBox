@@ -754,8 +754,11 @@ namespace KitBoxApplication
 
         private void ComboBoxColorIf1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
-            colorSIf1 = comboBoxColorIf1.Text;
+            if (numericUpDownQuantity.Value == 1)
+            {
+                AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
+                colorSIf1 = comboBoxColorIf1.Text;
+            }
         }
 
         // function to change colors of cabinet image in case checkBox "all color same" checked
