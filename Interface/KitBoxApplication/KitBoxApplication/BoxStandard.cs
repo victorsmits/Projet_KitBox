@@ -248,6 +248,8 @@ namespace KitBoxApplication
                 comboBoxColorS5.SelectedItem = null;
                 comboBoxColorS6.SelectedItem = null;
                 comboBoxColorS7.SelectedItem = null;
+                colorS1 = null;
+                colorSIf1 = null;
                 LoadColorAllSame();
             }
         }
@@ -301,14 +303,14 @@ namespace KitBoxApplication
                 // shelf image
                 panelShelf2.Visible = false;
                 // keep selected value of first box
-                if (colorSA != null || colorS1 != null || doorM1 != null)
+                if (colorSA != null || colorS1 != null || doorM1 != null || doorM1 == null)
                 {
                     if (colorSA != null)
                     {
                         comboBoxColorIf1.SelectedItem = colorSA;
                         //colorSA = null;
                     }
-                    else if (colorSA != null)
+                    else if (colorS1 != null)
                     {
                         comboBoxColorIf1.SelectedItem = colorS1;
                         //colorS1 = null;
@@ -318,6 +320,11 @@ namespace KitBoxApplication
                         comboBoxDoorMatIf1.SelectedItem = doorM1;
                         radioButtonYesIf1.Checked = true;
                         //doorM1 = null;
+                    }
+                    else if (doorM1 == null)
+                    {
+                        radioButtonNoIf1.Checked = true;
+                        comboBoxDoorMatIf1.SelectedItem = null;
                     }
                 }
                 comboBoxColorS1.SelectedItem = null;
@@ -341,7 +348,6 @@ namespace KitBoxApplication
                 // color features box 3
                 labelColorS3.Visible = false;
                 comboBoxColorS3.Visible = false;
-
                 // shelf image
                 panelShelf2.Visible = true;
                 panelShelf3.Visible = false;
@@ -373,15 +379,17 @@ namespace KitBoxApplication
                         else
                         {
                             // resets radiobuttons
-                            radioButtonNoIf1.Checked = true;
+                            radioButtonNoIf2.Checked = true;
                         }
                     }
                     if (comboBoxColorSA.SelectedItem == null)
                     {
                         AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
                     } 
-                }                
-                
+                }
+                // resets color for 1 box to null
+                comboBoxColorIf1.SelectedItem = null;
+                radioButtonNoIf1.Checked = true;
                 if (count > 2)
                 {
                     // color features box 3 and box 4
@@ -504,9 +512,12 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial.Visible = false;
                     LoadDataWidth();
-                    comboBoxDoorMatIf1.SelectedItem = null;
                     doorMIf1 = null;
-                    RemoveDoor(comboBoxColorIf1, panelShelf1);
+                    if (numericUpDownQuantity.Value == 1)
+                    {
+                        comboBoxDoorMatIf1.SelectedItem = null;
+                        RemoveDoor(comboBoxColorIf1, panelShelf1);
+                    }
                 }
             }
         }
@@ -552,7 +563,10 @@ namespace KitBoxApplication
                 {
                     panelDoorChoiceBox1.Visible = false;
                     comboBoxDoorMatBox1.SelectedItem = null;
-                    doorM1 = null;
+                    if (numericUpDownQuantity.Value != 1)
+                    {
+                        doorM1 = null;
+                    }
                     if (checkBoxColorNo.Checked)
                     {
                         RemoveDoor(comboBoxColorS1, panelShelf1);
@@ -1066,13 +1080,13 @@ namespace KitBoxApplication
                 {
                     if (checkBoxColorYes.Checked == true & radioButtonYesIf2.Checked == true)
                     {
-                        color1 = comboBoxColorSA.Text.ToString();
-                        color2 = comboBoxColorSA.Text.ToString();
-                        color3 = comboBoxColorSA.Text.ToString();
-                        color4 = comboBoxColorSA.Text.ToString();
-                        color5 = comboBoxColorSA.Text.ToString();
-                        color6 = comboBoxColorSA.Text.ToString();
-                        color7 = comboBoxColorSA.Text.ToString();
+                        color1 = comboBoxColorSA.SelectedItem.ToString();
+                        color2 = comboBoxColorSA.SelectedItem.ToString();
+                        color3 = comboBoxColorSA.SelectedItem.ToString();
+                        color4 = comboBoxColorSA.SelectedItem.ToString();
+                        color5 = comboBoxColorSA.SelectedItem.ToString();
+                        color6 = comboBoxColorSA.SelectedItem.ToString();
+                        color7 = comboBoxColorSA.SelectedItem.ToString();
 
                         if (radioButtonYesBox1.Checked == true)
                         {
@@ -1105,13 +1119,13 @@ namespace KitBoxApplication
                     }
                     else if (checkBoxColorYes.Checked == true & radioButtonYesIf2.Checked == false)
                     {
-                        color1 = comboBoxColorSA.Text.ToString();
-                        color2 = comboBoxColorSA.Text.ToString();
-                        color3 = comboBoxColorSA.Text.ToString();
-                        color4 = comboBoxColorSA.Text.ToString();
-                        color5 = comboBoxColorSA.Text.ToString();
-                        color6 = comboBoxColorSA.Text.ToString();
-                        color7 = comboBoxColorSA.Text.ToString();
+                        color1 = comboBoxColorSA.SelectedItem.ToString();
+                        color2 = comboBoxColorSA.SelectedItem.ToString();
+                        color3 = comboBoxColorSA.SelectedItem.ToString();
+                        color4 = comboBoxColorSA.SelectedItem.ToString();
+                        color5 = comboBoxColorSA.SelectedItem.ToString();
+                        color6 = comboBoxColorSA.SelectedItem.ToString();
+                        color7 = comboBoxColorSA.SelectedItem.ToString();
                     }
                     else if (checkBoxColorYes.Checked == false & radioButtonYesIf2.Checked == true)
                     {
@@ -1143,23 +1157,23 @@ namespace KitBoxApplication
                         {
                             door7 = comboBoxDoorMatBox7.SelectedItem.ToString();
                         }
-                        color1 = comboBoxColorS1.Text.ToString();
-                        color2 = comboBoxColorS2.Text.ToString();
-                        color3 = comboBoxColorS3.Text.ToString();
-                        color4 = comboBoxColorS4.Text.ToString();
-                        color5 = comboBoxColorS5.Text.ToString();
-                        color6 = comboBoxColorS6.Text.ToString();
-                        color7 = comboBoxColorS7.Text.ToString();
-                    }
-                    else
-                    {
-                        color1 = comboBoxColorS1.Text.ToString();
-                        color2 = comboBoxColorS2.Text.ToString();
-                        color3 = comboBoxColorS3.Text.ToString();
-                        color4 = comboBoxColorS4.Text.ToString();
-                        color5 = comboBoxColorS5.Text.ToString();
-                        color6 = comboBoxColorS6.Text.ToString();
-                        color7 = comboBoxColorS7.Text.ToString();
+                        color1 = comboBoxColorS1.SelectedItem.ToString();
+                        color2 = comboBoxColorS2.SelectedItem.ToString();
+                        color3 = comboBoxColorS3.SelectedItem.ToString();
+                        color4 = comboBoxColorS4.SelectedItem.ToString();
+                        color5 = comboBoxColorS5.SelectedItem.ToString();
+                        color6 = comboBoxColorS6.SelectedItem.ToString();
+                        color7 = comboBoxColorS7.SelectedItem.ToString();
+                    }                            
+                    else                         
+                    {                            
+                        color1 = comboBoxColorS1.SelectedItem.ToString();
+                        color2 = comboBoxColorS2.SelectedItem.ToString();
+                        color3 = comboBoxColorS3.SelectedItem.ToString();
+                        color4 = comboBoxColorS4.SelectedItem.ToString();
+                        color5 = comboBoxColorS5.SelectedItem.ToString();
+                        color6 = comboBoxColorS6.SelectedItem.ToString();
+                        color7 = comboBoxColorS7.SelectedItem.ToString();
                     }
                 }
 

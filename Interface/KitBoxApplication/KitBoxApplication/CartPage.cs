@@ -311,21 +311,7 @@ namespace KitBoxApplication
                         {
 
                         }
-
                         
-
-                        //System.Windows.Forms.Panel panelshelf1 = new System.Windows.Forms.Panel();
-                        ////Image myImage = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor + doorMaterial + ".png");
-                        ////panelshelf1.BackgroundImage = myImage;
-                        //panelshelf1.BackColor = Color.Red;
-                        //if (floorCount == 1)
-                        //{
-                        //    panelshelf1.BackColor = Color.AliceBlue;
-                        //}
-                        //panelshelf1.BackgroundImageLayout = ImageLayout.Stretch;
-                        //panelshelf1.Size = new System.Drawing.Size(300, 100);
-                        //panelshelf1.Location = new Point(500, (0 + (cabinetContains.Count - 3) * 100) - floorCount * 100);
-                        //addedCabinePage.Controls.Add(panelshelf1);
                     }
                     if (floorCount >= 4)
                     {
