@@ -91,7 +91,7 @@ namespace KitBoxApplication
                 //For every cabinet of the json
                 for (int cabinetCount = 0; cabinetCount < jsonCart.Count - 1; cabinetCount++)
                 {
-
+                    bool availability = false;
 
                     //Get the elements of the cabinet
                     JObject cabinetContains = jsonCart["Cabinet " + cabinetCount.ToString()].Value<JObject>();
@@ -134,7 +134,46 @@ namespace KitBoxApplication
                     {
                         labelLength = 15;
                         JObject floor = cabinetContains["Floor " + floorCount.ToString()].Value<JObject>();
-                        //MessageBox.Show(floor.ToString());
+                        MessageBox.Show(floor.ToString());
+                        //Check if parts are available
+                        JObject panel1 = floor["Panel 1"].Value<JObject>();
+                        JObject panel2 = floor["Panel 2"].Value<JObject>();
+                        JObject panel3 = floor["Panel 3"].Value<JObject>();
+                        JObject cleat = floor["Cleat"].Value<JObject>();
+                        JObject beam1 = floor["Beam 1"].Value<JObject>();
+                        JObject beam2 = floor["Beam 2"].Value<JObject>();
+                        JObject doorBeam = floor["DoorBeam"].Value<JObject>();
+                        
+                        int panel1Qty = panel1["Qty"].Value<int>();
+                        int panel2Qty = panel2["Qty"].Value<int>();
+                        int panel3Qty = panel3["Qty"].Value<int>();
+                        int cleatQty = cleat["Qty"].Value<int>();
+                        int beam1Qty = beam1["Qty"].Value<int>();
+                        int beam2Qty = beam2["Qty"].Value<int>();
+                        int doorBeamQty = doorBeam["Qty"].Value<int>();
+
+                        int panel1Stk = panel1["Remaining Stock"].Value<int>();
+                        int panel2Stk = panel2["Remaining Stock"].Value<int>();
+                        int panel3Stk = panel3["Remaining Stock"].Value<int>();
+                        int cleatStk = cleat["Remaining Stock"].Value<int>();
+                        int beam1Stk = beam1["Remaining Stock"].Value<int>();
+                        int beam2Stk = beam2["Remaining Stock"].Value<int>();
+                        int doorBeamStk = doorBeam["Remaining Stock"].Value<int>();
+                        
+                        bool panel1Avail = panel1Stk >= panel1Qty;
+                        bool panel2Avail = panel2Stk >= panel2Qty;
+                        bool panel3Avail = panel3Stk >= panel3Qty;
+                        bool cleatAvail = cleatStk >= cleatQty;
+                        bool beam1Avail = beam1Stk >= beam1Qty;
+                        bool beam2Avail = beam2Stk >= beam2Qty;
+                        bool doorBeamAvail = doorBeamStk >= doorBeamQty;
+                        
+
+                        if (panel1Avail && panel2Avail && panel3Avail && cleatAvail && beam1Avail && beam2Avail && doorBeamAvail)
+                        {
+                            availability = true;
+                        }
+                        
 
                         //Creating a GroupBox for a box
                         GroupBox floorGroup = new GroupBox();
@@ -195,14 +234,18 @@ namespace KitBoxApplication
                         //Generates label for Double doors
                         try
                         {
-                            JObject doors = floor["DoubleDoors"].Value<JObject>();
-                            int doorHeight = doors["Height"].Value<int>();
-                            int doorLength = doors["Length"].Value<int>();
-                            string doorMaterial = doors["Material"].Value<string>();
-                            int doorQty = doors["Qty"].Value<int>();
+                            JObject door = floor["DoubleDoors"].Value<JObject>();
+                            int doorHeight = door["Height"].Value<int>();
+                            int doorLength = door["Length"].Value<int>();
+                            string doorMaterial = door["Material"].Value<string>();
+                            int doorQty = door["Qty"].Value<int>();
+                            int doorStk = door["Remaining Stock"].Value<int>() * 2;
+                            bool doorAvail = doorStk >= doorQty;
 
-                            JObject knop = doors["Knop"].Value<JObject>();
+                            JObject knop = door["Knop"].Value<JObject>();
                             int knopQty = knop["Quantity"].Value<int>();
+                            int knopStk = knop["Remaining Stock"].Value<int>();
+                            bool knopAvail = knopStk >= knopQty;
 
                             Label doorLabel = new Label();
                             doorLabel.AutoSize = true;
@@ -212,8 +255,11 @@ namespace KitBoxApplication
                             labelLength += (doorLabelLenght);
 
                             floorGroup.Controls.Add(doorLabel);
-
-
+                            
+                            if (doorAvail && knopAvail)
+                            {
+                                availability = true;
+                            }
                         }
                         catch
                         {
@@ -225,7 +271,6 @@ namespace KitBoxApplication
                         availableMaterial.AutoSize = true;
                         availableMaterial.Location = new Point(floorGroup.Width + 35, 120 + floorCount * 110);
                         //TODO : modify availability in function of the different parts
-                        bool availability = false;
                         if (availability)
                         {
                             Color Green = Color.FromName("Green");

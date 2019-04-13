@@ -14,6 +14,11 @@ namespace KitBoxSourceCode
             length = len;
             quantity = qty;
 
+            if (beamNum == 2)
+            {
+                beamNum = 0;
+            }
+
             // oledb stock ref fct len
 
             switch (qty)
