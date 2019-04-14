@@ -34,12 +34,12 @@ namespace KitBoxApplication
             if (TestCorrectMail(mail)) {
                 if (checkBox1.Checked)
                 {
-                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','"+ cartPrice.ToString() +"','"+ json.ToString() +"','" + mail + "','Yes')";
+                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress',Date(),'" + cartPrice.ToString() +"','"+ json.ToString() +"','" + mail + "','Yes')";
                     SqlOledb.Oledb.SqlRequestInsert(rqst);
                 }
                 else
                 {
-                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress','02','" + cartPrice.ToString() + "','" + json.ToString() + "','" + mail + "','No')";
+                    string rqst = "INSERT INTO ComClient (Status,Date_Commande,Prix,ListeMateriel,Email,Newsletter) VALUES ('Progress',Date(),'" + cartPrice.ToString() + "','" + json.ToString() + "','" + mail + "','No')";
                     SqlOledb.Oledb.SqlRequestInsert(rqst);
                 }
 

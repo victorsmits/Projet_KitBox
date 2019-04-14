@@ -41,7 +41,6 @@ namespace KitBoxApplication
             }
             catch(Newtonsoft.Json.JsonReaderException e)
             {
-                MessageBox.Show(e.ToString());
                 tabControl1.TabPages.Clear();
                 TabPage emptyCart = new TabPage(Name = "Empty");
                 emptyCart.BackColor = Color.FromArgb(41, 44, 51);
@@ -54,7 +53,6 @@ namespace KitBoxApplication
             {
                 MessageBox.Show(error.ToString());
             }
-
         }
 
         private void  deleteButton_Clicked(object sender, EventArgs e)
@@ -86,7 +84,6 @@ namespace KitBoxApplication
             else
             {
                 tabControl1.TabPages.Clear(); //Clear the tabs
-                MessageBox.Show(jsonCart.ToString());
 
                 //For every cabinet of the json
                 for (int cabinetCount = 0; cabinetCount < jsonCart.Count - 1; cabinetCount++)
@@ -95,7 +92,6 @@ namespace KitBoxApplication
 
                     //Get the elements of the cabinet
                     JObject cabinetContains = jsonCart["Cabinet " + cabinetCount.ToString()].Value<JObject>();
-                    MessageBox.Show(cabinetContains.ToString());
                     //Add a tab for the cabinet
                     TabPage addedCabinePage = new TabPage(Name = "Cabine " + (cabinetCount + 1).ToString());
                     addedCabinePage.BackColor = Color.FromArgb(41, 44, 51);
@@ -113,6 +109,7 @@ namespace KitBoxApplication
                     deleteButton.Location = new Point(981, 15);
                     deleteButton.Size = new Size(75, 61);
                     addedCabinePage.Controls.Add(deleteButton);
+
 
                     //Generates label for angles
                     JObject angle = cabinetContains["Angle"].Value<JObject>();
@@ -134,7 +131,6 @@ namespace KitBoxApplication
                     {
                         labelLength = 15;
                         JObject floor = cabinetContains["Floor " + floorCount.ToString()].Value<JObject>();
-                        MessageBox.Show(floor.ToString());
                         //Check if parts are available
                         JObject panel1 = floor["Panel 1"].Value<JObject>();
                         JObject panel2 = floor["Panel 2"].Value<JObject>();
@@ -174,7 +170,6 @@ namespace KitBoxApplication
                             availability = true;
                         }
                         
-
                         //Creating a GroupBox for a box
                         GroupBox floorGroup = new GroupBox();
                         floorGroup.Text = "Box " + (floorCount + 1).ToString();
@@ -201,8 +196,7 @@ namespace KitBoxApplication
                             int height = floorPanel["Height"].Value<int>();
                             int length = floorPanel["Length"].Value<int>();
                             int panelQty = floorPanel["Qty"].Value<int>();
-
-
+                            
                             if (numberOfLabel == 0)
                             {
                                 HEIGHT += height;
@@ -216,8 +210,8 @@ namespace KitBoxApplication
                             {
                                 boxColor.Text = String.Format("Color\n\n{0}", floorColor);
                             }
-
                         }
+
                         boxDimension.Text = String.Format("Dimensions\n\nHeight : {0}cm\nWidth : {1}cm\nDepth : {2}cm", HEIGHT.ToString(), LENGTH.ToString(), DEPTH.ToString());
                         boxDimension.Location = new Point(labelLength, 28);
                         int panelLabelLength = boxDimension.Width;
