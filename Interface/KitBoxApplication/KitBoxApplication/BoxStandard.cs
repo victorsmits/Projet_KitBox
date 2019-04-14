@@ -319,7 +319,7 @@ namespace KitBoxApplication
                     {
                         comboBoxDoorMatIf1.SelectedItem = doorM1;
                         radioButtonYesIf1.Checked = true;
-                        //doorM1 = null;
+                        doorM1 = null;
                     }
                     else if (doorM1 == null)
                     {
@@ -371,7 +371,14 @@ namespace KitBoxApplication
                         }
                         if (doorMIf1 != null)
                         {
-                            comboBoxDoorMatBox1.SelectedItem = doorMIf1;
+                            if (doorM1 == null || doorM1 == "")
+                            {
+                                comboBoxDoorMatBox1.SelectedItem = doorMIf1;
+                            }
+                            else
+                            {
+                                comboBoxDoorMatBox1.SelectedItem = doorM1;
+                            }
                             radioButtonYesIf2.Checked = true;
                             radioButtonYesBox1.Checked = true;
                             //doorMIf1 = null;
@@ -392,6 +399,7 @@ namespace KitBoxApplication
                 radioButtonNoIf1.Checked = true;
                 if (count > 2)
                 {
+                    doorM1 = comboBoxDoorMatBox1.Text;
                     // color features box 3 and box 4
                     labelColorS3.Visible = true;
                     comboBoxColorS3.Visible = true;
@@ -512,7 +520,6 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial.Visible = false;
                     LoadDataWidth();
-                    doorMIf1 = null;
                     if (numericUpDownQuantity.Value == 1)
                     {
                         comboBoxDoorMatIf1.SelectedItem = null;
@@ -913,7 +920,10 @@ namespace KitBoxApplication
             {
                 AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
             }
-            doorM1 = comboBoxDoorMatBox1.Text;
+            if (comboBoxDoorMatBox1.Text != "")
+            {
+                doorM1 = comboBoxDoorMatBox1.Text;
+            }
         }
 
         // function to change color of door material of box 2
