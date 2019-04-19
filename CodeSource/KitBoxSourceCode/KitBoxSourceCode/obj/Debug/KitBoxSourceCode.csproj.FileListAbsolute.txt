@@ -137,3 +137,34 @@ C:\Users\Michael\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitB
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.dll
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.pdb
 C:\Users\Michael\Documents\GitHub\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.csprojAssemblyReference.cache
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.dll.config
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\KitBoxSourceCode.pdb
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ADONetHelper.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ADONetHelper.Oledb.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Google.Protobuf.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\lcpi.data.oledb.net4_6.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\lcpi.lib.net4_6.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\MySql.Data.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Newtonsoft.Json.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\OleDB.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\SqlOledb.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\System.ComponentModel.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\SqlOledb.pdb
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\SqlOledb.dll.config
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Google.Protobuf.pdb
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Google.Protobuf.xml
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\MySql.Data.xml
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ADONetHelper.xml
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ADONetHelper.Oledb.xml
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\lcpi.lib.net4_6.pdb
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\lcpi.data.oledb.net4_6.pdb
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Newtonsoft.Json.pdb
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\Newtonsoft.Json.xml
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ru\lcpi.lib.net4_6.resources.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\bin\Debug\ru\lcpi.data.oledb.net4_6.resources.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.csprojAssemblyReference.cache
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.csproj.CoreCompileInputs.cache
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.csproj.CopyComplete
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.dll
+Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\CodeSource\KitBoxSourceCode\KitBoxSourceCode\obj\Debug\KitBoxSourceCode.pdb

@@ -39,5 +39,10 @@ namespace KitBoxApplication
                 creationExplanation1.Visible = false; 
             }
         }
+
+        private void boxCreationScratch1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿<Properties GitUserInfo="UsingMD">
   <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Panel.cs">
     <Files>
-      <File FileName="KitBoxSourceCode/Panel.cs" Line="46" Column="4" />
+      <File FileName="KitBoxSourceCode/Panel.cs" Line="33" Column="104" />
       <File FileName="KitBoxSourceCode/IStorageBox.cs" Line="1" Column="4" />
       <File FileName="KitBoxSourceCode/Knop.cs" Line="25" Column="1" />
     </Files>
