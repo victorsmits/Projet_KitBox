@@ -16,6 +16,8 @@ namespace KitBoxSourceCode
 			components = new Dictionary<IComponent, int>();
 			boxWidth = width;
 
+			// Add all box's parts
+			// Removing 4 cm from the upward and downward beams
 			AddPanel(len, height - 4, width, col);
 			AddCleat(height - 4);
 			AddBeam(len, width);
@@ -50,16 +52,17 @@ namespace KitBoxSourceCode
 
 		private void AddPanel(int x, int y, int z, string col)
 		{
-			// Panneau Arrier
+			// Adding the back panel
 			components.Add(new Panel(x, y, col, 1), 1);
 
-			//Panneau GD
+			// Adding the 2 side panels
 			components.Add(new Panel(z, y, col, 2), 2);
 
-			// Panneau HB
+			// Adding the upward and downward panels
 			components.Add(new Panel(z, x, col, 2), 2);
 		}
 
+		// Adding the 4 cleats
 		private void AddCleat(int height)
 		{
 			components.Add(new Cleat(height, 4), 4);
@@ -67,14 +70,17 @@ namespace KitBoxSourceCode
 
 		private void AddBeam(int len, int height)
 		{
+			// Addind the two backward beams
 			components.Add(new Beam(len, 2), 2);
 
+			// Adding the four side beams
 			components.Add(new Beam(height, 4), 4);
 
 		}
 
 		private void AddDoorBeam(int height)
 		{
+			// Adding the two front beams
 			components.Add(new DoorBeam(height, 2), 2);
 		}
 	}

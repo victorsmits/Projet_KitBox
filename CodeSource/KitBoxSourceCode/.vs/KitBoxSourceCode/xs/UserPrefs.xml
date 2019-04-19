@@ -1,32 +1,22 @@
 ﻿<Properties GitUserInfo="UsingMD">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/DoubleDoors.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KitBoxSourceCode/Panel.cs">
     <Files>
-      <File FileName="KitBoxSourceCode/Angle.cs" Line="46" Column="17" />
-      <File FileName="KitBoxSourceCode/Beam.cs" Line="25" Column="38" />
-      <File FileName="KitBoxSourceCode/DoorBeam.cs" Line="11" Column="30" />
-      <File FileName="KitBoxSourceCode/DoubleDoors.cs" Line="37" Column="10" />
-      <File FileName="KitBoxSourceCode/Panel.cs" Line="50" Column="24" />
-      <File FileName="KitBoxSourceCode/Cleat.cs" Line="17" Column="10" />
-      <File FileName="KitBoxSourceCode/Knop.cs" Line="1" Column="1" />
+      <File FileName="KitBoxSourceCode/Panel.cs" Line="46" Column="4" />
+      <File FileName="KitBoxSourceCode/IStorageBox.cs" Line="1" Column="4" />
+      <File FileName="KitBoxSourceCode/Knop.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="KitBoxSourceCode" expanded="True">
             <Node name="KitBoxSourceCode" expanded="True">
-              <Node name="DoubleDoors.cs" selected="True" />
+              <Node name="Panel.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="ClassPad">
-        <State name="__root__">
-          <Node name="KitBoxSourceCode" expanded="True" selected="True" />
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.KitBoxSourceCode PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
