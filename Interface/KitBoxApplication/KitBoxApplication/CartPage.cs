@@ -100,11 +100,8 @@ namespace KitBoxApplication
 
                     //Add a delete button
                     Button deleteButton = new Button();
-                    Color DarkRed = Color.FromName("DarkRed");
-                    deleteButton.BackColor = DarkRed;
-                    Color Black = Color.FromName("Black");
-                    deleteButton.ForeColor = Black;
-                    deleteButton.Text = "Delete cabinet";
+                    Image Beating_Cabinet = new Bitmap(@"\images\Beating_Cabinet.png");
+                    deleteButton.BackgroundImage = Beating_Cabinet;
                     deleteButton.Click += deleteButton_Clicked;
                     deleteButton.Location = new Point(981, 15);
                     deleteButton.Size = new Size(75, 61);
