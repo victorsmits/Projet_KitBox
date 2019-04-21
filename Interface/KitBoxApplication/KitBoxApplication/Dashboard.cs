@@ -19,24 +19,12 @@ namespace KitBoxApplication
             InitializeComponent();
         }
 
-        private void PlaceHolderText(object sender, EventArgs e)
-        {
-            textBoxSubscribe.Text = " ";
-        }
-
-        private void PlaceHolderTextleaving(object sender, EventArgs e)
-        {
-            if (textBoxSubscribe.Text.Length == 0)
-            {
-                textBoxSubscribe.Text = "example@mail.com";
-            }          
-        }
-
         private void ButtonHome_Click(object sender, EventArgs e)
         {
             homePage3.Visible = true;
             creation2.Visible = false;
             cartPage1.Visible = false;
+            aboutUs1.Visible = false;
         }
 
         private void ButtonCreation_Click(object sender, EventArgs e)
@@ -44,6 +32,7 @@ namespace KitBoxApplication
             homePage3.Visible = false;
             creation2.Visible = true;
             cartPage1.Visible = false;
+            aboutUs1.Visible = false;
         }
 
         private void ButtonCart_Click(object sender, EventArgs e)
@@ -51,8 +40,17 @@ namespace KitBoxApplication
             homePage3.Visible = false;
             creation2.Visible = false;
             cartPage1.Visible = true;
+            aboutUs1.Visible = false;
 
             cartPage1.Load_Json();
+        }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            homePage3.Visible = false;
+            creation2.Visible = false;
+            cartPage1.Visible = false;
+            aboutUs1.Visible = true;
         }
     }
 }

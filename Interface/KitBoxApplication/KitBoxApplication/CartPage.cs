@@ -24,6 +24,12 @@ namespace KitBoxApplication
         public CartPage()
         {
             InitializeComponent();
+
+            // enables design of tabheader
+            this.tabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
+            this.tabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TabPageBox1_DrawItem);
+
+            tabControl.ItemSize = new Size(70, 30);
         }
 
         private string GetRelativePath(string directory)
@@ -55,7 +61,7 @@ namespace KitBoxApplication
                 tabControl1.TabPages.Clear();
                 TabPage emptyCart = new TabPage(Name = "Empty");
                 emptyCart.BackColor = Color.FromArgb(41, 44, 51);
-                tabControl1.TabPages.Add(emptyCart);
+                tabControl.TabPages.Add(emptyCart);
                 comfirmCartButton.Visible = false;
                 costLabel.Visible = false;
                 totalLabel.Visible = false;
@@ -66,7 +72,7 @@ namespace KitBoxApplication
             }
         }
 
-        private void  deleteButton_Clicked(object sender, EventArgs e)
+        private void DeleteButton_Clicked(object sender, EventArgs e)
         {
             //Get the index of the cabinet from parent of the button
             Control button = (Control)sender;
@@ -79,15 +85,27 @@ namespace KitBoxApplication
             Load_Json();
         }
 
+        // function to get relative path to a file
+        private string GetRelativePath(string directory)
+        {
+            char[] test1 = "\\".ToCharArray();
+            string[] test = directory.Split(test1);
+            string root = test[0];
+            string user = test[1];
+            string namePC = test[2];
+            string dir = root + "\\" + user + "\\" + namePC + "\\";
+            return dir;
+        }
+
         private void Create_Layout()
         {
-            
+
             if (jsonCart.ToString() == "{}")
             {
-                tabControl1.TabPages.Clear();
+                tabControl.TabPages.Clear();
                 TabPage emptyCart = new TabPage(Name = "Empty");
                 emptyCart.BackColor = Color.FromArgb(41, 44, 51);
-                tabControl1.TabPages.Add(emptyCart);
+                tabControl.TabPages.Add(emptyCart);
                 comfirmCartButton.Visible = false;
                 costLabel.Visible = false;
                 totalLabel.Visible = false;
@@ -101,12 +119,13 @@ namespace KitBoxApplication
                 {
                     bool availability = false;
 
+                    Font font = new Font("Century Gothic", 9, FontStyle.Bold);
                     //Get the elements of the cabinet
                     JObject cabinetContains = jsonCart["Cabinet " + cabinetCount.ToString()].Value<JObject>();
                     //Add a tab for the cabinet
                     TabPage addedCabinePage = new TabPage(Name = "Cabine " + (cabinetCount + 1).ToString());
                     addedCabinePage.BackColor = Color.FromArgb(41, 44, 51);
-                    tabControl1.TabPages.Add(addedCabinePage);
+                    tabControl.TabPages.Add(addedCabinePage);
                     int floorCount = 0;
 
                     //Add a delete button
@@ -134,13 +153,37 @@ namespace KitBoxApplication
 
                     Label angleLabel = new Label();
                     angleLabel.AutoSize = true;
-                    angleLabel.Text = String.Format("\nAngle\n\nLength: {0}cm\nColor : {1}\nQuantity: {2}\n", angleLength.ToString(), angleColor, angleQty.ToString());
+                    angleLabel.Text = "\nAngle : ";
                     angleLabel.Location = new Point(30, 5);
-                    int angleLabelLenght = angleLabel.Width;
+
+                    Label angleFeatLabel = new Label();
+                    angleFeatLabel.AutoSize = true;
+                    angleFeatLabel.Text = String.Format("\nLength: {0}cm\nColor : {1}\nQuantity: {2}\n", angleLength.ToString(), angleColor, angleQty.ToString());
+                    angleFeatLabel.Location = new Point(110, 5);
+
+                    angleLabel.Font = font;
+                    angleFeatLabel.Font = font;
+                    int angleLabelLength = angleLabel.Width;
 
                     addedCabinePage.Controls.Add(angleLabel);
+                    addedCabinePage.Controls.Add(angleFeatLabel);
 
                     int labelLength = 15;
+
+                    string floorColor1 = "blanc";
+                    string floorColor2 = "blanc";
+                    string floorColor3 = "blanc";
+                    string floorColor4 = "blanc";
+                    string floorColor5 = "blanc";
+                    string floorColor6 = "blanc";
+                    string floorColor7 = "blanc";
+                    string doorMaterial1 = "NoDoor";
+                    string doorMaterial2 = "NoDoor";
+                    string doorMaterial3 = "NoDoor";
+                    string doorMaterial4 = "NoDoor";
+                    string doorMaterial5 = "NoDoor";
+                    string doorMaterial6 = "NoDoor";
+                    string doorMaterial7 = "NoDoor";
 
                     for (floorCount = 0; floorCount < cabinetContains.Count - 2; floorCount++)
                     {
@@ -154,7 +197,7 @@ namespace KitBoxApplication
                         JObject beam1 = floor["Beam 1"].Value<JObject>();
                         JObject beam2 = floor["Beam 2"].Value<JObject>();
                         JObject doorBeam = floor["DoorBeam"].Value<JObject>();
-                        
+
                         int panel1Qty = panel1["Qty"].Value<int>();
                         int panel2Qty = panel2["Qty"].Value<int>();
                         int panel3Qty = panel3["Qty"].Value<int>();
@@ -170,7 +213,7 @@ namespace KitBoxApplication
                         int beam1Stk = beam1["Remaining Stock"].Value<int>();
                         int beam2Stk = beam2["Remaining Stock"].Value<int>();
                         int doorBeamStk = doorBeam["Remaining Stock"].Value<int>();
-                        
+
                         bool panel1Avail = panel1Stk >= panel1Qty;
                         bool panel2Avail = panel2Stk >= panel2Qty;
                         bool panel3Avail = panel3Stk >= panel3Qty;
@@ -178,20 +221,21 @@ namespace KitBoxApplication
                         bool beam1Avail = beam1Stk >= beam1Qty;
                         bool beam2Avail = beam2Stk >= beam2Qty;
                         bool doorBeamAvail = doorBeamStk >= doorBeamQty;
-                        
+
 
                         if (panel1Avail && panel2Avail && panel3Avail && cleatAvail && beam1Avail && beam2Avail && doorBeamAvail)
                         {
                             availability = true;
                         }
-                        
+
                         //Creating a GroupBox for a box
                         GroupBox floorGroup = new GroupBox();
                         floorGroup.Text = "Box " + (floorCount + 1).ToString();
                         floorGroup.AutoSize = true;
+                        floorGroup.Font = font;
                         Color color = Color.White;
                         floorGroup.ForeColor = color;
-                        floorGroup.Location = new Point(30, 100 + floorCount * 110);
+                        floorGroup.Location = new Point(30, 80 + floorCount * 130);
                         addedCabinePage.Controls.Add(floorGroup);
 
                         //Generates label for dimension
@@ -211,7 +255,7 @@ namespace KitBoxApplication
                             int height = floorPanel["Height"].Value<int>();
                             int length = floorPanel["Length"].Value<int>();
                             int panelQty = floorPanel["Qty"].Value<int>();
-                            
+
                             if (numberOfLabel == 0)
                             {
                                 HEIGHT += height;
@@ -264,7 +308,7 @@ namespace KitBoxApplication
                             labelLength += (doorLabelLenght);
 
                             floorGroup.Controls.Add(doorLabel);
-                            
+
                             if (doorAvail && knopAvail)
                             {
                                 availability = true;
@@ -275,11 +319,11 @@ namespace KitBoxApplication
 
                         }
 
-                        //Generate label if material available 
+                        //Generate label if material available
                         Label availableMaterial = new Label();
                         availableMaterial.AutoSize = true;
                         availableMaterial.Location = new Point(floorGroup.Width + 35, 120 + floorCount * 110);
-                        //TODO : modify availability in function of the different parts
+
                         if (availability)
                         {
                             Color Green = Color.FromName("Green");
@@ -301,17 +345,133 @@ namespace KitBoxApplication
                         addedCabinePage.AutoScrollMargin = new Size(20, 5);
                     }
 
+                    System.Windows.Forms.Panel panelShelf1 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf2 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf3 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf4 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf5 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf6 = new System.Windows.Forms.Panel();
+                    System.Windows.Forms.Panel panelShelf7 = new System.Windows.Forms.Panel();
+
+                    if (cabinetContains.Count - 2 > 0)
+                    {
+                        Image myImage1 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor1 + doorMaterial1 + ".png");
+                        panelShelf1.BackgroundImage = myImage1;
+                        panelShelf1.BackColor = Color.Transparent;
+                        panelShelf1.BackgroundImageLayout = ImageLayout.Stretch;
+                        panelShelf1.Size = new System.Drawing.Size(300, 600);
+                        panelShelf1.Location = new Point(500, (-200 + floorCount * 76/5*2));
+
+                        if (cabinetContains.Count - 2 > 1)
+                        {
+                            Image myImage2 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor2 + doorMaterial2 + ".png");
+                            panelShelf2.BackgroundImage = myImage2;
+                            panelShelf2.BackColor = Color.Transparent;
+                            panelShelf2.BackgroundImageLayout = ImageLayout.Stretch;
+                            panelShelf2.Size = new System.Drawing.Size(300, 600);
+                            panelShelf2.Location = new Point(0, -76);
+                            panelShelf1.Controls.Add(panelShelf2);
+                            if (cabinetContains.Count - 2 > 2)
+                            {
+                                Image myImage3 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor3 + doorMaterial3 + ".png");
+                                panelShelf3.BackgroundImage = myImage3;
+                                panelShelf3.BackColor = Color.Transparent;
+                                panelShelf3.BackgroundImageLayout = ImageLayout.Stretch;
+                                panelShelf3.Size = new System.Drawing.Size(300, 600);
+                                panelShelf3.Location = new Point(0, -76);
+                                panelShelf2.Controls.Add(panelShelf3);
+
+                                if (cabinetContains.Count - 2 > 3)
+                                {
+                                    Image myImage4 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor4 + doorMaterial4 + ".png");
+                                    panelShelf4.BackgroundImage = myImage4;
+                                    panelShelf4.BackColor = Color.Transparent;
+                                    panelShelf4.BackgroundImageLayout = ImageLayout.Stretch;
+                                    panelShelf4.Size = new System.Drawing.Size(300, 600);
+                                    panelShelf4.Location = new Point(0, -76);
+                                    panelShelf3.Controls.Add(panelShelf4);
+
+                                    if (cabinetContains.Count - 2 > 4)
+                                    {
+                                        Image myImage5 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor5 + doorMaterial5 + ".png");
+                                        panelShelf5.BackgroundImage = myImage5;
+                                        panelShelf5.BackColor = Color.Transparent;
+                                        panelShelf5.BackgroundImageLayout = ImageLayout.Stretch;
+                                        panelShelf5.Size = new System.Drawing.Size(300, 600);
+                                        panelShelf5.Location = new Point(0, -76);
+                                        panelShelf4.Controls.Add(panelShelf5);
+
+                                        if (cabinetContains.Count - 2 > 5)
+                                        {
+                                            Image myImage6 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor6 + doorMaterial6 + ".png");
+                                            panelShelf6.BackgroundImage = myImage6;
+                                            panelShelf6.BackColor = Color.Transparent;
+                                            panelShelf6.BackgroundImageLayout = ImageLayout.Stretch;
+                                            panelShelf6.Size = new System.Drawing.Size(300, 600);
+                                            panelShelf6.Location = new Point(0, -76);
+                                            panelShelf5.Controls.Add(panelShelf6);
+
+                                            if (cabinetContains.Count - 2 > 6)
+                                            {
+                                                Image myImage7 = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\Resources\" + floorColor7 + doorMaterial7 + ".png");
+                                                panelShelf7.BackgroundImage = myImage7;
+                                                panelShelf7.BackColor = Color.Transparent;
+                                                panelShelf7.BackgroundImageLayout = ImageLayout.Stretch;
+                                                panelShelf7.Size = new System.Drawing.Size(300, 600);
+                                                panelShelf7.Location = new Point(0, -76);
+                                                panelShelf6.Controls.Add(panelShelf7);
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    addedCabinePage.Controls.Add(panelShelf1);
+
                 }
             }
         }
-                
-        private void comfirmCartButton_Click(object sender, EventArgs e)
+
+        private void ConfirmCartButton_Click(object sender, EventArgs e)
         {
-            tabControl1.Visible = false;
+            tabControl.Visible = false;
             totalLabel.Visible = false;
             comfirmCartButton.Visible = false;
             costLabel.Visible = false;
             clientIdentifier1.Visible = true;
+        }
+
+        // -- Method to design tabheader
+        private void TabPageBox1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabPage page = tabControl.TabPages[e.Index];
+            Color col = Color.FromArgb(27, 29, 33);
+
+            e.Graphics.FillRectangle(new SolidBrush(col), e.Bounds);
+
+            Font font = new Font("Century Gothic", 8, FontStyle.Bold);
+
+            Color myColor = Color.FromArgb(60, 120, 138);
+            SolidBrush myBrush = new SolidBrush(myColor);
+
+            SizeF sz = e.Graphics.MeasureString(tabControl.TabPages[e.Index].Text, font);
+
+            // changes color of text when tab is selected
+            if (tabControl.SelectedIndex == e.Index)
+            {
+                myColor = Color.FromArgb(230, 232, 237);
+                myBrush = new SolidBrush(myColor);
+                e.Graphics.DrawString(tabControl.TabPages[e.Index].Text, font, myBrush, e.Bounds.Left + (e.Bounds.Width - sz.Width) / 2, e.Bounds.Top + (e.Bounds.Height - sz.Height) / 4 + 1);
+            }
+            e.Graphics.DrawString(tabControl.TabPages[e.Index].Text, font, myBrush, e.Bounds.Left + (e.Bounds.Width - sz.Width) / 2, e.Bounds.Top + (e.Bounds.Height - sz.Height) / 4 + 1);
+
+            Rectangle rect = e.Bounds;
+            rect.Offset(0, -2);
+            rect.Inflate(0, -2);
+            e.Graphics.DrawRectangle(Pens.Transparent, rect);
+            e.DrawFocusRectangle();
         }
     }
 }

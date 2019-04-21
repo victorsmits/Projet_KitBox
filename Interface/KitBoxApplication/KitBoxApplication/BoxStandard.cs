@@ -22,7 +22,7 @@ namespace KitBoxApplication
 
         private string doorM1 = null;
         private string doorMIf1 = null;
-        
+
 
         public BoxStandard()
         {
@@ -256,6 +256,8 @@ namespace KitBoxApplication
                 comboBoxColorS5.SelectedItem = null;
                 comboBoxColorS6.SelectedItem = null;
                 comboBoxColorS7.SelectedItem = null;
+                colorS1 = null;
+                colorSIf1 = null;
                 LoadColorAllSame();
             }
         }
@@ -266,7 +268,7 @@ namespace KitBoxApplication
             if (panelColorChoice.Visible == true)
             {
                 panelColorChoice.Visible = false;
-                panelDoorChoiceMultiple.Visible = false;                
+                panelDoorChoiceMultiple.Visible = false;
                 comboBoxColorS1.SelectedItem = null;
                 comboBoxColorS2.SelectedItem = null;
                 comboBoxColorS3.SelectedItem = null;
@@ -309,14 +311,14 @@ namespace KitBoxApplication
                 // shelf image
                 panelShelf2.Visible = false;
                 // keep selected value of first box
-                if (colorSA != null || colorS1 != null || doorM1 != null)
+                if (colorSA != null || colorS1 != null || doorM1 != null || doorM1 == null)
                 {
                     if (colorSA != null)
                     {
                         comboBoxColorIf1.SelectedItem = colorSA;
                         //colorSA = null;
                     }
-                    else if (colorSA != null)
+                    else if (colorS1 != null)
                     {
                         comboBoxColorIf1.SelectedItem = colorS1;
                         //colorS1 = null;
@@ -325,7 +327,12 @@ namespace KitBoxApplication
                     {
                         comboBoxDoorMatIf1.SelectedItem = doorM1;
                         radioButtonYesIf1.Checked = true;
-                        //doorM1 = null;
+                        doorM1 = null;
+                    }
+                    else if (doorM1 == null)
+                    {
+                        radioButtonNoIf1.Checked = true;
+                        comboBoxDoorMatIf1.SelectedItem = null;
                     }
                 }
                 comboBoxColorS1.SelectedItem = null;
@@ -349,11 +356,10 @@ namespace KitBoxApplication
                 // color features box 3
                 labelColorS3.Visible = false;
                 comboBoxColorS3.Visible = false;
-
                 // shelf image
                 panelShelf2.Visible = true;
                 panelShelf3.Visible = false;
-                
+
                 if (count == 2)
                 {
                     // door features box 3
@@ -373,25 +379,35 @@ namespace KitBoxApplication
                         }
                         if (doorMIf1 != null)
                         {
-                            comboBoxDoorMatBox1.SelectedItem = doorMIf1;
+                            if (doorM1 == null || doorM1 == "")
+                            {
+                                comboBoxDoorMatBox1.SelectedItem = doorMIf1;
+                            }
+                            else
+                            {
+                                comboBoxDoorMatBox1.SelectedItem = doorM1;
+                            }
                             radioButtonYesIf2.Checked = true;
                             radioButtonYesBox1.Checked = true;
                             //doorMIf1 = null;
-                        } 
+                        }
                         else
                         {
                             // resets radiobuttons
-                            radioButtonNoIf1.Checked = true;
+                            radioButtonNoIf2.Checked = true;
                         }
                     }
                     if (comboBoxColorSA.SelectedItem == null)
                     {
                         AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
-                    } 
-                }                
-                
+                    }
+                }
+                // resets color for 1 box to null
+                comboBoxColorIf1.SelectedItem = null;
+                radioButtonNoIf1.Checked = true;
                 if (count > 2)
                 {
+                    doorM1 = comboBoxDoorMatBox1.Text;
                     // color features box 3 and box 4
                     labelColorS3.Visible = true;
                     comboBoxColorS3.Visible = true;
@@ -512,9 +528,11 @@ namespace KitBoxApplication
                 {
                     panelDoorMaterial.Visible = false;
                     LoadDataWidth();
-                    comboBoxDoorMatIf1.SelectedItem = null;
-                    doorMIf1 = null;
-                    RemoveDoor(comboBoxColorIf1, panelShelf1);
+                    if (numericUpDownQuantity.Value == 1)
+                    {
+                        comboBoxDoorMatIf1.SelectedItem = null;
+                        RemoveDoor(comboBoxColorIf1, panelShelf1);
+                    }
                 }
             }
         }
@@ -560,7 +578,10 @@ namespace KitBoxApplication
                 {
                     panelDoorChoiceBox1.Visible = false;
                     comboBoxDoorMatBox1.SelectedItem = null;
-                    doorM1 = null;
+                    if (numericUpDownQuantity.Value != 1)
+                    {
+                        doorM1 = null;
+                    }
                     if (checkBoxColorNo.Checked)
                     {
                         RemoveDoor(comboBoxColorS1, panelShelf1);
@@ -748,8 +769,11 @@ namespace KitBoxApplication
 
         private void ComboBoxColorIf1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
-            colorSIf1 = comboBoxColorIf1.Text;
+            if (numericUpDownQuantity.Value == 1)
+            {
+                AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
+                colorSIf1 = comboBoxColorIf1.Text;
+            }
         }
 
         // function to change colors of cabinet image in case checkBox "all color same" checked
@@ -896,44 +920,96 @@ namespace KitBoxApplication
         // function to change color of door material of box 1
         private void ComboBoxDoorMatBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
-            doorM1 = comboBoxDoorMatBox1.Text;
+            if (comboBoxColorSA.Text != "")
+            {
+                AddColorToBox(comboBoxColorSA, comboBoxDoorMatBox1, panelShelf1);
+            }
+            else
+            {
+                AddColorToBox(comboBoxColorS1, comboBoxDoorMatBox1, panelShelf1);
+            }
+            if (comboBoxDoorMatBox1.Text != "")
+            {
+                doorM1 = comboBoxDoorMatBox1.Text;
+            }
         }
 
         // function to change color of door material of box 2
         private void ComboBoxDoorMatBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
+            if (comboBoxColorSA.Text != "")
+            {
+                AddColorToBox(comboBoxColorSA, comboBoxDoorMatBox2, panelShelf2);
+            }
+            else
+            {
+                AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
+            }
         }
 
         // function to change color of door material of box 3
         private void ComboBoxDoorMatBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
+            if (comboBoxColorSA.Text != "")
+            {
+                AddColorToBox(comboBoxColorSA, comboBoxDoorMatBox3, panelShelf3);
+            }
+            else
+            {
+                AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
+            }
         }
 
         // function to change color of door material of box 4
         private void ComboBoxDoorMatBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
+            if (comboBoxColorSA.Text != "")
+            {
+                AddColorToBox(comboBoxColorSA, comboBoxDoorMatBox4, panelShelf4);
+            }
+            else
+            {
+                AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
+            }
         }
 
         // function to change color of door material of box 5
         private void ComboBoxDoorMatBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
+            if (comboBoxColorSA.Text != "")
+            {
+                AddColorToBox(comboBoxColorSA, comboBoxDoorMatBox5, panelShelf5);
+            }
+            else
+            {
+                AddColorToBox(comboBoxColorS5, comboBoxDoorMatBox5, panelShelf5);
+            }
         }
 
         // function to change color of door material of box 6
         private void ComboBoxDoorMatBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
+            if (comboBoxColorSA.Text != "")
+            {
+                AddColorToBox(comboBoxColorSA, comboBoxDoorMatBox6, panelShelf6);
+            }
+            else
+            {
+                AddColorToBox(comboBoxColorS6, comboBoxDoorMatBox6, panelShelf6);
+            }
         }
 
         // function to change color of door material of box 7
         private void ComboBoxDoorMatBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
+            if (comboBoxColorSA.Text != "")
+            {
+                AddColorToBox(comboBoxColorSA, comboBoxDoorMatBox7, panelShelf7);
+            }
+            else
+            {
+                AddColorToBox(comboBoxColorS7, comboBoxDoorMatBox7, panelShelf7);
+            }
         }
 
         // function to change color of door material of box 1 in case 1 box cabinet
@@ -954,12 +1030,12 @@ namespace KitBoxApplication
 
         // function to give dimension of the boxes
         private void ComboBoxHeight_SelectedIndexChanged(object sender, EventArgs e)
-        {           
+        {
             var height = 0;
             if (comboBoxHeight.SelectedItem != null)
             {
                 height = Int32.Parse(comboBoxHeight.SelectedItem.ToString());
-            }            
+            }
             var nbrBox = Int32.Parse(numericUpDownQuantity.Value.ToString());
             int boxHeight = ProcessHeightForEachBox(height,nbrBox);
             string dimension = nbrBox + "x" + boxHeight.ToString() + "(h)";
@@ -969,7 +1045,7 @@ namespace KitBoxApplication
         //function that add the chosen features to the cart
         private void ButtonAddToCart_Click(object sender, EventArgs e)
         {
-            
+
 
             //If the cart is empty, create it
             if (CartPage.Cart == null)
@@ -989,7 +1065,7 @@ namespace KitBoxApplication
 
                 //Initialize colors and doors choices
                 List<string> color = Enumerable.Repeat<string>(null, 7).ToList();
-                
+
                 List<string> door = Enumerable.Repeat<string>(null, 7).ToList();
 
                 if (qty == 1)
@@ -1116,7 +1192,7 @@ namespace KitBoxApplication
             catch (NullReferenceException)
             {
                 MessageBox.Show("Please enter all the necessary information");
-            }                 
+            }
         }
 
 
@@ -1133,7 +1209,7 @@ namespace KitBoxApplication
             labelBoxHeight.Text = "";
         }
 
-        
+
 
         private void backgroundWorker1_DoWork_1(object sender, DoWorkEventArgs e)
         {
@@ -1151,9 +1227,9 @@ namespace KitBoxApplication
             List<string> door = (List<string>)list[6];
 
             Cabinet cabinet = new Cabinet();
-            
 
-            //All the boxes we can get                
+
+            //All the boxes we can get
             switch (qty)
             {
                 case 1:
@@ -1161,7 +1237,7 @@ namespace KitBoxApplication
                     cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
                     worker.ReportProgress(100);
                     break;
-                case 2:                                                                                         
+                case 2:
                     cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
                     worker.ReportProgress(50);
                     cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[1], panelCol: color[1]));
@@ -1196,8 +1272,8 @@ namespace KitBoxApplication
                     worker.ReportProgress(80);
                     cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[4], panelCol: color[4]));
                     worker.ReportProgress(100);
-                    break;                                                                                      
-                case 6:                                                                                         
+                    break;
+                case 6:
                     cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
                     worker.ReportProgress(15);
                     cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[1], panelCol: color[1]));
@@ -1210,7 +1286,7 @@ namespace KitBoxApplication
                     worker.ReportProgress(75);
                     cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[5], panelCol: color[5]));
                     worker.ReportProgress(100);
-                    break;                                                                                      
+                    break;
                 case 7:
                     cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
                     worker.ReportProgress(15);
