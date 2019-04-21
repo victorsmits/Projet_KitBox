@@ -120,17 +120,17 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonAbout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAH+SURBVFhHrZYNUcQwFIRPAhKQcBKQcBKQgAQkIAEJSEAC
-        EpCAg5Kvw3a229c27bEz35H/bJKXhsswDP/NU0MiXbW5Na6kq8p72TPw3EA/jWtWHuGhMa4i2DKgyaWb
-        Vx7ltTGuwspgzUBOTv70ETCplCYqA+XkoE5H+Wy43EQaIOBc0+QwJQ7gq3Ej1XEAsfLVQLPJYZbpgMGY
-        CH03yLuhLRPsRJYfNvDecGlFPSY4jgXZaAs6VOo1Ucob7KFzZHC2U0eBekyUUuUeLw2J+08Zgx8xsdh+
-        0ARbPDY0EYHndUdNLCgLg4+GhOusv8vEoiBgQokbULWB0yZmmYC7y5YjOpOv2olTJqZEAcEmEYRVm6Qy
-        gXHdIEQ9cTX2yQEEDSQ+t1WbNdJEpnWLRryj49/4xbl14NdWIpinlYtZ5g9/vd4aVZs12G76uIij8h2A
-        LGAAbRl/9wLPya8jYrs3x8gCd7/qOmBb8/8D8l1H5xk6SL2B5zcFsQO6fl14xq/KIlgCPlD6Rrh6d21C
-        ieqxqeA8838CjMvMVt8Sfjzw8rFxMOlBRloTKgZ6j26CH1/R2mNTBZmOyd8L7nr234QfX5UHEDuTd9pF
-        P4ys9e+Cn/x0MgjBlEGGmTx/19ZruYoSacLFKv1Opznqex+rBZ5JE6RPD9xLFsgE23nkM3yS4fILIh8c
-        e//fcmYAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EgAACxIB0t1+/AAAAf5JREFUWEetlg1RxDAUhE8CEpBwEpBwEpCABCQgAQlIQAISkICDkq/Ddrbb1zbt
+        sTPfkf9skpeGyzAM/81TQyJdtbk1rqSrynvZM/DcQD+Na1Ye4aExriLYMqDJpZtXHuW1Ma7CymDNQE5O
+        /vQRMKmUJioD5eSgTkf5bLjcRBog4FzT5DAlDuCrcSPVcQCx8tVAs8lhlumAwZgIfTfIu6EtE+xElh82
+        8N5waUU9JjiOBdloCzpU6jVRyhvsoXNkcLZTR4F6TJRS5R4vDYn7TxmDHzGx2H7QBFs8NjQRged1R00s
+        KAuDj4aE66y/y8SiIGBCiRtQtYHTJmaZgLvLliM6k6/aiVMmpkQBwSYRhFWbpDKBcd0gRD1xNfbJAQQN
+        JD63VZs10kSmdYtGvKPj3/jFuXXg11YimKeVi1nmD3+93hpVmzXYbvq4iKPyHYAsYABtGX/3As/JryNi
+        uzfHyAJ3v+o6YFvz/wPyXUfnGTpIvYHnNwWxA7p+XXjGr8oiWAI+UPpGuHp3bUKJ6rGp4DzzfwKMy8xW
+        3xJ+PPDysXEw6UFGWhMqBnqPboIfX9HaY1MFmY7J3wvuevbfhB9flQcQO5N32kU/jKz174Kf/HQyCMGU
+        QYaZPH/X1mu5ihJpwsUq/U6nOep7H6sFnkkTpE8P3EsWyATbeeQzfJLh8gsiHxx7/99yZgAAAABJRU5E
+        rkJggg==
 </value>
   </data>
   <data name="buttonCart.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -287,11 +287,10 @@
         FZstDajPeiismaoY1MaiismWhlFFFZmh/9k=
 </value>
   </data>
-  <data name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.TrayHeight" type="System.Int32, mscorlib">
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>88</value>
-  </data>
+  </metadata>
 </root>
