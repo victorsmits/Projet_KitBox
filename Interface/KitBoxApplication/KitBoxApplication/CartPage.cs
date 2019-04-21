@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KitBoxSourceCode;
 using Newtonsoft.Json.Linq;
-
+using System.IO;
 
 namespace KitBoxApplication
 {
@@ -24,6 +24,17 @@ namespace KitBoxApplication
         public CartPage()
         {
             InitializeComponent();
+        }
+
+        private string GetRelativePath(string directory)
+        {
+            char[] test1 = "\\".ToCharArray();
+            string[] test = directory.Split(test1);
+            string root = test[0];
+            string user = test[1];
+            string namePC = test[2];
+            string dir = root + "\\" + user + "\\" + namePC + "\\";
+            return dir;
         }
 
         public void Load_Json()
@@ -100,7 +111,9 @@ namespace KitBoxApplication
 
                     //Add a delete button
                     Button deleteButton = new Button();
-                    Image Beating_Cabinet = new Bitmap(@"\images\Beating_Cabinet.png");
+                    Image Beating_Cabinet = new Bitmap(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\images\Beating_Cabinet.png");
+                    deleteButton.ImageAlign = ContentAlignment.MiddleCenter;
+                    deleteButton.BackgroundImageLayout = ImageLayout.Center;
                     deleteButton.BackgroundImage = Beating_Cabinet;
                     //Color DarkRed = Color.FromName("DarkRed");
                     //deleteButton.BackColor = DarkRed;
@@ -291,7 +304,7 @@ namespace KitBoxApplication
                 }
             }
         }
-
+                
         private void comfirmCartButton_Click(object sender, EventArgs e)
         {
             tabControl1.Visible = false;

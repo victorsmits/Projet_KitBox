@@ -5,6 +5,11 @@ using KitBoxSourceCode;
 using System.Drawing;
 using Newtonsoft.Json.Linq;
 using System.IO;
+using System.Threading;
+using Timer = System.Windows.Forms.Timer;
+using System.ComponentModel;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace KitBoxApplication
 {
@@ -17,10 +22,13 @@ namespace KitBoxApplication
 
         private string doorM1 = null;
         private string doorMIf1 = null;
+        
 
         public BoxStandard()
         {
             InitializeComponent();
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.WorkerSupportsCancellation = false;
 
             // Add a "CheckedChanged" event handler for each radio button.
             // Ensure that all radio buttons are in the same groupbox control.
@@ -961,6 +969,7 @@ namespace KitBoxApplication
         //function that add the chosen features to the cart
         private void ButtonAddToCart_Click(object sender, EventArgs e)
         {
+            
 
             //If the cart is empty, create it
             if (CartPage.Cart == null)
@@ -968,7 +977,6 @@ namespace KitBoxApplication
                 CartPage.Cart = new Cart();
             }
 
-            Cabinet cabinet = new Cabinet();
 
             try
             {
@@ -979,37 +987,22 @@ namespace KitBoxApplication
                 int depth = Int32.Parse(comboBoxDepth.SelectedItem.ToString());
                 string angleColor = comboBoxColorAngles.SelectedItem.ToString();
 
-                
-
                 //Initialize colors and doors choices
-                string color1 = null;
-                string color2 = null;
-                string color3 = null;
-                string color4 = null;
-                string color5 = null;
-                string color6 = null;
-                string color7 = null;
-
-                string door1 = null;
-                string door2 = null;
-                string door3 = null;
-                string door4 = null;
-                string door5 = null;
-                string door6 = null;
-                string door7 = null;
-
+                List<string> color = Enumerable.Repeat<string>(null, 7).ToList();
+                
+                List<string> door = Enumerable.Repeat<string>(null, 7).ToList();
 
                 if (qty == 1)
                 {
-                    color1 = comboBoxColorIf1.SelectedItem.ToString();
+                    color[0] = comboBoxColorIf1.SelectedItem.ToString();
                     if (radioButtonYesIf1.Checked == true)
                     {
-                        door1 = comboBoxDoorMatIf1.Text.ToString();
+                        door[0] = comboBoxDoorMatIf1.Text.ToString();
                     }
 
                     else
                     {
-                        door1 = null;
+                        door[0] = null;
                     }
                 }
 
@@ -1017,162 +1010,115 @@ namespace KitBoxApplication
                 {
                     if (checkBoxColorYes.Checked == true & radioButtonYesIf2.Checked == true)
                     {
-                        color1 = comboBoxColorSA.Text.ToString();
-                        color2 = comboBoxColorSA.Text.ToString();
-                        color3 = comboBoxColorSA.Text.ToString();
-                        color4 = comboBoxColorSA.Text.ToString();
-                        color5 = comboBoxColorSA.Text.ToString();
-                        color6 = comboBoxColorSA.Text.ToString();
-                        color7 = comboBoxColorSA.Text.ToString();
+                        color[0] = comboBoxColorSA.SelectedItem.ToString();
+                        color[1] = comboBoxColorSA.SelectedItem.ToString();
+                        color[2] = comboBoxColorSA.SelectedItem.ToString();
+                        color[3] = comboBoxColorSA.SelectedItem.ToString();
+                        color[4] = comboBoxColorSA.SelectedItem.ToString();
+                        color[5] = comboBoxColorSA.SelectedItem.ToString();
+                        color[6] = comboBoxColorSA.SelectedItem.ToString();
 
                         if (radioButtonYesBox1.Checked == true)
                         {
-                            door1 = comboBoxDoorMatBox1.SelectedItem.ToString();
+                            door[0] = comboBoxDoorMatBox1.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox2.Checked == true)
                         {
-                            door2 = comboBoxDoorMatBox2.SelectedItem.ToString();
+                            door[1] = comboBoxDoorMatBox2.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox3.Checked == true)
                         {
-                            door3 = comboBoxDoorMatBox3.SelectedItem.ToString();
+                            door[2] = comboBoxDoorMatBox3.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox4.Checked == true)
                         {
-                            door4 = comboBoxDoorMatBox4.SelectedItem.ToString();
+                            door[3] = comboBoxDoorMatBox4.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox5.Checked == true)
                         {
-                            door5 = comboBoxDoorMatBox5.SelectedItem.ToString();
+                            door[4] = comboBoxDoorMatBox5.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox6.Checked == true)
                         {
-                            door6 = comboBoxDoorMatBox6.SelectedItem.ToString();
+                            door[5] = comboBoxDoorMatBox6.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox7.Checked == true)
                         {
-                            door7 = comboBoxDoorMatBox7.SelectedItem.ToString();
+                            door[6] = comboBoxDoorMatBox7.SelectedItem.ToString();
                         }
                     }
                     else if (checkBoxColorYes.Checked == true & radioButtonYesIf2.Checked == false)
                     {
-                        color1 = comboBoxColorSA.Text.ToString();
-                        color2 = comboBoxColorSA.Text.ToString();
-                        color3 = comboBoxColorSA.Text.ToString();
-                        color4 = comboBoxColorSA.Text.ToString();
-                        color5 = comboBoxColorSA.Text.ToString();
-                        color6 = comboBoxColorSA.Text.ToString();
-                        color7 = comboBoxColorSA.Text.ToString();
+                        color[0] = comboBoxColorSA.SelectedItem.ToString();
+                        color[1] = comboBoxColorSA.SelectedItem.ToString();
+                        color[2] = comboBoxColorSA.SelectedItem.ToString();
+                        color[3] = comboBoxColorSA.SelectedItem.ToString();
+                        color[4] = comboBoxColorSA.SelectedItem.ToString();
+                        color[5] = comboBoxColorSA.SelectedItem.ToString();
+                        color[6] = comboBoxColorSA.SelectedItem.ToString();
                     }
                     else if (checkBoxColorYes.Checked == false & radioButtonYesIf2.Checked == true)
                     {
                         if (radioButtonYesBox1.Checked == true)
                         {
-                            door1 = comboBoxDoorMatBox1.SelectedItem.ToString();
+                            door[0] = comboBoxDoorMatBox1.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox2.Checked == true)
                         {
-                            door2 = comboBoxDoorMatBox2.SelectedItem.ToString();
+                            door[1] = comboBoxDoorMatBox2.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox3.Checked == true)
                         {
-                            door3 = comboBoxDoorMatBox3.SelectedItem.ToString();
+                            door[2] = comboBoxDoorMatBox3.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox4.Checked == true)
                         {
-                            door4 = comboBoxDoorMatBox4.SelectedItem.ToString();
+                            door[3] = comboBoxDoorMatBox4.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox5.Checked == true)
                         {
-                            door5 = comboBoxDoorMatBox5.SelectedItem.ToString();
+                            door[4] = comboBoxDoorMatBox5.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox6.Checked == true)
                         {
-                            door6 = comboBoxDoorMatBox6.SelectedItem.ToString();
+                            door[5] = comboBoxDoorMatBox6.SelectedItem.ToString();
                         }
                         if (radioButtonYesBox7.Checked == true)
                         {
-                            door7 = comboBoxDoorMatBox7.SelectedItem.ToString();
+                            door[6] = comboBoxDoorMatBox7.SelectedItem.ToString();
                         }
-                        color1 = comboBoxColorS1.Text.ToString();
-                        color2 = comboBoxColorS2.Text.ToString();
-                        color3 = comboBoxColorS3.Text.ToString();
-                        color4 = comboBoxColorS4.Text.ToString();
-                        color5 = comboBoxColorS5.Text.ToString();
-                        color6 = comboBoxColorS6.Text.ToString();
-                        color7 = comboBoxColorS7.Text.ToString();
+                        color[0] = comboBoxColorS1.Text.ToString();
+                        color[1] = comboBoxColorS2.Text.ToString();
+                        color[2] = comboBoxColorS3.Text.ToString();
+                        color[3] = comboBoxColorS4.Text.ToString();
+                        color[4] = comboBoxColorS5.Text.ToString();
+                        color[5] = comboBoxColorS6.Text.ToString();
+                        color[6] = comboBoxColorS7.Text.ToString();
                     }
                     else
                     {
-                        color1 = comboBoxColorS1.Text.ToString();
-                        color2 = comboBoxColorS2.Text.ToString();
-                        color3 = comboBoxColorS3.Text.ToString();
-                        color4 = comboBoxColorS4.Text.ToString();
-                        color5 = comboBoxColorS5.Text.ToString();
-                        color6 = comboBoxColorS6.Text.ToString();
-                        color7 = comboBoxColorS7.Text.ToString();
+                        color[0] = comboBoxColorS1.Text.ToString();
+                        color[1] = comboBoxColorS2.Text.ToString();
+                        color[2] = comboBoxColorS3.Text.ToString();
+                        color[3] = comboBoxColorS4.Text.ToString();
+                        color[4] = comboBoxColorS5.Text.ToString();
+                        color[5] = comboBoxColorS6.Text.ToString();
+                        color[6] = comboBoxColorS7.Text.ToString();
                     }
                 }
+                List<Object> list = new List<Object> { qty, heightForEach, width, depth,angleColor, color, door };
 
+                progressBar.Visible = true;
+                progressBar.Value = 0;
 
-                //All the boxes we can get                
-                switch (qty)
-                {
-                    case 1:
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
-                        break;
-                    case 2:
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
-                        break;
-                    case 3:
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3));
-                        break;
-                    case 4:
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door4, panelCol: color4));
-                        break;
-                    case 5:
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door4, panelCol: color4));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door5, panelCol: color5));
-                        break;
-                    case 6:
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door4, panelCol: color4));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door5, panelCol: color5));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door6, panelCol: color6));
-                        break;
-                    case 7:
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door1, panelCol: color1));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door2, panelCol: color2));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door3, panelCol: color3));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door4, panelCol: color4));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door5, panelCol: color5));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door6, panelCol: color6));
-                        cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door7, panelCol: color7));
-                        break;
-                }
-
-                cabinet.AddAngles(angleColor);
-
-                CartPage.Cart.AddToCart(cabinet);
-
-                MessageBox.Show("This cabinet has been added to the cart succesfully!");
+                backgroundWorker1.RunWorkerAsync(list);
             }
-            catch(NullReferenceException)
+            catch (NullReferenceException)
             {
                 MessageBox.Show("Please enter all the necessary information");
-            }
+            }                 
         }
+
 
         // function to reset every combobox, numericupdown, radiobutton and checkbox to his initial state
         private void ButtonReset_Click(object sender, EventArgs e)
@@ -1185,6 +1131,120 @@ namespace KitBoxApplication
             comboBoxColorIf1.SelectedItem = null;
             radioButtonNoIf1.Checked = true;
             labelBoxHeight.Text = "";
+        }
+
+        
+
+        private void backgroundWorker1_DoWork_1(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker worker = sender as BackgroundWorker;
+
+            worker.ReportProgress(5);
+
+            List<Object> list = e.Argument as List<Object>;
+            int qty = (int)list[0];
+            int heightForEach = (int)list[1];
+            int width = (int)list[2];
+            int depth = (int)list[3];
+            string angleColor = (string)list[4];
+            List<string> color = (List<string>)list[5];
+            List<string> door = (List<string>)list[6];
+
+            Cabinet cabinet = new Cabinet();
+            
+
+            //All the boxes we can get                
+            switch (qty)
+            {
+                case 1:
+                    worker.ReportProgress(50);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
+                    worker.ReportProgress(100);
+                    break;
+                case 2:                                                                                         
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
+                    worker.ReportProgress(50);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[1], panelCol: color[1]));
+                    worker.ReportProgress(100);
+                    break;
+                case 3:
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
+                    worker.ReportProgress(33);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[1], panelCol: color[1]));
+                    worker.ReportProgress(66);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[2], panelCol: color[2]));
+                    worker.ReportProgress(100);
+                    break;
+                case 4:
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
+                    worker.ReportProgress(25);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[1], panelCol: color[1]));
+                    worker.ReportProgress(50);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[2], panelCol: color[2]));
+                    worker.ReportProgress(75);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[3], panelCol: color[3]));
+                    worker.ReportProgress(100);
+                    break;
+                case 5:
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
+                    worker.ReportProgress(20);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[1], panelCol: color[1]));
+                    worker.ReportProgress(40);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[2], panelCol: color[2]));
+                    worker.ReportProgress(60);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[3], panelCol: color[3]));
+                    worker.ReportProgress(80);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[4], panelCol: color[4]));
+                    worker.ReportProgress(100);
+                    break;                                                                                      
+                case 6:                                                                                         
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
+                    worker.ReportProgress(15);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[1], panelCol: color[1]));
+                    worker.ReportProgress(30);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[2], panelCol: color[2]));
+                    worker.ReportProgress(45);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[3], panelCol: color[3]));
+                    worker.ReportProgress(60);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[4], panelCol: color[4]));
+                    worker.ReportProgress(75);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[5], panelCol: color[5]));
+                    worker.ReportProgress(100);
+                    break;                                                                                      
+                case 7:
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[0], panelCol: color[0]));
+                    worker.ReportProgress(15);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[1], panelCol: color[1]));
+                    worker.ReportProgress(30);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[2], panelCol: color[2]));
+                    worker.ReportProgress(45);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[3], panelCol: color[3]));
+                    worker.ReportProgress(60);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[4], panelCol: color[4]));
+                    worker.ReportProgress(75);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[5], panelCol: color[5]));
+                    worker.ReportProgress(90);
+                    cabinet.AddStorageBox(new CabinetFloor(heightForEach, width, depth, door[6], panelCol: color[6]));
+                    worker.ReportProgress(100);
+                    break;
+            }
+
+            cabinet.AddAngles(angleColor);
+
+            CartPage.Cart.AddToCart(cabinet);
+
+            MessageBox.Show("This cabinet has been added to the cart succesfully!");
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            progressBar.Visible = false;
+            progressBar.Value = 0;
         }
     }
 }

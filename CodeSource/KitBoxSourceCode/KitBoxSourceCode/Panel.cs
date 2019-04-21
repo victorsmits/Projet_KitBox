@@ -30,16 +30,16 @@ namespace KitBoxSourceCode
 			// 1 = backward, 2 = side and 3 = upward/downward
 			switch (panelNumber) {
 				case 1:
-					stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAR%' AND hauteur = '"
-					+ (double)height + "' AND largeur = '" + (double)length + "' AND Couleur = '" + color + "'");
+					stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAR%' AND hauteur LIKE '"
+					+ height.ToString() + "' AND largeur LIKE '" + length.ToString() + "' AND Couleur = '" + color + "'");
 					break;
 				case 2:
-					stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAG%' AND hauteur = '"
-					+ (double)height + "' AND profondeur = '" + (double)length + "' AND Couleur = '" + color + "'");
+					stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAG%' AND hauteur LIKE '"
+					+ height.ToString() + "' AND profondeur LIKE '" + length.ToString() + "' AND Couleur = '" + color + "'");
 					break;
 				case 3:
-					stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAH%' AND largeur = '"
-					+ (double)height + "' AND profondeur = '" + (double)length + "' AND Couleur = '" + color + "'");
+					stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'PAH%' AND largeur LIKE '"
+                    + height.ToString() + "' AND profondeur LIKE '" + length.ToString() + "' AND Couleur = '" + color + "'");
 					break;
 			}
 
