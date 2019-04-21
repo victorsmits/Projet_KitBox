@@ -38,16 +38,16 @@
             //
             // confirmClientButton
             //
-            this.confirmButton.Font = new System.Drawing.Font("Century Gothic", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmButton.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.confirmButton.Location = new System.Drawing.Point(316, 311);
-            this.confirmButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(229, 95);
-            this.confirmButton.TabIndex = 0;
-            this.confirmButton.Text = "Confirm";
-            this.confirmButton.UseVisualStyleBackColor = true;
-            this.confirmButton.Click += new System.EventHandler(this.comfirmButton_Click);
+            this.confirmClientButton.Font = new System.Drawing.Font("Century Gothic", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmClientButton.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.confirmClientButton.Location = new System.Drawing.Point(316, 311);
+            this.confirmClientButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.confirmClientButton.Name = "confirmButton";
+            this.confirmClientButton.Size = new System.Drawing.Size(229, 95);
+            this.confirmClientButton.TabIndex = 0;
+            this.confirmClientButton.Text = "Confirm";
+            this.confirmClientButton.UseVisualStyleBackColor = true;
+            this.confirmClientButton.Click += new System.EventHandler(this.confirmClientButton_Click);
             //
             // cancelButton
             //
@@ -116,7 +116,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.confirmButton);
+            this.Controls.Add(this.confirmClientButton);
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "ClientIdentifier";
             this.Size = new System.Drawing.Size(1350, 600);

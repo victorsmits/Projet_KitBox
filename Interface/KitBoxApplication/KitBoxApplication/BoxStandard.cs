@@ -337,7 +337,7 @@ namespace KitBoxApplication
                 }
                 comboBoxColorS1.SelectedItem = null;
                 comboBoxColorS2.SelectedItem = null;
-                AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1 , panelShelf1);
+                AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
                 AddColorToBox(comboBoxColorS2, comboBoxDoorMatBox2, panelShelf2);
                 AddColorToBox(comboBoxColorS3, comboBoxDoorMatBox3, panelShelf3);
                 AddColorToBox(comboBoxColorS4, comboBoxDoorMatBox4, panelShelf4);
@@ -1018,6 +1018,7 @@ namespace KitBoxApplication
             AddColorToBox(comboBoxColorIf1, comboBoxDoorMatIf1, panelShelf1);
             doorMIf1 = comboBoxDoorMatIf1.Text;
         }
+
 
         //function that give the height of each box
         private int ProcessHeightForEachBox(int heightToGive, int nbrBoxToGive)

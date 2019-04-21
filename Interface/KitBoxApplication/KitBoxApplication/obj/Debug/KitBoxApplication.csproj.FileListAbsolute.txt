@@ -197,3 +197,4 @@ Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\Interface\kitboxapplication\KitBo
 Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\Interface\kitboxapplication\KitBoxApplication\obj\Debug\KitBoxApplication.csproj.CopyComplete
 Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\Interface\kitboxapplication\KitBoxApplication\obj\Debug\KitBoxApplication.exe
 Y:\ECAM\BAC3\Projet informatique\Projet_KitBox\Interface\kitboxapplication\KitBoxApplication\obj\Debug\KitBoxApplication.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\KitBoxApplication\obj\Debug\KitBoxApplication.AboutUs.resources

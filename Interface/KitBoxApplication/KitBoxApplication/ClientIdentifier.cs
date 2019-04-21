@@ -26,7 +26,7 @@ namespace KitBoxApplication
             return typeMail.IsMatch(mail);
         }
 
-        private void comfirmClientButton_Click(object sender, EventArgs e)
+        private void confirmClientButton_Click(object sender, EventArgs e)
         {
             string mail = textBox1.Text;
             JObject json = CartPage.Cart.ShowCart();

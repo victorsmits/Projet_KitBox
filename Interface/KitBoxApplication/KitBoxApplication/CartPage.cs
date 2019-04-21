@@ -32,17 +32,6 @@ namespace KitBoxApplication
             tabControl.ItemSize = new Size(70, 30);
         }
 
-        private string GetRelativePath(string directory)
-        {
-            char[] test1 = "\\".ToCharArray();
-            string[] test = directory.Split(test1);
-            string root = test[0];
-            string user = test[1];
-            string namePC = test[2];
-            string dir = root + "\\" + user + "\\" + namePC + "\\";
-            return dir;
-        }
-
         public void Load_Json()
         {
             try
@@ -58,7 +47,7 @@ namespace KitBoxApplication
             }
             catch(Newtonsoft.Json.JsonReaderException e)
             {
-                tabControl1.TabPages.Clear();
+                tabControl.TabPages.Clear();
                 TabPage emptyCart = new TabPage(Name = "Empty");
                 emptyCart.BackColor = Color.FromArgb(41, 44, 51);
                 tabControl.TabPages.Add(emptyCart);
@@ -112,7 +101,7 @@ namespace KitBoxApplication
             }
             else
             {
-                tabControl1.TabPages.Clear(); //Clear the tabs
+                tabControl.TabPages.Clear(); //Clear the tabs
 
                 //For every cabinet of the json
                 for (int cabinetCount = 0; cabinetCount < jsonCart.Count - 1; cabinetCount++)
@@ -139,7 +128,7 @@ namespace KitBoxApplication
                     //Color Black = Color.FromName("Black");
                     //deleteButton.ForeColor = Black;
                     //deleteButton.Text = "Delete cabinet";
-                    deleteButton.Click += deleteButton_Clicked;
+                    deleteButton.Click += DeleteButton_Clicked;
                     deleteButton.Location = new Point(981, 15);
                     deleteButton.Size = new Size(75, 61);
                     addedCabinePage.Controls.Add(deleteButton);
