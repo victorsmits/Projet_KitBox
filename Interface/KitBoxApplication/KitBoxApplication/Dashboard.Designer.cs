@@ -67,7 +67,7 @@
             this.SidePanel.Controls.Add(this.LogoPanel);
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
-            this.SidePanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.SidePanel.Margin = new System.Windows.Forms.Padding(1);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(157, 424);
             this.SidePanel.TabIndex = 0;
@@ -81,7 +81,7 @@
             this.buttonAbout.ForeColor = System.Drawing.Color.White;
             this.buttonAbout.Image = ((System.Drawing.Image)(resources.GetObject("buttonAbout.Image")));
             this.buttonAbout.Location = new System.Drawing.Point(0, 265);
-            this.buttonAbout.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonAbout.Margin = new System.Windows.Forms.Padding(1);
             this.buttonAbout.Name = "buttonAbout";
             this.buttonAbout.Size = new System.Drawing.Size(157, 63);
             this.buttonAbout.TabIndex = 104;
@@ -99,7 +99,7 @@
             this.buttonCart.ForeColor = System.Drawing.Color.White;
             this.buttonCart.Image = ((System.Drawing.Image)(resources.GetObject("buttonCart.Image")));
             this.buttonCart.Location = new System.Drawing.Point(0, 195);
-            this.buttonCart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonCart.Margin = new System.Windows.Forms.Padding(1);
             this.buttonCart.Name = "buttonCart";
             this.buttonCart.Size = new System.Drawing.Size(157, 70);
             this.buttonCart.TabIndex = 103;
@@ -118,7 +118,7 @@
             this.buttonCreation.ForeColor = System.Drawing.Color.White;
             this.buttonCreation.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreation.Image")));
             this.buttonCreation.Location = new System.Drawing.Point(0, 125);
-            this.buttonCreation.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonCreation.Margin = new System.Windows.Forms.Padding(1);
             this.buttonCreation.Name = "buttonCreation";
             this.buttonCreation.Size = new System.Drawing.Size(157, 70);
             this.buttonCreation.TabIndex = 101;
@@ -137,7 +137,7 @@
             this.buttonDash.ForeColor = System.Drawing.Color.White;
             this.buttonDash.Image = ((System.Drawing.Image)(resources.GetObject("buttonDash.Image")));
             this.buttonDash.Location = new System.Drawing.Point(0, 55);
-            this.buttonDash.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonDash.Margin = new System.Windows.Forms.Padding(1);
             this.buttonDash.Name = "buttonDash";
             this.buttonDash.Size = new System.Drawing.Size(157, 70);
             this.buttonDash.TabIndex = 100;
@@ -150,7 +150,7 @@
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(157, 55);
-            this.panel2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(894, 427);
             this.panel2.TabIndex = 5;
@@ -163,7 +163,7 @@
             this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonHome.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.ButtonHome.Location = new System.Drawing.Point(0, 55);
-            this.ButtonHome.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ButtonHome.Margin = new System.Windows.Forms.Padding(1);
             this.ButtonHome.Name = "ButtonHome";
             this.ButtonHome.Size = new System.Drawing.Size(157, 46);
             this.ButtonHome.TabIndex = 1;
@@ -177,7 +177,7 @@
             this.LogoPanel.Controls.Add(this.pictureBox1);
             this.LogoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.LogoPanel.Location = new System.Drawing.Point(0, 0);
-            this.LogoPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.LogoPanel.Margin = new System.Windows.Forms.Padding(1);
             this.LogoPanel.Name = "LogoPanel";
             this.LogoPanel.Size = new System.Drawing.Size(157, 55);
             this.LogoPanel.TabIndex = 0;
@@ -189,7 +189,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(157, 55);
             this.pictureBox1.TabIndex = 2;
@@ -201,7 +201,7 @@
             this.HeaderPanel.Controls.Add(this.KitBoxHeader);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(157, 0);
-            this.HeaderPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.HeaderPanel.Margin = new System.Windows.Forms.Padding(1);
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(613, 55);
             this.HeaderPanel.TabIndex = 1;
@@ -229,7 +229,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(157, 381);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(613, 43);
             this.panel1.TabIndex = 4;
@@ -243,7 +243,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(475, 11);
-            this.button2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 24);
             this.button2.TabIndex = 106;
@@ -254,7 +254,7 @@
             // 
             this.textBoxSubscribe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxSubscribe.Location = new System.Drawing.Point(317, 15);
-            this.textBoxSubscribe.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxSubscribe.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxSubscribe.Name = "textBoxSubscribe";
             this.textBoxSubscribe.Size = new System.Drawing.Size(151, 20);
             this.textBoxSubscribe.TabIndex = 105;
@@ -318,7 +318,7 @@
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.SidePanel);
             this.ForeColor = System.Drawing.SystemColors.Control;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximumSize = new System.Drawing.Size(1576, 1018);
             this.MinimumSize = new System.Drawing.Size(767, 410);
             this.Name = "Dashboard";
