@@ -129,7 +129,7 @@ namespace KitBoxApplication
                     //deleteButton.ForeColor = Black;
                     //deleteButton.Text = "Delete cabinet";
                     deleteButton.Click += DeleteButton_Clicked;
-                    deleteButton.Location = new Point(981, 15);
+                    deleteButton.Location = new Point(940, 15);
                     deleteButton.Size = new Size(75, 61);
                     addedCabinePage.Controls.Add(deleteButton);
 
@@ -245,6 +245,31 @@ namespace KitBoxApplication
                             int length = floorPanel["Length"].Value<int>();
                             int panelQty = floorPanel["Qty"].Value<int>();
 
+                            switch (floorCount)
+                            {
+                                case 0:
+                                    floorColor1 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 1:
+                                    floorColor2 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 2:
+                                    floorColor3 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 3:
+                                    floorColor4 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 4:
+                                    floorColor5 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 5:
+                                    floorColor6 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                                case 6:
+                                    floorColor7 = floorPanel["Coleur"].Value<string>();
+                                    break;
+                            }
+
                             if (numberOfLabel == 0)
                             {
                                 HEIGHT += height;
@@ -283,6 +308,31 @@ namespace KitBoxApplication
                             int doorQty = door["Qty"].Value<int>();
                             int doorStk = door["Remaining Stock"].Value<int>() * 2;
                             bool doorAvail = doorStk >= doorQty;
+
+                            switch (floorCount)
+                            {
+                                case 0:
+                                    doorMaterial1 = door["Material"].Value<string>();
+                                    break;
+                                case 1:
+                                    doorMaterial2 = door["Material"].Value<string>();
+                                    break;
+                                case 2:
+                                    doorMaterial3 = door["Material"].Value<string>();
+                                    break;
+                                case 3:
+                                    doorMaterial4 = door["Material"].Value<string>();
+                                    break;
+                                case 4:
+                                    doorMaterial5 = door["Material"].Value<string>();
+                                    break;
+                                case 5:
+                                    doorMaterial6 = door["Material"].Value<string>();
+                                    break;
+                                case 6:
+                                    doorMaterial7 = door["Material"].Value<string>();
+                                    break;
+                            }
 
                             JObject knop = door["Knop"].Value<JObject>();
                             int knopQty = knop["Quantity"].Value<int>();
@@ -349,7 +399,7 @@ namespace KitBoxApplication
                         panelShelf1.BackColor = Color.Transparent;
                         panelShelf1.BackgroundImageLayout = ImageLayout.Stretch;
                         panelShelf1.Size = new System.Drawing.Size(300, 600);
-                        panelShelf1.Location = new Point(500, (-200 + floorCount * 76/5*2));
+                        panelShelf1.Location = new Point(600, (-200 + floorCount * 76/5*2));
 
                         if (cabinetContains.Count - 2 > 1)
                         {
