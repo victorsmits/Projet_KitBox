@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using SqlOledb;
+using Oledb = SqlOledb.Oledb;
 using System.IO;
 
 namespace interface_Magasinier
 {
     public partial class SupplierWizard : UserControl
     {
-        OleDbDataReader dr;
+        
         public SupplierWizard()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace interface_Magasinier
 
         private void loadList(object sender, EventArgs e) //Connection to the DB and loading the data into the box
         {
-            SqlOledb.SqlOledb.connection(Form1.GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;");
+            Oledb.Connection();
             Loaddata();
         }
 
@@ -37,31 +38,31 @@ namespace interface_Magasinier
             try
             {
                 string q = "select * from CodePostal";
-                SqlOledb.SqlOledb.cmd.CommandText = q; // execution of a SQL instruction
-                SqlOledb.SqlOledb.cn.Open();
-                dr = SqlOledb.SqlOledb.cmd.ExecuteReader();
-                if (dr.HasRows)
+                Oledb.cmd.CommandText = q; // execution of a SQL instruction
+                Oledb.cn.Open();
+                Oledb.dr = Oledb.cmd.ExecuteReader();
+                if (Oledb.dr.HasRows)
                 {
-                    while (dr.Read())
+                    while (Oledb.dr.Read())
                     {
-                        IdZipList.Items.Add(dr[0].ToString());
-                        ZipList.Items.Add(dr[1].ToString());
-                        CityList.Items.Add(dr[2].ToString());
+                        IdZipList.Items.Add(Oledb.dr[0].ToString());
+                        ZipList.Items.Add(Oledb.dr[1].ToString());
+                        CityList.Items.Add(Oledb.dr[2].ToString());
                     }
                 }
-                dr.Close();
-                SqlOledb.SqlOledb.cn.Close();
+                Oledb.dr.Close();
+                Oledb.cn.Close();
             }
             catch (Exception e)
             {
-                SqlOledb.SqlOledb.cn.Close();
+                Oledb.cn.Close();
                 MessageBox.Show(e.Message.ToString());
             }
         }
 
         
 
-        private void listBox_Click(object sender, EventArgs e)
+        private void listBox_Click(object sender, EventArgs e) //Connect the selection area between all the listbox
         {
             ListBox l = sender as ListBox;
             if (l.SelectedIndex != -1)
@@ -74,7 +75,7 @@ namespace interface_Magasinier
             }
         }
 
-        private void finishButton_Click(object sender, EventArgs e)
+        private void finishButton_Click(object sender, EventArgs e) //Add a new supplier into the Db
         {
             string rsq = "INSERT INTO Fournisseur (Référence,Nom,Rue,Numero,FK_CodePostal) VALUES ('"
                                 + RefTextBox.Text.ToString() + "','"
@@ -83,9 +84,10 @@ namespace interface_Magasinier
                                 + NumbertextBox.Text.ToString() + "','"
                                 + ZipTextBox.Text.ToString() + "')";
 
-            SqlOledb.SqlOledb.SqlRequest(rsq);
- 
+            Oledb.SqlRequest(rsq);
+            
             Loaddata();
+            //Reset all the box
             RefTextBox.Text = "";
             NameTextBox.Text = "";
             StreetTextBox.Text = "";
@@ -95,13 +97,13 @@ namespace interface_Magasinier
 
         }
 
-        private void addzip_Click(object sender, EventArgs e)
+        private void addzip_Click(object sender, EventArgs e) //Add a new zip code into the DB
         {
             string rsq = "INSERT INTO CodePostal (CodePostal,Commune) VALUES ('"
                                 + ZipBox.Text.ToString() + "','"
                                 + CityBox.Text.ToString() + "')";
 
-            SqlOledb.SqlOledb.SqlRequest(rsq);
+            Oledb.SqlRequest(rsq);
            
             Loaddata();
             ZipBox.Text = "";

@@ -9,24 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using SqlOledb;
+using Oledb = SqlOledb.Oledb;
 using System.IO;
 
 namespace interface_Magasinier
 {
     public partial class ProductWizard : UserControl
     {
-        OleDbDataReader dr;
+        
         public ProductWizard()
         {
             InitializeComponent();
         }
         private void LoadList(object sender, EventArgs e) //loading data
         {
-            SqlOledb.SqlOledb.connection(Form1.GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;");
+            Oledb.Connection();
             Loaddata();
         }
 
-        private void listBox2_Click(object sender, EventArgs e)
+        private void listBox2_Click(object sender, EventArgs e) //Connect the selection area between all the listbox
         {
             ListBox l = sender as ListBox;
             if (l.SelectedIndex != -1)
@@ -45,29 +46,29 @@ namespace interface_Magasinier
             try
             {
                 string q = "select * from Fournisseur";
-                SqlOledb.SqlOledb.cmd.CommandText = q; // execution of a SQL instruction
-                SqlOledb.SqlOledb.cn.Open();
-                dr = SqlOledb.SqlOledb.cmd.ExecuteReader();
-                if (dr.HasRows)
+                Oledb.cmd.CommandText = q;
+                Oledb.cn.Open();
+                Oledb.dr = Oledb.cmd.ExecuteReader();
+                if (Oledb.dr.HasRows)
                 {
-                    while (dr.Read())
+                    while (Oledb.dr.Read())
                     {
-                        IdSupplier.Items.Add(dr[0].ToString());
-                        ReferenceSupplier.Items.Add(dr[1].ToString());
+                        IdSupplier.Items.Add(Oledb.dr[0].ToString());
+                        ReferenceSupplier.Items.Add(Oledb.dr[1].ToString());
                     }
                 }
-                dr.Close();
-                SqlOledb.SqlOledb.cn.Close();
+                Oledb.dr.Close();
+                Oledb.cn.Close();
             }
             catch (Exception e)
             {
-                SqlOledb.SqlOledb.cn.Close();
+                Oledb.cn.Close();
                 MessageBox.Show(e.Message.ToString());
             }
         }
 
-            private void finishButton_Click(object sender, EventArgs e)
-            {
+            private void finishButton_Click(object sender, EventArgs e) //Add a new product into the DB
+        {
 
                 string rsq = "INSERT INTO Req (Référence,Enstock,StockMinimum," +
                              "PrixClient,Nb_PiecesCasier,Dimensions_cm,Division," +
@@ -89,7 +90,7 @@ namespace interface_Magasinier
                                 + supplierPriceTextBox.Text.ToString() + "','"
                                 + delayNum.Text.ToString() + "')";
 
-                SqlOledb.SqlOledb.SqlRequest(rsq);
+                Oledb.SqlRequest(rsq);
                 
                 MessageBox.Show("Congrats! You added a new product");
 
@@ -116,7 +117,7 @@ namespace interface_Magasinier
 
             private void checkingToEnable(object sender, EventArgs e)
             {
-                //Check if every box has a piece ofinformation
+                //Check if every box has a piece of information
                 bool refCheck = referenceTextBox.Text != "";
                 bool initStockCheck = InitialStockNum.Value != 0;
                 bool minStockCheck = MinimumStockNum.Value != 0;
@@ -146,7 +147,7 @@ namespace interface_Magasinier
             }
         
 
-        private void Refresh_Click(object sender, EventArgs e)
+        private void Refresh_Click(object sender, EventArgs e)//Refresh the data list
         {
             Loaddata();
         }

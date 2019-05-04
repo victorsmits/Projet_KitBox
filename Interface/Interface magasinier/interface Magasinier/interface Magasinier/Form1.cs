@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using SqlOledb;
+using Oledb = SqlOledb.Oledb;
 using System.IO;
 
 namespace interface_Magasinier
@@ -20,28 +22,13 @@ namespace interface_Magasinier
 
         }
 
-        public static string GetRelativePath(string directory)
-        {
-            char[] test1 = "\\".ToCharArray();
-            string[] test = directory.Split(test1);
-            string root = test[0];
-            string user = test[1];
-            string namePC = test[2];
-            string dir = root + "\\" + user + "\\" + namePC + "\\";
-            return dir;
-        }
-
-        OleDbDataReader dr;
         private void Form1_Load(object sender, EventArgs e) //Connection to the DB and loading the data into the box
         {
-            SqlOledb.SqlOledb.connection(GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;");
+            Oledb.Connection();
             Loaddata();
         }
-        OleDbCommand cmd = new OleDbCommand(); //cmd for command
-        OleDbConnection cn = new OleDbConnection();  // cn for connection
-        
 
-        public void Loaddata() //Loading de data into the differents listbox
+        public void Loaddata() //Loading the data into the differents listbox
         {
             IdList.Items.Clear();
             RefrenceList.Items.Clear();
@@ -54,33 +41,34 @@ namespace interface_Magasinier
             try
             {
                 string q = "select * from Piece";
-                SqlOledb.SqlOledb.cmd.CommandText = q; // execution of a SQL instruction
-                SqlOledb.SqlOledb.cn.Open();
-                dr = SqlOledb.SqlOledb.cmd.ExecuteReader();
-                if (dr.HasRows)
+                Oledb.cmd.CommandText = q;       // execution of a SQL instruction
+                Oledb.cn.Open();
+                Oledb.dr = Oledb.cmd.ExecuteReader();
+                if (Oledb.dr.HasRows)
                 {
-                    while (dr.Read())
+                    while (Oledb.dr.Read())
                     {
-                        IdList.Items.Add(dr[0].ToString());
-                        RefrenceList.Items.Add(dr[1].ToString());
-                        StockList.Items.Add(dr[2].ToString());
-                        PriceClientList.Items.Add(dr[4].ToString());
-                        DimensionsList.Items.Add(dr[6].ToString());
-                        TypeList.Items.Add(dr[11].ToString());
-                        ColorList.Items.Add(dr[12].ToString());
+                        IdList.Items.Add(Oledb.dr[0].ToString());
+                        RefrenceList.Items.Add(Oledb.dr[1].ToString());
+                        StockList.Items.Add(Oledb.dr[2].ToString());
+                        PriceClientList.Items.Add(Oledb.dr[4].ToString());
+                        DimensionsList.Items.Add(Oledb.dr[6].ToString());
+                        TypeList.Items.Add(Oledb.dr[11].ToString());
+                        ColorList.Items.Add(Oledb.dr[12].ToString());
                     }
                 }
-                dr.Close();
-                SqlOledb.SqlOledb.cn.Close();
+                Oledb.dr.Close();
+                Oledb.cn.Close();
             }
             catch (Exception e)
             {
-                SqlOledb.SqlOledb.cn.Close();
+                Oledb.cn.Close();
                 MessageBox.Show(e.Message.ToString());
             }
 
         }
-        private void listBox2_Click(object sender, EventArgs e)
+
+        private void listBox2_Click(object sender, EventArgs e) //Connect the selection area between all the listbox
         {
             ListBox l = sender as ListBox;
             if (l.SelectedIndex != -1)
@@ -101,43 +89,35 @@ namespace interface_Magasinier
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //Update button for the stock
         {
             if (StockTextBox.Text != "" & IdList.SelectedIndex != -1)
             {
                 string q = "update Piece set Enstock='" + StockTextBox.Text.ToString() + "' where PK_Piece=" + IdList.SelectedItem.ToString();
-                SqlOledb.SqlOledb.SqlRequest(q);
+                Oledb.SqlRequest(q);
                 
                 Loaddata();
                 StockTextBox.Text = "";
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) //Update button for the price
         {
             if (PriceClientTextBox.Text != "" & IdList.SelectedIndex != -1)
             {
                 string q = "update Piece set PrixClient=" + PriceClientTextBox.Text.ToString() + " where PK_Piece=" + IdList.SelectedItem.ToString();
-                SqlOledb.SqlOledb.SqlRequest(q);
+                Oledb.SqlRequest(q);
                 
                 Loaddata();
                 PriceClientTextBox.Text = "";
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //Delete the object selected
         {
             string q = "delete from Piece where PK_Piece=" + IdList.SelectedItem.ToString();
-            SqlOledb.SqlOledb.SqlRequest(q);
+            Oledb.SqlRequest(q);
             
-            Loaddata();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string rsq = "INSERT INTO Req (Référence,Enstock,StockMinimum,PrixClient,Nb_PiecesCasier,Dimensions_cm,hauteur,profondeur,largeur,Reservation,Code,Couleur,Division,Prix,Delai,FK_Fournisseur) VALUES ('TRG','82','32','52','4','62','0','62','0','0','Trav','Pasde','0','1','1','1')";
-            SqlOledb.SqlOledb.SqlRequest(rsq);
-           
             Loaddata();
         }
 

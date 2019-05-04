@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using SqlOledb;
+using Oledb = SqlOledb.Oledb;
 using System.IO;
 
 
@@ -21,11 +22,11 @@ namespace interface_Magasinier
         {
             InitializeComponent();
         }
-        OleDbDataReader dr;
+        
 
         private void loadList(object sender, EventArgs e) //Connection to the DB and loading the data into the box
         {
-            SqlOledb.SqlOledb.connection(Form1.GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + @"Documents\GitHub\Projet_KitBox\Database\DB_Lespieces.accdb;");
+            Oledb.Connection();
             Loaddata();
             
         }
@@ -48,49 +49,49 @@ namespace interface_Magasinier
             try
             {
                 string q = "select * from CodePostal";
-                SqlOledb.SqlOledb.cmd.CommandText = q; // execution of a SQL instruction
-                SqlOledb.SqlOledb.cn.Open();
-                dr = SqlOledb.SqlOledb.cmd.ExecuteReader();
-                if (dr.HasRows)
+                Oledb.cmd.CommandText = q; // execution of a SQL instruction
+                Oledb.cn.Open();
+                Oledb.dr = Oledb.cmd.ExecuteReader();
+                if (Oledb.dr.HasRows)
                 {
-                    while (dr.Read())
+                    while (Oledb.dr.Read())
                     {
-                        IdZipList.Items.Add(dr[0].ToString());
-                        ZipList.Items.Add(dr[1].ToString());
-                        CityList.Items.Add(dr[2].ToString());
+                        IdZipList.Items.Add(Oledb.dr[0].ToString());
+                        ZipList.Items.Add(Oledb.dr[1].ToString());
+                        CityList.Items.Add(Oledb.dr[2].ToString());
                     }
                 }
-                dr.Close();
-                SqlOledb.SqlOledb.cn.Close();
+                Oledb.dr.Close();
+                Oledb.cn.Close();
 
                  q = "select * from ClientDetail";
-                SqlOledb.SqlOledb.cmd.CommandText = q; // execution of a SQL instruction
-                SqlOledb.SqlOledb.cn.Open();
-                dr = SqlOledb.SqlOledb.cmd.ExecuteReader();
-                if (dr.HasRows)
+                Oledb.cmd.CommandText = q; 
+                Oledb.cn.Open();
+                Oledb.dr = Oledb.cmd.ExecuteReader();
+                if (Oledb.dr.HasRows)
                 {
-                    while (dr.Read())
+                    while (Oledb.dr.Read())
                     {
-                       IdClientList.Items.Add(dr[0].ToString());
-                       NameClientList.Items.Add(dr[1].ToString());
-                       EmailClientList.Items.Add(dr[6].ToString());
-                       StreetClientList.Items.Add(dr[2].ToString());
-                       NumberClientList.Items.Add(dr[3].ToString());
-                       PhoneClient.Items.Add(dr[5].ToString());
-                       ZipClientList.Items.Add(dr[8].ToString());
+                       IdClientList.Items.Add(Oledb.dr[0].ToString());
+                       NameClientList.Items.Add(Oledb.dr[1].ToString());
+                       EmailClientList.Items.Add(Oledb.dr[6].ToString());
+                       StreetClientList.Items.Add(Oledb.dr[2].ToString());
+                       NumberClientList.Items.Add(Oledb.dr[3].ToString());
+                       PhoneClient.Items.Add(Oledb.dr[5].ToString());
+                       ZipClientList.Items.Add(Oledb.dr[8].ToString());
                     }
                 }
-                dr.Close();
-                SqlOledb.SqlOledb.cn.Close();
+                Oledb.dr.Close();
+                Oledb.cn.Close();
             }
             catch (Exception e)
             {
-                SqlOledb.SqlOledb.cn.Close();
+                Oledb.cn.Close();
                 MessageBox.Show(e.Message.ToString());
             }
         }
   
-        private void ClientlistBox_Click(object sender, EventArgs e)
+        private void ClientlistBox_Click(object sender, EventArgs e) //Connect the selection area between all the listbox
         {
             ListBox l = sender as ListBox;
             if (l.SelectedIndex != -1)
@@ -106,7 +107,7 @@ namespace interface_Magasinier
             }
         }
 
-        private void ziplistBox_Click(object sender, EventArgs e)
+        private void ziplistBox_Click(object sender, EventArgs e) //Connect the selection area between all the listbox
         {
             ListBox l = sender as ListBox;
             if (l.SelectedIndex != -1)
@@ -119,7 +120,7 @@ namespace interface_Magasinier
             }
         }
 
-        private void finishButton_Click(object sender, EventArgs e)
+        private void finishButton_Click(object sender, EventArgs e) //Complete and reset the form for the client
         {
             string rsq = "INSERT INTO Client (Nom,Email,Rue,Numero,Telephone,FK_CodePostal) VALUES ('"
                                 + NameTextBox.Text.ToString() + "','"
@@ -129,29 +130,31 @@ namespace interface_Magasinier
                                 + PhoneNumberBox.Text.ToString() + "','"
                                 + ZipTextBox.Text.ToString() + "')";
 
-            SqlOledb.SqlOledb.SqlRequest(rsq);
+            Oledb.SqlRequest(rsq);
             Loaddata();
+            //Reset of every box
             MailTextBox.Text = "";
             NameTextBox.Text = "";
             StreetTextBox.Text = "";
             NumbertextBox.Text = "";
             PhoneNumberBox.Text = "";
             ZipTextBox.Text = "";
-            MessageBox.Show("Congrats! You added a new Zip Code");
+            MessageBox.Show("Congrats! You added a new Client");
 
         }
 
-        private void addzip_Click(object sender, EventArgs e)
+        private void addzip_Click(object sender, EventArgs e) //Complete and reset the form for the zip code
         {
             string rsq = "INSERT INTO CodePostal (CodePostal,Commune) VALUES ('"
                                 + ZipBox.Text.ToString() + "','"
                                 + CityBox.Text.ToString() + "')";
 
-            SqlOledb.SqlOledb.SqlRequest(rsq);
+            Oledb.SqlRequest(rsq);
             Loaddata();
+            //Reset of every box
             ZipBox.Text = "";
             CityBox.Text = "";
-            MessageBox.Show("Congrats! You added a new Client");
+            MessageBox.Show("Congrats! You added a new Zip Code");
 
         }
 
