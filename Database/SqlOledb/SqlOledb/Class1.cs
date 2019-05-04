@@ -142,5 +142,12 @@ namespace SqlOledb
             }
             return list;
         }
+
+        public static void UndoReservation(int quantity, string stockRef)
+        {
+            int currentReservation = int.Parse(SqlRequest("SELECT Reservation FROM Piece WHERE Référence = '" + stockRef + "'"));
+            int newReservation = currentReservation - quantity;
+            SqlRequest("UPDATE Piece SET Reservation = " + newReservation.ToString() + " WHERE Référence = '" + stockRef + "'");
+        }
     }
 }

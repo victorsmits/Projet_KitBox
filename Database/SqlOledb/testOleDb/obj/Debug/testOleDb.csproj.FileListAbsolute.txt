@@ -36,3 +36,4 @@ C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\De
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.csproj.CopyComplete
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.exe
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\obj\Debug\testOleDb.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\testOleDb\bin\Debug\SqlOledb.dll

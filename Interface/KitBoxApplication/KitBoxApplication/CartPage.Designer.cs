@@ -43,9 +43,9 @@
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.tabPage1.ForeColor = System.Drawing.Color.White;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(1);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(1);
             this.tabPage1.Size = new System.Drawing.Size(1057, 535);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Empty";
@@ -71,9 +71,9 @@
             // 
             this.comfirmCartButton.Font = new System.Drawing.Font("Century Gothic", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comfirmCartButton.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.comfirmCartButton.Location = new System.Drawing.Point(1083, 545);
+            this.comfirmCartButton.Location = new System.Drawing.Point(1068, 545);
             this.comfirmCartButton.Name = "comfirmCartButton";
-            this.comfirmCartButton.Size = new System.Drawing.Size(92, 53);
+            this.comfirmCartButton.Size = new System.Drawing.Size(107, 53);
             this.comfirmCartButton.TabIndex = 1;
             this.comfirmCartButton.Text = "Confirm cart";
             this.comfirmCartButton.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.comfirmCartButton);
             this.Controls.Add(this.tabControl);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "CartPage";
             this.Size = new System.Drawing.Size(1175, 601);
             this.tabControl.ResumeLayout(false);

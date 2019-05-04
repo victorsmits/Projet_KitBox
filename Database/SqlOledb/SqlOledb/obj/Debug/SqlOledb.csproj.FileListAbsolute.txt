@@ -72,3 +72,4 @@ C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Deb
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.csproj.CopyComplete
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.dll
 C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.pdb
+C:\Users\m_sca\Documents\GitHub\Projet_KitBox\Database\SqlOledb\SqlOledb\obj\Debug\SqlOledb.csprojAssemblyReference.cache

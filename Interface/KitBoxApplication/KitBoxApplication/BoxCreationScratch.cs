@@ -13,6 +13,9 @@ namespace KitBoxApplication
 {
     public partial class BoxCreationScratch : UserControl
     {
+
+        private int increment = 1;
+
         public BoxCreationScratch()
         {
             InitializeComponent();
@@ -766,41 +769,23 @@ namespace KitBoxApplication
                     (qty >= 6) ? comboBoxColor6.SelectedItem.ToString(): null,
                     (qty >= 7) ? comboBoxColor7.SelectedItem.ToString(): null
                 };
-                List<string> door = Enumerable.Repeat<string>(null, 7).ToList();
-
-                if (radioButtonYes1.Checked == true)
+                List<string> door = new List<string>
                 {
-                    door[0] = comboBoxDoorMat1.SelectedItem.ToString();
-                }
-                if (radioButtonYes2.Checked == true)
-                {
-                    door[1] = comboBoxDoorMat2.SelectedItem.ToString();
-                }
-                if (radioButtonYes3.Checked == true)
-                {
-                    door[2] = comboBoxDoorMat3.SelectedItem.ToString();
-                }
-                if (radioButtonYes4.Checked == true)
-                {
-                    door[3] = comboBoxDoorMat4.SelectedItem.ToString();
-                }
-                if (radioButtonYes5.Checked == true)
-                {
-                    door[4] = comboBoxDoorMat5.SelectedItem.ToString();
-                }
-                if (radioButtonYes6.Checked == true)
-                {
-                    door[5] = comboBoxDoorMat6.SelectedItem.ToString();
-                }
-                if (radioButtonYes7.Checked == true)
-                {
-                    door[6] = comboBoxDoorMat7.SelectedItem.ToString();
-                }
+                    (radioButtonYes1.Checked) ? comboBoxDoorMat1.SelectedItem.ToString(): null,
+                    (radioButtonYes2.Checked) ? comboBoxDoorMat2.SelectedItem.ToString(): null,
+                    (radioButtonYes3.Checked) ? comboBoxDoorMat3.SelectedItem.ToString(): null,
+                    (radioButtonYes4.Checked) ? comboBoxDoorMat4.SelectedItem.ToString(): null,
+                    (radioButtonYes5.Checked) ? comboBoxDoorMat5.SelectedItem.ToString(): null,
+                    (radioButtonYes6.Checked) ? comboBoxDoorMat6.SelectedItem.ToString(): null,
+                    (radioButtonYes7.Checked) ? comboBoxDoorMat7.SelectedItem.ToString(): null
+                };
 
                 List<Object> list = new List<Object> { qty, totalHeight, height, width, depth, angleColor, color, door };
 
-                progressBar.Visible = true;
+                panel2.Visible = true;
                 progressBar.Value = 0;
+
+                loadingLabel.Text = "Status : Creating cabinet : Floor";
 
                 backgroundWorker1.RunWorkerAsync(list);
             }
@@ -808,9 +793,6 @@ namespace KitBoxApplication
             {
                 MessageBox.Show("Please enter all the necessary information\n");
             }
-
-
-
         }
 
         /* enables click on the panelshelf images
@@ -857,43 +839,26 @@ namespace KitBoxApplication
          */
         private int ActualHeight()
         {
-            int height1 = 0;
-            int height2 = 0;
-            int height3 = 0;
-            int height4 = 0;
-            int height5 = 0;
-            int height6 = 0;
-            int height7 = 0;
-            if (comboBoxHeight1.Text != "")
+            List<int> heights = Enumerable.Repeat<int>(0, 7).ToList();
+
+            heights = new List<int>
             {
-                height1 = int.Parse(comboBoxHeight1.Text.ToString());
-            }
-            if (comboBoxHeight2.Text != "")
+                (comboBoxHeight1.Text != "") ? int.Parse(comboBoxHeight1.Text.ToString()): 0,
+                (comboBoxHeight2.Text != "") ? int.Parse(comboBoxHeight2.Text.ToString()): 0,
+                (comboBoxHeight3.Text != "") ? int.Parse(comboBoxHeight3.Text.ToString()): 0,
+                (comboBoxHeight4.Text != "") ? int.Parse(comboBoxHeight4.Text.ToString()): 0,
+                (comboBoxHeight5.Text != "") ? int.Parse(comboBoxHeight5.Text.ToString()): 0,
+                (comboBoxHeight6.Text != "") ? int.Parse(comboBoxHeight6.Text.ToString()): 0,
+                (comboBoxHeight7.Text != "") ? int.Parse(comboBoxHeight7.Text.ToString()): 0
+            };
+
+            int total = 0;
+
+            foreach(int i in heights)
             {
-                height2 = int.Parse(comboBoxHeight2.Text.ToString());
-            }
-            if (comboBoxHeight3.Text != "")
-            {
-                height3 = int.Parse(comboBoxHeight3.Text.ToString());
-            }
-            if (comboBoxHeight4.Text != "")
-            {
-                height4 = int.Parse(comboBoxHeight4.Text.ToString());
-            }
-            if (comboBoxHeight5.Text != "")
-            {
-                height5 = int.Parse(comboBoxHeight5.Text.ToString());
-            }
-            if (comboBoxHeight6.Text != "")
-            {
-                height6 = int.Parse(comboBoxHeight6.Text.ToString());
-            }
-            if (comboBoxHeight7.Text != "")
-            {
-                height7 = int.Parse(comboBoxHeight7.Text.ToString());
+                total += i;
             }
 
-            int total = height1 + height2 + height3 + height4 + height5 + height6 + height7;
             return total;
         }
 
@@ -963,26 +928,32 @@ namespace KitBoxApplication
                         if (qty >= 2)
                         {
                             worker.ReportProgress(100 / nbr * 2);
+                            incrementer();
                             cabinet.AddStorageBox(new CabinetFloor(height[1], width, depth, door[1], panelCol: color[1]));
                             if (qty >= 3)
                             {
                                 worker.ReportProgress(100 / nbr * 3);
+                                incrementer();
                                 cabinet.AddStorageBox(new CabinetFloor(height[2], width, depth, door[2], panelCol: color[2])); 
                                 if (qty >= 4)
                                 {
                                     worker.ReportProgress(100 / nbr * 4);
+                                    incrementer();
                                     cabinet.AddStorageBox(new CabinetFloor(height[3], width, depth, door[3], panelCol: color[3]));
                                     if (qty >= 5)
                                     {
                                         worker.ReportProgress(100 / nbr * 5);
+                                        incrementer();
                                         cabinet.AddStorageBox(new CabinetFloor(height[4], width, depth, door[4], panelCol: color[4]));
                                         if (qty >= 6)
                                         {
                                             worker.ReportProgress(100 / nbr * 6);
+                                            incrementer();
                                             cabinet.AddStorageBox(new CabinetFloor(height[5], width, depth, door[5], panelCol: color[5]));
                                             if (qty >= 7)
                                             {
                                                 worker.ReportProgress(100 / nbr * 7);
+                                                incrementer();
                                                 cabinet.AddStorageBox(new CabinetFloor(height[6], width, depth, door[6], panelCol: color[6]));
                                             }
                                         }
@@ -1010,12 +981,28 @@ namespace KitBoxApplication
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             progressBar.Value = e.ProgressPercentage;
+            if (e.ProgressPercentage == 100)
+            {
+                incrementLabel.Text = "";
+                loadingLabel.Text = "Status : Done!";
+            }
+            else
+            {
+                incrementLabel.Text = increment.ToString();
+            }
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            progressBar.Visible = false;
+            panel2.Visible = false;
+            incrementLabel.Text = "0";
+            increment = 1;
             progressBar.Value = 0;
+        }
+
+        private void incrementer()
+        {
+            increment++;
         }
     }
 }

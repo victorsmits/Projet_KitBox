@@ -44,10 +44,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.aboutUs1 = new KitBoxApplication.AboutUs();
             this.cartPage1 = new KitBoxApplication.CartPage();
             this.homePage3 = new KitBoxApplication.HomePage();
             this.creation2 = new KitBoxApplication.Creation();
-            this.aboutUs1 = new KitBoxApplication.AboutUs();
             this.SidePanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -264,6 +264,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CopyRight Reserved";
             // 
+            // aboutUs1
+            // 
+            this.aboutUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.aboutUs1.Location = new System.Drawing.Point(415, 138);
+            this.aboutUs1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.aboutUs1.Name = "aboutUs1";
+            this.aboutUs1.Size = new System.Drawing.Size(1124, 635);
+            this.aboutUs1.TabIndex = 8;
+            this.aboutUs1.Visible = false;
+            // 
             // cartPage1
             // 
             this.cartPage1.Location = new System.Drawing.Point(415, 82);
@@ -276,7 +286,7 @@
             // homePage3
             // 
             this.homePage3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.homePage3.Location = new System.Drawing.Point(157, 744);
+            this.homePage3.Location = new System.Drawing.Point(157, 55);
             this.homePage3.Margin = new System.Windows.Forms.Padding(0);
             this.homePage3.Name = "homePage3";
             this.homePage3.Size = new System.Drawing.Size(1721, 689);
@@ -284,23 +294,12 @@
             // 
             // creation2
             // 
-            this.creation2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.creation2.Location = new System.Drawing.Point(157, 55);
+            this.creation2.Location = new System.Drawing.Point(300, 55);
             this.creation2.Margin = new System.Windows.Forms.Padding(0);
             this.creation2.Name = "creation2";
             this.creation2.Size = new System.Drawing.Size(1721, 689);
             this.creation2.TabIndex = 5;
             this.creation2.Visible = false;
-            // 
-            // aboutUs1
-            // 
-            this.aboutUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.aboutUs1.Location = new System.Drawing.Point(415, 138);
-            this.aboutUs1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.aboutUs1.Name = "aboutUs1";
-            this.aboutUs1.Size = new System.Drawing.Size(1124, 635);
-            this.aboutUs1.TabIndex = 8;
-            this.aboutUs1.Visible = false;
             // 
             // Dashboard
             // 

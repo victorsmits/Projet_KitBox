@@ -143,7 +143,10 @@
             this.panelShelf6 = new System.Windows.Forms.Panel();
             this.panelShelf7 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.incrementLabel = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.loadingLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.tabPageBox7.SuspendLayout();
             this.panelInside7.SuspendLayout();
@@ -181,6 +184,7 @@
             this.panelShelf4.SuspendLayout();
             this.panelShelf5.SuspendLayout();
             this.panelShelf6.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelColorAngles
@@ -1668,20 +1672,52 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.incrementLabel);
+            this.panel2.Controls.Add(this.progressBar);
+            this.panel2.Controls.Add(this.loadingLabel);
+            this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Location = new System.Drawing.Point(318, 244);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(270, 103);
+            this.panel2.TabIndex = 84;
+            this.panel2.Visible = false;
+            // 
+            // incrementLabel
+            // 
+            this.incrementLabel.AutoSize = true;
+            this.incrementLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.incrementLabel.Location = new System.Drawing.Point(192, 25);
+            this.incrementLabel.Name = "incrementLabel";
+            this.incrementLabel.Size = new System.Drawing.Size(13, 13);
+            this.incrementLabel.TabIndex = 83;
+            this.incrementLabel.Text = "0";
+            // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(276, 139);
+            this.progressBar.Location = new System.Drawing.Point(21, 55);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(256, 23);
-            this.progressBar.TabIndex = 80;
-            this.progressBar.Visible = false;
+            this.progressBar.Size = new System.Drawing.Size(225, 29);
+            this.progressBar.TabIndex = 81;
+            // 
+            // loadingLabel
+            // 
+            this.loadingLabel.AutoSize = true;
+            this.loadingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.loadingLabel.Location = new System.Drawing.Point(28, 25);
+            this.loadingLabel.Name = "loadingLabel";
+            this.loadingLabel.Size = new System.Drawing.Size(158, 13);
+            this.loadingLabel.TabIndex = 82;
+            this.loadingLabel.Text = "Status : Creating cabinet :  Floor";
             // 
             // BoxCreationScratch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelShelf1);
@@ -1759,6 +1795,8 @@
             this.panelShelf4.ResumeLayout(false);
             this.panelShelf5.ResumeLayout(false);
             this.panelShelf6.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1879,6 +1917,9 @@
         private System.Windows.Forms.Label labelMaxHeight;
         private System.Windows.Forms.Button buttonReset;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label incrementLabel;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label loadingLabel;
     }
 }
