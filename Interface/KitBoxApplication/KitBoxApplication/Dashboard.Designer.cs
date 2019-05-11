@@ -77,7 +77,7 @@
             this.buttonAbout.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonAbout.FlatAppearance.BorderSize = 0;
             this.buttonAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAbout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAbout.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAbout.ForeColor = System.Drawing.Color.White;
             this.buttonAbout.Image = ((System.Drawing.Image)(resources.GetObject("buttonAbout.Image")));
             this.buttonAbout.Location = new System.Drawing.Point(0, 304);
@@ -96,7 +96,7 @@
             this.buttonCart.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonCart.FlatAppearance.BorderSize = 0;
             this.buttonCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCart.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCart.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCart.ForeColor = System.Drawing.Color.White;
             this.buttonCart.Image = ((System.Drawing.Image)(resources.GetObject("buttonCart.Image")));
             this.buttonCart.Location = new System.Drawing.Point(0, 221);
@@ -115,7 +115,7 @@
             this.buttonCreation.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonCreation.FlatAppearance.BorderSize = 0;
             this.buttonCreation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreation.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreation.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCreation.ForeColor = System.Drawing.Color.White;
             this.buttonCreation.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreation.Image")));
             this.buttonCreation.Location = new System.Drawing.Point(0, 138);
@@ -134,7 +134,7 @@
             this.buttonDash.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonDash.FlatAppearance.BorderSize = 0;
             this.buttonDash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDash.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDash.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDash.ForeColor = System.Drawing.Color.White;
             this.buttonDash.Image = ((System.Drawing.Image)(resources.GetObject("buttonDash.Image")));
             this.buttonDash.Location = new System.Drawing.Point(0, 55);

@@ -210,6 +210,19 @@ namespace KitBoxApplication
                     deleteButton.Size = new Size(75, 61);
                     addedCabinePage.Controls.Add(deleteButton);
 
+                    // Create the ToolTip and associate with the Form container.
+                    ToolTip toolTip1 = new ToolTip();
+
+                    // Set up the delays for the ToolTip.
+                    toolTip1.AutoPopDelay = 5000;
+                    toolTip1.InitialDelay = 100;
+                    toolTip1.ReshowDelay = 500;
+                    // Force the ToolTip text to be displayed whether or not the form is active.
+                    toolTip1.ShowAlways = true;
+
+                    // Set up the ToolTip text for the Button and Checkbox.
+                    toolTip1.SetToolTip(deleteButton, "Delete Cabinet");
+
 
                     //Generates label for angles
                     JObject angle = cabinetContains["Angle"].Value<JObject>();
@@ -281,33 +294,19 @@ namespace KitBoxApplication
                         JObject beam1 = floor["Beam 1"].Value<JObject>();
                         JObject beam2 = floor["Beam 2"].Value<JObject>();
                         JObject doorBeam = floor["DoorBeam"].Value<JObject>();
+                        
+                        List<bool> availabilityList = new List<bool>
+                        {
+                            panel1["Remaining Stock"].Value<int>() >= panel1["Qty"].Value<int>(),
+                            panel2["Remaining Stock"].Value<int>() >= panel2["Qty"].Value<int>(),
+                            panel3["Remaining Stock"].Value<int>() >= panel3["Qty"].Value<int>(),
+                            cleat["Remaining Stock"].Value<int>() >= cleat["Qty"].Value<int>(),
+                            beam1["Remaining Stock"].Value<int>() >= beam1["Qty"].Value<int>(),
+                            beam2["Remaining Stock"].Value<int>() >= beam2["Qty"].Value<int>(),
+                            doorBeam["Remaining Stock"].Value<int>() >= doorBeam["Remaining Stock"].Value<int>()
+                        };
 
-                        int panel1Qty = panel1["Qty"].Value<int>();
-                        int panel2Qty = panel2["Qty"].Value<int>();
-                        int panel3Qty = panel3["Qty"].Value<int>();
-                        int cleatQty = cleat["Qty"].Value<int>();
-                        int beam1Qty = beam1["Qty"].Value<int>();
-                        int beam2Qty = beam2["Qty"].Value<int>();
-                        int doorBeamQty = doorBeam["Qty"].Value<int>();
-
-                        int panel1Stk = panel1["Remaining Stock"].Value<int>();
-                        int panel2Stk = panel2["Remaining Stock"].Value<int>();
-                        int panel3Stk = panel3["Remaining Stock"].Value<int>();
-                        int cleatStk = cleat["Remaining Stock"].Value<int>();
-                        int beam1Stk = beam1["Remaining Stock"].Value<int>();
-                        int beam2Stk = beam2["Remaining Stock"].Value<int>();
-                        int doorBeamStk = doorBeam["Remaining Stock"].Value<int>();
-
-                        bool panel1Avail = panel1Stk >= panel1Qty;
-                        bool panel2Avail = panel2Stk >= panel2Qty;
-                        bool panel3Avail = panel3Stk >= panel3Qty;
-                        bool cleatAvail = cleatStk >= cleatQty;
-                        bool beam1Avail = beam1Stk >= beam1Qty;
-                        bool beam2Avail = beam2Stk >= beam2Qty;
-                        bool doorBeamAvail = doorBeamStk >= doorBeamQty;
-
-
-                        if (panel1Avail && panel2Avail && panel3Avail && cleatAvail && beam1Avail && beam2Avail && doorBeamAvail)
+                        if (availabilityList.All(a=>a))
                         {
                             availability = true;
                         }
