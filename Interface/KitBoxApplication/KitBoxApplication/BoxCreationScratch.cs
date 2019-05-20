@@ -782,8 +782,12 @@ namespace KitBoxApplication
 
                 List<Object> list = new List<Object> { qty, totalHeight, height, width, depth, angleColor, color, door };
 
-                panel2.Visible = true;
-                progressBar.Value = 0;
+                if(totalHeight <= 375)
+                {
+                    panel2.Visible = true;
+                    progressBar.Value = 0;
+                }
+                
 
                 loadingLabel.Text = "Status : Creating cabinet : Floor";
 
