@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.standardCreation = new System.Windows.Forms.CheckBox();
             this.completeCreation = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.creationExplanation1 = new KitBoxApplication.CreationExplanation();
             this.boxCreationScratch1 = new KitBoxApplication.BoxCreationScratch();
             this.boxStandard2 = new KitBoxApplication.BoxStandard();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,13 +75,27 @@
             this.completeCreation.UseVisualStyleBackColor = true;
             this.completeCreation.CheckedChanged += new System.EventHandler(this.CompleteCreationAppear);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.creationExplanation1);
+            this.panel1.Controls.Add(this.completeCreation);
+            this.panel1.Controls.Add(this.boxCreationScratch1);
+            this.panel1.Controls.Add(this.standardCreation);
+            this.panel1.Controls.Add(this.boxStandard2);
+            this.panel1.Location = new System.Drawing.Point(180, 8);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(920, 712);
+            this.panel1.TabIndex = 25;
+            // 
             // creationExplanation1
             // 
             this.creationExplanation1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.creationExplanation1.Location = new System.Drawing.Point(158, 118);
+            this.creationExplanation1.Location = new System.Drawing.Point(178, 118);
             this.creationExplanation1.Margin = new System.Windows.Forms.Padding(0);
             this.creationExplanation1.Name = "creationExplanation1";
-            this.creationExplanation1.Size = new System.Drawing.Size(525, 419);
+            this.creationExplanation1.Size = new System.Drawing.Size(562, 423);
             this.creationExplanation1.TabIndex = 24;
             // 
             // boxCreationScratch1
@@ -100,33 +114,19 @@
             this.boxStandard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.boxStandard2.Font = new System.Drawing.Font("Century Gothic", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxStandard2.Location = new System.Drawing.Point(8, 118);
-            this.boxStandard2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.boxStandard2.Margin = new System.Windows.Forms.Padding(1);
             this.boxStandard2.MinimumSize = new System.Drawing.Size(156, 0);
             this.boxStandard2.Name = "boxStandard2";
             this.boxStandard2.Size = new System.Drawing.Size(906, 590);
             this.boxStandard2.TabIndex = 22;
             this.boxStandard2.Visible = false;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.creationExplanation1);
-            this.panel1.Controls.Add(this.completeCreation);
-            this.panel1.Controls.Add(this.boxCreationScratch1);
-            this.panel1.Controls.Add(this.standardCreation);
-            this.panel1.Controls.Add(this.boxStandard2);
-            this.panel1.Location = new System.Drawing.Point(180, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 712);
-            this.panel1.TabIndex = 25;
-            // 
             // Creation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Creation";
             this.Size = new System.Drawing.Size(1281, 722);
             this.panel1.ResumeLayout(false);
