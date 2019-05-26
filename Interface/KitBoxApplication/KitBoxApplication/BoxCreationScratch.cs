@@ -972,8 +972,6 @@ namespace KitBoxApplication
                     cabinet.AddScratchAngles(angleColor);
 
                     CartPage.Cart.AddToCart(cabinet);
-
-                    MessageBox.Show("This cabinet has been added to the cart succesfully!");
                 }
                 catch (NullReferenceException)
                 {

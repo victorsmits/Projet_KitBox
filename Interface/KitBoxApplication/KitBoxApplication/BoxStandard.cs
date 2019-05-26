@@ -1247,8 +1247,6 @@ namespace KitBoxApplication
             cabinet.AddAngles(angleColor);
 
             CartPage.Cart.AddToCart(cabinet);
-
-            MessageBox.Show("This cabinet has been added to the cart succesfully!");
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
