@@ -137,6 +137,12 @@
             this.panelShelf5 = new System.Windows.Forms.Panel();
             this.panelShelf6 = new System.Windows.Forms.Panel();
             this.panelShelf7 = new System.Windows.Forms.Panel();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.loadingLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.incrementLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.panelColorChoice.SuspendLayout();
             this.panelColorChoiceAll.SuspendLayout();
@@ -167,6 +173,7 @@
             this.panelShelf4.SuspendLayout();
             this.panelShelf5.SuspendLayout();
             this.panelShelf6.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -223,7 +230,7 @@
             0,
             0,
             0});
-            this.numericUpDownQuantity.ValueChanged += new System.EventHandler(this.numericUpDownQuantity_ValueChanged);
+            this.numericUpDownQuantity.ValueChanged += new System.EventHandler(this.NumericUpDownQuantity_ValueChanged);
             // 
             // labelHeight
             // 
@@ -251,7 +258,7 @@
             this.comboBoxHeight.Name = "comboBoxHeight";
             this.comboBoxHeight.Size = new System.Drawing.Size(91, 41);
             this.comboBoxHeight.TabIndex = 17;
-            this.comboBoxHeight.SelectedIndexChanged += new System.EventHandler(this.comboBoxHeight_SelectedIndexChanged);
+            this.comboBoxHeight.SelectedIndexChanged += new System.EventHandler(this.ComboBoxHeight_SelectedIndexChanged);
             // 
             // labelDoorYesNoIf1
             // 
@@ -366,7 +373,7 @@
             this.comboBoxColorS1.Name = "comboBoxColorS1";
             this.comboBoxColorS1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS1.TabIndex = 28;
-            this.comboBoxColorS1.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS1_SelectedIndexChanged);
+            this.comboBoxColorS1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS1_SelectedIndexChanged);
             // 
             // comboBoxColorS6
             // 
@@ -381,7 +388,7 @@
             this.comboBoxColorS6.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS6.TabIndex = 29;
             this.comboBoxColorS6.Visible = false;
-            this.comboBoxColorS6.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS6_SelectedIndexChanged);
+            this.comboBoxColorS6.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS6_SelectedIndexChanged);
             // 
             // comboBoxColorS5
             // 
@@ -396,7 +403,7 @@
             this.comboBoxColorS5.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS5.TabIndex = 30;
             this.comboBoxColorS5.Visible = false;
-            this.comboBoxColorS5.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS5_SelectedIndexChanged);
+            this.comboBoxColorS5.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS5_SelectedIndexChanged);
             // 
             // comboBoxColorS4
             // 
@@ -411,7 +418,7 @@
             this.comboBoxColorS4.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS4.TabIndex = 31;
             this.comboBoxColorS4.Visible = false;
-            this.comboBoxColorS4.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS4_SelectedIndexChanged);
+            this.comboBoxColorS4.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS4_SelectedIndexChanged);
             // 
             // comboBoxColorS3
             // 
@@ -426,7 +433,7 @@
             this.comboBoxColorS3.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS3.TabIndex = 32;
             this.comboBoxColorS3.Visible = false;
-            this.comboBoxColorS3.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS3_SelectedIndexChanged);
+            this.comboBoxColorS3.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS3_SelectedIndexChanged);
             // 
             // comboBoxColorS2
             // 
@@ -440,7 +447,7 @@
             this.comboBoxColorS2.Name = "comboBoxColorS2";
             this.comboBoxColorS2.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS2.TabIndex = 33;
-            this.comboBoxColorS2.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS2_SelectedIndexChanged);
+            this.comboBoxColorS2.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS2_SelectedIndexChanged);
             // 
             // comboBoxColorS7
             // 
@@ -455,7 +462,7 @@
             this.comboBoxColorS7.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorS7.TabIndex = 34;
             this.comboBoxColorS7.Visible = false;
-            this.comboBoxColorS7.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorS7_SelectedIndexChanged);
+            this.comboBoxColorS7.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorS7_SelectedIndexChanged);
             // 
             // labelColorQuestions
             // 
@@ -480,7 +487,7 @@
             this.checkBoxColorNo.TabIndex = 37;
             this.checkBoxColorNo.Text = "No";
             this.checkBoxColorNo.UseVisualStyleBackColor = true;
-            this.checkBoxColorNo.CheckedChanged += new System.EventHandler(this.checkBoxColorNo_CheckedChanged);
+            this.checkBoxColorNo.CheckedChanged += new System.EventHandler(this.CheckBoxColorNo_CheckedChanged);
             // 
             // checkBoxColorYes
             // 
@@ -493,7 +500,7 @@
             this.checkBoxColorYes.TabIndex = 36;
             this.checkBoxColorYes.Text = "Yes";
             this.checkBoxColorYes.UseVisualStyleBackColor = true;
-            this.checkBoxColorYes.CheckedChanged += new System.EventHandler(this.checkBoxColorYes_CheckedChanged);
+            this.checkBoxColorYes.CheckedChanged += new System.EventHandler(this.CheckBoxColorYes_CheckedChanged);
             // 
             // labelColorSA
             // 
@@ -519,7 +526,7 @@
             this.comboBoxColorSA.Name = "comboBoxColorSA";
             this.comboBoxColorSA.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorSA.TabIndex = 39;
-            this.comboBoxColorSA.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorSA_SelectedIndexChanged);
+            this.comboBoxColorSA.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorSA_SelectedIndexChanged);
             // 
             // labelColorAngles
             // 
@@ -554,15 +561,16 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.button2.Location = new System.Drawing.Point(694, 498);
+            this.button2.Location = new System.Drawing.Point(722, 496);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 42);
+            this.button2.Size = new System.Drawing.Size(120, 50);
             this.button2.TabIndex = 47;
             this.button2.Text = "Add To Cart";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.ButtonAddToCart_Click);
             // 
             // panelColorChoice
             // 
@@ -640,7 +648,7 @@
             this.radioButtonYesIf1.TabIndex = 53;
             this.radioButtonYesIf1.Text = "Yes";
             this.radioButtonYesIf1.UseVisualStyleBackColor = true;
-            this.radioButtonYesIf1.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf1_CheckedChanged);
+            this.radioButtonYesIf1.CheckedChanged += new System.EventHandler(this.RadioButtonsYesNoIf1_CheckedChanged);
             // 
             // radioButtonNoIf1
             // 
@@ -654,7 +662,7 @@
             this.radioButtonNoIf1.TabStop = true;
             this.radioButtonNoIf1.Text = "No";
             this.radioButtonNoIf1.UseVisualStyleBackColor = true;
-            this.radioButtonNoIf1.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf1_CheckedChanged);
+            this.radioButtonNoIf1.CheckedChanged += new System.EventHandler(this.RadioButtonsYesNoIf1_CheckedChanged);
             // 
             // comboBoxColorIf1
             // 
@@ -668,7 +676,7 @@
             this.comboBoxColorIf1.Name = "comboBoxColorIf1";
             this.comboBoxColorIf1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxColorIf1.TabIndex = 40;
-            this.comboBoxColorIf1.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorIf1_SelectedIndexChanged);
+            this.comboBoxColorIf1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorIf1_SelectedIndexChanged);
             // 
             // panelDoorMaterial
             // 
@@ -694,7 +702,7 @@
             this.comboBoxDoorMatIf1.Name = "comboBoxDoorMatIf1";
             this.comboBoxDoorMatIf1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatIf1.TabIndex = 43;
-            this.comboBoxDoorMatIf1.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatIf1_SelectedIndexChanged);
+            this.comboBoxDoorMatIf1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatIf1_SelectedIndexChanged);
             // 
             // labelDoorMatIf1
             // 
@@ -807,7 +815,7 @@
             this.radioButtonYesBox7.TabIndex = 53;
             this.radioButtonYesBox7.Text = "Yes";
             this.radioButtonYesBox7.UseVisualStyleBackColor = true;
-            this.radioButtonYesBox7.CheckedChanged += new System.EventHandler(this.radioButtonBox7_CheckedChanged);
+            this.radioButtonYesBox7.CheckedChanged += new System.EventHandler(this.RadioButtonBox7_CheckedChanged);
             // 
             // radioButtonNoBox7
             // 
@@ -821,7 +829,7 @@
             this.radioButtonNoBox7.TabStop = true;
             this.radioButtonNoBox7.Text = "No";
             this.radioButtonNoBox7.UseVisualStyleBackColor = true;
-            this.radioButtonNoBox7.CheckedChanged += new System.EventHandler(this.radioButtonBox7_CheckedChanged);
+            this.radioButtonNoBox7.CheckedChanged += new System.EventHandler(this.RadioButtonBox7_CheckedChanged);
             // 
             // panelDoorChoiceBox7
             // 
@@ -829,7 +837,7 @@
             this.panelDoorChoiceBox7.Controls.Add(this.labelDoorMatBox7);
             this.panelDoorChoiceBox7.Location = new System.Drawing.Point(267, 162);
             this.panelDoorChoiceBox7.Name = "panelDoorChoiceBox7";
-            this.panelDoorChoiceBox7.Size = new System.Drawing.Size(283, 59);
+            this.panelDoorChoiceBox7.Size = new System.Drawing.Size(248, 59);
             this.panelDoorChoiceBox7.TabIndex = 52;
             this.panelDoorChoiceBox7.Visible = false;
             // 
@@ -847,7 +855,7 @@
             this.comboBoxDoorMatBox7.Name = "comboBoxDoorMatBox7";
             this.comboBoxDoorMatBox7.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox7.TabIndex = 43;
-            this.comboBoxDoorMatBox7.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox7_SelectedIndexChanged);
+            this.comboBoxDoorMatBox7.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox7_SelectedIndexChanged);
             // 
             // labelDoorMatBox7
             // 
@@ -894,7 +902,7 @@
             this.radioButtonYesBox6.TabIndex = 53;
             this.radioButtonYesBox6.Text = "Yes";
             this.radioButtonYesBox6.UseVisualStyleBackColor = true;
-            this.radioButtonYesBox6.CheckedChanged += new System.EventHandler(this.radioButtonBox6_CheckedChanged);
+            this.radioButtonYesBox6.CheckedChanged += new System.EventHandler(this.RadioButtonBox6_CheckedChanged);
             // 
             // radioButtonNoBox6
             // 
@@ -908,7 +916,7 @@
             this.radioButtonNoBox6.TabStop = true;
             this.radioButtonNoBox6.Text = "No";
             this.radioButtonNoBox6.UseVisualStyleBackColor = true;
-            this.radioButtonNoBox6.CheckedChanged += new System.EventHandler(this.radioButtonBox6_CheckedChanged);
+            this.radioButtonNoBox6.CheckedChanged += new System.EventHandler(this.RadioButtonBox6_CheckedChanged);
             // 
             // panelDoorChoiceBox6
             // 
@@ -916,7 +924,7 @@
             this.panelDoorChoiceBox6.Controls.Add(this.labelDoorMatBox6);
             this.panelDoorChoiceBox6.Location = new System.Drawing.Point(267, 135);
             this.panelDoorChoiceBox6.Name = "panelDoorChoiceBox6";
-            this.panelDoorChoiceBox6.Size = new System.Drawing.Size(283, 59);
+            this.panelDoorChoiceBox6.Size = new System.Drawing.Size(248, 59);
             this.panelDoorChoiceBox6.TabIndex = 52;
             this.panelDoorChoiceBox6.Visible = false;
             // 
@@ -934,7 +942,7 @@
             this.comboBoxDoorMatBox6.Name = "comboBoxDoorMatBox6";
             this.comboBoxDoorMatBox6.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox6.TabIndex = 43;
-            this.comboBoxDoorMatBox6.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox6_SelectedIndexChanged);
+            this.comboBoxDoorMatBox6.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox6_SelectedIndexChanged);
             // 
             // labelDoorMatBox6
             // 
@@ -981,7 +989,7 @@
             this.radioButtonYesBox5.TabIndex = 53;
             this.radioButtonYesBox5.Text = "Yes";
             this.radioButtonYesBox5.UseVisualStyleBackColor = true;
-            this.radioButtonYesBox5.CheckedChanged += new System.EventHandler(this.radioButtonBox5_CheckedChanged);
+            this.radioButtonYesBox5.CheckedChanged += new System.EventHandler(this.RadioButtonBox5_CheckedChanged);
             // 
             // radioButtonNoBox5
             // 
@@ -995,7 +1003,7 @@
             this.radioButtonNoBox5.TabStop = true;
             this.radioButtonNoBox5.Text = "No";
             this.radioButtonNoBox5.UseVisualStyleBackColor = true;
-            this.radioButtonNoBox5.CheckedChanged += new System.EventHandler(this.radioButtonBox5_CheckedChanged);
+            this.radioButtonNoBox5.CheckedChanged += new System.EventHandler(this.RadioButtonBox5_CheckedChanged);
             // 
             // panelDoorChoiceBox5
             // 
@@ -1003,7 +1011,7 @@
             this.panelDoorChoiceBox5.Controls.Add(this.labelDoorMatBox5);
             this.panelDoorChoiceBox5.Location = new System.Drawing.Point(267, 108);
             this.panelDoorChoiceBox5.Name = "panelDoorChoiceBox5";
-            this.panelDoorChoiceBox5.Size = new System.Drawing.Size(283, 59);
+            this.panelDoorChoiceBox5.Size = new System.Drawing.Size(245, 59);
             this.panelDoorChoiceBox5.TabIndex = 52;
             this.panelDoorChoiceBox5.Visible = false;
             // 
@@ -1021,7 +1029,7 @@
             this.comboBoxDoorMatBox5.Name = "comboBoxDoorMatBox5";
             this.comboBoxDoorMatBox5.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox5.TabIndex = 43;
-            this.comboBoxDoorMatBox5.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox5_SelectedIndexChanged);
+            this.comboBoxDoorMatBox5.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox5_SelectedIndexChanged);
             // 
             // labelDoorMatBox5
             // 
@@ -1068,7 +1076,7 @@
             this.radioButtonYesBox4.TabIndex = 53;
             this.radioButtonYesBox4.Text = "Yes";
             this.radioButtonYesBox4.UseVisualStyleBackColor = true;
-            this.radioButtonYesBox4.CheckedChanged += new System.EventHandler(this.radioButtonBox4_CheckedChanged);
+            this.radioButtonYesBox4.CheckedChanged += new System.EventHandler(this.RadioButtonBox4_CheckedChanged);
             // 
             // radioButtonNoBox4
             // 
@@ -1082,7 +1090,7 @@
             this.radioButtonNoBox4.TabStop = true;
             this.radioButtonNoBox4.Text = "No";
             this.radioButtonNoBox4.UseVisualStyleBackColor = true;
-            this.radioButtonNoBox4.CheckedChanged += new System.EventHandler(this.radioButtonBox4_CheckedChanged);
+            this.radioButtonNoBox4.CheckedChanged += new System.EventHandler(this.RadioButtonBox4_CheckedChanged);
             // 
             // panelDoorChoiceBox4
             // 
@@ -1090,7 +1098,7 @@
             this.panelDoorChoiceBox4.Controls.Add(this.labelDoorMatBox4);
             this.panelDoorChoiceBox4.Location = new System.Drawing.Point(267, 81);
             this.panelDoorChoiceBox4.Name = "panelDoorChoiceBox4";
-            this.panelDoorChoiceBox4.Size = new System.Drawing.Size(283, 59);
+            this.panelDoorChoiceBox4.Size = new System.Drawing.Size(248, 59);
             this.panelDoorChoiceBox4.TabIndex = 52;
             this.panelDoorChoiceBox4.Visible = false;
             // 
@@ -1108,7 +1116,7 @@
             this.comboBoxDoorMatBox4.Name = "comboBoxDoorMatBox4";
             this.comboBoxDoorMatBox4.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox4.TabIndex = 43;
-            this.comboBoxDoorMatBox4.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox4_SelectedIndexChanged);
+            this.comboBoxDoorMatBox4.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox4_SelectedIndexChanged);
             // 
             // labelDoorMatBox4
             // 
@@ -1155,7 +1163,7 @@
             this.radioButtonYesBox3.TabIndex = 53;
             this.radioButtonYesBox3.Text = "Yes";
             this.radioButtonYesBox3.UseVisualStyleBackColor = true;
-            this.radioButtonYesBox3.CheckedChanged += new System.EventHandler(this.radioButtonBox3_CheckedChanged);
+            this.radioButtonYesBox3.CheckedChanged += new System.EventHandler(this.RadioButtonBox3_CheckedChanged);
             // 
             // radioButtonNoBox3
             // 
@@ -1169,7 +1177,7 @@
             this.radioButtonNoBox3.TabStop = true;
             this.radioButtonNoBox3.Text = "No";
             this.radioButtonNoBox3.UseVisualStyleBackColor = true;
-            this.radioButtonNoBox3.CheckedChanged += new System.EventHandler(this.radioButtonBox3_CheckedChanged);
+            this.radioButtonNoBox3.CheckedChanged += new System.EventHandler(this.RadioButtonBox3_CheckedChanged);
             // 
             // panelDoorChoiceBox3
             // 
@@ -1177,7 +1185,7 @@
             this.panelDoorChoiceBox3.Controls.Add(this.labelDoorMatBox3);
             this.panelDoorChoiceBox3.Location = new System.Drawing.Point(267, 54);
             this.panelDoorChoiceBox3.Name = "panelDoorChoiceBox3";
-            this.panelDoorChoiceBox3.Size = new System.Drawing.Size(283, 59);
+            this.panelDoorChoiceBox3.Size = new System.Drawing.Size(248, 59);
             this.panelDoorChoiceBox3.TabIndex = 52;
             this.panelDoorChoiceBox3.Visible = false;
             // 
@@ -1195,7 +1203,7 @@
             this.comboBoxDoorMatBox3.Name = "comboBoxDoorMatBox3";
             this.comboBoxDoorMatBox3.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox3.TabIndex = 43;
-            this.comboBoxDoorMatBox3.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox3_SelectedIndexChanged);
+            this.comboBoxDoorMatBox3.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox3_SelectedIndexChanged);
             // 
             // labelDoorMatBox3
             // 
@@ -1216,7 +1224,7 @@
             this.panelDoorChoiceMultiple.Controls.Add(this.panelYesNoIf2);
             this.panelDoorChoiceMultiple.Location = new System.Drawing.Point(19, 320);
             this.panelDoorChoiceMultiple.Name = "panelDoorChoiceMultiple";
-            this.panelDoorChoiceMultiple.Size = new System.Drawing.Size(606, 272);
+            this.panelDoorChoiceMultiple.Size = new System.Drawing.Size(524, 272);
             this.panelDoorChoiceMultiple.TabIndex = 61;
             this.panelDoorChoiceMultiple.Visible = false;
             // 
@@ -1245,7 +1253,7 @@
             this.panelDoorChoicesM.Controls.Add(this.panelDoorChoiceBox1);
             this.panelDoorChoicesM.Location = new System.Drawing.Point(0, 40);
             this.panelDoorChoicesM.Name = "panelDoorChoicesM";
-            this.panelDoorChoicesM.Size = new System.Drawing.Size(586, 227);
+            this.panelDoorChoicesM.Size = new System.Drawing.Size(516, 227);
             this.panelDoorChoicesM.TabIndex = 62;
             this.panelDoorChoicesM.Visible = false;
             // 
@@ -1280,7 +1288,7 @@
             this.radioButtonYesBox2.TabIndex = 53;
             this.radioButtonYesBox2.Text = "Yes";
             this.radioButtonYesBox2.UseVisualStyleBackColor = true;
-            this.radioButtonYesBox2.CheckedChanged += new System.EventHandler(this.radioButtonBox2_CheckedChanged);
+            this.radioButtonYesBox2.CheckedChanged += new System.EventHandler(this.RadioButtonBox2_CheckedChanged);
             // 
             // radioButtonNoBox2
             // 
@@ -1294,7 +1302,7 @@
             this.radioButtonNoBox2.TabStop = true;
             this.radioButtonNoBox2.Text = "No";
             this.radioButtonNoBox2.UseVisualStyleBackColor = true;
-            this.radioButtonNoBox2.CheckedChanged += new System.EventHandler(this.radioButtonBox2_CheckedChanged);
+            this.radioButtonNoBox2.CheckedChanged += new System.EventHandler(this.RadioButtonBox2_CheckedChanged);
             // 
             // labelDoorBox1
             // 
@@ -1314,7 +1322,7 @@
             this.panelDoorChoiceBox2.Controls.Add(this.labelDoorMatBox2);
             this.panelDoorChoiceBox2.Location = new System.Drawing.Point(267, 27);
             this.panelDoorChoiceBox2.Name = "panelDoorChoiceBox2";
-            this.panelDoorChoiceBox2.Size = new System.Drawing.Size(283, 59);
+            this.panelDoorChoiceBox2.Size = new System.Drawing.Size(248, 59);
             this.panelDoorChoiceBox2.TabIndex = 52;
             this.panelDoorChoiceBox2.Visible = false;
             // 
@@ -1332,7 +1340,7 @@
             this.comboBoxDoorMatBox2.Name = "comboBoxDoorMatBox2";
             this.comboBoxDoorMatBox2.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox2.TabIndex = 43;
-            this.comboBoxDoorMatBox2.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox2_SelectedIndexChanged);
+            this.comboBoxDoorMatBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox2_SelectedIndexChanged);
             // 
             // labelDoorMatBox2
             // 
@@ -1365,7 +1373,7 @@
             this.radioButtonYesBox1.TabIndex = 53;
             this.radioButtonYesBox1.Text = "Yes";
             this.radioButtonYesBox1.UseVisualStyleBackColor = true;
-            this.radioButtonYesBox1.CheckedChanged += new System.EventHandler(this.radioButtonBox1_CheckedChanged);
+            this.radioButtonYesBox1.CheckedChanged += new System.EventHandler(this.RadioButtonBox1_CheckedChanged);
             // 
             // radioButtonNoBox1
             // 
@@ -1379,7 +1387,7 @@
             this.radioButtonNoBox1.TabStop = true;
             this.radioButtonNoBox1.Text = "No";
             this.radioButtonNoBox1.UseVisualStyleBackColor = true;
-            this.radioButtonNoBox1.CheckedChanged += new System.EventHandler(this.radioButtonBox1_CheckedChanged);
+            this.radioButtonNoBox1.CheckedChanged += new System.EventHandler(this.RadioButtonBox1_CheckedChanged);
             // 
             // panelDoorChoiceBox1
             // 
@@ -1387,7 +1395,7 @@
             this.panelDoorChoiceBox1.Controls.Add(this.labelDoorMatBox1);
             this.panelDoorChoiceBox1.Location = new System.Drawing.Point(267, 0);
             this.panelDoorChoiceBox1.Name = "panelDoorChoiceBox1";
-            this.panelDoorChoiceBox1.Size = new System.Drawing.Size(283, 42);
+            this.panelDoorChoiceBox1.Size = new System.Drawing.Size(248, 42);
             this.panelDoorChoiceBox1.TabIndex = 52;
             this.panelDoorChoiceBox1.Visible = false;
             // 
@@ -1405,7 +1413,7 @@
             this.comboBoxDoorMatBox1.Name = "comboBoxDoorMatBox1";
             this.comboBoxDoorMatBox1.Size = new System.Drawing.Size(100, 41);
             this.comboBoxDoorMatBox1.TabIndex = 43;
-            this.comboBoxDoorMatBox1.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoorMatBox1_SelectedIndexChanged);
+            this.comboBoxDoorMatBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDoorMatBox1_SelectedIndexChanged);
             // 
             // labelDoorMatBox1
             // 
@@ -1450,7 +1458,7 @@
             this.radioButtonYesIf2.TabIndex = 53;
             this.radioButtonYesIf2.Text = "Yes";
             this.radioButtonYesIf2.UseVisualStyleBackColor = true;
-            this.radioButtonYesIf2.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf2_CheckedChanged);
+            this.radioButtonYesIf2.CheckedChanged += new System.EventHandler(this.RadioButtonsYesNoIf2_CheckedChanged);
             // 
             // radioButtonNoIf2
             // 
@@ -1464,7 +1472,7 @@
             this.radioButtonNoIf2.TabStop = true;
             this.radioButtonNoIf2.Text = "No";
             this.radioButtonNoIf2.UseVisualStyleBackColor = true;
-            this.radioButtonNoIf2.CheckedChanged += new System.EventHandler(this.radioButtonsYesNoIf2_CheckedChanged);
+            this.radioButtonNoIf2.CheckedChanged += new System.EventHandler(this.RadioButtonsYesNoIf2_CheckedChanged);
             // 
             // labelHeightBox
             // 
@@ -1577,11 +1585,80 @@
             this.panelShelf7.TabIndex = 11;
             this.panelShelf7.Visible = false;
             // 
+            // buttonReset
+            // 
+            this.buttonReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+            this.buttonReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonReset.FlatAppearance.BorderSize = 0;
+            this.buttonReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReset.Font = new System.Drawing.Font("Century Gothic", 11.1F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(147)))), ((int)(((byte)(167)))));
+            this.buttonReset.Image = global::KitBoxApplication.Properties.Resources.restartLogo2;
+            this.buttonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonReset.Location = new System.Drawing.Point(549, 498);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(120, 50);
+            this.buttonReset.TabIndex = 80;
+            this.buttonReset.Text = "Reset All";
+            this.buttonReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.Click += new System.EventHandler(this.ButtonReset_Click);
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(21, 55);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(225, 29);
+            this.progressBar.TabIndex = 81;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork_1);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
+            // loadingLabel
+            // 
+            this.loadingLabel.AutoSize = true;
+            this.loadingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.loadingLabel.Location = new System.Drawing.Point(28, 25);
+            this.loadingLabel.Name = "loadingLabel";
+            this.loadingLabel.Size = new System.Drawing.Size(451, 34);
+            this.loadingLabel.TabIndex = 82;
+            this.loadingLabel.Text = "Status : Creating cabinet :  Floor";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.incrementLabel);
+            this.panel1.Controls.Add(this.progressBar);
+            this.panel1.Controls.Add(this.loadingLabel);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Location = new System.Drawing.Point(313, 240);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(270, 103);
+            this.panel1.TabIndex = 83;
+            this.panel1.Visible = false;
+            // 
+            // incrementLabel
+            // 
+            this.incrementLabel.AutoSize = true;
+            this.incrementLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.incrementLabel.Location = new System.Drawing.Point(209, 25);
+            this.incrementLabel.Name = "incrementLabel";
+            this.incrementLabel.Size = new System.Drawing.Size(31, 34);
+            this.incrementLabel.TabIndex = 83;
+            this.incrementLabel.Text = "0";
+            // 
             // BoxStandard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.panelShelf1);
             this.Controls.Add(this.labelBoxHeight);
             this.Controls.Add(this.labelHeightBox);
@@ -1658,6 +1735,8 @@
             this.panelShelf4.ResumeLayout(false);
             this.panelShelf5.ResumeLayout(false);
             this.panelShelf6.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1773,5 +1852,11 @@
         private System.Windows.Forms.Panel panelShelf5;
         private System.Windows.Forms.Panel panelShelf6;
         private System.Windows.Forms.Panel panelShelf7;
+        private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label loadingLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label incrementLabel;
     }
 }

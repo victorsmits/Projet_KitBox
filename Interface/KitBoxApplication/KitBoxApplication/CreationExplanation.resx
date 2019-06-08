@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Creation from scratch
+This creation gives you a total freedom in the choice of 
+height for your cabinet and the boxes composing your 
+cabinet unlike the other creation (see explanation
+“creation from standard dimensions” )</value>
+  </data>
 </root>

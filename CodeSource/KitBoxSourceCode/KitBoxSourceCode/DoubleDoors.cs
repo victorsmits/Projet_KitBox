@@ -23,22 +23,25 @@ namespace KitBoxSourceCode
 		public DoubleDoors(string doormat, int hei, int len) : base(len, hei - 4)
 		{
 			TheDoorMat = doormat;
-			// oledb stock ref fct dimension, doormat
+			// Getting the stock reference by dimension and color/material
 			stockRef = Oledb.SqlRequest("SELECT Référence FROM Piece WHERE Référence LIKE 'POR%' AND largeur LIKE '"
 			+ length.ToString() + "' AND hauteur LIKE '" + height.ToString() + "' AND Couleur LIKE '" + doormat + "'");
 
 			knops = new Knop(2);
 
 			price = Oledb.GetDBPrice(stockRef);
-			// oledb book double door
+			// Update the reservation in the data base
 			Oledb.UpdateReservation(2, stockRef);
 
+			SetPrice();
+			SetStock();
 		}
 
 		public override string GetDetails()
 		{
 			return "\"DoubleDoors\" : {\"Height\": " + height + ",\"Length\": " + length
-			+ ", \"Material\": \"" + TheDoorMat + "\",\"Stockref\": \"" + stockRef + knops.GetDetails();
+			+ ", \"Material\": \"" + TheDoorMat + "\",\"Stockref\": \"" + stockRef
+				 + "\",\"Remaining Stock\":" + stock + knops.GetDetails();
 		}
 
 	}

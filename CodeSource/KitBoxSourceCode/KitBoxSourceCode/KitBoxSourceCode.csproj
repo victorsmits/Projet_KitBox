@@ -71,7 +71,7 @@
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="ADONetHelper.Oledb">
-      <HintPath>..\packages\ADONetHelper.Oledb.1.0.7\lib\net45\ADONetHelper.Oledb.dll</HintPath>
+      <HintPath>..\packages\ADONetHelper.Oledb.1.0.8\lib\net45\ADONetHelper.Oledb.dll</HintPath>
     </Reference>
     <Reference Include="DatabaseConnections">
       <HintPath>..\packages\DatabaseConnections.1.1.0\lib\net35\DatabaseConnections.dll</HintPath>
@@ -84,7 +84,7 @@
       <HintPath>..\packages\lcpi.lib.2.2.0.1687\lib\net46\lcpi.lib.net4_6.dll</HintPath>
     </Reference>
     <Reference Include="lcpi.data.oledb.net4_6">
-      <HintPath>..\packages\lcpi.data.oledb.1.11.0.3673\lib\net46\lcpi.data.oledb.net4_6.dll</HintPath>
+      <HintPath>..\packages\lcpi.data.oledb.1.12.0.3876\lib\net46\lcpi.data.oledb.net4_6.dll</HintPath>
     </Reference>
     <Reference Include="System.Json" />
     <Reference Include="System.Json.Microsoft" />

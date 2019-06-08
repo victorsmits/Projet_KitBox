@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Reflection;
 
 namespace KitBoxApplication
 {
@@ -30,7 +22,7 @@ namespace KitBoxApplication
             imageNumber++;
         }
 
-        private void timerSlider_Tick(object sender, EventArgs e)
+        private void TimerSlider_Tick(object sender, EventArgs e)
         {
             LoadNextImage();
         }
