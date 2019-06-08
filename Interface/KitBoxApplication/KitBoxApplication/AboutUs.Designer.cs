@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutUs));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,17 +49,6 @@
             this.panel1.Size = new System.Drawing.Size(2750, 500);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans Typewriter", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(1170, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(517, 55);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "-  Our Mission  -";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -70,6 +59,17 @@
             this.label2.Size = new System.Drawing.Size(2342, 90);
             this.label2.TabIndex = 1;
             this.label2.Text = "To provide the most practical and easy cabinets ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Typewriter", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(1170, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(517, 55);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "-  Our Mission  -";
             // 
             // label3
             // 
@@ -110,6 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
