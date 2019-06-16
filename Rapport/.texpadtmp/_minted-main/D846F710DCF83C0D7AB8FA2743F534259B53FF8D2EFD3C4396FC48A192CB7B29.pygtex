@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// general function to add color to box cabinet image}
+\PYG{k}{private} \PYG{k}{void} \PYG{n+nf}{AddColorOrDoorToBox}\PYG{p}{(}\PYG{n}{ComboBox} \PYG{n}{box}\PYG{p}{,} \PYG{n}{ComboBox} \PYG{n}{door}\PYG{p}{,} \PYG{n}{WinFormPanel} \PYG{n}{shelf}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{string} \PYG{n}{color} \PYG{p}{=} \PYG{n}{box}\PYG{p}{.}\PYG{n}{Text}\PYG{p}{;}
+    \PYG{c+c1}{// in case color reset to null (initial state is white)}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{color} \PYG{p}{==} \PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{color} \PYG{p}{=} \PYG{l+s}{\PYGZdq{}blanc\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{door}\PYG{p}{.}\PYG{n}{Text} \PYG{p}{==} \PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{Image} \PYG{n}{myImage} \PYG{p}{=} \PYG{k}{new} \PYG{n}{Bitmap}\PYG{p}{(}
+            \PYG{n}{GetRelativePath}\PYG{p}{(}\PYG{n}{Path}\PYG{p}{.}\PYG{n}{Combine}\PYG{p}{(}\PYG{n}{AppDomain}\PYG{p}{.}\PYG{n}{CurrentDomain}\PYG{p}{.}\PYG{n}{BaseDirectory}\PYG{p}{))} \PYG{p}{+}
+            \PYG{l+s}{@\PYGZdq{}Documents\PYGZbs{}GitHub\PYGZbs{}Projet\PYGZus{}KitBox\PYGZbs{}Interface\PYGZbs{}KitBoxApplication\PYGZbs{}\PYGZdq{}} \PYG{p}{+}
+            \PYG{l+s}{\PYGZdq{}KitBoxApplication\PYGZbs{}Resources\PYGZbs{}\PYGZdq{} + color + \PYGZdq{}}\PYG{n}{NoDoor}\PYG{p}{.}\PYG{n}{png}\PYG{l+s}{\PYGZdq{});}
+        \PYG{n}{shelf}\PYG{p}{.}\PYG{n}{BackgroundImage} \PYG{p}{=} \PYG{n}{myImage}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k+kt}{string} \PYG{n}{doorMat} \PYG{p}{=} \PYG{n}{door}\PYG{p}{.}\PYG{n}{Text}\PYG{p}{;}
+        \PYG{n}{Image} \PYG{n}{myImage} \PYG{p}{=} \PYG{k}{new} \PYG{n}{Bitmap}\PYG{p}{(}
+            \PYG{n}{GetRelativePath}\PYG{p}{(}\PYG{n}{Path}\PYG{p}{.}\PYG{n}{Combine}\PYG{p}{(}\PYG{n}{AppDomain}\PYG{p}{.}\PYG{n}{CurrentDomain}\PYG{p}{.}\PYG{n}{BaseDirectory}\PYG{p}{))} \PYG{p}{+}
+            \PYG{l+s}{@\PYGZdq{}Documents\PYGZbs{}GitHub\PYGZbs{}Projet\PYGZus{}KitBox\PYGZbs{}Interface\PYGZbs{}KitBoxApplication\PYGZbs{}\PYGZdq{}} \PYG{p}{+}
+            \PYG{l+s}{\PYGZdq{}KitBoxApplication\PYGZbs{}Resources\PYGZbs{}\PYGZdq{} + color + doorMat + \PYGZdq{}}\PYG{p}{.}\PYG{n}{png}\PYG{l+s}{\PYGZdq{});}
+        \PYG{n}{shelf}\PYG{p}{.}\PYG{n}{BackgroundImage} \PYG{p}{=} \PYG{n}{myImage}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

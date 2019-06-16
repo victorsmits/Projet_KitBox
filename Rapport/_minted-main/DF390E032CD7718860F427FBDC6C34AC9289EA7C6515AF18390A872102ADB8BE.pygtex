@@ -1,0 +1,34 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// function model for loadData}
+\PYG{k}{private} \PYG{k}{void} \PYG{n+nf}{LoadDataGeneral}\PYG{p}{(}\PYG{n}{System}\PYG{p}{.}\PYG{n}{Windows}\PYG{p}{.}\PYG{n}{Forms}\PYG{p}{.}\PYG{n}{ComboBox}\PYG{p}{[]} \PYG{n}{m}\PYG{p}{,} \PYG{k+kt}{string} \PYG{n}{n}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{foreach} \PYG{p}{(}\PYG{n}{System}\PYG{p}{.}\PYG{n}{Windows}\PYG{p}{.}\PYG{n}{Forms}\PYG{p}{.}\PYG{n}{ComboBox} \PYG{n}{i} \PYG{k}{in} \PYG{n}{m}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{i}\PYG{p}{.}\PYG{n}{Items}\PYG{p}{.}\PYG{n}{Clear}\PYG{p}{();}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{try}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k+kt}{string} \PYG{n}{q} \PYG{p}{=} \PYG{n}{n}\PYG{p}{;}
+        \PYG{n}{cmd}\PYG{p}{.}\PYG{n}{CommandText} \PYG{p}{=} \PYG{n}{q}\PYG{p}{;} \PYG{c+c1}{// execution of a SQL instruction}
+        \PYG{n}{cn}\PYG{p}{.}\PYG{n}{Open}\PYG{p}{();}
+        \PYG{n}{dr} \PYG{p}{=} \PYG{n}{cmd}\PYG{p}{.}\PYG{n}{ExecuteReader}\PYG{p}{();}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{dr}\PYG{p}{.}\PYG{n}{HasRows}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{k}{while} \PYG{p}{(}\PYG{n}{dr}\PYG{p}{.}\PYG{n}{Read}\PYG{p}{())}
+            \PYG{p}{\PYGZob{}}
+                \PYG{k}{foreach} \PYG{p}{(}\PYG{n}{System}\PYG{p}{.}\PYG{n}{Windows}\PYG{p}{.}\PYG{n}{Forms}\PYG{p}{.}\PYG{n}{ComboBox} \PYG{n}{i} \PYG{k}{in} \PYG{n}{m}\PYG{p}{)}
+                \PYG{p}{\PYGZob{}}
+                    \PYG{n}{i}\PYG{p}{.}\PYG{n}{Items}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{n}{dr}\PYG{p}{[}\PYG{l+m}{0}\PYG{p}{].}\PYG{n}{ToString}\PYG{p}{());}
+                \PYG{p}{\PYGZcb{}}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{dr}\PYG{p}{.}\PYG{n}{Close}\PYG{p}{();}
+        \PYG{n}{cn}\PYG{p}{.}\PYG{n}{Close}\PYG{p}{();}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{catch} \PYG{p}{(}\PYG{n}{Exception} \PYG{n}{e}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{cn}\PYG{p}{.}\PYG{n}{Close}\PYG{p}{();}
+        \PYG{n}{MessageBox}\PYG{p}{.}\PYG{n}{Show}\PYG{p}{(}\PYG{n}{e}\PYG{p}{.}\PYG{n}{Message}\PYG{p}{.}\PYG{n}{ToString}\PYG{p}{());}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

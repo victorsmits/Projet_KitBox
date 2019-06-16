@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// Loading Height data from data base}
+\PYG{k}{private} \PYG{k}{void} \PYG{n+nf}{LoadDataBoxHeight}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{System}\PYG{p}{.}\PYG{n}{Windows}\PYG{p}{.}\PYG{n}{Forms}\PYG{p}{.}\PYG{n}{ComboBox}\PYG{p}{[]} \PYG{n}{list} \PYG{p}{=} \PYG{p}{\PYGZob{}}
+        \PYG{n}{comboBoxHeight1}\PYG{p}{,}
+        \PYG{n}{comboBoxHeight2}\PYG{p}{,}
+        \PYG{n}{comboBoxHeight3}\PYG{p}{,}
+        \PYG{n}{comboBoxHeight4}\PYG{p}{,}
+        \PYG{n}{comboBoxHeight5}\PYG{p}{,}
+        \PYG{n}{comboBoxHeight6}\PYG{p}{,}
+        \PYG{n}{comboBoxHeight7}
+    \PYG{p}{\PYGZcb{};}
+    \PYG{n}{LoadDataGeneralForHeight}\PYG{p}{(}\PYG{n}{list}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}SELECT DISTINCT hauteur FROM Piece WHERE\PYGZdq{}} \PYG{p}{+}
+                             \PYG{l+s}{\PYGZdq{}référence LIKE \PYGZsq{}PA\PYGZpc{}\PYGZsq{} AND référence NOT LIKE \PYGZsq{}PAH\PYGZpc{}\PYGZsq{} \PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

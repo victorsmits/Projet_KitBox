@@ -1,0 +1,33 @@
+
+// function model for loadData
+private void LoadDataGeneral(System.Windows.Forms.ComboBox[] m, string n)
+{
+    foreach (System.Windows.Forms.ComboBox i in m)
+    {
+        i.Items.Clear();
+    }
+    try
+    {
+        string q = n;
+        cmd.CommandText = q; // execution of a SQL instruction
+        cn.Open();
+        dr = cmd.ExecuteReader();
+        if (dr.HasRows)
+        {
+            while (dr.Read())
+            {
+                foreach (System.Windows.Forms.ComboBox i in m)
+                {
+                    i.Items.Add(dr[0].ToString());
+                }
+            }
+        }
+        dr.Close();
+        cn.Close();
+    }
+    catch (Exception e)
+    {
+        cn.Close();
+        MessageBox.Show(e.Message.ToString());
+    }
+}
