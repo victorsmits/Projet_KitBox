@@ -1,0 +1,36 @@
+\begin{minted}[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{csharp}
+// general function to add color to box cabinet image
+private void AddColorOrDoorToBox(ComboBox box, ComboBox door, WinFormPanel shelf)
+{
+    string color = box.Text;
+    // in case color reset to null (initial state is white)
+    if (color == "")
+    {
+        color = "blanc";
+    }
+    if (door.Text == "")
+    {
+        Image myImage = new Bitmap(
+            GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) +
+            @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\" + 
+            "KitBoxApplication\Resources\" + color + "NoDoor.png");
+        shelf.BackgroundImage = myImage;
+    }
+    else
+    {
+        string doorMat = door.Text;
+        Image myImage = new Bitmap(
+            GetRelativePath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) +
+            @"Documents\GitHub\Projet_KitBox\Interface\KitBoxApplication\" + 
+            "KitBoxApplication\Resources\" + color + doorMat + ".png");
+        shelf.BackgroundImage = myImage;
+    }
+}
+\end{minted}

@@ -1,0 +1,25 @@
+\begin{minted}[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{csharp}
+
+// Loading Height data from data base
+private void LoadDataBoxHeight()
+{
+    System.Windows.Forms.ComboBox[] list = {
+        comboBoxHeight1,
+        comboBoxHeight2,
+        comboBoxHeight3,
+        comboBoxHeight4,
+        comboBoxHeight5,
+        comboBoxHeight6,
+        comboBoxHeight7
+    };
+    LoadDataGeneralForHeight(list, "SELECT DISTINCT hauteur FROM Piece WHERE" + 
+                             "référence LIKE 'PA%' AND référence NOT LIKE 'PAH%' ");
+}
+\end{minted}
