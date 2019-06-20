@@ -34,6 +34,7 @@ namespace KitBoxApplication
             tabControl.ItemSize = new Size(70, 30);
         }
 
+        //Look if the cart is empty. If it is, it will display an empty panel. Otherwise, display the cart
         public void Load_Json()
         {
             try
@@ -70,7 +71,7 @@ namespace KitBoxApplication
 
         private void DeleteButton_Clicked(object sender, EventArgs e)
         {
-            //Get the index of the cabinet from parent of the button
+            //Get the index of the cabinet from parent of the button (which is the tab of the cabinet to delete)
             Control button = (Control)sender;
             Control tabPage = button.Parent;
             string tabName = tabPage.Text;
@@ -79,10 +80,11 @@ namespace KitBoxApplication
             cart.DelCabinet(index);
             RemoveReservation(index);
             MessageBox.Show("L'armoire a été supprimé");
-            
+            //Reload the cart
             Load_Json();
         }
 
+        //Remove the reservation of every part of the concerned cabinet
         private void RemoveReservation(int cabinetRemoved)
         {
             JObject cabinetContains = jsonCart["Cabinet " + cabinetRemoved.ToString()].Value<JObject>();
@@ -92,7 +94,6 @@ namespace KitBoxApplication
             for (int floorCount = 0; floorCount < cabinetContains.Count - 2; floorCount++)
             {
                 JObject floor = cabinetContains["Floor " + floorCount.ToString()].Value<JObject>();
-                //Check if parts are available
                 JObject panel1 = floor["Panel 1"].Value<JObject>();
                 JObject panel2 = floor["Panel 2"].Value<JObject>();
                 JObject panel3 = floor["Panel 3"].Value<JObject>();
@@ -166,6 +167,7 @@ namespace KitBoxApplication
             formerPanel.Controls.Add(newPanel);
         }
 
+        //Create the whole layout of the cart
         private void Create_Layout()
         {
             Color Green = Color.FromName("Green");
@@ -173,7 +175,7 @@ namespace KitBoxApplication
 
             if (jsonCart.ToString() == "{}")
             {
-                tabControl.TabPages.Clear();
+                tabControl.TabPages.Clear();   //Clear the tabs
                 TabPage emptyCart = new TabPage(Name = "Empty");
                 emptyCart.BackColor = Color.FromArgb(41, 44, 51);
                 tabControl.TabPages.Add(emptyCart);
@@ -183,7 +185,7 @@ namespace KitBoxApplication
             }
             else
             {
-                tabControl.TabPages.Clear(); //Clear the tabs
+                tabControl.TabPages.Clear(); 
 
                 //For every cabinet of the json
                 for (int cabinetCount = 0; cabinetCount < jsonCart.Count - 1; cabinetCount++)
@@ -246,6 +248,7 @@ namespace KitBoxApplication
                     angleFeatLabel.Font = font;
                     int angleLabelLength = angleLabel.Width;
 
+                    //Generates the availability label for the angles
                     Label angleDisponibilityLabel = new Label();
                     angleDisponibilityLabel.AutoSize = true;
                     if (angleAvail)
@@ -282,6 +285,7 @@ namespace KitBoxApplication
                     string doorMaterial6 = "NoDoor";
                     string doorMaterial7 = "NoDoor";
 
+                    //For every floor
                     for (floorCount = 0; floorCount < cabinetContains.Count - 2; floorCount++)
                     {
                         labelLength = 15;
