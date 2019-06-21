@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using SqlOledb;
-using Oledb = SqlOledb.Oledb;
 using System.IO;
 
 namespace interface_Magasinier
@@ -94,7 +93,7 @@ namespace interface_Magasinier
             if (StockTextBox.Text != "" & IdList.SelectedIndex != -1)
             {
                 string q = "update Piece set Enstock='" + StockTextBox.Text.ToString() + "' where PK_Piece=" + IdList.SelectedItem.ToString();
-                Oledb.SqlRequest(q);
+                Oledb.SqlRequestInsert(q);
                 
                 Loaddata();
                 StockTextBox.Text = "";
@@ -106,7 +105,7 @@ namespace interface_Magasinier
             if (PriceClientTextBox.Text != "" & IdList.SelectedIndex != -1)
             {
                 string q = "update Piece set PrixClient=" + PriceClientTextBox.Text.ToString() + " where PK_Piece=" + IdList.SelectedItem.ToString();
-                Oledb.SqlRequest(q);
+                Oledb.SqlRequestInsert(q);
                 
                 Loaddata();
                 PriceClientTextBox.Text = "";
@@ -116,7 +115,7 @@ namespace interface_Magasinier
         private void button3_Click(object sender, EventArgs e) //Delete the object selected
         {
             string q = "delete from Piece where PK_Piece=" + IdList.SelectedItem.ToString();
-            Oledb.SqlRequest(q);
+            Oledb.SqlRequestInsert(q);
             
             Loaddata();
         }

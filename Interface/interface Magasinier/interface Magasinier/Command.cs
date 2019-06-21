@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using SqlOledb;
-using Oledb = SqlOledb.Oledb;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.IO;
@@ -175,7 +174,7 @@ namespace interface_Magasinier
                 string q = "update Commande set Date_Livraison='" + DeliverTextBox.Text.ToString() + "', Status = 'Complete' where PK_Commande=" + IdOrderList.SelectedItem.ToString();
                 Oledb.SqlRequest(q);
                 string j = "select ListeMateriel from Commande where PK_Commande=" + IdOrderList.SelectedItem.ToString();
-                string json = Oledb.SqlRequest_load(j);
+                string json = Oledb.SqlRequest(j);
 
                 //Regex for the reading of the Json
                 Regex rgx = new Regex(@"\[StockRef,", RegexOptions.IgnoreCase);
@@ -214,10 +213,10 @@ namespace interface_Magasinier
                                             Quantity = int.Parse(match.Value);
                                             //Register the value of the Reservation
                                             string reservesql = "select Reservation from Piece where Référence='"+ StockRef+"'";
-                                            int reserve = int.Parse(Oledb.SqlRequest_load(reservesql));
+                                            int reserve = int.Parse(Oledb.SqlRequest(reservesql));
                                             //Register the value of the Enstock
                                             string stocksql = "select PK_Piece from Piece where Référence='"+ StockRef +"'";
-                                            int stock = int.Parse(Oledb.SqlRequest_load(stocksql));
+                                            int stock = int.Parse(Oledb.SqlRequest(stocksql));
                                             int final_reserve = reserve - Quantity;
                                             int final_stock = stock - Quantity;
                                             // Update the Reservation and the Enstock
@@ -245,10 +244,10 @@ namespace interface_Magasinier
                                                     Quantity = int.Parse(match.Value);
                                                     //Register the value of the Reservation
                                                     string reservesql = "select Reservation from Piece where Référence='" + StockRef + "'";
-                                                    int reserve = int.Parse(Oledb.SqlRequest_load(reservesql));
+                                                    int reserve = int.Parse(Oledb.SqlRequest(reservesql));
                                                     //Register the value of the Enstock
                                                     string stocksql = "select Enstock from Piece where Référence='" + StockRef + "'";
-                                                    int stock = int.Parse(Oledb.SqlRequest_load(stocksql));
+                                                    int stock = int.Parse(Oledb.SqlRequest(stocksql));
                                                     int final_reserve = reserve - Quantity;
                                                     int final_stock = stock - Quantity;
                                                     //Update the Reservation and the Enstock
@@ -273,10 +272,10 @@ namespace interface_Magasinier
                                                         Quantity1 = int.Parse(match.Value);
                                                         //Register the value of the Reservation
                                                         string reservesql = "select Reservation from Piece where Référence='" + StockRef1 + "'";
-                                                        int reserve = int.Parse(Oledb.SqlRequest_load(reservesql));
+                                                        int reserve = int.Parse(Oledb.SqlRequest(reservesql));
                                                         //Register the value of the Enstock
                                                         string stocksql = "select Enstock from Piece where Référence='" + StockRef1 + "'";
-                                                        int stock = int.Parse(Oledb.SqlRequest_load(stocksql));
+                                                        int stock = int.Parse(Oledb.SqlRequest(stocksql));
                                                         int final_reserve = reserve - Quantity1;
                                                         int final_stock = stock - Quantity1;
                                                         // Update the Reservation and the Enstock

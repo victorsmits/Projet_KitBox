@@ -74,3 +74,23 @@ C:\Users\dtheo\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\int
 C:\Users\dtheo\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.Command.resources
 C:\Users\dtheo\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\dtheo\Documents\GitHub\Projet_KitBox\Interface\Interface magasinier\interface Magasinier\interface Magasinier\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.exe.config
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.exe
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\bin\x86\Debug\interface Magasinier.pdb
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csprojAssemblyReference.cache
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.ClientWizard.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.Command.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.Form1.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.ProductWizard.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.Properties.Resources.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface_Magasinier.SupplierWizard.resources
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.GenerateResource.cache
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.CoreCompileInputs.cache
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.csproj.CopyComplete
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.exe
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\obj\x86\Debug\interface Magasinier.pdb
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\bin\x86\Debug\SqlOledb.dll
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\bin\x86\Debug\SqlOledb.pdb
+C:\Users\Harold\Documents\GitHub\Projet_KitBox\Interface\interface Magasinier\interface Magasinier\bin\x86\Debug\SqlOledb.dll.config

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using SqlOledb;
-using Oledb = SqlOledb.Oledb;
 using System.IO;
 
 namespace interface_Magasinier
@@ -84,7 +83,7 @@ namespace interface_Magasinier
                                 + NumbertextBox.Text.ToString() + "','"
                                 + ZipTextBox.Text.ToString() + "')";
 
-            Oledb.SqlRequest(rsq);
+            Oledb.SqlRequestInsert(rsq);
             
             Loaddata();
             //Reset all the box
@@ -103,7 +102,7 @@ namespace interface_Magasinier
                                 + ZipBox.Text.ToString() + "','"
                                 + CityBox.Text.ToString() + "')";
 
-            Oledb.SqlRequest(rsq);
+            Oledb.SqlRequestInsert(rsq);
            
             Loaddata();
             ZipBox.Text = "";

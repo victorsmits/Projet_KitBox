@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using SqlOledb;
-using Oledb = SqlOledb.Oledb;
 using System.IO;
 
 namespace interface_Magasinier
@@ -90,7 +89,7 @@ namespace interface_Magasinier
                                 + supplierPriceTextBox.Text.ToString() + "','"
                                 + delayNum.Text.ToString() + "')";
 
-                Oledb.SqlRequest(rsq);
+                Oledb.SqlRequestInsert(rsq);
                 
                 MessageBox.Show("Congrats! You added a new product");
 
