@@ -268,6 +268,25 @@ namespace KitBoxApplication
                     addedCabinePage.Controls.Add(angleFeatLabel);
                     addedCabinePage.Controls.Add(angleDisponibilityLabel);
 
+                    //Label for the price by cabinet
+                    string price = cabinetContains["CabinetPrice"].Value<string>();
+
+                    Label priceLabel = new Label();
+                    priceLabel.AutoSize = true;
+                    priceLabel.Text = "\nUnit Price :";
+                    priceLabel.Location = new Point(400, 5);
+
+                    Label unitPriceLabel = new Label();
+                    unitPriceLabel.AutoSize = true;
+                    unitPriceLabel.Text = "\n" + price.ToString()+" €";
+                    unitPriceLabel.Location = new Point(400, 30);
+
+                    priceLabel.Font = font;
+                    unitPriceLabel.Font = font;
+
+                    addedCabinePage.Controls.Add(priceLabel);
+                    addedCabinePage.Controls.Add(unitPriceLabel);
+
                     int labelLength = 15;
 
                     string floorColor1 = "blanc";
