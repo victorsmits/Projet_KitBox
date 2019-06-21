@@ -79,7 +79,7 @@ namespace KitBoxApplication
             int index = (int.Parse(list[1])-1);
             cart.DelCabinet(index);
             RemoveReservation(index);
-            MessageBox.Show("L'armoire a été supprimé");
+            MessageBox.Show("The cabinet has been deleted succesfully");
             //Reload the cart
             Load_Json();
         }
@@ -196,7 +196,7 @@ namespace KitBoxApplication
                     //Get the elements of the cabinet
                     JObject cabinetContains = jsonCart["Cabinet " + cabinetCount.ToString()].Value<JObject>();
                     //Add a tab for the cabinet
-                    TabPage addedCabinePage = new TabPage(Name = "Cabine " + (cabinetCount + 1).ToString());
+                    TabPage addedCabinePage = new TabPage(Name = "Cabinet " + (cabinetCount + 1).ToString());
                     addedCabinePage.BackColor = Color.FromArgb(41, 44, 51);
                     tabControl.TabPages.Add(addedCabinePage);
                     int floorCount = 0;
